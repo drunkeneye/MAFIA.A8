@@ -1,0 +1,46 @@
+LOCAJOBB.gfx
+ 
+$bf, $af, $00, $bf
+ 
+
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+You await a sign from the boss
+to remove an uninvited guest...
+There was nothing to do today!
+A guy starts causing trouble!
+You must do something!
+SausageFingerLisa
+MonkeyFaceAlf
+The Butcher
+A drunken, wealthy guest
+wants to gamble. You can fleece him!
+Which trick do you want to use?
+ 1 - Trick mirror
+ 2 - Marked cards
+ 3 - Roulette brake
+You make profits and receive
+a bonus of
+The guy has seen through your tricks
+and pulls out a knife!
+You've found the guy in the photo
+and lure him into a dark alley...
+You've completed the job and receive
+$ wage.
+You haven't completed the job!
+You're fired!
+Your financial institution flourishes 
+and you make
+$ income!
+Your financial institution is
+experiencing a boring slump...
+Players
+Poor victim
+News

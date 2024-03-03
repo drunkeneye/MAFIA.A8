@@ -1,0 +1,47 @@
+LOCAJOBB.gfx
+ 
+$bf, $af, $00, $bf
+ 
+
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+Du wartest auf ein Zeichen des Chefs,
+einen ungebetenen Gast zu entfernen...
+Heute gab es nichts zu tun!
+Ein Bursche faengt an, zu randalieren!
+Du musst etwas tun!
+WurstFingerLise
+AffenFaceAlf
+Der Schlachter
+Ein betrunknener, schwerreicher Gast
+will spielen. Den kannst du ausnehmen!
+Welchen Trick moechtest du nutzen?
+ 1 - Trickspiegel
+ 2 - Gezinkte Karten
+ 3 - Bremse am Roulette
+Du machst Gewinne und erhaeltst
+einen Bonus von
+Der Typ hat deine Tricks durchschaut
+und zueckt ein Messer!
+Du hast den Typ auf dem Foto gefunden
+und lockst ihn in eine dunkle Gasse...
+Du hast den Job erledigt und erhaeltst
+$ Lohn.
+Du hast den Job nicht erledigt!
+Damit bist du entlassen!
+Dein Kreditinstitut floriert und du
+machst 
+$ Einnahmen!
+In deinem Kreditinstitut herrscht
+langweilige Flaute...
+Spieler
+Armes Opfer
+Neuigkeiten
+

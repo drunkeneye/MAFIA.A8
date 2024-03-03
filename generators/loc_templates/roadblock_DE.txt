@@ -1,0 +1,21 @@
+LOCAROAD.gfx
+Strassensperre!!!
+$70, $af, $0e, $70
+  
+  
+  
+  
+0,0,0,0
+Ausweiskontrolle!
+4
+ 
+ 
+ 
+ 
+50
+Der Polizist verlangt Deine Papiere!
+Dein Bluetenschwindel ist aufgeflogen!
+Der Kerl hat deine Alkoholfaesser
+entdeckt! Es ist aus...
+Er hat einen Steckbrief von dir!
+Er hat nichts zu beanstanden.

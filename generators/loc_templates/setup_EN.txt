@@ -1,0 +1,28 @@
+LOCASETU.gfx
+MAFIA
+$f6, $af, $10, $f6
+ 
+ 
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+How many gaming years (3-50)?
+How many points (100-1000)?
+How many players (1-4)?
+Player 
+What is your name?
+Gang name?
+Your attributes:
+Strength:
+Intelligence:
+Brutality:
+Health:
+Capital:
+Are you female or male (F/M)?
+Short or long game (S/L)?

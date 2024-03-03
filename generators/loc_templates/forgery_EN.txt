@@ -1,0 +1,27 @@
+LOCAFORG.gfx
+Bogus Eddie
+$ba, $00, $00, $ba
+In a dark cellar
+In a dark cellar
+In a dark cellar
+In a dark cellar
+3,3,3,3
+Well, lad, what's troubling you? Can I help you?
+3
+Yeah, can you make me a new passport? It has to be good!
+Are you still printing bills? How about selling me a few?
+Thanks, Eddie, maybe next time. Bye!
+50
+You already have a fake passport!
+Good, my boy.
+For you
+and your gangsters,
+we'll do it
+Buy (Y/N)?
+Here, fresh off the press, hehe!
+You already have counterfeit money!
+Nng... Very reluctantly! How many 
+dollars do you want to invest (0-
+I'll give you
+$ counterfeit for it (Y/N).
+But don't spend it all at once!

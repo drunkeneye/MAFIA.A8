@@ -1,0 +1,26 @@
+LOCASUBW.gfx
+Subway Station (Subway)
+$72, $af, $ff, $72
+Track Nine Corner
+Vomit Square
+West Cross
+Zeche Rachenbrand
+2,5,7,9
+You're in a subway station. There are a lot of people hanging around here..
+3
+Lightening the pockets of people on the platform
+Checking the contents of bags in the train
+Back to the surface
+50
+A subway ticket costs you $50.
+Do you want to buy one (Y/N)?
+Which gangster should pickpocket?
+You steal...
+...nothing! Because you get caught!
+...a handbag, nothing valuable!
+...a fake pearl necklace!
+...a camera! It brings in $50.
+...a wristwatch worth $250!
+...a wallet with $500!
+...a diamond! It's worth $800!
+...a manual 'The Safe Cracker'??!

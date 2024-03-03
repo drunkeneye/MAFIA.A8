@@ -1,0 +1,28 @@
+LOCAFORG.gfx
+Blueten-Eddie
+$ba, $00, $00, $ba
+In einem dunklen Keller 
+In einem dunklen Keller  
+In einem dunklen Keller   
+In einem dunklen Keller   
+3,3,3,3
+Na, mein Junge, wo drueckt der Schuh? Kann ich dir helfen?
+3
+Yeah, kannst du mir einen neuen Pass machen? Er muss gut sein,klar?
+Druckst du noch Blueten? Wie waers, wenn du mir ein paar verkaufst?
+Danke, Eddie, vielleicht beim naechsten Mal. Bye!
+50
+Du hast schon einen Fake-Pass!
+Gut, mein Sohn. 
+Fuer dich 
+und deine Gangster 
+macht das 
+Kaufen (J/N)?
+Hier, noch druckfrisch, he, he!
+Du hast schon Blueten!
+Nng... Hoechst ungern! Wieviel Dollar
+willst du anlegen (0-
+Ich gebe dir
+$ Blueten dafuer (J/N).
+Aber gib nicht alles auf einmal aus!
+

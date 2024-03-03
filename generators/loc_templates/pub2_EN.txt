@@ -1,0 +1,32 @@
+LOCAPUBC.gfx
+Pub/Bar (a shady establishment)
+$30, $af, $ff, $30
+ 
+ 
+ 
+ 
+1,4,6,9
+ 
+5
+ 
+ 
+ 
+ 
+ 
+50
+As a
+you find something better!
+No one has a job for you!
+The owner of a established bar checks
+you out and wants to hire you as a 
+bouncer for 3 months.
+You can work as a croupier for
+2 months in a casino.
+A hotel is looking for a
+bouncer for 2 months.
+You receive a photo of a man
+who is staying in a hotel.
+You're supposed to take him out!
+You'll get
+Do you want to accept the job (Y/N)?
+You got the job!

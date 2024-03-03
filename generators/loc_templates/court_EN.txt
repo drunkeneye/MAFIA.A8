@@ -1,0 +1,22 @@
+LOCACOUR.gfx
+Court Hearing
+$70, $af, $0e, $70
+  
+  
+  
+  
+0,0,0,0
+Your court hearing...
+4
+ 
+ 
+ 
+ 
+50
+Do you want a lawyer (Y/N)?
+How much do you put down (0-10000$)?
+You are acquitted!
+Your lawyer negotiates a sentence of
+ months!
+You'll be behind bars for
+ months.

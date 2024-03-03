@@ -1,0 +1,55 @@
+LOCALOAN.gfx
+Loan Shark
+$4a, $af, $ff, $4a
+At Peter's
+Dynamite Bros
+Money House Hansel
+Quick Quick
+1,2,7,8
+A very good day, can I help you?
+6
+Yes. I need some cash!
+No, no! I just want to pay off my debts!
+Buy or sell a shop
+Change capital in the shop (in your own credit business)
+Collect overdue debts (in your own business)
+I'll help myself
+50
+First, pay off your old debts!
+I take 6% interest! How much
+do you want to borrow (0-5000$)?
+You have a few months to pay back the
+debts!
+You have no debts!
+How much money do you want to repay?
+You've repaid your debts!
+Okay, you still owe
+debts!
+You already have a credit business!
+This shop doesn't belong to you!
+All debtors have paid on time!
+One of your clients still owes money.
+He ambushes you with a rifle
+when you come to collect!
+Debtor
+You've taken care of the guy coldly.
+He had
+$ on him!
+First, pay off your own debts!
+A buyer offers you
+$ for the
+shop. Do you want to accept (Y/N)?
+You wish the guy good luck.
+The shop already belongs to
+The owner demands
+$ for the
+shop. Do you want to accept (Y/N)?
+The shop now belongs to you!
+You have
+$ in the business.
+By how much $ do you want to change 
+your investment (max. 5000$)?
+You now have
+in the business.
+You can't take on debts
+if you own a credit shop!

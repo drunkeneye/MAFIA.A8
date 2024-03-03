@@ -1,0 +1,22 @@
+LOCACOUR.gfx
+Gerichtsverhandlung
+$70, $af, $0e, $70
+  
+  
+  
+  
+0,0,0,0
+Deine Gerichtsverhandlung...
+4
+ 
+ 
+ 
+ 
+50
+Willst Du einen Anwalt (J/N)?
+Wieviel legst du an (0-10000$)?
+Du wirst freigesprochen!
+Dein Anwalt boxt eine Strafe von
+ Monaten heraus!
+Du wanderst fuer 
+ Monate hinter Gitter!

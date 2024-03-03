@@ -1,0 +1,36 @@
+LOCAARMS.gfx
+Waffenladen
+$38, $af, $ff, $38
+Der Buechsenmacher
+Waffenhandel Axel
+Scharfe Stahlwaren
+Kurts Flinten
+0,3,6,9
+'Tag, Mister. Ein paar gute Handboeller gefaellig? Sind im Hinterzimmer...
+3
+Yeah, mal sehen, was da ist.
+Kannst du meine Jungs im Schiessen ausbilden? Sind einfach zu schlapp!
+Danke, danke! Kein Bedarf. Bye!
+50
+Ok, wir haben folgende Knarren:
+...brandheiss! Eine Ladung Army-hand-
+granaten ist gerade eingetroffen!
+Deine Wahl? 
+Zu wenig Intelligenz!
+Zu wenig Kraft!
+Nicht brutal genug!
+Der Haendler bietet dir 
+fuer 
+deine alte Waffe (
+Willst du sie verticken (J/N)? 
+Du hast nun die neue Waffe!
+Wen soll ich trainieren?
+Kurzes Training im Schiesstand, oder
+Das kostet dich 
+$ (J/N).
+ trainiert am Schiessstand...
+ ist im Trainingslager...
+Dein Gangster ist staerker,
+intelligenter und brutaler geworden!
+langes im Trainingscamp (S/T)?
+Du behaeltst deine alte Waffe.

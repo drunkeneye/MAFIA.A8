@@ -1,0 +1,40 @@
+LOCAHIDE.gfx
+Hideout (Motel, Tenement)
+$02, $af, $ff, $02
+Bed and Breakfast
+Rama's Goldilocks
+Hotel Black Fox
+Park Hotel
+1,5,8,9
+Ah, a customer! What does the gentleman wish?
+4
+Accommodation, but quick, quick! I don't want to be disturbed!
+I want to pay my rent!
+Start a gang war.
+I don't wish for anything. Do you?
+50
+You already live here!
+No vacancies left!
+You can't rent two apartments!
+You don't live here!
+Alright. It costs
+$ per month.
+Payment is made in advance here!
+You have the place for
+ months!
+How many months do you want to rent?
+Good day, sir!
+Gang war!
+But nobody lives here...
+You ring at
+Unfortunately, no one answers...
+You've lost the gang war!
+raids your pockets
+and loots
+You've won the gang war!
+You empty the place of
+and loot
+Plus, he takes your alcohol!
+Plus, you take the alcohol!
+And dismantles your car into pieces!
+And you dismantle his car into pieces!

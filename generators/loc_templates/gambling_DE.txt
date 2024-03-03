@@ -1,0 +1,24 @@
+LOCAGAMB.gfx
+Spielhoelle
+$1e, $af, $00, $1e
+Pokerface Plaza
+Zockotopia
+Jokers Valhalla
+Casino Carlos
+2,4,5,7
+Na Freund, wie waer's mit 'nem Spielchen? Karten? Roulette?
+2
+Ok, Chef, was kannst du mir empfehlen?
+Nein, Nein! Ich spiele nur Mau-Mau!
+50
+Waehle, mein Freund
+  1 - Poker
+  2 - Black Jack
+  3 - Roulette
+Was soll's sein?
+Du hast 
+Dein Einsatz (0-
+Du begibst dich an den Spieltisch...
+Du hast 
+$ gewonnen!
+Leider verloren!

@@ -1,0 +1,20 @@
+LOCAMAJO.gfx
+ 
+$70, $af, $0e, $70
+ 
+ 
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+The mayor hides
+behind his bodyguards!
+Bodyguards
+Mayor
+For your heinous deed, you also 
+receive $7000 and a new passport!

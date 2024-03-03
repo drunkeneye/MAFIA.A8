@@ -1,0 +1,96 @@
+
+function subwayChoices (var choice:byte):   byte;
+var 
+    loot: shortint;
+    value: word;
+    hops: boolean;
+    i,j,k:byte;
+begin
+    result := SUBWAY_;
+    ShowLocationHeader;
+
+    if choice = 2 then
+    begin
+        CRT_Writeln(loc_string_1);
+        CRT_Writeln(loc_string_2);
+        if getYesNo() =0 then exit;
+        if payMoney (50) = 0 then exit;
+        loot := Random(4); // =new place on map
+        case loot of 
+            0: begin;
+                    i := 8; j := 2; k := 2;
+                end;
+            1: begin;
+                    i := 4; j := 1; k := 5;
+                end;
+            2: begin;
+                    i := 8; j := 3; k := 9;
+                end;
+            3: begin;
+                    i := 4; j := 7; k := 7;
+                end;
+        end;
+        // pretend we fought
+        plMapPosX[currentPlayer] := i;
+        plMapPosY[currentPlayer] := j;
+        plCurrentMap[currentPlayer] := k;
+        placeCurrentPlayer ();
+    end;
+
+    if choice = 1 then
+    begin
+        if plNGangsters[currentPlayer] > 1 then 
+            CRT_Writeln(loc_string_3);
+        selectGangster();
+        if currentGangster = 99 then exit;
+    end;
+    CRT_Newline;
+    CRT_Writeln(loc_string_4);
+    WaitFrames(90);
+
+    // 18040 ifint(rnd(1)*15)=10goto18052
+    // 18041 ifint(rnd(1)*(in/10))goto18045
+    hops := Random(gangsterInt[currentGangster]) < 10; 
+    loot := Random(17) SHR 1;
+    loot := loot - Random(currentSubLocation+1); //+1 to avoid Random(0)
+    if loot < 0 then loot := 0;
+    if hops = True then loot := 0;
+    value := 0;
+    case loot of 
+        0,1 : CRT_Writeln(loc_string_5);
+        2: CRT_Writeln(loc_string_6);
+        3: CRT_Writeln(loc_string_7);
+        4: begin;
+                CRT_Writeln(loc_string_8); 
+                value := 50;
+            end;
+        5: begin;
+                CRT_Writeln(loc_string_9); 
+                value := 250;
+            end;
+        6: begin;
+                CRT_Writeln(loc_string_10);
+                value := 500;
+            end;
+        7: begin;
+                CRT_Writeln(loc_string_11);
+                value := 800;
+            end;    
+        8: begin;
+                CRT_Writeln(loc_string_12);
+                plStuff[currentPlayer] := plStuff[currentPlayer] or 32;
+                waitForKey;
+                exit;
+            end;
+    end;
+    waitForKey;
+    if loot < 2 then begin;
+        gotCaught;
+        result := END_TURN_;
+        exit;
+    end; 
+    if choice = 2 then loadMap();
+    addMoney( value);
+    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 1;
+end;
+

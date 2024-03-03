@@ -1,0 +1,21 @@
+LOCAROAD.gfx
+Roadblock!!!
+$70, $af, $0e, $70
+  
+  
+  
+  
+0,0,0,0
+ID Check!
+4
+ 
+ 
+ 
+ 
+50
+The policeman demands your papers!
+Your counterfeit has been exposed!
+The guy has discovered your alcohol 
+barrels! It's over...
+He has a wanted poster of you!
+He has no objections.

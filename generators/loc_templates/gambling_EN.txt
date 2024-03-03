@@ -1,0 +1,24 @@
+LOCAGAMB.gfx
+Gambling Den
+$1e, $af, $00, $1e
+Pokerface Plaza
+Zockotopia
+Jokers Valhalla
+Casino Carlos
+2,4,5,7
+Hey buddy, up for a little game? Cards? Roulette?
+2
+Okay, boss, what do you recommend?
+No, no! I only play Crazy Eights!
+50
+Choose, my friend
+  1 - Poker
+  2 - Black Jack
+  3 - Roulette
+What'll it be?
+You have
+Your bet (0-
+You approach the gaming table...
+You've won
+$!
+Unfortunately, you lost!

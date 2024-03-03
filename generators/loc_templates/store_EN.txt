@@ -1,0 +1,51 @@
+LOCASTOR.gfx
+Simple Store
+$d4, $af, $ff, $d4
+Ali's Vegetable Store
+Deer Pain
+Konstantinos Gyros
+Woolly Warts
+0,3,6,8
+(Perfect for protection racketeering!) 'Morning, mister. What'll it be?
+5
+The cash, quick! Or things might get loud here!
+Please, a few bucks for my sick ma! She's soooo poor!
+We'll protect you for a small donation from the nasty gangsters!
+Police! Counterfeit money! We will need to confiscate it!
+Not collecting today
+50
+Scram, you milk-faced punk!
+You're not making any impression...
+The guy just called the cops!!!
+Take care of your old lady yourself!
+That'll definitely interest Scarface 
+Jack... Let me call him!
+Jack's moving out of this territory 
+for a while, until things calms down.
+Oh, the old police scam! You won't 
+fool anyone with that anymore!
+I..I..I'll p..pay up! Her..here
+t..t..take..
+Your poor ma (sniff)! Give her the
+I have
+$, is that enough?
+Damn! Who gave me this counterfeit
+money shit, there are 
+What do you do?
+1 - Accept the offered money
+2 - Destroy the store
+3 - Deal with the owner
+Your choice?
+You pocket the cash and scram.
+You scumbag! You'll pay for this!
+The guy's calling some thugs!
+Thugs
+You've made a mess out of the store.
+In the register there were
+He promises you a nice tombstone and 
+readies his submachine gun!
+Store owner
+The cheeky guy is down. He had
+$ in his pocket!
+Scarface Jack Gang
+Gang member

@@ -1,0 +1,17 @@
+
+;;;; dlists
+
+DL_CONSOLE_ADR rcasm 'dlists/dlist_console.asm'
+DL_BLACK_CONSOLE_ADR rcasm 'dlists/dlist_black_console.asm'
+DL_MAP_ADR rcasm 'dlists/dlist_map.asm'
+
+
+;;;; map
+
+PMG_BASE_ADR rcdata '../assets/player.pmg'
+
+
+;;;;; fonts
+
+MAINFONT_ADR rcdata '../assets/mafia.fnt'
+

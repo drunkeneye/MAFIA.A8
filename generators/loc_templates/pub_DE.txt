@@ -1,0 +1,57 @@
+LOCAPUBB.gfx
+Pub/Bar (ein zwielichtiges Lokal)
+$30, $af, $ff, $30
+Albatross
+Die Ule
+Dragons Bar
+Bahnhofskneipe
+1,4,6,9
+'Eh, Amigo, willst du 'ne Milch, oder suchst du was anderes?
+5
+Nein, keine Milch! Hast du was alkoholisches da?
+Ich suche ein paar Jungs fuer meine Gang. Mal sehen, wer da ist...
+Hast du vielleicht 'n guten Tip fuer 'nen Ueberfall oder sowas?
+Ich brauche dringend einen Job, einen Auftrag! Du verstehst schon..
+Scheint nicht der richtige Laden zu sein. Ich verschwinde wieder...
+50
+Nein. Vielleicht hast du aber was fuer
+mich? Ich zahle 
+$ pro Fass!
+Wieviel willst du abgeben (0-
+Besorg' noch mehr (gier)!
+Was? Alkohol? Das ist doch verboten!
+Ich habe was da, pro Fass nur 
+Komm wieder, wenn du den Stoff
+transportieren kannst!
+Wieviel willst du (0-
+Als 
+ kannst du noch keine
+eigenen Leute haben!
+Erst brauchst du eine Unterkunft fuer
+deine Gangster!
+Du kannst nur maximal 7 weitere
+Gangster anheuern!
+Es ist niemand da.
+Du hast nun 
+ Gangster!
+Du bist noch zu unerfahren!
+Leider hab ich nichts fuer dich!
+Ich habe etwas gehoert...aber das
+kostet dich 
+$. Willst du den Tipp?
+Im Postzug soll demnaechst eine grosse
+Ladung Diamanten transportiert werden!
+Die Klomerz Bankfilale erhaelt
+in naechster Zeit 500 kg Goldbarren!
+Ein Geldtransport wird durch unsere
+Stadt fahren, es ist ein blauer Wagen!
+Du wirst ihn sehen!
+Mit 5000$ kannst du dich an einem
+grossen Waffenschmuggel beteiligen!
+Du wirst es nicht bereuen...
+Psst.. Ich habe da 'nen sehr wichtigen
+Auftrag! Der Buergermeister soll umge-
+legt werden, er hat aber Leibwaechter!
+Fuer
+$ kannst du
+ anheuern (J/N)?

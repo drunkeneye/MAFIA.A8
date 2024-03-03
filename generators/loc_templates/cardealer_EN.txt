@@ -1,0 +1,33 @@
+LOCACARS.gfx
+Car Dealer
+$0b, $af, $90, $0b
+Mopel Berghausser
+Nikola Graesslah
+Carpoint Speed
+TOGGO's Fast Car
+1,4,6,8
+A wide range of the fastest rides...
+3
+Buy a car
+'Organize' a car
+Leave again
+50
+The seller shows you a selection
+of models.
+Which car will it be?
+They offer you
+$ for your old clunker.
+The guy hands you the keys.
+You also get
+There are too many people here!
+Who will break into the car?
+Yeah! The car is unlocked!
+You take off with it.
+You take off with it. Unfortunately,
+you have to leave your old car behind.
+The owner of the car sees you and
+After murdering the owner, you have to
+quickly disappear without a car!
+pulls out his hefty revolver!
+Do you accept the offer (Y/N)?
+Car owner

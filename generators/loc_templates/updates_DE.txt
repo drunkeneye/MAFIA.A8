@@ -1,0 +1,33 @@
+LOCAUPDT.gfx
+ 
+$bf, $af, $00, $bf
+ 
+ 
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+Dein Kreditinstitut floriert und du
+machst 
+$ Einnahmen!
+In deinem Kreditinstitut herrscht
+langweilige Flaute...
+Du hast noch
+$ Schulden, und dir 
+bleiben noch
+ Monate Zeit, sie zu zaheln!
+Der KreditHai hetzt seine Eintreiber
+auf dich...
+Eintreiber
+Die Kerle nehmen dein ganzes Geld
+mit und verschwinden...
+Du konntest sie gerade noch einmal
+vertreiben. Sie werden dich aber bald
+wieder besuchen...
+
+

@@ -1,0 +1,29 @@
+LOCABANK.gfx
+Bank/Post Office
+$e6, $af, $ff, $e6
+Klomerz Bank
+Doisch Bank
+Game Cash
+Raffle Waffle 24
+0,2,6,8
+Good day, sir! What do you desire?
+3
+Quit the chatter and hand over the cash, quickly!
+Look for alarm systems discreetly and break in at night
+Leave again
+50
+You need a companion!
+Unfortunately, you overlooked the 
+three guards at the entrance...
+Guards
+You still need to train!
+Who will crack the safe?
+Hhm, let's see. I'll try with the 
+stethoscope...
+Too hot! You bail out!
+You made it!
+Damn!... Something went wrong!
+Someone's coming!!
+Become small fry first!
+Your loot amounts to
+You also stumble upon 500kg gold...

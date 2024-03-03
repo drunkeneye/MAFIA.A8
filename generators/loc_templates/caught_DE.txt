@@ -1,0 +1,29 @@
+LOCACAUG.gfx
+Verhaftung
+$70, $af, $0e, $70
+ 
+
+ 
+ 
+0,0,0,0
+Du bist von der Polizei gefasst worden!
+4
+
+
+
+
+50
+Ein Polizist nickt dir heimlich zu.
+Er laesst dich gehen!
+Was nun?
+  1 - Polizisten bestechen
+  2 - Fluchtversuch
+  3 - Ergeben
+Was soll's sein? 
+Sie verlangen 
+$. (J/N)
+Die Bullen sperren dich trotzdem ein!
+Die Bullen lassen dich gehen!
+Die Polizisten schnappen dich!
+Du musst dich ergeben!
+Du bist gerade noch einmal entkommen!

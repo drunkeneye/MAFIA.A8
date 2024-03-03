@@ -1,0 +1,57 @@
+LOCALOAN.gfx
+Kredit-Hai
+$4a, $af, $ff, $4a
+Bei Peters
+Dynamite Bros
+Geldhaus Hansel
+Zack Zack
+1,2,7,8
+Einen wunderschoenen guten Tag, kann ich ihnen helfen?
+6
+Ja. Ich brauche ein bisschen Knete!
+Nein, nein! Ich will nur meine Schulden abzahlen!
+Laden aufkaufen bzw. verkaufen
+Kapital im Laden aendern (bei eigenem Kreditgeschaeft)
+Ueberfaellige Schulden eintreiben (bei eigenem Geschaeft)
+Ich helfe mir selbst
+50
+Zahle erstmal deine alten Schulden ab!
+Ich nehme gut 6% Zinsen!
+Wieviel willst du leihen (0-5000$)?
+Du hast ein paar Monate Zeit, die    
+Schulden zurueck zu zahlen!
+Du hast keine Schulden!
+Wieviel Geld willst du zurueckzahlen
+Du hast deine Schulden zurueckgezahlt!
+Ok, du hast jetzt noch 
+Schulden!
+Du hast schon ein Kreditgeschaeft!
+Dieser Laden gehoert dir nicht!
+Alle Schuldner haben zeitig gezahlt!
+Einer deiner Klienten hat noch Geld. 
+Er lauert dir mit einem Gewehr auf, 
+als du kassieren willst!
+Schuldner
+Du hast den Typ eiskalt erledigt.
+Er hatte noch 
+$ dabei!
+Zahle erstmal deine eigenen Schulden!
+Ein Kaeufer bietet dir 
+$ fuer den
+Laden. Willst du annehmen (J/N)?
+Du wuenscht dem Kerl viel Glueck.
+Der Laden gehoert schon 
+Der Besitzer verlangt 
+$ fuer den
+Laden. Willst du annehmen (J/N)?
+Der Laden gehoert nun dir!
+Du hast 
+$ im Geschaeft.
+Um wieviel $ willst du dein Investment
+aendern (max. 5000$)? 
+Du hast jetzt 
+im Geschaeft.
+Du kannst keine Schulden aufnehmen,
+wenn du einen Kreditladen besitzt!
+
+

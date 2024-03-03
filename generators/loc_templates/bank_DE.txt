@@ -1,0 +1,29 @@
+LOCABANK.gfx
+Bank/Postamt
+$e6, $af, $ff, $e6
+Klomerzbank
+Doisch Bank
+Spielkasse
+Raffelwaffel 24
+0,2,6,8
+Guten Tag, mein Herr! Was ist ihr Begehr?
+3
+Quatsch nich' und lang den Zaster 'rueber, aber schnell!
+Unauffaellig nach Alarmanlagen umsehen und nachts einbrechen
+Wieder gehen
+50
+Du brauchst einen Begleiter!
+Leider hast du die drei Wachmaenner am
+Eingang uebersehen...
+Wachmaenner
+Du musst noch trainieren!
+Wer soll den Kasten knacken?
+Hhm, mal sehen. ich versuch's mit dem
+Stethoskop...
+Zu heiss! Du haust ab!
+Du hast es geschafft!
+Teufel!... Da ist was schief gegangen!
+Es kommt jemand!!
+Werde erst kleiner Fisch!
+Deine Beute betraegt
+Ausserdem findest du 500kg Gold...

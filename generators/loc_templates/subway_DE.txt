@@ -1,0 +1,26 @@
+LOCASUBW.gfx
+Subway-Station (U-Bahn)
+$72, $af, $ff, $72
+Gleisneuneck
+Kotzdamer Platz
+Westkreuz
+Zeche Rachenbrand
+2,5,7,9
+Du bist in einem U-Bahnhof. 'ne Menge Leute treiben sich hier 'rum..
+3
+Leuten auf dem Bahnsteig die Taschen erleichtern
+In der Bahn die Tascheninhalte pruefen
+Zurueck ans Tageslicht
+50
+Ein U-Bahn Ticket kostet dich 50$.
+Willst du eins kaufen (J/N)?
+Welcher Gangster soll filzen?
+Du stiehlst...
+...nichts! Denn du wirst erwischt!
+...eine Handtasche, nichts wertvolles!
+...eine falsche Perlenkette!
+...nen Fotoapparat! Er bringt 50$.
+...eine Armbanduhr fuer 250$!
+...'ne Brieftasche mit 500$!
+...einen Diamanten! Der ist 800$ wert!
+...eine Anleitung 'Der Safeknacker'??!

@@ -1,0 +1,31 @@
+LOCAUPDT.gfx
+ 
+$bf, $af, $00, $bf
+ 
+ 
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+Your credit institution is thriving, 
+and you're making
+$ in earnings!
+There's a dull lull in your credit 
+institution...
+You still have
+$ in debt, and you 
+only have  
+ months left to pay it off!
+The loan shark sends his debt 
+collectors after you...
+Debt Collectors
+They take all your money and 
+disappear silently...
+You managed to drive them away just 
+this once. But they'll come back to 
+visit you soon...

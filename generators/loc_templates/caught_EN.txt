@@ -1,0 +1,29 @@
+LOCACAUG.gfx
+Arrest
+$70, $af, $0e, $70
+ 
+
+ 
+ 
+0,0,0,0
+You've been apprehended by the police!
+4
+
+
+
+
+50
+A policeman nods to you secretly.
+He lets you go!
+What now?
+  1 - Bribe the police
+  2 - Attempt escape
+  3 - Surrender
+What will it be? 
+They demand
+$. (Y/N)
+The cops still lock you up!
+The cops let you go!
+The police catch you!
+You must surrender!
+You narrowly escaped this time!

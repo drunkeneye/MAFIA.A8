@@ -1,0 +1,6 @@
+./src/output/*.lst
+./src/output/*.a65
+./src/output/*.xex
+XTRA
+DELME
+.DS_Store

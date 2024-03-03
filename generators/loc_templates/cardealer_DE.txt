@@ -1,0 +1,33 @@
+LOCACARS.gfx
+Automobil-Haendler
+$0b, $af, $90, $0b
+Mopel Berghausser
+Nikola Graesslah
+Carpoint Speed
+TOGGOs Schnellauto
+1,4,6,8
+Ein umfangreiches Sortiment der flottesten Schlitten...
+3
+Wagen kaufen
+Auto 'organisieren'
+Wieder gehen
+50
+Der Verkaeufer zeigt dir eine Auswahl
+der Modelle.
+Welche Karre soll es sein? 
+Man bietet dir 
+$ fuer deine alte Schaukel.
+Der Typ reicht dir die Schluessel.
+Du bekommst auch noch 
+Es sind zuviele Leute hier!
+Wer soll den Wagen aufbrechen?
+Yeah! Die Karre ist offen! Du machst 
+dich damit aus dem Staub.
+dich damit aus dem Staub. Leider musst
+du deinen alten Wagen stehen lassen.
+Der Besitzer der Karre sieht dich und
+Nach dem Mord an dem Besitzer musst du
+ohne Wagen schnell verschwinden!
+zueckt seinen fetten Revolver!
+Nimmst du das Angebot an (J/N)?
+Wagenbesitzer

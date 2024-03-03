@@ -1,0 +1,27 @@
+LOCAPOLI.gfx
+Polizei-Praesidium
+$86, $af, $ff, $86
+Praesidium West
+Zentrale Nord
+Station Sued
+Revier Ost
+2,4,5,9
+Was haben Sie hier zu suchen? Machen Sie, dass Sie raus kommen!
+4
+Ich bin ein gesucher Gangster! Ich moechte mich stellen.
+Polizeichef bestechen
+Versuchen, inhaftierten Gangster zu befreien
+Lieber gar nichts tun
+50
+Aha! Fuer einen Monat Untaetigkeit
+nehme ich 1000$. Wieviele Monate? 
+Danke sehr! Nehmen Sie bitte den
+Hinterausgang!...
+Inhaftiert sind zur Zeit...
+Es ist niemand inhafitert!
+Wen willst du befreien?
+Die Waerter wollen 
+$ von dir!
+Du musst zahlen oder gehen!...
+Die Waerter vergessen zufaellig eine 
+Hintertuer abzuschliessen...

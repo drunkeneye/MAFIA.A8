@@ -1,0 +1,53 @@
+LOCAMAIN.gfx
+
+$f4, $af, $10, $f4
+ 
+ 
+ 
+ 
+99,99,99,99
+
+3
+ 
+ 
+ 
+50
+Spieler
+ist an der Reihe!
+Gesucht!
+   Das Photo zeigt 
+, den Kopf
+   der Bande 
+. Die Gesuchten
+     sind wahrscheinlich bewaffnet!
+    Rang:
+ Punkte
+Du konntest dein Falschgeld ausgeben!
+Du hast deinen falschen Pass verloren!
+Mietrueckstand
+Du hast deine Miete nicht puenktlich
+gezahlt!
+Der Vermieter hat deine Moebel
+im Wert von 
+$ gepfaendet!
+Der Vermieter wirft dich aus der Bude!
+Deine Gangster suchen sich 'nen 
+anderen Boss, einen mit mehr Knete...
+Kapitalgeschaefte
+Die Waffenhaendler, denen du 5000$
+anvertraut hast, wurden geschnappt!
+Dein Kapital hat im Waffenhandel
+gearbeitet. Du erhaelst 
+Gefaengnis
+Du sitzt noch immer im Gefaengnis...
+Du hast noch einige Zeit (
+ Monate) vor dir...
+Du bist von 
+ aus dem
+Knast befreit worden. Was zahlst du
+zum Dank (0-
+Du hast gewonnen!
+Du warst von allen der brutalste,
+gemeinste und schlauste!
+Diesmal sind mehrere Pate geworden!
+Ihr ward alle gleich fiese Gangster!

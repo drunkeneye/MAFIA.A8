@@ -1,0 +1,32 @@
+LOCAPUBC.gfx
+Pub/Bar (ein zwielichtiges Lokal)
+$30, $af, $ff, $30
+ 
+ 
+ 
+ 
+1,4,6,9
+ 
+5
+ 
+ 
+ 
+ 
+ 
+50
+Als 
+findest du was Besseres!
+Niemand hat einen Job fuer dich!
+Der Inhaber einer Kneipe will dich
+fuer 3 Monate als Rausschmeisser
+anstellen.
+Du kannst 2 Monate als Croupier in
+einer Spielhoelle arbeiten.
+Ein Hotel sucht einen
+Tuersteher fuer 2 Monate.
+Du erhaelst das Foto eines Mannes,
+der in einem Hotel abgestiegen ist.
+Du sollst ihn umlegen!
+Du bekommst dafuer
+Willst du den Job annehmen (J/N)?
+Du hast den Job!

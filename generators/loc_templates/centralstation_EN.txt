@@ -1,0 +1,22 @@
+LOCACENT.gfx
+Central Station (Train Station)
+$a6, $af, $ff, $a6
+ 
+  
+ 
+ 
+6,7,8,9
+You're at the Chicago train station.
+4
+Visit the station pub
+Pickpocketing
+Rob the mail train
+Get out of here
+50
+No mail train in sight...
+You don't have enough gangsters!
+You storm into the armored wagon and
+just as you're about to loot, three
+nice gentlemen approach you...
+Guards 
+Security guard

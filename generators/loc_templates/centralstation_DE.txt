@@ -1,0 +1,23 @@
+LOCACENT.gfx
+Central Station (Bahnhof)
+$a6, $af, $ff, $a6
+ 
+  
+ 
+ 
+6,7,8,9
+Du bist im Bahnhof von Chicago.
+4
+Bahnhofskneipe aufsuchen
+Taschendiebstahl
+Postzug ueberfallen
+Nichts wie weg 
+50
+Kein Postzug zu sehen...
+Du hast zu wenig Gangster!
+Du stuermst in den Panzerwaggon und
+beginnst gerade einzusacken, als sich
+drei nette Herren dir naehern...
+Wachen 
+Wachmann
+

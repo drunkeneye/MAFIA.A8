@@ -1,0 +1,22 @@
+LOCAMONY.gfx
+Money Transporter
+$70, $af, $0e, $70
+ 
+  
+ 
+ 
+5,5,5,5
+Borrowing a bit of cash...
+0
+50
+You don't have enough gangsters!
+Unfortunately, the money transport is 
+accompanied by a police escort!
+Escort
+Guard
+The mayor hides
+behind his bodyguards!
+Bodyguards
+Mayor
+For your heinous deed, you also 
+receive $7000 and a new passport!

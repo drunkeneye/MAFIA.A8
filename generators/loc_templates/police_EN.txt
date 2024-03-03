@@ -1,0 +1,27 @@
+LOCAPOLI.gfx
+Police Headquarters
+$86, $af, $ff, $86
+West Precinct
+North Central
+South Station
+East Precinct
+2,4,5,9
+What are you doing here? Get out!
+4
+I'm a wanted gangster! I want to turn myself in.
+Bribe the police chief
+Attempt to free an incarcerated gangster
+Better do nothing at all
+50
+Aha! For a month of inactivity,
+I'll take $1000. How many months?
+Thank you! Please take the
+back exit!...
+Currently incarcerated are...
+There's no one incarcerated!
+Who do you want to free?
+The guards want
+$ from you!
+You must pay or leave!...
+The guards conveniently forget to lock
+a back door...

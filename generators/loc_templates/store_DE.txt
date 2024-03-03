@@ -1,0 +1,52 @@
+LOCASTOR.gfx
+Einfacher Laden
+$d4, $af, $ff, $d4
+Alis Gemueseladen
+Reh-Weh
+Konstantinos Gyros
+Wolliwoarts
+0,3,6,8
+(Perfekt fuer Schutzgelderpressungen!) 'Tag, Mister. Was darf's denn sein?
+5
+Den Zaster her, aber schnell! Sonst geht der Boeller hier los!
+Bitte, bitte ein paar Dollar fuer meine kranke Ma! Sie ist soooo arm!
+Wir schuetzen dich fuer eine kleine Spende vor den boesen Gangstern!
+Polizei! In ihrer Kasse ist Falsch- geld versteckt,das ist konfisziert!
+Heute mal nicht kassieren
+50
+Verschwinde, du Milchgesicht!
+Du schindest keinen Eindruck...
+Der Kerl ruft einfach die Polizei!!!
+Sorge doch selbst fuer deine Alte!
+Das wird aber Narben-Jack sehr
+interessieren... Ich ruf ihn mal!
+Jack verzieht sich erstmal aus diesem
+Revier, bis alles wieder ruhig ist.
+Ach, die alte Bullen-Masche! Damit
+neppt ihr keinen mehr!
+I..i..ich z..zahle ja schon! Hi..hier
+ss.. sind..
+Deine arme Ma (schnief)! Gib' ihr die
+Ich habe
+$, reicht das?
+Verdammt! Wer hat mir nur Blueten
+angedreht, da sind
+Was machst du?
+1 - Angebotenes Geld annehmen
+2 - Laden demolieren
+3 - Besitzer fertigmachen
+Deine Wahl?
+Du steckst die Knete ein und haust ab.
+Saubande! Das werdet ihr buessen!
+Der Kerl ruft ein paar Schlaeger!
+Schlaeger
+Du hast Kleinholz aus dem Laden
+gemacht. In der Kasse waren
+Er verspricht dir einen schoenen Grab-
+stein und laed seine Maschinenpistole!
+Ladenbesitzer
+Der aufmuepfige Kerl ist hin.
+Er hatte noch
+$ in der Tasche!
+NarbenJack-Gang
+Gangmitglied

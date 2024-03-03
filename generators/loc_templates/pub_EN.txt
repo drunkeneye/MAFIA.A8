@@ -1,0 +1,57 @@
+LOCAPUBB.gfx
+Pub/Bar (a shady establishment)
+$30, $af, $ff, $30
+Albatross
+The Owl
+Dragon's Bar
+Station Tavern
+1,4,6,9
+'Eh, amigo, you want some milk, or are you looking for something else?
+5
+No, no milk! Do you have anything alcoholic?
+I'm looking for some guys for my gang. Let's see who's around...
+Do you have a good tip for a heist or something?
+I urgently need a job, a task! You know what I mean...
+Seems like this isn't the right place. I'll disappear again...
+50
+No. But maybe you have something for
+me? I pay
+$ per barrel!
+How much do you want to sell (0-
+Get more (greedy)!
+What? Alcohol? That's illegal!
+I have something, only
+per barrel
+Come back when you can transport it!
+How much do you want (0-
+As a 
+ you can't have your own
+people yet!
+First, you need accommodation for
+your gangsters!
+You can only hire up to 7 more
+gangsters!
+There's no one here.
+You now have
+gangsters!
+You're still too inexperienced!
+Unfortunately, I have nothing for you!
+I've heard something... but it'll
+cost you
+$. Do you want the tip?
+There's going to be a large shipment 
+of diamonds in the mail train soon!
+The Klomerz Bank will receive 
+500 kg of gold bars soon!
+A money transport will pass through 
+our city, it's a blue wagon! 
+You'll see it!
+With $5000, you can participate in a 
+major arms smuggling operation!
+You won't regret it...
+Psst... I have a very important
+mission! The mayor is supposed to be
+taken out, but he has bodyguards!
+For
+$, can you hire
+(Y/N)?
