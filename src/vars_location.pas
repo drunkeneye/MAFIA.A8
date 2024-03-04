@@ -2,6 +2,7 @@
 const
     baseAddress = $BE80;
 //    baseAddress = $C800-$950;
+// currently until $c420 or something, so could move it 400 further
 
 var
     loc_name:                       YString absolute baseAddress + $0000;

@@ -69,6 +69,15 @@ var
 {$I updates.pas}
 
 
+
+procedure clearMemory();
+begin;
+    FillChar (Pointer($e000), $fc00-$e000, 0);
+    FillChar (Pointer($be80), $cc00-$be80, 0);
+end; 
+
+
+
 procedure initGlobalVars();
 var k:byte;
 begin;
@@ -110,6 +119,7 @@ begin
 
     enableConsole();
     // repeat; until false;
+    clearMemory();
     xbunAPL (e7fname, Pointer(e7adr));
     //setupGame();
     initGlobalVars();
