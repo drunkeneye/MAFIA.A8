@@ -1,0 +1,27 @@
+LOCAFORG.gfx
+Eddie Kwiaty
+$ba, $00, $00, $ba
+W ciemnym piwnicy 
+W ciemnym piwnicy  
+W ciemnym piwnicy   
+W ciemnym piwnicy   
+3,3,3,3
+No, mlody, co cie boli? Czy moge ci pomoc?
+3
+Tak, czy mozesz mi zrobic nowy paszport? Musi byc dobry, jasne?
+Czy jeszcze drukujesz kwiaty? A moze moglbys mi kilka sprzedac?
+Dzieki, Eddie, moze nastepnym razem. Czesc!
+50
+Masz juz falszywy paszport!
+Dobrze, synku. 
+Dla ciebie 
+i twoich gangsterow 
+to bedzie 
+Kupic (T/N)?
+Oto, jeszcze swieze, he, he!
+Masz juz kwiaty!
+Nng... bardzo niechetnie! Ile dolarow
+chcesz zainwestowac (0-
+Dam ci
+$ Kwiatow za to (T/N).
+Ale nie wydawaj wszystkiego od razu!

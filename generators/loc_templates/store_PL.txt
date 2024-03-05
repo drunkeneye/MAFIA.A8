@@ -1,0 +1,52 @@
+LOCASTOR.gfx
+Zwykly sklep
+$d4, $af, $ff, $d4
+Warzywniak Alis
+Reh-Weh
+Gyros Konstantinosa
+Wolliwoarts
+0,3,6,8
+(Idealny do szantazowania ochrony!) 'Dzien dobry, Panu. Co podac?
+5
+Daj mi pieniadze! W przeciwnym razie odpale tutaj fajerwerki!
+Prosze, prosze kilka dolarow dla mojej chorej mamy! Jest tak biedna!
+Ochronimy cie za niewielka ofiare przed zlymi gangsterami!
+Policja! W kasie sa falszywe pieniadze i zamierzam je zabrac!
+Dzis nie bedziemy pobierac oplat
+50
+Znikaj, mleczaku!
+Nie robiac wrazenia...
+Facet po prostu dzwoni po policje!!!
+Zatroszcz sie sam o swoja staruszke!
+Ale to zainteresuje Jacka... Musze 
+go zadzwonic!
+Jack odchodzi na razie z tego
+rewiru, az wszystko wroci do normy.
+Ach, stara sztuczka policyjna! 
+Teraz nikogo nie oszukacie!
+Pl..p..place juz! T..tutaj 
+s..sa..
+Twoja biedna mama (chrzaka)! Daj jej
+Mam
+$, wystarczy?
+Cholera! Ktos mnie oszukal,
+sa
+Co robisz?
+1 - Przyjmij zaproponowane pieniadze
+2 - Zdemoluj sklep
+3 - Zaatakuj wlasciciela
+Twoj wybor?
+Bierzesz pieniadze i uciekasz.
+Zdrajcy! Zaplacicie za to!
+Facet wzywa kilku oprychow!
+Oprychy
+Zdewastowali sklep. W kasie 
+znajdowaly sie
+Obiecuje ci piekny nagrobek i laduje
+swoja bron maszynowa!
+Sklepikarz
+Natarczywy facet nie zyje.
+Mial jeszcze
+$ w kieszeni!
+Banda Jacka Z Blizn
+Czlonek bandy

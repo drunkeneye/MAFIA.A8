@@ -60,8 +60,8 @@ begin;
         lda kbcode
         jmp loopend
   stickdata:
-        // right, left, down, up --> 7= 0111=right 11=1011=left, 13=1101=down, 14=1110=up
-        dta 0,0,0,0,    0,0, $73, 0,   0,0, $02, 0,     0, $26, $60
+        // right, left, down, up --> 7= 0111=right;  11=1011=left, 13=1101=down, 14=1110=up
+        dta 0,0,0,0,    0,0, 0, $73,   0, 0,0, $02, 0,     $26, $60
   foundstick:
         tay
         lda stickdata,y
@@ -106,7 +106,7 @@ begin;
         lda kbcode
         jmp loopend
   stickdata:
-        dta 0,0,0,0,0,0, $73, 0,0,0, $02, 0, 0, $26, $60
+        dta 0,0,0,0,    0,0, 0, $73,   0, 0,0, $02, 0,     $26, $60
   foundstick:
         tay
         lda stickdata,y
@@ -123,10 +123,24 @@ begin;
 end;
 
 
-procedure waitForKey();
+
+procedure waitForKey_new();
+var k, m:byte;
 begin
-  //CRT_NewLine();
-  CRT_WriteCentered(CRT_WhereY()+2, waitKey_String);
+  k := CRT_WhereY();
+  m := (40 - Length(waitKey_String)) SHR 1;
+  CRT_Gotoxy(k+2, m);
+  CRT_Write(waitKey_String);
+  CRT_ReadKey();
+end;
+
+
+procedure waitForKey();
+var k:byte;
+begin
+  k := CRT_WhereY();
+  k := k + 2;
+  CRT_WriteCentered(k, waitKey_String);
   CRT_ReadKey();
 end;
 

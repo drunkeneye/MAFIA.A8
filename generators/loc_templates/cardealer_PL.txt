@@ -1,0 +1,33 @@
+LOCACARS.gfx
+Dealer samochodowy
+$0b, $af, $90, $0b
+Mopel Berghausser
+Nikola Graesslah
+Carpoint Speed
+TOGGOs Szybkie auto
+1,4,6,8
+Obszerny wybor najszybszych bryk...
+3
+Kup samochod
+Zorganizuj auto
+Wyjdz
+50
+Sprzedawca pokazuje ci wybor 
+modeli.
+Ktory samochod wybierasz?
+Oferuje ci 
+$ za twoj stary grat.
+Facet podaje ci klucze.
+Dostajesz takze 
+Jest za duzo ludzi tutaj!
+Kto ma otworzyc samochod?
+Yeah! Auto jest otwarte! 
+Uciekasz.
+Niestety musisz zostawic swoj 
+stary samochod.
+Wlasciciel auta widzi cie i
+Po zabiciu wlasciciela musisz szybko
+uciec bez samochodu!
+wyciaga swoj gruby rewolwer!
+Czy przyjmujesz oferte (T/N)?
+Wlasciciel samochodu

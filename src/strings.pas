@@ -1,6 +1,41 @@
+{$ifdef LOCATION_PL}
+var 
+    fight_string_1: YString = 'Ty uderzyles(as) '~;
+    fight_string_2: YString = '!!'~;
+    fight_string_3: YString = 'Niestety, '~;
+    fight_string_4: YString = ' jest teraz martwy(a)!'~;
+    fight_string_5: YString = 'Nie trafiles(as)!'~;
+    fight_string_6: YString = 'Wygral(a) '~;
+    waitKey_String: YString = 'Nacisnij klawisz!'~;
+    map_string_weapon: YString = 'Bron:'~;
+    map_string_gangster: YString = 'Gangster:'~;
+    map_string_rent: YString = 'Czynsz:'~;
+    map_string_bribe: YString = 'Lapowka:'~;
+    map_string_car: YString = 'Auto:'~;
+    map_string_steps: YString = 'Kroki:'~;
+    map_string_cargo: YString = 'Ladunek:'~;
+    map_string_money: YString = 'Pieniadze:'~;
+    map_string_credit: YString = 'Kredyt:'~;
+    fight_police_string_1: YString = 'Policja'~;
+    fight_police_string_2: YString = 'Policjant'~;
+    not_enough_money_string: YString = 'Nie masz wystarczajaco pieniedzy!'~;
+    your_choice_string: YString = 'Twoj wybor? '~;
+    police_string_1: YString = 'Policja czeka na ciebie przed sklepem!'~;
+
+const 
+    N_keycode = 35;
+    Y_keycode = $2d; //Tak
+    F_keycode = $05; //Kobeta
+    M_keycode =  $25; //Mezczyzna
+    short_game_keycode =  $05; //Krotka
+    long_game_keycode =  $3a; //Dluga
+    shooting_range_keycode = $3a; //d
+    training_camp_keycode$= $23; //n
+{$endif}
+
 
 {$ifdef LOCATION_DE}
-const 
+var 
     fight_string_1: YString = 'Du hast '~;
     fight_string_2: YString = ' getroffen!'~;
     fight_string_3: YString = 'Leider ist '~;
@@ -21,7 +56,7 @@ const
     fight_police_string_2: YString = 'Polizist'~;
     not_enough_money_string: YString = 'Du hast nicht genug Geld!'~;
     your_choice_string: YString = 'Deine Wahl? '~;
-    police_string_1: YString = 'The police await you outside the store!'~;
+    police_string_1: YString = 'Die Polizei erwartet dich vorm Laden!'~;
 
 // 'n, j, see CRT_keycode
 const 
@@ -80,7 +115,7 @@ var
     fight_police_string_2: YString = 'Officer'~;
     not_enough_money_string: YString = 'You do not have enough money!'~;
     your_choice_string: YString = 'Your choice? '~;
-    police_string_1: YString = 'In front of the building !'~;
+    police_string_1: YString = 'The police await you outside the store!'~;
 
 // 'n, j, see CRT_keycode
 // 'n, j, see CRT_keycode

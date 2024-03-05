@@ -1,0 +1,21 @@
+LOCAROAD.gfx
+Blokada drogowa!!!
+$70, $af, $0e, $70
+  
+  
+  
+  
+0,0,0,0
+Kontrola dokumentow!
+4
+ 
+ 
+ 
+ 
+50
+Policjant zada twoich dokumentow!
+Twoj oszustwo zostalo wykryte!
+Facet odkryl twoje beczki z alkoholem!
+Koniec z zabawa...
+Ma twoj list gonczy!
+Nie ma zastrzezen.

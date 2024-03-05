@@ -1,0 +1,31 @@
+LOCAUPDT.gfx
+ 
+$bf, $af, $00, $bf
+ 
+ 
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+Twoja instytucja kredytowa kwitnie, 
+a ty zarabiasz
+$ Dochody!
+W twojej instytucji kredytowej panuje
+nudny marazm...
+Masz jeszcze
+$ Dlugow, i zostalo 
+ci
+ miesiecy, zeby je splacic!
+Kredytowy rekin wyslal swoich 
+windykatorow aby cie namowili...
+Windykatorzy
+Ci faceci zabieraja cale twoje 
+pieniadze i znikaja...
+Udalo ci sie ich odpedzic. 
+Ale wkrotce znow cie odwiedza, 
+by odebrac swoje pieniadze...

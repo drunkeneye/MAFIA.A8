@@ -1,0 +1,47 @@
+LOCAJOBB.gfx
+ 
+$bf, $af, $00, $bf
+ 
+
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+Oczekujesz na sygnal szefa,
+aby usunac nieproszonego goscia...
+Dzis nie bylo nic do roboty!
+Ktos zaczyna awanturowac sie!
+Musisz cos zrobic!
+Liza Palcowka
+Alf Twarz Malpy
+Rzeznik
+Pijany, bogaty gosc
+chce zagrac. Mozesz go okrasc!
+Ktora sztuczke chcesz wykorzystac?
+ 1 - Lusterko odblaskowe
+ 2 - Falszywe karty
+ 3 - Hamulec w ruletce
+Wygrywasz i otrzymujesz
+bonus w wysokosci
+Facet przejrzal twoje sztuczki
+i wyciaga noz!
+Znalazles faceta z zdjecia
+i wabi go do ciemnej uliczki...
+Ukonczyles zadanie i otrzymasz
+$ nagrody
+Kompletnie spieprzyles robote!
+Jestes teraz zwolniony!
+Twoja instytucja kredytowa kwitnie, 
+a ty zarabiasz 
+$ dochodu!
+Twoja instytucja kredytowa zanurza sie
+w monotonie...
+Gracze
+Nieszczesna ofiara
+Nowosci
+

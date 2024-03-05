@@ -1,0 +1,53 @@
+LOCAMAIN.gfx
+
+$f4, $af, $10, $f4
+ 
+ 
+ 
+ 
+99,99,99,99
+
+3
+ 
+ 
+ 
+50
+Gracz
+jest teraz na ruchu!
+Poszukiwany!
+   Zdjecie pokazuje 
+, lidera
+   bandy 
+. Poszukiwani
+     sa prawdopodobnie uzbrojeni!
+    Ranga:
+ Punkty
+Udalo ci sie wydac falszywe pieniadze!
+Stracona falszywa legitymacja!
+Zalegla czynsz
+Nie zaplaciles czynszu za mieszkanie 
+na czas!
+Wlasciciel zajal twoje meble
+o wartosci 
+$!
+Wlasciciel wyrzucil cie z mieszkania!
+Twoi gangsterzy szukaja sobie innego
+szefa, kogos z wieksza kasa...
+Transakcje kapitalowe
+Handlarze bronia, ktorym powierzyles 
+5000$ zostaly zlapani!
+Twoj kapital pracowal w handlu bronia.
+Otrzymujesz 
+Wiezienie
+Jestes nadal w wiezieniu...
+Masz jeszcze troche czasu (
+ miesiace) przed soba...
+Zostales zwolniony z wiezienia przez
+. Ile dolarow chcesz 
+przekazac w ramach podziekowania
+ (0-
+Wygrales!
+Byles najbardziej brutalny,
+podly i sprytny ze wszystkich!
+Tym razem kilku ludzi zostalo szefami!
+Wszyscy jestescie zlymi gangsterami!

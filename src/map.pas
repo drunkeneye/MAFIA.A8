@@ -53,8 +53,8 @@ begin
         CRT_Write(plSteps[currentPlayer]);
         CRT_Write('   '~);
         z := carCargo[plCar[currentPlayer]] - plAlcohol[currentPlayer];
-        i := 32;
-        if z < 10 then i := 33;
+        i := 40 - 3 - Length(map_string_cargo); // FIXME: localization
+        if z < 10 then i := i + 1;
         CRT_GotoXY(i, 22);
         CRT_Write(map_string_cargo);
         CRT_Write(z);

@@ -1,0 +1,29 @@
+LOCABANK.gfx
+Bank/Poczta
+$e6, $af, $ff, $e6
+Bank Klomerz
+Bank Doisch
+Kasyno
+Raffelwaffel 24
+0,2,6,8
+Dzien dobry, panie! Czym moge sluzyc?
+3
+Nie gadac, tylko szybko oddac forse!
+Niepostrzezenie rozejrzec sie za alarmami i wlamac sie noca
+Odejsc
+50
+Potrzebujesz towarzysza!
+Niestety, przeoczyles trzech 
+ochroniarzy przy wejsciu...
+Ochroniarze
+Musisz jeszcze potrenowac!
+Kto ma otworzyc skrytke?
+Hm, zobacze. Sprobuje ze 
+stetoskopem...
+Za goraco! Uciekasz!
+Udalo ci sie!
+Cholera!... Cos poszlo nie tak!
+Ktos nadchodzi!!
+Najpierw badz mala rybka!
+Twoj lup wynosi
+Ponadto znajdujesz 500kg zlota...

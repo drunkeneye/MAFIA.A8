@@ -17,7 +17,13 @@ Atari 8-bit with 64 kB of RAM.
 
 Developed using MAD Assembler and MAD Pascal.
 An several other tools like atari-tools (https://github.com/jhallen/atari-tools).
-Pre-compiled tools (for MacOS M1) can be found in ./bin.
+
+Currently, the code only compiles well on MAD Pascal v1.7.0.
+
+Also, be aware that the code has been developed on a MacOS with
+case-insensitive filesystem. Depending on that, files might not be
+found when using case-sensitive filesystem like on Linux.
+
 
 
 ## Generating stuff
@@ -53,7 +59,8 @@ Using select/option game can be saved or loaded.
 Control is done via [/;'] keys for now; joystick should
 also work in port 0. TBD.
 
-Use enter to shoot during fights.
+Use enter to shoot during fights. You can also quit (and loose)
+a fight by pressing q.
 
 
 ## Remarks
@@ -68,6 +75,11 @@ during map-moving and fighting. TBD.
 code are not 'optimized', e.g. in some places strings are copied
 instead of changing the pointer to the string.
 
+
+## TODO 
+
+- Polish localization (!!)
+- Maybe different fight maps, but then the AI might need a fix or two.
 
 ## BUGS or similar
 

@@ -1,5 +1,5 @@
 
-LOCATION=EN
+# LOCATION=EN
 
 # tools
 MP=../../bin/mp
@@ -138,4 +138,5 @@ run:
 	/Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
 
 save:
-	cp $(ATR) ../release/mafia.atr
+	cp $(ATR) ../release/mafia_$(LOCATION).atr
+

@@ -1,0 +1,22 @@
+LOCACENT.gfx
+Stacja Centralna (Dworzec)
+$a6, $af, $ff, $a6
+ 
+  
+ 
+ 
+6,7,8,9
+Jestes na dworcu w Chicago.
+4
+Odwiedz bar dworcowy
+Kradziez kieszonkowa
+Napad na pocztowy pociag
+Spiesz sie
+50
+Nie ma widoku pocztowego pociagu...
+Masz za malo gangsterow!
+Wkraczasz do wagonu pancernego i
+zaczynasz wlasnie grabic, gdy trzej
+mili panowie zblizaja sie do ciebie...
+Straznicy 
+Straznik

@@ -141,7 +141,7 @@ def create_location_data(txtfile, suffix):
 
 
 if __name__ == "__main__":
-    for loc in ["DE", "EN"]:
+    for loc in ["DE", "EN", "PL"]:
         for g in glob(f"./loc_templates/*_{loc}.txt"):
             create_location_data(g, loc)
 

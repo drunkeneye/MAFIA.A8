@@ -1,0 +1,56 @@
+LOCALOAN.gfx
+Rekin Kredytowy
+$4a, $af, $ff, $4a
+U Petera
+Bracia Dynamit
+Dom Pieniezny Hansel
+Szybko Szybko
+1,2,7,8
+Dzien dobry, w czym moge pomoc?
+6
+Tak. Potrzebuje troche gotowki!
+Nie, nie! Chce tylko splacic dlugi!
+Wykup lub sprzedaj sklep
+Zmiana kapitalu (w przypadku wlasnej dzialalnosci kredytowej)
+Windykacja naleznosci (w przypadku wlasnej dzialalnosci)
+Pomoge sobie
+50
+Najpierw splac swoje stare dlugi!
+Wezme 6% odsetek!
+Ile chcesz pozyczyc (0-5000$)?
+Masz tylko kilka miesiecy na 
+splate dlugow!
+Nie masz zadnych dlugow!
+Ile pieniedzy chcesz splacic?
+Splaciles swoje dlugi!
+Ok, teraz masz jeszcze
+dlugi!
+Masz juz sklep kredytowy!
+Ten sklep nie nalezy do ciebie!
+Wszyscy dluznicy zaplacili na czas!
+Jeden z klientow nadal ma dlugi.
+Czeka na ciebie z karabinem,
+kiedy przyjdziesz po pieniadze!
+Dluznicy
+Zabiles go bezlitosnie.
+Mial jeszcze
+$ przy sobie!
+Najpierw splac swoje wlasne dlugi!
+Kupiec oferuje ci
+$ za sklep. Czy chcesz 
+zaakceptowac (T/N)?
+Zyczysz mu powodzenia.
+Ten sklep juz nalezy do
+Wlasciciel zada
+$ za sklep. Czy chcesz 
+zaakceptowac (T/N)?
+Teraz sklep nalezy do ciebie!
+Masz
+$ w sklepie.
+O ile chcesz zmienic swoja inwestycje
+(max. 5000$)? 
+Masz teraz
+w sklepie.
+Nie mozesz brac kredytow,
+jesli posiadasz sklep kredytowy!
+

@@ -1,0 +1,28 @@
+LOCASETU.gfx
+MAFIA
+$f6, $af, $10, $f6
+ 
+ 
+ 
+ 
+99,99,99,99
+ 
+3
+ 
+ 
+ 
+50
+Ile lat gry (3-50)?
+Ile punktow (100-1000)?
+Ilu graczy (1-4)?
+Gracz 
+Jak masz na imie?
+Nazwa bandy?
+Twoje cechy:
+Sila:
+Inteligencja:
+Brutalnosc:
+Zdrowie:
+Kapital:
+Jestes kobieta czy mezczyzna (k/m)?
+Krotka czy dluga gra (K/D)?

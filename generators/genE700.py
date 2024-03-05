@@ -155,11 +155,18 @@ weaponNames_EN = ['Hands', 'Knife', 'Club',
                                             'Rifle', 'Machine Gun', 'Grenades']
 carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
-
+rankNames_PL = ['Poczatkujacy', 'Zbir', 'Mala ryba',
+                             'Zlodziej', 'Gauner', 'Mafiosi', 'StrachPol', 'Morderca',
+                            'Szef gangsterow', 'Prawa reka', 'Chrzestny']
+weaponNames_PL = ['Rece', 'Noz', 'Palka',
+                        'Kajdany', 'Gwiazdy', 'Rewolwer',
+                        'Karabin', 'KM', 'Granaty']
+carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 if __name__ == '__main__':
-    createE700(rankNames_EN, weaponNames_EN, carNames_EN, "EN")
     createE700(rankNames_DE, weaponNames_DE, carNames_DE, "DE")
+    createE700(rankNames_EN, weaponNames_EN, carNames_EN, "EN")
+    createE700(rankNames_PL, weaponNames_PL, carNames_PL, "PL")
 
 
 

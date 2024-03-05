@@ -1,0 +1,57 @@
+LOCAPUBB.gfx
+Pub/Bar (mroczna knajpa)
+$30, $af, $ff, $30
+Albatross
+Ule
+Bar Smokow
+Bar Dworcowy
+1,4,6,9
+'Ej, Amigo, chcesz mleka, czy szukasz czegos innego?
+5
+Nie, nie mleka! Masz cos alkoholowego?
+Szukam paru kolesi do mojej bandy. Zobaczmy, kto jest dostepny...
+Masz moze jakis dobry pomysl na napad albo cos w tym stylu?
+Pilnie potrzebuje pracy, zlecenia! Wiesz o co chodzi...
+Wyglada na to, ze to nie jest odpowiednie miejsce. Zmykam...
+50
+Nie. Moze jednak masz cos
+dla mnie? Place 
+$ za beczke!
+Ile chcesz oddac (0-
+Zdobadz wiecej (chciwosc)!
+Co? Alkohol? To przeciez zabronione!
+Mam cos, ale cena za beczke to
+Wroc, gdy bedziesz mogl przewiezc
+towar!
+Ile chcesz (0-
+Jako 
+ nie mozesz jeszcze
+rekrutowac wlasnych ludzi!
+Najpierw musisz znalezc schronienie 
+dla swoich gangsterow!
+Mozesz zatrudnic maksymalnie 7 
+dodatkowych gangsterow!
+Nikt tu nie jest.
+Masz teraz 
+ gangsterow!
+Jestes jeszcze za niedoswiadczony!
+Niestety, nic dla ciebie!
+Slyszalem cos... ale to
+kosztuje 
+$. Chcesz podpowiedz?
+W pocztowym pociagu wkrotce bedzie
+duza partia diamentow!
+Oddzial bankowy Klomerz wkrotce 
+otrzyma 500 kg zlotych slupkow!
+Przez nasze miasto przejedzie 
+transport pieniedzy, to bedzie 
+niebieski woz! Zobaczysz go!
+Z 5000$ mozesz zaangazowac sie w 
+duza przemytnik broni!
+Nie pozalujesz...
+Ssss... Mam bardzo wazne
+zadanie! Burmistrz ma byc
+wyeliminowany, ale ma ochrone!
+Za
+$ mozesz
+zatrudnic (T/N)?

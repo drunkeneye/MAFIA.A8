@@ -1,0 +1,29 @@
+LOCACAUG.gfx
+Aresztowanie
+$70, $af, $0e, $70
+
+
+
+
+0,0,0,0
+Zostales zlapany przez policje!
+4
+
+
+
+
+50
+Policjant kiwa ci potajemnie glowa.
+Pozwala ci odejsc!
+Co teraz?
+  1 - Przekupic policjantow
+  2 - Proba ucieczki
+  3 - Poddanie sie
+Co wybierasz? 
+Wymagaja 
+$. (T/N)
+Ale gliny wsadza cie do wiezienia!
+Gliny pozwola ci odejsc!
+Policjanci zlapali cie!
+Musisz sie poddac!
+Ledwie udalo ci sie uciec!

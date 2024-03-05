@@ -20,6 +20,12 @@ uses atari, joystick, pmg, xbapLib, xbios, crt, cio, aplib, b_utils, rmt, b_pmg,
 const 
 {$i const.inc}
 
+const
+    W_keycode = $2e;
+    A_keycode = $3f;
+    S_keycode = $3e;
+    D_keycode = $3a;
+
 {$i vars.pas}
 {$i vars_fight.pas}
 {$i vars_location.pas}

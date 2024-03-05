@@ -1,0 +1,36 @@
+LOCAARMS.gfx
+Sklep z bronia
+$38, $af, $ff, $38
+Pistoletowy kowal
+Handel bronia Axel
+Ostrzezenie ostrza
+Kurt Strzelba
+0,3,6,9
+"Dzien dobry, panie. Kilka dobrych pistoletow w tyle...
+3
+Tak, zobaczymy co jest.
+Nauczysz moich chlopcow strzelac? Sa za slabi!
+Dziekuje, dziekuje! Nie ma potrzeby. Czesc!
+50
+Ok, mamy nastepujace pistolety:
+...gorace jak diabli! Wlasnie dotarla 
+partia granatow recznych Armii!
+Twoj wybor?
+Za malo inteligencji!
+Za malo sily!
+Za malo brutalnosci!
+Sprzedawca oferuje ci 
+za 
+twoja stara bron (
+Czy chcesz ja sprzedac (T/N)? 
+Masz teraz nowa bron!
+Kogo mam wyszkolic?
+Krotkie szkolenie na strzelnicy, lub
+To cie bedzie kosztowac 
+$ (T/N).
+ wyszkolony na strzelnicy...
+ jest w obozie szkoleniowym...
+Twoj gangster stal sie silniejszy,
+inteligentniejszy i brutalniejszy!
+dlugie w obozie treningowym (D/N)?
+Zachowujesz swoja stara bron.

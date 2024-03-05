@@ -1,0 +1,22 @@
+LOCACOUR.gfx
+Rozprawa sadowa
+$70, $af, $0e, $70
+  
+  
+  
+  
+0,0,0,0
+Twoja rozprawa sadowa...
+4
+ 
+ 
+ 
+ 
+50
+Czy chcesz adwokata (T/N)?
+Ile gotowki wplacasz (0-10000$)?
+Zostajesz uniewinniony!
+Twoj adwokat wywalczyl kare
+ miesiecy!
+Spedzisz 
+ miesiecy za kratkami!
