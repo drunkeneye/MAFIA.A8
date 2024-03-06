@@ -102,11 +102,11 @@ begin;
     // choose randomly where to go
     if Random(2) = 1 then 
     begin 
-        if dx < 0 then fp_currentCommand := #$73 else fp_currentCommand := #$02;
+        if dx < 0 then fp_currentCommand := #07 else fp_currentCommand := #06;
     end 
     else 
     begin
-        if dy < 0 then fp_currentCommand := #$26 else fp_currentCommand := #$60;
+        if dy < 0 then fp_currentCommand := #15 else fp_currentCommand := #14;
     end;
     // TODO; if diff is 1/-1 do close this gap to get in shooting range... more or less.
  
@@ -116,10 +116,10 @@ begin;
     if fp_validCmd = 0 then 
     begin;
         case fp_currentCommand of 
-            #$26: if Random(2) =1 then fp_currentCommand := #$02 else fp_currentCommand := #$73;
-            #$60: if Random(2) =1 then fp_currentCommand := #$02 else fp_currentCommand := #$73;
-            #$02: if Random(2) =1 then fp_currentCommand := #$26 else fp_currentCommand := #$60;
-            #$73: if Random(2) =1 then fp_currentCommand := #$26 else fp_currentCommand := #$60;
+            #15: if Random(2) =1 then fp_currentCommand := #06 else fp_currentCommand := #07;
+            #14: if Random(2) =1 then fp_currentCommand := #06 else fp_currentCommand := #07;
+            #06: if Random(2) =1 then fp_currentCommand := #15 else fp_currentCommand := #14;
+            #07: if Random(2) =1 then fp_currentCommand := #15 else fp_currentCommand := #14;
         end; 
         fight_moveCurrentPlayer;
     end; 

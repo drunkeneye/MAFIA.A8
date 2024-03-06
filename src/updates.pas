@@ -198,6 +198,7 @@ begin
         begin
             enableConsole();
             // lost 
+            jobWorking; //FIXME, maybe other title then
             CRT_Writeln(loc_string_13);
             CRT_Writeln(loc_String_14);
             plMoney[currentPlayer] := 0;
@@ -208,11 +209,12 @@ begin
 
         enableConsole();
         // lost 
+        jobWorking;
         CRT_Writeln(loc_string_15);
         CRT_Writeln(loc_string_16);
         CRT_Writeln(loc_string_17);
         waitForKey();
-        plLoanTime[currentPlayer] := 3;
+        plLoanTime[currentPlayer] := 3+Random(3);
     end;
 end;
 

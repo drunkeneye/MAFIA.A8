@@ -166,30 +166,30 @@ begin;
                 Poke(base+1+k+k, 109+c[k]);
             repeat;
                 ch := checkKeyAndStick ();
-            until (ch = #$26) or (ch = #$60) or (ch = #$73) or (ch = #$02) or (ch = #$2f);
+            until (ch = #15) or (ch = #14) or (ch = #07) or (ch = #06) or (ch = #$2f);
             waitForKeyRelease();
             WaitFrames(5);
             case ch of
-                #$26: c[whpos] := c[whpos] - 1; 
-                #$60: c[whpos] := c[whpos] + 1;
+                #15: c[whpos] := c[whpos] - 1; 
+                #14: c[whpos] := c[whpos] + 1;
             end; 
 
-            if (ch = #$73) or (ch = #$02) then 
+            if (ch = #07) or (ch = #06) then 
             begin;
                 Poke(base+whpos SHL 1, 0);
                 Poke(base+whpos SHL 1+2, 0);
-                if ch = #$73 then
+                if ch = #07 then
                 begin;
                     if whpos < 2 then whpos := whpos + 1; 
                 end;
-                if ch = #$02 then
+                if ch = #06 then
                 begin;
                     if whpos > 0 then whpos := whpos - 1;
                 end;
             end;
 
             hops := Random(gangsterInt[currentPlayer SHL 3]) < 4; //            ifint(rnd(1)*(in/8))=0
-            if (ch = #$26) or (ch =#$60) then 
+            if (ch = #15) or (ch =#14) then 
             begin;
                 if c[whpos] > 9 then c[whpos] := 0;
                 if c[whpos] < 0 then c[whpos] := 9;

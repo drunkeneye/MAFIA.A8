@@ -256,22 +256,22 @@ procedure fight_moveCurrentPlayer();
 begin;
     fp_validCmd := 0;
     f_curPos := MAP_SCR_ADDRESS+fp_posW[fp_currentPlayer];
-    if (#$02 = fp_currentCommand) then // left
+    if (#06 = fp_currentCommand) then // left
         if (Peek(f_curPos - 1) = 0) then
             if (Peek(f_curPos + 40 - 1) = 0) then
                 fp_validCmd := -1;
 
-    if (#$73 = fp_currentCommand) then //right
+    if (#07 = fp_currentCommand) then //right
         if (Peek(f_curPos + 2) = 0) then
             if (Peek(f_curPos + 40 + 2) = 0) then
                 fp_validCmd := 1;
 
-    if (#$60 = fp_currentCommand) then //up
+    if (#14 = fp_currentCommand) then //up
         if (Peek(f_curPos - 40) = 0) then
             if (Peek(f_curPos - 40 + 1) = 0) then
                 fp_validCmd := -40;
 
-    if (#$26 = fp_currentCommand) then // down
+    if (#15 = fp_currentCommand) then // down
         if (Peek(f_curPos + 80) = 0) then
             if (Peek(f_curPos + 80 + 1) = 0) then
                 fp_validCmd := 40;
@@ -318,14 +318,14 @@ begin;
             end;
             currentBlink := currentBlink + 1;
             ch := checkKeyAndStick ();
-        until (ch = #$26) or (ch = #$60) or (ch = #$73) or (ch = #$02) or (ch = #$0c);
+        until (ch = #15) or (ch = #14) or (ch = #07) or (ch = #06) or (ch = #$0c);
 
         fight_drawPlayers;
         case ch of 
-            #$02:   shoot_diff := -1;
-            #$73:   shoot_diff := 1;
-            #$60:   shoot_diff := -40;
-            #$26:   shoot_diff := 40;
+            #06:   shoot_diff := -1;
+            #07:   shoot_diff := 1;
+            #14:   shoot_diff := -40;
+            #15:   shoot_diff := 40;
             #$0c:
                     begin;
                         waitForKeyRelease();

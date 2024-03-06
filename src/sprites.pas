@@ -283,10 +283,10 @@ begin
     dir_x := 0;
     dir_y := 0;
     case ch of 
-        #$02:   dir_x := -1;
-        #$73:   dir_x := +1;
-        #$60:   dir_y := -1;
-        #$26:   dir_y := +1;
+        #06:   dir_x := -1;
+        #07:   dir_x := +1;
+        #14:   dir_y := -1;
+        #15:   dir_y := +1;
         else
             begin;
                 WaitFrames(moveSpeed);

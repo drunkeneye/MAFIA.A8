@@ -61,7 +61,7 @@ begin;
         jmp loopend
   stickdata:
         // right, left, down, up --> 7= 0111=right;  11=1011=left, 13=1101=down, 14=1110=up
-        dta 0,0,0,0,    0,0, 0, $73,   0, 0,0, $02, 0,     $26, $60
+        dta 0,0,0,0,    0,0, 0, 07,   0, 0,0, 06, 0,     15, 14
   foundstick:
         tay
         lda stickdata,y
@@ -106,7 +106,7 @@ begin;
         lda kbcode
         jmp loopend
   stickdata:
-        dta 0,0,0,0,    0,0, 0, $73,   0, 0,0, $02, 0,     $26, $60
+        dta 0,0,0,0,    0,0, 0, 07,   0, 0,0, 06, 0,     15, 14
   foundstick:
         tay
         lda stickdata,y

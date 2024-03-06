@@ -41,14 +41,13 @@ but a few strings are built-in, these can be found in strings.pas
 After localization, the binary files must be regenerated using
 ./generators/genLocations.py
 
-To compile for another language, change LOCATION=EN in the
-Makefile. 
-
 
 ## Compiling 
 
 In ./src just execute make. If all tools and assets are in place,
-this should produce then an ATR image in ./output/output.atr
+this should produce then an ATR image in ./release.
+The game language must be specified via the make command,
+e.g. to compile for english, use ```make LOCATION=EN```.
 
 
 ## Gameplay
@@ -56,11 +55,10 @@ this should produce then an ATR image in ./output/output.atr
 Straightforward. In many cases typing 0 will return/exit.
 Using select/option game can be saved or loaded.
 
-Control is done via [/;'] keys for now; joystick should
-also work in port 0. TBD.
+Control is done via cursor keys, but joystick in port 0 should
+also work. 
 
-Use enter to shoot during fights. You can also quit (and loose)
-a fight by pressing q.
+Use enter key to shoot during fights. 
 
 
 ## Remarks
@@ -78,15 +76,16 @@ instead of changing the pointer to the string.
 
 ## TODO 
 
-- Polish localization (!!)
 - Maybe different fight maps, but then the AI might need a fix or two.
+
 
 ## BUGS or similar
 
-- change control to arrow keys instead of PC/C64 like keys
+- Fix English/Polish localizations
 - help KEY=overview during map implement it
 - ask if human player wants to use ai for fight
-
+- when fighting car owner, the name is not shown when the person dies
+- You can also quit (and loose) a fight by pressing q.
 
 
 
