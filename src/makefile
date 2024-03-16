@@ -104,6 +104,7 @@ LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCASUBW.gfx_$(LOCATION)  \
 	LOCAJOBB.gfx_$(LOCATION)  \
 	LOCAMAIN.gfx_$(LOCATION)  \
+	LOCAMAJO.gfx_$(LOCATION)  \
 	LOCACAUG.gfx_$(LOCATION)  \
 	LOCACOUR.gfx_$(LOCATION)  \
 	LOCAROAD.gfx_$(LOCATION)  \
@@ -135,7 +136,7 @@ info:
 	@echo $(FREE_SPACE)
 
 run:
-	/Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
+	echo /Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
 
 save:
 	cp $(ATR) ../release/mafia_$(LOCATION).atr

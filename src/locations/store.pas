@@ -119,7 +119,7 @@ begin;
     end;
  
     // common to all: 
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
+    addPoints(1);
      p := Random(200) + 800;
     if (currentSubLocation = 2) or (currentSubLocation = 3) then 
         p := p - 200;
@@ -234,7 +234,7 @@ begin;
             CRT_Writeln('$.'~);
             addMoney(p);
             addMoney(q);
-            plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 1;
+            addPoints(1);
             waitForKey();
             exit;
         end;

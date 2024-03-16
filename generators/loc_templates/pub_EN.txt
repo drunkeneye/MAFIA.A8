@@ -17,11 +17,11 @@ Seems like this isn't the right place. I'll disappear again...
 No. But maybe you have something for
 me? I pay
 $ per barrel!
-How much do you want to sell (0-
+How much you want to sell (0-
 Get more (greedy)!
 What? Alcohol? That's illegal!
-I have something, only
-per barrel
+I have stuff, per barrel just
+You are carrying too much, friend!
 Come back when you can transport it!
 How much do you want (0-
 As a 

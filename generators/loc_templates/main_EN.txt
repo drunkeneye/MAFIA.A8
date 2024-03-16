@@ -16,10 +16,10 @@ Player
 is up next!
 Wanted!
 The photo shows
-, the head
- of the gang
-. The suspects
-  are likely armed!
+, head
+of the gang
+. Beware!
+The gangsters might be heavily armed!
  Rank:
  Points
 You spend all your counterfeit money!
@@ -40,8 +40,8 @@ Your capital was at work in the arms
 trade. You receive
 Prison
 You're still in prison...
-You still have some time (
- months) ahead...
+You still have some time ahead...
+ months until you get out again)
 You've been freed by
 from 
 prison. What do you pay as thanks 
@@ -51,3 +51,5 @@ You were the most brutal,
 vicious, and cunning of all!
 This time, several became godfathers!
 You were all equally nasty gangsters!
+Press any key or select to save
+or options to load.

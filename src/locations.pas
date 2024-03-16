@@ -92,6 +92,9 @@ end;
 function ShowLocation(L: byte):   byte;
 var i, choice:   byte;
     tmps: YString;
+    npos: array[0..6] of byte;
+    j, nopt: byte;
+    ch, tmpch: char;
 begin
     //SystemOff($fe);
     loadLocation (L);
@@ -114,25 +117,91 @@ begin
     CRT_Write(loc_description_2);
 
     CRT_Gotoxy(0,7);
+    nopt := 0;
+    j := 7;
     for i := 0 to 9 do
     begin;
         tmps := loc_options[i];
         if Length(tmps) = 0 then break;
 
         if tmps[1]= char(0) then  // is it space?
-            CRT_Writeln(tmps)
+        begin 
+            CRT_Writeln(tmps);
+            j := j + 1;
+        end
         else
         begin
             CRT_Newline();
+            j := j + 1;
+            npos[nopt] := j;
             CRT_Writeln(tmps);
+            j := j + 1;
+            nopt := nopt + 1;
         end;
     end;
 
-    // do not allow 0 here, just 1...NOptions
+    choice  := 0;
     repeat;
-        choice := CRT_ReadKey();
-        i := byte(CRT_keycode[choice]);
-    until (i > 48) and (i < 48+loc_nOptions+1);
-    result := i - 48;
+        for i := 0 to nopt-1 do
+        begin;
+            // first clear all
+            CRT_Gotoxy(0,npos[i]);
+            CRT_Write(' '~);
+        end; 
+        CRT_Gotoxy(0, npos[choice]);
+        CRT_Write('>'~);
+
+        ch := readKeyAndStick();
+        repeat;
+            tmpch := checkKeyAndStick ();
+        until tmpch <> ch; // wait for key release or so..
+
+        if byte(ch) = $0c then begin
+            result := choice+1;
+            exit;        
+        end;
+
+        if byte(ch) = 14 then 
+        begin 
+            if choice > 0 then choice := choice -1;
+        end; 
+
+        if byte(ch) = 15 then 
+        begin 
+            if choice < nopt-1 then choice := choice + 1;
+        end; 
+
+        case byte(ch) of 
+            $1f: ch := #49; // 1
+            $1e: ch := #50; //2;
+            $1a: ch := #51;
+            $18: ch := #52;
+            $1d: ch := #53;
+            $1b: ch := #54;
+            $33: ch := #55;
+            $35: ch := #56;
+            $30: ch := #57;
+            $32: ch := #58;
+        end;
+
+    //     'v', #$ff, 'c', #$ff, #$ff, 'b', 'x', 'z', '4', #$ff, '3', '6', CHAR_ESCAPE, '5', '2', '1',
+    //     ',', ' ', '.', 'n', #$ff, 'm', '/', CHAR_INVERSE, 'r', #$ff, 'e', 'y', CHAR_TAB, 't', 'w', 'q',
+    //     '9', #$ff, '0', '7', CHAR_BACKSPACE, '8', '>', #$ff, 'f', 'h', 'd', #$ff, CHAR_CAPS, 'g', 's', 'a',
+
+        if (byte(ch) > 48) and (byte(ch) < 48+loc_nOptions+1) then 
+        begin
+            result := byte(ch) - 48;
+            exit;
+        end; 
+    until ch = #$0c;
+    // should never get here 
+    result := choice+1; 
+
+    // do not allow 0 here, just 1...NOptions
+    // repeat;
+    //     choice := CRT_ReadKey();
+    //     i := byte(CRT_keycode[choice]);
+    // until (i > 48) and (i < 48+loc_nOptions+1);
+    // result := i - 48;
 end;
  

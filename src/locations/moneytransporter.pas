@@ -68,7 +68,6 @@ begin;
     end;
     plMoneyTransporter[currentPlayer] := 1;
     crackedBank(10000); // a bit more
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer]+4;
     waitForKey();
     plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 1 SHL 2);
 end;

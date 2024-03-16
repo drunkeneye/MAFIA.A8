@@ -220,14 +220,15 @@ end;
 
 
 
-// update opportunity
+// update opportunity, only weapon deal
 procedure updateOpportunities();
 var 
     pr:   word;
 begin;
-    loadLocation(JOB_);
-    if plOpportunity[currentPlayer] = 0 then
+    if plOpportunity[currentPlayer] <> 128 then
         exit;
+
+    loadLocation(MAIN_);
 
     enableConsole();
     CRT_Clear;
@@ -237,7 +238,7 @@ begin;
 
     if plOpportunity[currentPlayer] = 128 then //weapondeal
     begin
-        plOpportunity[currentPlayer] := 0;
+        plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 128);
         if Random(5) = 0 then
         begin
             // armsdealer given 5000cash
@@ -285,7 +286,8 @@ begin
         loc_name := loc_string_27;
         ShowLocationHeader();
         CRT_Writeln(loc_string_28);
-        CRT_Write(loc_string_29);
+        CRT_Writeln(loc_string_29);
+        CRT_Write('('~);
         CRT_Write( plPrison[currentPlayer]);
         CRT_Writeln(loc_string_30);
         plPrison[currentPlayer] := plPrison[currentPlayer] - 1;
@@ -309,7 +311,7 @@ begin
         if pr > 0 then
         begin
             payMoney(pr);
-            plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
+            addPoints(2);
             plMoney[k] := plMoney[k] + pr;
         end;
         plFreed[currentPlayer] := 99;
@@ -422,6 +424,7 @@ begin;
         fp_AI[1] := 1;
         fp_N[1] := 1;
         fp_name[16] := loc_string_31;
+        fp_gang[1] := loc_string_31;
         fp_sex[16] := 0;
         fp_weapon[16] := 0;
         fp_energy[16] := 20;
@@ -429,9 +432,9 @@ begin;
         fp_brutality[16] := 30;
 
         if doFight() = 1 then
-            jobdone := 0
+            jobDone := 0
         else
-            jobdone := 1;
+            jobDone := 1;
         enableConsole();
     end;
 
@@ -446,7 +449,7 @@ begin;
         CRT_Writeln(loc_string_22);
         waitForKey();
         addMoney(plJobWage[currentPlayer]);
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 3;
+        addPoints(3);
         // every job is 3, in original JOB=2 +6
         plJob[currentPlayer] := 0;
         plJobLocation[currentPlayer] := NONE_;
@@ -457,7 +460,7 @@ begin;
     CRT_Writeln(loc_String_23);
     CRT_Writeln(loc_string_24);
     waitForKey();
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] - 2;
+    removePoints(2);
     plJobLocation[currentPlayer] := 0;
     plJob[currentPlayer] := 0;
 end;

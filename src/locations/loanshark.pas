@@ -190,9 +190,9 @@ begin
             exit;
         end;
 
-        CRT_Write(loc_string_14);
-        CRT_Write(loc_string_15);
-        CRT_Write(loc_string_16);
+        CRT_Writeln(loc_string_14);
+        CRT_Writeln(loc_string_15);
+        CRT_Writeln(loc_string_16);
         waitForKey();
 
         asm; 
@@ -209,7 +209,10 @@ begin
         fp_energy[16] := 35;
 
         // lost, so we ignore this simply;
-        if doFight() = 1 then exit;
+        if doFight() = 1 then begin
+            removePoints(1); 
+            exit;
+        end;
 
         loan := 500 + Random(0) SHL 2;
         CRT_NewLine();
@@ -221,7 +224,7 @@ begin
         CRT_Write(loan);
         CRT_Write(loc_string_20);
         waitForKey();
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
+        addPoints(2);
         addMoney(loan);
     end;
 end;

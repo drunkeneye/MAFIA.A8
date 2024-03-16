@@ -28,7 +28,7 @@ begin;
 
                 CRT_write(loc_string_4);
                 CRT_Write(plAlcohol[currentPlayer]);
-                CRT_Write(') ?'~);
+                CRT_Write(')?'~);
                 al := readValue(0, plAlcohol[currentPlayer]); 
                 if al = 0 then exit;
 
@@ -62,13 +62,13 @@ begin;
         if w < al then al := w;
         CRT_Write(loc_string_10);
         CRT_Write(al);
-        CRT_Write(') ?'~);
+        CRT_Write(')?'~);
         w := readValue(0, al); 
         if w <= 0 then exit;
         p := w*p; 
         if payMoney (p) = 0 then exit;
         plAlcohol[currentPlayer] := plAlcohol[currentPlayer] + w;  
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
+        addPoints(2);
     end;
 
     // 'Ich suche ein paar Jungs fuer meine     Gang. Mal sehen, wer da ist...'~,
@@ -183,6 +183,7 @@ begin;
         if getYesNo() =0 then exit;
         if payMoney (p) = 0 then exit;
         
+        CRT_NewLine;
         tipp := Random(5);
         case tipp of
             0: begin; //postzug

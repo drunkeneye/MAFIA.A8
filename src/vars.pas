@@ -47,10 +47,11 @@ var
     // 1 byte * 16 = 16 bytes
  
  const 
-    e7adr = $e700;
+    e7adrm6 = $e600-6;
+    e7adr = $e600;
 
 var 
-    carPrices:   array[0..5] of byte  absolute e7adr;
+    carPrices:   array[0..5] of word  absolute e7adrm6;
     carCargo:   array[0..5] of byte absolute e7adr + 6;
     carRange:   array[0..5] of byte absolute e7adr + 12;
     weaponPrices:   array[0..8] of word absolute e7adr + 18;

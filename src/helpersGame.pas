@@ -14,6 +14,23 @@ begin;
 end; 
 
 
+procedure addPoints (pt: byte);
+begin
+    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + pt;
+    if plNewPoints[currentPlayer] > 100 then plNewPoints[currentPlayer] := 100; 
+end;
+
+
+procedure removePoints (pt: byte);
+begin
+    if plNewPoints[currentPlayer] < pt then begin 
+        plNewPoints[currentPlayer] := 0;
+        exit;
+    end;
+    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] - pt;
+end;
+
+
 procedure crackedBank(p: word);
 var m:word;
     k:byte;
@@ -30,7 +47,7 @@ begin;
     // check for gold 
     if p = BANK_ then 
     begin
-        if plOpportunity[currentPlayer] or 2 > 0 then 
+        if plOpportunity[currentPlayer] and 2 > 0 then 
         begin
             CRT_WriteCentered(7, loc_string_15);
             k := k +2;
@@ -45,7 +62,7 @@ begin;
     CRT_Writeln('$!'~);
     waitForKey();
     addMoney(m);
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 4;
+    addPoints(4);
 end;
 
 
@@ -170,7 +187,7 @@ end;
     // end;
 
 
-    procedure saveGame ();
+    procedure saveGame_in_map ();
     begin;
         enableConsole();
         CRT_Clear;
@@ -189,7 +206,7 @@ end;
     end;
 
 
-    procedure loadGame ();
+    procedure loadGame_in_map ();
     var tmp: byte;
     begin;
         enableConsole();

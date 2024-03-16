@@ -20,7 +20,7 @@ begin;
     loadLocation(BANK_);
     ShowLocationHeader;
     {$ifndef norank}
-    if plRank[currentPlayer] < 3 then
+    if plRank[currentPlayer] < 1 then
     begin
         CRT_Write(loc_string_13);
         waitForKey();

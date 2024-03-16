@@ -95,6 +95,13 @@ begin;
         cmp #$0f   
         bne foundstick
 
+        lda $d010 ; try stick button 
+        cmp #$00
+        bne nofire 
+        lda #$0c
+        jmp loopend
+
+  nofire:
         lda consol		; START
         and #1
         beq foundconsol
@@ -133,6 +140,19 @@ begin
   CRT_Write(waitKey_String);
   CRT_ReadKey();
 end;
+
+
+
+// just for return key for now
+procedure waitForKeyRelease;
+var ch: char;
+begin;
+    // wait for return key to be released 
+    repeat;
+        ch := checkKeyAndStick ();
+    until ch <> #$0c;
+end;
+
 
 
 procedure waitForKey();
@@ -242,7 +262,7 @@ begin;
     for k := 0 to 255 do
     begin
         b := xBiosGetByte;
-        Poke($e600+k, b);
+        Poke($e500+k, b);
     end;
     // no close file?
 
@@ -257,4 +277,66 @@ begin;
     CRT_Writeln(buf_gangsterText4);
     CRT_Writeln(buf_gangsterText5);
 end;
+
+
+
+
+    procedure saveGame ();
+    begin;
+//        enableConsole();
+        CRT_Clear;
+        CRT_WriteCentered(1,'Saving...'~);
+        xBiosOpenFile(saveFname);
+        xBiosSetLength($1000); // just dump all of it 
+        xBiosWriteData(Pointer($e000));
+        // we pray instead.
+        // if (xBiosIOresult = 0) then
+        //     CRT_WriteCentered(3,'Successful!'~)
+        // else
+        //     CRT_WriteCentered(3,'ERROR!'~);
+        xBiosFlushBuffer();
+        waitForKey();
+  //      enableMapConsole();
+    end;
+
+
+    procedure loadGame ();
+    var tmp: byte;
+    begin;
+//        enableConsole();
+        CRT_Clear;
+        CRT_WriteCentered(1,'Loading...'~);
+        xBiosOpenFile(saveFname);
+        // first check if its plausible
+
+        tmp := 99;
+        xBiosSetLength($1); // just dump all of it 
+        xBiosLoadData(@tmp);
+        if  (tmp > 4) or (tmp = 0) then begin 
+            CRT_WriteCentered(3, 'Invalid save game!'~);
+            waitForKey;
+//            enableMapConsole();
+            exit;
+        end;
+        // if (xBiosIOresult = 0) then
+        //     CRT_WriteCentered(3,'Successful!'~)
+        // else
+        //     CRT_WriteCentered(3,'ERROR!'~);
+
+        // reopen 
+        xBiosOpenFile(saveFname);
+        xBiosSetLength($1000); // just dump all of it 
+        xBiosLoadData(Pointer($e000));
+        // if (xBiosIOresult = 0) then
+        //     CRT_WriteCentered(3,'Successful!'~)
+        // else
+        //     CRT_WriteCentered(3,'ERROR!'~);
+        xBiosFlushBuffer();
+        waitForKey();
+        // placeCurrentPlayer ();
+        // loadMap();
+        // enableMapConsole();
+    end; 
+
+
 

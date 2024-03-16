@@ -44,6 +44,7 @@ end;
 
 // works with global vars
 procedure playersTurn ();
+var ch:char;
 begin
   CRT_Clear;
   CRT_WriteCentered(4, loc_string_1);
@@ -69,7 +70,22 @@ begin
   // sound(0,145,10,15);
   // WaitFrames(10);
   NoSound;
-  waitForKey();
+  if currentPlayer = 0 then 
+  begin 
+    CRT_WriteCentered(8, loc_string_40);
+    CRT_WriteCentered(9, loc_string_41);
+    ch := readKeyAndStick();
+    if byte(ch) = $1e then begin;
+        loadGame();
+    end;
+    if byte(ch) = $1f then begin;
+        saveGame();
+    end;
+  end 
+  else 
+  begin
+    waitForKey();
+  end;
   CRT_NewLine;
   CRT_Newline;
 end;

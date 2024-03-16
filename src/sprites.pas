@@ -42,7 +42,6 @@ begin;
 
     loadLocation(COURT_);
     enableConsole();
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
     prisonTime := 1+byte(plRank[currentPlayer] SHR 1);
 
     ShowLocationHeader;
@@ -69,11 +68,13 @@ begin;
                 plPrison[currentPlayer] := prisonTime;
                 if prisonTime = 0 then
                 begin;
+                    addPoints(2);
                     CRT_Writeln(loc_string_3);
                     waitForKey;
                     result := 1;
                     exit;
                 end;
+                removePoints(3);
                 CRT_Writeln (loc_string_4);
                 CRT_Write (prisonTime);
                 CRT_Writeln (loc_string_5);
@@ -90,7 +91,7 @@ begin;
     CRT_Write (prisonTime);
     CRT_Write (loc_string_7);
     plJob[currentPlayer] := 0;
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] - 6;
+    removePoints(3);
     waitForKey;
     result := 1;
     exit;
@@ -163,8 +164,9 @@ begin
         end
         else
             begin
-                plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
-                // why...
+                // we ignore this, that a play er gets +2 points iff he refuses to pay the cops 
+                // after having asked for it!
+                // addPoints(2)
                 result := gotoCourt();
             end;
     end;
@@ -174,8 +176,7 @@ begin
         // 26040 ifint(rnd(1)*tr(sp)/11)=0thenx=-5:UPDATE_PUNKTE:goto26042
         if Random(80) > carRange[plCar[currentPlayer]] then
         begin
-            plNewPoints[currentPlayer] := plNewPoints[currentPlayer] - 5;
-            // why...
+            removePoints(4);
             CRT_Writeln(loc_string_12);
             CRT_Writeln(loc_string_13);
             waitForKey;
@@ -183,8 +184,7 @@ begin
             exit;
         end;
         CRT_Writeln(loc_string_14);
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer] +2;
-        // why...
+        addPoints(2);
         waitForKey;
         result := 0;
         exit;

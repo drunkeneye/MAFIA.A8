@@ -11,5 +11,5 @@ begin;
         result := END_TURN_;
         exit;
     end;
-    // if now, we just exit? TODO
+    addPoints(1); // fight won 
 end;

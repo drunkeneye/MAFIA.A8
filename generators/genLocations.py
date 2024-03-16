@@ -7,7 +7,7 @@ def split_description(description, current_opt, maxn = 2):
     words = description.split()
     description_parts = []
     if current_opt is not None:
-        current_part = str(current_opt) + " - "
+        current_part = str(current_opt) + " " + str(current_opt) + "-"   # first must not be space, else this will be understood as extra-text
     else:
         current_part = ''
     for word in words:

@@ -2,8 +2,8 @@
 var 
     fight_string_1: YString = 'Ty uderzyles(as) '~;
     fight_string_2: YString = '!!'~;
-    fight_string_3: YString = 'Niestety, '~;
-    fight_string_4: YString = ' jest teraz martwy(a)!'~;
+    fight_string_3: YString = 'Niestety,'~;
+    fight_string_4: YString = 'jest teraz martwy(a)!'~;
     fight_string_5: YString = 'Nie trafiles(as)!'~;
     fight_string_6: YString = 'Wygral(a) '~;
     waitKey_String: YString = 'Nacisnij klawisz!'~;
@@ -38,8 +38,8 @@ const
 var 
     fight_string_1: YString = 'Du hast '~;
     fight_string_2: YString = ' getroffen!'~;
-    fight_string_3: YString = 'Leider ist '~;
-    fight_string_4: YString = ' jetzt tot!'~;
+    fight_string_3: YString = 'Leider ist'~;
+    fight_string_4: YString = 'jetzt tot!'~;
     fight_string_5: YString = 'Du hast verfehlt!'~;
     fight_string_6: YString = 'Gewonnen hat '~;
     waitKey_String: YString = 'Taste druecken!'~;
@@ -97,8 +97,8 @@ const
 var 
     fight_string_1: YString = 'You hit '~;
     fight_string_2: YString = ' !'~;
-    fight_string_3: YString = 'Unfortunately, '~;
-    fight_string_4: YString = ' is now dead.'~;
+    fight_string_3: YString = 'Unfortunately,'~;
+    fight_string_4: YString = 'is now dead.'~;
     fight_string_5: YString = 'You missed!'~;
     fight_string_6: YString = 'Winner is '~;
     waitKey_String: YString = 'Press a key!'~;

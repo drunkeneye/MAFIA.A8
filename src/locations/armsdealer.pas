@@ -92,12 +92,14 @@ begin;
         else if (gangsterStr[currentGangster]  < 20) and ((selectedWeapon = 2) or (selectedWeapon = 3)) then
             begin
                 CRT_Write (loc_string_6);
+                removePoints(1);
                 waitForKey();
                 ga := -1;
             end
         else if (gangsterBrut[currentGangster]  < 40) and ((selectedWeapon = 3) or (selectedWeapon > 6)) then
             begin
                 CRT_Write (loc_string_7);
+                removePoints(1);
                 waitForKey();
                 ga := -1;
             end;
@@ -131,12 +133,12 @@ begin;
             end; 
         end;
 
-        // weapon downgrade gives minus points FIXME
+        // weapon downgrade gives minus points
         // 13072 ifx>gw(sp,y)thenPUNKTE_SP=PUNKTE_SP-SPIEL_SCHWIERIGKEIT*1*(PUNKTE_SP<100):goto13075
         if gangsterWeapon[currentGangster] < selectedWeapon then
-            plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2
+            addPoints(1)
         else
-            plNewPoints[currentPlayer] := plNewPoints[currentPlayer] - 2;
+            removePoints(1);
 
         addMoney(oldWeaponPrice);
         gangsterWeapon[currentGangster] := selectedWeapon;
@@ -190,7 +192,7 @@ begin;
             inc_st := 5;
             inc_in := 3 + 2*byte(currentSubLocation = 1);
             inc_bt := 2 + 3*byte(currentSubLocation = 3);
-            plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 1;
+            addPoints(1);
             // one more for schiessstand
         end
         else
@@ -206,7 +208,7 @@ begin;
         CRT_NewLine;
         CRT_NewLine;
         increaseCurrentGangster (inc_st, inc_in, inc_bt);
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 1;
+        addPoints(1);
 
         CRT_ReadKey();
     end;

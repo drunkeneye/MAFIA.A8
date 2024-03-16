@@ -71,19 +71,19 @@
     // could also preload sex/str/brut, but no real saving
     // THIS CAN BE OVERLAPPED WITH OTHER DATA 
     // THAT IS ONLY NEEDED WHEN NO GANGSTER IS SELECTED..
-    buf_gangsterText1: YString absolute $e600;
-    buf_gangsterText2: YString absolute $e628;
-    buf_gangsterText3: YString absolute $e650;
-    buf_gangsterText4: YString absolute $e678;
-    buf_gangsterText5: YString absolute $e6a0;
-    buf_gangsterAnrede: XString absolute $e6c8;
-    buf_gangsterSex: byte absolute $e6d8;
-    buf_gangsterStr: byte absolute $e6d9;
-    buf_gangsterBrut: byte absolute $e6da;
-    buf_gangsterInt: byte absolute $e6db;
-    buf_gangsterWeapon: byte absolute $e6dc;
-    buf_gangsterName: XString absolute $e6dd;
-    buf_gangsterPrice: word absolute $e6ed;
+    buf_gangsterText1: YString absolute $e500;
+    buf_gangsterText2: YString absolute $e528;
+    buf_gangsterText3: YString absolute $e550;
+    buf_gangsterText4: YString absolute $e578;
+    buf_gangsterText5: YString absolute $e5a0;
+    buf_gangsterAnrede: XString absolute $e5c8;
+    buf_gangsterSex: byte absolute $e5d8;
+    buf_gangsterStr: byte absolute $e5d9;
+    buf_gangsterBrut: byte absolute $e5da;
+    buf_gangsterInt: byte absolute $e5db;
+    buf_gangsterWeapon: byte absolute $e5dc;
+    buf_gangsterName: XString absolute $e5dd;
+    buf_gangsterPrice: word absolute $e5ed;
 
 
     // $e700 

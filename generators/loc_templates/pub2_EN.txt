@@ -15,7 +15,7 @@ $30, $af, $ff, $30
  
 50
 As a
-you find something better!
+ you find something better!
 No one has a job for you!
 The owner of a established bar checks
 you out and wants to hire you as a 

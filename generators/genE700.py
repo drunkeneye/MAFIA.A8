@@ -21,7 +21,7 @@ def createE700(rankNames, weaponNames, carNames, suffix):
     byte_stream = bytearray()
 
     for k in carPrices:
-        byte_stream.append(k)
+        byte_stream.extend(struct.pack('<H', k))
 
     for k in carCargo:
         byte_stream.append(k)
@@ -82,11 +82,11 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 
 
 
-carPrices = [0, 35, 40, 65, 70, 75]
+carPrices = [0, 3500, 4000, 6500, 7000, 7500]
 carCargo = [50, 100, 120, 200, 150, 100]
 carRange = [35, 45, 55, 55, 70, 50]  # add some more range to accommodate the larger map
 weaponPrices = [0, 100, 200, 500, 3000, 4000, 4500, 8000, 10000]
-weaponReach = [2, 2, 3, 4, 10, 15, 15, 20, 20]
+weaponReach = [2, 2, 3, 4, 8, 12, 16, 14, 20] 
 weaponPrecision = [2, 3, 4, 4, 2, 5, 5, 6, 7]
 weaponEffect = [2, 5, 3, 4, 7, 10, 12, 15, 18]
 weaponSound = [1, 0, 1, 4, 0, 2, 2, 10, 3]

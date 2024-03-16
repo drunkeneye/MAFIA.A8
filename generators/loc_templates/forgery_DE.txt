@@ -23,6 +23,6 @@ Du hast schon Blueten!
 Nng... Hoechst ungern! Wieviel Dollar
 willst du anlegen (0-
 Ich gebe dir
-$ Blueten dafuer (J/N).
+$ Blueten dafuer (J/N)?
 Aber gib nicht alles auf einmal aus!
 

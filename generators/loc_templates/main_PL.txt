@@ -18,8 +18,8 @@ Poszukiwany!
    Zdjecie pokazuje 
 , lidera
    bandy 
-. Poszukiwani
-     sa prawdopodobnie uzbrojeni!
+. Uwaga!
+Gangsterzy moga byc ciezko uzbrojeni!
     Ranga:
  Punkty
 Udalo ci sie wydac falszywe pieniadze!
@@ -40,8 +40,8 @@ Twoj kapital pracowal w handlu bronia.
 Otrzymujesz 
 Wiezienie
 Jestes nadal w wiezieniu...
-Masz jeszcze troche czasu (
- miesiace) przed soba...
+Masz jeszcze troche czasu przed soba
+ miesiecy do ponownego zwolnienia)
 Zostales zwolniony z wiezienia przez
 . Ile dolarow chcesz 
 przekazac w ramach podziekowania
@@ -51,3 +51,5 @@ Byles najbardziej brutalny,
 podly i sprytny ze wszystkich!
 Tym razem kilku ludzi zostalo szefami!
 Wszyscy jestescie zlymi gangsterami!
+Nacisnij dowolny przycisk lub wybor,
+aby zapisac lub zaladowac opcje.

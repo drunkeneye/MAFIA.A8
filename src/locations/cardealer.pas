@@ -4,8 +4,8 @@ function carDealerChoices (var choice:byte):   byte;
 var r:   byte;
     minCar:   byte;
     maxCar:   byte;
-    price:   byte;
-    oldPrice:   byte;
+    price:   word;
+    oldPrice:   word;
     newCar:   byte;
 begin;
     // load strings 
@@ -29,7 +29,10 @@ begin;
             CRT_Write('  '~);
             CRT_Write(r);
             CRT_Write(' - '~);
-            CRT_Writeln(carNames[r]);
+            CRT_Write(carNames[r]);
+            CRT_Write(' ('~);
+            CRT_Write(carPrices[r]);
+            CRT_Writeln('$)'~);
         end;
 
         CRT_NewLine();
@@ -40,9 +43,10 @@ begin;
         price := carPrices[newCar];
         if payMoney(price) = 0 then exit;
 
-        if plCar[currentPlayer] <> 0 then
+        r := plCar[currentPlayer];
+        if r <> 0 then
         begin;
-            oldPrice := 1000+Random(0)*plCar[currentPlayer];
+            oldPrice := 1000+Random(0)*carPrices[r];
             CRT_NewLine;
             CRT_Write(loc_string_4);
             CRT_Write(oldPrice);
@@ -52,6 +56,7 @@ begin;
             r := getYesNo();
             if r = 0 then exit;
             addMoney(oldprice);
+            CRT_NewLine;
         end;
 
         CRT_Writeln(loc_string_6);
@@ -130,9 +135,9 @@ begin;
         // fp_name[16] := loc_string_19;
         asm; 
             lda loc_string_19
-            sta adr.FP_GANG+16*2
+            sta adr.fp_Name+16*2
             lda loc_string_19+1
-            sta adr.FP_GANG+1+16*2
+            sta adr.fp_Name+1+16*2
         end;
         fp_weapon[16] := 5;
         fp_sex[16] := Random(2);

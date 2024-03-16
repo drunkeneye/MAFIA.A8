@@ -5,7 +5,7 @@ $70, $af, $0e, $70
   
  
  
-5,5,5,5
+7,7,7,7
 Borrowing a bit of cash...
 0
 50
@@ -14,8 +14,8 @@ Unfortunately, the money transport is
 accompanied by a police escort!
 Escort
 Guard
-The mayor hides
-behind his bodyguards!
+The fat, ugly mayor cowardly hides
+behind his many bodyguards!
 Bodyguards
 Mayor
 For your heinous deed, you also 

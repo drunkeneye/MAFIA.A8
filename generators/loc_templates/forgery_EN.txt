@@ -23,5 +23,5 @@ You already have counterfeit money!
 Nng... Very reluctantly! How many 
 dollars do you want to invest (0-
 I'll give you
-$ counterfeit for it (Y/N).
+ faked $ for it (Y/N)?
 But don't spend it all at once!

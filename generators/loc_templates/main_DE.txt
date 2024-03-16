@@ -16,10 +16,10 @@ Spieler
 ist an der Reihe!
 Gesucht!
    Das Photo zeigt 
-, den Kopf
+, Kopf
    der Bande 
-. Die Gesuchten
-     sind wahrscheinlich bewaffnet!
+. Vorsicht!
+Die Gangster sind schwer bewaffnet!
     Rang:
  Punkte
 Du konntest dein Falschgeld ausgeben!
@@ -40,8 +40,8 @@ Dein Kapital hat im Waffenhandel
 gearbeitet. Du erhaelst 
 Gefaengnis
 Du sitzt noch immer im Gefaengnis...
-Du hast noch einige Zeit (
- Monate) vor dir...
+Du hast noch einige Zeit vor dir...
+ Monate bis du wieder rauskommst)
 Du bist von 
  aus dem
 Knast befreit worden. Was zahlst du
@@ -51,3 +51,5 @@ Du warst von allen der brutalste,
 gemeinste und schlauste!
 Diesmal sind mehrere Pate geworden!
 Ihr ward alle gleich fiese Gangster!
+Druecke eine Taste oder Select um zu 
+speichern oder Options um zu laden.

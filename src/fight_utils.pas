@@ -1,4 +1,34 @@
 
+procedure fight_displayStats();
+begin;
+//    FillChar (Pointer (MAP_SCR_ADDRESS+21*40), 3*40, ' '~);
+    if fp_currentSite = 0 then
+    begin;
+        FillChar (Pointer (MAP_SCR_ADDRESS+21*40), 20, ' '~);
+        FillChar (Pointer (MAP_SCR_ADDRESS+22*40), 20, ' '~);
+        FillChar (Pointer (MAP_SCR_ADDRESS+23*40), 20, ' '~);
+        CRT_GotoxY(0,21);
+        CRT_Write(fp_Name[fp_currentPlayer]);
+        CRT_GotoxY(0,22);
+        CRT_Write('E:'~);
+        CRT_Write(fp_energy[fp_currentPlayer]);
+        CRT_GotoxY(0,23);
+        CRT_Write('W:'~);
+        CRT_Write(weaponNames[fp_weapon[fp_currentPlayer]]);
+    end
+    else 
+    begin 
+        FillChar (Pointer (MAP_SCR_ADDRESS+21*40+20), 20, ' '~);
+        FillChar (Pointer (MAP_SCR_ADDRESS+22*40+20), 20, ' '~);
+        FillChar (Pointer (MAP_SCR_ADDRESS+23*40+20), 20, ' '~);
+        CRT_WriteRightAligned(21, fp_Name[fp_currentPlayer]);
+        CRT_WriteRightAligned(22, Concat ('E:'~, Atascii2Antic(IntToStr(fp_energy[fp_currentPlayer]))));
+        CRT_WriteRightAligned(23, Concat ('W:'~, weaponNames[fp_weapon[fp_currentPlayer]]));
+    end;
+end;
+
+
+
 
 //2,3,6,7 //4,5,8,9
 //2,3,10,11 //4,5,12,13 = male 
@@ -177,13 +207,14 @@ begin;
             if fp_energy[t] <= hit then
             begin
                 fp_energy[t] := 0;
-                CRT_Gotoxy(0,20);
-                CRT_Write(fight_string_3);
-                CRT_Write(fp_name[t]);
-                CRT_Write(' '~);
-                CRT_Write(fight_string_4);
+                
+                FillChar (Pointer (MAP_SCR_ADDRESS+20*40), 4*40, ' '~);
+                CRT_WriteCentered(21, fight_string_3);
+                CRT_WriteCentered(22, fp_name[t]);
+                CRT_WriteCentered(23, fight_string_4);
                 WaitFrames(fight_deadTime);
                 fight_clearPlayer(fp_posW[t]);
+                fight_displayStats();
             end
             else
                 fp_energy[t] := fp_energy[t] - hit;
@@ -226,31 +257,6 @@ end;
 
 
 
-procedure fight_displayStats();
-begin;
-    FillChar (Pointer (MAP_SCR_ADDRESS+21*40), 3*40, ' '~);
-    if fp_currentSite = 0 then
-    begin;
-        CRT_GotoxY(0,21);
-        CRT_Write(fp_Name[fp_currentPlayer]);
-        CRT_GotoxY(0,22);
-        CRT_Write('E:'~);
-        CRT_Write(fp_energy[fp_currentPlayer]);
-        CRT_GotoxY(0,23);
-        CRT_Write('W:'~);
-        CRT_Write(weaponNames[fp_weapon[fp_currentPlayer]]);
-    end
-    else 
-    begin 
-        CRT_WriteRightAligned(21, fp_Name[fp_currentPlayer]);
-        CRT_WriteRightAligned(22, Concat ('E:'~, Atascii2Antic(IntToStr(fp_energy[fp_currentPlayer]))));
-        CRT_WriteRightAligned(23, Concat ('W:'~, weaponNames[fp_weapon[fp_currentPlayer]]));
-    end;
-end;
-
-
-
-
 procedure fight_moveCurrentPlayer();
 // needs fp_currentCommand, fp_currentPlayer, fp_validCmd
 begin;
@@ -283,16 +289,6 @@ begin;
     end;
 end;
 
-
-// just for return key for now
-procedure waitForKeyRelease;
-var ch: char;
-begin;
-    // wait for return key to be released 
-    repeat;
-        ch := checkKeyAndStick ();
-    until ch <> #$0c;
-end;
 
 
 procedure fight_attackCurrentPlayer();
@@ -379,6 +375,10 @@ begin;
             fp_winner := 1-fp_currentSite;
             exit;
         end;
+
+        // set to AI mode now  = 'q' key, will take over after this move
+        if (fp_currentCommand = #13) then
+            fp_AI[fp_currentSite] := 1; 
 
         // else we first try to move
         fight_moveCurrentPlayer();

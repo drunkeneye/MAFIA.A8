@@ -43,7 +43,7 @@ begin;
         CRT_NewLine();
         CRT_Writeln(loc_string_7);
         plForgedID[currentPlayer] := 1;
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer]+1;
+        addPoints(1);
         waitForKey();
     end;
 
@@ -88,7 +88,7 @@ begin;
 
         addMoney(p);
         plFakeMoney[currentPlayer] := 6;
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer]+1;
+        addPoints(1);
         waitForKey();
     end;
 end;

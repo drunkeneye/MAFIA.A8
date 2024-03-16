@@ -23,5 +23,5 @@ Masz juz kwiaty!
 Nng... bardzo niechetnie! Ile dolarow
 chcesz zainwestowac (0-
 Dam ci
-$ Kwiatow za to (T/N).
+$ fake dolarow za to (T/N)?
 Ale nie wydawaj wszystkiego od razu!

@@ -86,9 +86,9 @@ begin;
     CRT_Writeln(loc_string_10);
     CRT_Writeln(loc_string_11);
     waitForKey;
-    addMoney(7000);
+    addMoney(7000); 
+    // no points in original, here we add 4
+    addPoints(4);
     plForgedID[currentPlayer] := 1;
-    // no points in original...
-//    plNewPoints[currentPlayer] := plNewPoints[currentPlayer]+4;
 end;
 

@@ -24,7 +24,7 @@ begin;
 
         // plMoney[currentPlayer] := plMoney[currentPlayer] - m*1000;
         plBribe[currentPlayer] := plBribe[currentPlayer] + m + 1;
-        plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 2;
+        addPoints(2);
 
         CRT_Newline;
         CRT_Newline;

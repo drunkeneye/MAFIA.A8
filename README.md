@@ -58,7 +58,18 @@ Using select/option game can be saved or loaded.
 Control is done via cursor keys, but joystick in port 0 should
 also work. 
 
-Use enter key to shoot during fights. 
+
+## Fight 
+
+Moving gangsters is done via cursor keys or joystick.
+If one presses enter (or fire) one can shoot. 
+The gangster will blink faster and with the cursor keys,
+one can shoot in that direction. 
+To skip moving the player, press Space.
+To quit fighting (and loose), press Q .
+To set to AI mode press I. The AI will then take over after
+the current move, and cannot be turned off again!
+
 
 
 ## Remarks
@@ -81,11 +92,11 @@ instead of changing the pointer to the string.
 
 ## BUGS or similar
 
+- Even out rank requirements for bank/pub/gangsters
 - Fix English/Polish localizations
 - help KEY=overview during map implement it
 - ask if human player wants to use ai for fight
 - when fighting car owner, the name is not shown when the person dies
-- You can also quit (and loose) a fight by pressing q.
 
 
 

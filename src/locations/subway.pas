@@ -35,6 +35,10 @@ begin
         plMapPosY[currentPlayer] := j;
         plCurrentMap[currentPlayer] := k;
         placeCurrentPlayer ();
+        oldMapPos_X := mapPos_X; // just to be sure...
+        oldMapPos_Y := mapPos_Y;
+        oldPlayerPos_X := playerPos_X;
+        oldPlayerPos_Y := playerPos_Y; 
     end;
 
     if choice = 1 then
@@ -57,8 +61,8 @@ begin
     if hops = True then loot := 0;
     value := 0;
     case loot of 
-        0,1 : CRT_Writeln(loc_string_5);
-        2: CRT_Writeln(loc_string_6);
+        0: CRT_Writeln(loc_string_5);
+        1,2: CRT_Writeln(loc_string_6);
         3: CRT_Writeln(loc_string_7);
         4: begin;
                 CRT_Writeln(loc_string_8); 
@@ -84,13 +88,13 @@ begin
             end;
     end;
     waitForKey;
-    if loot < 2 then begin;
+    if loot < 1 then begin;
         gotCaught;
         result := END_TURN_;
         exit;
     end; 
     if choice = 2 then loadMap();
     addMoney( value);
-    plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + 1;
+    addPoints(1);
 end;
 

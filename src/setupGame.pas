@@ -63,7 +63,7 @@ begin
         //initCurrentPlayer();
         ShowLocationHeader;
 
-        // create spiler 1 in memory..
+        // create player 1 in memory..
         CRT_WriteCentered(4, loc_string_4);
         CRT_Write(j+1);
         CRT_NewLine();
@@ -76,7 +76,7 @@ begin
         plGangsters[currentPlayer SHL 3] := j;
 
         CRT_WriteCentered(9, loc_string_6);
-        CRT_GotoXY(20-8,10);
+        CRT_GotoXY(20-8-1,10);
         plGang[currentPlayer] := Atascii2Antic(CRT_ReadString(15));
 
         CRT_WriteCentered(12,loc_string_7);

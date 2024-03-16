@@ -126,7 +126,7 @@ begin
     enableConsole();
     // repeat; until false;
     clearMemory();
-    xbunAPL (e7fname, Pointer(e7adr));
+    xbunAPL (e7fname, Pointer(e7adrm6));
     //setupGame();
     initGlobalVars();
     setupGame();
@@ -149,6 +149,7 @@ begin
     //     waitForKey();
     // end;
 
+    plOpportunity[currentPlayer] := 255;
 
 
     currentPlayer := 0;
@@ -174,6 +175,7 @@ begin
             if plFakeMoney[currentPlayer] = 0 then 
             begin
                 enableConsole();
+                jobWorking;
                 CRT_Writeln(loc_string_11);
                 waitForKey();
             end;
@@ -185,6 +187,7 @@ begin
             if Random(12) = 1 then 
             begin // once a year
                 enableConsole();
+                jobWorking;
                 CRT_Writeln(loc_string_12);
                 waitForKey();
                 plForgedID[currentPlayer] := 0;
@@ -195,14 +198,16 @@ begin
         updateRent();
         updateOpportunities(); //incl _26
         updatePrison();
+
+        // 4050 pl(sp)=pl(sp)+(pl(sp)>0)
+        if plBribe[currentPlayer] > 0 then
+            plBribe[currentPlayer] := plBribe[currentPlayer] - 1;
+
         if currentLocation = END_TURN_ then begin
             nextPlayer; 
             continue;
         end; 
         
-        // 4050 pl(sp)=pl(sp)+(pl(sp)>0)
-        if plBribe[currentPlayer] > 0 then
-            plBribe[currentPlayer] := plBribe[currentPlayer] - 1;
 
         loadLocation (JOB_);
         updateLoanShark();
@@ -230,14 +235,6 @@ begin
 
             repeat;
                 ch := readKeyAndStick();
-                if byte(ch) = $1e then begin;
-                    loadGame();
-                    continue;
-                end;
-                if byte(ch) = $1f then begin;
-                    saveGame();
-                    continue;
-                end;
                 currentLocation := MoveCurrentPlayer(ch);
                 if currentLocation = END_TURN_ then break;
                 printMapStatus();
