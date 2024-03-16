@@ -1,0 +1,22 @@
+LOCAMAJO.gfx
+Buergermeister
+$70, $af, $0e, $70
+ 
+  
+ 
+ 
+7,7,7,7
+Ein bisschen Bargeld borgen...
+0
+50
+Du hast zuwenig Gangster!
+Leider wird der Geldtransport von 
+einer Polizeieskorte begleitet!
+Eskorte
+Wachmann
+Der Buergermeister verschanzt sich
+hinter seinen Leibwaechtern!
+Leibwaechter
+Buergermeister
+Fuer deine ruchlose Tat bekommst du
+auch noch 7000$ und einen neuen Pass!

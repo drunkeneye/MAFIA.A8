@@ -46,7 +46,7 @@ begin;
         r := plCar[currentPlayer];
         if r <> 0 then
         begin;
-            oldPrice := 1000+Random(0)*carPrices[r];
+            oldPrice := 1000+Random(r) SHL 9+Random(0);
             CRT_NewLine;
             CRT_Write(loc_string_4);
             CRT_Write(oldPrice);

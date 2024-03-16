@@ -84,7 +84,7 @@ var
     LOCAARMSfname: TString absolute e7adr + 392;
     LOCAMAINfname: TString absolute e7adr + 408;
     LOCAJOBBfname: TString absolute e7adr + 424;
-    LOCMAJOfname: TString absolute e7adr + 440;
+    LOCAMAJOfname: TString absolute e7adr + 440;
     LOCACOURfname: TString absolute e7adr + 456;
     LOCACAUGfname: TString absolute e7adr + 472;
     LOCAROADfname: TString absolute e7adr + 488;

@@ -77,7 +77,7 @@ begin;
         ARMSDEALER_:locfname := LOCAARMSfname;
         MAIN_:locfname := LOCAMAINfname;
         JOB_: locfname:= LOCAJOBBfname;
-        MAJOR_: locfname := LOCAMONYfname; // same as moneytransport
+        MAJOR_: locfname := LOCAMAJOfname; 
         CENTRALSTATION_: locfname := LOCACENTfname;
         COURT_: locfname := LOCACOURfname;
         CAUGHT_: locfname := LOCACAUGfname;

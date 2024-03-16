@@ -1,0 +1,22 @@
+LOCAMAJO.gfx
+Mayor
+$70, $af, $0e, $70
+ 
+  
+ 
+ 
+7,7,7,7
+Borrowing a bit of cash...
+0
+50
+You don't have enough gangsters!
+Unfortunately, the money transport is 
+accompanied by a police escort!
+Escort
+Guard
+The fat, ugly mayor cowardly hides
+behind his many bodyguards!
+Bodyguards
+Mayor
+For your heinous deed, you also 
+receive $7000 and a new passport!

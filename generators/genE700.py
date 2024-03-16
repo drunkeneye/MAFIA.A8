@@ -131,7 +131,7 @@ fstrings = [
     'LOCAARMSAPL',
     'LOCAMAINAPL',
     'LOCAJOBBAPL',
-    'LOCMAJOAPL',
+    'LOCAMAJOAPL',
     'LOCACOURAPL',
     'LOCACAUGAPL',
     'LOCAROADAPL',

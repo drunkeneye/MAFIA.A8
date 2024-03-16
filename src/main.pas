@@ -149,7 +149,7 @@ begin
     //     waitForKey();
     // end;
 
-    plOpportunity[currentPlayer] := 255;
+    // plOpportunity[currentPlayer] := 255;
 
 
     currentPlayer := 0;

@@ -2,7 +2,7 @@
 function majorChoices (var choice:byte):   byte;
 var k:   byte;
 begin;
-    loadLocation(MONEYTRANSPORT_);
+    loadLocation(MAJOR_);
     ShowLocationHeader;
     
     CRT_Writeln(loc_string_6);
