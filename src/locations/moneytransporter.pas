@@ -10,6 +10,7 @@ begin;
         CRT_Writeln(loc_string_1);
         waitForKey();
         plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 1 SHL 2);
+        loadMap(); //reload map to remove transporter
         exit;
     end;
 
@@ -60,6 +61,7 @@ begin;
     //     fp_weapon[16+k] := 7;
     // end;
 
+    plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 1 SHL 2);
     if doFight() = 1 then
     begin;
         gotCaught();
@@ -69,5 +71,4 @@ begin;
     plMoneyTransporter[currentPlayer] := 1;
     crackedBank(10000); // a bit more
     waitForKey();
-    plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 1 SHL 2);
 end;

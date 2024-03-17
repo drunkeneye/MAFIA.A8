@@ -43,6 +43,7 @@ begin;
     begin;
         if (currentSubLocation = 4) or (currentSubLocation = 3) then begin;
             CRT_Writeln(loc_string_4);
+            waitForKey();
             exit;
         end;
     end;

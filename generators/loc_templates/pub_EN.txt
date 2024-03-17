@@ -33,7 +33,7 @@ You can only hire up to 7 more
 gangsters!
 There's no one here.
 You now have
-gangsters!
+ gangsters!
 You're still too inexperienced!
 Unfortunately, I have nothing for you!
 I've heard something... but it'll

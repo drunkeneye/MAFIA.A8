@@ -149,8 +149,8 @@ begin
     //     waitForKey();
     // end;
 
-    // plOpportunity[currentPlayer] := 255;
-
+    plOpportunity[currentPlayer] := 255;
+    plNewPoints[currentPlayer] := 70;
 
     currentPlayer := 0;
     currentMonth := 1;

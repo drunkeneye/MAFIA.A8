@@ -95,15 +95,20 @@ begin;
         loadLocation(MAIN_);
 
         // FIXME
+        enableConsole();
         CRT_Clear;
         CRT_WriteCentered(1, loc_string_13);
         CRT_Invert(0, 1, CRT_screenWidth);
         CRT_GotoXY(0, 3);
 
-        pr := 200+Random(200);
+        pr := 250+Random(200); // should be more expensive than any hotel (<=200)
         CRT_Writeln(loc_string_14);
         CRT_Writeln(loc_string_15);
-        if plMoney[currentPlayer] < pr then
+
+        // player has pay extra for overdue rent
+
+        // has the money 
+        if pr < plMoney[currentPlayer] then
         begin
             CRT_Writeln(loc_string_16);
             CRT_Write(loc_string_17);
@@ -111,19 +116,27 @@ begin;
             CRT_Writeln(loc_string_18);
             subMoney(pr);
             plRentMonths[currentPlayer] := 0;
+            // next round has pay extra again
         end
         else
+        begin
+            // player has not the money, then we leave the rest
+            // but clear out the gang
+            CRT_Writeln(loc_string_19);
+            if plNGangsters[currentPlayer] > 1 then
             begin
-                CRT_Writeln(loc_string_19);
-                if plNGangsters[currentPlayer] > 0 then
-                begin
-                    CRT_Writeln(loc_string_20);
-                    CRT_Writeln(loc_string_21);
-                    plNGangsters[currentPlayer] := 0;
-                    for k := 0 to 31 do;
+                CRT_Writeln(loc_string_20);
+                CRT_Writeln(loc_string_21);
+                for k := 0 to 31 do begin
                     if plGangsters[k] = currentPlayer then plGangsters[k] := 99;
                 end;
+                // but player is still there
+                plGangsters[currentPlayer SHL 3] := currentPlayer;
+                plNGangsters[currentPlayer] := 1;
+                // and we do not rent anything anymore
             end;
+            plRent[r] := 99; 
+        end;
         waitForKey();
     end;
 end;
