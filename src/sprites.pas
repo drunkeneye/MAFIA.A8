@@ -198,9 +198,9 @@ end;
 function roadBlock():   byte;
 begin;
     result := 0;
-    // in original: every 20 steps+10% probabilty, here we just make it randomy 1/128  
+    // in original: every 20 steps+10% probabilty, here we just make it randomy 1/224  
     if plRank[currentPlayer] < 4 then exit;
-    if Random(192) > 0 then exit; 
+    if Random(224) > 0 then exit; 
 
     loadLocation(ROADBLOCK_);
     enableConsole();
@@ -208,8 +208,8 @@ begin;
 
     CRT_Writeln(loc_string_1);
     CRT_Newline();
-    Waitframes(180);
-    result := 0;
+    Waitframes(120);
+
     if Random(2) = 0 then
     begin
         result := 1;

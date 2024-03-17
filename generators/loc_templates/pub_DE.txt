@@ -47,7 +47,7 @@ Ein Geldtransport wird durch unsere
 Stadt fahren, es ist ein blauer Wagen!
 Du wirst ihn sehen!
 Mit 5000$ kannst du dich an einem
-grossen Waffenschmuggel beteiligen!
+Waffenschmuggel beteiligen (J/N)!
 Du wirst es nicht bereuen...
 Psst.. Ich habe da 'nen sehr wichtigen
 Auftrag! Der Buergermeister soll umge-

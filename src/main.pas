@@ -312,7 +312,7 @@ begin
 
         gameEnds := Byte(currentYear > gameLength);
         for k := 0 to nPlayers-1 do
-            if (plRank[k] = 11) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then  gameEnds := gameEnds + 1;
+            if (plPoints[k] > 99) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then  gameEnds := gameEnds + 1;
     until gameEnds = 1;
 
     // reuse plCurrentMap for winners
@@ -322,14 +322,14 @@ begin
     playerPos_X := 0;
     for k := 0 to nPlayers-1 do
     begin
-        if (plRank[k] = 11) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then 
-            plCurrentMap[k] := 0
-        else plCurrentMap[k] := 1;
+        if (plPoints[k] > 99) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then 
+            plCurrentMap[k] := 1
+        else plCurrentMap[k] := 0;
         playerPos_X := playerPos_X + plCurrentMap[k];
     end;
 
     loadLocation(MAIN_);
-    // if one palyer won, it sok, if not all have won
+    // if one player won, it sok, if not all have won
     if playerPos_X = 1 then begin 
         for k := 0 to nPlayers-1 do
         begin

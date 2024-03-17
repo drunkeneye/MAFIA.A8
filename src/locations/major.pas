@@ -89,6 +89,7 @@ begin;
     addMoney(7000); 
     // no points in original, here we add 4
     addPoints(4);
+    plKilledMajor[currentPlayer] := 1;
     plForgedID[currentPlayer] := 1;
 end;
 

@@ -70,5 +70,4 @@ begin;
     end;
     plMoneyTransporter[currentPlayer] := 1;
     crackedBank(10000); // a bit more
-    waitForKey();
 end;

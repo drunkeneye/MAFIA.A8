@@ -47,7 +47,7 @@ A money transport will pass through
 our city, it's a blue wagon! 
 You'll see it!
 With $5000, you can participate in a 
-major arms smuggling operation!
+major arms smuggling operation (Y/N)!
 You won't regret it...
 Psst... I have a very important
 mission! The mayor is supposed to be

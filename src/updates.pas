@@ -238,7 +238,7 @@ procedure updateOpportunities();
 var 
     pr:   word;
 begin;
-    if plOpportunity[currentPlayer] <> 128 then
+    if plOpportunity[currentPlayer] and 128 <> 128 then
         exit;
 
     loadLocation(MAIN_);
@@ -249,26 +249,26 @@ begin;
     CRT_Invert(0, 1, CRT_screenWidth);
     CRT_GotoXY(0, 3);
 
-    if plOpportunity[currentPlayer] = 128 then //weapondeal
+
+    // no need to check, we now it already
+    //    if plOpportunity[currentPlayer] and 128 = 128 then //weapondeal
+    plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 128);
+    if Random(5) = 0 then
     begin
-        plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 128);
-        if Random(5) = 0 then
+        // armsdealer given 5000cash
+        CRT_Writeln(loc_string_23);
+        CRT_Writeln(loc_string_24);
+    end
+    else
         begin
-            // armsdealer given 5000cash
-            CRT_Writeln(loc_string_23);
-            CRT_Writeln(loc_string_24);
-        end
-        else
-            begin
-                pr := 5500 + Random(150) SHL 6;
-                CRT_Writeln(loc_string_25);
-                CRT_Write(loc_string_26);
-                CRT_Write(pr);
-                CRT_Writeln('$!'~);
-                addMoney(pr);
-            end;
-        waitForKey();
-    end;
+            pr := 5500 + Random(150) SHL 6;
+            CRT_Writeln(loc_string_25);
+            CRT_Write(loc_string_26);
+            CRT_Write(pr);
+            CRT_Writeln('$!'~);
+            addMoney(pr);
+        end;
+    waitForKey();
 end;
 
 

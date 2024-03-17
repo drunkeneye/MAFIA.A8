@@ -29,7 +29,7 @@ FREE_SPACE = $(shell atr $(ATR) ls -l | grep free)
 all: clean prepare_atr_folder\
 	compress_assets \
 	compress_locassets \
-	compile_title compile_main  \
+	compile_title  compile_main  \
 	build_atr info save \
 	run
 
@@ -136,7 +136,7 @@ info:
 	@echo $(FREE_SPACE)
 
 run:
-	echo /Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
+	/Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
 
 save:
 	cp $(ATR) ../release/mafia_$(LOCATION).atr

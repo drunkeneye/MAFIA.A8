@@ -28,16 +28,17 @@ begin;
     if choice = 3 then 
     begin 
         ShowLocationHeader();
-        if plOpportunity[currentPlayer] or 1 = 0 then // lowerst bit = postzug
+        if plOpportunity[currentPlayer] and 1 = 0 then // lowerst bit = postzug
         begin 
             CRT_Writeln(loc_string_1);
             waitForKey;
             exit; 
         end;
 
+        plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255- 1);
+        
         if plNGangsters[currentPlayer] < 3 then begin 
             CRT_Writeln(loc_string_2);
-            plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255- 1);
             waitForKey();
             exit;
         end; 

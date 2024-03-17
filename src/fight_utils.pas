@@ -380,6 +380,12 @@ begin;
         if (fp_currentCommand = #13) then
             fp_AI[fp_currentSite] := 1; 
 
+        // CHEAT, just win
+        if (fp_currentCommand = #5) then begin;
+            fp_winner := fp_currentSite;
+            exit;
+        end;
+
         // else we first try to move
         fight_moveCurrentPlayer();
         // no valid move or command was not move

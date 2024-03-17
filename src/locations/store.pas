@@ -103,6 +103,7 @@ begin;
                 result := END_TURN_;
                 exit;
             end;
+            ShowLocationHeader;
             CRT_Writeln(loc_string_7);
             CRT_Writeln(loc_string_8);
             waitForKey;
