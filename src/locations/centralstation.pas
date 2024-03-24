@@ -1,31 +1,31 @@
-function centralStationChoices (var choice:byte):   byte;
+function centralStationChoices:  byte;
 var r:   byte;
     k: byte;
     outcome:   byte;
 begin;
     result := CENTRALSTATION_;
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         loadLocation(PUB_);
-        choice := ShowLocation(PUB_);
-        if choice = loc_nOptions then
+        currentChoice := ShowLocation(PUB_);
+        if currentChoice = loc_nOptions then
         begin
             currentLocation := NONE_;
             exit;
         end;
-        result := pubChoices (choice);
+        result := pubChoices;
         exit;
     end;
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         loadLocation(SUBWAY_);
-        choice := 1;
-        result := subwayChoices (choice);
+        currentChoice := 1;
+        result := subwayChoices;
         exit;
     end;
 
-    if choice = 3 then 
+    if currentChoice = 3 then 
     begin 
         ShowLocationHeader();
         if plOpportunity[currentPlayer] and 1 = 0 then // lowerst bit = postzug

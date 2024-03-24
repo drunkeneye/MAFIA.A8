@@ -38,7 +38,7 @@ Jestes jeszcze za niedoswiadczony!
 Niestety, nic dla ciebie!
 Slyszalem cos... ale to
 kosztuje 
-$. Chcesz podpowiedz?
+$. Chcesz (T/N)?
 W pocztowym pociagu wkrotce bedzie
 duza partia diamentow!
 Oddzial bankowy Klomerz wkrotce 

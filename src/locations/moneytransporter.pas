@@ -1,5 +1,5 @@
  
-function moneyTransporterChoices (var choice:byte):   byte;
+function moneyTransporterChoices:   byte;
 var k:   byte;
 begin;
     loadLocation(MONEYTRANSPORT_);

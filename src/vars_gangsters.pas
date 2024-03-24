@@ -1,3 +1,11 @@
+// $e090 is the first empty location after vars.pas
+
+
+var
+    gangsterMap: array[0..8] of byte absolute $e090;
+    gangsterCount: byte absolute $e09a;
+    tmpOpportunity: byte absolute $e09b; // stupid place
+
  var
     plGang_1:   XString absolute $e0d4;
     plGang_2:   XString absolute $e0e4;

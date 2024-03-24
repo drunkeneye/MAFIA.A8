@@ -1,3 +1,8 @@
+
+MacOSX compile
+- install allegro via brew, brew install allegro
+- /opt/homebrew/Cellar/allegro/5.2.9.1/include/allegro5/allegro.h
+
 Rasta Converter
 ===============
 

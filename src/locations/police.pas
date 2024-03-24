@@ -1,19 +1,19 @@
 
 
-function policeChoices (var choice:byte):   byte;
+function policeChoices:   byte;
 var r:   byte;
     m:   byte;
     p: word;
 begin;
     result := POLICE_;
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         gotoCourt();
         result := END_TURN_;
         exit;
     end;
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         ShowLocationHeader;
         CRT_Writeln(loc_string_1);
@@ -23,7 +23,7 @@ begin;
         if payMoney(m*1000) = 0 then exit;
 
         // plMoney[currentPlayer] := plMoney[currentPlayer] - m*1000;
-        plBribe[currentPlayer] := plBribe[currentPlayer] + m + 1;
+        plBribe[currentPlayer] := plBribe[currentPlayer] + m;
         addPoints(2);
 
         CRT_Newline;
@@ -34,7 +34,7 @@ begin;
         exit;
     end;
 
-    if choice = 3 then
+    if currentChoice = 3 then
     begin;
         ShowLocationHeader;
         // who is in prison? currentplayer cannot

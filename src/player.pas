@@ -7,7 +7,7 @@ procedure preloadMap();forward;
 procedure nextPlayer();
 begin
     currentPlayer := currentPlayer + 1;
-    if currentPlayer > nPlayers-1 then
+    if currentPlayer+1 > nPlayers then
     begin;
         currentPlayer := currentPlayer - nPlayers;
         currentMonth := currentMonth + 1;
@@ -45,10 +45,12 @@ end;
 // works with global vars
 procedure playersTurn ();
 var ch:char;
+  z:byte;
 begin
   CRT_Clear;
   CRT_WriteCentered(4, loc_string_1);
-  CRT_WriteCentered(5, gangsterNames[currentPlayer SHL 3]);
+  z := currentPlayer SHL 3;
+  CRT_WriteCentered(5, gangsterNames[z]);
   CRT_WriteCentered(6, loc_string_2);
 
   sound(0,100,10,15);

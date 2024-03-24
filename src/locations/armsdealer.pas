@@ -20,7 +20,7 @@ end;
  
 
 
-function armsDealerChoices (var choice:byte):   byte;
+function armsDealerChoices:  byte;
 var r:   byte;
     maxWeapon:   byte;
     minWeapon:   byte;
@@ -32,7 +32,7 @@ var r:   byte;
     camp:   byte;
 
 begin;
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         ShowLocationHeader;
 
@@ -79,8 +79,12 @@ begin;
 
         // for welchen gangster?
         ShowLocationHeader;
+        CRT_Write(loc_string_23);
+        CRT_GotoXY(0,1);
+        showWeapons := 1;
         selectGangster();
         if currentGangster = 99 then exit;
+        ShowLocationHeader;
 
         ga := 0;
         if (gangsterInt[currentGangster] < 40) and (selectedWeapon > 5) then
@@ -148,17 +152,19 @@ begin;
     end;
 
     //  'Kannst du meine Jungs im Schiessen     ausbilden? Sind einfach zu schlapp!'
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         ShowLocationHeader;
 
         if plNGangsters[currentPlayer] > 1 then 
         begin
             CRT_Writeln (loc_string_13); // who
+            showWeapons := 0;
             selectGangster();
             if currentGangster = 99 then exit;
         end;
 
+        ShowLocationHeader;
         camp := 0;
         // schiesstand
         if plRank[currentPlayer] >= 5 then

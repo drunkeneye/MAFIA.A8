@@ -11,9 +11,10 @@ var
     map_string_gangster: YString = 'Gangster:'~;
     map_string_rent: YString = 'Czynsz:'~;
     map_string_bribe: YString = 'Lapowka:'~;
+    len_string_bribe: byte = 7;
     map_string_car: YString = 'Auto:'~;
     map_string_steps: YString = 'Kroki:'~;
-    map_string_cargo: YString = 'Ladunek:'~;
+    map_string_cargo: YString = 'Alkohol:'~;
     map_string_money: YString = 'Pieniadze:'~;
     map_string_credit: YString = 'Kredyt:'~;
     fight_police_string_1: YString = 'Policja'~;
@@ -47,9 +48,10 @@ var
     map_string_gangster: YString = 'Gangster:'~;
     map_string_rent: YString = 'Miete:'~;
     map_string_bribe: YString = 'Bestechung:'~;
+    len_string_bribe: byte = 10;
     map_string_car: YString = 'Car:'~;
     map_string_steps: YString = 'Schritte:'~;
-    map_string_cargo: YString = 'Cargo:'~;
+    map_string_cargo: YString = 'Alkohol:'~;
     map_string_money: YString = 'Geld:'~;
     map_string_credit: YString = 'Kredit:'~;
     fight_police_string_1: YString = 'Die Polizei'~;
@@ -106,9 +108,10 @@ var
     map_string_gangster: YString = 'Gangster:'~;
     map_string_rent: YString = 'Rent:'~;
     map_string_bribe: YString = 'Bribe:'~;
+    len_string_bribe: byte = 5;
     map_string_car: YString = 'Car:'~;
     map_string_steps: YString = 'Steps:'~;
-    map_string_cargo: YString = 'Cargo:'~;
+    map_string_cargo: YString = 'Alcohol:'~;
     map_string_money: YString = 'Money:'~;
     map_string_credit: YString = 'Credit:'~;
     fight_police_string_1: YString = 'The police'~;

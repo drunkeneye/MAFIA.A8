@@ -1,5 +1,5 @@
 
-function gamblingChoices (var choice:byte):   byte;
+function gamblingChoices:   byte;
 var //choice:byte;
     game:   byte;
     einsatz:   word;

@@ -4,3 +4,5 @@
 XTRA
 DELME
 .DS_Store
+__pycache__
+src/output/

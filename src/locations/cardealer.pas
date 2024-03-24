@@ -1,6 +1,20 @@
 
 
-function carDealerChoices (var choice:byte):   byte;
+procedure checkBooze;
+var r: byte;
+begin; 
+    r := plCar[currentPlayer];
+    if plAlcohol[currentPlayer] > carCargo[r] then 
+    begin;
+        plAlcohol[currentPlayer] := carCargo[r];
+        CRT_NewLine;
+        CRT_Write(loc_string_20);
+        CRT_Write(loc_string_21);
+    end; 
+end; 
+
+
+function carDealerChoices:  byte;
 var r:   byte;
     minCar:   byte;
     maxCar:   byte;
@@ -10,7 +24,7 @@ var r:   byte;
 begin;
     // load strings 
 
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         ShowLocationHeader;
         CRT_Writeln(loc_string_1);
@@ -66,13 +80,15 @@ begin;
             CRT_Write(oldPrice);
             CRT_Writeln(loc_string_5);
         end;
+        
         plCar[currentPlayer] := newCar;
+        checkBooze;
         waitForKey();
         exit;
     end;
 
  
-    if choice = 2 then
+    if currentChoice = 2 then
     begin
         ShowLocationHeader;
 
@@ -86,6 +102,7 @@ begin;
 
         if plNGangsters[currentPlayer] > 1 then 
             CRT_Write(loc_string_9);
+        showWeapons := 0;
         selectGangster();
         if currentGangster = 99 then exit;
 
@@ -110,7 +127,9 @@ begin;
                 CRT_Write(loc_string_13);
             end;
 
-            plCar[currentPlayer] := 1+Random(5); // FIXME or Random 6?
+            r := 1 + Random(5);
+            plCar[currentPlayer] := r;
+            checkBooze;
             waitForKey();
             exit;
         end;

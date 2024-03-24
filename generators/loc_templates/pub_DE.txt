@@ -38,7 +38,7 @@ Du bist noch zu unerfahren!
 Leider hab ich nichts fuer dich!
 Ich habe etwas gehoert...aber das
 kostet dich 
-$. Willst du den Tipp?
+$. Willst du ihn (J/N)?
 Im Postzug soll demnaechst eine grosse
 Ladung Diamanten transportiert werden!
 Die Klomerz Bankfilale erhaelt

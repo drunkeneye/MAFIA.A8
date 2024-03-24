@@ -168,7 +168,7 @@ begin
 
         if byte(ch) = 15 then 
         begin 
-            if choice < nopt-1 then choice := choice + 1;
+            if choice + 1 < nopt then choice := choice + 1;
         end; 
 
         case byte(ch) of 

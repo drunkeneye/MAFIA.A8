@@ -3,14 +3,14 @@
 // so adding gangsters later on will make some gangsters have no ID
 // and if caught, only these go to prison. new ones must be recruited.
 
-function forgeryChoices (var choice:byte):   byte;
+function forgeryChoices:   byte;
 var r:   byte;
     c:   word;
     p:   word;
     m:   word;
 begin;
     // 'Yeah, kannst du mir einen neuen Pass    machen? Er muss gut sein, klar?'~,
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         ShowLocationHeader;
 
@@ -51,7 +51,7 @@ begin;
     // TODO: DU HAST SCHON BLUETEN? oder nur 1x blueten pro runde
 
     // 'Danke, Eddie, vielleicht beim naechs-   ten mal. Bye!'~,
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         ShowLocationHeader;
         if plFakeMoney[currentPlayer] > 0 then

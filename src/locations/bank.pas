@@ -6,7 +6,7 @@ var
     safeclmsname:   TString =   'SAFECLMSAPL';
 
     
-function bankChoices (var choice:byte):  byte;
+function bankChoices: byte;
 var k: byte;
     nAttempts: byte;
     t, c:array[0..2] of shortint; // true code
@@ -16,6 +16,10 @@ var k: byte;
     whpos: byte;
     hops: boolean;
 begin;
+    tmpOpportunity := plOpportunity[currentPlayer] and 2;
+    // clear it, whatever happens, the opportunity is gone
+    plOpportunity[currentPlayer]:= plOpportunity[currentPlayer] and (255- 2);
+
     result := BANK_;
     loadLocation(BANK_);
     ShowLocationHeader;
@@ -51,7 +55,7 @@ begin;
     end;
 
 
-    if choice = 1 then
+    if currentChoice = 1 then
     begin
         if Random(3) = 0 then
         begin
@@ -113,11 +117,11 @@ begin;
     end;
 
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         ShowLocationHeader;
         k := currentPlayer SHL 3;
-        if (gangsterBrut[k] < 20) or (gangsterStr[k] < 15)  or (gangsterInt[k] < 40) then 
+        if (gangsterBrut[k] < 25) or (gangsterStr[k] < 25)  or (gangsterInt[k] < 40) then 
             begin;
                 CRT_WriteCentered(6, loc_string_5);
                 waitForKey();
@@ -125,6 +129,7 @@ begin;
             end; 
         
         CRT_Writeln(loc_string_6);
+        showWeapons := 0;
         selectGangster();
         if currentGangster = 99 then exit;
 
@@ -133,8 +138,8 @@ begin;
         CRT_Newline;
 
         //CRT_Writeln('Nutze ...'~);
-        nAttempts := 10 + gangsterInt[currentPlayer SHL 3] SHR 4 + currentSubLocation;
-        if plStuff[currentPlayer] OR 32 = 1 then 
+        nAttempts := 13 + gangsterInt[currentPlayer SHL 3] SHR 4 + currentSubLocation SHL 1;
+        if plStuff[currentPlayer] and 32 > 0 then 
         begin;
             nAttempts := nAttempts + 9;
             plStuff[currentPlayer]  := plStuff[currentPlayer] AND (255-32);

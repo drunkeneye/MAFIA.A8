@@ -1,5 +1,5 @@
 LOCAUPDT.gfx
- 
+Przeglad
 $bf, $af, $00, $bf
  
  
@@ -29,3 +29,6 @@ pieniadze i znikaja...
 Udalo ci sie ich odpedzic. 
 Ale wkrotce znow cie odwiedza, 
 by odebrac swoje pieniadze...
+Gra bedzie kontynuowana 
+ lat.  
+Twoi gangsterzy:

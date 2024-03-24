@@ -1,5 +1,5 @@
 
-function pubChoices (var choice:byte):   byte;
+function pubChoices: byte;
 var r:   byte;
     wage:   smallint;
     duration:   byte;
@@ -14,7 +14,7 @@ begin;
     ShowLocationHeader;
 
     // 'Nein, keine Milch! Hast du was          alkoholisches da?'~,
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         if (currentSubLocation > 1) then 
         begin;
@@ -72,7 +72,7 @@ begin;
     end;
 
     // 'Ich suche ein paar Jungs fuer meine     Gang. Mal sehen, wer da ist...'~,
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         ShowLocationHeader;
         {$ifndef norank}
@@ -158,7 +158,7 @@ begin;
     end;
 
     // 'Hast du vielleicht '~+#$07+'n guten Tip fuer    '~+#$07+'nen ueberfall oder sowas?'~,
-    if choice = 3 then
+    if currentChoice = 3 then
     begin;
         {$ifndef norank}
         if plRank[currentPlayer] < 4 then 
@@ -219,7 +219,7 @@ begin;
 
 
     // 'Ich brauche dringend einen Job, einen   Auftrag! Du verstehst schon...'~,
-    if choice = 4 then
+    if currentChoice = 4 then
     begin;
         // need to reload location text
         loadLocation(PUB2_);

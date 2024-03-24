@@ -14,7 +14,7 @@ var
     i,j,k,t:   byte;
     change:   byte;
 begin;
-    // court means police
+    // court means next location is police
     r := Random(4);
     case r of 
         0: begin; 
@@ -31,6 +31,10 @@ begin;
             end;
     end;
     blackConsole();
+
+    // we also do not allow any opportunities anymore
+    plOpportunity[currentPlayer] := 0;
+
     // pretend we fought
     plMapPosX[currentPlayer] := i;
     plMapPosY[currentPlayer] := j;
@@ -61,7 +65,7 @@ begin;
             begin
                 // yes, can affort it
                 change := lawyer SHR 10+1; // if this is zero, Random(0) is 0..255
-                change := Random(change) + 1;
+                change := Random(change) + 2;
                 prisonTime := prisonTime - change;
                 if prisonTime < 0 then
                     prisonTime := 0;
@@ -239,11 +243,13 @@ procedure paintPlayer(clear: byte);
 var 
     playerHeight:   byte;
     playerOfs:   byte;
+    z: byte;
 begin
     //  for now player is there
     // FIXME: length of player must  be written somewhere
     playerOfs := 0;
-    if gangsterSex[currentPlayer SHL 3] = 1 then playerOfs := 48;
+    z := currentPlayer SHL 3;
+    if gangsterSex[z] = 1 then playerOfs := 48;
     playerHeight := 12;
     // color for color
     Move (Pointer(PMG_BASE_ADR+playerOfs), Pointer(PMG_BASE_ADR+1024+playerPos_Y), playerHeight);

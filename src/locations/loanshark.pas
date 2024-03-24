@@ -1,4 +1,4 @@
-function loanSharkChoices(var choice: byte): byte;
+function loanSharkChoices: byte;
 var 
     r, k: byte;
     allPaid: byte;
@@ -10,7 +10,7 @@ begin
     result := LOANSHARK_;
     ShowLocationHeader;
 
-    if choice = 1 then
+    if currentChoice = 1 then
     begin
         if plLoan[currentPlayer] > 0 then
         begin
@@ -45,7 +45,7 @@ begin
         exit;
     end;
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin
         if plLoan[currentPlayer] = 0 then
         begin
@@ -84,7 +84,7 @@ begin
     end;
 
     // Laden aufkaufen bzw. verkaufen
-    if choice = 3 then
+    if currentChoice = 3 then
     begin
         // cannot buy the place with loan 
         if plLoan[currentPlayer] <> 0 then begin
@@ -145,7 +145,7 @@ begin
     end;
 
 
-    if choice = 4 then
+    if currentChoice = 4 then
     begin
         if plLoanShark[currentPlayer] <> currentSubLocation then
         begin
@@ -171,7 +171,7 @@ begin
         waitForKey;
     end;
 
-    if choice = 5 then
+    if currentChoice = 5 then
     begin
         if plLoanShark[currentPlayer] <> currentSubLocation then
         begin

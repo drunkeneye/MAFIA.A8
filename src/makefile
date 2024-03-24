@@ -29,7 +29,8 @@ FREE_SPACE = $(shell atr $(ATR) ls -l | grep free)
 all: clean prepare_atr_folder\
 	compress_assets \
 	compress_locassets \
-	compile_title  compile_main  \
+	compile_title  \
+	compile_main  \
 	build_atr info save \
 	run
 
@@ -88,7 +89,7 @@ ASSET_FILES := acombmap.gfx \
 	wantefmf.gfx  wantefms.gfx\
 	afmapfnt.gfx  afmapscr.gfx \
 	safeclmf.gfx   safeclms.gfx \
-	finalmap.gfx 
+	finalmap.gfx finalwap.gfx finalgap.gfx 
 
 LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCABANK.gfx_$(LOCATION)  \
@@ -136,7 +137,7 @@ info:
 	@echo $(FREE_SPACE)
 
 run:
-	/Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
+	echo /Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
 
 save:
 	cp $(ATR) ../release/mafia_$(LOCATION).atr

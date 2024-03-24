@@ -1,5 +1,5 @@
 
-function subwayChoices (var choice:byte):   byte;
+function subwayChoices:   byte;
 var 
     loot: shortint;
     value: word;
@@ -9,7 +9,7 @@ begin
     result := SUBWAY_;
     ShowLocationHeader;
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin
         CRT_Writeln(loc_string_1);
         CRT_Writeln(loc_string_2);
@@ -41,13 +41,14 @@ begin
         oldPlayerPos_Y := playerPos_Y; 
     end;
 
-    if choice = 1 then
-    begin
-        if plNGangsters[currentPlayer] > 1 then 
-            CRT_Writeln(loc_string_3);
-        selectGangster();
-        if currentGangster = 99 then exit;
-    end;
+    ShowLocationHeader;
+    if plNGangsters[currentPlayer] > 1 then 
+        CRT_Write(loc_string_3);
+    showWeapons :=0 ;
+    selectGangster();
+    if currentGangster = 99 then exit;
+
+    ShowLocationHeader;
     CRT_Newline;
     CRT_Writeln(loc_string_4);
     WaitFrames(90);
@@ -93,7 +94,7 @@ begin
         result := END_TURN_;
         exit;
     end; 
-    if choice = 2 then loadMap();
+    if currentChoice = 2 then loadMap();
     addMoney( value);
     addPoints(1);
 end;

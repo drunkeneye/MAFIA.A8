@@ -1,9 +1,9 @@
 ; ---------------------------------- 
 ; RastaConverter by Ilmenit v.Beta6
 ; InputName: input.png
-; CmdLine: input.png /h=200 /pal=laoo /filter=box /s=8192 /save=1000000 /max_evals=20000000
-; Evaluations: 20000000
-; Score: 14.369
+; CmdLine: input.png /distance=yuv /init=smart /dither=chess /filter=box /dither_val=0.1 /dither_rand=4.0 /s=32768 /save=100000 /max_evals=256000000
+; Evaluations: 600000
+; Score: 71.311
 ; ---------------------------------- 
 ; Proper offset 
 	nop
@@ -12,20 +12,18 @@
 	nop
 	cmp byt2;
 line0
-	lda #$01 ; 1 (spr=-47)
-	sty COLOR2
-	sta HPOSP1
-	ldx #$00 ; 0 (spr=-48)
-	stx COLPM2
 	nop 
-	ldy #$10 ; 16 (spr=-32)
+	ldx #$04 ; 4 (spr=-44)
 	sty COLBAK
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	sty HPOSP3
-	nop 
-	nop 
-	stx COLPM0
+	sta COLPM0
+	sta HPOSP2
+	sty HPOSP1
+	stx COLOR0
+	ldy #$06 ; 6 (spr=-42)
+	stx HPOSP0
+	stx HPOSP3
+	ldx #$06 ; 6 (spr=-42)
+	sty COLBAK
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -35,78 +33,75 @@ line0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line1
-	ldy #$38 ; 56 (spr=8)
+	sty COLOR1
 	nop 
+	sty HPOSP1
+	sty COLOR1
+	sta HPOSP2
+	stx COLPM2
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	stx COLPM0
-	nop 
-	sta HPOSP3
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR0
-	sta HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	lda #$00 ; 0 (spr=-48)
+	ldx #$1E ; 30 (spr=-18)
+	ldy #$06 ; 6 (spr=-42)
+	stx HPOSP0
+	stx COLOR1
+	sty HPOSP0
+	lda #$1E ; 30 (spr=-18)
+	sty HPOSP2
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line2
-	sta HPOSP0
-	sty COLPM3
+	sty COLOR1
 	nop 
-	sty COLPM2
-	sty HPOSP0
-	sta HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$71 ; 113 (spr=65)
-	nop 
+	sty HPOSP1
+	sty COLOR1
 	sta HPOSP2
-	ldy #$F0 ; 240 (spr=192)
-	sta HPOSP0
-	lda #$00 ; 0 (spr=-48)
+	stx COLPM2
+	nop 
+	ldx #$1E ; 30 (spr=-18)
+	ldy #$06 ; 6 (spr=-42)
+	stx HPOSP0
+	stx HPOSP3
+	sty HPOSP0
+	lda #$1E ; 30 (spr=-18)
+	sty HPOSP2
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line3
-	sta HPOSP0
-	sty COLPM3
-	nop 
-	sty COLPM2
-	sty HPOSP0
-	sta HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$71 ; 113 (spr=65)
-	ldx #$00 ; 0 (spr=-48)
-	stx COLPM0
-	sta HPOSP2
-	nop 
-	sta HPOSP0
+	stx COLOR0
+	sta COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line4
-	nop 
-	nop 
-	nop ; filler
-	nop ; filler
+	stx HPOSP1
+	sta COLPM1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -132,10 +127,8 @@ line4
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line5
-	nop 
-	ldx #$27 ; 39 (spr=-9)
-	nop ; filler
-	nop ; filler
+	stx COLOR0
+	sta COLPM1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -161,9 +154,8 @@ line5
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line6
-	nop 
-	stx COLPM1
-	nop 
+	stx HPOSP3
+	sta COLPM1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -189,8 +181,7 @@ line6
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line7
-	nop 
-	nop 
+	stx COLPM1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -218,11 +209,10 @@ line7
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line8
-	nop 
-	nop 
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$35 ; 53 (spr=5)
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -247,13 +237,17 @@ line8
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line9
-	sty HPOSP0
-	nop 
-	sty COLPM2
-	sty HPOSP0
-	stx COLOR2
-	ldx #$00 ; 0 (spr=-48)
-	sty COLBAK
+	stx COLPM2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -271,13 +265,17 @@ line9
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line10
-	stx COLOR2
-	nop 
-	sty COLPM2
-	sty HPOSP0
-	sty HPOSP0
-	ldx #$00 ; 0 (spr=-48)
-	sty COLBAK
+	lda #$0A ; 10 (spr=-38)
+	stx COLPM2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -295,13 +293,17 @@ line10
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line11
-	stx COLOR2
-	nop 
-	sty COLPM2
-	sty HPOSP0
-	sty HPOSP0
-	nop 
-	sty COLBAK
+	stx COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -319,12 +321,14 @@ line11
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line12
-	sty HPOSP3
-	sty COLPM0
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	stx COLOR2
-	nop 
+	stx HPOSP2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -345,11 +349,12 @@ line12
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line13
-	nop 
-	sty COLPM1
-	nop 
-	stx COLOR2
-	ldx #$00 ; 0 (spr=-48)
+	stx HPOSP2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -372,12 +377,14 @@ line13
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line14
-	nop 
-	sty COLPM1
-	nop 
-	sty HPOSP1
-	stx COLOR2
-	ldx #$00 ; 0 (spr=-48)
+	stx HPOSP2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -398,11 +405,12 @@ line14
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line15
-	sty COLBAK
-	stx COLOR2
-	sty COLPM0
-	nop 
-	nop 
+	sty HPOSP2
+	stx HPOSP2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -424,10 +432,8 @@ line15
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line16
-	nop 
-	nop 
-	nop ; filler
-	nop ; filler
+	sty HPOSP2
+	stx HPOSP2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -453,12 +459,11 @@ line16
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line17
+	ldy #$08 ; 8 (spr=-40)
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLPM0
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -483,9 +488,9 @@ line17
 	cmp byt2; on zero page so 3 cycles
 line18
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	nop 
+	ldy #$08 ; 8 (spr=-40)
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -512,10 +517,8 @@ line18
 	cmp byt2; on zero page so 3 cycles
 line19
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLPM2
+	stx COLOR1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -540,13 +543,10 @@ line19
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line20
+	stx COLOR1
+	stx HPOSP1
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLPM3
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -569,13 +569,10 @@ line20
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line21
+	stx COLOR1
+	stx HPOSP1
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLPM3
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -598,15 +595,11 @@ line21
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line22
+	stx COLOR1
+	stx HPOSP1
+	sty COLPM0
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLPM3
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -628,10 +621,9 @@ line22
 	cmp byt2; on zero page so 3 cycles
 line23
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldy #$40 ; 64 (spr=16)
+	sty COLPM2
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -656,14 +648,12 @@ line23
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line24
-	ldx #$11 ; 17 (spr=-31)
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldy #$04 ; 4 (spr=-44)
+	nop 
+	sta HPOSP2
+	sty COLPM2
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -685,11 +675,11 @@ line24
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line25
-	sty COLPM3
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldy #$04 ; 4 (spr=-44)
+	nop 
+	sta HPOSP2
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -713,7 +703,8 @@ line25
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line26
-	sty COLPM3
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -741,8 +732,8 @@ line26
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line27
-	stx COLPM0
-	nop ; filler
+	sta COLOR2
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -769,7 +760,8 @@ line27
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line28
-	stx COLPM0
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -797,7 +789,8 @@ line28
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line29
-	stx COLPM0
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -825,8 +818,10 @@ line29
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line30
-	sta HPOSP2
-	stx COLPM0
+	lda #$40 ; 64 (spr=16)
+	nop 
+	nop 
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -852,8 +847,10 @@ line30
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line31
-	sta HPOSP2
-	stx COLPM0
+	nop 
+	ldx #$14 ; 20 (spr=-28)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -879,11 +876,11 @@ line31
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line32
-	sty COLPM1
-	sta HPOSP1
-	stx COLBAK
-	nop ; filler
-	nop ; filler
+	sta COLPM1
+	stx COLOR1
+	nop 
+	sty COLPM0
+	ldx #$04 ; 4 (spr=-44)
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -905,11 +902,11 @@ line32
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line33
-	sty COLPM1
-	sta HPOSP1
-	stx COLBAK
-	nop ; filler
-	nop ; filler
+	sta COLPM1
+	stx COLOR1
+	nop 
+	sty COLPM0
+	ldx #$04 ; 4 (spr=-44)
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -931,13 +928,11 @@ line33
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line34
+	sta COLPM1
+	stx COLOR1
 	nop 
-	stx COLPM2
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLPM0
+	ldx #$04 ; 4 (spr=-44)
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -959,8 +954,8 @@ line34
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line35
-	stx COLPM0
-	nop ; filler
+	sta COLBAK
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1017,7 +1012,7 @@ line36
 	cmp byt2; on zero page so 3 cycles
 line37
 	nop 
-	nop 
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1045,9 +1040,10 @@ line37
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line38
-	ldx #$38 ; 56 (spr=8)
 	nop 
-	stx HPOSP0
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1073,13 +1069,11 @@ line38
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line39
-	stx HPOSP3
+	ldy #$40 ; 64 (spr=16)
+	sty COLPM2
 	nop 
-	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	stx COLPM3
+	sta HPOSP0
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1101,8 +1095,8 @@ line39
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line40
-	nop 
-	ldx #$10 ; 16 (spr=-32)
+	ldy #$E4 ; 228 (spr=180)
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1130,8 +1124,9 @@ line40
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line41
-	sty COLBAK
 	stx COLPM2
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1157,7 +1152,7 @@ line41
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line42
-	sty HPOSP3
+	stx COLPM2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1185,9 +1180,8 @@ line42
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line43
-	sty HPOSP3
-	nop ; filler
-	nop ; filler
+	sty COLPM0
+	stx COLPM2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1213,8 +1207,9 @@ line43
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line44
-	sty HPOSP3
-	sty COLPM3
+	stx COLPM1
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1240,8 +1235,9 @@ line44
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line45
-	sty HPOSP3
-	sty COLPM3
+	stx COLOR1
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1267,9 +1263,8 @@ line45
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line46
-	stx COLPM2
-	nop ; filler
-	nop ; filler
+	sty HPOSP0
+	stx COLOR1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1295,16 +1290,14 @@ line46
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line47
-	stx COLPM2
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	nop 
+	sty COLPM1
+	lda #$04 ; 4 (spr=-44)
+	sta HPOSP2
+	nop 
+	sta COLPM1
+	lda #$10 ; 16 (spr=-32)
+	ldx #$1A ; 26 (spr=-22)
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1323,7 +1316,7 @@ line47
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line48
-	stx COLPM2
+	sta HPOSP3
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1351,7 +1344,7 @@ line48
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line49
-	sty HPOSP2
+	sta COLOR2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1379,7 +1372,7 @@ line49
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line50
-	sty HPOSP2
+	sta COLOR2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1407,7 +1400,8 @@ line50
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line51
-	sty COLPM3
+	nop 
+	nop 
 	nop 
 	nop ; filler
 	nop ; filler
@@ -1436,7 +1430,8 @@ line51
 	cmp byt2; on zero page so 3 cycles
 line52
 	nop 
-	sty COLPM1
+	ldy #$02 ; 2 (spr=-46)
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1463,8 +1458,10 @@ line52
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line53
-	sty HPOSP1
-	sta HPOSP2
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1490,8 +1487,10 @@ line53
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line54
-	sty HPOSP1
-	sta HPOSP2
+	lda #$02 ; 2 (spr=-46)
+	nop 
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1517,8 +1516,9 @@ line54
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line55
-	sty HPOSP1
-	sta HPOSP2
+	sta HPOSP3
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1544,8 +1544,9 @@ line55
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line56
-	sty HPOSP1
-	sta HPOSP1
+	sta COLBAK
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1571,10 +1572,9 @@ line56
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line57
-	sty HPOSP1
-	sta HPOSP1
-	nop ; filler
-	nop ; filler
+	stx COLOR0
+	sta COLOR2
+	stx COLOR2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1598,10 +1598,13 @@ line57
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line58
-	sta HPOSP3
-	ldy #$36 ; 54 (spr=6)
-	sta HPOSP1
-	sty HPOSP3
+	ldx #$56 ; 86 (spr=38)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1624,8 +1627,8 @@ line58
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line59
-	sty COLOR1
-	nop 
+	sty COLOR0
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1652,9 +1655,8 @@ line59
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line60
-	ldx #$00 ; 0 (spr=-48)
-	sta HPOSP3
-	nop ; filler
+	sta COLPM2
+	stx COLPM1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1680,8 +1682,9 @@ line60
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line61
-	sta COLPM0
-	sta COLPM0
+	stx COLPM2
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1707,101 +1710,114 @@ line61
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line62
-	stx HPOSP0
-	nop 
-	nop 
-	sta HPOSP0
-	nop 
-	nop 
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	lda #$F0 ; 240 (spr=192)
-	sty COLOR1
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	lda #$0F ; 15 (spr=-33)
-	sta COLPM1
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLPM2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line63
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$08 ; 8 (spr=-40)
-	sta COLPM0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$48 ; 72 (spr=24)
-	nop 
-	nop 
-	stx COLPM2
-	nop 
-	stx COLPM2
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	lda #$08 ; 8 (spr=-40)
+	lda #$02 ; 2 (spr=-46)
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line64
+	ldx #$16 ; 22 (spr=-26)
 	nop 
-	sty COLPM2
-	nop 
-	nop 
-	sta HPOSP2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	sta COLPM2
-	nop 
-	ldy #$38 ; 56 (spr=8)
-	nop 
-	nop 
-	nop 
-	sta COLPM2
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line65
 	nop 
-	sty COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$38 ; 56 (spr=8)
-	sta COLPM2
-	nop 
-	ldy #$38 ; 56 (spr=8)
-	lda #$90 ; 144 (spr=96)
-	nop 
-	nop 
-	nop 
-	sta COLPM2
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1809,71 +1825,83 @@ line65
 	cmp byt2; on zero page so 3 cycles
 line66
 	nop 
-	lda #$38 ; 56 (spr=8)
-	sty COLPM2
-	nop 
-	nop 
-	sta HPOSP2
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$38 ; 56 (spr=8)
-	sta COLPM2
-	nop 
-	nop 
-	lda #$90 ; 144 (spr=96)
-	nop 
-	sta COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$48 ; 72 (spr=24)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line67
 	nop 
-	sta COLPM2
 	nop 
-	nop 
-	sta HPOSP2
-	nop 
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	nop 
-	nop 
-	sta COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$36 ; 54 (spr=6)
-	nop 
-	sty COLPM2
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line68
 	nop 
-	lda #$48 ; 72 (spr=24)
-	nop 
-	nop 
-	sty COLPM2
-	sta HPOSP2
-	nop 
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	sta COLPM2
-	nop 
-	sty COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1883,22 +1911,23 @@ line68
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line69
-	nop 
-	lda #$48 ; 72 (spr=24)
-	nop 
-	nop 
-	sty COLPM2
-	sta HPOSP2
-	nop 
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	sta COLPM2
-	nop 
-	sty COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLOR1
+	stx HPOSP0
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1908,10 +1937,8 @@ line69
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line70
-	nop 
-	nop 
-	nop ; filler
-	nop ; filler
+	stx COLPM3
+	stx HPOSP2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1937,9 +1964,8 @@ line70
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line71
-	ldx #$0A ; 10 (spr=-38)
+	stx COLPM3
 	stx HPOSP2
-	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1965,9 +1991,9 @@ line71
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line72
-	ldx #$0A ; 10 (spr=-38)
-	stx HPOSP2
-	ldx #$38 ; 56 (spr=8)
+	stx COLPM3
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -1993,10 +2019,10 @@ line72
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line73
-	sty COLOR0
+	ldy #$04 ; 4 (spr=-44)
+	stx HPOSP0
 	nop 
-	stx COLOR2
-	nop ; filler
+	sta COLOR0
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2020,9 +2046,10 @@ line73
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line74
-	ldy #$28 ; 40 (spr=-8)
-	sty COLOR0
-	stx COLOR2
+	nop 
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2047,10 +2074,9 @@ line74
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line75
-	lda #$2A ; 42 (spr=-6)
-	sta COLOR0
-	nop 
-	nop 
+	sty COLPM1
+	stx COLPM3
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2075,9 +2101,8 @@ line75
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line76
-	sta COLOR0
-	nop 
-	nop 
+	sty COLPM1
+	stx COLPM3
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2103,9 +2128,8 @@ line76
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line77
-	nop 
-	nop 
-	nop 
+	stx COLOR1
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2132,9 +2156,8 @@ line77
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line78
+	stx COLOR1
 	nop 
-	nop 
-	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2162,10 +2185,9 @@ line78
 	cmp byt2; on zero page so 3 cycles
 line79
 	nop 
+	ldy #$1A ; 26 (spr=-22)
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty HPOSP0
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2190,11 +2212,10 @@ line79
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line80
+	sta HPOSP3
+	ldy #$1B ; 27 (spr=-21)
 	nop 
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2220,12 +2241,10 @@ line80
 	cmp byt2; on zero page so 3 cycles
 line81
 	nop 
+	sty HPOSP1
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldx #$18 ; 24 (spr=-24)
+	sta COLPM2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2248,9 +2267,10 @@ line81
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line82
-	lda #$FA ; 250 (spr=202)
-	ldy #$01 ; 1 (spr=-47)
-	sty HPOSP2
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2277,7 +2297,8 @@ line82
 	cmp byt2; on zero page so 3 cycles
 line83
 	nop 
-	sta COLPM2
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2304,9 +2325,9 @@ line83
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line84
-	sta COLPM2
-	nop ; filler
-	nop ; filler
+	nop 
+	stx HPOSP3
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2332,10 +2353,10 @@ line84
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line85
-	sta HPOSP2
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	nop 
+	nop 
+	lda #$E3 ; 227 (spr=179)
+	sta HPOSP0
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2360,42 +2381,44 @@ line85
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line86
+	lda #$E3 ; 227 (spr=179)
 	nop 
-	sty COLOR1
-	nop 
-	nop 
-	sty HPOSP2
-	lda #$1A ; 26 (spr=-22)
 	sta COLPM2
-	ldy #$E0 ; 224 (spr=176)
 	nop 
-	sty COLOR0
-	nop 
-	nop 
-	lda #$2A ; 42 (spr=-6)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line87
-	ldy #$0A ; 10 (spr=-38)
-	sta COLOR2
-	ldx #$00 ; 0 (spr=-48)
 	nop 
-	sty COLPM3
+	ldy #$16 ; 22 (spr=-26)
+	sty COLOR1
 	nop 
+	sty COLOR1
+	sty HPOSP2
 	stx COLPM1
-	ldy #$27 ; 39 (spr=-9)
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2411,280 +2434,303 @@ line87
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line88
+	sty COLOR1
+	ldy #$16 ; 22 (spr=-26)
 	nop 
-	nop 
-	lda #$2B ; 43 (spr=-5)
-	sty COLBAK
-	nop 
-	ldy #$0C ; 12 (spr=-36)
-	ldx #$FA ; 250 (spr=202)
-	sty COLPM1
-	nop 
-	sty COLPM2
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR2
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLPM3
+	lda #$18 ; 24 (spr=-24)
+	sty COLPM0
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line89
-	nop 
-	nop 
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	ldy #$1A ; 26 (spr=-22)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line90
+	sty COLOR0
+	ldy #$1A ; 26 (spr=-22)
+	stx COLPM0
 	nop 
-	nop 
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line91
 	nop 
-	nop 
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line92
-	nop 
-	nop 
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	ldx #$1C ; 28 (spr=-20)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line93
+	stx HPOSP3
 	nop 
-	nop 
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line94
+	sty COLPM3
 	nop 
-	nop 
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sta COLOR2
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line95
+	sty HPOSP3
 	nop 
-	nop 
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$14 ; 20 (spr=-28)
-	nop 
-	stx COLOR2
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line96
-	nop 
-	nop 
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	sta COLOR2
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	sty HPOSP2
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	stx COLOR2
-	nop 
+	sty HPOSP3
+	ldx #$14 ; 20 (spr=-28)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line97
 	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	sty HPOSP2
-	nop 
-	sta COLOR2
-	ldx #$04 ; 4 (spr=-44)
-	nop 
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$02 ; 2 (spr=-46)
-	nop 
+	sta COLOR0
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line98
-	sty COLPM0
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$07 ; 7 (spr=-41)
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$45 ; 69 (spr=21)
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	stx COLPM3
-	nop 
+	sta COLOR0
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2693,53 +2739,58 @@ line98
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line99
-	stx COLPM3
 	nop 
-	nop 
-	nop 
-	sty HPOSP2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	sta COLPM0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line100
 	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	sty HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$2C ; 44 (spr=-4)
-	nop 
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2747,208 +2798,256 @@ line100
 	cmp byt2; on zero page so 3 cycles
 line101
 	nop 
-	sty HPOSP0
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	stx COLPM2
-	sty COLOR1
-	nop 
-	sta COLOR1
-	nop 
-	nop 
-	nop 
-	ldy #$1A ; 26 (spr=-22)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR1
-	sty COLPM0
-	nop 
-	ldy #$2C ; 44 (spr=-4)
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line102
 	nop 
-	sty HPOSP0
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	stx COLPM0
-	sty COLOR1
-	nop 
-	sta COLOR1
 	nop 
 	nop 
-	nop 
-	ldy #$1A ; 26 (spr=-22)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR1
-	nop 
-	ldy #$2C ; 44 (spr=-4)
-	lda #$18 ; 24 (spr=-24)
-	sta COLPM3
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line103
 	nop 
-	sty COLOR1
-	sty HPOSP0
 	nop 
-	stx COLPM2
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	sta COLOR1
-	nop 
-	nop 
-	ldy #$1A ; 26 (spr=-22)
-	nop 
-	lda #$F0 ; 240 (spr=192)
-	nop 
-	nop 
-	sty COLOR1
-	ldy #$2C ; 44 (spr=-4)
-	ldx #$E1 ; 225 (spr=177)
-	sta COLOR1
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line104
 	nop 
-	sty COLOR1
-	sty HPOSP0
 	nop 
-	stx COLPM2
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	sta COLOR1
-	nop 
-	nop 
-	ldy #$1A ; 26 (spr=-22)
-	nop 
-	lda #$F0 ; 240 (spr=192)
-	nop 
-	nop 
-	sty COLOR1
-	ldy #$2C ; 44 (spr=-4)
-	nop 
-	sta COLOR1
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line105
 	nop 
-	sta HPOSP3
-	ldx #$3F ; 63 (spr=15)
-	stx HPOSP1
 	nop 
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	sta COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR1
-	sta HPOSP3
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line106
 	nop 
-	sta HPOSP3
-	ldx #$4F ; 79 (spr=31)
-	stx HPOSP1
 	nop 
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	sta COLOR1
-	nop 
-	lda #$E0 ; 224 (spr=176)
-	nop 
-	nop 
-	nop 
-	sty COLOR1
-	sta HPOSP3
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	sta HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line107
 	nop 
-	sta HPOSP3
-	ldx #$4F ; 79 (spr=31)
-	stx HPOSP1
 	nop 
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	sta COLOR1
-	nop 
-	lda #$E0 ; 224 (spr=176)
-	nop 
-	nop 
-	nop 
-	sty COLOR1
-	sta HPOSP3
-	lda #$10 ; 16 (spr=-32)
-	nop 
-	nop 
-	sta HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line108
 	nop 
-	sta HPOSP3
-	ldx #$4F ; 79 (spr=31)
-	stx HPOSP1
-	nop 
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	sta COLOR1
-	nop 
-	lda #$E0 ; 224 (spr=176)
-	nop 
-	nop 
-	nop 
-	sty COLOR1
-	sta HPOSP3
-	lda #$10 ; 16 (spr=-32)
-	nop 
-	nop 
-	sta HPOSP2
+	ldy #$12 ; 18 (spr=-30)
+	lda #$53 ; 83 (spr=35)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line109
-	ldx #$60 ; 96 (spr=48)
-	stx HPOSP3
-	lda #$01 ; 1 (spr=-47)
-	sty HPOSP2
-	nop 
-	sta COLPM3
+	sta HPOSP1
+	sty HPOSP0
 	nop 
 	nop 
-	ldy #$E0 ; 224 (spr=176)
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$06 ; 6 (spr=-42)
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2957,11 +3056,11 @@ line109
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line110
-	sty COLOR2
+	lda #$1A ; 26 (spr=-22)
 	sta COLOR0
 	nop 
-	nop 
-	nop 
+	sta HPOSP3
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -2984,266 +3083,306 @@ line110
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line111
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$E1 ; 225 (spr=177)
-	nop 
-	nop 
-	nop 
-	nop 
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$05 ; 5 (spr=-43)
-	nop 
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	lda #$1A ; 26 (spr=-22)
+	sta COLOR0
+	ldy #$0D ; 13 (spr=-35)
+	sta COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line112
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$E1 ; 225 (spr=177)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$05 ; 5 (spr=-43)
-	nop 
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
+	lda #$12 ; 18 (spr=-30)
+	ldx #$14 ; 20 (spr=-28)
+	stx COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line113
+	sta COLPM3
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$E1 ; 225 (spr=177)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$05 ; 5 (spr=-43)
-	nop 
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line114
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$E1 ; 225 (spr=177)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$05 ; 5 (spr=-43)
-	nop 
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP3
+	sty HPOSP0
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line115
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$E1 ; 225 (spr=177)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	ldx #$2E ; 46 (spr=-2)
-	lda #$05 ; 5 (spr=-43)
-	nop 
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP3
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line116
-	stx HPOSP0
-	nop 
-	nop 
-	nop 
-	lda #$08 ; 8 (spr=-40)
-	nop 
-	ldx #$01 ; 1 (spr=-47)
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	nop 
-	sty COLOR2
-	ldy #$03 ; 3 (spr=-45)
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	sty COLPM0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP3
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line117
-	ldx #$25 ; 37 (spr=-11)
-	stx COLOR2
-	stx COLOR0
-	nop 
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	nop 
-	sty COLOR0
-	nop 
-	sta COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$26 ; 38 (spr=-10)
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line118
+	stx COLPM3
 	nop 
-	stx COLOR2
-	stx COLOR0
-	nop 
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	ldx #$25 ; 37 (spr=-11)
-	sty COLOR0
-	stx COLOR2
-	nop 
-	sta COLOR2
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line119
 	nop 
-	stx COLOR2
-	stx COLOR0
 	nop 
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	ldx #$25 ; 37 (spr=-11)
-	sty COLOR0
-	stx COLOR2
-	nop 
-	sta COLOR2
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line120
 	nop 
-	stx COLOR2
-	stx COLOR0
 	nop 
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	ldx #$25 ; 37 (spr=-11)
-	sty COLOR0
-	stx COLOR2
-	nop 
-	sta COLOR2
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line121
 	nop 
-	stx COLOR2
 	nop 
-	stx COLOR0
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	ldx #$25 ; 37 (spr=-11)
-	sty COLOR0
-	stx COLOR2
-	nop 
-	sta COLOR2
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3251,20 +3390,28 @@ line121
 	cmp byt2; on zero page so 3 cycles
 line122
 	nop 
-	stx COLOR2
 	nop 
-	stx COLOR0
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	ldx #$25 ; 37 (spr=-11)
-	sty COLOR0
-	stx COLOR2
-	nop 
-	sta COLOR2
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3272,287 +3419,338 @@ line122
 	cmp byt2; on zero page so 3 cycles
 line123
 	nop 
-	stx COLOR2
 	nop 
-	stx COLOR0
-	ldy #$04 ; 4 (spr=-44)
-	sty COLOR2
-	sta COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
-	ldx #$25 ; 37 (spr=-11)
-	sty COLOR0
-	stx COLOR2
-	nop 
+	ldx #$00 ; 0 (spr=-48)
+	lda #$E0 ; 224 (spr=176)
 	sta COLOR2
+	ldy #$02 ; 2 (spr=-46)
 	nop 
-	sta COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line124
-	stx COLOR0
-	ldy #$04 ; 4 (spr=-44)
-	nop 
-	ldx #$02 ; 2 (spr=-46)
-	sty COLOR2
-	lda #$07 ; 7 (spr=-41)
-	sta COLOR0
-	nop 
-	stx COLOR2
-	nop 
-	sty COLOR0
-	ldx #$25 ; 37 (spr=-11)
-	stx COLOR2
 	nop 
 	nop 
-	ldx #$F2 ; 242 (spr=194)
-	stx COLOR2
-	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line125
-	stx COLOR0
-	ldy #$04 ; 4 (spr=-44)
 	nop 
-	ldx #$02 ; 2 (spr=-46)
-	sty COLOR2
-	lda #$07 ; 7 (spr=-41)
-	sta COLOR0
-	nop 
-	stx COLOR2
-	sty COLOR0
-	ldx #$25 ; 37 (spr=-11)
-	stx COLOR2
-	nop 
-	nop 
-	ldx #$F2 ; 242 (spr=194)
-	stx COLOR2
-	nop 
-	stx COLOR0
+	lda #$E2 ; 226 (spr=178)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line126
-	stx COLOR0
-	ldy #$04 ; 4 (spr=-44)
-	nop 
-	ldx #$02 ; 2 (spr=-46)
 	sty COLOR2
-	lda #$07 ; 7 (spr=-41)
-	sta COLOR0
-	nop 
-	stx COLOR2
-	sty COLOR0
-	ldx #$25 ; 37 (spr=-11)
-	stx COLOR2
-	nop 
-	nop 
-	ldx #$F2 ; 242 (spr=194)
-	stx COLOR2
-	nop 
-	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line127
-	stx COLOR0
-	nop 
-	ldy #$04 ; 4 (spr=-44)
-	nop 
+	stx COLPM0
 	sty COLOR2
-	lda #$07 ; 7 (spr=-41)
-	sta COLOR0
-	ldx #$F2 ; 242 (spr=194)
-	nop 
-	stx COLOR2
-	sty COLOR2
-	stx COLOR0
-	lda #$2A ; 42 (spr=-6)
-	stx COLOR2
-	sta COLOR0
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line128
-	sta COLOR0
-	nop 
-	sty COLOR0
-	nop 
-	nop 
-	sty COLOR0
-	ldy #$0B ; 11 (spr=-37)
-	nop 
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLPM3
+	sty COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line129
 	nop 
-	nop 
-	nop 
-	nop 
-	lda #$34 ; 52 (spr=4)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$16 ; 22 (spr=-26)
-	nop 
-	nop 
-	sty COLPM0
-	nop 
-	nop 
-	nop 
-	sta COLPM3
-	nop 
-	nop 
-	ldx #$E0 ; 224 (spr=176)
+	sta COLBAK
+	sty COLPM3
+	ldy #$0A ; 10 (spr=-38)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line130
-	lda #$0B ; 11 (spr=-37)
-	nop 
-	sta HPOSP0
-	lda #$02 ; 2 (spr=-46)
-	nop 
-	nop 
-	stx COLOR2
-	nop 
-	nop 
-	nop 
-	ldy #$0A ; 10 (spr=-38)
-	sty COLOR2
-	ldx #$4A ; 74 (spr=26)
-	nop 
-	nop 
-	nop 
-	sta COLOR0
-	ldy #$08 ; 8 (spr=-40)
-	nop 
-	sty COLOR2
-	nop 
+	sty HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line131
-	stx HPOSP0
-	lda #$05 ; 5 (spr=-43)
-	stx HPOSP1
-	nop 
-	sta COLPM2
-	nop 
-	stx HPOSP0
-	nop 
-	nop 
-	sty COLOR2
-	sty COLOR2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLBAK
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line132
 	nop 
-	ldy #$2B ; 43 (spr=-5)
-	sty HPOSP2
 	nop 
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line133
 	nop 
-	ldy #$2B ; 43 (spr=-5)
-	sty HPOSP2
 	nop 
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line134
 	nop 
-	ldy #$2B ; 43 (spr=-5)
-	sty HPOSP2
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$02 ; 2 (spr=-46)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3560,21 +3758,26 @@ line134
 line135
 	nop 
 	nop 
-	nop 
-	nop 
-	ldx #$0B ; 11 (spr=-37)
-	sta HPOSP3
-	stx COLPM3
-	nop 
-	ldy #$29 ; 41 (spr=-7)
-	sty HPOSP0
-	stx HPOSP0
-	nop 
-	nop 
-	nop 
-	stx HPOSP3
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3582,60 +3785,67 @@ line135
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line136
-	ldx #$4B ; 75 (spr=27)
-	nop 
-	lda #$3A ; 58 (spr=10)
-	stx HPOSP0
-	sta HPOSP3
-	stx HPOSP3
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line137
-	ldx #$4B ; 75 (spr=27)
-	nop 
-	lda #$2A ; 42 (spr=-6)
-	stx HPOSP0
-	sta HPOSP3
-	stx HPOSP3
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$39 ; 57 (spr=9)
-	nop 
-	stx HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
 	nop 
 	nop 
 	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line138
-	nop 
-	nop 
-	nop 
+	lda #$F0 ; 240 (spr=192)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3662,8 +3872,7 @@ line138
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line139
-	nop 
-	nop 
+	sta COLPM0
 	nop 
 	nop ; filler
 	nop ; filler
@@ -3691,7 +3900,7 @@ line139
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line140
-	nop 
+	ldx #$14 ; 20 (spr=-28)
 	nop 
 	nop ; filler
 	nop ; filler
@@ -3720,11 +3929,10 @@ line140
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line141
+	stx COLPM0
 	nop 
 	nop 
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3749,9 +3957,9 @@ line141
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line142
-	nop 
-	nop 
-	nop 
+	lda #$00 ; 0 (spr=-48)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3778,9 +3986,8 @@ line142
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line143
-	nop 
-	nop 
-	nop ; filler
+	stx COLPM0
+	ldy #$40 ; 64 (spr=16)
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3807,8 +4014,7 @@ line143
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line144
-	nop 
-	nop 
+	sty HPOSP1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3836,8 +4042,7 @@ line144
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line145
-	nop 
-	nop 
+	sty HPOSP1
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3865,8 +4070,7 @@ line145
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line146
-	nop 
-	lda #$05 ; 5 (spr=-43)
+	sty COLPM0
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3894,7 +4098,7 @@ line146
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line147
-	sta COLPM1
+	sty COLPM0
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3922,7 +4126,7 @@ line147
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line148
-	sta COLPM1
+	sty COLOR2
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3950,7 +4154,8 @@ line148
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line149
-	sta COLPM1
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -3978,9 +4183,10 @@ line149
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line150
-	sta COLPM2
 	nop 
 	nop 
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4006,9 +4212,10 @@ line150
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line151
-	sta COLPM2
-	nop 
-	nop 
+	ldy #$02 ; 2 (spr=-46)
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4034,9 +4241,9 @@ line151
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line152
-	sta COLPM2
-	nop 
-	nop 
+	sty HPOSP1
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4062,9 +4269,9 @@ line152
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line153
-	sta COLPM2
-	nop 
-	nop 
+	sty HPOSP1
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4090,11 +4297,10 @@ line153
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line154
-	sta COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLPM1
+	ldx #$40 ; 64 (spr=16)
+	sty COLPM1
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4118,13 +4324,13 @@ line154
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line155
-	sta COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	sta HPOSP2
+	sta COLOR0
+	stx HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4145,18 +4351,21 @@ line155
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line156
-	ldy #$04 ; 4 (spr=-44)
-	sty HPOSP2
-	nop 
-	lda #$34 ; 52 (spr=4)
-	nop 
-	ldy #$0C ; 12 (spr=-36)
-	sta HPOSP2
-	sty COLPM3
-	nop 
-	lda #$34 ; 52 (spr=4)
-	sta HPOSP2
-	nop 
+	stx HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4170,18 +4379,21 @@ line156
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line157
-	ldy #$04 ; 4 (spr=-44)
-	sty HPOSP2
-	nop 
-	lda #$34 ; 52 (spr=4)
-	nop 
-	ldy #$0C ; 12 (spr=-36)
-	sta HPOSP2
-	sty COLPM3
-	nop 
-	lda #$34 ; 52 (spr=4)
-	sta HPOSP2
-	nop 
+	sty COLBAK
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4195,22 +4407,22 @@ line157
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line158
-	sta HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$37 ; 55 (spr=7)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
@@ -4223,980 +4435,1481 @@ line158
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line159
-	sta HPOSP3
-	nop 
-	nop 
-	nop 
-	lda #$90 ; 144 (spr=96)
-	nop 
-	nop 
-	sta COLPM2
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$2D ; 45 (spr=-3)
-	nop 
-	nop 
-	nop 
-	stx HPOSP1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line160
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR0
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLPM0
+	sta COLOR0
+	stx HPOSP0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line161
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR0
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLPM0
+	sta COLOR0
+	stx COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line162
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR0
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP0
+	sty COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line163
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
+	ldy #$16 ; 22 (spr=-26)
 	sty COLOR0
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line164
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
 	sty COLOR0
-	nop 
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
+	stx COLOR0
 	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line165
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line166
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line167
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$12 ; 18 (spr=-30)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	ldy #$03 ; 3 (spr=-45)
-	sty COLOR0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line168
-	nop 
-	ldx #$01 ; 1 (spr=-47)
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	ldx #$14 ; 20 (spr=-28)
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	lda #$24 ; 36 (spr=-12)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	stx HPOSP2
-	stx HPOSP2
-	nop 
-	sta COLOR0
-	nop 
-	sty COLOR0
-	nop 
+	stx COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line169
-	nop 
-	ldx #$02 ; 2 (spr=-46)
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	ldx #$14 ; 20 (spr=-28)
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	lda #$24 ; 36 (spr=-12)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	stx HPOSP2
-	stx HPOSP2
-	nop 
-	sta COLOR0
-	nop 
-	nop 
-	sty COLOR0
-	nop 
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line170
 	nop 
-	ldx #$02 ; 2 (spr=-46)
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	ldx #$14 ; 20 (spr=-28)
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	lda #$24 ; 36 (spr=-12)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	stx HPOSP2
-	stx HPOSP2
-	nop 
-	sta COLOR0
-	nop 
-	nop 
-	sty COLOR0
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line171
 	nop 
-	ldx #$02 ; 2 (spr=-46)
-	stx COLPM2
-	nop 
-	nop 
-	nop 
-	ldx #$14 ; 20 (spr=-28)
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	lda #$24 ; 36 (spr=-12)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	stx HPOSP2
-	stx HPOSP2
-	nop 
-	sta COLOR0
-	nop 
-	nop 
-	sty COLOR0
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line172
-	nop 
-	nop 
-	nop 
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$11 ; 17 (spr=-31)
-	stx COLPM2
-	nop 
-	nop 
-	lda #$25 ; 37 (spr=-11)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	nop 
-	stx COLOR0
-	nop 
-	sta COLOR0
-	nop 
-	sty COLOR0
-	nop 
-	nop 
+	ldy #$90 ; 144 (spr=96)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line173
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$11 ; 17 (spr=-31)
-	nop 
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	nop 
-	lda #$25 ; 37 (spr=-11)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	stx COLPM2
-	stx COLOR0
-	sta COLOR0
-	nop 
-	sty COLOR0
-	nop 
-	nop 
+	sty COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line174
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$11 ; 17 (spr=-31)
-	nop 
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	nop 
-	lda #$25 ; 37 (spr=-11)
-	sty COLOR0
-	ldy #$03 ; 3 (spr=-45)
-	stx COLPM2
-	stx COLOR0
-	sta COLOR0
-	nop 
-	sty COLOR0
-	ldy #$26 ; 38 (spr=-10)
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line175
-	stx COLPM2
 	nop 
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$09 ; 9 (spr=-39)
-	nop 
-	lda #$34 ; 52 (spr=4)
-	sta COLOR2
-	stx COLBAK
-	nop 
-	nop 
-	nop 
-	nop 
-	sty COLPM3
-	nop 
-	nop 
-	nop 
-	lda #$34 ; 52 (spr=4)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line176
-	sty COLPM3
 	nop 
 	nop 
 	nop 
-	sta HPOSP3
-	ldy #$0B ; 11 (spr=-37)
-	lda #$77 ; 119 (spr=71)
-	ldx #$FD ; 253 (spr=205)
-	stx COLPM0
-	sta HPOSP2
-	lda #$99 ; 153 (spr=105)
-	sta HPOSP3
-	nop 
-	nop 
-	nop 
-	sty COLBAK
-	nop 
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line177
 	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$63 ; 99 (spr=51)
-	nop 
-	nop 
-	stx HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	lda #$92 ; 146 (spr=98)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line178
+	sta COLBAK
 	nop 
 	nop 
 	nop 
 	nop 
+	lda #$02 ; 2 (spr=-46)
+	sta COLOR1
 	nop 
-	ldx #$1B ; 27 (spr=-21)
-	nop 
-	stx COLPM3
-	ldy #$26 ; 38 (spr=-10)
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$26 ; 38 (spr=-10)
-	nop 
-	nop 
-	nop 
-	stx COLOR1
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line179
 	nop 
 	nop 
-	lda #$1D ; 29 (spr=-19)
+	nop 
+	nop 
+	nop 
+	lda #$02 ; 2 (spr=-46)
 	sta COLOR1
-	nop 
-	sta COLOR1
-	lda #$18 ; 24 (spr=-24)
-	ldy #$26 ; 38 (spr=-10)
-	sta COLOR1
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	sta COLOR1
-	lda #$2A ; 42 (spr=-6)
-	sta COLOR1
-	nop 
-	nop 
-	nop 
+	sta COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line180
 	nop 
 	nop 
-	lda #$1D ; 29 (spr=-19)
+	nop 
+	ldy #$06 ; 6 (spr=-42)
+	nop 
+	lda #$17 ; 23 (spr=-25)
 	sta COLOR1
-	nop 
-	sta COLOR1
-	lda #$18 ; 24 (spr=-24)
-	ldy #$26 ; 38 (spr=-10)
-	sta COLOR1
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	sta COLOR1
-	lda #$2A ; 42 (spr=-6)
-	sta COLOR1
-	nop 
-	nop 
-	nop 
+	sta COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line181
-	nop 
-	nop 
-	lda #$1D ; 29 (spr=-19)
-	sta COLOR1
-	nop 
-	sta COLOR1
-	lda #$18 ; 24 (spr=-24)
-	ldy #$26 ; 38 (spr=-10)
-	sta COLOR1
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	sta COLOR1
-	lda #$2A ; 42 (spr=-6)
-	sta COLOR1
-	nop 
-	nop 
-	nop 
+	sty COLPM0
+	lda #$90 ; 144 (spr=96)
+	ldx #$02 ; 2 (spr=-46)
+	sta COLOR2
+	sta COLPM0
+	lda #$02 ; 2 (spr=-46)
+	sta COLPM0
+	sty HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line182
-	nop 
-	nop 
-	lda #$1D ; 29 (spr=-19)
-	sta COLOR1
-	sta COLOR1
-	nop 
-	lda #$18 ; 24 (spr=-24)
-	ldy #$26 ; 38 (spr=-10)
-	sta COLOR1
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	sta COLOR1
-	lda #$2A ; 42 (spr=-6)
-	sta COLOR1
-	nop 
-	nop 
-	nop 
+	sta HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line183
-	nop 
-	nop 
-	lda #$1D ; 29 (spr=-19)
-	sta COLOR1
-	sta COLOR1
-	nop 
-	lda #$18 ; 24 (spr=-24)
-	ldy #$26 ; 38 (spr=-10)
-	sta COLOR1
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	sta COLOR1
-	lda #$2A ; 42 (spr=-6)
-	sta COLOR1
-	lda #$26 ; 38 (spr=-10)
-	nop 
-	nop 
+	sta HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line184
-	sta COLOR1
-	nop 
-	lda #$1D ; 29 (spr=-19)
-	nop 
-	sta COLOR1
-	nop 
-	lda #$18 ; 24 (spr=-24)
-	ldy #$26 ; 38 (spr=-10)
-	sta COLOR1
-	nop 
-	sty COLOR1
-	nop 
-	ldy #$16 ; 22 (spr=-26)
-	sta COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sta COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line185
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$32 ; 50 (spr=2)
-	nop 
-	nop 
-	nop 
-	sta HPOSP0
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sta HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line186
-	ldy #$19 ; 25 (spr=-23)
-	nop 
-	ldx #$0D ; 13 (spr=-35)
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	stx COLOR1
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line187
-	ldy #$19 ; 25 (spr=-23)
-	nop 
-	ldx #$0D ; 13 (spr=-35)
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	stx COLOR1
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line188
-	ldy #$19 ; 25 (spr=-23)
-	nop 
-	ldx #$0D ; 13 (spr=-35)
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	stx COLOR1
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLPM2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line189
-	ldy #$19 ; 25 (spr=-23)
-	nop 
-	nop 
-	nop 
-	sty COLOR1
-	nop 
-	ldx #$0D ; 13 (spr=-35)
-	stx COLOR1
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	sty COLOR0
+	stx COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line190
-	ldy #$19 ; 25 (spr=-23)
-	nop 
-	ldx #$0D ; 13 (spr=-35)
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	stx COLOR1
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line191
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$E3 ; 227 (spr=179)
-	ldy #$26 ; 38 (spr=-10)
-	stx COLOR1
-	nop 
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx HPOSP2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line192
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$E3 ; 227 (spr=179)
-	ldy #$26 ; 38 (spr=-10)
-	stx COLOR1
-	nop 
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line193
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$E3 ; 227 (spr=179)
-	ldy #$26 ; 38 (spr=-10)
-	stx COLOR1
-	nop 
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
+	stx COLBAK
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line194
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$E3 ; 227 (spr=179)
-	ldy #$26 ; 38 (spr=-10)
-	stx COLOR1
-	nop 
-	nop 
-	sty COLOR1
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$90 ; 144 (spr=96)
-	nop 
+	stx COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line195
-	nop 
-	sta COLPM2
-	ldx #$26 ; 38 (spr=-10)
-	nop 
-	nop 
-	lda #$91 ; 145 (spr=97)
-	sta HPOSP2
-	nop 
 	stx COLPM1
-	nop 
-	stx HPOSP2
-	nop 
-	nop 
-	nop 
-	nop 
-	stx HPOSP2
-	nop 
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line196
-	stx HPOSP2
-	nop 
-	nop 
-	nop 
-	ldx #$02 ; 2 (spr=-46)
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	stx HPOSP1
-	lda #$13 ; 19 (spr=-29)
-	nop 
-	ldx #$05 ; 5 (spr=-43)
-	nop 
-	sta COLOR1
-	nop 
-	nop 
-	stx COLOR1
+	stx COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line197
-	ldy #$83 ; 131 (spr=83)
-	nop 
+	sty COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line198
+	sta HPOSP2
+	sty COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line199
+	sta HPOSP3
+	sty COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line200
+	sta HPOSP3
 	nop 
 	sty HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line201
+	sta HPOSP1
+	sta COLOR0
+	sty HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line202
 	nop 
-	lda #$02 ; 2 (spr=-46)
+	stx COLPM1
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line203
+	nop 
+	stx COLPM1
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line204
+	nop 
+	stx COLPM1
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line205
 	nop 
 	nop 
-	sta HPOSP0
 	nop 
-	ldx #$12 ; 18 (spr=-30)
-	stx COLPM3
-	lda #$E0 ; 224 (spr=176)
+	nop 
+	lda #$90 ; 144 (spr=96)
+	sta HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line206
+	nop 
+	nop 
+	nop 
+	nop 
+	sta HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line207
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line208
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line209
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line210
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line211
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line212
 	sta HPOSP1
 	nop 
 	nop 
@@ -5207,54 +5920,761 @@ line197
 	nop ; filler
 	nop ; filler
 	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	cmp byt2; on zero page so 3 cycles
-line198
-	nop 
-	sty HPOSP1
-	lda #$90 ; 144 (spr=96)
-	sty HPOSP1
+line213
 	nop 
 	nop 
 	nop 
-	sta HPOSP0
+	lda #$00 ; 0 (spr=-48)
 	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line214
+	ldx #$00 ; 0 (spr=-48)
 	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line215
+	stx HPOSP3
 	nop 
+	sta COLPM2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line216
+	stx HPOSP0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line217
+	stx HPOSP0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line218
+	sta COLPM2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line219
+	sta COLOR1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line220
+	sta COLOR1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line221
 	nop 
-	ldx #$02 ; 2 (spr=-46)
-	stx COLOR0
+	lda #$E0 ; 224 (spr=176)
 	nop 
-	ldx #$02 ; 2 (spr=-46)
-	stx COLPM3
-	nop 
+	sta COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line222
+	sta COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line223
 	nop 
 	nop 
 	nop 
 	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	cmp byt2; on zero page so 3 cycles
-line199
-	nop 
-	nop 
-	ldy #$83 ; 131 (spr=83)
-	nop 
-	nop 
-	lda #$17 ; 23 (spr=-25)
-	nop 
-	nop 
-	nop 
-	nop 
-	sta COLPM2
-	sta COLPM3
-	nop 
-	nop 
-	nop 
-	nop 
-	nop 
-	lda #$0C ; 12 (spr=-36)
-	sta HPOSP0
-	nop 
-	nop 
+line224
 	ldx #$02 ; 2 (spr=-46)
+	nop 
+	lda #$92 ; 146 (spr=98)
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line225
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line226
+	sta HPOSP3
+	stx HPOSP3
+	stx COLBAK
+	stx HPOSP1
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line227
+	sta HPOSP3
+	stx HPOSP3
+	stx COLBAK
+	stx HPOSP1
+	ldy #$02 ; 2 (spr=-46)
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line228
+	sta HPOSP3
+	stx HPOSP3
+	stx COLBAK
+	stx HPOSP1
+	sta COLBAK
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line229
+	sty HPOSP2
+	ldy #$40 ; 64 (spr=16)
+	stx COLPM1
+	sty COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line230
+	ldy #$40 ; 64 (spr=16)
+	stx COLPM1
+	sty COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line231
+	stx COLPM2
+	sty COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line232
+	stx COLPM2
+	sty COLOR2
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line233
+	stx HPOSP1
+	lda #$00 ; 0 (spr=-48)
+	ldy #$90 ; 144 (spr=96)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line234
+	stx COLPM1
+	sta HPOSP1
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line235
+	stx COLPM1
+	sta COLPM3
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line236
+	ldx #$02 ; 2 (spr=-46)
+	sty COLPM2
+	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line237
+	ldx #$02 ; 2 (spr=-46)
+	sty COLBAK
+	stx COLOR0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line238
+	ldx #$02 ; 2 (spr=-46)
+	stx COLPM0
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line239
+	ldx #$02 ; 2 (spr=-46)
+	stx COLPM0
+	ldy #$00 ; 0 (spr=-48)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles

@@ -213,6 +213,7 @@ begin;
                 CRT_WriteCentered(22, fp_name[t]);
                 CRT_WriteCentered(23, fight_string_4);
                 WaitFrames(fight_deadTime);
+                FillChar (Pointer (MAP_SCR_ADDRESS+20*40), 4*40, ' '~);
                 fight_clearPlayer(fp_posW[t]);
                 fight_displayStats();
             end

@@ -1,5 +1,5 @@
 LOCAUPDT.gfx
- 
+Overview
 $bf, $af, $00, $bf
  
  
@@ -29,3 +29,6 @@ disappear silently...
 You managed to drive them away just 
 this once. But they'll come back to 
 visit you soon...
+The game will continue for
+ years.
+Your gangsters:

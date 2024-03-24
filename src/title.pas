@@ -39,10 +39,10 @@ const
 const 
    D_LOGO           =   'LOGO    APL';
 
-    ADR_LOGO         =   $8036;
+    ADR_LOGO         =   $9036;
     // DL GR.8 $8036; GFX $8150
     ADR_LOGO_DL      =   ADR_LOGO;
-    ADR_LOGO_GFX     =   $8150;
+    ADR_LOGO_GFX     =   $9150;
 
     L_COLOR1         =   $9c;
     L_COLOR2         =   $12;
@@ -87,7 +87,7 @@ show_logo();
 // just load logo again, fin.
 Delay(3000);
 asm
-  jsr $5000
+  jsr $5800
 end;
 
 finalfname := 'MAIN    XEX';

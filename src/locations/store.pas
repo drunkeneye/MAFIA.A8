@@ -1,5 +1,5 @@
 
-function storeChoices (var choice:byte):   byte;
+function storeChoices:   byte;
 var r:   byte;
     k: byte;
     p, q: word;
@@ -26,7 +26,7 @@ begin;
     end;
 
 
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         if (gangsterBrut[currentPlayer SHL 3] < 30) or (currentSubLocation = 1) then begin;
             CRT_Writeln(loc_string_2);
@@ -39,7 +39,7 @@ begin;
     end;
 
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         if (currentSubLocation = 4) or (currentSubLocation = 3) then begin;
             CRT_Writeln(loc_string_4);
@@ -49,7 +49,7 @@ begin;
     end;
 
 
-    if choice = 3 then begin;
+    if currentChoice = 3 then begin;
         if (currentSubLocation = 2) or (currentSubLocation = 1) then begin;
             CRT_Writeln(loc_string_5);
             CRT_Writeln(loc_string_6);
@@ -111,7 +111,7 @@ begin;
     end;
 
 
-    if choice = 4 then begin;
+    if currentChoice = 4 then begin;
         if (currentSubLocation = 3) or (gangsterInt[currentPlayer SHL 3] < 30) then begin;
             CRT_Writeln(loc_string_9);
             CRT_Writeln(loc_string_10);
@@ -121,33 +121,34 @@ begin;
     end;
  
     // common to all: 
+    ShowLocationHeader;
     addPoints(1);
      p := Random(200) + 800;
     if (currentSubLocation = 2) or (currentSubLocation = 3) then 
         p := p - 200;
-    if choice = 2 then p := p + 600;
+    if currentChoice = 2 then p := p + 600;
 
-    if choice = 1 then begin
+    if currentChoice = 1 then begin
         CRT_Writeln(loc_string_11);
         CRT_Write(loc_string_12);
         CRT_Write(p);
         CRT_Writeln('$!'~);
     end; 
 
-    if choice =2 then begin 
+    if currentChoice =2 then begin 
         CRT_Writeln(loc_string_13);
         CRT_Write(p);
         CRT_Writeln('$!'~);
         // TODO: here do not clear sublocation, so doing it twice, the store will understand that you are fraud
     end;        
 
-    if choice = 3 then begin 
+    if currentChoice = 3 then begin 
         CRT_Write(loc_string_14);
         CRT_Write(p);
         CRT_Writeln(loc_string_15);
     end;
 
-    if choice = 4 then begin 
+    if currentChoice = 4 then begin 
         CRT_Writeln(loc_string_16);
         CRT_Write(loc_string_17);
         CRT_Write(p);

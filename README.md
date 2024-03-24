@@ -58,6 +58,10 @@ Using select/option game can be saved or loaded.
 Control is done via cursor keys, but joystick in port 0 should
 also work. 
 
+You can press ESC during the map to get an overview of
+the health/properties/weapons of every gangster of you
+gang (including you).
+
 
 ## Fight 
 
@@ -92,11 +96,9 @@ instead of changing the pointer to the string.
 
 ## BUGS or similar
 
+- check for cargo, also when doing gang-war
 - Even out rank requirements for bank/pub/gangsters
 - Fix English/Polish localizations
-- help KEY=overview during map implement it
-- ask if human player wants to use ai for fight
-- when fighting car owner, the name is not shown when the person dies
 
 
 

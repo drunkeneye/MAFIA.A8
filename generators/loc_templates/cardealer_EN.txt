@@ -31,3 +31,5 @@ quickly disappear without a car!
 pulls out his hefty revolver!
 Do you accept the offer (Y/N)?
 Car owner
+Your new car does not have enough
+room for all that alcohol!

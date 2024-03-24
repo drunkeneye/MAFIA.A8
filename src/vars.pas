@@ -13,6 +13,8 @@ var
     
     nPlayers:   byte absolute varAdresse;
     lastLocationStrings: byte absolute varAdresse + 1;
+    currentChoice: byte absolute varAdresse + 2;
+    showWeapons: byte absolute varAdresse + 3;
     plStuff: array[0..3] of byte absolute $e004;
     plMoneyTransporter: array[0..3] of byte absolute $e008;
     plKilledMajor: array[0..3] of byte absolute $e00c;
@@ -157,7 +159,7 @@ var
     saveFname: TString = 'SAVEGAMEDAT';
     //finalfname: TString = 'FINAL   XEX';
     //finalfname: TString = 'XAUTORUN   ';
-    finalfname: TString = 'FINALMAPAPL';
+    finalfname: TString;// = 'FINALMAPAPL';
     mapReloaded: Byte;
 
 var  // for sprites 

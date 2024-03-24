@@ -1,5 +1,5 @@
-// $BAA2
-function majorChoices (var choice:byte):   byte;
+
+function majorChoices:   byte;
 var k:   byte;
 begin;
     loadLocation(MAJOR_);

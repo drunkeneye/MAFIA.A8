@@ -4,7 +4,7 @@ procedure jobWorking();
 begin;
     enableConsole();
     CRT_Clear;
-    CRT_WriteCentered(1, loc_string_32);
+    CRT_WriteCentered(1, loc_name);
     CRT_Invert(0, 1, CRT_screenWidth);
     CRT_GotoXY(0, 3);
 end;

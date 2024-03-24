@@ -1,16 +1,17 @@
 
-function hideoutChoices (var choice:byte):   byte;
+function hideoutChoices:byte;
 var r, k, j, w:   byte;
     m:   byte;
     price:   byte;
     pl: byte;
     z: word;
 begin;
+    result := HIDEOUT_;
     ShowLocationHeader;
     CRT_NewLine();
 
     // bandenkrieg
-    if choice = 3 then 
+    if currentChoice = 3 then 
     begin 
         pl := plRent[currentSubLocation];
 
@@ -89,8 +90,8 @@ begin;
             k := pl;
         end;
 
-        z := plMoney[k] SHR 2;
-        z := z + Random(4)*(z SHR 1);
+        z := plMoney[k] SHR 1;
+        z := z + Random(4)*(z SHR 2);
         CRT_Write(z);
         CRT_Writeln('$!'~);
         plMoney[m] := plMoney[m] + z;
@@ -105,7 +106,7 @@ begin;
             plAlcohol[m] := plAlcohol[m] + plAlcohol[k];
             plAlcohol[k] := 0;
             r := plCar[k];
-            if plAlcohol[pl] > carCargo[r]  then plAlcohol[pl] := carCargo[r];
+            if plAlcohol[m] > carCargo[r]  then plAlcohol[m] := carCargo[r];
         end;
 
         if plCar[k] > 0 then 
@@ -125,7 +126,7 @@ begin;
  
 
     // 'Eine Unterkunft, aber zack, zack! Und   ich moechte nicht gestoert werden!'~,
-    if choice = 1 then
+    if currentChoice = 1 then
     begin;
         if plRent[currentSubLocation] <> 99 then
         begin;
@@ -149,7 +150,7 @@ begin;
             end;
     end;
 
-    if choice = 2 then
+    if currentChoice = 2 then
     begin;
         if plRent[currentSubLocation] <> currentPlayer then
         begin

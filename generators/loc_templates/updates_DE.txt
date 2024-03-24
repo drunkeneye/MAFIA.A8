@@ -1,5 +1,5 @@
 LOCAUPDT.gfx
- 
+Uebersicht
 $bf, $af, $00, $bf
  
  
@@ -29,5 +29,7 @@ mit und verschwinden...
 Du konntest sie gerade noch einmal
 vertreiben. Sie werden dich aber bald
 wieder besuchen...
-
+Das Spiel dauert noch 
+ Jahre.
+Deine Gangster:
 

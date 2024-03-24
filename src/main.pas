@@ -98,7 +98,6 @@ end;
 
 var 
     k:   byte;
-    choice:   byte;
     outcome: byte;
     cs:   word;
     ch:   char;
@@ -131,14 +130,6 @@ begin
     initGlobalVars();
     setupGame();
     initPlayers();
-    // plMoney[0] := 55000;
-    // plRank[0] := 7;
-    // plCar[0] := 4;
-    // plAlcohol[0] := 50;
-    // plMoney[1] := 55000;
-    // plRank[1] := 7;
-    // plCar[0] := 3;
-    // plAlcohol[1] := 30;
     Poke($D20E, 0);
     // turn off all IRQs
 
@@ -149,8 +140,8 @@ begin
     //     waitForKey();
     // end;
 
-    plOpportunity[currentPlayer] := 255;
-    plNewPoints[currentPlayer] := 70;
+    // plOpportunity[currentPlayer] := 255;
+    // plNewPoints[currentPlayer] := 70;
 
     currentPlayer := 0;
     currentMonth := 1;
@@ -235,6 +226,26 @@ begin
 
             repeat;
                 ch := readKeyAndStick();
+                if ch = #$1c then begin;
+                    // ensure we have loaded the main location
+                    loadLocation(UPDATES_);
+                    ShowLocationHeader;  
+                    CRT_WriteCentered(3, loc_string_18);
+                    CRT_Gotoxy(15,4);
+                    CRT_Write( gameLength- currentYear);
+                    CRT_Write(loc_string_19);
+                    CRT_WriteCentered(6, loc_string_20);
+                    CRT_GotoXY(0,4);
+                    showWeapons := 1;
+                    printGangsters();
+                    showWeapons := 0;
+                    CRT_GotoXY(0,20);
+                    waitForKey();
+                    enableMapConsole();
+                    printMapStatus();
+                    paintPlayer(0);
+                    continue;
+                end;
                 currentLocation := MoveCurrentPlayer(ch);
                 if currentLocation = END_TURN_ then break;
                 printMapStatus();
@@ -264,25 +275,25 @@ begin
             // now we either entered a location or the turn ended
             blackConsole();
 
-            choice := ShowLocation(currentLocation);
-            if choice = loc_nOptions then
+            currentChoice := ShowLocation(currentLocation);
+            if currentChoice = loc_nOptions then
                 currentLocation := NONE_;
 
             case currentLocation of 
-                BANK_:   outcome := bankChoices (choice);
-                FORGERY_:   outcome := forgeryChoices (choice);
-                MONEYTRANSPORT_: outcome := moneyTransporterChoices (choice);
-                LOANSHARK_: outcome := loanSharkChoices (choice);
-                POLICE_: outcome:= policeChoices (choice);
-                CARDEALER_: outcome := carDealerChoices (choice);
-                PUB_: outcome := pubChoices (choice);
-                CENTRALSTATION_: outcome := centralStationChoices (choice);
-                STORE_: outcome := storeChoices (choice);
-                HIDEOUT_: outcome := hideoutChoices (choice);
-                GAMBLING_:outcome := gamblingChoices (choice);
-                SUBWAY_: outcome := subwayChoices (choice);
-                ARMSDEALER_:outcome := armsDealerChoices (choice);
-                MAJOR_: outcome := majorChoices(choice);
+                BANK_:   outcome := bankChoices;
+                FORGERY_:   outcome := forgeryChoices;
+                MONEYTRANSPORT_: outcome := moneyTransporterChoices;
+                LOANSHARK_: outcome := loanSharkChoices;
+                POLICE_: outcome:= policeChoices;
+                CARDEALER_: outcome := carDealerChoices;
+                PUB_: outcome := pubChoices;
+                CENTRALSTATION_: outcome := centralStationChoices;
+                STORE_: outcome := storeChoices ;
+                HIDEOUT_: outcome := hideoutChoices;
+                GAMBLING_:outcome := gamblingChoices;
+                SUBWAY_: outcome := subwayChoices ;
+                ARMSDEALER_:outcome := armsDealerChoices;
+                MAJOR_: outcome := majorChoices;
                 NONE_: outcome := NONE_;
            end;
 
@@ -339,6 +350,10 @@ begin
                 CRT_WriteCentered(7,loc_string_35);
                 CRT_WriteCentered(8,loc_string_36);
                 CRT_WriteCentered(9,loc_string_37);
+                if gangsterSex[k SHL 3] = 1 then 
+                    finalfname := 'FINALWAPAPL'
+                else
+                    finalfname := 'FINALMAPAPL';
                 break;
             end; 
         end;
@@ -346,16 +361,17 @@ begin
     else  
     begin 
         CRT_WriteCentered(5,loc_string_38);
-        choice := 0;
+        currentChoice := 0;
         for k := 0 to nPlayers-1 do
         begin;
             if plCurrentMap[k] = 1 then 
             begin 
-                CRT_WriteCentered(7+choice,gangsterNames[k SHL 3]);
-                choice := choice + 1;
+                CRT_WriteCentered(7+currentChoice,gangsterNames[k SHL 3]);
+                currentChoice := currentChoice + 1;
             end; 
         end;
-        CRT_WriteCentered(7+choice+2,loc_string_39);
+        CRT_WriteCentered(7+currentChoice+2,loc_string_39);
+        finalfname := 'FINALGAPAPL';
     end; 
     waitForKey();
 
@@ -366,7 +382,7 @@ begin
     xbunAPL (finalfname, Pointer($2000-6));
     asm
     lpend:
-        jsr $5000;
+        jsr $5800;
         jmp lpend
     end;
     
