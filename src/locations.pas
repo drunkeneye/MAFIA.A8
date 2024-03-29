@@ -28,6 +28,8 @@ const
     CAUGHT_: byte = 26;
     ROADBLOCK_: byte = 27;
     SETUP_: byte = 28;
+    RESET_: byte = 29;
+    CREDITS_: byte = 30;
 
  var 
     currentLocation:   byte;
@@ -38,7 +40,6 @@ const
 procedure ShowLocationHeader;
 var 
     idx:   byte;
-    subLocation: YString;
 begin;
     enableConsole();
     CRT_Clear;
@@ -84,6 +85,7 @@ begin;
         ROADBLOCK_: locfname := LOCAROADfname;
         UPDATES_: locfname := LOCAUPDTfname;
         SETUP_: locfname := LOCASETUfname;
+        CREDITS_: locfname := LOCACREDfname;
     end;    
     xbunAPL (locfname, Pointer(baseAddress));
 end;

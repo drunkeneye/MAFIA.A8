@@ -20,17 +20,17 @@ uses atari, joystick, pmg, xbapLib, xbios, crt, cio, aplib, b_utils, rmt, b_pmg,
 const 
 {$i const.inc}
 
-const
-    W_keycode = $2e;
-    A_keycode = $3f;
-    S_keycode = $3e;
-    D_keycode = $3a;
+// const
+//     W_keycode = $2e;
+//     A_keycode = $3f;
+//     S_keycode = $3e;
+//     D_keycode = $3a;
 
-{$i vars.pas}
-{$i vars_fight.pas}
-{$i vars_location.pas}
-{$i vars_gangsters.pas}
-{$I strings.pas}
+{$i vars_e000_main.pas}
+{$i vars_ec00_fight.pas}
+{$i vars_be80_location.pas}
+{$i vars_e100_gangsters.pas}
+{$I vars_ea00_strings.pas}
  
 
 
@@ -96,6 +96,21 @@ begin;
 end;
 
 
+procedure showCredits();
+var k: byte;
+    cur_loc_str: ^YString;
+begin;
+    loadLocation(CREDITS_);
+    ShowLocationHeader;
+    cur_loc_str := Pointer(loc_string_1);
+    for k := 0 to 14 do
+    begin 
+        CRT_Writeln(cur_loc_str);
+        cur_loc_str := Pointer(cur_loc_str) + $28;
+    end;
+    waitForKey();
+end; 
+
 var 
     k:   byte;
     outcome: byte;
@@ -128,6 +143,7 @@ begin
     xbunAPL (e7fname, Pointer(e7adrm6));
     //setupGame();
     initGlobalVars();
+    showCredits();
     setupGame();
     initPlayers();
     Poke($D20E, 0);
@@ -142,6 +158,7 @@ begin
 
     // plOpportunity[currentPlayer] := 255;
     // plNewPoints[currentPlayer] := 70;
+    // plMoney[currentPlayer] := 5550005;
 
     currentPlayer := 0;
     currentMonth := 1;
@@ -149,7 +166,10 @@ begin
     repeat;
         loadLocation(MAIN_);
         enableConsole();
-        playersTurn();
+        if playersTurn() = RESET_ then 
+        begin; 
+            continue;
+        end; 
         blackConsole();
         currentLocation := NONE_;
         lastLocation := NONE_;
@@ -323,7 +343,7 @@ begin
 
         gameEnds := Byte(currentYear > gameLength);
         for k := 0 to nPlayers-1 do
-            if (plPoints[k] > 99) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then  gameEnds := gameEnds + 1;
+            if (plPoints[k] > gamePoints-1) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then  gameEnds := gameEnds + 1;
     until gameEnds = 1;
 
     // reuse plCurrentMap for winners
@@ -333,7 +353,7 @@ begin
     playerPos_X := 0;
     for k := 0 to nPlayers-1 do
     begin
-        if (plPoints[k] > 99) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then 
+        if (plPoints[k] > gamePoints-1) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then 
             plCurrentMap[k] := 1
         else plCurrentMap[k] := 0;
         playerPos_X := playerPos_X + plCurrentMap[k];

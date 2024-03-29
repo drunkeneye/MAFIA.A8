@@ -7,6 +7,12 @@ type
     YString =   String[40];
 
 
+
+// e000-e090
+// e090-e600
+// e600-e9fe 
+// ea00-ec00 empty=512 byte
+// ec00-... fight
 var 
     // bits: 0=mail train robbed, 1=killed major, 2=forged ID, 3=fake money,
     // 4=safe tutorial, 5=...
@@ -120,7 +126,7 @@ var
     carNames_3: TString absolute e7adr + 888;
     carNames_4: TString absolute e7adr + 904;
     carNames_5: TString absolute e7adr + 920;
-    carNames_6: TString absolute e7adr + 936;
+    carNames_6: TString absolute e7adr + 936; // $e9a8
 
 // const 
 //     // weaponStrength:   array[0..8] of TString =   ('mies'~, 'ganz gut'~, 'todsicher'~, 'laecherlich'~,
@@ -151,8 +157,8 @@ var
     oldPlayerPos_Y:   byte absolute e7adr + 943+16;
     
     fpPosStart:   array[0..16*2-1] of word absolute e7adr+944+16; 
-    LOCACENTfname: TString absolute e7adr + 944+16+64;
-
+    LOCACENTfname: TString absolute e7adr + 944+16+64; //$e9fe
+    LOCACREDfname: TString absolute e7adr + 944+16+64+16;
 
 var 
     e7fname: TString = 'E700PAGEAPL';

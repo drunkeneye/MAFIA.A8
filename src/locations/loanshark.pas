@@ -4,8 +4,6 @@ var
     allPaid: byte;
     loan: smallint;
     p: word;
-    LN: byte;
-
 begin
     result := LOANSHARK_;
     ShowLocationHeader;

@@ -99,6 +99,7 @@ instead of changing the pointer to the string.
 - check for cargo, also when doing gang-war
 - Even out rank requirements for bank/pub/gangsters
 - Fix English/Polish localizations
+- subway station name is not correct when stealing at central station
 
 
 

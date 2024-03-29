@@ -148,7 +148,6 @@ var
     hit:   byte;
     hitPlayer:   byte;
     t1, t2, t3, t4: byte;
-    st: string[40];
 begin;
     fight_setShootStart();
     f_curPos := MAP_SCR_ADDRESS+fp_posW[fp_currentPlayer];

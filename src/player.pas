@@ -43,7 +43,7 @@ end;
 
 
 // works with global vars
-procedure playersTurn ();
+function playersTurn (): byte;
 var ch:char;
   z:byte;
 begin
@@ -72,6 +72,7 @@ begin
   // sound(0,145,10,15);
   // WaitFrames(10);
   NoSound;
+  result := 0;
   if currentPlayer = 0 then 
   begin 
     CRT_WriteCentered(8, loc_string_40);
@@ -79,6 +80,7 @@ begin
     ch := readKeyAndStick();
     if byte(ch) = $1e then begin;
         loadGame();
+        result := RESET_;
     end;
     if byte(ch) = $1f then begin;
         saveGame();
@@ -104,50 +106,5 @@ begin
   // loadMap();
 end;
 
-
-// // works with global vars
-// procedure showPlayerStatus;
-//   var S:String;
-// begin
-//   // status thing
-//   CRT_Clear;
-//   CRT_NewLine();
-//   CRT_Write(' Miete:'~);
-//   CRT_Write(plRentMonths[currentPlayer]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Auto:'~); // actually steps should be shown
-//   CRT_Write(carNames[plCar[currentPlayer]]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Bestechung:'~);
-//   CRT_Write(plBribe[currentPlayer]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Cargo:'~);
-//   CRT_Write(carCargo[plCar[currentPlayer]]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Rang:'~);
-//   CRT_Write(rankNames[plRank[currentPlayer]]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Waffe:'~);
-//   CRT_Write(weaponNames[gangsterWeapon[currentPlayer SHL 3]]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Gangster:'~);
-//   CRT_Write(plNGangsters[currentPlayer]);
-//   CRT_NewLine();
-
-//   CRT_Write(' Kredit:'~);
-//   CRT_Write(plLoan[currentPlayer]);
-//   CRT_NewLine();
-
-//   CRT_Write('('~);
-//   CRT_Write(plLoanTime[currentPlayer]);
-//   CRT_Write(' Monate)'~);
-//   CRT_NewLine();
-
-//   CRT_ReadKey();
-// end;
+ 
+ 

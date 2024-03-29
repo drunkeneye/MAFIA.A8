@@ -3,7 +3,6 @@ function gamblingChoices:   byte;
 var //choice:byte;
     game:   byte;
     einsatz:   word;
-    won:   byte;
     gewinn:   word;
 begin;
     ShowLocationHeader;

@@ -1,8 +1,7 @@
 
 const
     baseAddress = $BE80;
-//    baseAddress = $C800-$950;
-// currently until $c420 or something, so could move it 400 further
+
 
 var
     loc_name:                       YString absolute baseAddress + $0000;
@@ -69,13 +68,11 @@ var
     loc_string_39:          YString absolute baseAddress + $2B0 + 38 * $28;
     loc_string_40:          YString absolute baseAddress + $2B0 + 39 * $28;
     loc_string_41:          YString absolute baseAddress + $2B0 + 40 * $28;
-//    loc_string_42:          YString absolute baseAddress + $2B0 + 41 * $28;
-// should end at $c7d0 (incl. string_42, which is actually not needed right now)
-// so close to $c800 where txt buffer starts
+
     loccolbk:            Byte absolute baseAddress + $2B0 + 41 * $28; // $c798 now with $be80 starting
     loccolpf0:            Byte absolute baseAddress + $2B0 + 41 * $28 + 1;
     loccolpf1:            Byte absolute baseAddress + $2B0 + 41 * $28 + 2;
-    loccolpf2:            Byte absolute baseAddress + $2B0 + 41 * $28 + 3;
+    loccolpf2:            Byte absolute baseAddress + $2B0 + 41 * $28 + 3; // $c79b
 
     loc_options: array[0..9] of ^YString = (@loc_options_1, @loc_options_2, @loc_options_3, @loc_options_4, @loc_options_5, 
                                                             @loc_options_6, @loc_options_7, @loc_options_8, @loc_options_9, @loc_options_10 );

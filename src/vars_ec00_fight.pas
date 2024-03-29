@@ -5,7 +5,7 @@ var
     fp_N :   array[0..1] of byte absolute $ec03;
     fp_posW :   array[0..16*2-1] of word absolute $ec05;
     fp_weapon:   array[0..16*2-1] of byte absolute $ec45;
-    fp_energy:   array[0..16*2-1] of byte absolute $ec85; //FIXME
+    fp_energy:   array[0..16*2-1] of byte absolute $ec85; 
     fp_strength:   array[0..16*2-1] of byte absolute $ecc5;
     fp_brutality:   array[0..16*2-1] of byte absolute $ed05;
     fp_sex: array[0..16*2-1] of byte absolute $ed45;

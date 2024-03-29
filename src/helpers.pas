@@ -131,18 +131,6 @@ end;
 
 
 
-procedure waitForKey_new();
-var k, m:byte;
-begin
-  k := CRT_WhereY();
-  m := (40 - Length(waitKey_String)) SHR 1;
-  CRT_Gotoxy(k+2, m);
-  CRT_Write(waitKey_String);
-  CRT_ReadKey();
-end;
-
-
-
 // just for return key for now
 procedure waitForKeyRelease;
 var ch: char;

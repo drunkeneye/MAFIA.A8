@@ -114,6 +114,7 @@ LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCAUPDT.gfx_$(LOCATION)  \
 	LOCACENT.gfx_$(LOCATION)  \
 	LOCAMONY.gfx_$(LOCATION)  \
+	LOCACRED.gfx_$(LOCATION) \
 	E700PAGE.gfx_$(LOCATION) 
 
 compress_locassets: $(addprefix put_, $(LOC_FILES:.gfx_$(LOCATION)=.apl))
@@ -137,7 +138,7 @@ info:
 	@echo $(FREE_SPACE)
 
 run:
-	echo /Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
+	/Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
 
 save:
 	cp $(ATR) ../release/mafia_$(LOCATION).atr
