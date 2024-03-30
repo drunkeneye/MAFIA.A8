@@ -38,4 +38,5 @@ Dodatkowo zabiera twoje alkohole!
 Dodatkowo zabierasz alkohole!
 I niszczy samochod!
 I zniszczyc jego samochod!
-
+You cannot rent the flat more than 
+3 years in advance! 

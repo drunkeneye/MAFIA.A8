@@ -246,6 +246,7 @@ begin
 
             repeat;
                 ch := readKeyAndStick();
+                // overview page
                 if ch = #$1c then begin;
                     // ensure we have loaded the main location
                     loadLocation(UPDATES_);

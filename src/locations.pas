@@ -58,7 +58,7 @@ end;
 
 
 procedure loadLocation(L:byte);
-var    locfname:   ^TString;
+var    locfname:   TString;
 begin;
     if lastLocationStrings = L then exit;
     lastLocationStrings := L;

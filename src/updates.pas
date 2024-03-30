@@ -238,7 +238,7 @@ procedure updateOpportunities();
 var 
     pr:   word;
 begin;
-    if plOpportunity[currentPlayer] and 128 <> 128 then
+    if (plOpportunity[currentPlayer] and (1 SHL 3)) <> (1 SHL 3) then
         exit;
 
     loadLocation(MAIN_);

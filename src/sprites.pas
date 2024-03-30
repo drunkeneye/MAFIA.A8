@@ -201,6 +201,8 @@ end;
 
 function roadBlock():   byte;
 begin;
+    // ensure the map status below reloads, e.g. if alcohol is confiscated
+    mapReloaded := 1;
     result := 0;
     // in original: every 20 steps+10% probabilty, here we just make it randomy 1/224  
     if plRank[currentPlayer] < 4 then exit;

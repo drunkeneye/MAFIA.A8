@@ -186,6 +186,14 @@ begin;
     m := readValue(0, 99);
     // FIXME, maybe we need readByteValue? no overflow should happen value < 100
     if (m = 0) then exit;
+    if (plRentMonths[currentPlayer]+m > 36) then 
+    begin
+        CRT_NewLine();
+        CRT_Writeln(loc_string_26);
+        CRT_Writeln(loc_string_27);
+        waitForKey();
+        exit;
+    end;
 
     if payMoney (price*m) = 0 then exit;
 

@@ -40,7 +40,7 @@ compile_title:
 	$(MADS) ./output/title.a65 -x -i:$(BASE) -o:./output/title.xex
 	cp ./output/title.xex ./atr.assets/XAUTORUN
 	cp ../assets/logo.apl ./atr.assets
-	cp ../assets/title.xex ./atr.assets
+#	cp ../assets/title.xex ./atr.assets
 
 # -define:norank for direct access to all things
 compile_main:
@@ -89,7 +89,8 @@ ASSET_FILES := acombmap.gfx \
 	wantefmf.gfx  wantefms.gfx\
 	afmapfnt.gfx  afmapscr.gfx \
 	safeclmf.gfx   safeclms.gfx \
-	finalmap.gfx finalwap.gfx finalgap.gfx 
+	finalmap.gfx finalwap.gfx finalgap.gfx \
+	titlegap.gfx 
 
 LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCABANK.gfx_$(LOCATION)  \
@@ -138,7 +139,7 @@ info:
 	@echo $(FREE_SPACE)
 
 run:
-	/Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
+	echo /Applications/Atari800MacX.app/Contents/MacOS/Atari800MacX $(ATR)
 
 save:
 	cp $(ATR) ../release/mafia_$(LOCATION).atr

@@ -22,14 +22,14 @@ unAPL
 
 interface
 
-	procedure xbunAPL(fnam: PString; outputPointer: pointer);
+	procedure xbunAPL(var fname: TString; outputPointer: pointer);
 
 implementation
 
 uses xbios;
 
 
-procedure xbunAPL(fnam: PString; outputPointer: pointer);
+procedure xbunAPL(var fname: TString; outputPointer: pointer);
 (*
 @description:
 aPLib I/O stream decompressor (John Brandwood, Krzysztof 'XXL' Dudek)
@@ -40,7 +40,7 @@ aPLib I/O stream decompressor (John Brandwood, Krzysztof 'XXL' Dudek)
 
 
 begin
-  xBiosOpenFile(fnam);
+	  xBiosOpenFile(fname);
 
 asm
 		stx @sp

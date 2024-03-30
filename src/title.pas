@@ -1,3 +1,5 @@
+{$DEFINE ROMOFF}    // http://mads.atari8.info/doc/en/syntax/#romoff
+{$DEFINE NOROMFONT}
 
 program autorun;
 
@@ -36,9 +38,19 @@ const
 {$I interrupts.inc}
 {$i console.pas}
  
-const 
-   D_LOGO           =   'LOGO    APL';
 
+var
+    D_LOGO: TString = 'LOGO    APL';
+    D_TITLE: TString = 'TITLEGAPAPL';
+    locfname:   TString;
+
+var 
+    e7fname: TString = 'E700PAGEAPL';
+
+ const 
+    e7adrm6 = $e600-6;
+
+const 
     ADR_LOGO         =   $9036;
     // DL GR.8 $8036; GFX $8150
     ADR_LOGO_DL      =   ADR_LOGO;
@@ -47,7 +59,6 @@ const
     L_COLOR1         =   $9c;
     L_COLOR2         =   $12;
     L_COLOR4         =   $12;
- 
  
 
 procedure show_logo;
@@ -64,32 +75,34 @@ end;
 var 
     cs:   word;
     finalfname:   String[16];
-begin 
+begin;
+
     DMACTL := $22;
     asm;
-    pha
-    jsr xbios.xBIOS_SET_DEFAULT_DEVICE
-    lda #$00
-    sta xbios.xIRQEN
-    pla
-end;
+        pha
+        jsr xbios.xBIOS_SET_DEFAULT_DEVICE
+        lda #$00
+        sta xbios.xIRQEN
+        pla
+    end;
 
-// check xbios from StarVagrant
-cs := dPeek($0800);
-if (char(Lo(cs)) <> 'x') or (char(Hi(cs)) <> 'B') then
-    // make it crash if no xbios is there
-    repeat;
-        CRT_Write('NO XBIOS!'~);
-    until false;
+    // check xbios from StarVagrant
+    cs := dPeek($0800);
+    if (char(Lo(cs)) <> 'x') or (char(Hi(cs)) <> 'B') then
+        // make it crash if no xbios is there
+        repeat;
+            CRT_Write('NO XBIOS!'~);
+        until false;
 
-show_logo();
-// waitframes somehow do not work whatever
-// just load logo again, fin.
-Delay(3000);
-asm
-  jsr $5800
-end;
+    show_logo();
+    xbunAPL(D_TITLE, pointer($2000-6));
+    // waitframes somehow do not work whatever
+    // just load logo again, fin.
+    // Delay(3000);
+    asm
+        jsr $5800
+    end;
 
-finalfname := 'MAIN    XEX';
-xBiosLoadFile (finalfname);
+    finalfname := 'MAIN    XEX';
+    xBiosLoadFile (finalfname);
 end.
