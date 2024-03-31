@@ -187,7 +187,7 @@ begin
             begin
                 enableConsole();
                 jobWorking;
-                CRT_Writeln(loc_string_11);
+                CRT_Writeln_LocStr(11);
                 waitForKey();
             end;
         end;
@@ -199,7 +199,7 @@ begin
             begin // once a year
                 enableConsole();
                 jobWorking;
-                CRT_Writeln(loc_string_12);
+                CRT_Writeln_LocStr(12);
                 waitForKey();
                 plForgedID[currentPlayer] := 0;
             end;
@@ -254,7 +254,7 @@ begin
                     CRT_WriteCentered(3, loc_string_18);
                     CRT_Gotoxy(15,4);
                     CRT_Write( gameLength- currentYear);
-                    CRT_Write(loc_string_19);
+                    CRT_Write_LocStr(19);
                     CRT_WriteCentered(6, loc_string_20);
                     CRT_GotoXY(0,4);
                     showWeapons := 1;
@@ -289,7 +289,7 @@ begin
             mapPos_Y := oldMapPos_Y;
             playerPos_X := oldPlayerPos_X;
             playerPos_Y := oldPlayerPos_Y;
-            plSteps[currentPlayer] := plSteps[currentPlayer] - 4;
+            plSteps[currentPlayer] := plSteps[currentPlayer] - 6;
             // also clear sprite
             clearSprites();
 

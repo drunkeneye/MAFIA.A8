@@ -7,15 +7,15 @@ begin;
 
     if plNGangsters[currentPlayer] < 3 then 
     begin 
-        CRT_Writeln(loc_string_1);
+        CRT_Writeln_LocStr(1);
         waitForKey();
         plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 1 SHL 2);
         loadMap(); //reload map to remove transporter
         exit;
     end;
 
-    CRT_Writeln(loc_string_2);
-    CRT_Writeln(loc_string_3);
+    CRT_Writeln_LocStr(2);
+    CRT_Writeln_LocStr(3);
     waitForKey;
         
 

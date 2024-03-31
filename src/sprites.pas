@@ -56,7 +56,7 @@ begin;
         r := getYesNo();
         if r = 1 then 
         begin
-            CRT_Write(loc_string_2);
+            CRT_Write_LocStr(2);
             lawyer := readValue(0, 10000);
             CRT_NewLine();
             CRT_NewLine();
@@ -73,15 +73,15 @@ begin;
                 if prisonTime = 0 then
                 begin;
                     addPoints(2);
-                    CRT_Writeln(loc_string_3);
+                    CRT_Writeln_LocStr(3);
                     waitForKey;
                     result := 1;
                     exit;
                 end;
                 removePoints(3);
-                CRT_Writeln (loc_string_4);
+                CRT_Writeln_LocStr(4);
                 CRT_Write (prisonTime);
-                CRT_Writeln (loc_string_5);
+                CRT_Writeln_LocStr(5);
                 waitForKey;
                 result := 1;
                 exit;
@@ -91,9 +91,9 @@ begin;
 
     // lower than rank 5.
     plPrison[currentPlayer] := prisonTime;
-    CRT_Write (loc_string_6);
+    CRT_Write_LocStr(6);
     CRT_Write (prisonTime);
-    CRT_Write (loc_string_7);
+    CRT_Write_LocStr(7);
     plJob[currentPlayer] := 0;
     removePoints(3);
     waitForKey;
@@ -118,26 +118,26 @@ begin
     // check bribe
     if (plBribe[currentPlayer] > 0) and (Random(2) = 1) then
     begin
-        CRT_Writeln(loc_string_1);
-        CRT_Writeln(loc_string_2);
+        CRT_Writeln_LocStr(1);
+        CRT_Writeln_LocStr(2);
         waitForKey;
         result := 0;
         exit;
     end;
 
     CRT_Writeln2(loc_string_3);
-    CRT_Writeln(loc_string_4);
-    CRT_Writeln(loc_string_5);
+    CRT_Writeln_LocStr(4);
+    CRT_Writeln_LocStr(5);
     CRT_Writeln2(loc_string_6);
 
-    CRT_Write(loc_string_7);
+    CRT_Write_LocStr(7);
     a := readValueNoZero(1,3);
     CRT_NewLine();
     CRT_NewLine();
     if a = 1 then
     begin
         price := 500 + 500*plRank[currentPlayer];
-        CRT_Write(loc_string_8);
+        CRT_Write_LocStr(8);
         CRT_Write(price);
         CRT_Writeln2(loc_string_9);
         r := getYesNo();
@@ -153,14 +153,14 @@ begin
                 begin;
                     if Random(5) = 0 then
                     begin
-                        CRT_Writeln(loc_string_10);
+                        CRT_Writeln_LocStr(10);
                         waitForKey;
                         result := gotoCourt();
                         exit;
                     end;
 
                     // paid and all ok
-                    CRT_Writeln(loc_string_11);
+                    CRT_Writeln_LocStr(11);
                     waitForKey;
                     result := 0;
                     exit;
@@ -181,13 +181,13 @@ begin
         if Random(80) > carRange[plCar[currentPlayer]] then
         begin
             removePoints(4);
-            CRT_Writeln(loc_string_12);
-            CRT_Writeln(loc_string_13);
+            CRT_Writeln_LocStr(12);
+            CRT_Writeln_LocStr(13);
             waitForKey;
             result := gotoCourt();
             exit;
         end;
-        CRT_Writeln(loc_string_14);
+        CRT_Writeln_LocStr(14);
         addPoints(2);
         waitForKey;
         result := 0;
@@ -212,7 +212,7 @@ begin;
     enableConsole();
     ShowLocationHeader;
 
-    CRT_Writeln(loc_string_1);
+    CRT_Writeln_LocStr(1);
     CRT_Newline();
     Waitframes(120);
 
@@ -223,8 +223,8 @@ begin;
             CRT_Writeln(loc_string_2)
         else if plAlcohol[currentPlayer] > 0 then
             begin
-                CRT_Writeln(loc_string_3);
-                CRT_Writeln(loc_string_4);
+                CRT_Writeln_LocStr(3);
+                CRT_Writeln_LocStr(4);
                 plAlcohol[currentPlayer] := 0;
             end
         else if plForgedID[currentPlayer] = 0 then
@@ -234,7 +234,7 @@ begin;
     end;
 
     if result = 0 then
-        CRT_Writeln(loc_string_6);
+        CRT_Writeln_LocStr(6);
     waitForKey();
 end;
 

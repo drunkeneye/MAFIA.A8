@@ -8,8 +8,8 @@ begin;
     begin;
         plAlcohol[currentPlayer] := carCargo[r];
         CRT_NewLine;
-        CRT_Write(loc_string_20);
-        CRT_Write(loc_string_21);
+        CRT_Write_LocStr(20);
+        CRT_Write_LocStr(21);
     end; 
 end; 
 
@@ -27,8 +27,8 @@ begin;
     if currentChoice = 1 then
     begin;
         ShowLocationHeader;
-        CRT_Writeln(loc_string_1);
-        CRT_Writeln(loc_string_2);
+        CRT_Writeln_LocStr(1);
+        CRT_Writeln_LocStr(2);
 
         // depends on location
         minCar := 1;
@@ -50,7 +50,7 @@ begin;
         end;
 
         CRT_NewLine();
-        CRT_Write(loc_string_3);
+        CRT_Write_LocStr(3);
         newCar := readValue (minCar, maxCar);
         if newCar = 0 then exit;
         CRT_Newline;
@@ -62,10 +62,10 @@ begin;
         begin;
             oldPrice := 1000+Random(r) SHL 9+Random(0);
             CRT_NewLine;
-            CRT_Write(loc_string_4);
+            CRT_Write_LocStr(4);
             CRT_Write(oldPrice);
-            CRT_Writeln(loc_string_5);
-            CRT_Write(loc_string_18);
+            CRT_Writeln_LocStr(5);
+            CRT_Write_LocStr(18);
 
             r := getYesNo();
             if r = 0 then exit;
@@ -73,12 +73,12 @@ begin;
             CRT_NewLine;
         end;
 
-        CRT_Writeln(loc_string_6);
+        CRT_Writeln_LocStr(6);
         if oldPrice > 0 then
         begin;
-            CRT_Write(loc_string_7);
+            CRT_Write_LocStr(7);
             CRT_Write(oldPrice);
-            CRT_Writeln(loc_string_5);
+            CRT_Writeln_LocStr(5);
         end;
         
         plCar[currentPlayer] := newCar;
@@ -95,13 +95,13 @@ begin;
         // 14100 ifln<>4andint(rnd(1)*3)<>0the
         if (currentSubLocation < 2) and (Random(3) > 0) then
         begin
-            CRT_Write(loc_string_8);
+            CRT_Write_LocStr(8);
             waitForKey();
             exit;
         end;
 
         if plNGangsters[currentPlayer] > 1 then 
-            CRT_Write(loc_string_9);
+            CRT_Write_LocStr(9);
         showWeapons := 0;
         selectGangster();
         if currentGangster = 99 then exit;
@@ -114,17 +114,17 @@ begin;
         if (Random(100) < minCar) then
         begin
             // worked
-            CRT_Writeln(loc_string_10);
+            CRT_Writeln_LocStr(10);
             CRT_NewLine();
 
             if plCar[currentPlayer] = 0 then
             begin
-                CRT_Writeln(loc_string_11);
+                CRT_Writeln_LocStr(11);
             end 
             else 
             begin 
-                CRT_Writeln(loc_string_12);
-                CRT_Write(loc_string_13);
+                CRT_Writeln_LocStr(12);
+                CRT_Write_LocStr(13);
             end;
 
             r := 1 + Random(5);
@@ -136,8 +136,8 @@ begin;
 
         // did not work
         CRT_NewLine;
-        CRT_Writeln(loc_string_14);
-        CRT_Writeln(loc_string_17);
+        CRT_Writeln_LocStr(14);
+        CRT_Writeln_LocStr(17);
         waitForKey();
         r := 0;
 
@@ -171,8 +171,8 @@ begin;
 
         enableConsole();
         ShowLocationHeader();
-        CRT_Writeln(loc_string_15);
-        CRT_Writeln(loc_string_16);
+        CRT_Writeln_LocStr(15);
+        CRT_Writeln_LocStr(16);
         waitForKey();
         result := CARDEALER_;
     end;

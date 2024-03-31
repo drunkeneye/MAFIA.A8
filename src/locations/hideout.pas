@@ -27,13 +27,13 @@ begin;
 
         CRT_NewLine;
         CRT_NewLine;
-        CRT_Write(loc_string_14);
+        CRT_Write_LocStr(14);
         CRT_Write(gangsterNames[pl SHL 3]);
         CRT_Writeln('...'~);
         effectWait();
 
         if (Random(3) > 0) or (plJob[pl] > 0) or (plPrison[pl] > 0) then begin 
-            CRT_Writeln(loc_string_15);
+            CRT_Writeln_LocStr(15);
             waitForKey;
             exit;
         end ;
@@ -71,21 +71,21 @@ begin;
         if w = 1 then 
         begin
             // lost it!
-            CRT_Writeln(loc_string_16);
+            CRT_Writeln_LocStr(16);
             CRT_Write(gangsterNames[pl SHL 3]);
             CRT_Write(' '~);
-            CRT_Writeln(loc_string_17);
-            CRT_Write(loc_string_18);
+            CRT_Writeln_LocStr(17);
+            CRT_Write_LocStr(18);
             m := pl;
             k := currentPlayer;
         end 
         else 
         begin
             // lost it!
-            CRT_Writeln(loc_string_19);
-            CRT_Write(loc_string_20);
+            CRT_Writeln_LocStr(19);
+            CRT_Write_LocStr(20);
             CRT_Writeln(gangsterNames[pl SHL 3]);
-            CRT_Write(loc_string_21);
+            CRT_Write_LocStr(21);
             m := currentPlayer;
             k := pl;
         end;
@@ -102,7 +102,7 @@ begin;
             if w = 1 then 
                 CRT_Writeln(loc_string_22)
             else 
-                CRT_Writeln(loc_string_23);
+                CRT_Writeln_LocStr(23);
             plAlcohol[m] := plAlcohol[m] + plAlcohol[k];
             plAlcohol[k] := 0;
             r := plCar[k];
@@ -114,7 +114,7 @@ begin;
             if w = 1 then 
                 CRT_Writeln(loc_string_24)
             else
-                CRT_Writeln(loc_string_25);
+                CRT_Writeln_LocStr(25);
             plCar[k] := 0;
         end;
         plNewPoints[m] := plNewPoints[m] + 3;
@@ -134,7 +134,7 @@ begin;
             if plRent[currentSubLocation] = currentPlayer then
                 CRT_Write(loc_string_1)
             else
-                CRT_Write(loc_string_2);
+                CRT_Write_LocStr(2);
             waitForKey();
             exit;
         end;
@@ -144,7 +144,7 @@ begin;
         for r := 0 to 3 do
             if plRent[r] = currentPlayer then
             begin
-                CRT_Write(loc_string_3);
+                CRT_Write_LocStr(3);
                 waitForKey();
                 exit;
             end;
@@ -154,7 +154,7 @@ begin;
     begin;
         if plRent[currentSubLocation] <> currentPlayer then
         begin
-            CRT_Write(loc_string_4);
+            CRT_Write_LocStr(4);
             waitForKey();
             exit;
         end;
@@ -166,31 +166,31 @@ begin;
     if (currentSubLocation = 1) then
         price := price + 50;
 
-    CRT_Write(loc_string_5);
+    CRT_Write_LocStr(5);
     CRT_Write(price);
-    CRT_Write(loc_string_6);
+    CRT_Write_LocStr(6);
     CRT_NewLine();
-    CRT_Write(loc_string_7);
+    CRT_Write_LocStr(7);
     CRT_NewLine();
     CRT_NewLine();
 
     if plRentMonths[currentPlayer] > 0 then
     begin;
         CRT_NewLine();
-        CRT_Write(loc_string_8);
+        CRT_Write_LocStr(8);
         CRT_Write(plRentMonths[currentPlayer]);
-        CRT_Write(loc_string_9);
+        CRT_Write_LocStr(9);
         CRT_NewLine();
     end;
-    CRT_Write(loc_string_10);
+    CRT_Write_LocStr(10);
     m := readValue(0, 99);
     // FIXME, maybe we need readByteValue? no overflow should happen value < 100
     if (m = 0) then exit;
     if (plRentMonths[currentPlayer]+m > 36) then 
     begin
         CRT_NewLine();
-        CRT_Writeln(loc_string_26);
-        CRT_Writeln(loc_string_27);
+        CRT_Writeln_LocStr(26);
+        CRT_Writeln_LocStr(27);
         waitForKey();
         exit;
     end;
@@ -204,6 +204,6 @@ begin;
 
     CRT_NewLine();
     CRT_NewLine();
-    CRT_Write(loc_string_11);
+    CRT_Write_LocStr(11);
     waitForKey();
 end;

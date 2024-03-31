@@ -28,9 +28,9 @@ Schulden!
 Du hast schon ein Kreditgeschaeft!
 Dieser Laden gehoert dir nicht!
 Alle Schuldner haben zeitig gezahlt!
-Einer deiner Klienten hat noch Geld. 
-Er lauert dir mit einem Gewehr auf, 
-als du kassieren willst!
+Eine Kunden schuldet dir noch was.
+Aber er lauert dir mit einem Gewehr
+auf, als du kassieren willst!
 Schuldner
 Du hast den Typ eiskalt erledigt.
 Er hatte noch 

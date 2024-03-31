@@ -5,6 +5,22 @@
 //   answerY:char = 'J';
 //   answerN:char = 'N';
 
+procedure CRT_Write_LocStr(b: byte);
+var z: word;
+  tmpstr: ^String;
+begin;
+  z := (b-1)*$28;
+  tmpstr := Pointer(loc_string_1) + z;
+  CRT_Write(tmpstr);
+end;
+
+
+procedure CRT_Writeln_LocStr(b: byte);
+begin;
+  CRT_Write_LocStr(b);
+  CRT_NewLine;
+end;
+
 
 function getRandom(minp:word; maxp:word; steps:word; x:byte; y:byte):   word;
 var prop:   word;

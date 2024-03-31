@@ -11,8 +11,8 @@ begin
 
     if currentChoice = 2 then
     begin
-        CRT_Writeln(loc_string_1);
-        CRT_Writeln(loc_string_2);
+        CRT_Writeln_LocStr(1);
+        CRT_Writeln_LocStr(2);
         if getYesNo() =0 then exit;
         if payMoney (50) = 0 then exit;
         loot := Random(4); // =new place on map
@@ -43,14 +43,14 @@ begin
 
     ShowLocationHeader;
     if plNGangsters[currentPlayer] > 1 then 
-        CRT_Write(loc_string_3);
+        CRT_Write_LocStr(3);
     showWeapons :=0 ;
     selectGangster();
     if currentGangster = 99 then exit;
 
     ShowLocationHeader;
     CRT_Newline;
-    CRT_Writeln(loc_string_4);
+    CRT_Writeln_LocStr(4);
     WaitFrames(90);
 
     // 18040 ifint(rnd(1)*15)=10goto18052
@@ -62,27 +62,27 @@ begin
     if hops = True then loot := 0;
     value := 0;
     case loot of 
-        0: CRT_Writeln(loc_string_5);
-        1,2: CRT_Writeln(loc_string_6);
-        3: CRT_Writeln(loc_string_7);
+        0: CRT_Writeln_LocStr(5);
+        1,2: CRT_Writeln_LocStr(6);
+        3: CRT_Writeln_LocStr(7);
         4: begin;
-                CRT_Writeln(loc_string_8); 
+                CRT_Writeln_LocStr(8); 
                 value := 50;
             end;
         5: begin;
-                CRT_Writeln(loc_string_9); 
+                CRT_Writeln_LocStr(9); 
                 value := 250;
             end;
         6: begin;
-                CRT_Writeln(loc_string_10);
+                CRT_Writeln_LocStr(10);
                 value := 500;
             end;
         7: begin;
-                CRT_Writeln(loc_string_11);
+                CRT_Writeln_LocStr(11);
                 value := 800;
             end;    
         8: begin;
-                CRT_Writeln(loc_string_12);
+                CRT_Writeln_LocStr(12);
                 plStuff[currentPlayer] := plStuff[currentPlayer] or 32;
                 waitForKey;
                 exit;

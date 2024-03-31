@@ -96,7 +96,7 @@ instead of changing the pointer to the string.
 
 ## BUGS or similar
 
-- check for cargo, also when doing gang-war
+- Balance maybe walking costs/car range
 - Even out rank requirements for bank/pub/gangsters
 - Fix English/Polish localizations
 - subway station name is not correct when stealing at central station

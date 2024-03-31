@@ -30,7 +30,7 @@ begin;
         ShowLocationHeader();
         if plOpportunity[currentPlayer] and 1 = 0 then // lowerst bit = postzug
         begin 
-            CRT_Writeln(loc_string_1);
+            CRT_Writeln_LocStr(1);
             waitForKey;
             exit; 
         end;
@@ -38,14 +38,14 @@ begin;
         plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255- 1);
         
         if plNGangsters[currentPlayer] < 3 then begin 
-            CRT_Writeln(loc_string_2);
+            CRT_Writeln_LocStr(2);
             waitForKey();
             exit;
         end; 
 
-        CRT_Writeln(loc_string_3);
-        CRT_Writeln(loc_string_4);
-        CRT_Writeln(loc_string_5);
+        CRT_Writeln_LocStr(3);
+        CRT_Writeln_LocStr(4);
+        CRT_Writeln_LocStr(5);
         waitForKey;
         
         asm; 

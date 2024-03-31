@@ -28,9 +28,9 @@ debts!
 You already have a credit business!
 This shop doesn't belong to you!
 All debtors have paid on time!
-One of your clients still owes money.
-He ambushes you with a rifle
-when you come to collect!
+One of your clients still owes you 
+some money. He ambushes you with a 
+rifle when you come to collect!
 Debtor
 You've taken care of the guy coldly.
 He had

@@ -58,18 +58,18 @@ begin
 
         CRT_WriteCentered(19, loc_string_3);
         CRT_NewLine();
-        CRT_Write(loc_string_4);
+        CRT_Write_LocStr(4);
         CRT_Write(gangsterNames[currentPlayer SHL 3]);
-        CRT_Writeln(loc_string_5);
-        CRT_Write(loc_string_6);
+        CRT_Writeln_LocStr(5);
+        CRT_Write_LocStr(6);
         CRT_Write(plGang[currentPlayer]);
-        CRT_Writeln(loc_string_7);
-        CRT_Writeln(loc_string_8);
-        CRT_Write(loc_string_9);
+        CRT_Writeln_LocStr(7);
+        CRT_Writeln_LocStr(8);
+        CRT_Write_LocStr(9);
         CRT_Write(rankNames[newRank]);
         CRT_Write(', '~);
         CRT_Write(plPoints[currentPlayer]);
-        CRT_Write(loc_string_10);
+        CRT_Write_LocStr(10);
         CRT_ReadKey();
         blackConsole();
         FillChar(Pointer(MAP_SCR_ADDRESS+40*15), 40*9, 0);
@@ -102,18 +102,18 @@ begin;
         CRT_GotoXY(0, 3);
 
         pr := 250+Random(200); // should be more expensive than any hotel (<=200)
-        CRT_Writeln(loc_string_14);
-        CRT_Writeln(loc_string_15);
+        CRT_Writeln_LocStr(14);
+        CRT_Writeln_LocStr(15);
 
         // player has pay extra for overdue rent
 
         // has the money 
         if pr < plMoney[currentPlayer] then
         begin
-            CRT_Writeln(loc_string_16);
-            CRT_Write(loc_string_17);
+            CRT_Writeln_LocStr(16);
+            CRT_Write_LocStr(17);
             CRT_Write(pr);
-            CRT_Writeln(loc_string_18);
+            CRT_Writeln_LocStr(18);
             subMoney(pr);
             plRentMonths[currentPlayer] := 0;
             // next round has pay extra again
@@ -122,11 +122,11 @@ begin;
         begin
             // player has not the money, then we leave the rest
             // but clear out the gang
-            CRT_Writeln(loc_string_19);
+            CRT_Writeln_LocStr(19);
             if plNGangsters[currentPlayer] > 1 then
             begin
-                CRT_Writeln(loc_string_20);
-                CRT_Writeln(loc_string_21);
+                CRT_Writeln_LocStr(20);
+                CRT_Writeln_LocStr(21);
                 for k := 0 to 31 do begin
                     if plGangsters[k] = currentPlayer then plGangsters[k] := 99;
                 end;
@@ -156,17 +156,17 @@ begin
         begin
             p := p SHR 6 + Random(0);
             addMoney(p);
-            CRT_Writeln(loc_string_1);
-            CRT_Write(loc_string_2);
+            CRT_Writeln_LocStr(1);
+            CRT_Write_LocStr(2);
             CRT_Write(p);
-            CRT_Writeln(loc_string_3);
+            CRT_Writeln_LocStr(3);
             waitForKey();
             exit;
         end
         else
             begin
-                CRT_Writeln(loc_string_4);
-                CRT_Writeln(loc_string_5);
+                CRT_Writeln_LocStr(4);
+                CRT_Writeln_LocStr(5);
                 waitForKey();
                 exit;
             end;
@@ -179,18 +179,18 @@ begin
         jobWorking;
         if k > 0 then
         begin
-            CRT_Write(loc_string_6);
+            CRT_Write_LocStr(6);
             CRT_Write(plLoan[currentPlayer]);
-            CRT_Writeln(loc_string_7);
-            CRT_Write(loc_String_8);
+            CRT_Writeln_LocStr(7);
+            CRT_Write_LocStr(8);
             CRT_Write(k);
-            CRT_Writeln(loc_string_9);
+            CRT_Writeln_LocStr(9);
             waitForKey();
             plLoanTime[currentPlayer] := k - 1;
             exit;
         end;
 
-        CRT_Writeln(loc_string_10);
+        CRT_Writeln_LocStr(10);
         CRT_Writeln2(loc_string_11);
         waitForKey();
         // fight 
@@ -212,8 +212,8 @@ begin
             enableConsole();
             // lost 
             jobWorking; //FIXME, maybe other title then
-            CRT_Writeln(loc_string_13);
-            CRT_Writeln(loc_String_14);
+            CRT_Writeln_LocStr(13);
+            CRT_Writeln_LocStr(14);
             plMoney[currentPlayer] := 0;
             plLoan[currentPlayer] := 0;
             waitForKey();
@@ -223,9 +223,9 @@ begin
         enableConsole();
         // lost 
         jobWorking;
-        CRT_Writeln(loc_string_15);
-        CRT_Writeln(loc_string_16);
-        CRT_Writeln(loc_string_17);
+        CRT_Writeln_LocStr(15);
+        CRT_Writeln_LocStr(16);
+        CRT_Writeln_LocStr(17);
         waitForKey();
         plLoanTime[currentPlayer] := 3+Random(3);
     end;
@@ -252,18 +252,18 @@ begin;
 
     // no need to check, we now it already
     //    if plOpportunity[currentPlayer] and 128 = 128 then //weapondeal
-    plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 128);
+    plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - (1 SHL 3));
     if Random(5) = 0 then
     begin
         // armsdealer given 5000cash
-        CRT_Writeln(loc_string_23);
-        CRT_Writeln(loc_string_24);
+        CRT_Writeln_LocStr(23);
+        CRT_Writeln_LocStr(24);
     end
     else
         begin
             pr := 5500 + Random(150) SHL 6;
-            CRT_Writeln(loc_string_25);
-            CRT_Write(loc_string_26);
+            CRT_Writeln_LocStr(25);
+            CRT_Write_LocStr(26);
             CRT_Write(pr);
             CRT_Writeln('$!'~);
             addMoney(pr);
@@ -298,11 +298,11 @@ begin
         currentMap := loc_map_places[0];
         loc_name := loc_string_27;
         ShowLocationHeader();
-        CRT_Writeln(loc_string_28);
-        CRT_Writeln(loc_string_29);
+        CRT_Writeln_LocStr(28);
+        CRT_Writeln_LocStr(29);
         CRT_Write('('~);
         CRT_Write( plPrison[currentPlayer]);
-        CRT_Writeln(loc_string_30);
+        CRT_Writeln_LocStr(30);
         plPrison[currentPlayer] := plPrison[currentPlayer] - 1;
         waitForKey;
         currentLocation := END_TURN_;
@@ -311,13 +311,13 @@ begin
 
     if plFreed[currentPlayer] <> 99 then
     begin
-        CRT_Write(loc_string_31);
+        CRT_Write_LocStr(31);
         k := plFreed[currentPlayer];
         r := k SHL 3;
         CRT_Write(gangsterNames[r]);
-        CRT_Writeln(loc_string_32);
-        CRT_Writeln(loc_string_33);
-        CRT_Write(loc_string_34);
+        CRT_Writeln_LocStr(32);
+        CRT_Writeln_LocStr(33);
+        CRT_Write_LocStr(34);
         CRT_Write(plMoney[currentPlayer]);
         CRT_Writeln(')? '~);
         pr := readValue(0, plMoney[currentPlayer]);
@@ -344,20 +344,20 @@ begin;
 
     if (plJobLocation[currentPlayer] = PUB_) or (plJobLocation[currentPlayer] = HIDEOUT_) then
     begin;
-        CRT_Writeln(loc_string_1);
-        CRT_Writeln(loc_string_2);
+        CRT_Writeln_LocStr(1);
+        CRT_Writeln_LocStr(2);
         effectWait();
         CRT_NewLine;
         if Random(2) = 0 then
         begin;
-            CRT_Writeln(loc_string_3);
+            CRT_Writeln_LocStr(3);
             waitForKey();
             jobdone := 1;
         end
         else
             begin;
-                CRT_Writeln(loc_string_4);
-                CRT_Writeln(loc_string_5);
+                CRT_Writeln_LocStr(4);
+                CRT_Writeln_LocStr(5);
                 waitForKey;
                 fp_sex[16] := 0;
                 case Random(3) of 
@@ -384,12 +384,12 @@ begin;
 
     if plJobLocation[currentPlayer] = GAMBLING_ then
     begin;
-        CRT_Writeln(loc_string_9);
+        CRT_Writeln_LocStr(9);
         CRT_Writeln2(loc_string_10);
-        CRT_Writeln(loc_string_11);
-        CRT_Writeln(loc_string_12);
-        CRT_Writeln(loc_string_13);
-        CRT_Write(loc_string_14);
+        CRT_Writeln_LocStr(11);
+        CRT_Writeln_LocStr(12);
+        CRT_Writeln_LocStr(13);
+        CRT_Write_LocStr(14);
         CRT_Newline();
         r := readValue(1, 3);
         CRT_NewLine;
@@ -398,8 +398,8 @@ begin;
         if Random(6) > r then
         begin
             p := Random(100)*r + 300;
-            CRT_Writeln(loc_string_15);
-            CRT_Write(loc_string_16);
+            CRT_Writeln_LocStr(15);
+            CRT_Write_LocStr(16);
             CRT_Write(p);
             CRT_Writeln('$!'~);
             addMoney(p);
@@ -408,8 +408,8 @@ begin;
         end
         else
             begin
-                CRT_Writeln(loc_string_17);
-                CRT_Writeln(loc_string_18);
+                CRT_Writeln_LocStr(17);
+                CRT_Writeln_LocStr(18);
                 waitForKey();
                 fp_AI[1] := 1;
                 fp_N[1] := 1;
@@ -431,8 +431,8 @@ begin;
 
     if plJobLocation[currentPlayer] = STREET_ then
     begin;
-        CRT_Writeln(loc_string_19);
-        CRT_Writeln(loc_string_20);
+        CRT_Writeln_LocStr(19);
+        CRT_Writeln_LocStr(20);
         waitForKey();
         fp_AI[1] := 1;
         fp_N[1] := 1;
@@ -457,9 +457,9 @@ begin;
         plJob[currentPlayer] := plJob[currentPlayer] - 1;
         if plJob[currentPlayer] > 0  then exit;
         jobWorking;
-        CRT_Writeln(loc_string_21);
+        CRT_Writeln_LocStr(21);
         CRT_Write(plJobWage[currentPlayer]);
-        CRT_Writeln(loc_string_22);
+        CRT_Writeln_LocStr(22);
         waitForKey();
         addMoney(plJobWage[currentPlayer]);
         addPoints(3);
@@ -470,8 +470,8 @@ begin;
     end;
 
     jobWorking;
-    CRT_Writeln(loc_String_23);
-    CRT_Writeln(loc_string_24);
+    CRT_Writeln_LocStr(23);
+    CRT_Writeln_LocStr(24);
     waitForKey();
     removePoints(2);
     plJobLocation[currentPlayer] := 0;

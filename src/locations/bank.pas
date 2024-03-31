@@ -26,7 +26,7 @@ begin;
     {$ifndef norank}
     if plRank[currentPlayer] < 1 then
     begin
-        CRT_Write(loc_string_13);
+        CRT_Write_LocStr(13);
         waitForKey();
         exit;
     end;
@@ -59,8 +59,8 @@ begin;
     begin
         if Random(3) = 0 then
         begin
-            CRT_Writeln(loc_string_2);
-            CRT_Writeln(loc_string_3);
+            CRT_Writeln_LocStr(2);
+            CRT_Writeln_LocStr(3);
             waitForKey();
             // TODO: depends on sublocation
 
@@ -128,13 +128,13 @@ begin;
                 exit;
             end; 
         
-        CRT_Writeln(loc_string_6);
+        CRT_Writeln_LocStr(6);
         showWeapons := 0;
         selectGangster();
         if currentGangster = 99 then exit;
 
-        CRT_Writeln(loc_string_7);
-        CRT_Writeln(loc_string_8);
+        CRT_Writeln_LocStr(7);
+        CRT_Writeln_LocStr(8);
         CRT_Newline;
 
         //CRT_Writeln('Nutze ...'~);

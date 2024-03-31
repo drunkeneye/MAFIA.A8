@@ -17,7 +17,6 @@ var
     currentYear: byte absolute $e153;
     gameLength:   byte absolute $e154;
     gamePoints:   word absolute $e155;
-    // real is 6 bytes
  
     gangsterName_1:   XString absolute $e158;
     gangsterName_2:   XString absolute $e168;
@@ -70,7 +69,6 @@ var
     plGangsters:   array[0..31] of byte absolute $e421; // denotes by byte the player to which they belong
     plNGangsters:   array[0..3] of byte absolute $e441; // is just the sum of the plGangsters == currentPlayers
     didFight: byte absolute $e445;
-    // plSex:   array[0..3] of byte absolute $e446;  // not needed, see gangsterSex
      
 
 

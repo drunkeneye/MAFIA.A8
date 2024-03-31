@@ -127,11 +127,12 @@ begin
             DPoke($fa6a, $4d4d);
             DPoke($fa6c, $4d4d);
             DPoke($fa6e, $4d4d);
-            DPoke($f66a, $5756);
-            DPoke($f66c, $5958);
-            DPoke($f66e, $5b5a);
+            DPoke($f66a, $5857);
+            DPoke($f66c, $5a59);
+            DPoke($f66e, $5c5b);
         end; 
 
+        // major 
         if plOpportunity[currentPlayer] and (1 SHL 4) = 0 then 
         begin
             // 	F900 : 52 52 52 52 58 58 2E 2E 58 58 58 58 58 58 58 58 RRRRXX..XXXXXXXX

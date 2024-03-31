@@ -5,8 +5,8 @@ begin;
     loadLocation(MAJOR_);
     ShowLocationHeader;
     
-    CRT_Writeln(loc_string_6);
-    CRT_Writeln(loc_string_7);
+    CRT_Writeln_LocStr(6);
+    CRT_Writeln_LocStr(7);
     waitForKey;
 
     plOpportunity[currentPlayer] := plOpportunity[currentPlayer] and (255 - 1 SHL 4);
@@ -83,8 +83,8 @@ begin;
     end;
 
     ShowLocationHeader;
-    CRT_Writeln(loc_string_10);
-    CRT_Writeln(loc_string_11);
+    CRT_Writeln_LocStr(10);
+    CRT_Writeln_LocStr(11);
     waitForKey;
     addMoney(7000); 
     // no points in original, here we add 4

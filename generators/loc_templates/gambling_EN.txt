@@ -6,9 +6,9 @@ Zockotopia
 Jokers Valhalla
 Casino Carlos
 2,4,5,7
-Hey buddy, up for a little game? Cards? Roulette?
+Hey buddy, how about a little game? Cards? Roulette? C'mon...
 2
-Okay, boss, what do you recommend?
+Okay, dude, what do you recommend?
 No, no! I only play Crazy Eights!
 50
 Choose, my friend
@@ -18,7 +18,7 @@ Choose, my friend
 What'll it be?
 You have
 Your bet (0-
-You approach the gaming table...
-You've won
+You go to the gaming table...
+You win
 $!
-Unfortunately, you lost!
+Unfortunately, you lose!

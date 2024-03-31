@@ -21,32 +21,32 @@ begin;
             if (Random(2) = 0) and (plAlcohol[currentPlayer] > 0) then 
             begin;
                 p := Random(20) + 10;
-                CRT_Writeln(loc_string_1);
-                CRT_Write(loc_string_2);
+                CRT_Writeln_LocStr(1);
+                CRT_Write_LocStr(2);
                 CRT_Write(p);
-                CRT_writeln(loc_string_3);
+                CRT_Writeln_LocStr(3);
 
-                CRT_write(loc_string_4);
+                CRT_Write_LocStr(4);
                 CRT_Write(plAlcohol[currentPlayer]);
                 CRT_Write(')?'~);
                 al := readValue(0, plAlcohol[currentPlayer]); 
                 if al = 0 then exit;
 
                 CRT_NewLine();
-                CRT_Writeln(loc_string_5);
+                CRT_Writeln_LocStr(5);
                 addMoney(al*p);
                 plAlcohol[currentPlayer] := plAlcohol[currentPlayer] - al;
             end 
             else 
             begin;
-                CRT_Writeln(loc_string_6);
+                CRT_Writeln_LocStr(6);
             end; 
             waitForKey;
             exit;
         end; 
         al := Random(200) + 100;
         p := Random(10)+5;
-        CRT_Write(loc_string_7);
+        CRT_Write_LocStr(7);
         CRT_Write(p);
         CRT_Writeln('$.'~);
  
@@ -54,13 +54,13 @@ begin;
         w := carCargo[plCar[currentPlayer]] - plAlcohol[currentPlayer];
         if w <= 0 then begin;
             CRT_NewLine();
-            CRT_Writeln(loc_string_8);
-            CRT_Writeln(loc_string_9);
+            CRT_Writeln_LocStr(8);
+            CRT_Writeln_LocStr(9);
             waitForKey();
             exit;
         end;
         if w < al then al := w;
-        CRT_Write(loc_string_10);
+        CRT_Write_LocStr(10);
         CRT_Write(al);
         CRT_Write(')?'~);
         w := readValue(0, al); 
@@ -78,10 +78,10 @@ begin;
         {$ifndef norank}
         if plRank[currentPlayer] < 5 then
         begin
-            CRT_Write(loc_string_11);
+            CRT_Write_LocStr(11);
             CRT_Write(rankNames[plRank[currentPlayer]]);
-            CRT_Writeln(loc_string_12);
-            CRT_Writeln(loc_string_13);
+            CRT_Writeln_LocStr(12);
+            CRT_Writeln_LocStr(13);
             waitForKey();
             exit;
         end; 
@@ -93,16 +93,16 @@ begin;
 
         if hasHideout = 0 then 
         begin 
-            CRT_Writeln(loc_string_14);
-            CRT_Writeln(loc_string_15);
+            CRT_Writeln_LocStr(14);
+            CRT_Writeln_LocStr(15);
             waitForKey();
             exit;
         end;         
 
         if plNGangsters[currentPlayer] > 7 then 
         begin;
-            CRT_Writeln(loc_string_16);
-            CRT_Writeln(loc_string_17);
+            CRT_Writeln_LocStr(16);
+            CRT_Writeln_LocStr(17);
             waitForKey();
             exit;
         end;
@@ -124,7 +124,7 @@ begin;
 
         if g = 99 then 
         begin; 
-            CRT_Writeln(loc_string_18);
+            CRT_Writeln_LocStr(18);
             waitForKey();
             exit;
         end;
@@ -132,9 +132,9 @@ begin;
         // load gangster 
         loadGangster(g);
         CRT_NewLine;
-        CRT_Write(loc_string_39);
+        CRT_Write_LocStr(39);
         CRT_Write(buf_gangsterPrice);
-        CRT_Write(loc_string_40);
+        CRT_Write_LocStr(40);
         CRT_Write(buf_gangsterAnrede);
         CRT_Writeln2(loc_string_41);
         if getYesNo() =0 then exit;
@@ -150,10 +150,10 @@ begin;
         gangsterWeapon[g] := buf_gangsterWeapon;
         gangsterSex[g] := buf_gangsterSex;
 
-        CRT_Write(loc_string_19);
+        CRT_Write_LocStr(19);
         CRT_Write(' '~);
         CRT_Write(plNGangsters[currentPlayer]-1);
-        CRT_Writeln(loc_string_20);
+        CRT_Writeln_LocStr(20);
         waitForKey();
     end;
 
@@ -163,53 +163,55 @@ begin;
         {$ifndef norank}
         if plRank[currentPlayer] < 4 then 
         begin;
-            CRT_Writeln(loc_string_21);
+            CRT_Writeln_LocStr(21);
             waitForKey();
             exit;
         end; 
         {$endif}
 
         if Random(3) = 0 then begin; 
-            CRT_Writeln(loc_string_22);
+            CRT_Writeln_LocStr(22);
             waitForKey();
             exit;
         end;
 
         p := Random(4)*500 + 1000;
-        CRT_Writeln(loc_string_23);
-        CRT_Write(loc_string_24);
+        CRT_Writeln_LocStr(23);
+        CRT_Write_LocStr(24);
         CRT_Write(p);
-        CRT_Writeln(loc_string_25);
+        CRT_Writeln_LocStr(25);
         if getYesNo() =0 then exit;
         if payMoney (p) = 0 then exit;
         
         CRT_NewLine;
         tipp := Random(5);
+        // dont advise two tipps.
+        if plOpportunity[currentPlayer] and (1 SHL tipp) > 0 then tipp := 0;
         case tipp of
             0: begin; //postzug
-                    CRT_Writeln(loc_string_26);
-                    CRT_Writeln(loc_string_27);
+                    CRT_Writeln_LocStr(26);
+                    CRT_Writeln_LocStr(27);
                 end;
             1: begin; //bank
-                    CRT_Writeln(loc_string_28);
-                    CRT_Writeln(loc_string_29);
+                    CRT_Writeln_LocStr(28);
+                    CRT_Writeln_LocStr(29);
                 end;
             2: begin; //cashtransporter
-                    CRT_Writeln(loc_string_30);
-                    CRT_Writeln(loc_string_31);
-                    CRT_Writeln(loc_string_32);
+                    CRT_Writeln_LocStr(30);
+                    CRT_Writeln_LocStr(31);
+                    CRT_Writeln_LocStr(32);
                 end;
             3: begin; //weaponsmuggle
-                    CRT_Writeln(loc_string_33);
-                    CRT_Writeln(loc_string_34);
+                    CRT_Writeln_LocStr(33);
+                    CRT_Writeln_LocStr(34);
                     if getYesNo() =0 then exit;
                     if payMoney (p) = 0 then exit;
-                    CRT_Writeln(loc_string_35);
+                    CRT_Writeln_LocStr(35);
                 end;
             4: begin; //major
-                    CRT_Writeln(loc_string_36);
-                    CRT_Writeln(loc_string_37);
-                    CRT_Writeln(loc_string_38);
+                    CRT_Writeln_LocStr(36);
+                    CRT_Writeln_LocStr(37);
+                    CRT_Writeln_LocStr(38);
                 end; 
         end; 
         plOpportunity[currentPlayer] := plOpportunity[currentPlayer] or (1 SHL tipp);
@@ -226,9 +228,9 @@ begin;
         {$ifndef norank}
         if plRank[currentPlayer] > 3 then
         begin;
-            CRT_Write (loc_string_1);
+            CRT_Write_LocStr(1);
             CRT_Write (rankNames[plRank[currentPlayer]]);
-            CRT_Writeln (loc_string_2);
+            CRT_Writeln_LocStr(2);
             waitForKey();
             exit;
         end;
@@ -236,7 +238,7 @@ begin;
 
         if Random(5) = 0 then
         begin
-            CRT_Writeln(loc_string_3);
+            CRT_Writeln_LocStr(3);
             waitForKey();
             exit;
         end;
@@ -245,34 +247,34 @@ begin;
         case Random(4) of 
             0:
                  begin
-                     CRT_Writeln(loc_string_4);
-                     CRT_Writeln(loc_string_5);
-                     CRT_Writeln(loc_string_6);
+                     CRT_Writeln_LocStr(4);
+                     CRT_Writeln_LocStr(5);
+                     CRT_Writeln_LocStr(6);
                      joblocation := PUB_;
                      duration := 3;
                      wage := Random(2)*1000 + 2000;
                  end;
             1:
                  begin
-                     CRT_Writeln(loc_string_7);
-                     CRT_Writeln(loc_string_8);
+                     CRT_Writeln_LocStr(7);
+                     CRT_Writeln_LocStr(8);
                      duration := 2;
                      wage := Random(3)*500 + 1000;
                      joblocation := GAMBLING_;
                  end;
             2:
                  begin
-                     CRT_Writeln(loc_string_9);
-                     CRT_Writeln(loc_string_10);
+                     CRT_Writeln_LocStr(9);
+                     CRT_Writeln_LocStr(10);
                      duration := 2;
                      wage := Random(3)*500 + 2000;
                      joblocation := HIDEOUT_;
                  end;
             3:
                  begin
-                     CRT_Writeln(loc_string_11);
-                     CRT_Writeln(loc_string_12);
-                     CRT_Writeln(loc_string_13);
+                     CRT_Writeln_LocStr(11);
+                     CRT_Writeln_LocStr(12);
+                     CRT_Writeln_LocStr(13);
                      duration := 1;
                      wage := Random(2)*500 + 2000;
                      joblocation := STREET_;
@@ -280,14 +282,14 @@ begin;
         end;
 
         CRT_NewLine();
-        CRT_Write(loc_string_14);
+        CRT_Write_LocStr(14);
         CRT_Write(wage);
         CRT_Writeln2('$.'~);
-        CRT_Writeln(loc_string_15);
+        CRT_Writeln_LocStr(15);
         if getYesNo() =1 then
         begin
             CRT_NewLine();
-            CRT_Writeln(loc_string_16);
+            CRT_Writeln_LocStr(16);
             waitForKey();
 
             plJob[currentPlayer] := duration;

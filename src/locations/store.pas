@@ -11,7 +11,7 @@ begin;
     // any choice needs a rank
     if plRank[currentPlayer] < 2 then 
     begin;
-        CRT_Writeln(loc_string_1);
+        CRT_Writeln_LocStr(1);
         waitForKey();
         exit;
     end;
@@ -29,9 +29,9 @@ begin;
     if currentChoice = 1 then
     begin;
         if (gangsterBrut[currentPlayer SHL 3] < 30) or (currentSubLocation = 1) then begin;
-            CRT_Writeln(loc_string_2);
+            CRT_Writeln_LocStr(2);
             CRT_NewLine;
-            CRT_Writeln(loc_string_3);
+            CRT_Writeln_LocStr(3);
             waitForKey();
             result := fightPolice();
             exit;
@@ -42,7 +42,7 @@ begin;
     if currentChoice = 2 then
     begin;
         if (currentSubLocation = 4) or (currentSubLocation = 3) then begin;
-            CRT_Writeln(loc_string_4);
+            CRT_Writeln_LocStr(4);
             waitForKey();
             exit;
         end;
@@ -51,8 +51,8 @@ begin;
 
     if currentChoice = 3 then begin;
         if (currentSubLocation = 2) or (currentSubLocation = 1) then begin;
-            CRT_Writeln(loc_string_5);
-            CRT_Writeln(loc_string_6);
+            CRT_Writeln_LocStr(5);
+            CRT_Writeln_LocStr(6);
             waitForKey();
             // fp_gang[1] := loc_string_35;
             asm; 
@@ -104,8 +104,8 @@ begin;
                 exit;
             end;
             ShowLocationHeader;
-            CRT_Writeln(loc_string_7);
-            CRT_Writeln(loc_string_8);
+            CRT_Writeln_LocStr(7);
+            CRT_Writeln_LocStr(8);
             waitForKey;
         end;
     end;
@@ -113,8 +113,8 @@ begin;
 
     if currentChoice = 4 then begin;
         if (currentSubLocation = 3) or (gangsterInt[currentPlayer SHL 3] < 30) then begin;
-            CRT_Writeln(loc_string_9);
-            CRT_Writeln(loc_string_10);
+            CRT_Writeln_LocStr(9);
+            CRT_Writeln_LocStr(10);
             waitForKey;
             exit;
         end;
@@ -129,28 +129,28 @@ begin;
     if currentChoice = 2 then p := p + 600;
 
     if currentChoice = 1 then begin
-        CRT_Writeln(loc_string_11);
-        CRT_Write(loc_string_12);
+        CRT_Writeln_LocStr(11);
+        CRT_Write_LocStr(12);
         CRT_Write(p);
         CRT_Writeln('$!'~);
     end; 
 
     if currentChoice =2 then begin 
-        CRT_Writeln(loc_string_13);
+        CRT_Writeln_LocStr(13);
         CRT_Write(p);
         CRT_Writeln('$!'~);
         // TODO: here do not clear sublocation, so doing it twice, the store will understand that you are fraud
     end;        
 
     if currentChoice = 3 then begin 
-        CRT_Write(loc_string_14);
+        CRT_Write_LocStr(14);
         CRT_Write(p);
-        CRT_Writeln(loc_string_15);
+        CRT_Writeln_LocStr(15);
     end;
 
     if currentChoice = 4 then begin 
-        CRT_Writeln(loc_string_16);
-        CRT_Write(loc_string_17);
+        CRT_Writeln_LocStr(16);
+        CRT_Write_LocStr(17);
         CRT_Write(p);
         CRT_Writeln('$!'~);
     end; 
@@ -158,10 +158,10 @@ begin;
 
     CRT_Newline;
     CRT_Writeln2(loc_string_18);
-    CRT_Writeln(loc_string_19);
-    CRT_Writeln(loc_string_20);
+    CRT_Writeln_LocStr(19);
+    CRT_Writeln_LocStr(20);
     CRT_Writeln2(loc_string_21);
-    CRT_Write(loc_string_22);
+    CRT_Write_LocStr(22);
     r := readValue(1, 3);
     CRT_NewLine;
     CRT_NewLine;
@@ -169,15 +169,15 @@ begin;
 
     if r = 1 then begin;
         addMoney(p);
-        CRT_Writeln(loc_string_23);
+        CRT_Writeln_LocStr(23);
         waitForKey();
         exit; 
     end; 
 
     if r = 2 then begin; 
         if (currentSubLocation = 0) or (currentSubLocation = 2) then begin;
-            CRT_Writeln(loc_string_24);
-            CRT_Writeln(loc_string_25);
+            CRT_Writeln_LocStr(24);
+            CRT_Writeln_LocStr(25);
             waitForKey();
             // fp_gang[1] := loc_string_26;
             asm; 
@@ -231,8 +231,8 @@ begin;
         else
         begin
             q := Random(200) + 300;
-            CRT_Writeln(loc_string_27);
-            CRT_Writeln(loc_string_28);
+            CRT_Writeln_LocStr(27);
+            CRT_Writeln_LocStr(28);
             CRT_Write(q);
             CRT_Writeln('$.'~);
             addMoney(p);
@@ -246,8 +246,8 @@ begin;
     if r = 3 then begin
         if (currentSubLocation = 3) or (currentSubLocation = 4) then 
         begin; 
-            CRT_Writeln(loc_string_29);
-            CRT_Writeln(loc_String_30);
+            CRT_Writeln_LocStr(29);
+            CRT_Writeln_LocStr(30);
             // fp_gang[1] :=loc_string_31;
             asm; 
                 lda loc_string_31
@@ -271,10 +271,10 @@ begin;
         else 
         begin
             q := Random(100) SHL 1 + 150;
-            CRT_Writeln(loc_string_32);
-            CRT_Write(loc_string_33);
+            CRT_Writeln_LocStr(32);
+            CRT_Write_LocStr(33);
             CRT_Write(q);
-            CRT_Write(loc_string_34);
+            CRT_Write_LocStr(34);
             addMoney(p);
             addMoney(q);
             waitForKey();

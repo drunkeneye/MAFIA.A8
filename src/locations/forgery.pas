@@ -17,23 +17,23 @@ begin;
         // TODO: how this is solved in the original game?
         if plForgedID[currentPlayer] > 0 then
         begin;
-            CRT_Writeln(loc_string_1);
+            CRT_Writeln_LocStr(1);
             waitForKey();
             exit;
         end;
 
         r := plNGangsters[currentPlayer];
         c := r*1000;
-        CRT_Writeln(loc_string_2);
-        CRT_Write(loc_string_3);
+        CRT_Writeln_LocStr(2);
+        CRT_Write_LocStr(3);
         if r > 1 then 
-            CRT_Write (loc_string_4);
+            CRT_Write_LocStr(4);
         CRT_Newline;
-        CRT_Write(loc_string_5);
+        CRT_Write_LocStr(5);
         CRT_Write(c);
         CRT_Writeln('$.'~);
         CRT_NewLine();
-        CRT_Write(loc_string_6);
+        CRT_Write_LocStr(6);
 
         r := getYesNo;
         if r = 0 then exit;
@@ -41,7 +41,7 @@ begin;
         
         CRT_NewLine();
         CRT_NewLine();
-        CRT_Writeln(loc_string_7);
+        CRT_Writeln_LocStr(7);
         plForgedID[currentPlayer] := 1;
         addPoints(1);
         waitForKey();
@@ -56,13 +56,13 @@ begin;
         ShowLocationHeader;
         if plFakeMoney[currentPlayer] > 0 then
         begin;
-            CRT_Writeln(loc_string_8);
+            CRT_Writeln_LocStr(8);
             waitForKey();
             exit;
         end;
 
-        CRT_Writeln(loc_string_9);
-        CRT_Write(loc_string_10);
+        CRT_Writeln_LocStr(9);
+        CRT_Write_LocStr(10);
 
         m := 5000;
         if plMoney[currentPlayer] < m then m := plMoney[currentPlayer];
@@ -74,9 +74,9 @@ begin;
         p := c+100+(Random(10)*(c SHR 4));
         CRT_NewLine();
         CRT_NewLine();
-        CRT_Write(loc_string_11);
+        CRT_Write_LocStr(11);
         CRT_Write(p);
-        CRT_Write(loc_string_12);
+        CRT_Write_LocStr(12);
 
         r := getYesNo;
         if r = 0 then exit;
@@ -84,7 +84,7 @@ begin;
 
         CRT_NewLine;
         CRT_NewLine;
-        CRT_Writeln(loc_string_13);
+        CRT_Writeln_LocStr(13);
 
         addMoney(p);
         plFakeMoney[currentPlayer] := 6;

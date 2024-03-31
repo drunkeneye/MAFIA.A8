@@ -210,7 +210,7 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 
 carPrices = [0, 3500, 4000, 6500, 7000, 7500]
 carCargo = [50, 100, 120, 200, 150, 100]
-carRange = [35, 45, 55, 55, 70, 50]  # add some more range to accommodate the larger map
+carRange = [35, 45, 55, 60, 65, 50]  # add some more range to accommodate the larger map
 weaponPrices = [0, 100, 200, 500, 3000, 4000, 4500, 8000, 10000]
 weaponReach = [2, 2, 3, 4, 8, 12, 16, 14, 20] 
 weaponPrecision = [2, 3, 4, 4, 2, 5, 5, 6, 7]
@@ -273,8 +273,8 @@ weaponNames_DE  = ['Haende', 'Messer', 'Knueppel',
 carNames_DE =  ['Fuesse', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
-rankNames_EN = ['Beginner', 'Thug', 'Small Fry',
-                                            'Pickpocket', 'Crook', 'Mafioso', 'Cop Fright', 'Assassin',
+rankNames_EN = ['Rookie', 'Rowdy', 'Small Fry',
+                                            'Snatch', 'Crook', 'Mafioso', 'Cop Fright', 'Assassin',
                                             'Gangster Boss', 'Right Hand', 'The Don']
 weaponNames_EN = ['Hands', 'Knife', 'Club',
                                             'Brass Knuckles', 'Shuriken', 'Revolver',

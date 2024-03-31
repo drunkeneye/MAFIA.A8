@@ -8,27 +8,28 @@ begin;
     ShowLocationHeader;
 
     CRT_Writeln2(loc_string_1);
-    CRT_Writeln(loc_string_2);
-    CRT_Writeln(loc_string_3);
-    CRT_Writeln(loc_string_4);
+
+    CRT_Writeln_LocStr(2);  
+    CRT_Writeln_LocStr(3);  
+    CRT_Writeln_LocStr(4);  
     CRT_NewLine();
 
-    CRT_Write(loc_string_5);
+    CRT_Write_LocStr(5);
     game := readValue(0,3);
     if game = 0 then
         exit;
 
     CRT_NewLine();
     CRT_NewLine();
-    CRT_Write(loc_string_6);
+    CRT_Write_LocStr(6);
     CRT_Write(plMoney[currentPlayer]);
     CRT_Write('$.'~);
     CRT_NewLine();
     einsatz := plMoney[currentPlayer];
-    // the version i have has no limit
-    // if einsatz > 5000 then
-    //   einsatz := 5000;
-    CRT_Write(loc_string_7);
+    // do not allow more than 10k
+    if einsatz > 10000 then
+      einsatz := 10000;
+    CRT_Write_LocStr(7);
     CRT_Write(einsatz);
     CRT_Write('$)? '~);
     einsatz := readValue(0,einsatz);
@@ -49,13 +50,13 @@ begin;
         //16030 fort=1to1000:next:ifint(rnd(1)*(1+x))=0thenp=int(p*(.5+x)):goto16040
         gewinn := einsatz SHR 1;
         gewinn := gewinn*game + einsatz;
-        CRT_Write (loc_string_9);
+        CRT_Write_LocStr(9);
         CRT_Write (gewinn);
-        CRT_Write (loc_string_10);
+        CRT_Write_LocStr(10);
         addMoney(gewinn);
     end
     else
-        CRT_Write (loc_string_11);
+        CRT_Write_LocStr(11);
     waitForKey();
 
 end;

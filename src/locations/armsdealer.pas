@@ -14,8 +14,8 @@ begin;
         gangsterBrut[currentGangster] := 99;
 
     // print some infos
-    CRT_Writeln(loc_string_19);
-    CRT_Writeln(loc_string_20);
+    CRT_Writeln_LocStr(19);
+    CRT_Writeln_LocStr(20);
 end;
  
 
@@ -45,8 +45,8 @@ begin;
             maxWeapon := 7;
             if (plRank[currentPlayer] > 5) and (Random(4) = 0) then
             begin
-                CRT_Writeln(loc_string_2);
-                CRT_Writeln(loc_string_3);
+                CRT_Writeln_LocStr(2);
+                CRT_Writeln_LocStr(3);
                 CRT_NewLine;
                 maxWeapon := 8;
             end;
@@ -72,14 +72,14 @@ begin;
             CRT_NewLine();
         end;
         CRT_NewLine;
-        CRT_Write(loc_string_4);
+        CRT_Write_LocStr(4);
         selectedWeapon := readValue(minWeapon, maxWeapon);
         if selectedWeapon = 0 then exit; // TODO this will not work
     
 
         // for welchen gangster?
         ShowLocationHeader;
-        CRT_Write(loc_string_23);
+        CRT_Write_LocStr(23);
         CRT_GotoXY(0,1);
         showWeapons := 1;
         selectGangster();
@@ -89,20 +89,20 @@ begin;
         ga := 0;
         if (gangsterInt[currentGangster] < 40) and (selectedWeapon > 5) then
         begin
-            CRT_Writeln (loc_string_5);
+            CRT_Writeln_LocStr(5);
             waitForKey();
             ga := -1;
         end
         else if (gangsterStr[currentGangster]  < 20) and ((selectedWeapon = 2) or (selectedWeapon = 3)) then
             begin
-                CRT_Write (loc_string_6);
+                CRT_Write_LocStr(6);
                 removePoints(1);
                 waitForKey();
                 ga := -1;
             end
         else if (gangsterBrut[currentGangster]  < 40) and ((selectedWeapon = 3) or (selectedWeapon > 6)) then
             begin
-                CRT_Write (loc_string_7);
+                CRT_Write_LocStr(7);
                 removePoints(1);
                 waitForKey();
                 ga := -1;
@@ -117,21 +117,21 @@ begin;
         begin;
             oldWeaponPrice := weaponPrices[ga] SHR 2 + Random(500);
             CRT_NewLine();
-            CRT_Write (loc_string_8);
+            CRT_Write_LocStr(8);
             CRT_Write (oldWeaponPrice);
             CRT_Write ('$ '~);
-            CRT_Writeln(loc_string_9);
-            CRT_Write(loc_string_10);
+            CRT_Writeln_LocStr(9);
+            CRT_Write_LocStr(10);
             CRT_Write(weaponNames[ga]);
             CRT_Writeln(') '~);
-            CRT_Writeln(loc_string_11);
+            CRT_Writeln_LocStr(11);
 
             r := getYesNo();
             if r = 0 then
             begin
                 // ok, you dont want it, then we quit transcation
                 addMoney(weaponPrices[selectedWeapon]);
-                CRT_Write (loc_string_22);
+                CRT_Write_LocStr(22);
                 waitForKey();
                 exit;
             end; 
@@ -147,7 +147,7 @@ begin;
         addMoney(oldWeaponPrice);
         gangsterWeapon[currentGangster] := selectedWeapon;
         CRT_NewLine;
-        CRT_Write (loc_string_12);
+        CRT_Write_LocStr(12);
         waitForKey();
     end;
 
@@ -158,7 +158,7 @@ begin;
 
         if plNGangsters[currentPlayer] > 1 then 
         begin
-            CRT_Writeln (loc_string_13); // who
+            CRT_Writeln_LocStr(13); // who
             showWeapons := 0;
             selectGangster();
             if currentGangster = 99 then exit;
@@ -169,8 +169,8 @@ begin;
         // schiesstand
         if plRank[currentPlayer] >= 5 then
         begin
-            CRT_Writeln (loc_string_14);
-            CRT_Write (loc_string_21);
+            CRT_Writeln_LocStr(14);
+            CRT_Write_LocStr(21);
             r := getAnswer(shooting_range_keycode, training_camp_keycode); // 3e=s, 2d=t
             if r = 1 then  camp := 1;
         end;
@@ -182,9 +182,9 @@ begin;
             price := 2500 + 500*plRank[currentPlayer];
 
         CRT_Newline();
-        CRT_Write (loc_string_15);
+        CRT_Write_LocStr(15);
         CRT_Write(price);
-        CRT_Write (loc_string_16);
+        CRT_Write_LocStr(16);
         ga := getYesNo();
         if ga = 0 then exit; // N=35, Y=1
         if payMoney(price) = 0 then exit;
@@ -194,7 +194,7 @@ begin;
         CRT_Write (gangsterNames[currentGangster]);
         if camp = 0 then
         begin;
-            CRT_Write (loc_string_17);
+            CRT_Write_LocStr(17);
             inc_st := 5;
             inc_in := 3 + 2*byte(currentSubLocation = 1);
             inc_bt := 2 + 3*byte(currentSubLocation = 3);
@@ -203,7 +203,7 @@ begin;
         end
         else
             begin;
-                CRT_Write (loc_string_18);
+                CRT_Write_LocStr(18);
                 inc_st := Random(8)+8;
                 inc_in := Random(8)+8;
                 inc_bt := Random(8)+8;
