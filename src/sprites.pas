@@ -52,7 +52,7 @@ begin;
 
     if plRank[currentPlayer] > 4 then
     begin;
-        CRT_Writeln2(loc_string_1);
+        CRT_Writeln2_LocStr(1);
         r := getYesNo();
         if r = 1 then 
         begin
@@ -125,10 +125,10 @@ begin
         exit;
     end;
 
-    CRT_Writeln2(loc_string_3);
+    CRT_Writeln2_LocStr(3);
     CRT_Writeln_LocStr(4);
     CRT_Writeln_LocStr(5);
-    CRT_Writeln2(loc_string_6);
+    CRT_Writeln2_LocStr(6);
 
     CRT_Write_LocStr(7);
     a := readValueNoZero(1,3);
@@ -139,7 +139,7 @@ begin
         price := 500 + 500*plRank[currentPlayer];
         CRT_Write_LocStr(8);
         CRT_Write(price);
-        CRT_Writeln2(loc_string_9);
+        CRT_Writeln2_LocStr(9);
         r := getYesNo();
         if r = 1 then // N=0, Y=1
         begin

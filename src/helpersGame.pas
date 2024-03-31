@@ -43,7 +43,7 @@ begin;
     // 20051 if(x=1andla=9)or(x=2andla=10andln=2)or(x=3andla=13)thenTIPP_=0:p=p+3000
     enableConsole();
     ShowLocationHeader;
-    CRT_WriteCentered(6, loc_string_10);
+    CRT_WriteCentered_LocStr(6, 10);
     k := 7;
 
     // check for gold 
@@ -52,13 +52,13 @@ begin;
         // klomerzbank cracking
         if (tmpOpportunity >0) and (currentSubLocation = 0) then 
         begin
-            CRT_WriteCentered(7, loc_string_15);
+            CRT_WriteCentered_LocStr(7, 15);
             k := k +2;
             m := m + 7500;
         end;
     end;
 
-    CRT_WriteCentered(k, loc_string_14);
+    CRT_WriteCentered_LocStr(k, 14);
     CRT_Gotoxy(17,k+1);
     CRT_Write(m); 
     CRT_Writeln('$!'~);

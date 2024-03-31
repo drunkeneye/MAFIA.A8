@@ -136,7 +136,7 @@ begin;
         CRT_Write(buf_gangsterPrice);
         CRT_Write_LocStr(40);
         CRT_Write(buf_gangsterAnrede);
-        CRT_Writeln2(loc_string_41);
+        CRT_Writeln2_LocStr(41);
         if getYesNo() =0 then exit;
         if payMoney (buf_gangsterPrice) = 0 then exit;
         plGangsters[g] := currentPlayer;

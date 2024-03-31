@@ -7,7 +7,7 @@ var //choice:byte;
 begin;
     ShowLocationHeader;
 
-    CRT_Writeln2(loc_string_1);
+    CRT_Writeln2_LocStr(1);
 
     CRT_Writeln_LocStr(2);  
     CRT_Writeln_LocStr(3);  
@@ -40,7 +40,7 @@ begin;
 
     CRT_NewLine();
     CRT_NewLine();
-    CRT_Writeln2(loc_string_8);
+    CRT_Writeln2_LocStr(8);
     CRT_NewLine();
 
     effectWait();

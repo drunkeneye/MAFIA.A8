@@ -48,9 +48,6 @@ begin;
     end;
 
 
-    // TODO: DU HAST SCHON BLUETEN? oder nur 1x blueten pro runde
-
-    // 'Danke, Eddie, vielleicht beim naechs-   ten mal. Bye!'~,
     if currentChoice = 2 then
     begin;
         ShowLocationHeader;

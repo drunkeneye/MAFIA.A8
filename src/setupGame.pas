@@ -18,7 +18,7 @@ begin
 
     ShowLocationHeader;
 
-    CRT_WriteCentered(3, loc_string_14);
+    CRT_WriteCentered_LocStr(3, 14);
     CRT_ClearRow(4);
     CRT_GotoXY(20-2,4);
     r := getAnswer(short_game_keycode, long_game_keycode);  
@@ -49,7 +49,7 @@ begin
     // gamePoints := readValue(100, 1000);
     // CRT_NewLine();
 
-    CRT_WriteCentered(k, loc_string_3);
+    CRT_WriteCentered_LocStr(k ,3);
     repeat
         nPlayers := readValue(1,5);
     until (nPlayers > 0) and (nPlayers < 5);
@@ -64,10 +64,10 @@ begin
         ShowLocationHeader;
 
         // create player 1 in memory..
-        CRT_WriteCentered(4, loc_string_4);
+        CRT_WriteCentered_LocStr(4, 4);
         CRT_Write(j+1);
         CRT_NewLine();
-        CRT_WriteCentered(6, loc_string_5);
+        CRT_WriteCentered_LocStr(6, 5);
         CRT_GotoXY(20-8-1,7);
         gangsterNames[currentPlayer SHL 3] := Atascii2Antic(CRT_ReadString(15));
 
@@ -75,24 +75,24 @@ begin
         plNGangsters[currentPlayer] := 1;
         plGangsters[currentPlayer SHL 3] := j;
 
-        CRT_WriteCentered(9, loc_string_6);
+        CRT_WriteCentered_LocStr(9, 6);
         CRT_GotoXY(20-8-1,10);
         plGang[currentPlayer] := Atascii2Antic(CRT_ReadString(15));
 
-        CRT_WriteCentered(12,loc_string_7);
-        CRT_WriteCentered(14, loc_string_13);
+        CRT_WriteCentered_LocStr(12, 7);
+        CRT_WriteCentered_LocStr(14, 13);
         r := getAnswer(F_keycode, M_keycode);  
         gangsterSex[currentPlayer SHL 3] := 1-r; // so M=0, F=1
 
-        CRT_WriteCentered(15, loc_string_8);
+        CRT_WriteCentered_LocStr(15, 8);
         gangsterStr[currentPlayer SHL 3] := getRandom (10, 99, 5, 23, 15);
-        CRT_WriteCentered(16, loc_string_9);
+        CRT_WriteCentered_LocStr(16, 9);
         gangsterInt[currentPlayer SHL 3] := getRandom (10, 99, 5, 26, 16);
-        CRT_WriteCentered(17, loc_string_10);
+        CRT_WriteCentered_LocStr(17, 10);
         gangsterBrut[currentPlayer SHL 3] := getRandom (10, 99, 5, 26, 17);
-        CRT_WriteCentered(18, loc_string_11);
+        CRT_WriteCentered_LocStr(18, 11);
         gangsterHealth[currentPlayer SHL 3] := getRandom (10, 99, 5, 26, 18);
-        CRT_WriteCentered(19, loc_string_12);
+        CRT_WriteCentered_LocStr(19, 12);
         plMoney[currentPlayer] := getRandom (5000, 9999, 250, 24, 19);
         waitForKey;
     end;

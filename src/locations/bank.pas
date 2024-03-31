@@ -48,7 +48,7 @@ begin;
 
     if plNGangsters[currentPlayer] < 2 then
     begin
-        CRT_WriteCentered(6, loc_string_1);
+        CRT_WriteCentered_LocStr(6, 1);
         waitForKey();
         lastLocation := NONE_;
         exit;
@@ -123,7 +123,7 @@ begin;
         k := currentPlayer SHL 3;
         if (gangsterBrut[k] < 25) or (gangsterStr[k] < 25)  or (gangsterInt[k] < 40) then 
             begin;
-                CRT_WriteCentered(6, loc_string_5);
+                CRT_WriteCentered_LocStr(6, 5);
                 waitForKey();
                 exit;
             end; 
@@ -211,7 +211,7 @@ begin;
         CRT_GotoXY(0,21);
         if ch = #$2f then 
         begin;
-            CRT_WriteCentered(21, loc_string_9);
+            CRT_WriteCentered_LocStr(21, 9);
             WaitFrames(100);
             waitForKey();
             enableConsole();
@@ -219,7 +219,7 @@ begin;
         end;
 
         if safeOpen = 1 then begin;
-            CRT_WriteCentered(21, loc_string_10);
+            CRT_WriteCentered_LocStr(21, 10);
             // SAFE ANIMATION TODO
             WaitFrames(60); 
             waitForKey();
@@ -228,8 +228,8 @@ begin;
         end;
 
         // SAFE ANIMATION TODO
-        CRT_WriteCentered(21, loc_string_11);
-        CRT_WriteCentered(22, loc_string_12);
+        CRT_WriteCentered_LocStr(21, 11);
+        CRT_WriteCentered_LocStr(22, 12);
         WaitFrames(100); 
         waitForKey();
         prepareFightAgainstPolice();

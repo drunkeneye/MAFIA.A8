@@ -22,6 +22,23 @@ begin;
 end;
 
 
+procedure CRT_Writeln2_LocStr(b: byte);
+begin;
+  CRT_Writeln_LocStr(b);
+  CRT_NewLine;
+end;
+
+
+procedure CRT_WriteCentered_LocStr(r: byte; b: byte);
+var z: word;
+  tmpstr: ^String;
+begin; 
+  z := (b-1)*$28;
+  tmpstr := Pointer(loc_string_1) + z;
+  CRT_WriteCentered(r, tmpstr);
+end;
+
+
 function getRandom(minp:word; maxp:word; steps:word; x:byte; y:byte):   word;
 var prop:   word;
 begin;

@@ -15,12 +15,12 @@ begin;
     begin 
         pl := plRent[currentSubLocation];
 
-        CRT_WriteCentered(4, loc_String_12);
+        CRT_WriteCentered_LocStr(4, 12);
         effectWait();
 
         if (pl = 99) or (pl = currentPlayer) then 
         begin 
-            CRT_WriteCentered(6, loc_string_13);
+            CRT_WriteCentered_LocStr(6, 13);
             waitForKey;
             exit;
         end;
@@ -64,7 +64,7 @@ begin;
 
         ShowLocationHeader;
         CRT_NewLine();
-        CRT_WriteCentered(4,loc_String_12);
+        CRT_WriteCentered_LocStr(4, 12);
         CRT_NewLine;
         CRT_NewLine;
 

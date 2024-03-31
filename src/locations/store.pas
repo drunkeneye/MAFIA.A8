@@ -157,10 +157,10 @@ begin;
 
 
     CRT_Newline;
-    CRT_Writeln2(loc_string_18);
+    CRT_Writeln2_LocStr(18);
     CRT_Writeln_LocStr(19);
     CRT_Writeln_LocStr(20);
-    CRT_Writeln2(loc_string_21);
+    CRT_Writeln2_LocStr(21);
     CRT_Write_LocStr(22);
     r := readValue(1, 3);
     CRT_NewLine;

@@ -36,7 +36,7 @@ begin;
     begin;
         ShowLocationHeader;
 
-        CRT_Writeln2(loc_string_1);
+        CRT_Writeln2_LocStr(1);
         minWeapon := 1;
         maxWeapon := 5;
         if currentSubLocation = 2 then

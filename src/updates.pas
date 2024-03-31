@@ -56,7 +56,7 @@ begin
         end;
         enableMapConsole();
 
-        CRT_WriteCentered(19, loc_string_3);
+        CRT_WriteCentered_LocStr(19, 3);
         CRT_NewLine();
         CRT_Write_LocStr(4);
         CRT_Write(gangsterNames[currentPlayer SHL 3]);
@@ -97,7 +97,7 @@ begin;
         // FIXME
         enableConsole();
         CRT_Clear;
-        CRT_WriteCentered(1, loc_string_13);
+        CRT_WriteCentered_LocStr(1, 13);
         CRT_Invert(0, 1, CRT_screenWidth);
         CRT_GotoXY(0, 3);
 
@@ -191,7 +191,7 @@ begin
         end;
 
         CRT_Writeln_LocStr(10);
-        CRT_Writeln2(loc_string_11);
+        CRT_Writeln2_LocStr(11);
         waitForKey();
         // fight 
         fp_AI[1] := 1;
@@ -245,7 +245,7 @@ begin;
 
     enableConsole();
     CRT_Clear;
-    CRT_WriteCentered(1, loc_string_22);
+    CRT_WriteCentered_LocStr(1, 22);
     CRT_Invert(0, 1, CRT_screenWidth);
     CRT_GotoXY(0, 3);
 
@@ -385,7 +385,7 @@ begin;
     if plJobLocation[currentPlayer] = GAMBLING_ then
     begin;
         CRT_Writeln_LocStr(9);
-        CRT_Writeln2(loc_string_10);
+        CRT_Writeln2_LocStr(10);
         CRT_Writeln_LocStr(11);
         CRT_Writeln_LocStr(12);
         CRT_Writeln_LocStr(13);

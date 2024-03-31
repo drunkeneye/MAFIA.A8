@@ -38,7 +38,7 @@ begin;
     begin;
         ShowLocationHeader;
         // who is in prison? currentplayer cannot
-        CRT_Writeln2(loc_string_5);
+        CRT_Writeln2_LocStr(5);
         r := 0;
         for m := 0 to nPlayers-1 do 
         begin 

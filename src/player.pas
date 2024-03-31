@@ -48,10 +48,10 @@ var ch:char;
   z:byte;
 begin
   CRT_Clear;
-  CRT_WriteCentered(4, loc_string_1);
+  CRT_WriteCentered_LocStr(4, 1);
   z := currentPlayer SHL 3;
   CRT_WriteCentered(5, gangsterNames[z]);
-  CRT_WriteCentered(6, loc_string_2);
+  CRT_WriteCentered_LocStr(6, 2);
 
   sound(0,100,10,15);
   WaitFrames(30);
@@ -75,8 +75,8 @@ begin
   result := 0;
   if currentPlayer = 0 then 
   begin 
-    CRT_WriteCentered(8, loc_string_40);
-    CRT_WriteCentered(9, loc_string_41);
+    CRT_WriteCentered_LocStr(8, 40);
+    CRT_WriteCentered_LocStr(9, 41);
     ch := readKeyAndStick();
     if byte(ch) = $1e then begin;
         loadGame();

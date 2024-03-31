@@ -251,11 +251,11 @@ begin
                     // ensure we have loaded the main location
                     loadLocation(UPDATES_);
                     ShowLocationHeader;  
-                    CRT_WriteCentered(3, loc_string_18);
+                    CRT_WriteCentered_LocStr(3, 18);
                     CRT_Gotoxy(15,4);
                     CRT_Write( gameLength- currentYear);
                     CRT_Write_LocStr(19);
-                    CRT_WriteCentered(6, loc_string_20);
+                    CRT_WriteCentered_LocStr(6, 20);
                     CRT_GotoXY(0,4);
                     showWeapons := 1;
                     printGangsters();
@@ -368,9 +368,9 @@ begin
             if plCurrentMap[k] = 1 then 
             begin 
                 CRT_WriteCentered(5,gangsterNames[k SHR 3]);
-                CRT_WriteCentered(7,loc_string_35);
-                CRT_WriteCentered(8,loc_string_36);
-                CRT_WriteCentered(9,loc_string_37);
+                CRT_WriteCentered_LocStr(7, 35);
+                CRT_WriteCentered_LocStr(8, 36);
+                CRT_WriteCentered_LocStr(9, 37);
                 if gangsterSex[k SHL 3] = 1 then 
                     finalfname := 'FINALWAPAPL'
                 else
@@ -381,7 +381,7 @@ begin
     end 
     else  
     begin 
-        CRT_WriteCentered(5,loc_string_38);
+        CRT_WriteCentered_LocStr(5, 38);
         currentChoice := 0;
         for k := 0 to nPlayers-1 do
         begin;
@@ -391,7 +391,7 @@ begin
                 currentChoice := currentChoice + 1;
             end; 
         end;
-        CRT_WriteCentered(7+currentChoice+2,loc_string_39);
+        CRT_WriteCentered_LocStr(7+currentChoice+2, 39);
         finalfname := 'FINALGAPAPL';
     end; 
     waitForKey();
