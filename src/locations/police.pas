@@ -4,6 +4,7 @@ function policeChoices:   byte;
 var r:   byte;
     m:   byte;
     p: word;
+    tmp: byte;
 begin;
     result := POLICE_;
     if currentChoice = 1 then
@@ -46,7 +47,8 @@ begin;
                 CRT_Write(' '~);
                 CRT_Write(m+1);
                 CRT_Write(' - '~);
-                CRT_Writeln(gangsterNames[m SHL 3]);
+                tmp := m SHL 3;
+                CRT_Writeln(gangsterNames[tmp]);
                 r := r + 1;
             end;
         end; 

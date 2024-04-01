@@ -82,7 +82,8 @@ begin;
         fp_N[1] := 5;
     for k := 0 to fp_N[1] -1 do
     begin;
-        fp_sex[16+k] := Random(2);
+        tmp := Random(2);
+        fp_sex[16+k] := tmp;
         fp_name[16+k] := fight_police_string_2;
         fp_weapon[16+k] := 5+Byte(plRank[currentPlayer] > 5) SHL 1;
         fp_energy[16+k] := 18+Byte(plRank[currentPlayer]) SHL 1 - Random(10);

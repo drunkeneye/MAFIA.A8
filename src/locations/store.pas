@@ -28,7 +28,8 @@ begin;
 
     if currentChoice = 1 then
     begin;
-        if (gangsterBrut[currentPlayer SHL 3] < 30) or (currentSubLocation = 1) then begin;
+        tmp := currentPlayer SHR 3;
+        if (gangsterBrut[tmp] < 30) or (currentSubLocation = 1) then begin;
             CRT_Writeln_LocStr(2);
             CRT_NewLine;
             CRT_Writeln_LocStr(3);
@@ -112,7 +113,8 @@ begin;
 
 
     if currentChoice = 4 then begin;
-        if (currentSubLocation = 3) or (gangsterInt[currentPlayer SHL 3] < 30) then begin;
+        tmp := currentPlayer SHL 3;
+        if (currentSubLocation = 3) or (gangsterInt[tmp] < 30) then begin;
             CRT_Writeln_LocStr(9);
             CRT_Writeln_LocStr(10);
             waitForKey;
@@ -270,7 +272,8 @@ begin;
         end
         else 
         begin
-            q := Random(100) SHL 1 + 150;
+            q := Random(100);
+            q := q SHL 1 + 150;
             CRT_Writeln_LocStr(32);
             CRT_Write_LocStr(33);
             CRT_Write(q);

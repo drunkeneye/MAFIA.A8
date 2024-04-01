@@ -62,13 +62,15 @@ begin;
         CRT_Write_LocStr(10);
 
         m := 5000;
-        if plMoney[currentPlayer] < m then m := plMoney[currentPlayer];
+        // if plMoney[currentPlayer] < m then m := plMoney[currentPlayer];
         CRT_Write(m);
         CRT_Write(')?'~);
         c := readValue(0,m);
         if c = 0 then
             exit;
-        p := c+100+(Random(10)*(c SHR 4));
+
+        tmp := Random(0);
+        p := c + c + tmp + tmp + tmp;
         CRT_NewLine();
         CRT_NewLine();
         CRT_Write_LocStr(11);

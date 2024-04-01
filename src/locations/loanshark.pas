@@ -36,8 +36,12 @@ begin
         CRT_NewLine();
         CRT_Writeln_LocStr(4);
         CRT_Writeln_LocStr(5);
-        plLoan[currentPlayer] := loan + Round(loan SHR 4);
-        plLoanTime[currentPlayer] := 6+Random(4);
+        p := loan;
+        p := p SHR 4;
+        plLoan[currentPlayer] := loan + p;
+        tmp := Random(4);
+        tmp := tmp + 6;
+        plLoanTime[currentPlayer] := tmp;
         addMoney(loan);
         waitForKey();
         exit;
@@ -91,10 +95,12 @@ begin
             exit;
         end;
 
+        tmp := Random(11);
+        p := tmp*100;
         if plLoanShark[currentPlayer] = currentSubLocation then
         begin
             // owned by player, want to sell this
-            p := Random(11)*100+4500;
+            p := p+4500;
             CRT_Write_LocStr(22);
             CRT_Write(p);
             CRT_Writeln_LocStr(23);
@@ -128,7 +134,7 @@ begin
             end;
 
             // want to buy this
-            p := Random(11)*100+5000;
+            p := p+5000;
             CRT_Write_LocStr(27);
             CRT_Write(p);
             CRT_Writeln_LocStr(28);

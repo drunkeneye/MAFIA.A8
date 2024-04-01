@@ -72,7 +72,8 @@ begin;
     fp_name[16] := loc_string_9;
     fp_energy[16] := 30;
     fp_weapon[16] := 1;
-    fp_sex[16] := Random(2);
+    tmp := Random(2);
+    fp_sex[16] := tmp;
 
 
     if doFight() = 1 then

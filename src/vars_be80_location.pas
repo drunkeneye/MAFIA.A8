@@ -2,6 +2,9 @@
 const
     baseAddress = $BE80;
 
+var 
+    tmpStr: ^String;
+    tmp: byte;
 
 var
     loc_name:                       YString absolute baseAddress + $0000;

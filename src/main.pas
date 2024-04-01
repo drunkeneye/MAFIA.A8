@@ -253,7 +253,8 @@ begin
                     ShowLocationHeader;  
                     CRT_WriteCentered_LocStr(3, 18);
                     CRT_Gotoxy(15,4);
-                    CRT_Write( gameLength- currentYear);
+                    tmp := gameLength - currentYear;
+                    CRT_Write( tmp);
                     CRT_Write_LocStr(19);
                     CRT_WriteCentered_LocStr(6, 20);
                     CRT_GotoXY(0,4);
@@ -344,34 +345,33 @@ begin
 
         gameEnds := Byte(currentYear > gameLength);
         for k := 0 to nPlayers-1 do
-            if (plPoints[k] > gamePoints-1) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then  gameEnds := gameEnds + 1;
+            if (plPoints[k] >= gamePoints) then 
+                if (plMoneyTransporter[k] = 1) then 
+                  if (plKilledMajor[k] = 1) then  
+                    begin
+                        plWinners[k] := 1;
+                        gameEnds := gameEnds + 1;
+                        plNWinners := plNWinners + 1;
+                    end;
     until gameEnds = 1;
 
     // reuse plCurrentMap for winners
     enableConsole();
     CRT_Clear();
 
-    playerPos_X := 0;
-    for k := 0 to nPlayers-1 do
-    begin
-        if (plPoints[k] > gamePoints-1) and (plMoneyTransporter[k] = 1) and (plKilledMajor[k] = 1) then 
-            plCurrentMap[k] := 1
-        else plCurrentMap[k] := 0;
-        playerPos_X := playerPos_X + plCurrentMap[k];
-    end;
-
     loadLocation(MAIN_);
     // if one player won, it sok, if not all have won
-    if playerPos_X = 1 then begin 
+    if plNWinners = 1 then begin 
         for k := 0 to nPlayers-1 do
         begin
-            if plCurrentMap[k] = 1 then 
+            if plWinners[k] = 1 then 
             begin 
-                CRT_WriteCentered(5,gangsterNames[k SHR 3]);
+                tmp := k SHL 3;
+                CRT_WriteCentered(5,gangsterNames[tmp]);
                 CRT_WriteCentered_LocStr(7, 35);
                 CRT_WriteCentered_LocStr(8, 36);
                 CRT_WriteCentered_LocStr(9, 37);
-                if gangsterSex[k SHL 3] = 1 then 
+                if gangsterSex[tmp] = 1 then 
                     finalfname := 'FINALWAPAPL'
                 else
                     finalfname := 'FINALMAPAPL';
@@ -385,9 +385,10 @@ begin
         currentChoice := 0;
         for k := 0 to nPlayers-1 do
         begin;
-            if plCurrentMap[k] = 1 then 
+            if plWinners[k] = 1 then 
             begin 
-                CRT_WriteCentered(7+currentChoice,gangsterNames[k SHL 3]);
+                tmp := k SHL 3;
+                CRT_WriteCentered(7+currentChoice,gangsterNames[k]);
                 currentChoice := currentChoice + 1;
             end; 
         end;

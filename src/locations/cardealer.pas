@@ -60,7 +60,11 @@ begin;
         r := plCar[currentPlayer];
         if r <> 0 then
         begin;
-            oldPrice := 1000+Random(r) SHL 9+Random(0);
+            tmp := Random(r);
+            oldPrice := 1000+tmp SHL 9;
+            tmp := Random(0);
+            oldPrice := oldPrice + tmp;
+
             CRT_NewLine;
             CRT_Write_LocStr(4);
             CRT_Write(oldPrice);
@@ -93,7 +97,8 @@ begin;
         ShowLocationHeader;
 
         // 14100 ifln<>4andint(rnd(1)*3)<>0the
-        if (currentSubLocation < 2) and (Random(3) > 0) then
+        tmp := Random(3);
+        if (currentSubLocation < 2) and (tmp > 0) then
         begin
             CRT_Write_LocStr(8);
             waitForKey();
@@ -159,7 +164,8 @@ begin;
             sta adr.fp_Name+1+16*2
         end;
         fp_weapon[16] := 5;
-        fp_sex[16] := Random(2);
+        tmp := Random(2);
+        fp_sex[16] := tmp;
         fp_energy[16] := 30;
 
         if doFight() = 1 then

@@ -12,7 +12,9 @@ begin
         l := Length(rankNames[z]) + 3; // 3 fors space+( .. )
         i := currentPlayer SHL 3;
         p := l + Length(gangsterNames[i]) ;
-        CRT_GotoXY((40-p) SHR 1, 19);
+        tmp := 40-p;
+        tmp := tmp SHR 1;
+        CRT_GotoXY(tmp, 19);
         CRT_Write(gangsterNames[i]);
         CRT_Write(' ('~);
         CRT_Write(rankNames[z]);
@@ -30,7 +32,8 @@ begin
 
         CRT_GotoXY(40-10, 20);
         CRT_Write(map_string_gangster);
-        CRT_Write(plNGangsters[currentPlayer]-1);
+        tmp := plNGangsters[currentPlayer]-1;
+        CRT_Write(tmp);
 
         CRT_GotoXY(0, 21);
         CRT_Write(map_string_car);
@@ -50,7 +53,8 @@ begin
 
         CRT_GotoXY(15,22);
         CRT_Write(map_string_steps);
-        CRT_Write(plSteps[currentPlayer]);
+        tmp := plSteps[currentPlayer];
+        CRT_Write(tmp);
         CRT_Write('   '~);
         z := plAlcohol[currentPlayer];
         i := 40 - 8 - 3;
@@ -66,17 +70,20 @@ begin
 
         CRT_GotoXY(23, 23);
         CRT_Write(map_string_credit);
-        CRT_Write(plLoan[currentPlayer]);
+        z :=plLoan[currentPlayer];
+        CRT_Write(z);
         CRT_GotoXY(35, 23);
         CRT_Write('('~);
-        CRT_Write(plLoanTime[currentPlayer]);
+        tmp := plLoanTime[currentPlayer];
+        CRT_Write(tmp);
         CRT_Write(' M)'~);
         mapReloaded := 1;
     end;
     Waitframe;
     CRT_GotoXY(15,22);
     CRT_Write(map_string_steps);
-    CRT_Write(plSteps[currentPlayer]);
+    tmp := plSteps[currentPlayer];
+    CRT_Write(tmp);
     CRT_Write('   '~);
 end;
 

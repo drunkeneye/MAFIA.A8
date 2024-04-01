@@ -28,11 +28,17 @@ begin;
         CRT_NewLine;
         CRT_NewLine;
         CRT_Write_LocStr(14);
-        CRT_Write(gangsterNames[pl SHL 3]);
+        tmp := pl SHL 3;
+        CRT_Write(gangsterNames[tmp]);
         CRT_Writeln('...'~);
         effectWait();
 
-        if (Random(3) > 0) or (plJob[pl] > 0) or (plPrison[pl] > 0) then begin 
+        // if (Random(3) > 0) or (plJob[pl] > 0) or (plPrison[pl] > 0) then begin 
+        tmp := Random(3);
+        tmp := tmp + plJob[pl];
+        tmp := tmp + plPrison[pl];
+        if tmp > 0 then 
+        begin;
             CRT_Writeln_LocStr(15);
             waitForKey;
             exit;
@@ -41,7 +47,7 @@ begin;
 
         // other party was setup, only do own party
         fp_N[1] := plNGangsters[pl];
-        fp_gang[1] := plGang[pl];
+        fp_gang[1] := plGang[pl]; 
         fp_AI[1] := 0;
 
         k := 0;
@@ -68,11 +74,12 @@ begin;
         CRT_NewLine;
         CRT_NewLine;
 
+        tmp := pl  SHR 3;
         if w = 1 then 
         begin
             // lost it!
             CRT_Writeln_LocStr(16);
-            CRT_Write(gangsterNames[pl SHL 3]);
+            CRT_Write(gangsterNames[tmp]);
             CRT_Write(' '~);
             CRT_Writeln_LocStr(17);
             CRT_Write_LocStr(18);
@@ -84,12 +91,13 @@ begin;
             // lost it!
             CRT_Writeln_LocStr(19);
             CRT_Write_LocStr(20);
-            CRT_Writeln(gangsterNames[pl SHL 3]);
+            CRT_Writeln(gangsterNames[tmp]);
             CRT_Write_LocStr(21);
             m := currentPlayer;
             k := pl;
         end;
 
+        // MEMORY HOG!!!
         z := plMoney[k] SHR 1;
         z := z + Random(4)*(z SHR 2);
         CRT_Write(z);

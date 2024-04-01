@@ -152,7 +152,8 @@ begin;
 
         CRT_Write_LocStr(19);
         CRT_Write(' '~);
-        CRT_Write(plNGangsters[currentPlayer]-1);
+        tmp := plNGangsters[currentPlayer] - 1;
+        CRT_Write(tmp);
         CRT_Writeln_LocStr(20);
         waitForKey();
     end;
@@ -186,7 +187,9 @@ begin;
         CRT_NewLine;
         tipp := Random(5);
         // dont advise two tipps.
-        if plOpportunity[currentPlayer] and (1 SHL tipp) > 0 then tipp := 0;
+        tmp := 1 SHL tipp;
+        tmp := plOpportunity[currentPlayer] and tmp;
+        if tmp > 0 then tipp := 0;
         case tipp of
             0: begin; //postzug
                     CRT_Writeln_LocStr(26);
@@ -214,7 +217,9 @@ begin;
                     CRT_Writeln_LocStr(38);
                 end; 
         end; 
-        plOpportunity[currentPlayer] := plOpportunity[currentPlayer] or (1 SHL tipp);
+        tmp := 1 SHL tipp;
+        tmp := plOpportunity[currentPlayer]  or tmp;
+        plOpportunity[currentPlayer] := tmp;
         waitForKey();
         exit;
     end;
@@ -226,10 +231,11 @@ begin;
         // need to reload location text
         loadLocation(PUB2_);
         {$ifndef norank}
-        if plRank[currentPlayer] > 3 then
+        tmp := plRank[currentPlayer];
+        if tmp > 3 then
         begin;
             CRT_Write_LocStr(1);
-            CRT_Write (rankNames[plRank[currentPlayer]]);
+            CRT_Write (rankNames[tmp]);
             CRT_Writeln_LocStr(2);
             waitForKey();
             exit;
@@ -244,6 +250,7 @@ begin;
         end;
 
         // jobs
+        wage := Random(3)*500;
         case Random(4) of 
             0:
                  begin
@@ -252,14 +259,14 @@ begin;
                      CRT_Writeln_LocStr(6);
                      joblocation := PUB_;
                      duration := 3;
-                     wage := Random(2)*1000 + 2000;
+                     wage := wage + 1500;
                  end;
             1:
                  begin
                      CRT_Writeln_LocStr(7);
                      CRT_Writeln_LocStr(8);
                      duration := 2;
-                     wage := Random(3)*500 + 1000;
+                     wage := wage + 1000;
                      joblocation := GAMBLING_;
                  end;
             2:
@@ -267,7 +274,7 @@ begin;
                      CRT_Writeln_LocStr(9);
                      CRT_Writeln_LocStr(10);
                      duration := 2;
-                     wage := Random(3)*500 + 2000;
+                     wage := wage + 2000;
                      joblocation := HIDEOUT_;
                  end;
             3:
@@ -276,7 +283,7 @@ begin;
                      CRT_Writeln_LocStr(12);
                      CRT_Writeln_LocStr(13);
                      duration := 1;
-                     wage := Random(2)*500 + 2000;
+                     wage := wage + 1500;
                      joblocation := STREET_;
                  end;
         end;

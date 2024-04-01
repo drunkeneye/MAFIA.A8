@@ -44,7 +44,8 @@ begin
         PLAYERPOS_X := 0;
         PLAYERPOS_Y := 0;
         FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
-        if gangsterSex[currentPlayer SHL 3] = 0 then 
+        tmp := currentPlayer SHL 3;
+        if gangsterSex[tmp] = 0 then 
         begin
             xbunAPL (wanted_m_mfname, Pointer(MAP_FNT_ADDRESS));
             xbunAPL (wanted_m_msname, Pointer(MAP_SCR_ADDRESS));
@@ -59,7 +60,7 @@ begin
         CRT_WriteCentered_LocStr(19, 3);
         CRT_NewLine();
         CRT_Write_LocStr(4);
-        CRT_Write(gangsterNames[currentPlayer SHL 3]);
+        CRT_Write(gangsterNames[tmp]);
         CRT_Writeln_LocStr(5);
         CRT_Write_LocStr(6);
         CRT_Write(plGang[currentPlayer]);
@@ -199,7 +200,8 @@ begin
         fp_gang[1] := loc_string_12;
         for k := 0 to 4 do
         begin
-            fp_sex[16+k] := Random(2);
+            tmp := Random(2);
+            fp_sex[16+k] := tmp;
             fp_name[16+k] := loc_string_12;
             fp_weapon[16+k] := 3;
             fp_energy[16+k] := 30;

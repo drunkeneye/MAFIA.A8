@@ -173,9 +173,12 @@ begin
             if choice + 1 < nopt then choice := choice + 1;
         end; 
 
+        // if byte(ch) < $18 then continue;
+        // if byte(ch) > $35 then continue;
+        
         case byte(ch) of 
             $1f: ch := #49; // 1
-            $1e: ch := #50; //2;
+            $1e: ch := #50; // 2
             $1a: ch := #51;
             $18: ch := #52;
             $1d: ch := #53;
@@ -183,7 +186,7 @@ begin
             $33: ch := #55;
             $35: ch := #56;
             $30: ch := #57;
-            $32: ch := #58;
+            $32: ch := #58; // 0
         end;
 
     //     'v', #$ff, 'c', #$ff, #$ff, 'b', 'x', 'z', '4', #$ff, '3', '6', CHAR_ESCAPE, '5', '2', '1',
@@ -198,12 +201,5 @@ begin
     until ch = #$0c;
     // should never get here 
     result := choice+1; 
-
-    // do not allow 0 here, just 1...NOptions
-    // repeat;
-    //     choice := CRT_ReadKey();
-    //     i := byte(CRT_keycode[choice]);
-    // until (i > 48) and (i < 48+loc_nOptions+1);
-    // result := i - 48;
 end;
  

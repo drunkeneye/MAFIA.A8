@@ -4,6 +4,7 @@ var //choice:byte;
     game:   byte;
     einsatz:   word;
     gewinn:   word;
+    ch: char;
 begin;
     ShowLocationHeader;
 
@@ -11,13 +12,19 @@ begin;
 
     CRT_Writeln_LocStr(2);  
     CRT_Writeln_LocStr(3);  
-    CRT_Writeln_LocStr(4);  
-    CRT_NewLine();
+    CRT_Writeln2_LocStr(4);  
 
     CRT_Write_LocStr(5);
-    game := readValue(0,3);
-    if game = 0 then
-        exit;
+    game := 99;
+    repeat;
+        ch := readKeyAndStick();
+        case byte(ch) of 
+            $1f: game := 1;
+            $1e: game := 2;
+            $1a: game := 3;
+            $32: exit;
+        end;
+    until game <> 99;
 
     CRT_NewLine();
     CRT_NewLine();

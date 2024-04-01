@@ -56,8 +56,13 @@ begin
     // 18040 ifint(rnd(1)*15)=10goto18052
     // 18041 ifint(rnd(1)*(in/10))goto18045
     hops := Random(gangsterInt[currentGangster]) < 10; 
-    loot := Random(17) SHR 1;
-    loot := loot - Random(currentSubLocation+1); //+1 to avoid Random(0)
+
+    tmp := Random(17);
+    loot := tmp SHR 1;
+    tmp := currentSubLocation+1;  //+1 to avoid Random(0)
+    tmp := Random(tmp);
+    loot := loot - tmp;
+
     if loot < 0 then loot := 0;
     if hops = True then loot := 0;
     value := 0;

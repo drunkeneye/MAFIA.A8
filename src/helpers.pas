@@ -218,6 +218,7 @@ begin
     result := getAnswer(N_keycode, Y_keycode);
 end;
 
+
 function readValue(minValue:SMALLINT; maxValue:SMALLINT): SMALLINT;
 var
   ivalue: SMALLINT;
@@ -236,9 +237,6 @@ begin;
     k := Antic2Atascii(k);
     ivalue := StrToInt(k);
   until ((minValue <= ivalue) and (ivalue <= maxValue)) or (ivalue = 0);
-  // CRT_Writeln('You selected '~);
-  // CRT_Write(ivalue);
-  // waitForKey;
   result := ivalue;
 end;
 
