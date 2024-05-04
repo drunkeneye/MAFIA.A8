@@ -1,15 +1,15 @@
 LOCAFORG.gfx
-Eddie Kwiaty
+Eddie Falszerz
 $ba, $00, $00, $ba
-W ciemnym piwnicy 
-W ciemnym piwnicy  
-W ciemnym piwnicy   
-W ciemnym piwnicy   
+W ciemnej piwnicy 
+W ciemnej piwnicy  
+W ciemnej piwnicy   
+W ciemnej piwnicy   
 3,3,3,3
 No, mlody, co cie boli? Czy moge ci pomoc?
 3
 Tak, czy mozesz mi zrobic nowy paszport? Musi byc dobry, jasne?
-Czy jeszcze drukujesz kwiaty? A moze moglbys mi kilka sprzedac?
+Czy jeszcze drukujesz banknoty? Moze sprzedasz mi kilka?
 Dzieki, Eddie, moze nastepnym razem. Czesc!
 50
 Masz juz falszywy paszport!
@@ -19,9 +19,9 @@ i twoich gangsterow
 to bedzie 
 Kupic (T/N)?
 Oto, jeszcze swieze, he, he!
-Masz juz kwiaty!
+Masz juz falszywe banknoty!
 Nng... bardzo niechetnie! Ile dolarow
 chcesz zainwestowac (0-
 Dam ci
-$ fake dolarow za to (T/N)?
+ falszywych dolcow za to (T/N)?
 Ale nie wydawaj wszystkiego od razu!
