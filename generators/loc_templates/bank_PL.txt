@@ -1,16 +1,16 @@
 LOCABANK.gfx
-Bank/Poczta
+Bank
 $e6, $af, $ff, $e6
-Bank Klomerz
-Bank Doisch
-Kasyno
-Raffelwaffel 24
+First National Bank of Chicago
+Harris Trust&Savings Bank
+The Northern Trust Company
+Continental Illinois Bank
 0,2,6,8
-Dzien dobry, panie! Czym moge sluzyc?
+Dzien dobry panu! Czym moge sluzyc?
 3
-Nie gadac, tylko szybko oddac forse!
-Niepostrzezenie rozejrzec sie za alarmami i wlamac sie noca
-Odejsc
+Nie gadaj tylko szybko oddaj forse!
+Niepostrzezenie rozejrzyj sie za alarmami i wlam sie noca
+Odejdz
 50
 Potrzebujesz towarzysza!
 Niestety, przeoczyles trzech 
@@ -24,6 +24,6 @@ Za goraco! Uciekasz!
 Udalo ci sie!
 Cholera!... Cos poszlo nie tak!
 Ktos nadchodzi!!
-Najpierw badz mala rybka!
+Najpierw badz mafijna plotka!
 Twoj lup wynosi
 Ponadto znajdujesz 500kg zlota...
