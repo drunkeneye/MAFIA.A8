@@ -1,5 +1,5 @@
 LOCACRED.gfx
-MAFIA v0.4
+MAFIA v0.41
 $70, $af, $0e, $70
   
   
@@ -14,10 +14,9 @@ $70, $af, $0e, $70
  
 50
 A port of a C64 game by Igelsoft
-Programmed by drunkeneye
-Polish localization: Adam
 
-(L) Copyleft, 2024
+Programmed by drunkeneye
+Polish localization: +Adam+
 
 All sources and current version at
 http://github.com/drunkeneye/MAFIA.A8

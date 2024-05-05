@@ -12,7 +12,8 @@ program autorun;
 {$r ./resources_title.rc}
 
 
-uses atari, joystick, pmg, xbapLib, xbios, crt, cio, aplib, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
+uses atari, xbios, crt, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
+
 
 const 
     baseAddress =   $BE80;
@@ -25,19 +26,34 @@ var  // for sprites
     PCOLR2:   byte absolute $D014;
     PCOLR3:   byte absolute $D015;
     playerPos_X:   byte absolute e7adr + 936+16;
+
     // not used 
     loccolbk:            Byte absolute baseAddress + $2B0 + 41 * $28;
     loccolpf0:            Byte absolute baseAddress + $2B0 + 41 * $28 + 1;
     loccolpf1:            Byte absolute baseAddress + $2B0 + 41 * $28 + 2;
     loccolpf2:            Byte absolute baseAddress + $2B0 + 41 * $28 + 3;
 
+    playMusic: byte absolute $e0a1;
+	msx: TRMT;
+
 
 const 
 {$i const.inc}
 
+
+
+
+procedure musicproxy();
+begin;
+    msx.play();
+end;
+
+
+
 {$I interrupts.inc}
 {$i console.pas}
  
+{$I xbaplib.pas}
 
 var
     D_LOGO: TString = 'LOGO    APL';
@@ -76,6 +92,10 @@ var
     cs:   word;
     finalfname:   String[16];
 begin;
+    playMusic := 0;
+    // force inclusion of musciproxy, wont be executed here
+    if playMusic = 99 then 
+        musicproxy();
 
     DMACTL := $22;
     asm;
@@ -85,7 +105,9 @@ begin;
         sta xbios.xIRQEN
         pla
     end;
-
+    
+    //SystemOff;
+    
     // check xbios from StarVagrant
     cs := dPeek($0800);
     if (char(Lo(cs)) <> 'x') or (char(Hi(cs)) <> 'B') then

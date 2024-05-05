@@ -47,13 +47,13 @@ begin
         tmp := currentPlayer SHL 3;
         if gangsterSex[tmp] = 0 then 
         begin
-            xbunAPL (wanted_m_mfname, Pointer(MAP_FNT_ADDRESS));
-            xbunAPL (wanted_m_msname, Pointer(MAP_SCR_ADDRESS));
+            loadxAPL (wanted_m_mfname, Pointer(MAP_FNT_ADDRESS));
+            loadxAPL (wanted_m_msname, Pointer(MAP_SCR_ADDRESS));
         end
         else 
         begin
-            xbunAPL (wanted_f_mfname, Pointer(MAP_FNT_ADDRESS));
-            xbunAPL (wanted_f_msname, Pointer(MAP_SCR_ADDRESS));
+            loadxAPL (wanted_f_mfname, Pointer(MAP_FNT_ADDRESS));
+            loadxAPL (wanted_f_msname, Pointer(MAP_SCR_ADDRESS));
         end;
         enableMapConsole();
 

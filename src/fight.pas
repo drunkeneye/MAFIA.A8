@@ -9,8 +9,8 @@ begin
     // clear area below, since map will not cover all screen
     FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
     enableMapConsole();
-    xbunAPL (fightfntname, Pointer(MAP_FNT_ADDRESS));
-    xbunAPL (fightscrname, Pointer(MAP_SCR_ADDRESS));
+    loadxAPL (fightfntname, Pointer(MAP_FNT_ADDRESS));
+    loadxAPL (fightscrname, Pointer(MAP_SCR_ADDRESS));
     FillChar (Pointer (MAP_SCR_ADDRESS+19*40), 5*40, ' '~);
     
     // remember that we loaded a new map

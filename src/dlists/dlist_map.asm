@@ -17,5 +17,7 @@ dl_start
     dta DL_MODE_40x24T5 + DL_DLI
     dta DL_MODE_40x24T2
     dta DL_MODE_40x24T2 + DL_DLI
-    :3 dta DL_MODE_40x24T2
+    dta DL_MODE_40x24T2
+    dta DL_MODE_40x24T2
+    dta DL_MODE_40x24T2 + DL_DLI
     dta DL_JVB, a(dl_start)

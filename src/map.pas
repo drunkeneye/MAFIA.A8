@@ -192,12 +192,8 @@ end;
 procedure preloadMap;
 begin;
     blackConsole();
-    // scrname[1] := char($41+currentMap);
     fntname[1] := char($41+currentMap);
-    // locname[1] := char($41+currentMap);
-    xbunAPL (fntname, Pointer(MAP_FNT_ADDRESS));
-    // xbunAPL (scrname, Pointer(MAP_SCR_ADDRESS));
-    // xbunAPL (locname, Pointer(LOC_MAP_ADR));
+    loadxAPL (fntname, Pointer(MAP_FNT_ADDRESS));
     clearSprites();
     paintPlayer(0);
 

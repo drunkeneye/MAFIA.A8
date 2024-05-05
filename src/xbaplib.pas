@@ -1,34 +1,4 @@
-unit xbapLib;
-(*
-* @type: unit
-* @author: John Brandwood, Krzysztof 'XXL' Dudek, Tomasz 'Tebe' Biela
-* @name: APL
-*
-* @version: 1.0
-*
-* @description:
-* apLib decompressor (compress with APULTRA)
-*
-* <http://ibsensoftware.com/products_aPLib.html>
-*
-* <https://github.com/emmanuel-marty/apultra>
-*)
-
-{
-
-unAPL
-
-}
-
-interface
-
-	procedure xbunAPL(var fname: TString; outputPointer: pointer);
-
-implementation
-
-uses xbios;
-
-
+ 
 procedure xbunAPL(var fname: TString; outputPointer: pointer);
 (*
 @description:
@@ -40,9 +10,10 @@ aPLib I/O stream decompressor (John Brandwood, Krzysztof 'XXL' Dudek)
 
 
 begin
-	  xBiosOpenFile(fname);
+	// disable interrupt
+	xBiosOpenFile(fname);
 
-asm
+	asm
 		stx @sp
 
 		mwa outputPointer dest_ap
@@ -193,5 +164,3 @@ to_exit		lda #0
 end;
 end;
 
-
-end.

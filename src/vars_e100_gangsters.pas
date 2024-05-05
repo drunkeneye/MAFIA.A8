@@ -7,6 +7,7 @@ var
     tmpOpportunity: byte absolute $e09b; // stupid place
     plWinners: array[0..4] of byte absolute $e09c;
     plNWinners: byte absolute $e0a0;
+    playMusic: byte absolute $e0a1;
 
  var
     plGang_1:   XString absolute $e0d4;

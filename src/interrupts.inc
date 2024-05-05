@@ -62,6 +62,17 @@ dli3:
     mva #$ff atari.colpf1 ; lum
     mva #$00 atari.colpf2 ; hue
 
+    lda #<dli4
+    sta dlijmp+1
+    lda #>dli4
+    sta dlijmp+2
+
+    plr
+    rti
+
+dli4:
+    jsr main.musicproxy
+
     lda #<dli1
     sta dlijmp+1
     lda #>dli1
@@ -69,6 +80,7 @@ dli3:
 
     plr
     rti
+
 };
 end;
 
@@ -76,12 +88,13 @@ end;
 
 procedure dli_black_console;assembler;interrupt;
 asm {
-    phr ; store registers
-    mva #$0 atari.colpf0                 ;---- outline color
-    mva #$0 atari.colpf1                ;---- dark color
-    mva #$0 atari.colpf2                ;---- face shadow color
-    mva #$0 atari.colbk                 ;---- back color
-    plr                                  ;---- restore registers
+    phr 
+    mva #$0 atari.colpf0 
+    mva #$0 atari.colpf1 
+    mva #$0 atari.colpf2 
+    mva #$0 atari.colbk 
+    jsr main.musicproxy
+    plr  
 };
 end;
 
@@ -89,14 +102,18 @@ end;
 
 procedure dli_console;assembler;interrupt;
 asm {
-    phr ; store registers
+    phr  
     mva loccolbk atari.colbk
-    mva loccolpf0 atari.colpf0                 ;---- outline color
-    mva loccolpf1 atari.colpf1                 ;---- outline color
-    mva loccolpf2 atari.colpf2                 ;---- outline color
-    plr                                  ;---- restore registers
+    mva loccolpf0 atari.colpf0 
+    mva loccolpf1 atari.colpf1 
+    mva loccolpf2 atari.colpf2  
+
+    jsr main.musicproxy
+
+    plr 
 };
 end;
+
 
 
  

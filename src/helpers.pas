@@ -1,9 +1,4 @@
-// helpers
 
-// did not work for YesNo, test later again
-// const
-//   answerY:char = 'J';
-//   answerN:char = 'N';
 
 procedure CRT_Write_LocStr(b: byte);
 var z: word;
@@ -68,6 +63,27 @@ end;
 
 
 
+
+    // CRT_keycode: array [0..255] of char = ( //@nodoc
+    //     'l', 'j', ';', #$ff, #$ff, 'k', '+', '*', 'o', #$ff, 'p', 'u', CHAR_RETURN, 'i', '-', '=', //@nodoc
+    //     'v', #$ff, 'c', #$ff, #$ff, 'b', 'x', 'z', '4', #$ff, '3', '6', CHAR_ESCAPE, '5', '2', '1',
+    //     ',', ' ', '.', 'n', #$ff, 'm', '/', CHAR_INVERSE, 'r', #$ff, 'e', 'y', CHAR_TAB, 't', 'w', 'q',
+    //     '9', #$ff, '0', '7', CHAR_BACKSPACE, '8', '>', #$ff, 'f', 'h', 'd', #$ff, CHAR_CAPS, 'g', 's', 'a',
+    //     'L', 'J', ':', #$ff, #$ff, 'K', '\', '^', 'O', #$ff, 'P', 'U', #$ff, 'I', '_', '|',
+    //     'V', #$ff, 'C', #$ff, #$ff, 'B', 'X', 'Z', '$', #$ff, '#', '&', #$ff, '%', '"', '!',
+    //     '[', ';', ']', 'N', #$ff, 'M', '?', #$ff, 'R', #$ff, 'E', 'Y', #$ff, 'T', 'W', 'Q',
+    //     '(', #$ff, ')', '''', #$ff, '@', #$ff, #$ff, 'F', 'H', 'D', #$ff, #$ff, 'G', 'S', 'A',
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
+    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff
+    // );
+
+
 function readKeyAndStick():char;
 var
     ch:char;
@@ -85,6 +101,8 @@ begin;
         beq foundsave
         cmp #$03
         beq foundload
+        cmp #$06
+        beq foundmsx
 
         lda skctl		; ANY KEY
         and #$04
@@ -101,6 +119,9 @@ begin;
         jmp loopend
   foundsave:
         lda #$1f 
+        jmp loopend
+  foundmsx:
+        lda #$20
         jmp loopend
   foundload:
         lda #$1e
@@ -166,12 +187,16 @@ end;
 
 // just for return key for now
 procedure waitForKeyRelease;
-var ch: char;
+var ch, tmpch: char;
 begin;
-    // wait for return key to be released 
+    ch := readKeyAndStick();
     repeat;
-        ch := checkKeyAndStick ();
-    until ch <> #$0c;
+        tmpch := checkKeyAndStick ();
+    until tmpch <> ch; // wait for key release or so..
+    // // wait for return key to be released 
+    // repeat;
+    //     ch := checkKeyAndStick ();
+    // until ch <> #$0c;
 end;
 
 
@@ -283,13 +308,7 @@ begin;
         b := xBiosGetByte;
         Poke($e500+k, b);
     end;
-    // no close file?
 
-    // if g < 10 then
-    //     gangsterFilename[8] := char($30+g)
-    // else 
-    //     gangsterFilename[8] := char($37+g);
-    // xbunAPL (gangsterFilename, Pointer($e600));
     CRT_Writeln(buf_gangsterText1);
     CRT_Writeln(buf_gangsterText2);
     CRT_Writeln(buf_gangsterText3);

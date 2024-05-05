@@ -14,17 +14,17 @@ program MAFIA;
 {$r ./resources.rc}
 
 
-uses atari, joystick, pmg, xbapLib, xbios, crt, cio, aplib, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
-// b_utils;
+uses atari, pmg, xbios, crt, cio, aplib, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
+
 
 const 
 {$i const.inc}
 
-// const
-//     W_keycode = $2e;
-//     A_keycode = $3f;
-//     S_keycode = $3e;
-//     D_keycode = $3a;
+
+var 
+    lastLocation:   byte;
+	msx: TRMT;
+
 
 {$i vars_e000_main.pas}
 {$i vars_ec00_fight.pas}
@@ -34,8 +34,33 @@ const
  
 
 
+
+procedure musicproxy();
+begin;
+    if playMusic = 1 then 
+        msx.play();
+end;
+
+
+
+
 {$I helpers.pas}
 {$I interrupts.inc}
+{$I xbaplib.pas}
+
+
+procedure loadxAPL(var fname: TString; outputPointer: pointer);
+var msxstatus: byte;
+begin;
+    msxstatus := playMusic;
+    if playMusic = 1 then 
+        msx.stop();
+    playMusic := 0;
+    xbunAPL(fname, outputPointer);
+    playMusic := msxstatus;
+end;
+
+
 {$I console.pas}
 {$I locations.pas}
 {$I player.pas}
@@ -46,11 +71,6 @@ const
 {$I fight_ai.pas}
 {$I fight.pas}
 {$I helpersFight.pas}
-
-
-var 
-    lastLocation:   byte;
-
 
 {$I locations/armsdealer.pas}
 {$I locations/bank.pas}
@@ -73,6 +93,7 @@ var
 {$i setupGame.pas}
 
 {$I updates.pas}
+
 
 
 
@@ -111,6 +132,7 @@ begin;
     waitForKey();
 end; 
 
+
 var 
     k:   byte;
     outcome: byte;
@@ -137,17 +159,24 @@ begin
             CRT_Write('NO XBIOS!'~);
         until false;
 
+    playMusic := 0;
+
+    // force inclusion of musciproxy, wont be executed here
+    if playMusic = 99 then 
+        musicproxy();
+
     enableConsole();
     // repeat; until false;
     clearMemory();
-    xbunAPL (e7fname, Pointer(e7adrm6));
+    loadxAPL (e7fname, Pointer(e7adrm6));
     //setupGame();
     initGlobalVars();
     showCredits();
     setupGame();
     initPlayers();
-    Poke($D20E, 0);
+
     // turn off all IRQs
+    // Poke($D20E, 0);
 
     // for k:= 0 to 31 do
     // begin;
@@ -159,6 +188,11 @@ begin
     // plOpportunity[currentPlayer] := 255;
     // plNewPoints[currentPlayer] := 70;
     // plMoney[currentPlayer] := 5550005;
+
+    msx.player:=pointer(rmt_player);
+    msx.modul:=pointer(rmt_modul);
+    msx.init(0);
+    playMusic := 0; // for now
 
     currentPlayer := 0;
     currentMonth := 1;
@@ -240,6 +274,7 @@ begin
 
         while (plSteps[currentPlayer] > 0) and (currentLocation <> END_TURN_) do
         begin;
+            // EnableVBLI(@vbl);
             enableMapConsole();
             printMapStatus();
             paintPlayer(0);
@@ -247,6 +282,22 @@ begin
             repeat;
                 ch := readKeyAndStick();
                 // overview page
+                if byte(ch) = $65 then 
+                    addMoney(10000);
+                if byte(ch) = $20 then begin;
+                    if playMusic = 1 then 
+                    begin 
+                        msx.Stop();
+                        playMusic := 0;
+                    end
+                    else  
+                    begin 
+                        playMusic := 1;
+                        msx.Play();
+                    end;
+                    waitForKeyRelease();
+                    WaitFrames(20);
+                end;
                 if ch = #$1c then begin;
                     // ensure we have loaded the main location
                     loadLocation(UPDATES_);
@@ -401,7 +452,8 @@ begin
     DLISTL := DL_BLACK_CONSOLE_ADR;
     Waitframes(10);
 
-    xbunAPL (finalfname, Pointer($2000-6));
+    // DisableVBLI;
+    loadxAPL (finalfname, Pointer($2000-6));
     asm
     lpend:
         jsr $5800;

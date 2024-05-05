@@ -2,10 +2,13 @@
 // memory map
 // 0000-0c00 is xbios
 
-// 0c00-c000 is program+data
+// 0c00-b000 is program+data
 
-// c000-c800 is own data/loading area
+// b000-be80 is for sfx/music
+RMT_PLAYER = $b200;
+RMT_MODUL = $b800;
 
+// be80-c800 is own data/loading area
 TXT_ADDRESS = $c800;
 MAINFONT_ADR = $cc00;
 

@@ -87,7 +87,7 @@ begin;
         SETUP_: locfname := LOCASETUfname;
         CREDITS_: locfname := LOCACREDfname;
     end;    
-    xbunAPL (locfname, Pointer(baseAddress));
+    loadxAPL (locfname, Pointer(baseAddress));
 end;
 
 

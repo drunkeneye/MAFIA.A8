@@ -53,12 +53,15 @@ begin
   CRT_WriteCentered(5, gangsterNames[z]);
   CRT_WriteCentered_LocStr(6, 2);
 
-  sound(0,100,10,15);
-  WaitFrames(30);
-  sound(0,96,10,15);
-  WaitFrames(20);
-  sound(0,121,10,15);
-  WaitFrames(10);
+	msx.sfx(1, 2, $80);
+
+  // sound(0,100,10,15);
+  // WaitFrames(30);
+  // sound(0,96,10,15);
+  // WaitFrames(20);
+  // sound(0,121,10,15);
+  // WaitFrames(10);
+
   // sound(0,133,10,15);
   // WaitFrames(20);
   // sound(0,121,10,15);
@@ -71,7 +74,7 @@ begin
   // WaitFrames(10);
   // sound(0,145,10,15);
   // WaitFrames(10);
-  NoSound;
+  //NoSound;
   result := 0;
   if currentPlayer = 0 then 
   begin 

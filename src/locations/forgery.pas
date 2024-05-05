@@ -24,7 +24,7 @@ begin;
 
         r := plNGangsters[currentPlayer];
         c := r*1000;
-        CRT_Writeln_LocStr(2);
+        CRT_Write_LocStr(2);
         CRT_Write_LocStr(3);
         if r > 1 then 
             CRT_Write_LocStr(4);
