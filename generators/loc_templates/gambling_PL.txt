@@ -1,22 +1,22 @@
 LOCAGAMB.gfx
 Kasyno
 $1e, $af, $00, $1e
-Plac Pokerowej Twarzy
+Pokerface Plaza
 Zockotopia
-Valhalla Jokera
-Kasyno Carlos
+Jokers Valhalla
+Casino Carlos
 2,4,5,7
-Ej, ziomek, co powiesz na gre? Karty? Ruletka?
+Ej, kolego, co powiesz na gre? Karty? Ruletka?
 2
-Ok, szefie, co polecasz?
-Nie, nie! Ja gram tylko w Mau-Mau!
+OK, szefie, co polecasz?
+Nie, nie! Ja gram tylko w makao!
 50
 Wybierz, przyjacielu
   1 - Poker
   2 - Black Jack
   3 - Ruletka
 Co wybierasz?
-Ty masz
+Masz
 Twoj zaklad (0-
 Przechodzisz do stolu gry...
 Wygrales
