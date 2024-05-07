@@ -28,8 +28,8 @@ const
     M_keycode =  $25; //Mezczyzna
     short_game_keycode =  $05; //Krotka
     long_game_keycode =  $3a; //Dluga
-    shooting_range_keycode = $3a; //d
-    training_camp_keycode$= $23; //n
+    shooting_range_keycode = $3e; //s
+    training_camp_keycode$= $08; //o
 {$endif}
 
 
