@@ -336,24 +336,22 @@ gangsters_data_EN = [
 
 gangsters_data_PL = [
     # 1-5
-    ("Chudy facet w czarnym garniturze, ktoremu lepi sie zapach trupow, "
-     "wpatruje sie w ciebie z wielkich oczu. Nazywa sie Johnny i chce isc z toba "
-     "pogrzebac ludzi.", 
+    ("Szczuply facet w czarnym garniturze smierdzi trupami i gapi sie na ciebie "
+     "swymi wylupiastymi oczami. Nazywa sie Johnny i chce isc z toba grzebac ludzi.", 
      "Johnny", "go", 0, 40, 50, 25, 5, 2000),
-    ("Przebiegly gosc w obskurnych ciuchach prosi cie o kupienie mu piwa. "
-     "Ludzie nazywaja go Zabojca Jackiem, i tak tez chce byc nazywany. "
-     "Za niewielka oplata pomoze ci.", 
-     "Zabojca Jack", "go", 0, 30, 30, 45, 2, 1500),
-    ("W rogu ktos usiluje czytac wczorajszy gazeta. "
-     "Ma glupkowata mine i wydaje sie byc przeciazony. "
-     "Moze byc pomocny.", 
-     "Joe, Mozg", "go", 0, 30, 30, 20, 1, 1000),
-    ("Facet o tlustych rudych wlosach, trzymajacy tanie gitary, wchodzi do baru. "
-     "Ludzie boja sie go na widok. "
-     "Nie zna litosci.", 
+    ("Przebiegly typek w przechodzonych ciuchach prosi cie o kupienie mu piwa. "
+     "Ludzie mowia na niego Killer Jack i tak tez chce byc nazywany. "
+     "Pomoze ci za niewielka oplata.", 
+     "Killer Jack", "go", 0, 30, 30, 45, 2, 1500),
+    ("W kacie chudy koles probuje czytac wczorajsza gazete. "
+     "Ma glupkowata mine i wydaje sie byc przytloczony. "
+     "Moglby byc pomocny.", 
+     "Joe 'Mozg'", "go", 0, 30, 30, 20, 1, 1000),
+    ("Do pubu wchodzi facet z tlustymi rudymi wlosami i tania gitara. "
+     "Sam jego widok budzi strach u ludzi. Nie zna litosci. "
      "Eddie Bard", "go", 0, 20, 50, 25, 3, 1700),
-    ("Przy barze stoi twarda, brutalnie wygladajaca kobieta, ktorej czarne "
-     "oczy malowane na czarno rzucaja charakterystyczne spojrzenie zabojcy. "
+    ("Przy barze stoi szorstka, wygladajaca na okrutna kobieta, ktora posyla "
+     "typowe zabojcze spojrzenia umalowanymi na czarno oczami. "
      "Nikt nie moze sie jej oprzec.", 
      "Krwawa Mary", "ja", 1, 60, 10, 40, 3, 2300),
 
@@ -362,11 +360,11 @@ gangsters_data_PL = [
      "usmiecha sie do ciebie. Nazywa sie Wielki Tony. "
      "Zawsze ma przy sobie kij bejsbolowy.",
      "Wielki Tony", "go", 0, 70, 20, 35, 4, 2500), 
-     ("Szczupla, blond kobieta w czerwonej sukience i wysokich butach "
+     ("Szczupla blondynka w czerwonej sukience i wysokich butach "
       "mruga do ciebie. Nazywa sie Lola i jest mistrzynia uwodzenia." 
-      "Potrafi zawiazac kazdego wokol palca.", 
+      "Potrafi owinac kazdego wokol palca.", 
       "Lola", "ja", 1, 30, 40, 60, 0, 2200), 
-    ("Maly, gruby mezczyzna w okularach i wasach "
+    ("Maly, gruby mezczyzna w okularach i z wasami "
       "siedzi przy zapalniczce. Nazywa sie Gonzo i jest geniuszem w "
       "obsludze bomb.", 
       "Gonzo", "go", 0, 10, 10, 80, 0, 1800), 
@@ -387,13 +385,13 @@ gangsters_data_PL = [
         "usmiecha sie do ciebie. Nazywa sie Ginger i jest amuletem szczescia. " 
         "Zawsze ma asa w rekawie.", 
         "Ginger", "ja", 1, 30, 30, 50, 0, 2000),
-       ("Olbrzymi, lysy mezczyzna z tatuazem na ramieniu i "
-        "nozem w reku krzywo na ciebie patrzy. Nazywa sie Brutus i " 
-        "nie marnuje czasu na nikogo, kto stanie mu na drodze.", 
+       ("Olbrzymi, lysy mezczyzna z tatuazem na ramieniu i nozem w reku "
+        "krzywo na ciebie patrzy. Nazywa sie Brutus i szybko radzi sobie " 
+        "z kazdym, kto stanie mu na drodze.", 
         "Brutus", "go", 0, 80, 70, 10, 5, 2700),
-       ("Ladna, brunetka w niebieskim garniturze i okularach "
-        "grzecznie cie witajac. Jest adwokatem i potrafi " 
-        "rzucac sie paragrafami.", 
+       ("Ladna brunetka w niebieskim garniturze i okularach "
+        "grzecznie cie wita. Jest prawniczym rekinem i potrafi " 
+        "przerzucac sie paragrafami.", 
         "Lisa", "ja", 1, 20, 20, 60, 0, 2100), 
         ("Szczuply, brazowowlosy mezczyzna w bialej koszuli i krawacie " 
          "podaje ci reke. Nazywa sie Mike i " 
@@ -442,12 +440,12 @@ gangsters_data_PL = [
          "Garry G", "go", 0, 30, 10, 60, 0, 2500),
 
          # 26-30
-        ("Zagralek-Alf, mistrz salonu gier, nie tylko opanowal sztuke hazardu "
+        ("Hazardzista Alf, mistrz salonu gier, nie tylko opanowal sztuke hazardu, "
         "ale ma tez inne talenty. Prawdopodobnie.", 
-        "Zagralek-Alf", "go", 0, 5, 80, 65, 0, 2300),
-        ("Barman przedstawia ci Pistolety-Henrego, byc moze nie najmadrzejszego, "
+        "Hazardzista Alf", "go", 0, 5, 80, 65, 0, 2300),
+        ("Barman przedstawia ci Pistoletowego Henry'ego, byc moze nie najmadrzejszego, "
         "ale zdecydowanie obawianego ze wzgledu na jego akrobatyczne strzaly.", 
-        "Pistolety-Henry", "go", 0, 40, 15, 60, 6, 3100),
+        "Pistoletowy Henry", "go", 0, 40, 15, 60, 6, 3100),
         ("Jeff Smart wyglada jakby wyszedl prosto z komiksu, ale nie lekcewaz go. "
          "Potrafi doprowadzic kazdego do szalu.",
          "Jeff Smart", "go", 0, 40, 80, 15, 0, 2300),
