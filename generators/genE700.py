@@ -98,11 +98,11 @@ def dumpStrings_DE(byte_stream):
  
  
 def dumpStrings_PL(byte_stream):
-    dumpTStringATASCII (byte_stream, 'Uderzenie');
+    dumpTStringATASCII (byte_stream, 'Trafiles');
     dumpTStringATASCII (byte_stream, '!!');
     dumpTStringATASCII (byte_stream, 'Niestety,');
     dumpTStringATASCII (byte_stream, ' nie zyje!');
-    dumpTStringATASCII (byte_stream, 'Przegapiles!');
+    dumpTStringATASCII (byte_stream, 'Chybiles!');
     dumpTStringATASCII (byte_stream, 'Wygral ');
 
     dumpYStringATASCII (byte_stream, 'Nacisnij klawisz!');
@@ -123,7 +123,7 @@ def dumpStrings_PL(byte_stream):
     dumpTStringATASCII (byte_stream, 'Policjant');
 
     # rest
-    dumpYStringATASCII (byte_stream, 'Nie masz wystarczaajco pieniedzy!');
+    dumpYStringATASCII (byte_stream, 'Nie masz tyle pieniedzy!');
     dumpTStringATASCII (byte_stream, 'Twoj wybor? ');
     dumpYStringATASCII (byte_stream, 'Policja czeka na ciebie przed sklepem!');
 
@@ -281,12 +281,12 @@ weaponNames_EN = ['Hands', 'Knife', 'Club',
                                             'Rifle', 'Machine Gun', 'Grenades']
 carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
-rankNames_PL = ['Poczatkujacy', 'Zbir', 'Mala ryba',
-                             'Zlodziej', 'Gauner', 'Mafiosi', 'StrachPol', 'Morderca',
-                            'Szef gangsterow', 'Prawa reka', 'Chrzestny']
+rankNames_PL = ['Poczatkujacy', 'Zbir', 'Mafijna plotka',
+                             'Zlodziej', 'Lajdak', 'Mafioso', 'Postrach glin', 'Morderca',
+                            'Szef gangsterow', 'Prawa reka', 'Ojciec chrzestny']
 weaponNames_PL = ['Rece', 'Noz', 'Palka',
-                        'Kajdany', 'Gwiazdy', 'Rewolwer',
-                        'Karabin', 'KM', 'Granaty']
+                        'Lancuch', 'Shuriken', 'Rewolwer',
+                        'Strzelba', 'Karabin maszynowy', 'Granaty']
 carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
