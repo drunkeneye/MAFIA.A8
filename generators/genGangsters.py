@@ -356,33 +356,33 @@ gangsters_data_PL = [
      "Krwawa Mary", "ja", 1, 60, 10, 40, 3, 2300),
 
     # 6-10
-    ("Wielki, umiesniony facet z blizna na twarzy i zlotym zebem "
-     "usmiecha sie do ciebie. Nazywa sie Wielki Tony. "
+    ("Wysoki, muskularny facet z blizna na twarzy i zlotym zebem "
+     "usmiecha sie do ciebie. Nazywa siebie Duzym Tonym. "
      "Zawsze ma przy sobie kij bejsbolowy.",
-     "Wielki Tony", "go", 0, 70, 20, 35, 4, 2500), 
-     ("Szczupla blondynka w czerwonej sukience i wysokich butach "
-      "mruga do ciebie. Nazywa sie Lola i jest mistrzynia uwodzenia." 
-      "Potrafi owinac kazdego wokol palca.", 
+     "Duzy Tony", "go", 0, 70, 20, 35, 4, 2500), 
+     ("Mruga do ciebie szczupla blondynka w czerwonej sukience "
+      "i w szpilkach. Nazywa sie Lola i jest mistrzynia uwodzenia." 
+      "Umie kazdego owinac sobie wokol palca.", 
       "Lola", "ja", 1, 30, 40, 60, 0, 2200), 
-    ("Maly, gruby mezczyzna w okularach i z wasami "
-      "siedzi przy zapalniczce. Nazywa sie Gonzo i jest geniuszem w "
-      "obsludze bomb.", 
+    ("Maly grubasek ma okulary w rogowych oprawkach, wasy "
+      "i siedzi przy detonatorze. Nazywa sie Gonzo i jest geniuszem "
+      "w poslugiwaniu sie bombami.", 
       "Gonzo", "go", 0, 10, 10, 80, 0, 1800), 
-    ("Mlody, drazliwy facet w skorzanej kurtce i okularach przeciwslonecznych "
-     "opiera sie o sciane. Nazywa sie Spike i jest smialkiem. " 
+    ("Mlody, zylasty facet w skorzanej kurtce i okularach przeciwslonecznych "
+     "opiera sie o sciane. Ma na imie Spike i jest ryzykantem. " 
      "Uwielbia krasc samochody.", 
      "Spike", "go", 0, 40, 40, 40, 2, 1900), 
-     ("Brunetka w czarnym plaszczu i z pistoletem w pasie "
-      "spoglada na ciebie zimnym spojrzeniem. Nazywa sie Viper i zawsze trafia w dziesiatke.", 
+     ("Ciemnowlosa panna w czarnym plaszczu i z pistoletem za pasem "
+      "patrzy na ciebie chlodno. Nazywa sie Viper i zawsze trafia w dziesiatke.", 
       "Viper", "ja", 1, 50, 60, 50, 6, 2600), 
 
       # 11-15
-      ("Staruszek z siwymi wlosami, laska i cylindrem "
-       "zyczliwie kiwa na twoja strone. Nazywa sie Stary Joe i jest doswiadczonym zlodziejem. " 
+      ("Siwowlosy staruszek z laska i cylindrem kiwa ci uprzejmie glowa. "
+       "Nazywa sie Stary Joe i jest doswiadczonym oszustem. " 
        "Zna wszystkie sztuczki.", 
        "Stary Joe", "go", 0, 20, 20, 70, 0, 1600), 
-       ("Ruda kobieta w zielonej sukience i kapeluszu "
-        "usmiecha sie do ciebie. Nazywa sie Ginger i jest amuletem szczescia. " 
+       ("Usmiecha sie do ciebie rudowlosa kobieta w zielonej sukience i kapeluszu. "
+        "Nazywa sie Ginger i przynosi szczescie. " 
         "Zawsze ma asa w rekawie.", 
         "Ginger", "ja", 1, 30, 30, 50, 0, 2000),
        ("Olbrzymi, lysy mezczyzna z tatuazem na ramieniu i nozem w reku "
@@ -399,22 +399,22 @@ gangsters_data_PL = [
          "Mike", "go", 0, 30, 40, 55, 0, 2000), 
 
         # 16-20
-        ("Pulchna, blondynka w rozowym swetrze macha do ciebie. "
+        ("Pulchna blondynka w rozowym swetrze macha do ciebie. "
          "Nazywa sie Betty i jest kierowca. " "Potrafi palic gume w kazdym pojezdzie.", 
          "Betty", "ja", 1, 40, 30, 40, 1, 1800), 
          ("Sredniej wielkosci mezczyzna o czarnych wlosach w szarym garniturze i kapeluszu " 
           "pali papierosa. Nazywa sie Sam i byl kiedys detektywem. " 
-          "Potrafi rozwiazac kazda sprawe.", 
+          "Jest w stanie rozwiazac kazda sprawe.", 
           "Sam", "go", 0, 40, 50, 60, 3, 2400), 
         ("Mala, drobna kobieta w zoltej sukience i szalach " 
           "spiewa piosenke. Nazywa sie Tina i jest syrena. " 
           "Potrafi oczarowac kazdego.", 
           "Tina", "ja", 1, 20, 40, 50, 0, 1900), 
         ("Gruby, rudowlosy mezczyzna w zielonym swetrze i spodniach " 
-         "zuje donuta. Nazywa sie Bob i jest informatorem. " 
+         "zuje donuta. Na imię ma Bob i jest informatorem. " 
          "Wie wszystko, co dzieje sie w miescie.", 
          "Bob", "go", 0, 10, 20, 40, 0, 1200), 
-         ("Wysoka, atletyczna kobieta w czarnym skorzany garniturze i masce " 
+         ("Wysoka, atletyczna kobieta w czarnym skorzanym stroju i masce " 
           "przytula sie do ciebie. Nazywa sie Kotka i " 
           "potrafi ukrasc wszystko, czego zapragniesz.", 
           "Kotka", "ja", 1, 60, 60, 60, 4, 2800), 
@@ -428,12 +428,12 @@ gangsters_data_PL = [
           "trzyma torbe. Nazywa sie Ruby i jest paserem. " 
           "Potrafi sprzedac wszystko, co przyniesiesz.", 
           "Ruby", "ja", 1, 30, 30, 45, 0, 1700), 
-        ("Wysoki, blond mezczyzna w niebieskim garniturze i muszce " 
+        ("Wysoki blondyn w niebieskim garniturze i muszce " 
          "usmiecha sie do ciebie. Nazywa sie James i jest szpiegiem. " 
          "Potrafi wpasowac sie w kazda sytuacje.", 
          "James", "go", 0, 50, 50, 70, 6, 3000), 
-         ("Smukla, azjatycka kobieta w bialej sukience i naszyjniku z perlami " 
-          "klania sie do ciebie i podaje ci swoja zimna dlon, ktora sprawia, ze krew ci zamarza", 
+         ("Smukla Azjatka w bialej sukience i naszyjniku z perlami " 
+          "klania ci sie i podaje ci swoja zimna dlon, ktora sprawia, ze krew ci zamarza", 
           "Mei", "ja", 1, 20, 30, 50, 4, 3200),
         ("Tajemniczy gosc nagle klepnie cie w ramie. "
          "Nikt nie wie, jakie umiejetnosci naprawde posiada.", 
@@ -457,11 +457,11 @@ gangsters_data_PL = [
          "Poker-Face", "go", 0, 40, 60, 90, 0, 2300),
 
         # 31-32
-        ("Kaznodzieja Samuel, gruby, lagodnie wygladajacy mezczyzna, ale jego "
-         "lancuszek z roz, sprawil, ze wielu policjantow kosztowalo krew.", 
+        ("Kaznodzieja Samuel to pulchny, dobroduszny czlowiek, ale jego "
+         "rozaniec sprawil, ze juz wielu policjantow gryzie krwawy piach.", 
          "Kaznodzieja Samuel", "go", 0, 55, 60, 10, 0, 2300),
-        ("Mister X, owiniety w czarno, to nieprzejrzysta postac w ciemnosci nocy. "
-         "Podobno doskonale zna metro w Londynie.",
+        ("Mister X, ubrany na czarno, to tajemnicza postac w ciemnosciach nocy. "
+         "Najwyrazniej doskonale zna metro w Londynie.",
         "Mister X", "go", 0, 30, 45, 60, 6, 3000)
 ]
 
