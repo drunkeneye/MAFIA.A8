@@ -17,12 +17,12 @@ Ile punktow (100-1000)?
 Ilu graczy (1-4)?
 Gracz 
 Jak masz na imie?
-Nazwa bandy?
+Nazwa gangu?
 Twoje cechy:
 Sila:
 Inteligencja:
 Brutalnosc:
 Zdrowie:
 Kapital:
-Jestes kobieta czy mezczyzna (k/m)?
+Jestes kobieta czy mezczyzna (K/M)?
 Krotka czy dluga gra (K/D)?
