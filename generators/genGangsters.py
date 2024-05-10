@@ -365,7 +365,7 @@ gangsters_data_PL = [
       "Umie kazdego owinac sobie wokol palca.", 
       "Lola", "ja", 1, 30, 40, 60, 0, 2200), 
     ("Maly grubasek ma okulary w rogowych oprawkach, wasy "
-      "i siedzi przy detonatorze. Nazywa sie Gonzo i jest geniuszem "
+      "i siedzi z detonatorem. Nazywa sie Gonzo i jest geniuszem "
       "w poslugiwaniu sie bombami.", 
       "Gonzo", "go", 0, 10, 10, 80, 0, 1800), 
     ("Mlody, zylasty facet w skorzanej kurtce i okularach przeciwslonecznych "
@@ -373,8 +373,8 @@ gangsters_data_PL = [
      "Uwielbia krasc samochody.", 
      "Spike", "go", 0, 40, 40, 40, 2, 1900), 
      ("Ciemnowlosa panna w czarnym plaszczu i z pistoletem za pasem "
-      "patrzy na ciebie chlodno. Nazywa sie Viper i zawsze trafia w dziesiatke.", 
-      "Viper", "ja", 1, 50, 60, 50, 6, 2600), 
+      "patrzy na ciebie chlodno. Znana jest jako Zmija i zawsze trafia w dziesiatke.", 
+      "Zmija", "ja", 1, 50, 60, 50, 6, 2600), 
 
       # 11-15
       ("Siwowlosy staruszek z laska i cylindrem kiwa ci uprzejmie glowa. "
@@ -393,25 +393,25 @@ gangsters_data_PL = [
         "grzecznie cie wita. Jest prawniczym rekinem i potrafi " 
         "przerzucac sie paragrafami.", 
         "Lisa", "ja", 1, 20, 20, 60, 0, 2100), 
-        ("Szczuply, brazowowlosy mezczyzna w bialej koszuli i krawacie " 
-         "podaje ci reke. Nazywa sie Mike i " 
-         "potrafi wszystkich oszukac.", 
+        ("Szczuply szatyn w bialej koszuli i krawacie " 
+         "podaje ci reke. Nazywa sie Mike " 
+         "i potrafi wszystkich oszukac.", 
          "Mike", "go", 0, 30, 40, 55, 0, 2000), 
 
         # 16-20
         ("Pulchna blondynka w rozowym swetrze macha do ciebie. "
          "Nazywa sie Betty i jest kierowca. " "Potrafi palic gume w kazdym pojezdzie.", 
          "Betty", "ja", 1, 40, 30, 40, 1, 1800), 
-         ("Sredniej wielkosci mezczyzna o czarnych wlosach w szarym garniturze i kapeluszu " 
+         ("Sredniej wielkosci brunet w szarym garniturze i kapeluszu " 
           "pali papierosa. Nazywa sie Sam i byl kiedys detektywem. " 
           "Jest w stanie rozwiazac kazda sprawe.", 
           "Sam", "go", 0, 40, 50, 60, 3, 2400), 
-        ("Mala, drobna kobieta w zoltej sukience i szalach " 
-          "spiewa piosenke. Nazywa sie Tina i jest syrena. " 
+        ("Mala, drobna kobieta w zoltej sukience i szalu " 
+          "spiewa piosenke. Nazywa sie Tina i jest wampem. " 
           "Potrafi oczarowac kazdego.", 
           "Tina", "ja", 1, 20, 40, 50, 0, 1900), 
         ("Gruby, rudowlosy mezczyzna w zielonym swetrze i spodniach " 
-         "zuje donuta. Na imię ma Bob i jest informatorem. " 
+         "zajada sie paczkiem. Na imię ma Bob i jest informatorem. " 
          "Wie wszystko, co dzieje sie w miescie.", 
          "Bob", "go", 0, 10, 20, 40, 0, 1200), 
          ("Wysoka, atletyczna kobieta w czarnym skorzanym stroju i masce " 
@@ -443,15 +443,15 @@ gangsters_data_PL = [
         ("Hazardzista Alf, mistrz salonu gier, nie tylko opanowal sztuke hazardu, "
         "ale ma tez inne talenty. Prawdopodobnie.", 
         "Hazardzista Alf", "go", 0, 5, 80, 65, 0, 2300),
-        ("Barman przedstawia ci Pistoletowego Henry'ego, byc moze nie najmadrzejszego, "
-        "ale zdecydowanie obawianego ze wzgledu na jego akrobatyczne strzaly.", 
+        ("Barman przedstawia ci Pistoletowego Henry'ego, moze nie najmadrzejszego, "
+        "ale zdecydowanie budzacego strach ze wzgledu na swoje akrobatyczne strzaly.", 
         "Pistoletowy Henry", "go", 0, 40, 15, 60, 6, 3100),
         ("Jeff Smart wyglada jakby wyszedl prosto z komiksu, ale nie lekcewaz go. "
          "Potrafi doprowadzic kazdego do szalu.",
          "Jeff Smart", "go", 0, 40, 80, 15, 0, 2300),
-        ("Fred Sprytny, wszechstronny zloczynca, gotow jest poswiecic wszystkich swoich przyjaciol. "
+        ("Fred Clever, wszechstronny zloczynca, gotow jest poswiecic wszystkich swoich przyjaciol. "
          "Oczywiscie za niewielka rekompensate.",
-         "Fred Sprytny", "go", 0, 10, 85, 50, 0, 2300),
+         "Fred Clever", "go", 0, 10, 85, 50, 0, 2300),
         ("Nieprzejrzyste spojrzenie zza nieprzejrzystych okularow. "
          "Poker-Face to wiecej niz tylko zreczny gracz w karty.", 
          "Poker-Face", "go", 0, 40, 60, 90, 0, 2300),
