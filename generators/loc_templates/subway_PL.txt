@@ -1,14 +1,14 @@
 LOCASUBW.gfx
-Stacja metra (U-Bahn)
+Stacja metra
 $72, $af, $ff, $72
 Rogi torow
 Plac Kotzdamer
 Westkreuz
 Kopalnia Rachenbrand
 2,5,7,9
-Jestes na stacji metra. Jest tu sporo ludzi...
+Jestes na stacji metra. Mnostwo ludzi sie tu kreci...
 3
-Zlupic ludzi na peronie
+Oproznic kieszenie ludzi na peronie
 Sprawdzic zawartosc toreb w pociagu
 Wrocic na powierzchnie
 50
@@ -17,9 +17,9 @@ Czy chcesz kupic jeden (T/N)?
 Ktory gangster powinien rabowac?
 Kradniesz...
 ...nic! Bo zostajesz zlapany!
-...torbe, nic wartosciowego!
-...falszywy naszyjnik z perel!
-...kamera! Jest warta 50 dolarow.
+...torebke, nic wartosciowego!
+...naszyjnik z falszywych perel!
+...aparat fotograficzny! Jest wart 50$.
 ...zegarek wart 250$!
 ...portfel z 500$!
 ...diament wart 800$!
