@@ -1,7 +1,7 @@
 LOCAPOLI.gfx
 Komisariat Policji
 $86, $af, $ff, $86
-Komisariat Zachodnie
+Komisariat Zachodni
 Centrala Polnocna
 Posterunek Poludniowy
 Rewir Wschodni
@@ -10,13 +10,13 @@ Co tu robisz? Wynos sie stad!
 4
 Jestem poszukiwanym gangsterem! Chce sie poddac.
 Podkupienie szefa policji
-Proba uwolnienia wieznia gangstera
+Proba uwolnienia uwiezionego gangstera
 Lepiej nic nie robic
 50
 Aha! Za miesiac bezczynnosci
 biore 1000$. Ile miesiecy? 
 Dziekuje bardzo! Prosze wyjsc przez
-tylnie drzwi!...
+tylne drzwi!...
 Aktualnie sa aresztowani...
 Nikt nie jest aresztowany!
 Kogo chcesz uwolnic?
@@ -24,4 +24,4 @@ Straznicy chca
 $ od ciebie!
 Musisz zaplacic albo wyjsc!...
 Straznicy przypadkowo zapominaja
-zamknac jedne z tylnich drzwi...
+zamknac jedne z tylnych drzwi...
