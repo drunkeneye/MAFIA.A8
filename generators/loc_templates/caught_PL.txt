@@ -13,17 +13,17 @@ Zostales zlapany przez policje!
 
 
 50
-Policjant kiwa ci potajemnie glowa.
+Policjant potajemnie skinal ci glowa.
 Pozwala ci odejsc!
 Co teraz?
-  1 - Przekupic policjantow
+  1 - Przekupienie policjantow
   2 - Proba ucieczki
   3 - Poddanie sie
 Co wybierasz? 
-Wymagaja 
+Zadaja 
 $. (T/N)
-Ale gliny wsadza cie do wiezienia!
-Gliny pozwola ci odejsc!
+Gliny i tak wsadza cie do wiezienia!
+Gliny pozwalaja ci odejsc!
 Policjanci zlapali cie!
 Musisz sie poddac!
 Ledwie udalo ci sie uciec!
