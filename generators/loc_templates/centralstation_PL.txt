@@ -10,10 +10,10 @@ Jestes na dworcu w Chicago.
 4
 Odwiedz bar dworcowy
 Kradziez kieszonkowa
-Napad na pocztowy pociag
-Spiesz sie
+Napad na pociag pocztowy
+Chodzmy stad
 50
-Nie ma widoku pocztowego pociagu...
+Nie widac zadnego pociagu pocztowego...
 Masz za malo gangsterow!
 Wkraczasz do wagonu pancernego i
 zaczynasz wlasnie grabic, gdy trzej
