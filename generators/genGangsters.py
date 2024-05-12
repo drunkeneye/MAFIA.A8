@@ -347,11 +347,11 @@ gangsters_data_PL = [
      "Ma glupkowata mine i wydaje sie byc przytloczony. "
      "Moglby byc pomocny.", 
      "Joe 'Mozg'", "go", 0, 30, 30, 20, 1, 1000),
-    ("Do pubu wchodzi facet z tlustymi rudymi wlosami i tania gitara. "
+    ("Do pubu wchodzi gosc z tlustymi rudymi wlosami i tania gitara. "
      "Sam jego widok budzi strach u ludzi. Nie zna litosci. "
      "Eddie Bard", "go", 0, 20, 50, 25, 3, 1700),
-    ("Przy barze stoi szorstka, wygladajaca na okrutna kobieta, ktora posyla "
-     "typowe zabojcze spojrzenia umalowanymi na czarno oczami. "
+    ("Przy barze stoi twarda kobieta, wygladajaca na brutalna, ktora posyla "
+     "zabojcze spojrzenia umalowanymi na czarno oczami. "
      "Nikt nie moze sie jej oprzec.", 
      "Krwawa Mary", "ja", 1, 60, 10, 40, 3, 2300),
 
@@ -382,11 +382,11 @@ gangsters_data_PL = [
        "Zna wszystkie sztuczki.", 
        "Stary Joe", "go", 0, 20, 20, 70, 0, 1600), 
        ("Usmiecha sie do ciebie rudowlosa kobieta w zielonej sukience i kapeluszu. "
-        "Nazywa sie Ginger i przynosi szczescie. " 
+        "Ma na imie Ginger i przynosi szczescie. " 
         "Zawsze ma asa w rekawie.", 
         "Ginger", "ja", 1, 30, 30, 50, 0, 2000),
        ("Olbrzymi, lysy mezczyzna z tatuazem na ramieniu i nozem w reku "
-        "krzywo na ciebie patrzy. Nazywa sie Brutus i szybko radzi sobie " 
+        "warczy na ciebie. Nazywa sie Brutus i szybko radzi sobie " 
         "z kazdym, kto stanie mu na drodze.", 
         "Brutus", "go", 0, 80, 70, 10, 5, 2700),
        ("Ladna brunetka w niebieskim garniturze i okularach "
@@ -394,7 +394,7 @@ gangsters_data_PL = [
         "przerzucac sie paragrafami.", 
         "Lisa", "ja", 1, 20, 20, 60, 0, 2100), 
         ("Szczuply szatyn w bialej koszuli i krawacie " 
-         "podaje ci reke. Nazywa sie Mike " 
+         "podaje ci reke. Uzywa imienia Mike " 
          "i potrafi wszystkich oszukac.", 
          "Mike", "go", 0, 30, 40, 55, 0, 2000), 
 
@@ -406,36 +406,36 @@ gangsters_data_PL = [
           "pali papierosa. Nazywa sie Sam i byl kiedys detektywem. " 
           "Jest w stanie rozwiazac kazda sprawe.", 
           "Sam", "go", 0, 40, 50, 60, 3, 2400), 
-        ("Mala, drobna kobieta w zoltej sukience i szalu " 
+        ("Mala, drobna kobieta w zoltej sukni i szalu " 
           "spiewa piosenke. Nazywa sie Tina i jest wampem. " 
           "Potrafi oczarowac kazdego.", 
           "Tina", "ja", 1, 20, 40, 50, 0, 1900), 
-        ("Gruby, rudowlosy mezczyzna w zielonym swetrze i spodniach " 
+        ("Otyly rudzielec w zielonym swetrze i spodniach " 
          "zajada sie paczkiem. Na imię ma Bob i jest informatorem. " 
          "Wie wszystko, co dzieje sie w miescie.", 
          "Bob", "go", 0, 10, 20, 40, 0, 1200), 
          ("Wysoka, atletyczna kobieta w czarnym skorzanym stroju i masce " 
-          "przytula sie do ciebie. Nazywa sie Kotka i " 
-          "potrafi ukrasc wszystko, czego zapragniesz.", 
+          "przytula sie do ciebie. Nazywa sie Kotka " 
+          "i potrafi ukrasc wszystko, czego zapragniesz.", 
           "Kotka", "ja", 1, 60, 60, 60, 4, 2800), 
 
         # 21-25
-        ("Maly, szczuply mezczyzna w brazowym plaszczu i szalach " 
+        ("Niski, szczuply mezczyzna w brazowym plaszczu i szaliku " 
          "trzyma walizke. Nazywa sie Tim i jest ekspertem od materialow wybuchowych. " 
-         "Potrafi wszystko wysadzic w powietrze.", 
+         "Umie wszystko wysadzic w powietrze.", 
          "Tim", "go", 0, 20, 40, 40, 6, 1900), 
-         ("Sredniej wielkosci kobieta o ciemnej cerze w czerwonym plaszczu i kapeluszu " 
-          "trzyma torbe. Nazywa sie Ruby i jest paserem. " 
-          "Potrafi sprzedac wszystko, co przyniesiesz.", 
+         ("Sredniej wielkosci ciemnoskora kobieta w czerwonym plaszczu i kapeluszu " 
+          "trzyma torbe. Nazywa sie Ruby i jest paserka. " 
+          "Moze sprzedac wszystko, co przyniesiesz.", 
           "Ruby", "ja", 1, 30, 30, 45, 0, 1700), 
         ("Wysoki blondyn w niebieskim garniturze i muszce " 
-         "usmiecha sie do ciebie. Nazywa sie James i jest szpiegiem. " 
+         "usmiecha sie do ciebie. Na imie ma James i jest szpiegiem. " 
          "Potrafi wpasowac sie w kazda sytuacje.", 
          "James", "go", 0, 50, 50, 70, 6, 3000), 
-         ("Smukla Azjatka w bialej sukience i naszyjniku z perlami " 
-          "klania ci sie i podaje ci swoja zimna dlon, ktora sprawia, ze krew ci zamarza", 
+         ("Smukla Azjatka w bialej sukience i naszyjniku z perel " 
+          "klania ci sie i podaje swoja zimna dlon, ktora sprawia, ze krew ci zamarza", 
           "Mei", "ja", 1, 20, 30, 50, 4, 3200),
-        ("Tajemniczy gosc nagle klepnie cie w ramie. "
+        ("Tajemniczy gosc nagle klepie cie w ramie. "
          "Nikt nie wie, jakie umiejetnosci naprawde posiada.", 
          "Garry G", "go", 0, 30, 10, 60, 0, 2500),
 
@@ -452,7 +452,7 @@ gangsters_data_PL = [
         ("Fred Clever, wszechstronny zloczynca, gotow jest poswiecic wszystkich swoich przyjaciol. "
          "Oczywiscie za niewielka rekompensate.",
          "Fred Clever", "go", 0, 10, 85, 50, 0, 2300),
-        ("Nieprzejrzyste spojrzenie zza nieprzejrzystych okularow. "
+        ("Skryte spojrzenie zza ciemnych okularow. "
          "Poker-Face to wiecej niz tylko zreczny gracz w karty.", 
          "Poker-Face", "go", 0, 40, 60, 90, 0, 2300),
 
