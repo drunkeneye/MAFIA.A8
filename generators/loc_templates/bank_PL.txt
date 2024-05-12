@@ -8,7 +8,7 @@ Continental Illinois Bank
 0,2,6,8
 Dzien dobry panu! Czym moge sluzyc?
 3
-Nie gadaj tylko szybko oddaj forse!
+Nie gadaj, tylko szybko oddaj forse!
 Niepostrzezenie rozejrzyj sie za alarmami i wlam sie noca
 Odejdz
 50
@@ -24,6 +24,6 @@ Za goraco! Uciekasz!
 Udalo ci sie!
 Cholera!... Cos poszlo nie tak!
 Ktos nadchodzi!!
-Najpierw badz mafijna plotka!
+Musisz miec range co najmniej 'pionek mafii'!
 Twoj lup wynosi
 Ponadto znajdujesz 500kg zlota...
