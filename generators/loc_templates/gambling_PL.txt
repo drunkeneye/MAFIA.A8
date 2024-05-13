@@ -1,21 +1,21 @@
 LOCAGAMB.gfx
-Kasyno
+Szulernia
 $1e, $af, $00, $1e
-Pokerface Plaza
-Zockotopia
-Jokers Valhalla
-Casino Carlos
+Pokerface Den
+Hazardotopia
+Jokerowy Raj
+Kasyno Carlos
 2,4,5,7
 Ej, kolego, co powiesz na gre? Karty? Ruletka?
 2
 OK, szefie, co polecasz?
 Nie, nie! Ja gram tylko w makao!
 50
-Wybierz, przyjacielu
+Wybierz, przyjacielu:
   1 - Poker
   2 - Black Jack
   3 - Ruletka
-Co wybierasz?
+Jaka decyzja?
 Masz
 Twoj zaklad (0-
 Przechodzisz do stolu gry...
