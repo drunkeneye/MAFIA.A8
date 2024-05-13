@@ -6,11 +6,11 @@ Centrala Polnocna
 Posterunek Poludniowy
 Rewir Wschodni
 2,4,5,9
-Co tu robisz? Wynos sie stad!
+Co pan tu robi? Prosze sie stad wynosic!
 4
-Jestem poszukiwanym gangsterem! Chce sie poddac.
-Podkupienie szefa policji
-Proba uwolnienia uwiezionego gangstera
+'Jestem poszukiwanym gangsterem! Chce sie poddac.'
+Przekup szefa policji
+Sprobuj uwolnic uwiezionego gangstera
 Lepiej nic nie robic
 50
 Aha! Za miesiac bezczynnosci
