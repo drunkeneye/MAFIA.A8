@@ -1,17 +1,17 @@
 LOCAHIDE.gfx
-Skrytka (Motel, kamienica)
+Kryjowka (Motel, kamienica)
 $02, $af, $ff, $02
 Lozko i buleczki
 Zlote Wlosy Ramy
 Hotel Czarny Lis
 Hotel Parkowy
 1,5,8,9
-Ach, klient! Czego sobie zyczy pan?
+Ach, klient! Czego pan sobie zyczy?
 4
-Zakwaterowanie, ale szybko! Nie chce byc przeszkadzany!
+Zakwaterowanie, ale szybko! Nie chce, by mi przeszkadzano!
 Chce zaplacic czynsz!
-Zaczac wojne gangow.
-Nie mam zyczenia. A pan?
+Zacznij wojne gangow.
+Nie chce niczego. A pan?
 50
 Juz tu mieszkasz!
 Brak wolnych miejsc!
@@ -23,7 +23,7 @@ Platnosc z gory!
 Masz tu schronienie na jeszcze
  miesiecy!
 Ile miesiecy chcesz wynajac? 
-Dzien dobry, panie!
+Dzien dobry panu!
 Wojna gangow!
 Ale tu nikt nie mieszka...
 Dzwonisz do 
@@ -36,7 +36,7 @@ Oprozniasz skrytke z
 i zdobywasz
 Dodatkowo zabiera twoje alkohole!
 Dodatkowo zabierasz alkohole!
-I niszczy samochod!
-I zniszczyc jego samochod!
-You cannot rent the flat more than 
-3 years in advance! 
+I rozwala twoje auto w kawalki!
+I rozwalasz jego auto w kawalki!
+Nie mozesz wynajac mieszkania na wiecej 
+niz 3 lata z gory!
