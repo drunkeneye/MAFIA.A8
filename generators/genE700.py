@@ -281,8 +281,8 @@ weaponNames_EN = ['Hands', 'Knife', 'Club',
                                             'Rifle', 'Machine Gun', 'Grenades']
 carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
-rankNames_PL = ['Poczatkujacy', 'Zbir', 'Mafijna plotka',
-                             'Zlodziej', 'Lajdak', 'Mafioso', 'Postrach glin', 'Morderca',
+rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek mafii',
+                             'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
                             'Szef gangsterow', 'Prawa reka', 'Ojciec chrzestny']
 weaponNames_PL = ['Rece', 'Noz', 'Palka',
                         'Lancuch', 'Shuriken', 'Rewolwer',
