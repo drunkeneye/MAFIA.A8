@@ -14,19 +14,19 @@ $bf, $af, $00, $bf
 50
 Twoja instytucja kredytowa kwitnie, 
 a ty zarabiasz
-$ Dochody!
+$!
 W twojej instytucji kredytowej panuje
 nudny marazm...
-Masz jeszcze
-$ Dlugow, i zostalo 
-ci
- miesiecy, zeby je splacic!
-Kredytowy rekin wyslal swoich 
-windykatorow aby cie namowili...
+Nadal masz jeszcze
+$ dlugu, i zostalo 
+ci tylko
+ mies. na jego splate!
+Rekin kredytowy nasyla na ciebie 
+swoich windykatorow...
 Windykatorzy
-Ci faceci zabieraja cale twoje 
+Goscie zabieraja wszystkie twoje 
 pieniadze i znikaja...
-Udalo ci sie ich odpedzic. 
+Tym razem jeszcze udalo ci sie ich przepedzic. 
 Ale wkrotce znow cie odwiedza, 
 by odebrac swoje pieniadze...
 Gra bedzie kontynuowana 
