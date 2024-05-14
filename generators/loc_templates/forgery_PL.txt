@@ -1,5 +1,5 @@
 LOCAFORG.gfx
-Eddie Falszerz
+Falszerz Eddie
 $ba, $00, $00, $ba
 W ciemnej piwnicy 
 W ciemnej piwnicy  
@@ -8,7 +8,7 @@ W ciemnej piwnicy
 3,3,3,3
 No, mlody, co cie boli? Czy moge ci pomoc?
 3
-Tak, czy mozesz mi zrobic nowy paszport? Musi byc dobry, jasne?
+Tak, mozesz mi zrobic nowy paszport? Musi byc dobry, jasne?
 Czy jeszcze drukujesz banknoty? Moze sprzedasz mi kilka?
 Dzieki, Eddie, moze nastepnym razem. Czesc!
 50
@@ -16,9 +16,9 @@ Masz juz falszywy paszport!
 Dobrze, synku. 
 Dla ciebie 
 i twoich gangsterow 
-to bedzie 
-Kupic (T/N)?
-Oto, jeszcze swieze, he, he!
+to bedzie smieszna kwota 
+Chcesz kupic (T/N)?
+Mam tutaj, jeszcze swieze, he, he!
 Masz juz falszywe banknoty!
 Nng... bardzo niechetnie! Ile dolarow
 chcesz zainwestowac (0-
