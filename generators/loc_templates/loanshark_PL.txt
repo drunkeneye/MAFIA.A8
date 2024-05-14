@@ -4,9 +4,9 @@ $4a, $af, $ff, $4a
 U Petera
 Bracia Dynamit
 Dom Pieniezny Hansel
-Szybko Szybko
+Raz Dwa
 1,2,7,8
-Dzien dobry, w czym moge pomoc?
+Dzien dobry, czy moge panu pomoc?
 6
 Tak. Potrzebuje troche gotowki!
 Nie, nie! Chce tylko splacic dlugi!
