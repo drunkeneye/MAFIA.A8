@@ -20,14 +20,14 @@ $ za beczke!
 Ile chcesz oddac (0-
 (chciwie) Zdobadz wiecej!
 Co? Alkohol? To przeciez zabronione!
-Mam cos, ale cena za beczke to
+Mam cos, ale cena za beczke to 
 Wroc, gdy bedziesz mogl przewiezc
 towar!
 Ile chcesz (0-
 Jako 
  nie mozesz jeszcze
 rekrutowac wlasnych ludzi!
-Najpierw musisz znalezc schronienie 
+Najpierw musisz znalezc schronienie
 dla swoich gangsterow!
 Mozesz zatrudnic maksymalnie 7 
 dodatkowych gangsterow!
@@ -35,13 +35,13 @@ Nikogo tu nie ma.
 Masz teraz 
  gangsterow!
 Jestes jeszcze zbyt niedoswiadczony!
-Niestety, nic dla ciebie!
+Niestety, nie mam nic dla ciebie!
 Slyszalem cos... ale to
 kosztuje 
 $. Chcesz (T/N)?
 W pocztowym pociagu wkrotce bedzie
 duza partia diamentow!
-Oddzial bankowy Klomerz wkrotce 
+Oddzial banku Continental wkrotce 
 otrzyma 500 kg zlotych sztabek!
 Przez nasze miasto przejedzie 
 transport pieniedzy, to bedzie 
@@ -53,5 +53,5 @@ Psst... Mam bardzo wazne
 zadanie! Burmistrz musi byc
 wyeliminowany, ale ma ochrone!
 Za
-$ mozesz
-zatrudnic (T/N)?
+$ mozesz zatrudnic 
+(T/N)?
