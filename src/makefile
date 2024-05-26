@@ -23,7 +23,7 @@ AUTOXEX=./output/autorun.xex
 EXO=./output/exomized
 AUTOEXO=./output/exomizedauto
 
-FREE_SPACE = $(shell atr $(ATR) ls -l | grep free)
+FREE_SPACE = $(shell $(ATR_BIN) $(ATR) ls -l | grep free)
 
 
 all: clean prepare_atr_folder\

@@ -1,10 +1,10 @@
 LOCABANK.gfx
 Bank/Postamt
 $e6, $af, $ff, $e6
-Klomerzbank
-Doisch Bank
-Spielkasse
-Raffelwaffel 24
+Continental Bank
+First National Bank of Chicago
+Harris Trust&Savings Bank
+The Northern Trust Company
 0,2,6,8
 Guten Tag, mein Herr! Was ist ihr Begehr?
 3

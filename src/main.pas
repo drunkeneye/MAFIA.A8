@@ -64,13 +64,13 @@ end;
 {$I console.pas}
 {$I locations.pas}
 {$I player.pas}
-{$I helpersGame.pas}
+{$I helpers_game.pas}
 {$I sprites.pas}
 
 {$I fight_utils.pas}
 {$I fight_ai.pas}
 {$I fight.pas}
-{$I helpersFight.pas}
+{$I helpers_fight.pas}
 
 {$I locations/armsdealer.pas}
 {$I locations/bank.pas}
@@ -90,7 +90,7 @@ end;
 
 {$I map.pas}
 // {$ I bitmap.pas}
-{$i setupGame.pas}
+{$i setup_game.pas}
 
 {$I updates.pas}
 
