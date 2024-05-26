@@ -336,27 +336,27 @@ gangsters_data_EN = [
 
 gangsters_data_PL = [
     # 1-5
-    ("Szczuply facet w czarnym garniturze smierdzi trupami i gapi sie na ciebie "
+    ("Wychudly facet w czarnym garniturze smierdzi trupami i gapi sie na ciebie "
      "swymi wylupiastymi oczami. Nazywa sie Johnny i chce isc z toba grzebac ludzi.", 
      "Johnny", "go", 0, 40, 50, 25, 5, 2000),
-    ("Przebiegly typek w przechodzonych ciuchach prosi cie o kupienie mu piwa. "
+    ("Przebiegly typek w podniszczonych ciuchach prosi cie o kupienie mu piwa. "
      "Ludzie mowia na niego Killer Jack i tak tez chce byc nazywany. "
      "Pomoze ci za niewielka oplata.", 
      "Killer Jack", "go", 0, 30, 30, 45, 2, 1500),
-    ("W kacie chudy koles probuje czytac wczorajsza gazete. "
+    ("W kacie jakis chudzielec probuje czytac wczorajsza gazete. "
      "Ma glupkowata mine i wydaje sie byc przytloczony. "
      "Moglby byc pomocny.", 
      "Joe 'Mozg'", "go", 0, 30, 30, 20, 1, 1000),
     ("Do pubu wchodzi gosc z tlustymi rudymi wlosami i tania gitara. "
      "Sam jego widok budzi strach u ludzi. Nie zna litosci. "
      "Eddie Bard", "go", 0, 20, 50, 25, 3, 1700),
-    ("Przy barze stoi twarda kobieta, wygladajaca na brutalna, ktora posyla "
-     "zabojcze spojrzenia umalowanymi na czarno oczami. "
+    ("Przy barze stoi kobieta, wyglada na twarda i brutalna. "
+     "Posyla zabojcze spojrzenia umalowanymi na czarno oczami. "
      "Nikt nie moze sie jej oprzec.", 
      "Krwawa Mary", "ja", 1, 60, 10, 40, 3, 2300),
 
     # 6-10
-    ("Wysoki, muskularny facet z blizna na twarzy i zlotym zebem "
+    ("Wysoki, muskularny koles z blizna na twarzy i zlotym zebem "
      "usmiecha sie do ciebie. Nazywa siebie Duzym Tonym. "
      "Zawsze ma przy sobie kij bejsbolowy.",
      "Duzy Tony", "go", 0, 70, 20, 35, 4, 2500), 
@@ -390,10 +390,10 @@ gangsters_data_PL = [
         "z kazdym, kto stanie mu na drodze.", 
         "Brutus", "go", 0, 80, 70, 10, 5, 2700),
        ("Ladna brunetka w niebieskim garniturze i okularach "
-        "grzecznie cie wita. Jest prawniczym rekinem i potrafi " 
-        "przerzucac sie paragrafami.", 
+        "grzecznie cie wita. Jest milosniczka prawa i potrafi " 
+        "z latwoscia rzucac paragrafami.",
         "Lisa", "ja", 1, 20, 20, 60, 0, 2100), 
-        ("Szczuply szatyn w bialej koszuli i krawacie " 
+        ("Szczuply szatyn w bialej koszuli i w krawacie " 
          "podaje ci reke. Uzywa imienia Mike " 
          "i potrafi wszystkich oszukac.", 
          "Mike", "go", 0, 30, 40, 55, 0, 2000), 
@@ -421,11 +421,11 @@ gangsters_data_PL = [
 
         # 21-25
         ("Niski, szczuply mezczyzna w brazowym plaszczu i szaliku " 
-         "trzyma walizke. Nazywa sie Tim i jest ekspertem od materialow wybuchowych. " 
+         "trzyma walizke. To Tim, ekspert od materialow wybuchowych. " 
          "Umie wszystko wysadzic w powietrze.", 
          "Tim", "go", 0, 20, 40, 40, 6, 1900), 
          ("Sredniej wielkosci ciemnoskora kobieta w czerwonym plaszczu i kapeluszu " 
-          "trzyma torbe. Nazywa sie Ruby i jest paserka. " 
+          "nosi ze soba torbe. Nazywa sie Ruby i jest paserka. " 
           "Moze sprzedac wszystko, co przyniesiesz.", 
           "Ruby", "ja", 1, 30, 30, 45, 0, 1700), 
         ("Wysoki blondyn w niebieskim garniturze i muszce " 
@@ -450,7 +450,7 @@ gangsters_data_PL = [
          "Potrafi doprowadzic kazdego do szalu.",
          "Jeff Smart", "go", 0, 40, 80, 15, 0, 2300),
         ("Fred Clever, wszechstronny zloczynca, gotow jest poswiecic wszystkich swoich przyjaciol. "
-         "Oczywiscie za niewielka rekompensate.",
+         "Za malym wynagrodzeniem, rzecz jasna.",
          "Fred Clever", "go", 0, 10, 85, 50, 0, 2300),
         ("Skryte spojrzenie zza ciemnych okularow. "
          "Poker-Face to wiecej niz tylko zreczny gracz w karty.", 
