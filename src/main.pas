@@ -130,6 +130,13 @@ begin;
         cur_loc_str := Pointer(cur_loc_str) + $28;
     end;
     waitForKey();
+    ShowLocationHeader;
+    for k := 0 to 14 do
+    begin 
+        CRT_Writeln(cur_loc_str);
+        cur_loc_str := Pointer(cur_loc_str) + $28;
+    end;
+    waitForKey();
 end; 
 
 
@@ -185,9 +192,6 @@ begin
     //     waitForKey();
     // end;
 
-    // plOpportunity[currentPlayer] := 255;
-    // plNewPoints[currentPlayer] := 70;
-    // plMoney[currentPlayer] := 5550005;
 
     msx.player:=pointer(rmt_player);
     msx.modul:=pointer(rmt_modul);
@@ -284,6 +288,13 @@ begin
                 // overview page
                 if byte(ch) = $65 then 
                     addMoney(10000);
+                if byte(ch) = $6e then 
+                begin;
+                    plPoints[currentPlayer] := gamePoints+10;
+                    plMoneyTransporter[currentPlayer] := 1;
+                    plKilledMajor[currentPlayer] := 1;
+                end;
+
                 if byte(ch) = $20 then begin;
                     if playMusic = 1 then 
                     begin 
@@ -423,9 +434,9 @@ begin
                 CRT_WriteCentered_LocStr(8, 36);
                 CRT_WriteCentered_LocStr(9, 37);
                 if gangsterSex[tmp] = 1 then 
-                    finalfname := 'FINALWAPAPL'
+                    finalfname := 'FINAWPICAPL'
                 else
-                    finalfname := 'FINALMAPAPL';
+                    finalfname := 'FINAMPICAPL';
                 break;
             end; 
         end;
@@ -444,7 +455,7 @@ begin
             end; 
         end;
         CRT_WriteCentered_LocStr(7+currentChoice+2, 39);
-        finalfname := 'FINALGAPAPL';
+        finalfname := 'FINAGPICAPL';
     end; 
     waitForKey();
 
@@ -453,10 +464,29 @@ begin
     Waitframes(10);
 
     // DisableVBLI;
-    loadxAPL (finalfname, Pointer($2000-6));
+    loadxAPL (finalfname, Pointer($3000-6));
+
+
+    // this will be around $9890 right now
+    finalfname := 'FMUSB800APL';
+    loadxAPL(finalfname, pointer($b800));
+    finalfname := 'PLAYB000APL';
+    loadxAPL(finalfname, pointer($b000));
+
+    // http://atariki.krap.pl/index.php/CMC_(format_pliku)
+    asm
+        lda #$70
+        ldx #$00  ; low byte of music
+        ldy #$b8 ; high byte <-- CHANGE TOO if music addr changes
+        jsr $b000+3
+        lda #$00
+        ldx #$00
+        jsr $b000+3
+    end;
+
     asm
     lpend:
-        jsr $5800;
+        jsr $6800;
         jmp lpend
     end;
     

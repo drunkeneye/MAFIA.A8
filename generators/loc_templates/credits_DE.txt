@@ -13,6 +13,21 @@ $70, $af, $0e, $70
  
  
 50
+Es ist das Jahr 1930 in Chicago.
+Alkohol ist verboten, das Verbrechen 
+blueht auf. Ladenbesitzer leben in 
+staendiger Angst vor Ueberfaellen und
+Erpressungen, die immer haeufiger 
+werden. Jeder kann sich illegale 
+Schusswaffen besorgen, und die 
+korrupte Polizei ist keine Hilfe. 
+Du bist ein Niemand, der gerade aus
+dem Gefaengnis entlassen wurde, und
+selbst die Hotdogverkaeufer lachen
+ueber dich. Es reicht. Du willst die
+Herrschaft ueber die Unterwelt. Aber 
+der Weg zum Thron der Mafia ist lang 
+und hart. Wirst du es schaffen?
 A port of a C64 game by Igelsoft
 
 Programmed by drunkeneye

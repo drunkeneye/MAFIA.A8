@@ -57,7 +57,9 @@ end;
 
 var
     D_LOGO: TString = 'LOGO    APL';
-    D_TITLE: TString = 'TITLEGAPAPL';
+    D_TITLE: TString = 'TITLEPICAPL';
+    D_MPLAY: TString = 'PLAYB000APL';
+    D_MUS: TString = 'TMUSB800APL';
     locfname:   TString;
 
 var 
@@ -116,13 +118,39 @@ begin;
             CRT_Write('NO XBIOS!'~);
         until false;
 
+
     show_logo();
-    xbunAPL(D_TITLE, pointer($2000-6));
+    xbunAPL(D_TITLE, pointer($3000-6));
     // waitframes somehow do not work whatever
     // just load logo again, fin.
     // Delay(3000);
+    xbunAPL(D_MPLAY, pointer(SAP_PLAYER));
+    xbunAPL(D_MUS, pointer($b800));
+    // http://atariki.krap.pl/index.php/CMC_(format_pliku)
+    // repeat; until false;
     asm
-        jsr $5800
+        lda #$70
+        ldx #$00  ; low byte of music
+        ldy #$b8  ; high byte
+        jsr SAP_PLAYER_3
+        lda #$00
+        ldx #$00
+        jsr SAP_PLAYER_3
+    end;
+
+    asm
+        jsr $6800
+    end;
+
+    // hopefully this will stop music again
+    asm
+        lda #$70
+        ldx #$00  ; low byte of music
+        ldy #$b8  ; high byte
+        jsr SAP_PLAYER_3
+        lda #$00
+        ldx #$00
+        jsr SAP_PLAYER_3
     end;
 
     finalfname := 'MAIN    XEX';

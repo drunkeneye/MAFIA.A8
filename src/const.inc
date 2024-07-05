@@ -29,3 +29,9 @@ DL_MAP_ADR = $fc80; // $1f bytes as is
 
  // to load graphics
 XEX_ADDRESS = $2000-6; //?
+
+
+// new: sap 
+SAP_PLAYER = $b000;
+SAP_PLAYER_3 = $b003;
+SAP_PLAYER_6 = $b006;

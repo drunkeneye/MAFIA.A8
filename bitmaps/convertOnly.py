@@ -3,8 +3,7 @@ import shutil
 from pathlib import Path
 from glob import glob
 
-rastaconv_command = './rastaconv input.png /distance=yuv /init=smart /dither=chess /filter=box /dither_val=0.1 /dither_rand=4.0 /s=32768 /save=100000 /max_evals=256000000'
-#rastaconv_command = './rastaconv input.png /h=200 /pal=laoo /filter=box /s=8192 /save=99999 /max_evals=200000'
+
 
 def replace_ds_by_byte(file_path):
     with open(file_path, "r") as infile:
@@ -22,42 +21,38 @@ def replace_ds_by_byte(file_path):
 
 
 # Function to iterate over PNG files in pics/ directory
-def process_png_files():
+def process_png_files(pdir):
     outputs_dir = Path("outputs")
     outputs_dir.mkdir(exist_ok=True)
-    pics_dir = Path("./images")
 
-    for png_file in pics_dir.glob("*.png"):
-        print ("Processing", png_file)
-        # shutil.copy(png_file, "RastaConverter/input.png")
-        # os.chdir("./RastaConverter")
-
-        # # Run the rastaconv command
-        # os.system(rastaconv_command)
-        # os.chdir("..")
-        
-        # Create a directory in outputs/
-
-        output_subdir = outputs_dir / ("output_" + png_file.name)
-        output_subdir.mkdir(exist_ok=True)
+    output_subdir = outputs_dir / ("output_" + pdir)
+    output_subdir.mkdir(exist_ok=True)
  
-        # Copy files from Generator/ to outputs/<name of the png file>/
-        for generator_file in Path("Generator").glob("*"):
-            shutil.copy(generator_file, output_subdir)
+    # Copy files from Generator/ to outputs/<name of the png file>/
+    for generator_file in Path("Generator").glob("*"):
+        shutil.copy(generator_file, output_subdir)
 
-        # modify .ds to be .byte, else we get relocation blocks in .xex
+    for generator_file in glob(f"{pdir}/*"):
+        shutil.copy(generator_file, output_subdir)
 
-        os.chdir(output_subdir)
-        replace_ds_by_byte("output.png.pmg")
-        os.system("make " + png_file.stem + ".xex")
-        shutil.copy(png_file.stem + ".xex", f"../../../assets/{png_file.stem}.xex")
-        os.chdir("../..")
+    # modify .ds to be .byte, else we get relocation blocks in .xex
+
+    os.chdir(output_subdir)
+    replace_ds_by_byte("output.png.pmg")
+    os.system("make " + pdir + ".xex")
+    shutil.copy(pdir + ".xex", f"../../../assets/{pdir}.xex")
+    os.chdir("../..")
 
 if __name__ == "__main__":
-    process_png_files()
-    # f..k
-    # special behandlung for finalmap.gfx, because xbiosloadfile doesnt work for me there
-    shutil.copy("../assets/finalwap.xex", "../assets/finalwap.gfx")
-    shutil.copy("../assets/finalmap.xex", "../assets/finalmap.gfx")
-    shutil.copy("../assets/finalgap.xex", "../assets/finalgap.gfx")
-#    shutil.copy("../assets/finalg.xex", "../assets/finalgap.gfx")
+    # find folders 
+    images = glob("*/output.png.mic")
+    for i in images:
+        pdir = os.path.dirname(i)
+        process_png_files(pdir)
+
+        # f..k
+        # special behandlung for finalmap.gfx, because xbiosloadfile doesnt work for me there
+        shutil.copy(f"../assets/{pdir}.xex", f"../assets/{pdir}pic.gfx")
+
+#
+

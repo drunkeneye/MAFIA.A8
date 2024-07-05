@@ -19,7 +19,10 @@ begin
     // update points, TODO: weighting is missing, maybe drop it altogether
     oldRank := plRank[currentPlayer];
     if plNewPoints[currentPlayer] > 0 then begin
-        plPoints[currentPlayer] := plPoints[currentPlayer] + plNewPoints[currentPlayer]
+        plPoints[currentPlayer] := plPoints[currentPlayer] + plNewPoints[currentPlayer];
+        // add some slack (10 pt) just in case player gets some minus points, else it would
+        // be tough fight to get exactly to gamePoints
+        if plPoints[currentPlayer] > gamePoints+10 then plPoints[currentPlayer] := gamePoints+10; 
     end
     else 
     begin

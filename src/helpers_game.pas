@@ -17,7 +17,6 @@ end;
 procedure addPoints (pt: byte);
 begin
     plNewPoints[currentPlayer] := plNewPoints[currentPlayer] + pt;
-    if plNewPoints[currentPlayer] > 100 then plNewPoints[currentPlayer] := 100; 
 end;
 
 

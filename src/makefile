@@ -48,10 +48,10 @@ compile_main:
 	$(MADS) $(ASM) -x -i:$(BASE) -o:$(XEX)
 	cp $(XEX) ./atr.assets/MAIN.XEX
 
-compile_final:
-	$(MP) final.pas -code:0c00 -o ./output/final.a65  
-	$(MADS) ./output/final.a65 -x -i:$(BASE) -o:./output/final.xex
-	cp ./output/final.xex ./atr.assets/final.xex
+# compile_final:
+# 	$(MP) final.pas -code:0c00 -o ./output/final.a65  
+# 	$(MADS) ./output/final.a65 -x -i:$(BASE) -o:./output/final.xex
+# 	cp ./output/final.xex ./atr.assets/final.xex
 
 
 build_atr:
@@ -72,6 +72,7 @@ prepare_atr_folder:
 	mkdir -p atr.assets
 	cp atr/xbios.com $(ATR_ASSETS)
 	cp ../assets/gangstas.dat_$(LOCATION) $(ATR_ASSETS)/gangstas.dat
+	echo cp ../assets/final.xex $(ATR_ASSETS)/final.xex
 	dd if=/dev/zero of=./atr.assets/SAVEGAME.DAT bs=256 count=4
 
 
@@ -89,8 +90,10 @@ ASSET_FILES := acombmap.gfx \
 	wantefmf.gfx  wantefms.gfx\
 	afmapfnt.gfx  afmapscr.gfx \
 	safeclmf.gfx   safeclms.gfx \
-	finalmap.gfx finalwap.gfx finalgap.gfx \
-	titlegap.gfx 
+	finampic.gfx finawpic.gfx finagpic.gfx \
+	fmusb800.gfx tmusb800.gfx \
+	playb000.gfx \
+	titlepic.gfx 
 
 LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCABANK.gfx_$(LOCATION)  \

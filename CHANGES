@@ -1,0 +1,65 @@
+diff --git a/generators/loc_templates/bank_PL.txt b/generators/loc_templates/bank_PL.txt
+index e9de3f6..c24cf3d 100644
+--- a/generators/loc_templates/bank_PL.txt
++++ b/generators/loc_templates/bank_PL.txt
+@@ -27 +27 @@ Ktos nadchodzi!!
+-Musisz miec range co najmniej 'pionek mafii'!
++Musisz byc przynajmniej 'pionekiem'!
+diff --git a/generators/loc_templates/centralstation_PL.txt b/generators/loc_templates/centralstation_PL.txt
+index f87f809..705793c 100644
+--- a/generators/loc_templates/centralstation_PL.txt
++++ b/generators/loc_templates/centralstation_PL.txt
+@@ -16 +16 @@ Chodzmy stad
+-Nie widac zadnego pociagu pocztowego...
++Nie widac zadnego pociagu pocztowego..
+diff --git a/generators/loc_templates/credits_PL.txt b/generators/loc_templates/credits_PL.txt
+index f1592a1..1d3dceb 100644
+--- a/generators/loc_templates/credits_PL.txt
++++ b/generators/loc_templates/credits_PL.txt
+@@ -15,0 +16,15 @@ $70, $af, $0e, $70
++It is the year 1930 in Chicago. 
++Alcohol is prohibited, crime thrives. 
++Store  owners live in constant fear of
++robberies and extortions, which are 
++becoming more frequent. Anyone can 
++obtain illegal firearms, and the 
++corrupt police are no help. You are a
++nobody just released from prison, 
++even hot dog vendors laugh at you. 
++Enough is enough. You crave control of
++the underworld. But the path to the 
++mafia throne is long and hard. 
++
++Will you succeed?
++
+diff --git a/generators/loc_templates/hideout_PL.txt b/generators/loc_templates/hideout_PL.txt
+index 5651e3e..d9f5428 100644
+--- a/generators/loc_templates/hideout_PL.txt
++++ b/generators/loc_templates/hideout_PL.txt
+@@ -41 +41 @@ I rozwalasz jego auto w kawalki!
+-Nie mozesz wynajac mieszkania na wiecej 
++Nie wynajmiesz mieszkania na wiecej.
+diff --git a/generators/loc_templates/store_PL.txt b/generators/loc_templates/store_PL.txt
+index 584d710..12c4eb9 100644
+--- a/generators/loc_templates/store_PL.txt
++++ b/generators/loc_templates/store_PL.txt
+@@ -12 +12 @@ Dawaj pieniadze! W przeciwnym razie odpale tu fajerwerki!
+-Prosze, prosze kilka dolarow dla mej chorej mamusi! Jest taaaaka biedna!
++Prosze, kilka dolarow dla mej chorej mamusi! Jest taaaka biedna!
+@@ -21 +21 @@ Zatroszcz sie sam o swoja staruszke!
+-Jack z Blizna bedzie tym bardzo zainteresowany... 
++Jack z Blizna bedzie zainteresowany..
+diff --git a/generators/loc_templates/subway_PL.txt b/generators/loc_templates/subway_PL.txt
+index d5cd993..e17ce4a 100644
+--- a/generators/loc_templates/subway_PL.txt
++++ b/generators/loc_templates/subway_PL.txt
+@@ -22 +22 @@ Kradniesz...
+-...aparat fotograficzny! Jest wart 50$.
++...aparat fotograficzny!Jest wart 50$.
+diff --git a/generators/loc_templates/updates_PL.txt b/generators/loc_templates/updates_PL.txt
+index 25a44af..57cd488 100644
+--- a/generators/loc_templates/updates_PL.txt
++++ b/generators/loc_templates/updates_PL.txt
+@@ -29 +29 @@ pieniadze i znikaja...
+-Tym razem jeszcze udalo ci sie ich przepedzic. 
++Tym razem znowu ich przepedziles.
