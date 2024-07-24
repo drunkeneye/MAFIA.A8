@@ -13,26 +13,26 @@ $70, $af, $0e, $70
  
  
 50
-Chicago, rok 1930. Alkohol jest
-zakazany, przestepczosc kwitnie.
+Chicago, rok 1930.  Alkohol jest
+zakazany,  przestepczosc kwitnie.
 Sklepikarze zyja w ciaglym strachu
 przed rabunkami i wymuszeniami, ktore
-staja sie coraz czestsze. Kazdy moze
-zdobyc nielegalna bron palna,
+staja sie coraz czestsze.  Kazdy moze
+zdobyc  nielegalna  bron palna,
 a skorumpowana policja nie jest
-w stanie pomoc. Jestes nikim,
+w stanie  pomoc.  Jestes  nikim,
 wlasnie wypuszczono cie z wiezienia,
 nawet sprzedawcy hot dogow sie z ciebie
-smieja. Wystarczy. Pragniesz kontroli
-nad podziemnym swiatem. Ale droga
-do mafijnego tronu jest dluga i trudna.
-Czy dasz sobie rade?
+smieja.  Wystarczy.  Pragniesz kontroli
+nad  podziemnym  swiatem. Ale droga do
+mafijnego  tronu  jest dluga i trudna.
+Czy Ci sie to uda?
 
-A port of a C64 game by Igelsoft
+Port gry z C64 wydanej przez Igelsoft
 
-Programmed by drunkeneye
-Polish localization: +Adam+
+Autor konwersji: drunkeneye
+Polska lokalizacja:  +Adam+
 
-All sources and current version at
+Link do zrodel i aktualnej wersji:
 http://github.com/drunkeneye/MAFIA.A8
 
