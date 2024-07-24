@@ -13,20 +13,20 @@ $70, $af, $0e, $70
  
  
 50
-It is the year 1930 in Chicago. 
-Alcohol is prohibited, crime thrives. 
-Store  owners live in constant fear of
-robberies and extortions, which are 
-becoming more frequent. Anyone can 
-obtain illegal firearms, and the 
-corrupt police are no help. You are a
-nobody just released from prison, 
-even hot dog vendors laugh at you. 
-Enough is enough. You crave control of
-the underworld. But the path to the 
-mafia throne is long and hard. 
-
-Will you succeed?
+Chicago, rok 1930. Alkohol jest
+zakazany, przestepczosc kwitnie.
+Sklepikarze zyja w ciaglym strachu
+przed rabunkami i wymuszeniami, ktore
+staja sie coraz czestsze. Kazdy moze
+zdobyc nielegalna bron palna,
+a skorumpowana policja nie jest
+w stanie pomoc. Jestes nikim,
+wlasnie wypuszczono cie z wiezienia,
+nawet sprzedawcy hot dogow sie z ciebie
+smieja. Wystarczy. Pragniesz kontroli
+nad podziemnym swiatem. Ale droga
+do mafijnego tronu jest dluga i trudna.
+Czy dasz sobie rade?
 
 A port of a C64 game by Igelsoft
 
