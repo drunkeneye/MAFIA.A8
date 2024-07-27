@@ -1,6 +1,6 @@
 import random
-from glob import glob 
-from utils import * 
+from glob import glob
+from utils import *
 import struct
 
 def dumpTString(byte_stream, p):
@@ -61,7 +61,7 @@ def dumpStrings_EN(byte_stream):
     dumpTStringATASCII (byte_stream, 'Your choice? ');
     dumpYStringATASCII (byte_stream, 'The police await you outside the store!');
 
-    byte_stream.append(5)  
+    byte_stream.append(5)
 
 
 def dumpStrings_DE(byte_stream):
@@ -95,8 +95,8 @@ def dumpStrings_DE(byte_stream):
     dumpYStringATASCII (byte_stream, 'Die Polizei erwartet dich schon!');
 
     byte_stream.append(10)
- 
- 
+
+
 def dumpStrings_PL(byte_stream):
     dumpTStringATASCII (byte_stream, 'Trafiles');
     dumpTStringATASCII (byte_stream, '!!');
@@ -145,7 +145,7 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 
     for k in weaponPrices:
         byte_stream.extend(struct.pack('<H', k))
-        
+
     for k in weaponReach:
         byte_stream.append(k)
 
@@ -201,10 +201,11 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 
 
     # Write the byte stream to the file
-    filename = f"../assets/E700PAGE.gfx_{suffix}" 
+    filename = f"../assets/E700PAGE.gfx_{suffix}"
     with open(filename, 'wb') as f:
         f.write(byte_stream)
-
+    print(len(byte_stream))
+    assert(len(byte_stream) == 1471)
 
 
 
@@ -212,7 +213,7 @@ carPrices = [0, 3500, 4000, 6500, 7000, 7500]
 carCargo = [50, 100, 120, 200, 150, 100]
 carRange = [35, 45, 55, 60, 65, 50]  # add some more range to accommodate the larger map
 weaponPrices = [0, 100, 200, 500, 3000, 4000, 4500, 8000, 10000]
-weaponReach = [2, 2, 3, 4, 8, 12, 16, 14, 20] 
+weaponReach = [2, 2, 3, 4, 8, 12, 16, 14, 20]
 weaponPrecision = [2, 3, 4, 4, 2, 5, 5, 6, 7]
 weaponEffect = [2, 5, 3, 4, 7, 10, 12, 15, 18]
 weaponSound = [1, 0, 1, 4, 0, 2, 2, 10, 3]
@@ -283,10 +284,10 @@ carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 1
 
 rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek mafii',
                              'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
-                            'Szef gangsterow', 'Prawa reka', 'Ojciec chrzestny']
+                            'Szef gangsterow', 'Prawa reka', 'Chrzestny']
 weaponNames_PL = ['Rece', 'Noz', 'Palka',
                         'Lancuch', 'Shuriken', 'Rewolwer',
-                        'Strzelba', 'Karabin maszynowy', 'Granaty']
+                        'Strzelba', 'Maszynowy', 'Granaty']
 carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
