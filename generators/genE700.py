@@ -283,10 +283,10 @@ carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 1
 
 rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek mafii',
                              'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
-                            'Szef gangsterow', 'Prawa reka', 'Ojciec chrzestny']
+                            'Szef gangsterow', 'Prawa reka', 'Ojc. chrzestny']
 weaponNames_PL = ['Rece', 'Noz', 'Palka',
                         'Lancuch', 'Shuriken', 'Rewolwer',
-                        'Strzelba', 'Karabin maszynowy', 'Granaty']
+                        'Strzelba', 'Karabin maszyn.', 'Granaty']
 carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
