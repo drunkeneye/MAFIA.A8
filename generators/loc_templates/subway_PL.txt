@@ -1,16 +1,16 @@
 LOCASUBW.gfx
 Stacja metra
 $72, $af, $ff, $72
-Rogi torow
-Plac Kotzdamer
-Westkreuz
-Kopalnia Rachenbrand
+Ogden Station
+Roosevelt Station
+Pulaski Station
+Willow Station
 2,5,7,9
 Jestes na stacji metra. Mnostwo ludzi sie tu kreci...
 3
-Oproznic kieszenie ludzi na peronie
-Sprawdzic zawartosc toreb w pociagu
-Wrocic na powierzchnie
+Oproznij kieszenie ludzi na peronie
+Sprawdz zawartosc toreb w pociagu
+Wroc na powierzchnie
 50
 Bilet na metro kosztuje 50$.
 Czy chcesz kupic jeden (T/N)?
