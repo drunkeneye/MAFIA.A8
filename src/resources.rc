@@ -16,7 +16,7 @@ PMG_BASE_ADR rcdata '../assets/player.pmg'
 MAINFONT_ADR rcdata '../assets/mafia.fnt'
 
 
-;;;;; msx 
+;;;;; msx
 
-rmt_player	RMTPLAY	'./msx/ingame_msx.feat' 0
-rmt_modul	RMT		'./msx/ingame_msx.rmt'
+rmt_player	RMTPLAY	'../music/sfx_s.feat' 0
+rmt_modul	RMT		'../music/sfx_s.rmt'

@@ -200,10 +200,17 @@ begin;
                 if c[whpos] < 0 then c[whpos] := 9;
                 nAttempts := nAttempts - 1;
 
-                if (hops = False) and (t[whpos] = c[whpos]) then sound(0,121,10,15)
-                    else sound(0,96,10,15);
-                WaitFrames(5);
-                NoSound;
+                playMusic := 1;
+
+                if (hops = False) and (t[whpos] = c[whpos]) then 
+                    msx.init ($0a)
+                else 
+                    msx.init ($0c);
+                msx.play();
+                WaitFrames(10);
+                msx.stop();
+                playMusic := 0;
+                 
             end;
             if (hops = False) and (t[0] = c[0]) and (t[1] = c[1]) and (t[2] = c[2]) then safeOpen := 1;
         until (ch = #$2f) or (nAttempts = 0) or (safeOpen = 1);
@@ -230,7 +237,20 @@ begin;
         // SAFE ANIMATION TODO
         CRT_WriteCentered_LocStr(21, 11);
         CRT_WriteCentered_LocStr(22, 12);
-        WaitFrames(100); 
+
+        playMusic := 1;
+        msx.init ($08);
+        msx.play();
+        for k := 0 to 6 do 
+        begin;
+            loccolbk := $34;
+            WaitFrames(15); 
+            loccolbk := $0;
+            WaitFrames(15); 
+        end;
+        msx.stop();
+        playMusic := 0;
+
         waitForKey();
         prepareFightAgainstPolice();
         if doFight() = 1 then

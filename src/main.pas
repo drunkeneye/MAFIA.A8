@@ -17,11 +17,11 @@ program MAFIA;
 uses atari, pmg, xbios, crt, cio, aplib, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
 
 
-const 
+const
 {$i const.inc}
 
 
-var 
+var
     lastLocation:   byte;
 	msx: TRMT;
 
@@ -31,13 +31,13 @@ var
 {$i vars_be80_location.pas}
 {$i vars_e100_gangsters.pas}
 {$I vars_ea00_strings.pas}
- 
+
 
 
 
 procedure musicproxy();
 begin;
-    if playMusic = 1 then 
+    if playMusic = 1 then
         msx.play();
 end;
 
@@ -53,7 +53,7 @@ procedure loadxAPL(var fname: TString; outputPointer: pointer);
 var msxstatus: byte;
 begin;
     msxstatus := playMusic;
-    if playMusic = 1 then 
+    if playMusic = 1 then
         msx.stop();
     playMusic := 0;
     xbunAPL(fname, outputPointer);
@@ -101,7 +101,7 @@ procedure clearMemory();
 begin;
     FillChar (Pointer($e000), $fc00-$e000, 0);
     FillChar (Pointer($be80), $cc00-$be80, 0);
-end; 
+end;
 
 
 
@@ -125,22 +125,22 @@ begin;
     ShowLocationHeader;
     cur_loc_str := Pointer(loc_string_1);
     for k := 0 to 14 do
-    begin 
+    begin
         CRT_Writeln(cur_loc_str);
         cur_loc_str := Pointer(cur_loc_str) + $28;
     end;
     waitForKey();
     ShowLocationHeader;
     for k := 0 to 14 do
-    begin 
+    begin
         CRT_Writeln(cur_loc_str);
         cur_loc_str := Pointer(cur_loc_str) + $28;
     end;
     waitForKey();
-end; 
+end;
 
 
-var 
+var
     k:   byte;
     outcome: byte;
     cs:   word;
@@ -168,8 +168,8 @@ begin
 
     playMusic := 0;
 
-    // force inclusion of musciproxy, wont be executed here
-    if playMusic = 99 then 
+    // force inclusion of musicproxy, wont be executed here
+    if playMusic = 99 then
         musicproxy();
 
     enableConsole();
@@ -179,8 +179,13 @@ begin
     //setupGame();
     initGlobalVars();
     showCredits();
+    msx.player:=pointer(rmt_player);
     setupGame();
     initPlayers();
+
+    // plNewPoints[currentPlayer] := 70;
+    // plMoney[currentPlayer] := 5550005;
+
 
     // turn off all IRQs
     // Poke($D20E, 0);
@@ -204,24 +209,24 @@ begin
     repeat;
         loadLocation(MAIN_);
         enableConsole();
-        if playersTurn() = RESET_ then 
-        begin; 
+        if playersTurn() = RESET_ then
+        begin;
             continue;
-        end; 
+        end;
         blackConsole();
         currentLocation := NONE_;
         lastLocation := NONE_;
 
         updateRank();
- 
+
         // update fake money: in original, remove it with 12% probability
         // here we just have 6 month of it
         // 4055 ifint(rnd(1)*8)=0thenag(sp)=ag(sp)and254
         // 4056 ifint(rnd(1)*8)=0thenag(sp)=ag(sp)and253
-        if plFakeMoney[currentPlayer] > 0 then 
+        if plFakeMoney[currentPlayer] > 0 then
         begin
             plFakeMoney[currentPlayer] := plFakeMoney[currentPlayer] - 1;
-            if plFakeMoney[currentPlayer] = 0 then 
+            if plFakeMoney[currentPlayer] = 0 then
             begin
                 enableConsole();
                 jobWorking;
@@ -230,10 +235,10 @@ begin
             end;
         end;
 
-        // update fake id, here we just drop it randomly, like loosing it 
-        if plForgedID[currentPlayer] >0 then 
+        // update fake id, here we just drop it randomly, like loosing it
+        if plForgedID[currentPlayer] >0 then
         begin
-            if Random(12) = 1 then 
+            if Random(12) = 1 then
             begin // once a year
                 enableConsole();
                 jobWorking;
@@ -253,14 +258,14 @@ begin
             plBribe[currentPlayer] := plBribe[currentPlayer] - 1;
 
         if currentLocation = END_TURN_ then begin
-            nextPlayer; 
+            nextPlayer;
             continue;
-        end; 
-        
+        end;
+
 
         loadLocation (JOB_);
         updateLoanShark();
-        if plJob[currentPlayer] > 0 then 
+        if plJob[currentPlayer] > 0 then
         begin
             updateJob();
             currentLocation := END_TURN_;
@@ -286,33 +291,34 @@ begin
             repeat;
                 ch := readKeyAndStick();
                 // overview page
-                if byte(ch) = $65 then 
+                if byte(ch) = $65 then
                     addMoney(10000);
-                if byte(ch) = $6e then 
+                if byte(ch) = $6e then
                 begin;
                     plPoints[currentPlayer] := gamePoints+10;
                     plMoneyTransporter[currentPlayer] := 1;
                     plKilledMajor[currentPlayer] := 1;
                 end;
 
-                if byte(ch) = $20 then begin;
-                    if playMusic = 1 then 
-                    begin 
-                        msx.Stop();
-                        playMusic := 0;
-                    end
-                    else  
-                    begin 
-                        playMusic := 1;
-                        msx.Play();
-                    end;
-                    waitForKeyRelease();
-                    WaitFrames(20);
-                end;
+                // if byte(ch) = $20 then begin;
+                //     if playMusic = 1 then
+                //     begin
+                //         msx.Stop();
+                //         playMusic := 0;
+                //     end
+                //     else
+                //     begin
+                //         playMusic := 1;
+                //         msx.Play();
+                //     end;
+                //     waitForKeyRelease();
+                //     WaitFrames(20);
+                // end;
+
                 if ch = #$1c then begin;
                     // ensure we have loaded the main location
                     loadLocation(UPDATES_);
-                    ShowLocationHeader;  
+                    ShowLocationHeader;
                     CRT_WriteCentered_LocStr(3, 18);
                     CRT_Gotoxy(15,4);
                     tmp := gameLength - currentYear;
@@ -363,7 +369,7 @@ begin
             if currentChoice = loc_nOptions then
                 currentLocation := NONE_;
 
-            case currentLocation of 
+            case currentLocation of
                 BANK_:   outcome := bankChoices;
                 FORGERY_:   outcome := forgeryChoices;
                 MONEYTRANSPORT_: outcome := moneyTransporterChoices;
@@ -402,14 +408,14 @@ begin
         plMapPosX[currentPlayer] :=   mapPos_X;
         plMapPosY[currentPlayer] :=   mapPos_Y;
         plCurrentMap[currentPlayer] := currentMap;
-        
+
         nextPlayer();
 
         gameEnds := Byte(currentYear > gameLength);
         for k := 0 to nPlayers-1 do
-            if (plPoints[k] >= gamePoints) then 
-                if (plMoneyTransporter[k] = 1) then 
-                  if (plKilledMajor[k] = 1) then  
+            if (plPoints[k] >= gamePoints) then
+                if (plMoneyTransporter[k] = 1) then
+                  if (plKilledMajor[k] = 1) then
                     begin
                         plWinners[k] := 1;
                         gameEnds := gameEnds + 1;
@@ -423,40 +429,40 @@ begin
 
     loadLocation(MAIN_);
     // if one player won, it sok, if not all have won
-    if plNWinners = 1 then begin 
+    if plNWinners = 1 then begin
         for k := 0 to nPlayers-1 do
         begin
-            if plWinners[k] = 1 then 
-            begin 
+            if plWinners[k] = 1 then
+            begin
                 tmp := k SHL 3;
                 CRT_WriteCentered(5,gangsterNames[tmp]);
                 CRT_WriteCentered_LocStr(7, 35);
                 CRT_WriteCentered_LocStr(8, 36);
                 CRT_WriteCentered_LocStr(9, 37);
-                if gangsterSex[tmp] = 1 then 
+                if gangsterSex[tmp] = 1 then
                     finalfname := 'FINAWPICAPL'
                 else
                     finalfname := 'FINAMPICAPL';
                 break;
-            end; 
+            end;
         end;
-    end 
-    else  
-    begin 
+    end
+    else
+    begin
         CRT_WriteCentered_LocStr(5, 38);
         currentChoice := 0;
         for k := 0 to nPlayers-1 do
         begin;
-            if plWinners[k] = 1 then 
-            begin 
+            if plWinners[k] = 1 then
+            begin
                 tmp := k SHL 3;
                 CRT_WriteCentered(7+currentChoice,gangsterNames[k]);
                 currentChoice := currentChoice + 1;
-            end; 
+            end;
         end;
         CRT_WriteCentered_LocStr(7+currentChoice+2, 39);
         finalfname := 'FINAGPICAPL';
-    end; 
+    end;
     waitForKey();
 
     DisableDLI;
@@ -470,7 +476,7 @@ begin
     // this will be around $9890 right now
     finalfname := 'FMUSB800APL';
     loadxAPL(finalfname, pointer($b800));
-    finalfname := 'PLAYB000APL';
+    finalfname := 'PLAYB0RZAPL';
     loadxAPL(finalfname, pointer($b000));
 
     // http://atariki.krap.pl/index.php/CMC_(format_pliku)
@@ -489,5 +495,5 @@ begin
         jsr $6800;
         jmp lpend
     end;
-    
+
 end.

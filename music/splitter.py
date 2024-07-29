@@ -9,7 +9,7 @@ def split_sap_file(filename):
 
     # Find the position of the first 0xff 0xff sequence
     header_end = content.find(b'\xff\xff')
-    
+
     if header_end == -1:
         print("No valid blocks found in the file.")
         return
@@ -30,12 +30,12 @@ def split_sap_file(filename):
         # Extract the block data
         block_data = bytearray(content[block_start:block_start + block_length])
 
-        # check for CMC header and fix for $a000 
+        # check for CMC header and fix for $a000
         if block_data[0:4] == b'\xa0\xe3\xed\xe3':
             print(f"CMC Music data, relocating to {radr:#04x}")
             print(f"Original start was  {start_addr:#04x}")
 
-            # compute diff 
+            # compute diff
             bdiff = radr - start_addr
             print (f"Difference is {bdiff:#04x}")
             high_diff = (bdiff >> 8) & 0xFF  # Shift right by 8 bits and apply bitmask

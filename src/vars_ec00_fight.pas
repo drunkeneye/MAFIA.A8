@@ -48,7 +48,7 @@ var
 
 const
     fight_bulletTime: byte = 3;
-    fight_hitTime: byte = 5; 
+    fight_hitTime: byte = 20; 
     fight_textTime: byte = 30;
     fight_roundTime: byte = 5;
     fight_deadTime: byte = 70;

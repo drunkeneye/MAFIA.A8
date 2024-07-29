@@ -1,10 +1,10 @@
 LOCASUBW.gfx
 Subway-Station (U-Bahn)
 $72, $af, $ff, $72
-Gleisneuneck
-Kotzdamer Platz
-Westkreuz
-Zeche Rachenbrand
+Ogden Station
+Roosevelt Station
+Pulaski Station
+Willow Station
 2,5,7,9
 Du bist in einem U-Bahnhof. 'ne Menge Leute treiben sich hier 'rum..
 3

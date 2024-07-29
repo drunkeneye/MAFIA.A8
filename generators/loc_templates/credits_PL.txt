@@ -1,17 +1,17 @@
 LOCACRED.gfx
 MAFIA v0.41
 $70, $af, $0e, $70
-  
-  
-  
-  
+
+
+
+
 0,0,0,0
- 
+
 4
- 
- 
- 
- 
+
+
+
+
 50
 Chicago, rok 1930.  Alkohol jest
 zakazany,  przestepczosc kwitnie.
@@ -19,11 +19,11 @@ Sklepikarze zyja w ciaglym strachu
 przed rabunkami i wymuszeniami, ktore
 staja sie coraz czestsze.  Kazdy moze
 zdobyc  nielegalna  bron palna,
-a skorumpowana policja nie jest
-w stanie  pomoc.  Jestes  nikim,
-wlasnie wypuszczono cie z wiezienia,
-nawet sprzedawcy hot dogow sie z ciebie
-smieja.  Wystarczy.  Pragniesz kontroli
+a skorumpowana policja nie jest w
+stanie  pomoc.  Jestes  nikim, wlasnie
+wypuszczono cie z wiezienia, nawet
+sprzedawcy hot dogow sie z ciebie
+smieja.  Wystarczy. Pragniesz kontroli
 nad  podziemnym  swiatem. Ale droga do
 mafijnego  tronu  jest dluga i trudna.
 Czy Ci sie to uda?
@@ -32,7 +32,8 @@ Port gry z C64 wydanej przez Igelsoft
 
 Autor konwersji: drunkeneye
 Polska lokalizacja:  +Adam+
+Muzyka: Andy, Cedyn
+Dzwiek: Miker
 
 Link do zrodel i aktualnej wersji:
 http://github.com/drunkeneye/MAFIA.A8
-

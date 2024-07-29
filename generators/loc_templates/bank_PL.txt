@@ -13,17 +13,17 @@ Niepostrzezenie rozejrzyj sie za alarmami i wlam sie noca
 Odejdz
 50
 Potrzebujesz towarzysza!
-Niestety, przeoczyles trzech 
+Niestety, przeoczyles trzech
 straznikow przy wejsciu...
 Straznicy
 Musisz jeszcze potrenowac!
 Kto ma otworzyc skrytke?
-Hm, zobacze. Sprobuje ze 
+Hm, zobacze. Sprobuje ze
 stetoskopem...
 Za goraco! Uciekasz!
 Udalo ci sie!
 Do diabla!... Cos poszlo nie tak!
 Ktos nadchodzi!!
-Musisz miec co najmniej range 'pionek'!
+Musisz miec co najmniej range pionek!
 Twoj lup wynosi
 Ponadto znajdujesz 500kg zlota...

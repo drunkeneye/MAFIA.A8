@@ -13,7 +13,7 @@ APULTRA_BIN=../../bin/apultra
 # output
 ASM=./output/main.a65
 XEX=./output/main.xex
-BLANK_ATR=./atr/xxl_blank_180KB.atr
+BLANK_ATR=./atr/180k_empty.atr
 XBOOT=./atr/xboot.obx
 ATR=./output/output.atr
 ATR_ASSETS=atr.assets
@@ -40,7 +40,7 @@ compile_title:
 	$(MADS) ./output/title.a65 -x -i:$(BASE) -o:./output/title.xex
 	cp ./output/title.xex ./atr.assets/XAUTORUN
 	cp ../assets/logo.apl ./atr.assets
-#	cp ../assets/title.xex ./atr.assets
+
 
 # -define:norank for direct access to all things
 compile_main:
@@ -48,14 +48,9 @@ compile_main:
 	$(MADS) $(ASM) -x -i:$(BASE) -o:$(XEX)
 	cp $(XEX) ./atr.assets/MAIN.XEX
 
-# compile_final:
-# 	$(MP) final.pas -code:0c00 -o ./output/final.a65  
-# 	$(MADS) ./output/final.a65 -x -i:$(BASE) -o:./output/final.xex
-# 	cp ./output/final.xex ./atr.assets/final.xex
-
 
 build_atr:
-	$(dir2atr) -md -B $(XBOOT) $(ATR) $(ATR_ASSETS) # needs XAUTORUN
+	$(dir2atr) -B $(XBOOT) -D $(ATR) $(ATR_ASSETS) # needs XAUTORUN
 
 clean:
 	rm -rf ./output
@@ -93,7 +88,8 @@ ASSET_FILES := acombmap.gfx \
 	finampic.gfx finawpic.gfx finagpic.gfx \
 	fmusb800.gfx tmusb800.gfx \
 	playb000.gfx \
-	titlepic.gfx 
+	playb0rz.gfx \
+	titlepic.gfx
 
 LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCABANK.gfx_$(LOCATION)  \
@@ -119,7 +115,7 @@ LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCACENT.gfx_$(LOCATION)  \
 	LOCAMONY.gfx_$(LOCATION)  \
 	LOCACRED.gfx_$(LOCATION) \
-	E700PAGE.gfx_$(LOCATION) 
+	E700PAGE.gfx_$(LOCATION)
 
 compress_locassets: $(addprefix put_, $(LOC_FILES:.gfx_$(LOCATION)=.apl))
 put_%.apl: ../assets/%.gfx_$(LOCATION)
@@ -146,4 +142,3 @@ run:
 
 save:
 	cp $(ATR) ../release/mafia_$(LOCATION).atr
-

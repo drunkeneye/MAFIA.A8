@@ -149,6 +149,7 @@ var
     hitPlayer:   byte;
     t1, t2, t3, t4: byte;
 begin;
+
     fight_setShootStart();
     f_curPos := MAP_SCR_ADDRESS+fp_posW[fp_currentPlayer];
     e := fp_weapon[fp_currentPlayer];
@@ -158,6 +159,7 @@ begin;
     begin;
         // check for reach
         if v = r then exit;
+
 
         // 40=max of screen in any direction
         k := f_curPos+shoot_start+shoot_diff;
@@ -180,7 +182,11 @@ begin;
         t := checkHit (k);
         if t < 128 then
         begin;
+            playMusic := 1;
+            msx.init (weaponSound[e]);
+            msx.play();
             WaitFrames(fight_hitTime);
+
             // compute damage
             // the same i think // 30247 ifint(rnd(1)*ts(w))=0orint(rnd(1)*(kr/10+1))=0goto30235
             //             2 --> 0..2 --> 1/4 miss , 7 --> 0..7 --> 1/14 miss 
@@ -191,6 +197,10 @@ begin;
             if (t1 > t2) and (t3 > t4) then break;
             // if (Random(8) > weaponPrecision[e] SHL 1) and (Random(12) < fp_strength[fp_currentPlayer] SHR 3+1) then break;
             hit := (weaponEffect[e] + fp_brutality[fp_currentPlayer] SHR 3);
+
+            msx.stop();
+            playMusic := 0;
+
             if hit = 0 then break;
 
             CRT_Gotoxy(0,20);

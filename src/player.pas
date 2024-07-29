@@ -14,9 +14,9 @@ begin
         if currentMonth > 12 then begin;
             currentYear := currentYear + 1;
             currentMonth := 1;
-        end; 
+        end;
     end;
-end; 
+end;
 
 
 procedure initPlayers();
@@ -53,31 +53,16 @@ begin
   CRT_WriteCentered(5, gangsterNames[z]);
   CRT_WriteCentered_LocStr(6, 2);
 
-	msx.sfx(1, 2, $80);
+  playMusic := 1;
+  msx.init (0);
+  msx.play();
+  WaitFrames(120);
+  msx.stop();
+  playMusic := 0;
 
-  // sound(0,100,10,15);
-  // WaitFrames(30);
-  // sound(0,96,10,15);
-  // WaitFrames(20);
-  // sound(0,121,10,15);
-  // WaitFrames(10);
-
-  // sound(0,133,10,15);
-  // WaitFrames(20);
-  // sound(0,121,10,15);
-  // WaitFrames(10);
-  // sound(0,155,10,15);
-  // WaitFrames(10);
-  // sound(0,145,10,15);
-  // WaitFrames(10);
-  // sound(0,155,10,15);
-  // WaitFrames(10);
-  // sound(0,145,10,15);
-  // WaitFrames(10);
-  //NoSound;
   result := 0;
-  if currentPlayer = 0 then 
-  begin 
+  if currentPlayer = 0 then
+  begin
     CRT_WriteCentered_LocStr(8, 40);
     CRT_WriteCentered_LocStr(9, 41);
     ch := readKeyAndStick();
@@ -88,8 +73,8 @@ begin
     if byte(ch) = $1f then begin;
         saveGame();
     end;
-  end 
-  else 
+  end
+  else
   begin
     waitForKey();
   end;
@@ -108,6 +93,3 @@ begin
   currentMap := plCurrentMap[currentPlayer];
   // loadMap();
 end;
-
- 
- 

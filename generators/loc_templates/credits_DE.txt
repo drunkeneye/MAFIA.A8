@@ -28,10 +28,12 @@ ueber dich. Es reicht. Du willst die
 Herrschaft ueber die Unterwelt. Aber 
 der Weg zum Thron der Mafia ist lang 
 und hart. Wirst du es schaffen?
-A port of a C64 game by Igelsoft
+Port eines C64 Spiels von Igelsoft
 
-Programmed by drunkeneye
-Polish localization: +Adam+
+Programmiert von drunkeneye
+Polnische Uebersetzung: +Adam+
+Musik: Andy, Cedyn 
+Sound: Miker
 
 All sources and current version at
 http://github.com/drunkeneye/MAFIA.A8

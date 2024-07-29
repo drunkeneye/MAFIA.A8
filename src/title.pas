@@ -15,11 +15,11 @@ program autorun;
 uses atari, xbios, crt, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
 
 
-const 
+const
     baseAddress =   $BE80;
     e7adr =   $e700;
 
-var  // for sprites 
+var  // for sprites
     stick :   byte absolute $278;
     PCOLR0:   byte absolute $D012;
     PCOLR1:   byte absolute $D013;
@@ -27,7 +27,7 @@ var  // for sprites
     PCOLR3:   byte absolute $D015;
     playerPos_X:   byte absolute e7adr + 936+16;
 
-    // not used 
+    // not used
     loccolbk:            Byte absolute baseAddress + $2B0 + 41 * $28;
     loccolpf0:            Byte absolute baseAddress + $2B0 + 41 * $28 + 1;
     loccolpf1:            Byte absolute baseAddress + $2B0 + 41 * $28 + 2;
@@ -37,7 +37,7 @@ var  // for sprites
 	msx: TRMT;
 
 
-const 
+const
 {$i const.inc}
 
 
@@ -52,7 +52,7 @@ end;
 
 {$I interrupts.inc}
 {$i console.pas}
- 
+
 {$I xbaplib.pas}
 
 var
@@ -62,13 +62,13 @@ var
     D_MUS: TString = 'TMUSB800APL';
     locfname:   TString;
 
-var 
+var
     e7fname: TString = 'E700PAGEAPL';
 
- const 
+ const
     e7adrm6 = $e600-6;
 
-const 
+const
     ADR_LOGO         =   $9036;
     // DL GR.8 $8036; GFX $8150
     ADR_LOGO_DL      =   ADR_LOGO;
@@ -77,7 +77,7 @@ const
     L_COLOR1         =   $9c;
     L_COLOR2         =   $12;
     L_COLOR4         =   $12;
- 
+
 
 procedure show_logo;
 begin
@@ -90,13 +90,13 @@ begin
 end;
 
 
-var 
+var
     cs:   word;
     finalfname:   String[16];
 begin;
     playMusic := 0;
     // force inclusion of musciproxy, wont be executed here
-    if playMusic = 99 then 
+    if playMusic = 99 then
         musicproxy();
 
     DMACTL := $22;
@@ -107,9 +107,9 @@ begin;
         sta xbios.xIRQEN
         pla
     end;
-    
+
     //SystemOff;
-    
+
     // check xbios from StarVagrant
     cs := dPeek($0800);
     if (char(Lo(cs)) <> 'x') or (char(Hi(cs)) <> 'B') then

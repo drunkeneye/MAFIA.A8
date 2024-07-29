@@ -1,13 +1,13 @@
 
 
-const 
+const
     moveSpeed =  1;
 
 // will return:
 // 0=free-- TODO: does not happen right now.
 // 1=end turn.
 function gotoCourt():   byte;
-var 
+var
     lawyer:   word;
     prisonTime:   shortint;
     r:   byte;
@@ -16,14 +16,14 @@ var
 begin;
     // court means next location is police
     r := Random(4);
-    case r of 
-        0: begin; 
+    case r of
+        0: begin;
                 i := 15; j := 2; k := 2;
             end;
-        1: begin; 
+        1: begin;
                 i := 16; j := 2; k := 5;
             end;
-        2: begin; 
+        2: begin;
                 i := 2; j :=10; k := 9;
             end;
         3: begin;
@@ -54,7 +54,7 @@ begin;
     begin;
         CRT_Writeln2_LocStr(1);
         r := getYesNo();
-        if r = 1 then 
+        if r = 1 then
         begin
             CRT_Write_LocStr(2);
             lawyer := readValue(0, 10000);
@@ -100,12 +100,12 @@ begin;
     result := 1;
     exit;
 end;
- 
- 
+
+
 
 // returns either 0=all ok or 1=end round, player was sentenced.
 function gotCaught:   byte;
-var 
+var
     a:   byte;
     r:   byte;
     price:   word;
@@ -168,7 +168,7 @@ begin
         end
         else
             begin
-                // we ignore this, that a play er gets +2 points iff he refuses to pay the cops 
+                // we ignore this, that a play er gets +2 points iff he refuses to pay the cops
                 // after having asked for it!
                 // addPoints(2)
                 result := gotoCourt();
@@ -204,9 +204,9 @@ begin;
     // ensure the map status below reloads, e.g. if alcohol is confiscated
     mapReloaded := 1;
     result := 0;
-    // in original: every 20 steps+10% probabilty, here we just make it randomy 1/224  
+    // in original: every 20 steps+10% probabilty, here we just make it randomy 1/224
     if plRank[currentPlayer] < 4 then exit;
-    if Random(224) > 0 then exit; 
+    if Random(224) > 0 then exit;
 
     loadLocation(ROADBLOCK_);
     enableConsole();
@@ -242,7 +242,7 @@ end;
 
 // only for y-direction, x-direction taken care of DLI
 procedure paintPlayer(clear: byte);
-var 
+var
     playerHeight:   byte;
     playerOfs:   byte;
     z: byte;
@@ -276,7 +276,7 @@ end;
 
 
 function MoveCurrentPlayer (ch: char):   byte;
-var 
+var
     j:   byte;
     dir_x:   shortint;
     dir_y:   shortint;
@@ -290,7 +290,7 @@ begin
     // we must be on the street because else.
     dir_x := 0;
     dir_y := 0;
-    case ch of 
+    case ch of
         #06:   dir_x := -1;
         #07:   dir_x := +1;
         #14:   dir_y := -1;
@@ -314,7 +314,7 @@ begin
         lencID := Peek(LOC_MAP_ADR+(mapPos_Y+1+dir_y)*40+mapPos_X SHL 1+dir_x SHL 1);
         // repeat;
         // until false;
-        case lencID of 
+        case lencID of
             65:   curLoc := ARMSDEALER_;
             66:   curLoc := CARDEALER_;
             67:   curLoc := FORGERY_;
@@ -349,7 +349,12 @@ begin
     mapPos_X := mapPos_X + dir_x;
     mapPos_Y := mapPos_Y + dir_y;
 
+
     // we can walk
+    playMusic := 1;
+    msx.init ($0e);
+    msx.play();
+
     if dir_y <> 0 then
     begin;
         for j := 0 to 7 do
@@ -370,6 +375,10 @@ begin
             WaitFrames(moveSpeed);
         end;
     end;
+
+    msx.stop();
+    playMusic := 0;
+
 
     // check for roadblock now
     if curLoc = STREET_ then

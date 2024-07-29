@@ -32,7 +32,7 @@ def dumpYStringATASCII(byte_stream, p):
 
 def dumpStrings_EN(byte_stream):
     # fight_str_1..6
-    dumpTStringATASCII (byte_stream, 'You hit');
+    dumpTStringATASCII (byte_stream, 'You hit ');
     dumpTStringATASCII (byte_stream, ' !');
     dumpTStringATASCII (byte_stream, 'Unfortunately,');
     dumpTStringATASCII (byte_stream, 'is now dead.');
@@ -65,7 +65,7 @@ def dumpStrings_EN(byte_stream):
 
 
 def dumpStrings_DE(byte_stream):
-    dumpTStringATASCII (byte_stream, 'Du hast');
+    dumpTStringATASCII (byte_stream, 'Du hast ');
     dumpTStringATASCII (byte_stream, ' getroffen!');
     dumpTStringATASCII (byte_stream, 'Leider ist');
     dumpTStringATASCII (byte_stream, 'jetzt tot.');
@@ -98,7 +98,7 @@ def dumpStrings_DE(byte_stream):
 
 
 def dumpStrings_PL(byte_stream):
-    dumpTStringATASCII (byte_stream, 'Trafiles');
+    dumpTStringATASCII (byte_stream, 'Trafiles ');
     dumpTStringATASCII (byte_stream, '!!');
     dumpTStringATASCII (byte_stream, 'Niestety,');
     dumpTStringATASCII (byte_stream, ' nie zyje!');
@@ -216,7 +216,7 @@ weaponPrices = [0, 100, 200, 500, 3000, 4000, 4500, 8000, 10000]
 weaponReach = [2, 2, 3, 4, 8, 12, 16, 14, 20]
 weaponPrecision = [2, 3, 4, 4, 2, 5, 5, 6, 7]
 weaponEffect = [2, 5, 3, 4, 7, 10, 12, 15, 18]
-weaponSound = [1, 0, 1, 4, 0, 2, 2, 10, 3]
+weaponSound = [2, 2, 2, 2, 2, 2, 2, 4, 6]
 fpPosStart = [40*10+10,
                         40*8+8,  40*12+8,
                         40*6+6, 40*10+6, 40*12+6,
@@ -284,10 +284,10 @@ carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 1
 
 rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek mafii',
                              'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
-                            'Szef gangsterow', 'Prawa reka', 'Chrzestny']
+                            'Szef gangsterow', 'Prawa reka', 'Ojc. chrzestny']
 weaponNames_PL = ['Rece', 'Noz', 'Palka',
                         'Lancuch', 'Shuriken', 'Rewolwer',
-                        'Strzelba', 'Maszynowy', 'Granaty']
+                        'Strzelba', 'Karabin maszyn.', 'Granaty']
 carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
