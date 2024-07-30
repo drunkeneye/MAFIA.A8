@@ -6,19 +6,19 @@ Bracia Dynamit
 Dom Pieniezny Hansel
 Raz Dwa
 1,2,7,8
-Dzien dobry, czy moge panu pomoc?
+Dzien dobry, w czyms moge panu pomoc?
 6
 Tak. Potrzebuje troche gotowki!
 Nie, nie! Chce tylko splacic dlugi!
 Wykup lub sprzedaj sklep
 Zmiana kapitalu (w przypadku wlasnej dzialalnosci kredytowej)
 Windykacja naleznosci (w przypadku wlasnej dzialalnosci)
-Pomoge sobie
+Pomoge sobie sam
 50
 Najpierw splac swoje stare dlugi!
 Wezme 6% odsetek!
 Ile chcesz pozyczyc (0-5000$)?
-Masz tylko kilka miesiecy na 
+Masz tylko kilka miesiecy na
 splate dlugow!
 Nie masz zadnych dlugow!
 Ile pieniedzy chcesz splacic?
@@ -37,7 +37,7 @@ Mial jeszcze
 $ przy sobie!
 Najpierw splac swoje wlasne dlugi!
 Kupiec oferuje ci
-$ za sklep. Czy chcesz 
+$ za sklep. Czy chcesz
 zaakceptowac (T/N)?
 Zyczysz mu powodzenia.
 Ten sklep juz nalezy do
