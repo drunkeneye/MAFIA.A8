@@ -15,9 +15,9 @@ $f4, $af, $10, $f4
 Gracz
 ma teraz ruch!
 Poszukiwany!
-  Na zdjeciu jest
+Na zdjeciu jest
 , lider
-  bandy
+bandy
 . Uwaga!
 Gangsterzy moga byc silnie uzbrojeni!
    Ranga:

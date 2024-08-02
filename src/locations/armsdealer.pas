@@ -80,7 +80,8 @@ begin;
         // for welchen gangster?
         ShowLocationHeader;
         CRT_Write_LocStr(23);
-        CRT_GotoXY(0,1);
+        CRT_GotoXY(0,3);
+
         showWeapons := 1;
         selectGangster();
         if currentGangster = 99 then exit;

@@ -133,6 +133,7 @@ begin;
         selectGangster();
         if currentGangster = 99 then exit;
 
+        ShowLocationHeader;
         CRT_Writeln_LocStr(7);
         CRT_Writeln_LocStr(8);
         CRT_Newline;
@@ -235,8 +236,9 @@ begin;
         end;
 
         // SAFE ANIMATION TODO
-        CRT_WriteCentered_LocStr(21, 11);
-        CRT_WriteCentered_LocStr(22, 12);
+        CRT_WriteCentered_LocStr(20, 11);
+        CRT_WriteCentered_LocStr(21, 12);
+        CRT_GotoXY(0,21);
 
         playMusic := 1;
         msx.init ($08);

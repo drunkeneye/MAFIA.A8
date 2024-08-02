@@ -134,8 +134,10 @@ begin;
         CRT_NewLine;
         CRT_Write_LocStr(39);
         CRT_Write(buf_gangsterPrice);
-        CRT_Write_LocStr(40);
-        CRT_Write(buf_gangsterAnrede);
+        CRT_Writeln_LocStr(40);
+        CRT_Write(buf_gangsterName);
+
+        // CRT_Write(buf_gangsterAnrede);
         CRT_Writeln2_LocStr(41);
         if getYesNo() =0 then exit;
         if payMoney (buf_gangsterPrice) = 0 then exit;

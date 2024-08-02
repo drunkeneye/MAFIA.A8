@@ -15,9 +15,9 @@ $f4, $af, $10, $f4
 Spieler
 ist an der Reihe!
 Gesucht!
-   Das Photo zeigt 
+Das Photo zeigt 
 , Kopf
-   der Bande 
+der Bande 
 . Vorsicht!
 Die Gangster sind schwer bewaffnet!
     Rang:

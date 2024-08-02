@@ -183,8 +183,9 @@ begin
     setupGame();
     initPlayers();
 
-    // plNewPoints[currentPlayer] := 70;
-    // plMoney[currentPlayer] := 5550005;
+    plNewPoints[currentPlayer] := 70;
+    plMoney[currentPlayer] := 5550005;
+    
 
 
     // turn off all IRQs

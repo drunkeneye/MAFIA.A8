@@ -53,5 +53,5 @@ Psst... I have a very important
 mission! The mayor is supposed to be
 taken out, but he has bodyguards!
 For
-$, can you hire
-(Y/N)?
+$, you can hire
+ (Y/N)?
