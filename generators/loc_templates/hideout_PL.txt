@@ -21,9 +21,9 @@ Dobrze. Kosztuje to
 $ miesiecznie.
 Platnosc z gory!
 Masz tu schronienie na jeszcze
- miesiecy!
-Ile miesiecy chcesz wynajac? 
-Dzien dobry panu!
+ mies.!
+Na ile miesiecy chcesz wynajac? 
+Zycze panu milego dnia!
 Wojna gangow!
 Ale tu nikt nie mieszka...
 Dzwonisz do 
@@ -32,11 +32,11 @@ Przegrales wojne gangow!
 obrabia twoje kieszenie
 i zdobywa
 Wygrales wojne gangow!
-Oprozniasz skrytke z
+Oprozniasz skrytke
 i zdobywasz
 Dodatkowo zabiera twoje alkohole!
 Dodatkowo zabierasz alkohole!
 I rozwala twoje auto w kawalki!
 I rozwalasz jego auto w kawalki!
-Nie wynajmiesz mieszkania na wiecej.
+Nie wynajmiesz mieszkania na wiecej
 niz 3 lata z gory!
