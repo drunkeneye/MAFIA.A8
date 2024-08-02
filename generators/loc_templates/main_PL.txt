@@ -15,13 +15,13 @@ $f4, $af, $10, $f4
 Gracz
 ma teraz ruch!
 Poszukiwany!
-   Zdjecie pokazuje 
-, lidera
-   bandy 
+  Na zdjeciu jest
+, lider
+  bandy
 . Uwaga!
 Gangsterzy moga byc silnie uzbrojeni!
-    Ranga:
- Punkty
+   Ranga:
+ pkt
 Udalo ci sie wydac falszywe pieniadze!
 Zgubiles falszywy paszport!
 Zalegly czynsz
