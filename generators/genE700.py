@@ -103,7 +103,7 @@ def dumpStrings_PL(byte_stream):
     dumpTStringATASCII (byte_stream, 'Niestety,');
     dumpTStringATASCII (byte_stream, ' nie zyje!');
     dumpTStringATASCII (byte_stream, 'Chybiles!');
-    dumpTStringATASCII (byte_stream, 'Wygral ');
+    dumpTStringATASCII (byte_stream, 'Kto wygral? ');
 
     dumpYStringATASCII (byte_stream, 'Nacisnij klawisz!');
 
@@ -282,7 +282,7 @@ weaponNames_EN = ['Hands', 'Knife', 'Club',
                                             'Rifle', 'Machine Gun', 'Grenades']
 carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
-rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek mafii',
+rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek',
                              'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
                             'Szef gangsterow', 'Prawa reka', 'Ojc. chrzestny']
 weaponNames_PL = ['Rece', 'Noz', 'Palka',
