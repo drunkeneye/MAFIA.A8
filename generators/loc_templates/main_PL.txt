@@ -1,5 +1,5 @@
 LOCAMAIN.gfx
-Przeglad
+Podsumowanie
 $f4, $af, $10, $f4
  
  
@@ -17,7 +17,7 @@ ma teraz ruch!
 Poszukiwany!
 Na zdjeciu jest
 , lider
-bandy
+gangu
 . Uwaga!
 Gangsterzy moga byc silnie uzbrojeni!
    Ranga:
