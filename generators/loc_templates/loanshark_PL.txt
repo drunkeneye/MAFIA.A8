@@ -6,7 +6,7 @@ Bracia Dynamit
 Dom Pieniezny Hansel
 Raz Dwa
 1,2,7,8
-Dzien dobry, w czyms moge panu pomoc?
+Dzien dobry, w czyms moge pomoc?
 6
 Tak. Potrzebuje troche gotowki!
 Nie, nie! Chce tylko splacic dlugi!
@@ -37,13 +37,13 @@ Mial jeszcze
 $ przy sobie!
 Najpierw splac swoje wlasne dlugi!
 Kupiec oferuje ci
-$ za sklep. Czy chcesz
-zaakceptowac (T/N)?
+$ za sklep.
+Czy zgadzasz sie (T/N)?
 Zyczysz mu powodzenia.
 Ten sklep juz nalezy do
 Wlasciciel zada
-$ za sklep. Czy chcesz 
-zaakceptowac (T/N)?
+$ za sklep.
+Czy zgadzasz sie (T/N)?
 Teraz sklep nalezy do ciebie!
 Masz
 $ w sklepie.
