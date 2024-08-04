@@ -253,7 +253,10 @@ def convert_charset_to_bytestream(charset, colormap):
                 # map cyan and orange to the same bits
                 if color_index == 4:
                     color_index = 3
-                byte.extend(format(color_index, '02b'))
+                try:
+                    byte.extend(format(color_index, '02b'))
+                except:
+                    raise Exception (f"Unknown color! {k}")
         bytes_stream += byte.tobytes()
     return bytes_stream
 

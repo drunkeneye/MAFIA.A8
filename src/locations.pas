@@ -32,7 +32,6 @@ const
     CREDITS_: byte = 30;
 
  var 
-    currentLocation:   byte;
     currentSubLocation: byte;
     currentSubLocationName: YString;
 

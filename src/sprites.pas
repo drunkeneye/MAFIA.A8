@@ -286,6 +286,7 @@ var
     r:   byte;
 begin
     // mad pascal treats there as local static
+    curLoc := STREET_;
     result := STREET_;
     // we must be on the street because else.
     dir_x := 0;

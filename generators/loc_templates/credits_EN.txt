@@ -33,7 +33,8 @@ A port of a C64 game by Igelsoft
 Programmed by drunkeneye
 Polish localization: +Adam+
 Music: Andy, Cedyn 
-Sfx: Miker 
+Sfx: Miker
+Test: +Adam+
 
 All sources and current version at
 http://github.com/drunkeneye/MAFIA.A8

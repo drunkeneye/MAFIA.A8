@@ -8,6 +8,8 @@ var
     plWinners: array[0..4] of byte absolute $e09c;
     plNWinners: byte absolute $e0a0;
     playMusic: byte absolute $e0a1;
+    currentLocation:   byte absolute $e0a2;
+
 
  var
     plGang_1:   XString absolute $e0d4;
