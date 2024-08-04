@@ -6,7 +6,7 @@ First National Bank of Chicago
 Harris Trust&Savings Bank
 The Northern Trust Company
 0,2,6,8
-Dzien dobry panu! Czym moge sluzyc?
+Dzien dobry! Czym moge sluzyc?
 3
 Nie gadaj, tylko szybko oddaj forse!
 Niepostrzezenie rozejrzyj sie za alarmami i wlam sie noca
@@ -24,6 +24,6 @@ Za goraco! Uciekasz!
 Udalo ci sie!
 Do diabla!... Cos poszlo nie tak!
 Ktos nadchodzi!!
-Musisz miec co najmniej range pionek!
+Musisz miec co najmniej range Pionek!
 Twoj lup wynosi
 Ponadto znajdujesz 500kg zlota...
