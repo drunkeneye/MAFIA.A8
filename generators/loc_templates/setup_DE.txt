@@ -19,10 +19,10 @@ Spieler
 Wie ist dein Name?
 Bandenname?
 Deine Eigenschaften:
-Kraft:
+Starke:
 Intelligenz:
 Brutalitaet:
-Gesundheit:
-Kapital:
+Energie:
+Geld:
 Bist du weiblich oder maennlich (w/m)?
 Kurzes oder langes Spiel (K/L)?

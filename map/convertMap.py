@@ -380,6 +380,7 @@ if __name__ == '__main__':
             verification_result, nErrors = verify_colors(bitmap_result)
             if nErrors > 0:
                 verification_result.save('output/map_errors.png')
+                bitmap_result.save('output/map_errors_raw.png')
                 print (f"{nErrors} color errors found.")
                 raise Exception ("Fix it")
 

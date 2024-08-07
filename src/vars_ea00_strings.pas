@@ -30,6 +30,8 @@ const
     long_game_keycode =  $3a; //Dluga
     shooting_range_keycode = $3e; //s
     training_camp_keycode$= $08; //o
+    health_char = 'E:'~;
+    weapon_char = 'B:'~;
 {$endif}
 
 
@@ -43,6 +45,8 @@ const
     long_game_keycode =  $00;
     shooting_range_keycode = $3e;
     training_camp_keycode$= $2d;
+    health_char = 'E:'~;
+    weapon_char = 'W:'~;
 {$endif}
 
 
@@ -57,6 +61,8 @@ const
     long_game_keycode =  $00;
     shooting_range_keycode = $3e;
     training_camp_keycode$= $2d;
+    health_char = 'E:'~;
+    weapon_char = 'W:'~;
 {$endif}
 
 

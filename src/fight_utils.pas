@@ -10,10 +10,10 @@ begin;
         CRT_GotoxY(0,21);
         CRT_Write(fp_Name[fp_currentPlayer]);
         CRT_GotoxY(0,22);
-        CRT_Write('E:'~);
+        CRT_Write(health_char);
         CRT_Write(fp_energy[fp_currentPlayer]);
         CRT_GotoxY(0,23);
-        CRT_Write('W:'~);
+        CRT_Write(weapon_char);
         CRT_Write(weaponNames[fp_weapon[fp_currentPlayer]]);
     end
     else 
@@ -22,8 +22,8 @@ begin;
         FillChar (Pointer (MAP_SCR_ADDRESS+22*40+20), 20, ' '~);
         FillChar (Pointer (MAP_SCR_ADDRESS+23*40+20), 20, ' '~);
         CRT_WriteRightAligned(21, fp_Name[fp_currentPlayer]);
-        CRT_WriteRightAligned(22, Concat ('E:'~, Atascii2Antic(IntToStr(fp_energy[fp_currentPlayer]))));
-        CRT_WriteRightAligned(23, Concat ('W:'~, weaponNames[fp_weapon[fp_currentPlayer]]));
+        CRT_WriteRightAligned(22, Concat (health_char, Atascii2Antic(IntToStr(fp_energy[fp_currentPlayer]))));
+        CRT_WriteRightAligned(23, Concat (weapon_char, weaponNames[fp_weapon[fp_currentPlayer]]));
     end;
 end;
 

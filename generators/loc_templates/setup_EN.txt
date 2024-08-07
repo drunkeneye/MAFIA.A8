@@ -22,7 +22,7 @@ Your attributes:
 Strength:
 Intelligence:
 Brutality:
-Health:
-Capital:
+Energy:
+Money:
 Are you female or male (F/M)?
 Short or long game (S/L)?
