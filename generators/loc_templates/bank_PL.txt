@@ -2,7 +2,7 @@ LOCABANK.gfx
 Bank
 $e6, $af, $ff, $e6
 Continental Bank
-First National Bank of Chicago
+First National Bank
 Harris Trust&Savings Bank
 The Northern Trust Company
 0,2,6,8
@@ -17,7 +17,7 @@ Niestety, przeoczyles trzech
 straznikow przy wejsciu...
 Straznicy
 Musisz jeszcze potrenowac!
-Kto ma otworzyc skrytke?
+Kto ma otworzyc sejf?
 Hm, zobacze. Sprobuje ze
 stetoskopem...
 Za goraco! Uciekasz!
