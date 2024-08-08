@@ -3,445 +3,75 @@ M A F I A  -  ANLEITUNG
 =======================
 
 
- INHALT
+Es ist das Jahr 1930 in Chicago. Alkohol ist verboten, das Verbrechen blueht 
+auf. Ladenbesitzer leben in staendiger Angst vor Ueberfaellen und Erpressungen,
+die immer haeufiger werden. Jeder kann sich illegale Schusswaffen besorgen, 
+und die korrupte Polizei ist keine Hilfe. 
 
-   1. Worum geht es?
-   2. Ziel des Spiels
-   3. Steuerung
-   4. Start
-   5. Spielverlauf
-   6. Funktionen der Häuser
-   7. Bandenkrieg und der Kampfmodus
-   8. Kurzübersicht
+Du bist ein Niemand, der gerade aus dem Gefaengnis entlassen wurde, und selbst
+die Hotdogverkaeufer lachen ueber dich. Es reicht. Du willst die Herrschaft 
+ueber die Unterwelt. Aber der Weg zum Thron der Mafia ist lang und hart. 
 
-
-
-I) Worum geht es?
-=================
-
-In den Straßen tobt der Kampf, täglich neue Bandenkriege. Kein Geschäft ist vor Überfällen und Schutzgelderpressung sicher. Niemand traut sich unbewaffnet auf die Straße. Täglich werden Banken überfallen und Postzüge ausgeraubt. Auch die schwersten Waffen sind frei erhältlich. Von der Polizei ist keine Hilfe zu erwarten, denn selbst der Polizeichef ist bestechlich.
-In diesem Gewirr von Verbrechen und Korruption kämpfen vier gerade aus dem Gefängnis entlassene Gangster um die Führung der Unterwelt. Sie gehen dabei über Leichen.....
-
-In diesem Spiel können Sie sich in die Lage eines solchen Gangsters versetzen und versuchen, die Macht in der Unterwelt zu übernehmen. Bis Sie aber so weit kommen, müssen Sie noch sehr viele Verbrechen begehen.
-Außerdem versuchen bis zu drei weitere Spieler genau dasselbe.
+Wirst du es schaffen?
 
 
 
-II) Ziel des Spiels
-===================
+Ziel 
+====
 
-Der Spielverlauf besteht hauptsächlich darin, in einer von oben sichtbaren Stadt herumzulaufen und dort verschiedene Häuser zu betreten. So gibt es z.B. Banken, die Sie überfallen oder in denen Sie in den Tresor eindringen können. Oder es gibt Waffenhändler, in denen Sie neue Waffen erwerben oder Ihre Leute ausbilden lassen können. Jedes Haus hat also eine besondere Funktion im Spiel.
+Steige auf und werde der Boss der Unterwelt! 
+Setze dich gegen deine Mitspieler durch!
 
-Für jedes Verbrechen, das Sie begehen, bekommen Sie einen Punkt. Bei steigender Punktzahl steigt auch Ihr Status in der Unterwelt. Am Anfang besitzen Sie noch den Status "Anfänger". Mit diesem Status können Sie aber in der Unterwelt noch nicht sehr viel anfangen. So können Sie z.B. kein Schutzgeld eintreiben, weil Sie noch nicht ernstgenommen werden. Ihre Autorität steigt also erst mit steigender Punktzahl. Die Leute haben mehr Respekt vor Ihnen, aber auch die Polizei wird gefährlicher für Sie. Sie müssen also versuchen, sich mit Kleinkriminalität erstmal durchzuschlagen, bevor Sie sich an größere Verbrechen heranwagen.
+Fuer jeden Job, jeden Mord, fuer jeden Schmuggel, jede Bestechung und jeden 
+Ueberfall erhaelst du mehr Ruhm (und Punkte).
 
-Ziel des Spiels ist es, innerhalb eine paar Jahren, den höchsten Status zu erreichen, nämlich "Chef der Unterwelt" zu werden. Wenn Sie das Spiel mit mehreren Leuten spielen, hat derjenige Spieler gewonnen, der diesen Status als erster erreicht hat.
-
-
-
-III) Steuerung
-==============
-
-Das Spiel wird mit Joystick und Tastatur gesteuert.
-
-C64   Emu
-@  =   Ü  = hoch
-/  =   -  = runter
-:  =   Ö  = links
-;  =   Ä  = rechts
-
-Im Kampf kommen noch SPACE für Aussetzen und RETURN für Feuern, Hauen, Stechen, Werfen dazu (je nach Waffe des Spielers). Nach drücken von RETURN wird die Figur schwarz, danach die Richtungstaste drücken in welche die Figur schiessen soll. (Der Kampf funktioniert rundenweise, also einmal schießen, bzw. bewegen, dann ist der Gegner an der Reihe) 
-
-Mögliche Auswahlpunkte in den Menüs werden durch drücken der jeweiligen Zahlentaste angewählt. 
-
-Mit der Pfel-links-Taste (Emulator Taste ^) gelangen Sie jederzeit vom Stadtplan zum Spielermenü zurück.
+Aber nur, wer am Ende auch den Buergermeister 'umdreht' und sich das Gold 
+im Geldtransporter 'ausleiht' kann Boss der Unterwelt sein...
 
 
 
-IV) Start
+
+Steuerung
 =========
 
-Zuerst werden Sie aufgefordert, die Anzahl der Mitspieler einzugeben. Ein Tip: Mit mehreren Leuten spielt es sich besser, da eine größere Motivation da ist, besser als seine Mitspieler zu sein. Aber auch allein macht das Spiel Spaß, zumal man nicht - wie bei mehreren Spielern - warten muß, bis man an die Reihe kommt.
-Danach geben Sie Ihren Namen und den Namen Ihrer Bande ein. Am Anfang sind Sie zwar noch allein, aber Sie können im Laufe des Spiels Leute anheuern, die sich Ihrer Bande anschließen.
+Das Spiel wird mit Tastatur gesteuert, aber fast immer kann man auch die 
+Tatatur benutzen.
 
-Dann müssen Sie die Werte Ihrer Person bestimmen. Es werden zufällige Zahlen von 1-99 angezeigt, die Sie durch Drücken einer beliebigen Taste anhalten können. Der erste Wert ist die Kraft der Person. Dieser Wert bestimmt, wie schnell sich die Energie einer Person wieder aufbaut. Die Energie ist wichtig für den Kampf, aber dazu später. Der zweite Wert ist die Intelligenz. Diese ist wichtig für das Begehen von Verbrechen. Eine Person mit niedriger Intelligenz stellt sich z.B. beim Taschendiebstahl nicht so geschickt an wie eine mit hoher. Sie wird also öfter erwischt. Auch können Personen mit geringer Intelligenz nicht mit kompliziert zu bedienenden Waffen ausgerüstet werden. Der dritte Wert ist die Brutalität der Person. Auch dieser Wert ist wichtig für die Waffenausrüstung der Person. Um z.B. ein Maschinengewehr skrupellos bedienen zu können, muß die Person schon eine hohe Brutalität besitzen. Alle diese drei Werte können Sie aber auch beim Waffenhändler trainieren.
-Tip: Sollte "Ihre" Intelligenz am Anfang sehr niedrig liegen, dann könnten Sie versuchen, diese ausbilden zu lassen, da Ihnen sonst nur wenige Verbrechen gelingen würden.
+Karte:
+ESC = Zeige Gangster und aktuellen Spielstand an
 
-Danach wird Ihnen noch Ihr Startkapital angezeigt, welches auch zufällig ermittelt wurde.
 
-Nachdem jeder Mitspieler diese Eingaben vollzogen hat, beginnt jetzt das eigentliche Spiel: 
 
+Kampf 
+=====
 
+Der Kampf funktioniert rundenweise, jeder Gangster kann sich bewergen oder 
+schiessen. 
 
-V) Spielverlauf
-===============
-Die Spieler kommen nacheinander an die Reihe. Am Anfang jedes Spielzuges erscheinen manchmal auch wichtige Meldungen, z.B. daß Sie Ihre Miete nicht bezahlt haben, oder daß Sie noch im Gefängnis sitzen.
-Wenn Sie im letzten Monat so erfolgreich waren, daß Ihr Ansehen beträchtlich gestiegen ist, erfahren Sie das auch an dieser Stelle.
+Druecke Return, um deine Waffe zu ziehen und eine Pfeiltaste, um in diese 
+Richtung zu schiessen.
 
-Dann erscheint ein Auswahlmenü (das Hauptmenü des Spielers), aus dem Sie folgende Aktionen wählen können:
+q = Gebe den Kampf auf (nur fuer Anfaenger)
+i = Aktiviere die AI (nach dem naechsten Spielzug)
+Leertaste = Setze die Runde aus 
 
 
-Übersicht
----------
-Hier können Sie in Ihrer Polizeiakte nachschlagen, welche Informationen über Sie und Ihre Bande bekannt sind. Sie erhalten: 
-Ihren aktuellen Status, 
-Ihr Fortbewegungsmittel, 
-Alkoholmenge,
-Schniergelder, 
-bezahlte Mieten usw.
 
-Im nächsten Bild erhalten Sie dann einen Überblick über Ihre Leute. Sie sehen, mit welchen Waffen die einzelnen Leute ausgerüstet sind und welche Werte sie haben.
-E = Energie, 
-K = Kraft, 
-I = Intelligenz, 
-B = Brutalität
-W = Waffenart
-In der Anfangsphase des Spiels sehen Sie hier natürlich nur Ihre eigenen Daten. 
 
 
-Durch die Stadt gehen
----------------------
-Dies ist der eigentliche Hauptteil des Spiels. Jeder Spieler kann diesen Menüpunkt so oft pro Runde auswählen bis seine Schrittzahl Null beträgt. Dann ist der nächste Spieler an der Reihe.
-Es erscheint ein von oben sichtbarer Stadtplan. Ihre Spielfigur wird durch ein kleines blinkendes schwarzes Männchen dargestellt.
 
-Diese Figur bewegen Sie mit der Tastatur, hier benutzen Sie folgende Tasten:
-C64   Emulator
-@  =   Ü  = hoch
-/  =   -  = runter
-:  =   Ö  = links
-;  =   Ä  = rechts
-Auf diese Weise können Sie sich beliebig durch die Straßen und in die Gebäude bewegen. Sie haben allerdings nur eine beschränkte Schrittzahl zur Verfügung. Auf normalen Straßen wird für jeden Schritt auch genau ein Schritt abgezogen
+Credits
+=======
 
-Wenn Sie ein Haus betreten, ist die Anzahl der abgezogenen Schritte abhängig von den Aktionen, die Sie in dem Gebäude ausführen.
+Port eines C64 Spiels von Igelsoft
 
-Insgesamt haben Sie bei Fortbewegung zu Fuß 25 Schritte zur Verfügung, dies kann sich aber, je nach Wagentyp, bis auf 60 erhöhen. Nach Verbrauch dieser Schritte ist die Runde für Sie zu Ende und der nächste Spieler ist an der Reihe.
+Programmiert von drunkeneye
+Polnische Uebersetzung: +Adam+
+Musik: Andy, Cedyn 
+Sound: Miker
+Test: +Adam+
 
-Mit der Pfel-links-Taste (Emulator Taste ^) gelangen Sie zum Spielermenü zurück.
+Quelltext und aktuelle Version:
+http://github.com/drunkeneye/MAFIA.A8
 
-ACHTUNG: Mit der Run-Stop-Taste kann beim Originalspiel das Spiel abgebrochen werden (Basic-Pgm, kein Run-Stop-Schutz) Sollte dies versehentlich geschehen sein, kann durch Eingabe von CONT und drücken der Return-Taste das Spiel fortgesetzt werden.
-
-
-Polizeikontrolle
-- - - - - - - - -
-Wenn Sie sich so nichtsahnend durch die Straßen bewegen, kann es oft passieren, daß Sie in eine Polizeikontrolle geraten. Wenn Sie Pech haben, dann kann es sein, daß die Polizisten einen Steckbrief von Ihnen haben oder daß Falschgeld bei Ihnen gefunden wird.
-In diesem Fall haben Sie zwei Möglichkeiten:
-
-Fluchtversuch
-Sie reißen sich los und versuchen, den Polizisten zu Fuß zu entwischen. 
-Wenn Ihnen die Flucht gelingt, können Sie ganz normal weiterspielen, wurden Sie allerdings erwischt, dann müssen Sie sich im Kampf gegen die Polizisten stellen.
-Der Kampf wird Ihnen sehr oft im Laufe des Spiels begegnen. Hierzu lesen Sie bitte erst das Kapitel Bandenkrieg.
-Wenn Sie aus diesem Kampf als Sieger hervorgegangen sind, dann können Sie ab hier wieder ganz normal weiterspielen. Wenn Sie allerdings verloren haben, was am Anfang wahrscheinlich oft vorkommen wird, dann werden Sie sofort vor Gericht gestellt und zu Gefängnis verurteilt. Diese Gefängnisstrafe ist abhängig von Ihrem Status und liegt bei Anfängern so zwischen ein bis zwei Monaten. Das heißt, Sie müssen ein bis zwei Monate aussetzen.
-Haben Sie allerdings einen höheren Status, dann haben Sie die Möglichkeit, einen Anwalt zu nehmen. Dieser kann Ihre Strafe, je nach Bezahlung, noch mal um ein paar Monate drücken.
-
-Polizisten bestechen
-Da fast alle Polizisten (in diesem Spiel) bestechlich sind, werden Sie bei dieser Methode die kleinsten Probleme haben. Die Polizisten verlangen eine abhängig von Ihrem Status hohe Summe Geld, damit sie Sie ungeschoren davonkommen lassen. Manchmal kommt es allerdings auch vor, daß die Polizisten nur das Bestechungsgeld einkassieren und Sie dann trotzdem festnehmen wollen. In diesem Fall müssen Sie sich dann auch im Kampf gegen sie behaupten. Dies müssen Sie auch, wenn Sie nicht genug Geld mehr haben, um das Bestechungsgeld zu bezahlen.
-
-Diese Aktionen werden Ihnen oft begegnen, denn immer, wenn Sie im Laufe des Spiels von der Polizei erwischt werden, haben Sie die Wahl zwischen Fluchtversuch und Bestechung
-
-
-
-VI) Funktionen der Häuser
-=========================
-Jetzt aber zu den eigentlichen Funktionen der Gebäude.
-
-	
-Autohändler
------------
-Am Anfang des Spiels wäre es sinnvoll, sich ein Auto zuzulegen, da Sie sich dann länger in der Stadt bewegen können.
-
-Wagen kaufen
-Dieses ist die einfachste und ungefährlichste Methode, an ein Auto zu kommen. Es erscheint eine Auswahl von drei verschiedenen Wagen, deren Leistungen und Preise neben diesen angezeigt werden.
-Jeder Autohändler hat allerdings ein anderes Angebot an Autos. So führt einer nur Kleinwagen, ein anderer nur Mittelklassewagen und noch ein anderer nur Luxuslimousinen. Wer welches Angebot hat, ist in jedem Spiel verschieden.
-Wenn Sie schon einen Wagen besitzen, nimmt der Händler natürlich Ihren Alten in Zahlung.
-
-Wagen "organisieren"
-Diese Methode birgt natürlich größere Risiken als die Obige.
-Wenn Sie Glück haben, können Sie hier an leistungsfähigere Wagen herankommen, die Sie gar nicht legal erwerben können. Wenn Sie also ein wirklich gutes Auto haben wollen, müssen Sie diesem Weg wählen.
-Weiterhin sollten Sie beachten, daß die Person, die Sie auf Diebestour schicken, über eine ausreichend hohe Intelligenz verfügen sollte, denn andernfalls könnten Sie leicht erwischt werden.
-Tip: Wenn "Sie" am Anfang nur relativ wenig Intelligenz besitzen, sollten Sie sich ein Auto kaufen, anstatt erfolglos zu versuchen, eines zu stehlen.
-
-
-Waffenhändler
--------------
-Um sich in der Unterwelt behaupten zu können, müssen Sie Ihre Leute mit geeigneten Waffen ausrüsten. Aber auch die Fähigkeiten Ihrer Leute können Sie hier trainieren lassen.
-
-Waffe kaufen
-Sie bekommen eine Auswahl an Waffen unterschiedlicher Preisklasse und Qualität. Bei dem Kauf einer Waffe sollten Sie darauf achten, daß sie eine ausreichende Reichweite, eine gute Treffsicherheit und am besten auch eine gute Wirksamkeit haben sollte. Die besten Waffen sind hier sicherlich das Maschinengewehr oder die Handgranaten. Allerdings führen die Waffenhändler nicht alle das gesamte Angebot an Waffen, so daß Sie nach besonders guten Waffen schon etwas länger suchen müssen.
-Beachten Sie außerdem, daß die Person, die eine Waffe bekommen soll, die für diese Waffe benötigte Intelligenz und Brutalität besitzen muß. Für die Bedienung eines Maschinengewehrs muß nämlich schon eine gewisse Intelligenz vorliegen.
-
-Leute ausbilden lassen
-Wenn Sie beim Waffenkauf gescheitert sind, weil die Person, die Sie ausrüsten wollten, zuwenig Hirn oder zuwenig Brutalität besitzt, dann können Sie diese Fähigkeiten und auch die Kraft der Person im Übungsgelände des Waffenverkäufers direkt oder falls dieser bessere Beziehungeng besitzt in einem Trainingslager (kostet mehr, bringt aber auch mehr) trainieren lassen. 
-
-
-Gangster-Kneipe
----------------
-Dies ist ein Treffpunkt vieler Gangster. Sie können hier Leute für Ihre Bande anheuern, mit Alkohol handeln, Aufträge annehmen und sich nach lohnenden Coups beim Wirt erkundigen.
-
-Alkohol an- verkaufen
-Nicht jeder Wirt hat dieses Zeugs auf Lager und nicht jeder will es . .
-
-Leute anheuern
-Wenn Sie den Rang "Ganove" erreicht haben, haben Sie die Möglichkeit, eine Bande zu gründen (bis zu 10 Gangster) und eigene Leute anzustellen. Falls sich ein interessierter Gangster im Lokal befindet, kommt er zu Ihnen und Sie erhalten eine kurze Beschreibung desselben. Sie sollten natürlich versuchen, Leute mit guten Fähigkeiten anzuheuern, damit Sie diese nicht mehr ausbilden lassen müssen. Aber lassen Sie sich nicht von den Beschreibungen in die Irre führen.
-Jeder Gangster fordert eine gewisse Geldsumme, damit er sich Ihnen anschließt. Wenn Sie den Gangster für geeignet halten, dann bezahlen Sie diesen Betrag und er wird von nun an Ihrer Bande angehören und alles tun, was Sie ihm befehlen.
-Man beachte aber, daß es in der Stadt nur 30 Ganster gibt und dadurch bei vier Spieler ein "Gangster-Engpass" auftreten könnte . . .
-
-Aufträge annehmen
-Es gibt verschiedene Dinge, die Ihnen der Wirt hier anbieten könnte
-Meistens schlägt Ihnen der Wirt eine Tätigkeit in einem hiesigen Unternehmen vor. Sie brauchen nur noch anzugeben, ob Sie dort arbeiten wollen. Sie kriegen Ihre Arbeit natürlich gut bezahlt. 
-Es kann aber auch sein das Sie Ihre Dienste als Killer zur Verfügung stellen sollen. Sie bekommen einen Auftrag, bei dem Sie eine Person oder eine Personengruppe umbringen müssen. Manchmal kann es auch sein, daß diese Personen von Leibwächtern beschützt werden. Seien Sie also vorsichtig, sonst werden Sie selbst zum Opfer. Das eigentliche Attentat läuft dann in Form eines Kampfes ab, wie er im Kapitel Bandenkrieg beschrieben wird. Haben Sie Ihren Auftrag erledigen können, dann bekommen Sie dafür eine angemessene Bezahlung.
-
-Tip für Überfall einholen
-Falls Sie einen gewissen Status errungen haben, gibt Ihner der Wirt nicht immer, aber doch sehr oft gegen angemessene Bezahlung einen wertvollen Tip über bevorstehende Ereignisse wie z.B. die Ankunft eines Geldtransportes oder eines Postzuges, etc.
-
-
-Hotel
------
-Hier können Sie sich ein Hotelzimmer nehmen. 
-
-Hotelzimmer nehmen
-Ein Hotelzimmer ist notwendig, damit Sie einige wichtige Aktionen im Spiel ausführen können. Wenn Sie an diese Stellen kommen, werden Sie darauf aufmerksam gemacht, daß Sie ein Zimmer haben müssen.
-
-Miete bezahlen
-Hier können Sie die Miete für Ihr Hotelzimmer bezahlen. Beachten Sie bitte, daß diese immer im Voraus bezahlt werden muß. Sie können aber angeben, für wie viele Monate Sie bezahlen wollen.
-
-
-Bank
-----
-Hier gibt es Geld im Überfluß. Sie brauchen sich nur zu bedienen. Entweder Sie verüben einen ganz normalen Banküberfall oder Sie versuchen, den Safe der Bank zu knacken.
-
-"normaler" Banküberfall
-Sie zwingen den Kassierer, das Geld rauszugeben. Sie sollten hierbei allerdings beachten, daß der Gangster, den Sie zum Bedrohen des Bankangestellten einsetzen, auch eine für einen Banküberfall geeignete Waffe besitzt und ein Zweiter benötigt wird um Schmiere zu stehen. Wenn Sie Pech haben, betätigt der Kassierer allerdings den Alarmknopf, so daß Sie sich danach mit der Polizei auseinandersetzen müssen.
-
-Safe knacken
-Sie verschwinden und kommen erst in der Nacht wieder zur Bank zurück. Nachdem Sie in den Tresorraum eingedrungen sind, müssen Sie nur noch den Tresor aufknacken.
-Dazu müssen Sie versuchen, eine dreistellige Zahlenkombination herauszufinden. Zu diesem Zweck benutzen Sie ein Stethoskop.
-Sie drehen das erste Rad des Safes mit der Taste F1. Bei jeder Drehung hören Sie einen Ton. Die richtige Zahl ist erreicht, wenn dieser Ton von den übrigen Tönen ein klein wenig abweicht. Danach können Sie sich das zweite Rad vornehmen, indem Sie die Taste F3 drücken. Wenn Sie auch diese Zahl herausgefunden haben, drücken Sie die Taste F5 und drehen das dritte Rad.
-Der Safe öffnet sich automatisch, sobald die richtige Kombination eingestellt wurde. Sie müssen sich allerdings beeilen, denn Sie haben nur ca. acht Sekunden für diese ganze Aktion Zeit, bevor die Sirene ertönt und die Polizei den Tresorraum stürmt.
-Tip: Da es beim Safeknacken nicht auf die Fähigkeiten der Spielfigur, sondern nur auf die des Spielers ankommt, bietet sich hier auch für Spieler, deren Spielfigur am Anfang noch eine geringe Intelligenz besitzt, eine Möglichkeit, gut an Geld und Punkte zu kommen.
-Tip: Belesene Gangster haben es etwas leichter . . .
-
-
-Blüten-Ede
-----------
-Bei Blüten-Ede können Sie druckfrische Blüten erwerben oder sich einen neuen Paß zulegen.
-
-Blüten kaufen
-Die Qualität seiner Blüten ist sehr hoch, so daß Sie diese eigentlich gefahrlos einkaufen können. Nur die Polizei wird hin und wieder mal auf Sie aufmerksam.
-Sie werden gefragt, wieviel Geld Sie investieren wollen. Blüten-Ede gibt Ihnen dann dafür eine größere Menge Blüten wieder zurück.
-
-Paß drucken lassen
-Wenn Sie in eine Polizeikontrolle geraten, dann müssen Sie oftmals Ihren Paß vorzeigen. Die Polizei hat aber möglicherweise Ihre Daten gespeichert und kann Sie so identifizieren. Wenn Sie einen neuen Paß hätten, dann wäre die Chance geringer, daß sie Sie erkennen würde. Bei Blüten-Ede können Sie sich also einen neuen Paß drucken lassen. Wenn Sie schon mehrere Gangster in Ihrer Bande haben, können Sie auswählen, ob Sie nur einen einzelnen Paß machen lassen wollen oder gleich komplett für die ganze Bande. Denn je mehr Leute in Ihrer Bande mit neuen Pässen ausgerüstet sind, desto geringer ist die Chance, daß die Polizei Ihnen Ärger macht.
-
-
-U-Bahn-Station
---------------
-Die Stadt verfügt über einige U-Bahn-Stationen, deren überfüllte Bahnsteige gute Gelegenheiten zum Taschendiebstahl bieten.
-
-Taschendiebstahl am Bahnsteig
-Sie wählen, sofern Sie über Bandenmitglieder verfügen, einen Gangster aus, der für Sie auf Diebestour geht. Sie sollten natürlich versuchen, einen besonders intelligenten zu nehmen, damit sich dieser beim Stehlen nicht so dumm anstellt. Wenn er etwas Brauchbares gestohlen hat, wird dieses sofort wieder verkauft und Sie erhalten den Wert des Diebesgutes in Bar ausgezahlt.
-
-Taschendiebstahl in der U-Bahn
-Hierbei begibt sich wieder ein Gangster auf Diebestour, nur daß er sich diesmal in der U-Bahn betätigt. Hier hat er den Vorteil, daß die Leute noch gedrängter stehen, sich also die Chancen auf einen Erfolg vergrößern.
-
-
-Polizei-Präsidium
------------------
-Hier ist das Hauptquartier der Polizei. Auch die Gangster, die Ihre Gefängnisstrafe abbüßen, sind hier einquartiert.
-
-Inhaftierten Gangster befreien
-Wenn Sie zu mehreren Spielern spielen, kommt es oft vor, daß einer von Ihnen gerade im Gefängnis sitzt. Dieses ist, besonders bei hohen Strafen, für den Inhaftierten nicht sehr angenehm, da er aussetzen muß. Sie können sich also gnädig zeigen und ihn befreien. Dafür können Sie natürlich eine hohe Belohnung desselben erwarten. Sie sollten sich aber vorher über den Kontostand des zu Befreienden informieren, da Sie, falls dieser bankrott ist, nichts von Ihm bekommen. Sie können natürlich auch eine private Absprache machen; z.B. nach dem Motto: Eine Hand wäscht die andere.
-
-Polizeichef bestechen
-Dies ist eine praktische Funktion, wenn Sie vorhaben, in nächster Zeit viele größere Verbrechen zu begehen. Der Polizeichef wird seine Leute dann nämlich anweisen, Sie laufen zu lassen, immer wenn Sie bei einem Verbrechen erwischt werden. Sie brauchen nur anzugeben, wie viele Monate Sie bestechen wollen, und Sie werden in diesem Zeitraum keine Probleme mehr mit der Polizei haben.
-
-
-Bahnhof
--------
-Dies ist der Hauptbahnhof der Stadt. Sie könnten auf dem Bahnsteig Ihr Glück versuchen und dort auf einen Postzug warten. Oder Sie vertreiben sich die Zeit mit Taschendiebstahl.
-
-Bahnhofskneipe aufsuchen
-Die Bahnhofskneipe ist ein ganz gewöhnliches Lokal, wie jedes andere in diesem Spiel. Allerdings ist der Wirt dieser Kneipe dem Handel mit Alkohol nicht abgeneigt.
-
-Taschendiebstahl
-Hier haben Sie die Möglichkeit, auf dem Bahnsteig oder in der Eisenbahn Taschendiebstahl zu begehen.
-
-Postzug überfallen
-In der Kriminalgeschichte haben Postzüge schon immer eine große Anziehungskraft auf Ganoven gehabt, denn hier gibt es meistens eine Menge Geld zu holen. So auch in diesem Spiel.
-Wenn Sie Glück haben, ist gerade ein Postzug auf dem Weg durch die Stadt und wartet nur darauf, überfallen zu werden.
-
-
-Casino
-------
-Wenn Sie beim Verbrechen kein Glück haben, dann können Sie versuchen, Ihres auf legale Art und Weise herauszufordern.
-
-Spielen
-Sie haben die Wahl zwischen drei verschiedenen Spielen: Black-Jack, Poker und Roulette. Die Spiele laufen automatisch ab, Sie haben keinen Einfluß auf den Spielverlauf. Sie werden lediglich um die Eingabe Ihres Einsatzes gebeten. Falls Sie schon Leute angeheuert haben, müssen Sie noch bestimmen, wer für Sie spielt. Sie sollten natürlich einen möglichst intelligenten Gangster auswählen. Nach dem Spiel erfahren Sie dann, ob Sie gewonnen oder verloren haben.
-Die drei Spiele unterscheiden sich untereinander durch die Gewinnchance und die Höhe des Gewinns. Beim Black-Jack kann man leichter gewinnen als beim Pokern, und beim Pokern leichter als beim Roulette. Die Gewinne sind dann natürlich von der Gewinnchance abhängig. Im Klartext: Beim Roulette ist die Gewinnchance am niedrigsten, aber wenn Sie gewinnen, dann ist der Gewinn am höchsten.
-Tip: Wenn Sie einen Gangster mit sehr hoher Intelligenz besitzen, sollten Sie ruhig mal ein Spielchen wagen. Die Gewinnchancen sind nämlich gar nicht so schlecht.
-
-
-Kredit-Hai
-----------
-Wenn Sie ganz und gar kein Glück haben, können Sie auch als letzte Möglichkeit einen Kredit aufnehmen, damit Sie wenigstens ein Startkapital haben.
-
-Kredit aufnehmen
-Wenn Sie also überhaupt keine Chance mehr haben, an Geld zu kommen, können Sie sich hier bis zu 30000 DM leihen. Die Zinsen sind natürlich, wie es sich für einem Kredit-Hai gehört, seeehr hoch, nämlich 5% pro Monat! Außerdem ist die Laufzeit des Kredits auf fünf Monate beschränkt, wenn Sie also das Geld bis zu diesem Zeitpunkt nicht zurückgezahlt haben, kommen Schuldeneintreiber und kassieren alles Geld, was Sie besitzen. Wenn das nicht ausreicht, pfänden Sie zusätzlich Ihr Auto. Wenn auch hiermit Ihre Schulden nicht beglichen sind, kommen Sie wegen Kreditbetrugs einige Monate ins Gefängnis, je nachdem wieviel Geld noch aussteht.
-
-Kredit zurückzahlen
-Hier können Sie bestimmen, wieviel Sie von Ihrem laufenden Kredit zurückzahlen wollen. Beeilen Sie sich hiermit, sonst kommen die Schuldeneintreiber.
-
-Kreditgeschäft aufkaufen
-Wenn der Besitzer gewillt ist, zu verkaufen, können Sie hiermit unter die Kredit-Haie gehen. Das Geschäft wird dann von den Angestellten selbständig geführt, Sie erhalten aber automatisch die Gewinne am Anfang des Monats. Hierbei müssen dem Geschäft ein gewisses Geschäftskapital überlassen, damit der Laden auch Gewinne erwirtschaften kann. Je mehr Sie dem Geschäft zur Verfügung stellen, desto höher sind auch die Gewinne.
-
-Geschäftskapital ändern
-Wenn Sie Besitzer des Geschäfts sind, können Sie hier das Kapital nachträglich erhöhen oder erniedrigen. Auch wenn Sie mal in Geldnot sind, können Sie sich hier kurzfristig mal bedienen. Das Geschäft macht dann natürlich nur noch kleinere Gewinne.
-
-Schulden eintreiben
-Hier können Sie, wenn Sie der Besitzer des Ladens sind, von Zeit zu Zeit mal anfragen, ob wieder einmal ein Schuldner mit den Zahlungen im Rückstand steht. Dann können Sie selbst Hand anlegen und das Geld eintreiben.
-
-
-
-VII) Bandenkrieg und der Kampfmodus
-===================================
-
-
-Bandenkrieg
------------
-Der Bandenkrieg funktioniert nur, wenn Sie zu mehreren Spielern spielen. Hier können sich die Spieler untereinander bekriegen. Wenn also einer von ihnen gerade einen großen Coup gelandet hat und gut bei Kasse ist, können Sie versuchen, ihm die Beute wieder abzunehmen. 
-
-
-Kampfmodus
-----------
-Der Kampf ist ein sehr wichtiges Element im Spiel. Es kommt oft vor, daß Sie z.B. gegen die Polizei oder gegen andere Gangster kämpfen müssen. Ihr Abschneiden in dieser Disziplin entscheidet meistens auch über Ihren Erfolg.
-
-Wenn Sie also bei einem Kampf antreten, sehen Sie sich, oder Ihre Leute, auf der linken Seite des Spielfelds. Ihr Gegner befindet sich auf der rechten Seite. Im unteren Teil befindet sich ein weiteres Feld, in dem Daten über die beiden Kontrahenten zu lesen sind.
-
-Die zwei Parteien sind immer abwechselnd an der Reihe. Zuerst steuert der erste Spieler seine Leute und dann der Zweite.
-
-Jede Figur hat am Anfang des Kampfes eine bestimmte Energie. Bei jedem Treffer, den sie einstecken muß, verliert sie einen gewissen Teil davon. Wenn die Energie verbraucht ist, ist die Figur kampfunfähig und scheidet aus. Die Energie baut sich erst im Laufe des Spiels wieder auf und ist abhängig von der Kraft der Person. Wenn Sie also gerade einen schweren Kampf hinter sich haben, sind Ihre Leute noch sehr geschwächt und vertragen nicht viel.
-
-Jede Figur kann immer nur eine Aktion in einer Runde ausführen: sie kann sich entweder um einen Schritt bewegen oder einen Schlag bzw. Schuß in eine bestimmte Richtung ausführen.
-
-Wenn Sie an der Reihe sind, fängt Ihre erste Figur zu blinken an. Um sie einen Schritt ausführen zu lassen, drücken Sie die Richtungstaste, in die sie sich bewegen soll.
-
-Wenn die Figur nahe genug an einem Gegner steht, kann sie aber auch einen Schuß auf diesen abgeben. Hierbei kommt es sehr auf die Waffe an, die diese besitzt. Das Wichtigste bei einer Waffe ist deren Reichweite. Schlag- und Stichwaffen reichen nur ein Feld weit, Pistolen über mehrere Felder und Gewehre noch weiter. Bei einem Schuß bzw. Schlag sollten Sie also erst überlegen, ob die Reichweite ausreicht, um den Gegner zu treffen.
-Eine weitere wichtige Eigenschaft einer Waffe ist auch die Treffsicherheit derselben. So kann es sein, daß die Kugel zwar weit genug fliegt, aber Ihr Ziel trotzdem nicht trifft. Ein Maschinengewehr hat hier natürlich eine wesentlich größere Treffsicherheit als beispielsweise eine einfache Pistole. Die letzte Eigenschaft einer Waffe ist dann natürlich die Wirkung. Es ist schon ein Unterschied, ob der Gegner von einer Faust oder von einer explodierenden Handgranate getroffen wird.
-Wenn Sie sich also entschieden haben, einen Schuß bzw. Schlag auf den Gegner abzugeben, drücken Sie die Return-Taste um Ihre Figur bereit zu machen. Die Figur ändert ihre Farbe auf schwarz. Jetzt wählen Sie - genau wie bei der Bewegung der Figur - die Richtung, in die der Schuß erfolgen soll. Der Gegner muß sich natürlich in direkter Linie zu Ihrer Figur befinden, damit er getroffen wird. Sie sehen jetzt das Geschoß über das Feld fliegen. Wenn die Kugel bzw. der Schlag oder Stich ihr Ziel erreichte, sehen Sie im unteren Feld, ob sie getroffen hat, und, wenn ja, welche Wirkung der Treffer hatte, also wieviel Energie der Gegner verloren hat. Wenn die Energie der gegnerischen Figur verbraucht ist, verschwindet diese vom Spielfeld und Sie haben ein Problem weniger.
-
-Nachdem Sie all Ihre Leute auf diese Art gesteuert haben, ist der Gegner an der Reihe und macht dasselbe mit seinen Leuten.
-
-Dieser Schlagabtausch geht dann so lange, bis alle Leute einer Partei erledigt sind. Dann ist der Kampf zu Ende und Sie erhalten eine Übersicht über die Verluste der beiden Parteien.
-
-Tip: Wenn Sie schon mehrere Leute besitzen, sollten Sie mit einer Strategie arbeiten, um bessere Chancen zu haben. Sie können z.B. unbewaffnete Leute als Deckung für Leute mit leistungsfähigen Waffen benutzen. Es werden also erst die für Sie "nutzlosen" Leute erledigt, die dahinterstehenden, bewaffneten Leute können solange munter weiterfeuern. Aber auch die Reichweiten der Waffen sollten Sie beachten. Wenn Sie z.B. ein Maschinengewehr besitzen und Ihr Gegner nur mit einer Pistole ausgerüstet ist, sollten Sie diesen auf der Distanz halten, aus der Sie ihn zwar noch treffen können, er wiederum Sie aber nicht. 
-
-
-
-VIII) Kurzübersicht
-===================
-
-Hier nun die Kurzübersicht, in der Sie die Aktionen, die Sie in den einzelnen Häusern ausführen können, auf einen Blick sehen:
-
-Autohändler (rotes Feld mit Auto)
------------
-Autos kaufen
-Autos klauen
-
-Waffenhändler (schwarzes Feld mit Pistole)
--------------
-Waffen kaufen
-Leute ausbilden lassen
-
-Gangster-Kneipe (rotes Feld mit P)
----------------
-Alkohl handeln
-Leute anheuern
-Tip für Überfall erfragen
-Aufträge annehmen
-	
-Hotel/Schlupfwinkel (Feld mit blauen Pfeil)
--------------------
-Zimmer mieten
-Miete zahlen
-
-Bank / Postamt (Feld mit weißen Gebäude)
---------------
-Banküberfall
-Safe ausrauben
-
-Blüten-Ede (schwarzes Feld mit B)
-----------
-Blüten kaufen
-Paß drucken lassen
-
-U-Bahnhof (blaues Feld mit U)
----------
-Taschendiebstahl am Bahnsteig
-In der U-Bahn stehlen
-
-Polizeipräsidium (blaues Feld 3 Punkten)
-----------------
-Sich selbst stellen
-Mitspieler befreien
-Polizeichef bestechen
-
-Zug-Bahnhof (rotes Feld mit R)
------------
-Bahnhofskneipe aufsuchen
-Taschendiebstahl
-Postzug ausrauben
-
-Casino (gelbes Feld mit Gebäude)
-------
-Black-Jack spielen
-Poker spielen
-Roulette spielen
-
-Kredit-Hai (braunes K)
-----------
-Kredit aufnehmen
-Schulden bezahlen
-Kredit-Geschäft auf- verkaufen
-Kapital im Laden ändern
-Überfällige Schulden eintreiben
-
-Geschäft (violettes Feld mit S)
---------
-Geschäft überfallen
-Inhaber anbetteln
-Inhaber erpressen
-Trickdiebstahl
-
-
-Bürgermeister (rotes Feld mit B)
--------------
-!! nur vorhanden wenn Auftrag "Bürgermeister töten" angenommen !!
-Kampf gegen die Leibwächter. Auftrag abgeschlossen, wenn Sieg
-
-Geldtransport (blaues Feld mit G)
--------------
-!! nur vorhanden wenn Tip "Geldtransport in der Stadt" bekommen !!
-
-
-
-IX Tabellen
-===========
-
-Ränge
------
-00 Anfänger           33 Langfinger        66 Bullenschreck
-11 Schläger           44 Ganove            77 Meuchelmörder
-22 Kleiner Fisch      55 Mafiosi           88 Gangsterboss
-                                          100 Chef der Unterwelt
-Ein Rangaufstieg erfolgt nur nach einer schweren Missetat  ;)
-Andere Aktionen bringen zwar Punkte, aber keine Rangerhöhung
-
-Waffen
-------
-    Hände            500 Schlagkette     4500 Gewehr
- 50 Messer          3000 Wurfstern       8000 Maschinenoistole
-100 Knüppel         4000 Revolver       10000 Handgranate
-
-Fortbewegungsmittel
--------------------
-25 Füsse              35 Citroen           40 Buick
-35 Talbot             40 Chevy             60 Auburn
 

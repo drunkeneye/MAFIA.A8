@@ -1,10 +1,10 @@
 LOCALOAN.gfx
 Kredit-Hai
 $4a, $af, $ff, $4a
-Bei Peters
-Dynamite Bros
-Geldhaus Hansel
-Zack Zack
+Riverfront Credit Line
+Downtown Credit Agency
+Chicago Loan & Trust
+Windy City Financial Group
 1,2,7,8
 Einen wunderschoenen guten Tag, kann ich ihnen helfen?
 6

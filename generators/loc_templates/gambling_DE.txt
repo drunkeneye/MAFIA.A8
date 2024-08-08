@@ -1,10 +1,10 @@
 LOCAGAMB.gfx
 Spielhoelle
 $1e, $af, $00, $1e
-Pokerface Plaza
-Zockotopia
-Jokers Valhalla
-Casino Carlos
+The Stardust Club
+Windy City Casino
+The Golden Horseshoe
+Lakefront Lounge & Casino
 2,4,5,7
 Na Freund, wie waer's mit 'nem Spielchen? Karten? Roulette?
 2

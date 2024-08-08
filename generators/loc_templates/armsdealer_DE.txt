@@ -1,10 +1,10 @@
 LOCAARMS.gfx
 Waffenladen
 $38, $af, $ff, $38
-Der Buechsenmacher
-Waffenhandel Axel
-Scharfe Stahlwaren
-Kurts Flinten
+Chicago Gun Shop
+Midwest Firearms
+Marshall Field & Company
+Windy City Guns & Ammo
 0,3,6,9
 'Tag, Mister. Ein paar gute Handboeller gefaellig? Sind im Hinterzimmer...
 3

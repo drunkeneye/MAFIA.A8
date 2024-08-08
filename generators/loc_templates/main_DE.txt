@@ -25,12 +25,12 @@ Die Gangster sind schwer bewaffnet!
 Du konntest dein Falschgeld ausgeben!
 Du hast deinen falschen Pass verloren!
 Mietrueckstand
-Du hast deine Miete nicht puenktlich
+Du hast das Zimmer nicht puenktlich
 gezahlt!
-Der Vermieter hat deine Moebel
+Der Hotelier hat deine Wertsachen
 im Wert von 
 $ gepfaendet!
-Der Vermieter wirft dich aus der Bude!
+Der Kerl wirft dich aus dem Hotel!
 Deine Gangster suchen sich 'nen 
 anderen Boss, einen mit mehr Knete...
 Kapitalgeschaefte

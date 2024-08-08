@@ -1,10 +1,10 @@
 LOCAARMS.gfx
 Gun Shop
 $38, $af, $ff, $38
-The Gunsmith
-Axel's Firearms
-Sharp Cutlery
-Kurt's Shotguns
+Chicago Gun Shop
+Midwest Firearms
+Marshall Field & Company
+Windy City Guns & Ammo
 0,3,6,9
 'Hey, mister. Want some good pistols? They're in the back room...
 3

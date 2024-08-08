@@ -2,10 +2,6 @@
 
 A game originally by Igelsoft, ported to Atari 8-bit by drunkeneye.
 
-## Status
-
-Beta. Graphics are suboptimal, sound is not existing.
-There will be many bugs.
 
 
 ## Requirements
@@ -20,10 +16,6 @@ An several other tools like atari-tools (https://github.com/jhallen/atari-tools)
 
 Currently, the code only compiles well on MAD Pascal v1.7.0.
 
-Also, be aware that the code has been developed on a MacOS with
-case-insensitive filesystem. Depending on that, files might not be
-found when using case-sensitive filesystem like on Linux.
-
 
 
 ## Generating stuff
@@ -36,7 +28,7 @@ for this start ```run.sh``` in ```./maps```.
 ## Localization
 
 The localization strings are mainly in ./generators/loc_templates/
-but a few strings are built-in, these can be found in strings.pas 
+but a few strings are built-in, these can be found in vars_ea00_strings.pas 
 
 After localization, the binary files must be regenerated using
 ./generators/genLocations.py
@@ -48,6 +40,7 @@ In ./src just execute make. If all tools and assets are in place,
 this should produce then an ATR image in ./release.
 The game language must be specified via the make command,
 e.g. to compile for english, use ```make LOCATION=EN```.
+Available languages are DE=german, EN=english, PL=polish.
 
 
 ## Gameplay
@@ -75,31 +68,6 @@ To set to AI mode press I. The AI will then take over after
 the current move, and cannot be turned off again!
 
 
-
-## Remarks
-
-- Graphics can be regarded as ugly. Someone should fix this.
-
-- There is basically no sound. There should be some music during
-the title, and also during the final. And some soundeffects, maybe
-during map-moving and fighting. TBD.
-
-- Source code, especially variables could be cleaned up. Also some
-code are not 'optimized', e.g. in some places strings are copied
-instead of changing the pointer to the string.
-
-
-## TODO 
-
-- Maybe different fight maps, but then the AI might need a fix or two.
-
-
-## BUGS or similar
-
-- Balance maybe walking costs/car range
-- Even out rank requirements for bank/pub/gangsters
-- Fix English/Polish localizations
-- subway station name is not correct when stealing at central station
 
 
 

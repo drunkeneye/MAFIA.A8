@@ -1,10 +1,10 @@
 LOCASTOR.gfx
 Einfacher Laden
 $d4, $af, $ff, $d4
-Alis Gemueseladen
-Reh-Weh
-Konstantinos Gyros
-Wolliwoarts
+Tiffany & Co.
+Main Street Market
+Neighborhood Grocer
+Woolworth
 0,3,6,8
 (Perfekt fuer Schutzgelderpressungen!) 'Tag, Mister. Was darf's denn sein?
 5

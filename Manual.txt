@@ -1,0 +1,77 @@
+====================
+M A F I A  -  MANUAL
+====================
+
+
+It is the year 1930 in Chicago.  Alcohol is prohibited, crime thrives. 
+Store  owners live in constant fear of robberies and extortions, which are
+becoming more frequent. Anyone can obtain illegal firearms, and the corrupt
+police are no help. 
+
+You are a nobody just released from prison, even hot dog vendors laugh at you.
+Enough is enough. You crave control of the underworld. But the path to the 
+mafia throne is long and hard. 
+
+Will you succeed?
+
+
+
+Goal 
+====
+
+Rise up and become the boss of the underworld!
+Compete against your fellow players!
+
+For every job, every murder, every smuggling, every bribery, and every
+robbery you gain more fame (and points).
+
+But only those who manage to 'turn' the mayor in the end and 'borrow'
+the gold in the money transporter can be the boss of the underworld...
+
+
+
+
+Controls
+========
+
+The game is controlled with the keyboard, but almost always you can also
+use the keyboard.
+
+Map:
+ESC = Show gangsters and current game status
+
+
+
+
+Fight
+=====
+
+Combat is turn-based, each gangster can move or shoot.
+
+Press Return to draw your weapon and an arrow key to shoot in that
+direction.
+
+q = Give up the fight (beginners only)
+i = Activate the AI (after the next move)
+Space = Skip the round
+
+
+
+
+Credits
+=======
+
+Port of a C64 game by Igelsoft
+
+Programmed by drunkeneye
+Polish translation: +Adam+
+Music: Andy, Cedyn
+Sound: Miker
+Test: +Adam+
+
+All sources and current version at
+http://github.com/drunkeneye/MAFIA.A8
+
+
+
+ 

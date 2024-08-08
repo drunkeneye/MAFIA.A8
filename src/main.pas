@@ -185,7 +185,7 @@ begin
 
     plNewPoints[currentPlayer] := 70;
     plMoney[currentPlayer] := 5550005;
-    
+    plOpportunity[currentPlayer] := 25;
 
 
     // turn off all IRQs

@@ -1,10 +1,10 @@
 LOCAHIDE.gfx
-Schlupfwinkel (Motel, Mietskaserne)
+Hotel (Schlupfwinkel)
 $02, $af, $ff, $02
-Bett und Broetchen
-Ramas Goldloeckchen
-Hotel Schwarzer Fuchs
-Parkhotel
+Hotel Sherman
+The Blackstone
+The Edgewater Beach Hotel
+Park Hotel
 1,5,8,9
 Ah, ein Kunde! Was wuenscht der Herr?
 4
@@ -15,12 +15,12 @@ Ich wuensche nichts. Sie vielleicht?'
 50
 Du wohnst hier schon!
 Nichts mehr frei!
-Du kannst keine zwei Wohnungen mieten!
+Du kannst keine zwei Zimmer mieten!
 Du wohnst hier nicht!
 Gut. Pro Monat kostet das 
 $ Miete.
 Gezahlt wird hier im voraus!
-Du hast die Bude noch 
+Du hast das Zimmer noch 
  Monate!
 Wieviele Monate willst du mieten? 
 Guten Tag, der Herr!
@@ -32,11 +32,11 @@ Du hast den Bandenkrieg verloren!
 pluendert deine Taschen
 und erbeutet
 Du hast den Bandenkrieg gewonnen!
-Du leerst die Bude von
+Du leerst das Zimmer von
 und erbeutest
 Ausserdem nimmt er deinen Alkohol mit!
 Ausserdem nimmst du den Alkohol mit!
 Und zerlegt dein Auto in Einzelteile!
 Und zerlegst sein Auto in Einzelteile!
-Du kannst die Bude nicht mehr als 
+Du kannst das Zimmer nicht mehr als 
 3 Jahre im voraus mieten!

@@ -1,10 +1,10 @@
 LOCAGAMB.gfx
 Gambling Den
 $1e, $af, $00, $1e
-Pokerface Plaza
-Zockotopia
-Jokers Valhalla
-Casino Carlos
+The Stardust Club
+Windy City Casino
+The Golden Horseshoe
+Lakefront Lounge & Casino
 2,4,5,7
 Hey buddy, how about a little game? Cards? Roulette? C'mon...
 2

@@ -1,9 +1,9 @@
 LOCAHIDE.gfx
-Hideout (Motel, Tenement)
+Hotel (Hideout)
 $02, $af, $ff, $02
-Bed and Breakfast
-Rama's Goldilocks
-Hotel Black Fox
+Hotel Sherman
+The Blackstone
+The Edgewater Beach Hotel
 Park Hotel
 1,5,8,9
 Ah, a customer! What does the gentleman wish?
@@ -15,7 +15,7 @@ I don't wish for anything. Do you?
 50
 You already live here!
 No vacancies left!
-You can't rent two apartments!
+You can't rent two rooms!
 You don't live here!
 Alright. It costs
 $ per month.

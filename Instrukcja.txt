@@ -1,0 +1,71 @@
+
+========================
+M A F I A  -  INSTRUKCJA
+========================
+
+Chicago, rok 1930. Alkohol jest zakazany, przestępczość kwitnie. Sklepikarze
+żyją w ciągłym strachu przed rabunkami i wymuszeniami, które stają się coraz
+częstsze. Każdy może zdobyć nielegalną broń palną, a skorumpowana policja
+nie jest w stanie pomóc.
+
+Jesteś nikim, właśnie wypuszczono cię z więzienia, nawet sprzedawcy hot dogów
+śmieją się z ciebie. Wystarczy. Pragniesz kontroli nad podziemnym światem.
+Ale droga do mafijnego tronu jest długa i trudna.
+
+Czy Ci się to uda?
+
+
+
+Cel 
+===
+
+Awansuj i zostań bossem podziemia!
+Rywalizuj ze swoimi współgraczami!
+
+Za każdą robotę, każde morderstwo, za każdy przemyt, każdą łapówkę i każdy
+napad zdobywasz więcej sławy (i punktów).
+
+Ale tylko ten, kto na końcu 'przekupi' burmistrza i 'pożyczy' złoto
+z konwoju może zostać bossem podziemia...
+
+
+
+
+Sterowanie
+==========
+
+Gra jest sterowana klawiaturą, ale prawie zawsze można także
+używać klawiatury.
+
+Mapa:
+ESC = Pokaż gangsterów i aktualny stan gry
+
+
+
+Walka
+=====
+
+Walka odbywa się turowo, każdy gangster może się poruszyć lub strzelać.
+
+Naciśnij Return, aby wyciągnąć broń i strzałkę, aby strzelić w tym
+kierunku.
+
+q = Poddaj walkę (tylko dla początkujących)
+i = Aktywuj AI (po następnym ruchu)
+Spacja = Pominięcie rundy
+
+
+
+Twórcy
+======
+
+Port gry z C64 wydanej przez Igelsoft
+
+Autor konwersji: drunkeneye
+Polska lokalizacja:  +Adam+
+Muzyka: Andy, Cedyn
+Dzwiek: Miker
+Test: +Adam+
+
+Link do zrodel i aktualnej wersji:
+http://github.com/drunkeneye/MAFIA.A8

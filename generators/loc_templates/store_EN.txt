@@ -1,10 +1,10 @@
 LOCASTOR.gfx
 Simple Store
 $d4, $af, $ff, $d4
-Ali's Vegetable Store
-Deer Pain
-Konstantinos Gyros
-Woolly Warts
+Tiffany & Co.
+Main Street Market
+Neighborhood Grocer
+Woolworth
 0,3,6,8
 (Perfect for protection racketeering!) 'Morning, mister. What'll it be?
 5

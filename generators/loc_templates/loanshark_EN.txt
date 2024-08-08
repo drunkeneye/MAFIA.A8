@@ -1,10 +1,10 @@
 LOCALOAN.gfx
 Loan Shark
 $4a, $af, $ff, $4a
-At Peter's
-Dynamite Bros
-Money House Hansel
-Quick Quick
+Riverfront Credit Line
+Downtown Credit Agency
+Chicago Loan & Trust
+Windy City Financial Group
 1,2,7,8
 A very good day, can I help you?
 6
