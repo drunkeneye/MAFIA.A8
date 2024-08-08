@@ -1,9 +1,9 @@
 LOCAHIDE.gfx
-Kryjowka (Motel, kamienica)
+Hotel (kryjowka)
 $02, $af, $ff, $02
-Lozko i buleczki
-Zlote Wlosy Ramy
-Hotel Czarny Lis
+Hotel Sherman
+The Blackstone
+The Edgewater Beach Hotel
 Hotel Parkowy
 1,5,8,9
 Ach, klient! Czego pan sobie zyczy?
@@ -23,7 +23,7 @@ Platnosc z gory!
 Masz tu schronienie na jeszcze
  mies.!
 Na ile miesiecy chcesz wynajac? 
-Zycze panu milego dnia!
+Zycze milego dnia!
 Wojna gangow!
 Ale tu nikt nie mieszka...
 Dzwonisz do 
