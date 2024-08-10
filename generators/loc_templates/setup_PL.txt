@@ -22,7 +22,7 @@ Twoje cechy:
 Sila:
 Inteligencja:
 Brutalnosc:
-Zdrowie:
+Energia:
 Kapital:
 Jestes kobieta czy mezczyzna (K/M)?
 Krotka czy dluga gra (K/D)?
