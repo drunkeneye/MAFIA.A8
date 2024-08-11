@@ -8,7 +8,7 @@ Tawerna Dworcowa
 1,4,6,9
 Ej, amigo, chcesz mleka, czy szukasz czegos innego?
 5
-Nie, mleka nie! Masz cos z alkoholem?
+Nie, mleka nie! Masz cos z procentami?
 Szukam paru kolesi do mego gangu. Zobaczmy, kto jest dostepny...
 Masz moze jakis dobry pomysl na napad albo cos w tym stylu?
 Pilnie potrzebuje pracy, zlecenia! Wiesz o co chodzi...
@@ -20,11 +20,11 @@ $ za beczke!
 Ile chcesz oddac (0-
 (chciwie) Zdobadz wiecej!
 Co? Alkohol? To przeciez zabronione!
-Mam cos, ale cena za beczke to 
+Mam cos, ale cena za beczke to
 Wroc, gdy bedziesz mogl przewiezc
 towar!
 Ile chcesz (0-
-Jako 
+Jako
  nie mozesz jeszcze
 rekrutowac wlasnych ludzi!
 Najpierw musisz znalezc schronienie
