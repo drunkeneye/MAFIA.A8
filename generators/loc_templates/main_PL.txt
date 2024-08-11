@@ -16,7 +16,7 @@ Gracz
 ma teraz ruch!
 Poszukiwany!
 Na zdjeciu jest
-, lider
+, szef
 gangu
 . Uwaga!
 Gangsterzy moga byc silnie uzbrojeni!
@@ -41,7 +41,7 @@ Otrzymujesz
 Wiezienie
 Jestes nadal w wiezieniu...
 Masz jeszcze troche czasu przed soba
- miesiecy do ponownego zwolnienia)
+ mies. do ponownego zwolnienia)
 Zostales zwolniony z wiezienia przez
 . Ile dolarow chcesz 
 przekazac w ramach podziekowania
