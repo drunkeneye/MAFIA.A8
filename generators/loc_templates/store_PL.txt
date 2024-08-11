@@ -1,17 +1,17 @@
 LOCASTOR.gfx
 Zwykly sklep
 $d4, $af, $ff, $d4
-Warzywniak Alego
-Bracia Mandel
-Gyros Konstantinosa
-Wolliwoarts
+Tiffany & Co.
+Market przy Glownej
+Spozywczy
+Woolworth
 0,3,6,8
-(dobry do sciagania haraczu za ochrone!) Dzien dobry panu. Co podac?
+(dobry do sciagania haraczu za ochrone!) Dzien dobry, co podac?
 5
-Dawaj pieniadze! W przeciwnym razie odpale tu fajerwerki!
+Dawaj kasiore albo odpale tu fajerwerki!
 Prosze, kilka dolarow dla mej chorej mamusi! Jest taaaka biedna!
 Za niewielka oplata ochronimy cie przed zlymi gangsterami!
-Policja! W kasie sa falszywe pieniadze i zamierzam je zabrac!
+Policja! W kasie sa falszywe pieniadze i zamierzamy je zabrac!
 Dzis nie bedziemy pobierac oplat
 50
 Znikaj, mlokosie!
@@ -39,13 +39,13 @@ Twoj wybor?
 Bierzesz pieniadze i uciekasz.
 Cholerny gang! Zaplacicie za to!
 Facet wzywa kilku oprychow!
-Oprychy
+Oprych
 Rozpirzyles sklep w drzazgi. W kasie 
 znajdowalo sie
 Obiecuje ci piekny nagrobek i laduje
 swoja bron maszynowa!
 Sklepikarz
-Natarczywy facet nie zyje.
+Bezczelny facet nie zyje.
 Mial jeszcze
 $ w kieszeni!
 Gang Jacka z Blizna
