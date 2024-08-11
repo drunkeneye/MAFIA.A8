@@ -42,9 +42,8 @@ compile_title:
 	cp ../assets/logo.apl ./atr.assets
 
 
-# -define:norank for direct access to all things
 compile_main:
-	$(MP) main.pas -code:0c00 -o $(ASM)  -define:LOCATION_$(LOCATION)
+	$(MP) main.pas -code:0c00 -o $(ASM)  -define:LOCATION_$(LOCATION) -define:CHEAT
 	$(MADS) $(ASM) -x -i:$(BASE) -o:$(XEX)
 	cp $(XEX) ./atr.assets/MAIN.XEX
 

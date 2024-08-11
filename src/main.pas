@@ -182,21 +182,6 @@ begin
     setupGame();
     initPlayers();
 
-    plNewPoints[currentPlayer] := 70;
-    plMoney[currentPlayer] := 5550005;
-    plOpportunity[currentPlayer] := 255;
-
-
-    // turn off all IRQs
-    // Poke($D20E, 0);
-
-    // for k:= 0 to 31 do
-    // begin;
-    //     CRT_Clear();
-    //     loadGangster(k);
-    //     waitForKey();
-    // end;
-
 
     msx.player:=pointer(rmt_player);
     msx.modul:=pointer(rmt_modul);
@@ -291,30 +276,20 @@ begin
 
             repeat;
                 ch := readKeyAndStick();
-                // overview page
+
+                {$ifdef CHEAT}
+                // overview page M
                 if byte(ch) = $65 then
                     addMoney(10000);
+                // W                    
                 if byte(ch) = $6e then
                 begin;
-                    plPoints[currentPlayer] := gamePoints+10;
+                    plPoints[currentPlayer] := plPoints[currentPlayer]+5;
+                    plOpportunity[currentPlayer] := 255;
                     plMoneyTransporter[currentPlayer] := 1;
                     plKilledMajor[currentPlayer] := 1;
                 end;
-
-                // if byte(ch) = $20 then begin;
-                //     if playMusic = 1 then
-                //     begin
-                //         msx.Stop();
-                //         playMusic := 0;
-                //     end
-                //     else
-                //     begin
-                //         playMusic := 1;
-                //         msx.Play();
-                //     end;
-                //     waitForKeyRelease();
-                //     WaitFrames(20);
-                // end;
+                {$endif}
 
                 if ch = #$1c then begin;
                     // ensure we have loaded the main location

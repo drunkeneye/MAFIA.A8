@@ -1,5 +1,5 @@
 LOCACRED.gfx
-MAFIA v1.0 (Silly Venture)
+MAFIA v1.0 (Silly Venture 2024 SE)
 $70, $af, $0e, $70
   
   
