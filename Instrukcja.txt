@@ -65,7 +65,7 @@ Autor konwersji: drunkeneye
 Polska lokalizacja:  +Adam+
 Muzyka: Andy, Cedyn
 Dzwiek: Miker
-Test: +Adam+
+Support: +Adam+
 
 Link do zrodel i aktualnej wersji:
 http://github.com/drunkeneye/MAFIA.A8

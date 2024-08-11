@@ -62,6 +62,7 @@ def dumpStrings_EN(byte_stream):
     dumpYStringATASCII (byte_stream, 'The police await you outside the store!');
 
     byte_stream.append(5)
+    dumpTStringATASCII (byte_stream, 'They hit ');
 
 
 def dumpStrings_DE(byte_stream):
@@ -95,6 +96,7 @@ def dumpStrings_DE(byte_stream):
     dumpYStringATASCII (byte_stream, 'Die Polizei erwartet dich schon!');
 
     byte_stream.append(10)
+    dumpTStringATASCII (byte_stream, 'Sie haben ');
 
 
 def dumpStrings_PL(byte_stream):
@@ -128,6 +130,7 @@ def dumpStrings_PL(byte_stream):
     dumpYStringATASCII (byte_stream, 'Policja czeka na ciebie przed sklepem!');
 
     byte_stream.append(7)
+    dumpTStringATASCII (byte_stream, 'Trafili ');
 
 
 
@@ -205,7 +208,7 @@ def createE700(rankNames, weaponNames, carNames, suffix):
     with open(filename, 'wb') as f:
         f.write(byte_stream)
     print(len(byte_stream))
-    assert(len(byte_stream) == 1471)
+    assert(len(byte_stream) == 1487)
 
 
 

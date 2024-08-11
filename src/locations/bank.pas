@@ -201,13 +201,13 @@ begin;
                 if c[whpos] < 0 then c[whpos] := 9;
                 nAttempts := nAttempts - 1;
 
-                playMusic := 1;
 
                 if (hops = False) and (t[whpos] = c[whpos]) then 
                     msx.init ($0a)
                 else 
                     msx.init ($0c);
                 msx.play();
+                playMusic := 1;
                 WaitFrames(10);
                 msx.stop();
                 playMusic := 0;

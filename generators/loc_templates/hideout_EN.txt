@@ -3,8 +3,8 @@ Hotel (Hideout)
 $02, $af, $ff, $02
 Hotel Sherman
 The Blackstone
-The Edgewater Beach Hotel
 Park Hotel
+The Edgewater Beach Hotel
 1,5,8,9
 Ah, a customer! What does the gentleman wish?
 4

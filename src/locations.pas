@@ -1,5 +1,10 @@
 
 const 
+    last_Forgery: byte = 1;
+    last_Train: byte = 2;
+    last_Bribe: byte = 3;
+
+const 
     BANK_: byte = 1;
     FORGERY_: byte = 2;
     MONEYTRANSPORT_: byte = 3;

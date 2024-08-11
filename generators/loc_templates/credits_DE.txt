@@ -1,5 +1,5 @@
 LOCACRED.gfx
-MAFIA v0.41
+MAFIA v1.0 (Silly Venture)
 $70, $af, $0e, $70
   
   
@@ -31,10 +31,10 @@ und hart. Wirst du es schaffen?
 Port eines C64 Spiels von Igelsoft
 
 Programmiert von drunkeneye
+Support: +Adam+
 Polnische Uebersetzung: +Adam+
 Musik: Andy, Cedyn 
 Sound: Miker
-Test: +Adam+
 
 Quelltext und aktuelle Version:
 http://github.com/drunkeneye/MAFIA.A8

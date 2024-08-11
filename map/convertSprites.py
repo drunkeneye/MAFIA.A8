@@ -27,6 +27,7 @@ def create_bytestream(image_paths, output_path):
 
 
 if __name__ == '__main__':
-    create_bytestream(['icons/sprite_player_M.png', 'icons/sprite_player_F.png'], '../assets/player.pmg')
+    create_bytestream(['icons/sprite_player_M.png', 'icons/sprite_player_M_2.png',
+                        'icons/sprite_player_F.png', 'icons/sprite_player_F_2.png'], '../assets/player.pmg')
 
 #

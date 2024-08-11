@@ -2,7 +2,7 @@ LOCABANK.gfx
 Bank/Postamt
 $e6, $af, $ff, $e6
 Continental Bank
-First National Bank of Chicago
+First National Bank
 Harris Trust&Savings Bank
 The Northern Trust Company
 0,2,6,8

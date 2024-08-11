@@ -158,7 +158,8 @@ var
     
     fpPosStart:   array[0..16*2-1] of word absolute e7adr+944+16; 
     LOCACENTfname: TString absolute e7adr + 944+16+64; //$e9fe
-    LOCACREDfname: TString absolute e7adr + 944+16+64+16;
+    LOCACREDfname: TString absolute e7adr + 944+16+64+16; //$ea10 <--hopefully
+    mapColorA: byte absolute $ea11;
 
 var 
     e7fname: TString = 'E700PAGEAPL';
@@ -167,6 +168,7 @@ var
     //finalfname: TString = 'XAUTORUN   ';
     finalfname: TString;// = 'FINALMAPAPL';
     mapReloaded: Byte;
+    spriteOffset: byte;
 
 var  // for sprites 
     stick :   byte absolute $278;

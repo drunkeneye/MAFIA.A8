@@ -3,8 +3,8 @@ Hotel (Schlupfwinkel)
 $02, $af, $ff, $02
 Hotel Sherman
 The Blackstone
-The Edgewater Beach Hotel
 Park Hotel
+The Edgewater Beach Hotel
 1,5,8,9
 Ah, ein Kunde! Was wuenscht der Herr?
 4

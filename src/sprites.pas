@@ -249,9 +249,15 @@ var
 begin
     //  for now player is there
     // FIXME: length of player must  be written somewhere
-    playerOfs := 0;
     z := currentPlayer SHL 3;
-    if gangsterSex[z] = 1 then playerOfs := 48;
+
+    playerOfs := 0;
+    if (0 < spriteOffset) and (spriteOffset < 7) then begin 
+        playerOfs := 48;
+    end;
+
+    if gangsterSex[z] = 1 then playerOfs := playerOfs + 48*2;
+
     playerHeight := 12;
     // color for color
     Move (Pointer(PMG_BASE_ADR+playerOfs), Pointer(PMG_BASE_ADR+1024+playerPos_Y), playerHeight);
@@ -352,15 +358,16 @@ begin
 
 
     // we can walk
-    playMusic := 1;
     msx.init ($0e);
     msx.play();
+    playMusic := 1;
 
     if dir_y <> 0 then
     begin;
         for j := 0 to 7 do
         begin
             // take care of things...
+            spriteOffset := j;
             playerPos_Y := playerPos_Y + dir_y;
             paintPlayer (1);
             WaitFrames(moveSpeed);
@@ -371,6 +378,7 @@ begin
     begin;
         for j := 0 to 7 do
         begin
+            spriteOffset := j;
             playerPos_X := playerPos_X + dir_x;
             paintPlayer (0);
             WaitFrames(moveSpeed);

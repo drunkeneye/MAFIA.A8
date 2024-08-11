@@ -182,9 +182,9 @@ begin;
         t := checkHit (k);
         if t < 128 then
         begin;
-            playMusic := 1;
             msx.init (weaponSound[e]);
             msx.play();
+            playMusic := 1;
             WaitFrames(fight_hitTime);
 
             // compute damage
@@ -204,7 +204,10 @@ begin;
             if hit = 0 then break;
 
             CRT_Gotoxy(0,20);
-            CRT_Write(fight_string_1);
+            if  fp_currentSite = 0 then
+                CRT_Write(fight_string_1)
+            else
+                CRT_Write(fight_string_7);
             CRT_Write(fp_name[t]);
             CRT_Write(' '~);
             CRT_Write(fight_string_2);

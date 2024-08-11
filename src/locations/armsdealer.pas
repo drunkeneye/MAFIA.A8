@@ -157,6 +157,13 @@ begin;
     begin;
         ShowLocationHeader;
 
+        if lastAction = last_Train then 
+        begin;
+            CRT_Writeln_LocStr(24); 
+            waitForKey();
+            exit;
+        end; 
+
         if plNGangsters[currentPlayer] > 1 then 
         begin
             CRT_Writeln_LocStr(13); // who
@@ -211,12 +218,20 @@ begin;
             end;
 
         effectWait();
+        lastAction := last_Train;
 
         CRT_NewLine;
         CRT_NewLine;
-        increaseCurrentGangster (inc_st, inc_in, inc_bt);
-        addPoints(1);
+        if (gangsterStr[currentGangster] = 99) and (gangsterInt[currentGangster] = 99) and (gangsterBrut[currentGangster] = 99) then
+        begin 
+            CRT_Writeln_LocStr(25); 
+        end
+        else
+        begin
+            increaseCurrentGangster (inc_st, inc_in, inc_bt);
+            addPoints(1);
+        end; 
+        waitForKey();
 
-        CRT_ReadKey();
     end;
 end;

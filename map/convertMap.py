@@ -285,6 +285,32 @@ def render_used_characters(charset, border=0):
     return image
 
 
+
+def render_used_characters_padded(charset, border=0):
+    # assume 4x8 character dimensions
+    pad = 1  # 1 pixel padding around each character
+    num_chars = len(charset)
+    chars_per_row = 16
+    num_rows = ceil(num_chars / chars_per_row)
+    width, height = chars_per_row * (4 + 2*pad + border), num_rows * (8 + 2*pad + border)
+    image = Image.new('RGB', (width, height), color='red')  # Background color is red
+
+    for j, char in enumerate(charset):
+        row = j // chars_per_row
+        col = j % chars_per_row
+        grey_img = Image.fromarray(char).convert('L')
+        red_img = Image.merge('RGB', (grey_img, grey_img, grey_img))
+
+        # Create a new image with padding (4+2*pad x 8+2*pad)
+        padded_img = Image.new('RGB', (4 + 2*pad, 8 + 2*pad), color='red')
+        padded_img.paste(red_img, (pad, pad))  # paste the char image in the middle with padding
+
+        image.paste(padded_img, (col*(4 + 2*pad + border), row*(8 + 2*pad + border)))
+
+    return image
+
+
+
 def render_used_characters_old(charset, border = 0):
     # assume 4x8
     num_chars = len(charset)
@@ -364,7 +390,7 @@ if __name__ == '__main__':
     # test full grid first
     charset, charmap = create_charset_and_charmap(full_bitmap)
     print (f"Whole map has altogether {len(charset)} chars.")
-    img_charset = render_used_characters(charset)
+    img_charset = render_used_characters_padded(charset)
     img_charset.save('output/charset_all.png')
 
     #cut the bitmap into sizes
@@ -389,7 +415,12 @@ if __name__ == '__main__':
             mapping = {num: char for sublist, string in zip(charmap, cut_map) for num, char in zip(sublist, string)}
             char_array = [mapping.get(i, '-') for i in range(max(mapping.keys()) + 1)]
             locmap = ''.join(char_array)
-            img_charset = render_used_characters(charset, border = 1)
+            img_charset = render_used_characters_padded(charset, border = 1)
+
+            for cm_row, cg_row in zip(charmap, cut_grid):
+                result = [(hex(cm_row[i]), hex(cm_row[i+1]), cg_row[i//2]) for i in range(0, len(cm_row), 2) if cg_row[i//2] == 'N' or cg_row[i//2] == 'M']
+                if len(result) > 1: 
+                    print(result)
 
             id = N+M*5 # FIXME if the number of screens change
             id = chr(ord('a') + id)
@@ -404,7 +435,6 @@ if __name__ == '__main__':
             byte_stream = convert_charset_to_bytestream(charset, colormap)
             flat_charmap = bytes([byte for sublist in charmap for byte in sublist])
             flat_cutmap = bytes([ord(byte) for sublist in cut_map for byte in sublist])
-
             oneFile = True 
             if oneFile == False:
                 save_byte_stream(byte_stream, f'../assets/{id}amapfnt.gfx')

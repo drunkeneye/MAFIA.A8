@@ -1,5 +1,5 @@
 LOCACRED.gfx
-MAFIA v0.41
+MAFIA v1.0 (Silly Venture)
 $70, $af, $0e, $70
   
   
@@ -31,10 +31,10 @@ Will you succeed?
 A port of a C64 game by Igelsoft
 
 Programmed by drunkeneye
+Support: +Adam+
 Polish localization: +Adam+
 Music: Andy, Cedyn 
 Sfx: Miker
-Test: +Adam+
 
 All sources and current version at
 http://github.com/drunkeneye/MAFIA.A8

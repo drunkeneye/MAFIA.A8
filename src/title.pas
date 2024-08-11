@@ -32,6 +32,7 @@ var  // for sprites
     loccolpf0:            Byte absolute baseAddress + $2B0 + 41 * $28 + 1;
     loccolpf1:            Byte absolute baseAddress + $2B0 + 41 * $28 + 2;
     loccolpf2:            Byte absolute baseAddress + $2B0 + 41 * $28 + 3;
+    mapColorA: byte absolute $ea11;
 
     playMusic: byte absolute $e0a1;
 	msx: TRMT;

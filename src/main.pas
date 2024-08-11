@@ -179,13 +179,12 @@ begin
     //setupGame();
     initGlobalVars();
     showCredits();
-    msx.player:=pointer(rmt_player);
     setupGame();
     initPlayers();
 
     plNewPoints[currentPlayer] := 70;
     plMoney[currentPlayer] := 5550005;
-    plOpportunity[currentPlayer] := 25;
+    plOpportunity[currentPlayer] := 255;
 
 
     // turn off all IRQs
@@ -281,7 +280,8 @@ begin
         enableSprites();
         printMapStatus();
 
-
+        lastAction := 0;
+        
         while (plSteps[currentPlayer] > 0) and (currentLocation <> END_TURN_) do
         begin;
             // EnableVBLI(@vbl);
@@ -441,9 +441,9 @@ begin
                 CRT_WriteCentered_LocStr(8, 36);
                 CRT_WriteCentered_LocStr(9, 37);
                 if gangsterSex[tmp] = 1 then
-                    finalfname := 'FINAWPICAPL'
+                    finalfname := 'FINAGPICAPL' // CHANGED TO G
                 else
-                    finalfname := 'FINAMPICAPL';
+                    finalfname := 'FINAGPICAPL'; // CHANGED TO G
                 break;
             end;
         end;

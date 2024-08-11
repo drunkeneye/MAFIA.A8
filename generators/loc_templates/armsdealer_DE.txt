@@ -35,3 +35,5 @@ intelligenter und brutaler geworden!
 langes im Trainingscamp (S/T)?
 Du behaeltst deine alte Waffe.
 Fuer welchen Gangster?
+Du hast gerade schon trainiert!
+Dein Gangster hat nichts dazugelernt!

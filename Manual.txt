@@ -67,7 +67,7 @@ Programmed by drunkeneye
 Polish translation: +Adam+
 Music: Andy, Cedyn
 Sound: Miker
-Test: +Adam+
+Support: +Adam+
 
 All sources and current version at
 http://github.com/drunkeneye/MAFIA.A8

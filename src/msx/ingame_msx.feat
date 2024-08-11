@@ -2,7 +2,7 @@
 ;* --------BEGIN--------
 ;* 
 Z:\home\aydin\Downloads\RMT\songs\pg\somewhere_stripped.rmt
-FEAT_SFX  equ 1
+FEAT_SFX  equ 0
 FEAT_GLOBALVOLUMEFADE equ 0  ;RMTGLOBALVOLUMEFADE variable
 FEAT_NOSTARTINGSONGLINE equ 0
 FEAT_INSTRSPEED  equ 1

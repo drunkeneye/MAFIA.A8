@@ -53,9 +53,9 @@ begin
   CRT_WriteCentered(5, gangsterNames[z]);
   CRT_WriteCentered_LocStr(6, 2);
 
-  playMusic := 1;
   msx.init (0);
   msx.play();
+  playMusic := 1;
   WaitFrames(120);
   msx.stop();
   playMusic := 0;

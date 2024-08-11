@@ -123,20 +123,23 @@ begin
         end
         else 
         begin  
+            // car
     	    // FA40 : 58 58 4D 4D 4D 4D 4D 4D 58 58 58 58 52 52 52 52 XXMMMMMMXXXXRRRR
             DPoke($fa42, $4d4d);
             DPoke($fa44, $4d4d);
             DPoke($fa46, $4d4d);
-            DPoke($f642, $4c4b);
-            DPoke($f644, $4e4d);
-            DPoke($f646, $504f);
-            // 	FA60 : 58 58 44 44 44 44 2E 2E 2E 2E 4D 4D 4D 4D 4D 4D XXDDDD....MMMMMM
             DPoke($fa6a, $4d4d);
             DPoke($fa6c, $4d4d);
             DPoke($fa6e, $4d4d);
-            DPoke($f66a, $5857);
-            DPoke($f66c, $5a59);
-            DPoke($f66e, $5c5b);
+            // 	FA60 : 58 58 44 44 44 44 2E 2E 2E 2E 4D 4D 4D 4D 4D 4D XXDDDD....MMMMMM
+            // [('0x49', '0x4a', 'M'), ('0x4b', '0x4c', 'M'), ('0x4d', '0x4e', 'M')]
+            DPoke($f642, $4a49);
+            DPoke($f644, $4c4b);
+            DPoke($f646, $4e4d);
+            // [('0x55', '0x56', 'M'), ('0x57', '0x58', 'M'), ('0x59', '0x5a', 'M')]
+            DPoke($f66a, $5655);
+            DPoke($f66c, $5857);
+            DPoke($f66e, $5a59);
         end; 
 
         // major 
@@ -172,21 +175,30 @@ begin
             // 	F910 : 48 48 48 48 58 58 58 58 50 50 50 50 58 58 58 58 HHHHXXXXPPPPXXXX
             DPoke($f90c, $4e4e);
             DPoke($f90e, $4e4e);
+
+            // ('0x2c', '0x2d', 'N'), ('0x2e', '0x2f', 'N'), 
             DPoke($f50c, $2d2c);
             DPoke($f50e, $2f2e);
             //	F930 : 58 58 58 58 58 58 58 58 48 48 48 48 58 58 58 58 XXXXXXXXHHHHXXXX
             DPoke($f934, $4e4e);
             DPoke($f936, $4e4e);
-            DPoke($f534, $3938);
-            DPoke($f536, $3b3a);
+
+            // ('0x2c', '0x38', 'N'), ('0x39', '0x3a', 'N'), 
+            DPoke($f534, $382c);
+            DPoke($f536, $3a39);
+
 	        // F960 : 2E 2E 2E 2E 2E 2E 2E 2E 50 50 50 50 58 58 2E 2E ........PPPPXX..
             DPoke($f960-4, $4e4e);
             DPoke($f962-4, $4e4e);
-            DPoke($f560-4, $4241);
-            DPoke($f562-4, $4443);
+
+            // ('0x1c', '0x40', 'N'), ('0x41', '0x42', 'N'), 
+            DPoke($f560-4, $401c);
+            DPoke($f562-4, $4241);
         end 
     end;
 end; 
+
+
 
 
 procedure preloadMap;

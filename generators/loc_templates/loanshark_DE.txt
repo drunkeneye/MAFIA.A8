@@ -1,6 +1,6 @@
 LOCALOAN.gfx
 Kredit-Hai
-$4a, $af, $ff, $4a
+$46, $af, $ff, $46
 Riverfront Credit Line
 Downtown Credit Agency
 Chicago Loan & Trust

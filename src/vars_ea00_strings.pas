@@ -93,5 +93,5 @@ var
     police_string_1: YString absolute stradr + 40*2 + $10*18;
 
     len_string_bribe: byte  absolute stradr + 40*3 + $10*18;
-
+    fight_string_7: XString absolute stradr + 40*3 + $10*18+1;
 

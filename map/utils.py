@@ -20,6 +20,7 @@ def verify_colors(bitmap):
             unique_colors = np.unique(block.reshape(-1, 3), axis=0)
 
             if len(unique_colors) > 4:
+                print (unique_colors)
                 bitmap_array[i:i+block_height, j:j+block_width] = [255, 0, 0]
                 nErrors += 1
             elif j == 0 or j + block_width == len(bitmap_array[0]):

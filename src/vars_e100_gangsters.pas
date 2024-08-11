@@ -22,7 +22,8 @@ var
     currentYear: byte absolute $e153;
     gameLength:   byte absolute $e154;
     gamePoints:   word absolute $e155;
- 
+    lastAction: byte absolute $e157;
+
     gangsterName_1:   XString absolute $e158;
     gangsterName_2:   XString absolute $e168;
     gangsterName_3:   XString absolute $e178;

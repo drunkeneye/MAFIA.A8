@@ -12,11 +12,16 @@ dli1:
     sta $D409 ; CHBAS_real
     sta WSYNC
 
-    mva #$0e atari.colpf0
-    mva #$06 atari.colpf1
-    mva #$88 atari.colpf2
-    mva #$2a atari.colpf3
-    mva #$00 atari.colbk
+    mva #$0e atari.colpf0 ; white 
+    mva #$06 atari.colpf1 ; lightgrey
+    
+    
+    mva mapColorA atari.colpf2
+    ; mva #$88 atari.colpf2 ; bluish
+    
+    
+    mva #$2a atari.colpf3 ; orangish
+    mva #$00 atari.colbk  ; black
 
     ; move PMG to current position
     lda PLAYERPOS_X

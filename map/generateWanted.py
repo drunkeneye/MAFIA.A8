@@ -8,7 +8,7 @@ import os
 import shutil
 
 from utils import verify_colors
-from convertMap import convert_charset_to_bytestream, save_byte_stream, create_charset_and_charmap
+from convertMap import convert_charset_to_bytestream, save_byte_stream, create_charset_and_charmap, render_used_characters_padded
 
 
 def pad_image(img, output_size):
@@ -33,6 +33,13 @@ if __name__ == '__main__':
     bitmap_result = Image.open("./bitmaps/wanted_m_final.png").convert('RGB')
     bitmap_result = pad_image(bitmap_result, (160, 152))
 
+    # stupid replace 
+    pixels = bitmap_result.load()
+    for x in range(bitmap_result.width):
+        for y in range(bitmap_result.height):
+            if pixels[x, y] == (15, 15, 26):
+                pixels[x, y] = (0, 0, 0)
+
     verification_result, nErrors = verify_colors(np.array(bitmap_result))
     if nErrors > 0:
         verification_result.save(f"bitmaps/error_wanted_m.png")
@@ -41,6 +48,8 @@ if __name__ == '__main__':
     charset, charmap = create_charset_and_charmap(bitmap_result)
     print (len(charset))
     if len(charset) > 127:
+        img_charset = render_used_characters_padded(charset)
+        img_charset.save('output/charset_wanted_m.png')
         raise Exception ("diz not goen.")
     byte_stream = convert_charset_to_bytestream(charset, colormap)
     save_byte_stream(byte_stream, f'../assets/wantemmf.gfx')
@@ -54,6 +63,15 @@ if __name__ == '__main__':
     bitmap_result = Image.open("./bitmaps/wanted_f_final.png").convert('RGB')
     bitmap_result = pad_image(bitmap_result, (160, 152))
 
+    # stupid replace 
+    pixels = bitmap_result.load()
+    for x in range(bitmap_result.width):
+        for y in range(bitmap_result.height):
+            if pixels[x, y] == (15, 15, 26):
+                pixels[x, y] = (0, 0, 0)
+            if pixels[x, y] == (14, 14, 26):
+                pixels[x, y] = (0, 0, 0)
+
     verification_result, nErrors = verify_colors(np.array(bitmap_result))
     if nErrors > 0:
         verification_result.save(f"bitmaps/error_wanted_f.png")
@@ -62,6 +80,8 @@ if __name__ == '__main__':
     charset, charmap = create_charset_and_charmap(bitmap_result)
     print (len(charset))
     if len(charset) > 127:
+        img_charset = render_used_characters_padded(charset)
+        img_charset.save('output/charset_wanted_f.png')
         raise Exception ("diz not goen.")
     byte_stream = convert_charset_to_bytestream(charset, colormap)
     save_byte_stream(byte_stream, f'../assets/wantefmf.gfx')
