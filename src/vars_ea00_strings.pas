@@ -32,6 +32,7 @@ const
     training_camp_keycode$= $08; //o
     health_char = 'E:'~;
     weapon_char = 'B:'~;
+    len_string_gangster = 12;
 {$endif}
 
 
@@ -47,6 +48,7 @@ const
     training_camp_keycode$= $2d;
     health_char = 'E:'~;
     weapon_char = 'W:'~;
+    len_string_gangster = 10;
 {$endif}
 
 
@@ -63,6 +65,7 @@ const
     training_camp_keycode$= $2d;
     health_char = 'E:'~;
     weapon_char = 'W:'~;
+    len_string_gangster = 11;
 {$endif}
 
 

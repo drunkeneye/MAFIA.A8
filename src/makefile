@@ -67,7 +67,9 @@ prepare_atr_folder:
 	cp atr/xbios.com $(ATR_ASSETS)
 	cp ../assets/gangstas.dat_$(LOCATION) $(ATR_ASSETS)/gangstas.dat
 	echo cp ../assets/final.xex $(ATR_ASSETS)/final.xex
-	dd if=/dev/zero of=./atr.assets/SAVEGAME.DAT bs=256 count=4
+	dd if=/dev/zero of=./atr.assets/SAVEGAME.DAT bs=2591 count=1
+# the 2592=$ea20. this is where the strings start, so by saving up to this point
+# it should be possible to save in german and load in polish without language changes.
 
 
 ASSET_FILES := acombmap.gfx \

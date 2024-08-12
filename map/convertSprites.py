@@ -1,6 +1,6 @@
 from PIL import Image
 import numpy as np
-
+import os
 
 def create_bytestream(image_paths, output_path):
     bytestream = []
@@ -26,8 +26,24 @@ def create_bytestream(image_paths, output_path):
             f.write(byte_array)
 
 
+def create_back_sprites():
+    sprites = ['icons/sprite_player_M.png', 'icons/sprite_player_M_2.png',
+        'icons/sprite_player_F.png', 'icons/sprite_player_F_2.png']
+
+    for sprite in sprites:
+        img = Image.open(sprite)
+        flipped_img = img.transpose(Image.FLIP_LEFT_RIGHT)
+        base, ext = os.path.splitext(sprite)
+        new_filename = f"{base}_R{ext}"
+        flipped_img.save(new_filename)
+
+
+
 if __name__ == '__main__':
-    create_bytestream(['icons/sprite_player_M.png', 'icons/sprite_player_M_2.png',
-                        'icons/sprite_player_F.png', 'icons/sprite_player_F_2.png'], '../assets/player.pmg')
+    create_back_sprites()
+    create_bytestream([ 'icons/sprite_player_M.png', 'icons/sprite_player_M_2.png',
+                        'icons/sprite_player_F.png', 'icons/sprite_player_F_2.png',
+                        'icons/sprite_player_M_R.png', 'icons/sprite_player_M_2_R.png',
+                        'icons/sprite_player_F_R.png', 'icons/sprite_player_F_2_R.png'], '../assets/player.pmg')
 
 #

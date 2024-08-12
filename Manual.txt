@@ -35,7 +35,7 @@ Controls
 ========
 
 The game is controlled with the keyboard, but almost always you can also
-use the keyboard.
+use the joystick.
 
 Map:
 ESC = Show gangsters and current game status

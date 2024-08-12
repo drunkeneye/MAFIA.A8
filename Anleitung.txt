@@ -34,8 +34,8 @@ im Geldtransporter 'ausleiht' kann Boss der Unterwelt sein...
 Steuerung
 =========
 
-Das Spiel wird mit Tastatur gesteuert, aber fast immer kann man auch die 
-Tatatur benutzen.
+Das Spiel wird mit Tastatur gesteuert, aber fast immer kann man auch den
+Joystick benutzen.
 
 Karte:
 ESC = Zeige Gangster und aktuellen Spielstand an

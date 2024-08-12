@@ -239,31 +239,45 @@ begin;
 end;
 
 
+const
+    spriteSize = 48; //playerHeight=12, each sprite=12 byte, 4 sprits on top
 
 // only for y-direction, x-direction taken care of DLI
 procedure paintPlayer(clear: byte);
 var
     playerHeight:   byte;
-    playerOfs:   byte;
-    z: byte;
+    playerOfs:   word;
+    i, j, z: byte;
+    reversedByte, originalByte: byte;
+    srcAdr, tgtAdr: word;
 begin
-    //  for now player is there
-    // FIXME: length of player must  be written somewhere
     z := currentPlayer SHL 3;
 
     playerOfs := 0;
+    if (spriteMoveDir = -1) then begin
+        playerOfs := spriteSize*4;
+    end; 
+    if gangsterSex[z] = 1 then playerOfs := playerOfs + spriteSize*2;
+
+    // create_bytestream([ 'icons/sprite_player_M.png', 'icons/sprite_player_M_2.png',
+    //                     'icons/sprite_player_F.png', 'icons/sprite_player_F_2.png',
+    //                     'icons/sprite_player_M_R.png', 'icons/sprite_player_M_2_R.png',
+    //                     'icons/sprite_player_F_R.png', 'icons/sprite_player_F_2_R.png'], '../assets/player.pmg')
+
+
     if (0 < spriteOffset) and (spriteOffset < 7) then begin 
-        playerOfs := 48;
+        playerOfs := playerOfs + spriteSize;
     end;
 
-    if gangsterSex[z] = 1 then playerOfs := playerOfs + 48*2;
-
     playerHeight := 12;
+
     // color for color
     Move (Pointer(PMG_BASE_ADR+playerOfs), Pointer(PMG_BASE_ADR+1024+playerPos_Y), playerHeight);
     Move (Pointer(PMG_BASE_ADR+playerOfs+playerHeight), Pointer(PMG_BASE_ADR+1280+playerPos_Y), playerHeight);
     Move (Pointer(PMG_BASE_ADR+playerOfs+2*playerHeight), Pointer(PMG_BASE_ADR+1536+playerPos_Y), playerHeight);
     Move (Pointer(PMG_BASE_ADR+playerOfs+3*playerHeight), Pointer(PMG_BASE_ADR+1792+playerPos_Y), playerHeight);
+
+
     if clear = 1 then
     begin
         playerOfs := playerPos_Y-1;
@@ -297,9 +311,10 @@ begin
     // we must be on the street because else.
     dir_x := 0;
     dir_y := 0;
+    
     case ch of
-        #06:   dir_x := -1;
-        #07:   dir_x := +1;
+        #06:   begin; dir_x := -1; spriteMoveDir := -1; end;
+        #07:   begin; dir_x := 1; spriteMoveDir := 1; end;
         #14:   dir_y := -1;
         #15:   dir_y := +1;
         else
@@ -429,6 +444,7 @@ procedure enableSprites();
 begin;
     // clear sprite first
     clearSprites();
+    spriteMoveDir := 0;
     //https://github.com/playermissile/dli_tutorial/blob/master/src/util_pmg.s
     asm;
         // we need to put it into registers directly,  because we do not have

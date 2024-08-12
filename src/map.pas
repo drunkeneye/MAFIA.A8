@@ -30,7 +30,7 @@ begin
         z := gangsterWeapon[i];
         CRT_Write(weaponNames[z]);
 
-        CRT_GotoXY(40-10, 20);
+        CRT_GotoXY(40-len_string_gangster, 20);
         CRT_Write(map_string_gangster);
         tmp := plNGangsters[currentPlayer]-1;
         CRT_Write(tmp);

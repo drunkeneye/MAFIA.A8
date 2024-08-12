@@ -1,5 +1,5 @@
 LOCAUPDT.gfx
-Przeglad
+Podsumowanie
 $bf, $af, $00, $bf
  
  

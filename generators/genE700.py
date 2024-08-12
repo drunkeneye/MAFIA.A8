@@ -43,7 +43,7 @@ def dumpStrings_EN(byte_stream):
 
     # map_str_1..9
     dumpTStringATASCII (byte_stream, 'Weapon:');
-    dumpTStringATASCII (byte_stream, 'Gangster:');
+    dumpTStringATASCII (byte_stream, 'Gangsters:');
     dumpTStringATASCII (byte_stream, 'Rent:');
     dumpTStringATASCII (byte_stream, 'Bribe:');
     dumpTStringATASCII (byte_stream, 'Car:');
@@ -111,7 +111,7 @@ def dumpStrings_PL(byte_stream):
 
     # map_str_1..9
     dumpTStringATASCII (byte_stream, 'Bron:');
-    dumpTStringATASCII (byte_stream, 'Gangster:');
+    dumpTStringATASCII (byte_stream, 'Gangsterzy:');
     dumpTStringATASCII (byte_stream, 'Czynsz:');
     dumpTStringATASCII (byte_stream, 'Lapowka:');
     dumpTStringATASCII (byte_stream, 'Auto:');
