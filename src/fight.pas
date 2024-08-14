@@ -99,8 +99,7 @@ begin;
         end;
     end;
 
-    //fp_AI[0] := 1;
-    fp_AI[1] := 1;
+    //fp_AI[1] := 1;
     w := setupFightArena();
 
     // update energy

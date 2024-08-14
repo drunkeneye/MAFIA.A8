@@ -2,8 +2,8 @@
 ; RastaConverter by Ilmenit v.Beta8
 ; InputName: new_final.png
 ; CmdLine: new_final.png /filter=bicubic /init=smart /distance=cie2000 /predistance=cielab /contrast=25 /brightness=0 /gamma=0.9 /dither=jarvis /dither_val=0.33 /threads=16 /s=65535 /pal=Palettes/altirra.act /details_val=4
-; Evaluations: 9904529026
-; Score: 12.8151
+; Evaluations: 27079001310
+; Score: 12.2074
 ; ---------------------------------- 
 ; Proper offset 
 	nop
@@ -12,3735 +12,3611 @@
 	nop
 	cmp byt2;
 line0
-	lda #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$82 ; 130 (spr=82)
+	nop 
+	lda #$BA ; 186 (spr=138)
 	lda #$00 ; 0 (spr=-48)
 	sta COLOR2
-	ldy #$00 ; 0 (spr=-48)
-	lda #$E0 ; 224 (spr=176)
-	stx COLPM2
-	ldy #$A5 ; 165 (spr=117)
-	sty HPOSP0
-	sta COLOR1
-	sta COLPM2
-	ldx #$FF ; 255 (spr=207)
 	lda #$00 ; 0 (spr=-48)
+	sty COLPM3
 	lda #$81 ; 129 (spr=81)
-	ldx #$FF ; 255 (spr=207)
-	sty HPOSP1
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$9D ; 157 (spr=109)
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldy #$41 ; 65 (spr=17)
+	lda #$10 ; 16 (spr=-32)
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$90 ; 144 (spr=96)
+	lda #$F0 ; 240 (spr=192)
+	nop 
+	ldx #$E0 ; 224 (spr=176)
+	lda #$00 ; 0 (spr=-48)
+	lda #$E0 ; 224 (spr=176)
+	lda #$0F ; 15 (spr=-33)
+	ldy #$FF ; 255 (spr=207)
+	ldy #$A5 ; 165 (spr=117)
+	lda #$3C ; 60 (spr=12)
+	lda #$90 ; 144 (spr=96)
+	lda #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line1
+	sty HPOSP0
 	ldy #$40 ; 64 (spr=16)
-	sty COLBAK
-	ldy #$91 ; 145 (spr=97)
-	sta COLPM3
-	sty COLOR1
-	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$F1 ; 241 (spr=193)
-	nop 
-	lda #$84 ; 132 (spr=84)
-	ldy #$00 ; 0 (spr=-48)
 	sty COLOR0
 	lda #$00 ; 0 (spr=-48)
-	ldy #$02 ; 2 (spr=-46)
 	nop 
-	ldx #$FF ; 255 (spr=207)
+	sty COLBAK
+	ldy #$00 ; 0 (spr=-48)
 	nop 
+	nop 
+	ldy #$F0 ; 240 (spr=192)
+	nop 
+	lda #$F0 ; 240 (spr=192)
+	nop 
+	sty COLPM2
+	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	ldy #$80 ; 128 (spr=80)
+	lda #$B1 ; 177 (spr=129)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line2
+	ldy #$80 ; 128 (spr=80)
+	ldx #$01 ; 1 (spr=-47)
+	sty COLPM2
 	sty COLOR0
 	nop 
+	ldy #$E1 ; 225 (spr=177)
+	lda #$00 ; 0 (spr=-48)
+	lda #$B1 ; 177 (spr=129)
+	nop 
 	sty COLOR0
-	ldx #$D0 ; 208 (spr=160)
-	ldy #$01 ; 1 (spr=-47)
-	ldy #$F0 ; 240 (spr=192)
+	lda #$00 ; 0 (spr=-48)
 	ldx #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$41 ; 65 (spr=17)
+	lda #$F0 ; 240 (spr=192)
 	nop 
+	ldy #$80 ; 128 (spr=80)
+	sty COLPM2
+	ldy #$80 ; 128 (spr=80)
 	nop 
-	lda #$01 ; 1 (spr=-47)
-	ldy #$E4 ; 228 (spr=180)
-	ldx #$41 ; 65 (spr=17)
-	ldx #$E0 ; 224 (spr=176)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$40 ; 64 (spr=16)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$40 ; 64 (spr=16)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line3
-	ldx #$40 ; 64 (spr=16)
+	ldy #$80 ; 128 (spr=80)
+	ldx #$01 ; 1 (spr=-47)
+	sty COLPM2
 	nop 
+	lda #$00 ; 0 (spr=-48)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$B1 ; 177 (spr=129)
 	nop 
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	ldy #$F0 ; 240 (spr=192)
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$82 ; 130 (spr=82)
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E4 ; 228 (spr=180)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$E0 ; 224 (spr=176)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$FF ; 255 (spr=207)
-	ldy #$01 ; 1 (spr=-47)
-	ldy #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	lda #$F0 ; 240 (spr=192)
+	nop 
+	ldy #$80 ; 128 (spr=80)
+	sty COLPM2
+	ldy #$80 ; 128 (spr=80)
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line4
-	ldx #$40 ; 64 (spr=16)
-	ldy #$83 ; 131 (spr=83)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$02 ; 2 (spr=-46)
+	ldy #$80 ; 128 (spr=80)
+	ldx #$01 ; 1 (spr=-47)
+	sty COLPM2
+	ldy #$80 ; 128 (spr=80)
 	nop 
-	ldy #$01 ; 1 (spr=-47)
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$F0 ; 240 (spr=192)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$00 ; 0 (spr=-48)
+	stx COLOR0
+	lda #$B1 ; 177 (spr=129)
+	nop 
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	nop 
-	lda #$90 ; 144 (spr=96)
+	lda #$00 ; 0 (spr=-48)
 	nop 
 	nop 
+	lda #$EF ; 239 (spr=191)
+	nop 
+	nop 
+	sty COLOR0
+	nop 
+	nop 
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$D0 ; 208 (spr=160)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$10 ; 16 (spr=-32)
-	ldy #$E4 ; 228 (spr=180)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line5
-	ldx #$40 ; 64 (spr=16)
-	ldy #$83 ; 131 (spr=83)
+	ldy #$80 ; 128 (spr=80)
 	nop 
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$01 ; 1 (spr=-47)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$F0 ; 240 (spr=192)
+	sty COLPM2
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	nop 
-	lda #$90 ; 144 (spr=96)
-	nop 
 	nop 
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$D0 ; 208 (spr=160)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$10 ; 16 (spr=-32)
-	ldy #$E4 ; 228 (spr=180)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
+	lda #$B1 ; 177 (spr=129)
+	lda #$00 ; 0 (spr=-48)
+	stx COLOR0
+	ldy #$E1 ; 225 (spr=177)
+	nop 
+	sty COLOR0
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	nop 
+	lda #$F0 ; 240 (spr=192)
+	ldx #$01 ; 1 (spr=-47)
+	nop 
+	ldy #$80 ; 128 (spr=80)
+	nop 
+	nop 
 	ldx #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line6
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
+	ldy #$80 ; 128 (spr=80)
+	ldx #$01 ; 1 (spr=-47)
+	sty COLPM2
+	sty COLOR0
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$00 ; 0 (spr=-48)
+	stx COLOR0
+	lda #$B1 ; 177 (spr=129)
 	nop 
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
 	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E4 ; 228 (spr=180)
+	nop 
+	lda #$F0 ; 240 (spr=192)
+	nop 
+	nop 
+	ldy #$80 ; 128 (spr=80)
+	nop 
+	nop 
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$F0 ; 240 (spr=192)
-	ldx #$E0 ; 224 (spr=176)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$FF ; 255 (spr=207)
-	ldy #$01 ; 1 (spr=-47)
-	nop ; filler
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line7
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
+	ldy #$70 ; 112 (spr=64)
+	sty COLPM2
+	ldy #$80 ; 128 (spr=80)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$10 ; 16 (spr=-32)
+	stx COLOR0
+	lda #$B1 ; 177 (spr=129)
 	nop 
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
 	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E4 ; 228 (spr=180)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$F0 ; 240 (spr=192)
-	ldx #$E0 ; 224 (spr=176)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$FF ; 255 (spr=207)
-	ldy #$01 ; 1 (spr=-47)
+	nop 
+	lda #$F0 ; 240 (spr=192)
+	nop 
+	sty COLOR0
+	ldy #$E1 ; 225 (spr=177)
+	ldy #$E1 ; 225 (spr=177)
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line8
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
+	ldy #$80 ; 128 (spr=80)
+	ldx #$01 ; 1 (spr=-47)
+	sty COLPM2
+	sty COLOR0
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$00 ; 0 (spr=-48)
+	stx COLOR0
+	lda #$B1 ; 177 (spr=129)
 	nop 
 	sty COLOR0
-	ldx #$FF ; 255 (spr=207)
-	ldx #$D0 ; 208 (spr=160)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
 	nop 
-	lda #$90 ; 144 (spr=96)
 	nop 
-	sty COLOR0
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E5 ; 229 (spr=181)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
-	lda #$74 ; 116 (spr=68)
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR0
-	ldy #$83 ; 131 (spr=83)
+	lda #$F0 ; 240 (spr=192)
+	nop 
+	ldy #$80 ; 128 (spr=80)
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line9
-	nop 
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
-	nop 
+	sty COLPM2
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$D0 ; 208 (spr=160)
-	ldx #$00 ; 0 (spr=-48)
+	nop 
 	ldy #$E1 ; 225 (spr=177)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$F0 ; 240 (spr=192)
+	ldx #$10 ; 16 (spr=-32)
 	nop 
-	sty COLOR0
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E5 ; 229 (spr=181)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
 	lda #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
 	sty COLOR0
-	ldy #$83 ; 131 (spr=83)
+	ldy #$80 ; 128 (spr=80)
+	nop 
+	lda #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	lda #$FF ; 255 (spr=207)
+	ldx #$FF ; 255 (spr=207)
+	nop 
+	sty COLPM2
+	ldx #$3F ; 63 (spr=15)
+	ldx #$3F ; 63 (spr=15)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line10
-	ldy #$E5 ; 229 (spr=181)
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
-	nop 
-	lda #$00 ; 0 (spr=-48)
+	sty COLPM2
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$D0 ; 208 (spr=160)
-	ldx #$00 ; 0 (spr=-48)
+	nop 
 	ldy #$E1 ; 225 (spr=177)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$F0 ; 240 (spr=192)
+	ldx #$10 ; 16 (spr=-32)
 	nop 
-	sty COLOR0
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
 	lda #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
 	sty COLOR0
+	ldy #$80 ; 128 (spr=80)
+	nop 
+	lda #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	lda #$FF ; 255 (spr=207)
+	ldx #$FF ; 255 (spr=207)
+	nop 
+	sty COLPM2
+	ldx #$3F ; 63 (spr=15)
+	ldx #$3F ; 63 (spr=15)
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line11
-	nop 
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
-	nop 
+	sty COLPM2
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$D0 ; 208 (spr=160)
 	ldx #$00 ; 0 (spr=-48)
 	ldy #$E1 ; 225 (spr=177)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR0
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
 	lda #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
+	nop 
+	lda #$C2 ; 194 (spr=146)
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
-	ldy #$83 ; 131 (spr=83)
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$80 ; 128 (spr=80)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$FF ; 255 (spr=207)
+	lda #$90 ; 144 (spr=96)
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$90 ; 144 (spr=96)
+	ldx #$3F ; 63 (spr=15)
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line12
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
-	nop 
+	sty COLPM2
 	sty COLOR0
-	ldx #$D0 ; 208 (spr=160)
 	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$00 ; 0 (spr=-48)
 	nop 
+	lda #$C2 ; 194 (spr=146)
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
-	nop 
+	ldy #$80 ; 128 (spr=80)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$FF ; 255 (spr=207)
 	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E5 ; 229 (spr=181)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
-	lda #$74 ; 116 (spr=68)
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR0
-	ldy #$83 ; 131 (spr=83)
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$90 ; 144 (spr=96)
+	ldx #$3F ; 63 (spr=15)
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line13
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
-	nop 
+	sty COLPM2
 	sty COLOR0
-	nop 
 	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$E1 ; 225 (spr=177)
 	lda #$00 ; 0 (spr=-48)
-	ldx #$D0 ; 208 (spr=160)
-	sty COLOR0
 	nop 
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E5 ; 229 (spr=181)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
-	ldy #$E0 ; 224 (spr=176)
+	lda #$C2 ; 194 (spr=146)
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
-	ldy #$83 ; 131 (spr=83)
+	ldy #$80 ; 128 (spr=80)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$FF ; 255 (spr=207)
+	lda #$90 ; 144 (spr=96)
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$90 ; 144 (spr=96)
+	ldx #$3F ; 63 (spr=15)
+	nop 
+	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line14
-	ldy #$82 ; 130 (spr=82)
+	sta COLPM2
+	ldx #$10 ; 16 (spr=-32)
 	nop 
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
-	ldx #$D0 ; 208 (spr=160)
-	ldy #$01 ; 1 (spr=-47)
+	ldy #$42 ; 66 (spr=18)
+	ldy #$FF ; 255 (spr=207)
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
+	ldy #$E1 ; 225 (spr=177)
 	sty COLOR0
+	ldy #$D0 ; 208 (spr=160)
 	nop 
-	ldy #$E5 ; 229 (spr=181)
+	nop 
 	ldx #$00 ; 0 (spr=-48)
 	ldx #$00 ; 0 (spr=-48)
-	lda #$74 ; 116 (spr=68)
-	ldy #$E0 ; 224 (spr=176)
+	sty COLPM2
+	ldy #$84 ; 132 (spr=84)
 	ldx #$40 ; 64 (spr=16)
-	ldy #$83 ; 131 (spr=83)
-	ldx #$D0 ; 208 (spr=160)
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldx #$00 ; 0 (spr=-48)
+	lda #$89 ; 137 (spr=89)
+	sty COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line15
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
+	sta COLPM2
 	nop 
-	sty COLOR0
-	ldx #$D0 ; 208 (spr=160)
-	ldy #$01 ; 1 (spr=-47)
-	ldx #$00 ; 0 (spr=-48)
+	nop 
+	nop 
+	nop 
+	lda #$89 ; 137 (spr=89)
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
+	ldy #$FF ; 255 (spr=207)
+	ldy #$E1 ; 225 (spr=177)
 	sty COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR0
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E5 ; 229 (spr=181)
+	ldy #$10 ; 16 (spr=-32)
+	ldy #$D0 ; 208 (spr=160)
+	lda #$01 ; 1 (spr=-47)
+	ldx #$10 ; 16 (spr=-32)
 	ldx #$00 ; 0 (spr=-48)
 	ldx #$00 ; 0 (spr=-48)
-	lda #$74 ; 116 (spr=68)
-	ldy #$E0 ; 224 (spr=176)
+	sty COLPM2
+	ldy #$84 ; 132 (spr=84)
 	ldx #$40 ; 64 (spr=16)
-	ldy #$83 ; 131 (spr=83)
+	sty COLOR0
+	sty COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line16
-	ldx #$40 ; 64 (spr=16)
-	ldy #$82 ; 130 (spr=82)
 	nop 
-	sty COLOR0
-	ldx #$D0 ; 208 (spr=160)
-	ldy #$01 ; 1 (spr=-47)
-	ldx #$00 ; 0 (spr=-48)
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR0
 	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR0
-	nop 
+	lda #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	sta COLOR2
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$E0 ; 224 (spr=176)
+	ldx #$82 ; 130 (spr=82)
 	lda #$90 ; 144 (spr=96)
-	ldy #$02 ; 2 (spr=-46)
-	ldy #$E5 ; 229 (spr=181)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$74 ; 116 (spr=68)
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$40 ; 64 (spr=16)
+	nop 
+	sty COLOR0
+	ldy #$20 ; 32 (spr=-16)
 	ldy #$83 ; 131 (spr=83)
+	ldx #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	lda #$E1 ; 225 (spr=177)
+	sta COLPM2
+	ldx #$05 ; 5 (spr=-43)
+	nop 
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line17
-	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
-	ldx #$E0 ; 224 (spr=176)
 	lda #$00 ; 0 (spr=-48)
-	ldx #$E0 ; 224 (spr=176)
-	ldy #$10 ; 16 (spr=-32)
-	ldy #$83 ; 131 (spr=83)
+	lda #$84 ; 132 (spr=84)
+	sty COLPM3
+	sta COLPM3
+	lda #$A2 ; 162 (spr=114)
 	nop 
-	nop 
-	ldx #$F0 ; 240 (spr=192)
+	lda #$91 ; 145 (spr=97)
 	ldy #$F0 ; 240 (spr=192)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$40 ; 64 (spr=16)
-	ldy #$10 ; 16 (spr=-32)
-	lda #$00 ; 0 (spr=-48)
-	lda #$04 ; 4 (spr=-44)
-	ldy #$84 ; 132 (spr=84)
-	nop 
-	sty COLPM2
-	ldy #$40 ; 64 (spr=16)
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldy #$83 ; 131 (spr=83)
+	sty COLPM3
+	sty COLOR0
+	ldy #$01 ; 1 (spr=-47)
+	ldy #$00 ; 0 (spr=-48)
+	sty COLPM3
+	stx COLOR1
+	ldx #$00 ; 0 (spr=-48)
+	sta COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line18
-	sta COLPM0
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$84 ; 132 (spr=84)
+	stx COLOR2
+	lda #$00 ; 0 (spr=-48)
+	lda #$F0 ; 240 (spr=192)
+	sty COLPM3
+	ldx #$48 ; 72 (spr=24)
+	lda #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	ldy #$40 ; 64 (spr=16)
-	lda #$3F ; 63 (spr=15)
 	nop 
 	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR1
 	lda #$90 ; 144 (spr=96)
+	sty COLOR1
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	ldy #$E0 ; 224 (spr=176)
+	ldy #$01 ; 1 (spr=-47)
+	sty COLOR2
+	ldy #$89 ; 137 (spr=89)
 	sta COLOR1
-	sty COLPM2
-	nop 
+	sty COLPM1
+	lda #$74 ; 116 (spr=68)
+	ldy #$82 ; 130 (spr=82)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line19
+	sta COLPM0
+	ldy #$01 ; 1 (spr=-47)
+	ldx #$84 ; 132 (spr=84)
+	nop 
+	ldy #$FF ; 255 (spr=207)
+	ldy #$41 ; 65 (spr=17)
+	ldx #$64 ; 100 (spr=52)
+	ldx #$92 ; 146 (spr=98)
+	nop 
+	sta COLPM3
 	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$E1 ; 225 (spr=177)
-	lda #$00 ; 0 (spr=-48)
+	sty COLOR1
+	ldy #$90 ; 144 (spr=96)
 	sty COLBAK
-	ldx #$86 ; 134 (spr=86)
-	lda #$01 ; 1 (spr=-47)
-	lda #$00 ; 0 (spr=-48)
-	lda #$40 ; 64 (spr=16)
 	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR1
-	ldy #$F0 ; 240 (spr=192)
+	ldy #$87 ; 135 (spr=87)
+	sty COLPM0
+	lda #$E1 ; 225 (spr=177)
 	nop 
-	stx COLPM0
-	ldy #$83 ; 131 (spr=83)
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldy #$98 ; 152 (spr=104)
-	lda #$90 ; 144 (spr=96)
-	sta COLOR1
-	ldx #$01 ; 1 (spr=-47)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line20
-	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$E1 ; 225 (spr=177)
-	lda #$00 ; 0 (spr=-48)
-	sty COLBAK
-	ldx #$86 ; 134 (spr=86)
-	lda #$01 ; 1 (spr=-47)
-	lda #$00 ; 0 (spr=-48)
-	lda #$40 ; 64 (spr=16)
-	nop 
-	ldy #$F0 ; 240 (spr=192)
-	sta COLOR1
-	ldy #$F0 ; 240 (spr=192)
-	nop 
-	stx COLPM0
-	ldy #$83 ; 131 (spr=83)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldy #$98 ; 152 (spr=104)
+	sta COLBAK
 	lda #$90 ; 144 (spr=96)
 	sta COLOR1
-	ldx #$01 ; 1 (spr=-47)
+	lda #$90 ; 144 (spr=96)
+	ldx #$10 ; 16 (spr=-32)
+	ldy #$40 ; 64 (spr=16)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$54 ; 84 (spr=36)
+	ldy #$00 ; 0 (spr=-48)
+	nop 
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$41 ; 65 (spr=17)
+	sty COLOR1
+	ldx #$00 ; 0 (spr=-48)
+	nop 
+	ldy #$30 ; 48 (spr=0)
+	ldx #$40 ; 64 (spr=16)
+	ldy #$40 ; 64 (spr=16)
+	sta COLOR1
+	ldx #$65 ; 101 (spr=53)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line21
-	nop 
-	ldx #$64 ; 100 (spr=52)
 	stx COLPM0
-	lda #$4A ; 74 (spr=26)
-	lda #$00 ; 0 (spr=-48)
+	lda #$87 ; 135 (spr=87)
+	lda #$88 ; 136 (spr=88)
+	ldy #$82 ; 130 (spr=82)
+	ldy #$8F ; 143 (spr=95)
 	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$D0 ; 208 (spr=160)
 	ldy #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	lda #$FF ; 255 (spr=207)
-	ldy #$00 ; 0 (spr=-48)
+	ldx #$F0 ; 240 (spr=192)
+	ldy #$40 ; 64 (spr=16)
 	nop 
-	ldx #$01 ; 1 (spr=-47)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$41 ; 65 (spr=17)
 	sty COLOR1
+	lda #$FF ; 255 (spr=207)
+	ldx #$12 ; 18 (spr=-30)
+	nop 
 	ldy #$00 ; 0 (spr=-48)
-	lda #$90 ; 144 (spr=96)
-	stx COLPM0
-	sta COLOR1
 	ldy #$04 ; 4 (spr=-44)
+	lda #$A1 ; 161 (spr=113)
+	nop 
+	sty COLPM0
+	ldx #$9C ; 156 (spr=108)
+	lda #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line22
-	lda #$00 ; 0 (spr=-48)
-	lda #$E0 ; 224 (spr=176)
-	ldx #$00 ; 0 (spr=-48)
-	sty COLPM0
-	sty COLPM0
-	ldy #$E1 ; 225 (spr=177)
-	sty COLBAK
-	ldy #$90 ; 144 (spr=96)
-	lda #$40 ; 64 (spr=16)
-	ldx #$90 ; 144 (spr=96)
-	stx COLOR1
+	ldy #$3D ; 61 (spr=13)
+	ldy #$F0 ; 240 (spr=192)
 	sta COLOR1
-	nop 
 	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	sty COLPM2
-	lda #$3F ; 63 (spr=15)
-	ldy #$10 ; 16 (spr=-32)
-	ldx #$E0 ; 224 (spr=176)
 	nop 
+	lda #$72 ; 114 (spr=66)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$E0 ; 224 (spr=176)
+	ldx #$10 ; 16 (spr=-32)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$2A ; 42 (spr=-6)
+	lda #$41 ; 65 (spr=17)
+	ldy #$97 ; 151 (spr=103)
+	ldy #$10 ; 16 (spr=-32)
+	nop 
+	sta COLOR1
+	ldx #$98 ; 152 (spr=104)
+	lda #$90 ; 144 (spr=96)
+	stx COLPM1
+	ldy #$98 ; 152 (spr=104)
+	ldx #$90 ; 144 (spr=96)
+	sta COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line23
 	sta HPOSP2
+	sta COLPM3
 	nop 
-	ldx #$88 ; 136 (spr=88)
-	nop 
-	lda #$40 ; 64 (spr=16)
-	lda #$81 ; 129 (spr=81)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$92 ; 146 (spr=98)
-	sta HPOSP2
-	nop 
-	ldy #$05 ; 5 (spr=-43)
-	lda #$3E ; 62 (spr=14)
-	ldx #$90 ; 144 (spr=96)
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$F0 ; 240 (spr=192)
-	sty COLPM2
-	ldy #$65 ; 101 (spr=53)
-	sty COLPM1
+	ldy #$81 ; 129 (spr=81)
+	sty COLPM3
 	ldy #$01 ; 1 (spr=-47)
 	lda #$40 ; 64 (spr=16)
 	nop 
+	nop 
+	stx COLOR1
+	nop 
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$85 ; 133 (spr=85)
+	sta COLOR1
+	ldy #$64 ; 100 (spr=52)
+	sty COLPM1
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line24
-	stx COLOR1
-	sty COLOR2
-	sta COLBAK
-	sta COLBAK
-	nop 
-	nop 
-	ldx #$86 ; 134 (spr=86)
-	nop 
-	sty COLPM2
-	ldy #$00 ; 0 (spr=-48)
-	sta COLPM2
-	ldy #$75 ; 117 (spr=69)
 	ldy #$90 ; 144 (spr=96)
+	ldy #$7E ; 126 (spr=78)
+	ldy #$85 ; 133 (spr=85)
+	nop 
+	stx COLOR1
+	sty COLBAK
+	ldy #$F1 ; 241 (spr=193)
+	nop 
+	ldy #$90 ; 144 (spr=96)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$01 ; 1 (spr=-47)
+	sta COLBAK
+	sta COLPM2
+	ldx #$87 ; 135 (spr=87)
 	sta COLPM0
 	sty COLPM2
-	lda #$02 ; 2 (spr=-46)
-	lda #$90 ; 144 (spr=96)
-	ldy #$71 ; 113 (spr=65)
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line25
 	nop 
-	stx COLPM1
-	lda #$00 ; 0 (spr=-48)
-	stx COLPM1
-	ldx #$CF ; 207 (spr=159)
-	lda #$EE ; 238 (spr=190)
-	ldy #$71 ; 113 (spr=65)
-	ldx #$E0 ; 224 (spr=176)
+	lda #$87 ; 135 (spr=87)
 	nop 
-	stx COLOR1
+	ldy #$94 ; 148 (spr=100)
+	stx COLPM1
+	ldy #$42 ; 66 (spr=18)
+	lda #$00 ; 0 (spr=-48)
+	ldy #$A2 ; 162 (spr=114)
+	ldy #$E1 ; 225 (spr=177)
+	lda #$40 ; 64 (spr=16)
+	lda #$D0 ; 208 (spr=160)
 	ldx #$1A ; 26 (spr=-22)
-	ldy #$90 ; 144 (spr=96)
+	sty COLOR1
 	stx HPOSP2
-	lda #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$98 ; 152 (spr=104)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$40 ; 64 (spr=16)
 	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$99 ; 153 (spr=105)
 	stx COLPM1
-	nop 
-	lda #$73 ; 115 (spr=67)
-	ldy #$E0 ; 224 (spr=176)
+	sty COLBAK
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line26
-	ldy #$85 ; 133 (spr=85)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$72 ; 114 (spr=66)
+	lda #$78 ; 120 (spr=72)
+	ldy #$40 ; 64 (spr=16)
+	ldx #$73 ; 115 (spr=67)
+	nop 
+	ldy #$94 ; 148 (spr=100)
+	lda #$91 ; 145 (spr=97)
 	stx COLOR1
-	ldx #$88 ; 136 (spr=88)
-	lda #$F0 ; 240 (spr=192)
-	lda #$FF ; 255 (spr=207)
-	lda #$90 ; 144 (spr=96)
-	sta COLOR0
+	ldy #$84 ; 132 (spr=84)
+	sta COLOR1
+	ldx #$71 ; 113 (spr=65)
+	nop 
+	ldx #$2E ; 46 (spr=-2)
+	ldx #$40 ; 64 (spr=16)
 	sty COLOR0
-	ldy #$F1 ; 241 (spr=193)
 	nop 
-	ldy #$E0 ; 224 (spr=176)
-	nop 
-	ldx #$F0 ; 240 (spr=192)
+	ldy #$9B ; 155 (spr=107)
 	sty COLOR1
-	ldx #$70 ; 112 (spr=64)
-	sty COLPM0
-	sta COLBAK
-	nop 
+	stx COLOR1
+	sta COLPM0
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line27
+	sta COLPM0
 	ldx #$82 ; 130 (spr=82)
 	nop 
+	nop 
 	stx COLOR1
-	ldx #$90 ; 144 (spr=96)
-	nop 
-	lda #$41 ; 65 (spr=17)
-	stx COLPM0
-	sta COLOR1
-	nop 
 	nop 
 	nop 
 	sta COLOR1
-	ldx #$FF ; 255 (spr=207)
-	ldx #$EF ; 239 (spr=191)
-	ldx #$9B ; 155 (spr=107)
-	stx COLPM0
+	lda #$FF ; 255 (spr=207)
+	ldx #$88 ; 136 (spr=88)
+	lda #$40 ; 64 (spr=16)
+	sta COLOR1
 	nop 
+	nop 
+	stx COLOR2
+	sty COLPM0
 	ldy #$83 ; 131 (spr=83)
+	ldx #$01 ; 1 (spr=-47)
 	sty COLOR1
-	lda #$94 ; 148 (spr=100)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line28
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$90 ; 144 (spr=96)
-	stx COLPM0
-	ldx #$88 ; 136 (spr=88)
-	lda #$88 ; 136 (spr=88)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	lda #$40 ; 64 (spr=16)
-	ldy #$A8 ; 168 (spr=120)
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	stx COLOR1
+	stx COLOR2
+	ldy #$00 ; 0 (spr=-48)
 	sty COLBAK
-	sta COLOR1
+	ldx #$91 ; 145 (spr=97)
+	stx COLPM0
 	ldy #$88 ; 136 (spr=88)
-	lda #$72 ; 114 (spr=66)
+	stx COLBAK
+	stx COLOR1
+	ldy #$88 ; 136 (spr=88)
+	ldx #$E0 ; 224 (spr=176)
+	sta COLOR1
+	lda #$00 ; 0 (spr=-48)
 	sty COLPM0
-	ldx #$40 ; 64 (spr=16)
+	lda #$72 ; 114 (spr=66)
+	stx COLBAK
 	sta COLOR1
-	ldy #$88 ; 136 (spr=88)
+	ldy #$83 ; 131 (spr=83)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line29
-	lda #$50 ; 80 (spr=32)
-	ldx #$FE ; 254 (spr=206)
-	ldy #$41 ; 65 (spr=17)
-	sty COLBAK
-	ldy #$88 ; 136 (spr=88)
+	ldy #$40 ; 64 (spr=16)
 	lda #$86 ; 134 (spr=86)
-	ldy #$82 ; 130 (spr=82)
+	ldx #$40 ; 64 (spr=16)
+	sty COLBAK
+	ldy #$74 ; 116 (spr=68)
+	ldx #$94 ; 148 (spr=100)
 	nop 
+	ldy #$83 ; 131 (spr=83)
 	sty COLOR1
 	sta COLOR1
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$9C ; 156 (spr=108)
-	ldx #$01 ; 1 (spr=-47)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$12 ; 18 (spr=-30)
+	stx COLOR0
+	lda #$10 ; 16 (spr=-32)
+	nop 
+	ldx #$9B ; 155 (spr=107)
+	stx COLOR1
 	ldx #$E0 ; 224 (spr=176)
 	stx COLOR1
-	nop 
-	sty COLPM0
-	lda #$90 ; 144 (spr=96)
-	lda #$83 ; 131 (spr=83)
+	lda #$72 ; 114 (spr=66)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line30
-	nop 
-	nop 
+	ldx #$02 ; 2 (spr=-46)
 	sta COLOR1
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$10 ; 16 (spr=-32)
-	nop 
-	lda #$71 ; 113 (spr=65)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	lda #$90 ; 144 (spr=96)
-	sta COLOR1
-	ldx #$9B ; 155 (spr=107)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$F0 ; 240 (spr=192)
-	stx COLOR1
-	ldy #$E0 ; 224 (spr=176)
+	ldy #$82 ; 130 (spr=82)
+	sty COLOR0
+	lda #$DF ; 223 (spr=175)
+	ldy #$91 ; 145 (spr=97)
+	ldx #$84 ; 132 (spr=84)
 	sty COLOR1
-	lda #$72 ; 114 (spr=66)
-	ldy #$00 ; 0 (spr=-48)
+	ldy #$E0 ; 224 (spr=176)
 	nop 
+	stx COLOR0
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$9B ; 155 (spr=107)
+	stx COLOR1
+	ldx #$FF ; 255 (spr=207)
+	sty COLOR1
+	ldx #$00 ; 0 (spr=-48)
+	lda #$4F ; 79 (spr=31)
+	ldx #$84 ; 132 (spr=84)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line31
 	nop 
-	sta COLOR1
-	nop 
-	lda #$F0 ; 240 (spr=192)
-	lda #$10 ; 16 (spr=-32)
-	nop 
-	lda #$71 ; 113 (spr=65)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	lda #$90 ; 144 (spr=96)
-	sta COLOR1
-	ldx #$9B ; 155 (spr=107)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$F0 ; 240 (spr=192)
-	stx COLOR1
-	nop 
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR1
-	lda #$72 ; 114 (spr=66)
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line32
-	nop 
-	nop 
-	sta COLOR1
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$10 ; 16 (spr=-32)
-	nop 
-	lda #$71 ; 113 (spr=65)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	lda #$90 ; 144 (spr=96)
-	sta COLOR1
-	ldx #$9B ; 155 (spr=107)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$F0 ; 240 (spr=192)
-	stx COLOR1
-	ldy #$E0 ; 224 (spr=176)
-	sty COLOR1
-	lda #$72 ; 114 (spr=66)
-	ldy #$00 ; 0 (spr=-48)
-	nop ; filler
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line33
-	nop 
-	nop 
-	sta COLOR1
-	lda #$10 ; 16 (spr=-32)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	lda #$10 ; 16 (spr=-32)
-	ldx #$F0 ; 240 (spr=192)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$90 ; 144 (spr=96)
-	sta COLOR1
-	ldx #$9B ; 155 (spr=107)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$F0 ; 240 (spr=192)
-	stx COLOR1
-	ldy #$77 ; 119 (spr=71)
-	sty COLOR1
-	nop 
-	lda #$71 ; 113 (spr=65)
-	nop ; filler
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line34
-	lda #$91 ; 145 (spr=97)
-	lda #$1F ; 31 (spr=-17)
 	lda #$72 ; 114 (spr=66)
 	nop 
 	ldx #$90 ; 144 (spr=96)
-	ldx #$FF ; 255 (spr=207)
+	ldx #$40 ; 64 (spr=16)
 	sta COLOR1
-	lda #$00 ; 0 (spr=-48)
-	ldy #$88 ; 136 (spr=88)
+	ldy #$83 ; 131 (spr=83)
+	lda #$AA ; 170 (spr=122)
+	ldy #$72 ; 114 (spr=66)
 	nop 
-	sta COLOR1
-	ldy #$34 ; 52 (spr=4)
+	ldy #$00 ; 0 (spr=-48)
 	ldx #$9A ; 154 (spr=106)
 	nop 
-	lda #$00 ; 0 (spr=-48)
 	stx COLOR1
-	ldy #$88 ; 136 (spr=88)
-	sty COLPM1
-	ldx #$01 ; 1 (spr=-47)
-	nop 
+	ldx #$9C ; 156 (spr=108)
+	ldy #$00 ; 0 (spr=-48)
 	lda #$73 ; 115 (spr=67)
+	ldy #$9A ; 154 (spr=106)
+	ldy #$E1 ; 225 (spr=177)
+	sty COLOR1
+	stx COLPM0
+	ldx #$FF ; 255 (spr=207)
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line32
+	ldx #$02 ; 2 (spr=-46)
+	sta COLOR1
+	ldy #$82 ; 130 (spr=82)
+	sty COLOR0
+	lda #$DF ; 223 (spr=175)
+	ldy #$91 ; 145 (spr=97)
+	ldx #$84 ; 132 (spr=84)
+	sty COLOR1
+	ldy #$E0 ; 224 (spr=176)
+	nop 
+	stx COLOR0
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$9B ; 155 (spr=107)
+	stx COLOR1
+	ldx #$FF ; 255 (spr=207)
+	sty COLOR1
 	ldx #$00 ; 0 (spr=-48)
+	lda #$4F ; 79 (spr=31)
+	ldx #$84 ; 132 (spr=84)
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line33
+	ldy #$72 ; 114 (spr=66)
+	sty COLOR1
+	nop 
+	ldx #$F0 ; 240 (spr=192)
+	lda #$7F ; 127 (spr=79)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$91 ; 145 (spr=97)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$98 ; 152 (spr=104)
+	stx COLOR1
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$10 ; 16 (spr=-32)
+	ldx #$9B ; 155 (spr=107)
+	lda #$88 ; 136 (spr=88)
+	ldy #$00 ; 0 (spr=-48)
+	stx COLOR1
+	sta COLOR2
+	sty COLOR2
+	ldx #$52 ; 82 (spr=34)
+	ldx #$84 ; 132 (spr=84)
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line34
+	nop 
+	ldy #$6F ; 111 (spr=63)
+	sta COLPM1
+	ldy #$FF ; 255 (spr=207)
+	ldy #$72 ; 114 (spr=66)
+	ldx #$00 ; 0 (spr=-48)
+	sty COLOR1
+	ldx #$9A ; 154 (spr=106)
+	lda #$80 ; 128 (spr=80)
+	ldy #$E0 ; 224 (spr=176)
+	lda #$00 ; 0 (spr=-48)
+	lda #$10 ; 16 (spr=-32)
+	stx COLOR1
+	lda #$10 ; 16 (spr=-32)
+	ldx #$FF ; 255 (spr=207)
+	lda #$97 ; 151 (spr=103)
+	sta COLOR2
+	sty COLOR1
+	ldy #$01 ; 1 (spr=-47)
+	sty COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line35
-	nop 
-	nop 
-	sta COLOR1
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	lda #$9C ; 156 (spr=108)
-	nop 
-	lda #$FF ; 255 (spr=207)
-	ldx #$80 ; 128 (spr=80)
-	lda #$90 ; 144 (spr=96)
 	ldx #$00 ; 0 (spr=-48)
-	ldx #$77 ; 119 (spr=71)
+	ldy #$34 ; 52 (spr=4)
+	ldy #$FF ; 255 (spr=207)
 	nop 
-	sta COLOR1
-	ldx #$B6 ; 182 (spr=134)
-	ldx #$9A ; 154 (spr=106)
-	stx COLOR1
-	ldy #$64 ; 100 (spr=52)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$73 ; 115 (spr=67)
+	lda #$0E ; 14 (spr=-34)
 	sty COLOR1
-	lda #$00 ; 0 (spr=-48)
-	lda #$72 ; 114 (spr=66)
+	ldx #$54 ; 84 (spr=36)
+	stx COLOR1
+	ldx #$01 ; 1 (spr=-47)
+	nop 
+	lda #$96 ; 150 (spr=102)
+	ldx #$9B ; 155 (spr=107)
+	ldy #$E0 ; 224 (spr=176)
+	stx COLOR0
+	sta COLOR2
+	sty COLOR0
 	ldy #$00 ; 0 (spr=-48)
+	sty COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line36
 	nop 
-	nop 
-	sta COLOR1
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	lda #$9C ; 156 (spr=108)
-	nop 
-	lda #$FF ; 255 (spr=207)
-	ldx #$80 ; 128 (spr=80)
-	lda #$90 ; 144 (spr=96)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$77 ; 119 (spr=71)
-	nop 
-	sta COLOR1
-	ldx #$B6 ; 182 (spr=134)
-	ldx #$9A ; 154 (spr=106)
-	stx COLOR1
-	ldy #$64 ; 100 (spr=52)
+	ldy #$73 ; 115 (spr=67)
 	sty COLOR1
-	lda #$00 ; 0 (spr=-48)
-	lda #$72 ; 114 (spr=66)
-	ldy #$00 ; 0 (spr=-48)
+	ldx #$83 ; 131 (spr=83)
+	stx COLOR0
+	lda #$71 ; 113 (spr=65)
+	ldx #$9A ; 154 (spr=106)
+	nop 
+	lda #$97 ; 151 (spr=103)
+	nop 
+	nop 
+	stx COLOR1
+	nop 
+	nop 
+	ldy #$F0 ; 240 (spr=192)
+	ldy #$E0 ; 224 (spr=176)
+	sta COLOR2
+	sty COLOR1
+	ldy #$01 ; 1 (spr=-47)
+	sty COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line37
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$9D ; 157 (spr=109)
-	ldx #$00 ; 0 (spr=-48)
-	sta COLOR1
-	stx COLOR2
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$84 ; 132 (spr=84)
 	nop 
-	lda #$01 ; 1 (spr=-47)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$80 ; 128 (spr=80)
-	ldy #$E0 ; 224 (spr=176)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldx #$9A ; 154 (spr=106)
-	lda #$73 ; 115 (spr=67)
-	stx COLOR1
-	nop 
+	lda #$72 ; 114 (spr=66)
+	ldy #$73 ; 115 (spr=67)
+	lda #$9A ; 154 (spr=106)
 	sty COLOR1
+	lda #$73 ; 115 (spr=67)
+	ldy #$00 ; 0 (spr=-48)
+	stx COLOR0
+	ldy #$11 ; 17 (spr=-31)
 	nop 
 	nop 
-	nop ; filler
+	lda #$BF ; 191 (spr=143)
+	lda #$97 ; 151 (spr=103)
+	ldx #$9B ; 155 (spr=107)
+	stx COLOR1
+	sta COLOR2
+	sty COLOR1
+	ldy #$00 ; 0 (spr=-48)
+	sty COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line38
+	ldy #$72 ; 114 (spr=66)
 	nop 
-	ldy #$86 ; 134 (spr=86)
 	stx COLPM1
-	ldx #$72 ; 114 (spr=66)
-	ldx #$82 ; 130 (spr=82)
-	stx COLOR1
+	lda #$82 ; 130 (spr=82)
 	sta COLOR1
+	ldx #$85 ; 133 (spr=85)
 	sty COLOR1
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$90 ; 144 (spr=96)
+	sta COLOR0
+	ldy #$01 ; 1 (spr=-47)
 	nop 
 	lda #$88 ; 136 (spr=88)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$73 ; 115 (spr=67)
-	nop 
-	ldx #$04 ; 4 (spr=-44)
 	sta COLOR1
+	ldy #$72 ; 114 (spr=66)
+	stx COLOR0
+	ldx #$05 ; 5 (spr=-43)
 	stx COLOR1
 	sty COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line39
-	sty COLPM1
-	nop 
+	sta COLPM1
 	ldy #$90 ; 144 (spr=96)
-	sty COLPM2
 	nop 
 	nop 
 	nop 
+	nop 
+	nop 
+	lda #$8B ; 139 (spr=91)
+	stx COLPM2
 	sta HPOSP2
 	sty COLOR1
-	stx COLPM2
-	sta COLPM1
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$54 ; 84 (spr=36)
 	lda #$9A ; 154 (spr=106)
 	sta COLOR1
 	lda #$83 ; 131 (spr=83)
 	sty COLOR0
-	ldy #$11 ; 17 (spr=-31)
 	nop 
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$10 ; 16 (spr=-32)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line40
-	sta COLOR1
-	lda #$02 ; 2 (spr=-46)
-	nop 
-	ldx #$34 ; 52 (spr=4)
-	lda #$92 ; 146 (spr=98)
-	sty COLPM1
-	ldy #$10 ; 16 (spr=-32)
+	ldx #$90 ; 144 (spr=96)
 	stx COLOR0
-	ldx #$7F ; 127 (spr=79)
 	ldx #$00 ; 0 (spr=-48)
+	nop 
+	sta COLOR1
+	lda #$92 ; 146 (spr=98)
+	ldx #$35 ; 53 (spr=5)
+	sty COLPM0
+	stx COLOR0
+	sty COLPM1
 	sta COLPM0
-	ldx #$5E ; 94 (spr=46)
 	ldy #$90 ; 144 (spr=96)
 	sty COLOR0
-	ldy #$09 ; 9 (spr=-39)
+	ldy #$08 ; 8 (spr=-40)
+	ldx #$5E ; 94 (spr=46)
 	sty COLPM2
 	ldy #$83 ; 131 (spr=83)
-	lda #$75 ; 117 (spr=69)
-	nop 
-	nop 
+	lda #$84 ; 132 (spr=84)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line41
-	sty HPOSP2
-	nop 
 	sty HPOSP1
-	sty HPOSP1
+	ldy #$8F ; 143 (spr=95)
+	ldy #$8C ; 140 (spr=92)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$00 ; 0 (spr=-48)
 	nop 
-	stx HPOSP3
 	nop 
 	sta COLOR1
-	ldx #$92 ; 146 (spr=98)
-	ldy #$9C ; 156 (spr=108)
-	lda #$9C ; 156 (spr=108)
-	ldx #$70 ; 112 (spr=64)
-	nop 
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$F0 ; 240 (spr=192)
+	stx HPOSP3
+	ldx #$30 ; 48 (spr=0)
+	stx COLOR1
+	sta COLOR1
+	lda #$9D ; 157 (spr=109)
+	ldx #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$90 ; 144 (spr=96)
-	ldx #$40 ; 64 (spr=16)
 	sta COLPM0
-	lda #$75 ; 117 (spr=69)
+	lda #$72 ; 114 (spr=66)
+	ldx #$40 ; 64 (spr=16)
+	ldx #$40 ; 64 (spr=16)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line42
-	lda #$9C ; 156 (spr=108)
-	nop 
-	nop 
-	lda #$9C ; 156 (spr=108)
-	nop 
-	lda #$72 ; 114 (spr=66)
+	ldy #$05 ; 5 (spr=-43)
+	ldx #$41 ; 65 (spr=17)
+	stx COLBAK
 	sta COLBAK
-	lda #$26 ; 38 (spr=-10)
-	ldy #$86 ; 134 (spr=86)
-	ldy #$84 ; 132 (spr=84)
+	sta COLBAK
+	lda #$A0 ; 160 (spr=112)
 	nop 
 	stx COLBAK
-	ldx #$98 ; 152 (spr=104)
-	sty COLOR1
-	ldy #$00 ; 0 (spr=-48)
-	stx COLOR0
-	ldy #$9A ; 154 (spr=106)
-	sty COLOR0
+	lda #$27 ; 39 (spr=-9)
+	ldx #$FF ; 255 (spr=207)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$9A ; 154 (spr=106)
 	sta COLPM2
-	ldy #$30 ; 48 (spr=0)
+	stx COLOR0
+	stx COLPM3
+	sty COLOR0
+	ldy #$73 ; 115 (spr=67)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line43
-	lda #$00 ; 0 (spr=-48)
-	ldx #$90 ; 144 (spr=96)
-	nop 
-	stx COLOR0
-	ldy #$72 ; 114 (spr=66)
+	lda #$82 ; 130 (spr=82)
 	sty COLBAK
-	lda #$91 ; 145 (spr=97)
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$91 ; 145 (spr=97)
+	stx COLOR0
 	ldx #$06 ; 6 (spr=-42)
+	ldy #$00 ; 0 (spr=-48)
+	lda #$82 ; 130 (spr=82)
+	nop 
 	stx COLOR0
-	nop 
-	nop 
+	ldy #$80 ; 128 (spr=80)
+	lda #$E0 ; 224 (spr=176)
 	ldx #$88 ; 136 (spr=88)
+	sta COLOR0
 	stx COLOR0
-	ldy #$E0 ; 224 (spr=176)
-	ldx #$9C ; 156 (spr=108)
-	ldx #$40 ; 64 (spr=16)
+	lda #$90 ; 144 (spr=96)
+	ldx #$41 ; 65 (spr=17)
 	stx COLOR1
-	ldy #$30 ; 48 (spr=0)
-	ldx #$9B ; 155 (spr=107)
-	ldy #$9C ; 156 (spr=108)
+	ldx #$9A ; 154 (spr=106)
+	sta COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line44
 	stx COLPM0
-	ldx #$05 ; 5 (spr=-43)
-	ldy #$81 ; 129 (spr=81)
-	sty COLOR1
-	sta COLOR0
-	lda #$40 ; 64 (spr=16)
-	lda #$98 ; 152 (spr=104)
-	stx COLOR1
-	stx COLPM3
+	ldx #$F0 ; 240 (spr=192)
 	ldx #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$86 ; 134 (spr=86)
+	nop 
+	sty COLOR1
+	nop 
+	ldy #$32 ; 50 (spr=2)
+	ldx #$05 ; 5 (spr=-43)
 	stx COLOR1
-	ldx #$41 ; 65 (spr=17)
+	ldx #$86 ; 134 (spr=86)
+	lda #$98 ; 152 (spr=104)
+	sty COLOR1
+	stx COLOR1
+	ldx #$40 ; 64 (spr=16)
 	sta COLOR1
 	stx COLOR1
-	ldx #$A8 ; 168 (spr=120)
-	ldy #$9A ; 154 (spr=106)
+	ldx #$84 ; 132 (spr=84)
+	ldy #$36 ; 54 (spr=6)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line45
-	nop 
-	stx HPOSP0
 	sta COLPM3
-	ldx #$80 ; 128 (spr=80)
+	lda #$A8 ; 168 (spr=120)
+	sta HPOSP0
+	stx COLOR1
+	ldx #$81 ; 129 (spr=81)
 	stx COLOR1
 	nop 
-	ldx #$0F ; 15 (spr=-33)
-	ldy #$13 ; 19 (spr=-29)
-	sty COLOR1
-	ldx #$01 ; 1 (spr=-47)
 	lda #$00 ; 0 (spr=-48)
-	ldx #$86 ; 134 (spr=86)
-	nop 
+	sty COLOR1
+	ldy #$11 ; 17 (spr=-31)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$87 ; 135 (spr=87)
 	stx COLOR1
-	ldx #$40 ; 64 (spr=16)
-	ldy #$81 ; 129 (spr=81)
-	nop 
+	ldx #$41 ; 65 (spr=17)
+	ldy #$80 ; 128 (spr=80)
+	lda #$00 ; 0 (spr=-48)
 	stx COLOR1
 	sty COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line46
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$8A ; 138 (spr=90)
-	ldx #$F0 ; 240 (spr=192)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$84 ; 132 (spr=84)
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldy #$10 ; 16 (spr=-32)
-	lda #$80 ; 128 (spr=80)
-	ldy #$86 ; 134 (spr=86)
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$35 ; 53 (spr=5)
-	ldx #$A9 ; 169 (spr=121)
 	ldx #$86 ; 134 (spr=86)
-	nop 
+	ldx #$11 ; 17 (spr=-31)
+	ldx #$90 ; 144 (spr=96)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$02 ; 2 (spr=-46)
+	lda #$41 ; 65 (spr=17)
+	lda #$34 ; 52 (spr=4)
+	sty COLOR1
+	ldx #$98 ; 152 (spr=104)
+	ldx #$86 ; 134 (spr=86)
 	sta COLOR1
-	stx COLOR1
-	sty HPOSP0
-	ldx #$41 ; 65 (spr=17)
-	stx COLOR1
-	nop 
 	ldy #$81 ; 129 (spr=81)
+	stx COLOR1
+	lda #$C0 ; 192 (spr=144)
+	ldx #$40 ; 64 (spr=16)
+	stx COLOR1
+	ldx #$40 ; 64 (spr=16)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line47
-	lda #$04 ; 4 (spr=-44)
 	sty COLOR1
+	lda #$04 ; 4 (spr=-44)
+	ldy #$86 ; 134 (spr=86)
 	sta COLPM0
-	nop 
 	lda #$2D ; 45 (spr=-3)
 	sta COLPM1
 	stx COLOR0
-	lda #$00 ; 0 (spr=-48)
-	ldy #$86 ; 134 (spr=86)
-	ldx #$00 ; 0 (spr=-48)
-	sty COLOR1
-	lda #$84 ; 132 (spr=84)
-	sta COLBAK
+	sty HPOSP0
+	lda #$85 ; 133 (spr=85)
 	sty HPOSP2
+	sty COLOR1
+	ldx #$00 ; 0 (spr=-48)
+	sta COLBAK
 	lda #$91 ; 145 (spr=97)
-	ldx #$84 ; 132 (spr=84)
-	nop 
 	sta COLOR1
+	ldx #$81 ; 129 (spr=81)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line48
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$73 ; 115 (spr=67)
-	stx COLOR0
-	nop 
 	lda #$87 ; 135 (spr=87)
-	ldy #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$2E ; 46 (spr=-2)
+	ldx #$72 ; 114 (spr=66)
+	stx COLOR0
+	ldx #$FF ; 255 (spr=207)
 	ldx #$80 ; 128 (spr=80)
 	stx COLOR1
-	ldx #$00 ; 0 (spr=-48)
 	sta COLOR1
 	lda #$31 ; 49 (spr=1)
 	ldy #$40 ; 64 (spr=16)
+	ldx #$E8 ; 232 (spr=184)
 	sta COLOR0
-	lda #$80 ; 128 (spr=80)
 	sty COLOR0
-	ldx #$F0 ; 240 (spr=192)
-	ldx #$91 ; 145 (spr=97)
-	ldy #$33 ; 51 (spr=3)
+	ldx #$80 ; 128 (spr=80)
+	ldy #$84 ; 132 (spr=84)
+	ldx #$90 ; 144 (spr=96)
+	sta COLOR1
 	stx COLOR1
-	ldy #$32 ; 50 (spr=2)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line49
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$2E ; 46 (spr=-2)
 	ldx #$73 ; 115 (spr=67)
 	stx COLOR0
-	nop 
 	lda #$87 ; 135 (spr=87)
-	ldy #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
 	ldx #$80 ; 128 (spr=80)
 	stx COLOR1
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$72 ; 114 (spr=66)
 	sta COLOR1
 	lda #$31 ; 49 (spr=1)
 	ldy #$40 ; 64 (spr=16)
+	ldx #$85 ; 133 (spr=85)
 	sta COLOR0
-	lda #$80 ; 128 (spr=80)
 	sty COLOR0
-	ldx #$F0 ; 240 (spr=192)
-	ldx #$91 ; 145 (spr=97)
-	ldy #$33 ; 51 (spr=3)
-	stx COLOR1
+	nop 
 	ldy #$32 ; 50 (spr=2)
+	ldx #$90 ; 144 (spr=96)
+	stx COLOR1
+	ldx #$82 ; 130 (spr=82)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line50
-	nop 
-	nop 
-	lda #$74 ; 116 (spr=68)
-	ldx #$4F ; 79 (spr=31)
-	ldx #$04 ; 4 (spr=-44)
-	nop 
-	lda #$81 ; 129 (spr=81)
-	ldx #$00 ; 0 (spr=-48)
-	sta COLOR1
-	sty COLOR1
-	lda #$2A ; 42 (spr=-6)
-	ldx #$86 ; 134 (spr=86)
-	sta HPOSP2
 	lda #$00 ; 0 (spr=-48)
+	ldx #$90 ; 144 (spr=96)
+	lda #$F0 ; 240 (spr=192)
+	lda #$20 ; 32 (spr=-16)
+	ldx #$0F ; 15 (spr=-33)
+	nop 
+	ldx #$86 ; 134 (spr=86)
+	lda #$80 ; 128 (spr=80)
+	sta COLOR1
+	nop 
+	lda #$2E ; 46 (spr=-2)
+	sty COLOR1
+	sta HPOSP2
+	nop 
 	stx COLOR1
 	lda #$72 ; 114 (spr=66)
 	sta COLPM2
 	stx COLBAK
-	ldx #$84 ; 132 (spr=84)
+	ldx #$BC ; 188 (spr=140)
 	lda #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line51
-	ldx #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$04 ; 4 (spr=-44)
 	ldx #$80 ; 128 (spr=80)
-	lda #$90 ; 144 (spr=96)
-	stx HPOSP0
 	sta COLOR0
-	stx COLOR1
-	nop 
-	nop 
 	lda #$26 ; 38 (spr=-10)
+	stx COLOR1
+	stx HPOSP0
+	nop 
 	ldx #$41 ; 65 (spr=17)
 	sta COLOR1
-	sty COLOR0
 	lda #$85 ; 133 (spr=85)
+	sty COLOR0
+	sta HPOSP0
 	sta COLOR1
 	stx COLOR0
-	sta HPOSP0
-	lda #$2A ; 42 (spr=-6)
-	ldy #$70 ; 112 (spr=64)
+	lda #$2B ; 43 (spr=-5)
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$80 ; 128 (spr=80)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line52
-	ldx #$80 ; 128 (spr=80)
-	ldy #$86 ; 134 (spr=86)
 	sta COLPM1
-	ldy #$81 ; 129 (spr=81)
-	sty COLOR0
-	ldy #$40 ; 64 (spr=16)
-	nop 
-	lda #$30 ; 48 (spr=0)
-	ldx #$2C ; 44 (spr=-4)
+	lda #$32 ; 50 (spr=2)
 	stx COLOR0
+	ldx #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$11 ; 17 (spr=-31)
+	ldx #$4C ; 76 (spr=28)
+	ldx #$27 ; 39 (spr=-9)
 	nop 
+	nop 
+	stx COLOR0
+	ldy #$40 ; 64 (spr=16)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$F1 ; 241 (spr=193)
 	sta COLOR0
-	sty COLOR2
-	lda #$01 ; 1 (spr=-47)
-	sty COLPM0
+	sty COLOR0
 	ldy #$80 ; 128 (spr=80)
+	lda #$00 ; 0 (spr=-48)
+	stx COLOR2
 	sty COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line53
-	sta COLOR2
-	sty COLOR0
 	stx COLPM0
-	ldy #$40 ; 64 (spr=16)
+	nop 
+	nop 
+	ldx #$00 ; 0 (spr=-48)
 	nop 
 	ldx #$2C ; 44 (spr=-4)
-	nop 
-	nop 
-	nop 
+	sta COLOR2
+	ldy #$8F ; 143 (spr=95)
+	ldy #$41 ; 65 (spr=17)
 	stx COLOR0
-	ldx #$34 ; 52 (spr=4)
-	ldy #$43 ; 67 (spr=19)
+	nop 
+	ldx #$35 ; 53 (spr=5)
+	nop 
 	stx COLOR0
 	sty COLOR0
-	lda #$00 ; 0 (spr=-48)
-	lda #$E0 ; 224 (spr=176)
-	ldy #$80 ; 128 (spr=80)
-	nop 
-	nop 
-	nop ; filler
+	lda #$54 ; 84 (spr=36)
+	sta COLOR0
+	sty COLOR0
+	ldy #$45 ; 69 (spr=21)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line54
-	nop 
-	nop 
-	nop 
-	sty COLOR0
-	sty HPOSP1
-	ldy #$86 ; 134 (spr=86)
-	ldy #$76 ; 118 (spr=70)
-	ldy #$05 ; 5 (spr=-43)
-	sty COLOR0
-	ldy #$00 ; 0 (spr=-48)
-	lda #$0B ; 11 (spr=-37)
-	nop 
-	stx COLOR0
-	ldy #$40 ; 64 (spr=16)
-	nop 
-	sty COLOR0
+	lda #$84 ; 132 (spr=84)
+	lda #$81 ; 129 (spr=81)
 	ldy #$80 ; 128 (spr=80)
 	nop 
-	nop 
-	nop ; filler
-	nop ; filler
+	sty HPOSP1
+	sty COLOR0
+	ldy #$72 ; 114 (spr=66)
+	ldy #$04 ; 4 (spr=-44)
+	sty COLOR0
+	ldy #$82 ; 130 (spr=82)
+	sty HPOSP1
+	stx COLOR0
+	sty COLOR0
+	ldy #$41 ; 65 (spr=17)
+	sty COLOR2
+	ldy #$80 ; 128 (spr=80)
+	lda #$F1 ; 241 (spr=193)
+	sty COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line55
-	ldx #$34 ; 52 (spr=4)
-	sty COLOR0
-	sty COLOR0
-	nop 
-	ldy #$80 ; 128 (spr=80)
-	nop 
+	lda #$00 ; 0 (spr=-48)
 	sty HPOSP1
-	ldy #$06 ; 6 (spr=-42)
-	sty COLOR0
-	nop 
-	ldy #$40 ; 64 (spr=16)
-	stx COLOR0
-	nop 
-	sty COLOR0
+	ldy #$22 ; 34 (spr=-14)
+	sta COLOR2
 	nop 
 	nop 
 	ldy #$91 ; 145 (spr=97)
+	lda #$72 ; 114 (spr=66)
+	sty COLOR0
+	ldy #$06 ; 6 (spr=-42)
+	sty COLOR0
+	ldy #$41 ; 65 (spr=17)
+	stx COLOR0
+	sty COLOR0
+	ldy #$90 ; 144 (spr=96)
+	ldx #$64 ; 100 (spr=52)
+	stx COLOR1
 	sty COLOR1
-	ldy #$81 ; 129 (spr=81)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line56
-	ldx #$82 ; 130 (spr=82)
-	sty COLOR0
-	stx COLPM2
-	ldy #$84 ; 132 (spr=84)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	ldx #$84 ; 132 (spr=84)
-	ldx #$37 ; 55 (spr=7)
-	stx COLPM2
-	sty HPOSP2
-	sty COLOR1
-	ldy #$10 ; 16 (spr=-32)
-	ldx #$E0 ; 224 (spr=176)
-	sta COLPM0
-	ldx #$00 ; 0 (spr=-48)
-	lda #$2C ; 44 (spr=-4)
-	lda #$32 ; 50 (spr=2)
-	sta COLOR1
+	ldx #$36 ; 54 (spr=6)
 	ldy #$80 ; 128 (spr=80)
+	sty COLOR0
+	ldy #$83 ; 131 (spr=83)
+	nop 
+	sty COLPM2
+	nop 
+	sty HPOSP2
+	ldy #$85 ; 133 (spr=85)
+	stx COLPM2
+	sty COLOR1
+	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	lda #$0B ; 11 (spr=-37)
+	sta COLPM0
+	lda #$33 ; 51 (spr=3)
+	ldy #$92 ; 146 (spr=98)
+	sta COLOR1
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line57
-	ldx #$40 ; 64 (spr=16)
 	sty COLPM2
-	ldy #$00 ; 0 (spr=-48)
+	lda #$E1 ; 225 (spr=177)
 	ldy #$90 ; 144 (spr=96)
-	lda #$E0 ; 224 (spr=176)
 	sty COLOR1
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$35 ; 53 (spr=5)
-	sty COLOR1
+	ldy #$73 ; 115 (spr=67)
+	ldx #$40 ; 64 (spr=16)
+	ldy #$36 ; 54 (spr=6)
+	stx COLOR0
 	sta COLOR0
-	lda #$91 ; 145 (spr=97)
+	lda #$90 ; 144 (spr=96)
+	sty COLOR1
 	sta COLOR1
 	stx COLOR0
-	nop 
+	ldx #$07 ; 7 (spr=-41)
 	sty HPOSP2
-	ldy #$72 ; 114 (spr=66)
-	lda #$32 ; 50 (spr=2)
-	nop 
+	ldy #$80 ; 128 (spr=80)
+	sty COLPM2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line58
-	sty COLOR0
-	ldy #$86 ; 134 (spr=86)
-	nop 
-	ldx #$90 ; 144 (spr=96)
-	nop 
-	stx COLOR1
-	ldx #$83 ; 131 (spr=83)
-	stx COLOR0
-	nop 
-	nop 
+	sta COLOR0
 	ldy #$00 ; 0 (spr=-48)
+	lda #$85 ; 133 (spr=85)
+	lda #$80 ; 128 (spr=80)
+	ldy #$72 ; 114 (spr=66)
+	sty COLOR0
+	ldy #$82 ; 130 (spr=82)
+	sty COLOR0
+	lda #$33 ; 51 (spr=3)
+	stx COLOR1
+	ldy #$84 ; 132 (spr=84)
 	sta COLOR1
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$91 ; 145 (spr=97)
-	lda #$84 ; 132 (spr=84)
-	sta COLOR2
-	lda #$10 ; 16 (spr=-32)
 	sty COLOR1
-	lda #$82 ; 130 (spr=82)
-	ldy #$91 ; 145 (spr=97)
+	ldy #$90 ; 144 (spr=96)
+	lda #$74 ; 116 (spr=68)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	sta COLOR0
+	lda #$26 ; 38 (spr=-10)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line59
-	ldy #$00 ; 0 (spr=-48)
-	stx COLOR2
-	nop 
-	nop 
-	sty HPOSP0
-	ldy #$72 ; 114 (spr=66)
-	lda #$26 ; 38 (spr=-10)
-	nop 
+	sty COLOR1
+	ldx #$86 ; 134 (spr=86)
+	ldy #$86 ; 134 (spr=86)
+	ldy #$86 ; 134 (spr=86)
+	ldy #$80 ; 128 (spr=80)
+	ldy #$73 ; 115 (spr=67)
+	sty COLOR0
+	ldx #$91 ; 145 (spr=97)
+	ldx #$30 ; 48 (spr=0)
 	sta COLOR0
-	ldx #$F0 ; 240 (spr=192)
-	lda #$35 ; 53 (spr=5)
+	lda #$34 ; 52 (spr=4)
 	sta COLOR1
 	stx COLOR0
 	lda #$85 ; 133 (spr=85)
 	sta COLOR0
+	ldx #$6F ; 111 (spr=63)
+	ldx #$9B ; 155 (spr=107)
 	sty COLOR1
-	ldy #$30 ; 48 (spr=0)
-	ldx #$86 ; 134 (spr=86)
-	lda #$91 ; 145 (spr=97)
+	ldy #$70 ; 112 (spr=64)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line60
 	stx COLOR0
-	ldx #$9A ; 154 (spr=106)
-	nop 
-	nop 
-	sta COLOR0
-	lda #$00 ; 0 (spr=-48)
-	lda #$50 ; 80 (spr=32)
-	sta COLOR1
-	sty COLOR1
-	lda #$35 ; 53 (spr=5)
-	sta COLOR0
 	ldy #$84 ; 132 (spr=84)
+	lda #$90 ; 144 (spr=96)
+	sta COLOR0
+	nop 
+	lda #$50 ; 80 (spr=32)
+	ldy #$31 ; 49 (spr=1)
+	sta COLOR1
+	lda #$35 ; 53 (spr=5)
+	sty COLOR1
+	sta COLOR0
+	ldy #$82 ; 130 (spr=82)
 	stx COLOR0
 	sty COLOR0
-	nop 
-	sta COLOR1
-	lda #$91 ; 145 (spr=97)
-	nop ; filler
+	ldy #$88 ; 136 (spr=88)
+	lda #$00 ; 0 (spr=-48)
+	sty HPOSP0
+	lda #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line61
-	sta COLOR1
-	sty HPOSP0
-	ldy #$6E ; 110 (spr=62)
-	lda #$04 ; 4 (spr=-44)
-	ldy #$87 ; 135 (spr=87)
-	nop 
-	nop 
 	sty COLBAK
-	ldy #$35 ; 53 (spr=5)
+	nop 
+	ldy #$80 ; 128 (spr=80)
+	sta COLOR1
+	nop 
+	lda #$05 ; 5 (spr=-43)
+	ldy #$87 ; 135 (spr=87)
+	sty COLBAK
 	sta COLOR0
-	lda #$84 ; 132 (spr=84)
+	ldy #$35 ; 53 (spr=5)
+	lda #$85 ; 133 (spr=85)
 	sty COLOR1
 	stx COLOR1
-	sta COLOR0
+	sta COLOR1
 	ldx #$90 ; 144 (spr=96)
 	stx COLOR1
-	ldy #$51 ; 81 (spr=33)
-	ldx #$9A ; 154 (spr=106)
+	ldx #$36 ; 54 (spr=6)
+	lda #$80 ; 128 (spr=80)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line62
 	nop 
-	sty COLOR0
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$88 ; 136 (spr=88)
-	nop 
+	sta COLOR0
+	lda #$81 ; 129 (spr=81)
+	sta COLOR0
+	ldy #$51 ; 81 (spr=33)
 	lda #$03 ; 3 (spr=-45)
-	ldy #$34 ; 52 (spr=4)
-	nop 
-	sty HPOSP2
+	sty COLOR0
+	ldy #$30 ; 48 (spr=0)
 	sty COLOR1
 	sta COLOR0
-	nop 
-	lda #$85 ; 133 (spr=85)
-	stx COLOR1
+	lda #$84 ; 132 (spr=84)
+	stx COLOR0
 	sta COLOR0
-	nop 
-	ldx #$91 ; 145 (spr=97)
-	ldy #$00 ; 0 (spr=-48)
+	lda #$40 ; 64 (spr=16)
+	sty HPOSP0
+	ldx #$90 ; 144 (spr=96)
 	stx COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line63
-	lda #$FF ; 255 (spr=207)
-	sty COLOR2
 	nop 
-	ldx #$3F ; 63 (spr=15)
+	ldx #$81 ; 129 (spr=81)
 	ldx #$82 ; 130 (spr=82)
-	sty HPOSP0
+	ldy #$80 ; 128 (spr=80)
 	lda #$02 ; 2 (spr=-46)
+	sty COLOR0
+	ldy #$37 ; 55 (spr=7)
 	nop 
-	ldy #$34 ; 52 (spr=4)
+	stx COLOR0
 	sta COLOR0
-	ldy #$36 ; 54 (spr=6)
 	sty COLOR1
 	lda #$84 ; 132 (spr=84)
+	nop 
 	stx COLOR1
 	sta COLOR0
-	ldx #$91 ; 145 (spr=97)
+	ldx #$90 ; 144 (spr=96)
 	stx COLOR1
-	ldx #$83 ; 131 (spr=83)
-	nop 
+	ldx #$82 ; 130 (spr=82)
+	lda #$03 ; 3 (spr=-45)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line64
 	lda #$81 ; 129 (spr=81)
-	nop 
-	ldy #$37 ; 55 (spr=7)
+	sty HPOSP1
 	sta HPOSP0
 	nop 
 	nop 
-	sta HPOSP1
-	lda #$80 ; 128 (spr=80)
+	stx HPOSP1
+	lda #$00 ; 0 (spr=-48)
 	lda #$02 ; 2 (spr=-46)
 	sta COLOR0
 	sty COLOR1
-	lda #$85 ; 133 (spr=85)
 	nop 
+	lda #$85 ; 133 (spr=85)
 	stx COLOR1
 	sta COLOR0
-	lda #$50 ; 80 (spr=32)
-	nop 
-	ldy #$00 ; 0 (spr=-48)
 	ldx #$90 ; 144 (spr=96)
+	nop 
+	lda #$50 ; 80 (spr=32)
+	ldy #$84 ; 132 (spr=84)
 	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line65
-	nop 
 	stx COLOR0
-	stx COLOR0
-	ldx #$73 ; 115 (spr=67)
 	nop 
-	ldy #$A0 ; 160 (spr=112)
+	ldx #$72 ; 114 (spr=66)
+	ldx #$81 ; 129 (spr=81)
+	stx HPOSP1
+	nop 
 	sta HPOSP2
-	ldy #$84 ; 132 (spr=84)
-	ldx #$86 ; 134 (spr=86)
-	lda #$00 ; 0 (spr=-48)
 	ldx #$29 ; 41 (spr=-7)
 	stx COLOR0
 	lda #$04 ; 4 (spr=-44)
+	ldx #$E1 ; 225 (spr=177)
+	ldx #$68 ; 104 (spr=56)
+	nop 
 	sta COLOR0
 	sty COLOR0
-	nop 
-	nop 
 	lda #$91 ; 145 (spr=97)
-	ldy #$9A ; 154 (spr=106)
-	ldy #$9A ; 154 (spr=106)
+	ldy #$80 ; 128 (spr=80)
+	nop 
+	sta COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line66
-	ldx #$86 ; 134 (spr=86)
-	ldy #$9A ; 154 (spr=106)
-	sta COLOR0
 	lda #$82 ; 130 (spr=82)
+	ldx #$FF ; 255 (spr=207)
+	ldy #$73 ; 115 (spr=67)
+	ldx #$00 ; 0 (spr=-48)
 	sta HPOSP1
-	lda #$02 ; 2 (spr=-46)
-	ldx #$35 ; 53 (spr=5)
-	lda #$02 ; 2 (spr=-46)
+	nop 
+	lda #$05 ; 5 (spr=-43)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$9D ; 157 (spr=109)
 	sty COLOR0
 	sta COLOR0
-	nop 
-	lda #$F0 ; 240 (spr=192)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$84 ; 132 (spr=84)
+	lda #$85 ; 133 (spr=85)
+	ldy #$40 ; 64 (spr=16)
+	sty COLOR0
+	sta COLOR2
+	lda #$74 ; 116 (spr=68)
+	ldx #$34 ; 52 (spr=4)
 	sta COLOR0
-	lda #$72 ; 114 (spr=66)
-	ldy #$29 ; 41 (spr=-7)
-	lda #$90 ; 144 (spr=96)
-	sta COLOR0
+	lda #$01 ; 1 (spr=-47)
+	ldy #$A1 ; 161 (spr=113)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line67
+	sta COLOR2
+	nop 
+	ldy #$90 ; 144 (spr=96)
+	sty COLOR0
+	lda #$94 ; 148 (spr=100)
+	lda #$86 ; 134 (spr=86)
 	lda #$82 ; 130 (spr=82)
+	ldy #$29 ; 41 (spr=-7)
 	lda #$02 ; 2 (spr=-46)
-	lda #$A8 ; 168 (spr=120)
-	nop 
-	nop 
-	lda #$84 ; 132 (spr=84)
-	lda #$03 ; 3 (spr=-45)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$28 ; 40 (spr=-8)
-	nop 
-	nop 
 	sta COLOR0
+	lda #$86 ; 134 (spr=86)
+	lda #$84 ; 132 (spr=84)
 	nop 
 	sty COLOR0
-	lda #$85 ; 133 (spr=85)
 	sta COLOR0
-	stx COLPM2
 	sta HPOSP2
 	lda #$90 ; 144 (spr=96)
-	nop ; filler
-	nop ; filler
+	nop 
+	sta COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line68
-	sta COLOR0
 	nop 
+	nop 
+	nop 
+	ldy #$26 ; 38 (spr=-10)
+	lda #$A0 ; 160 (spr=112)
 	stx COLPM2
 	nop 
-	ldx #$01 ; 1 (spr=-47)
-	lda #$57 ; 87 (spr=39)
-	ldx #$85 ; 133 (spr=85)
 	nop 
-	lda #$04 ; 4 (spr=-44)
-	sta COLOR0
-	lda #$34 ; 52 (spr=4)
-	sty COLOR0
 	ldx #$74 ; 116 (spr=68)
+	lda #$05 ; 5 (spr=-43)
+	sta COLOR0
+	lda #$F1 ; 241 (spr=193)
+	sty COLOR0
+	sta COLOR0
 	stx COLOR0
-	ldx #$90 ; 144 (spr=96)
-	lda #$82 ; 130 (spr=82)
-	ldy #$36 ; 54 (spr=6)
+	ldy #$F0 ; 240 (spr=192)
+	ldy #$47 ; 71 (spr=23)
 	nop 
-	lda #$84 ; 132 (spr=84)
-	lda #$FF ; 255 (spr=207)
+	lda #$86 ; 134 (spr=86)
 	nop 
+	ldy #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line69
-	lda #$2C ; 44 (spr=-4)
+	ldy #$90 ; 144 (spr=96)
+	lda #$91 ; 145 (spr=97)
+	ldy #$84 ; 132 (spr=84)
+	lda #$90 ; 144 (spr=96)
+	ldy #$90 ; 144 (spr=96)
+	sty COLOR0
+	ldx #$85 ; 133 (spr=85)
+	nop 
+	lda #$86 ; 134 (spr=86)
 	lda #$05 ; 5 (spr=-43)
-	stx COLOR0
-	nop 
-	nop 
-	stx COLOR0
-	ldx #$84 ; 132 (spr=84)
-	nop 
-	nop 
 	sta COLOR0
-	lda #$00 ; 0 (spr=-48)
-	lda #$82 ; 130 (spr=82)
-	stx HPOSP2
 	lda #$92 ; 146 (spr=98)
-	stx COLOR0
 	sta COLPM3
+	ldy #$37 ; 55 (spr=7)
+	lda #$72 ; 114 (spr=66)
+	stx COLOR0
+	sta HPOSP0
+	lda #$61 ; 97 (spr=49)
+	lda #$F7 ; 247 (spr=199)
 	nop 
-	nop ; filler
-	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line70
-	nop 
+	lda #$90 ; 144 (spr=96)
+	lda #$92 ; 146 (spr=98)
+	ldx #$35 ; 53 (spr=5)
+	lda #$06 ; 6 (spr=-42)
 	ldx #$90 ; 144 (spr=96)
-	sta COLOR0
 	nop 
 	stx COLOR0
-	lda #$73 ; 115 (spr=67)
-	ldx #$90 ; 144 (spr=96)
-	lda #$07 ; 7 (spr=-41)
+	stx COLOR0
 	sta COLOR1
 	lda #$7D ; 125 (spr=77)
 	sta HPOSP1
 	sty COLOR1
-	ldy #$83 ; 131 (spr=83)
-	sty COLOR2
-	lda #$30 ; 48 (spr=0)
-	ldy #$74 ; 116 (spr=68)
-	sty COLOR2
-	ldx #$00 ; 0 (spr=-48)
-	nop ; filler
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line71
-	sta COLPM2
-	stx COLOR2
-	sta COLPM2
-	nop 
-	lda #$99 ; 153 (spr=105)
-	nop 
-	sty HPOSP0
-	lda #$02 ; 2 (spr=-46)
-	sta COLPM3
-	lda #$90 ; 144 (spr=96)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLOR2
 	ldy #$82 ; 130 (spr=82)
 	sty COLOR2
 	nop 
+	ldy #$74 ; 116 (spr=68)
+	sty COLOR2
+	lda #$30 ; 48 (spr=0)
+	ldx #$85 ; 133 (spr=85)
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line71
+	ldx #$74 ; 116 (spr=68)
+	ldx #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
+	nop 
+	sta COLPM2
+	lda #$10 ; 16 (spr=-32)
+	stx COLOR2
+	nop 
+	nop 
+	lda #$03 ; 3 (spr=-45)
+	sta COLPM3
+	sty HPOSP0
+	stx COLOR2
+	sty COLOR2
+	ldy #$82 ; 130 (spr=82)
+	sty COLOR2
+	lda #$71 ; 113 (spr=65)
 	stx COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line72
-	ldy #$06 ; 6 (spr=-42)
 	sta COLPM3
-	ldx #$85 ; 133 (spr=85)
-	lda #$06 ; 6 (spr=-42)
-	ldy #$02 ; 2 (spr=-46)
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$74 ; 116 (spr=68)
-	stx COLPM3
-	sta COLOR0
+	ldx #$45 ; 69 (spr=21)
+	ldx #$38 ; 56 (spr=8)
+	ldx #$16 ; 22 (spr=-26)
+	lda #$07 ; 7 (spr=-41)
 	ldx #$84 ; 132 (spr=84)
-	lda #$82 ; 130 (spr=82)
+	stx COLPM3
+	ldy #$90 ; 144 (spr=96)
+	nop 
+	sta COLOR0
 	ldy #$83 ; 131 (spr=83)
 	nop 
 	nop 
+	lda #$94 ; 148 (spr=100)
+	nop 
 	stx COLOR0
 	sty COLBAK
-	ldx #$90 ; 144 (spr=96)
-	ldy #$34 ; 52 (spr=4)
-	lda #$00 ; 0 (spr=-48)
-	nop ; filler
+	ldx #$80 ; 128 (spr=80)
+	stx COLOR0
+	ldx #$91 ; 145 (spr=97)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line73
 	stx COLOR0
-	ldx #$84 ; 132 (spr=84)
-	ldy #$80 ; 128 (spr=80)
-	ldy #$0A ; 10 (spr=-38)
-	ldy #$85 ; 133 (spr=85)
-	lda #$01 ; 1 (spr=-47)
-	ldy #$82 ; 130 (spr=82)
+	ldx #$F0 ; 240 (spr=192)
 	ldy #$04 ; 4 (spr=-44)
-	ldx #$91 ; 145 (spr=97)
-	ldx #$00 ; 0 (spr=-48)
-	sty COLOR0
-	ldx #$85 ; 133 (spr=85)
-	stx COLOR0
-	lda #$90 ; 144 (spr=96)
-	sty COLPM3
-	ldx #$06 ; 6 (spr=-42)
-	ldx #$44 ; 68 (spr=20)
 	nop 
-	ldy #$83 ; 131 (spr=83)
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldx #$00 ; 0 (spr=-48)
+	lda #$2A ; 42 (spr=-6)
+	ldx #$74 ; 116 (spr=68)
+	lda #$8F ; 143 (spr=95)
+	ldx #$74 ; 116 (spr=68)
+	nop 
+	sty COLOR0
+	lda #$97 ; 151 (spr=103)
+	sta COLOR0
+	sty COLOR0
+	stx COLOR0
+	lda #$72 ; 114 (spr=66)
+	sta COLOR0
+	sty COLPM3
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line74
-	nop 
-	nop 
-	ldy #$36 ; 54 (spr=6)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$84 ; 132 (spr=84)
+	ldx #$F1 ; 241 (spr=193)
+	lda #$90 ; 144 (spr=96)
 	sta COLBAK
-	nop 
-	ldx #$0E ; 14 (spr=-34)
-	ldy #$00 ; 0 (spr=-48)
+	ldy #$90 ; 144 (spr=96)
 	ldy #$84 ; 132 (spr=84)
-	stx COLOR0
-	nop 
+	lda #$30 ; 48 (spr=0)
 	sty COLOR0
+	ldx #$0F ; 15 (spr=-33)
+	lda #$90 ; 144 (spr=96)
+	stx COLOR0
 	ldx #$5D ; 93 (spr=45)
+	sty COLOR0
+	nop 
 	stx HPOSP0
 	ldx #$83 ; 131 (spr=83)
 	stx COLBAK
-	lda #$10 ; 16 (spr=-32)
-	lda #$00 ; 0 (spr=-48)
-	lda #$91 ; 145 (spr=97)
-	nop ; filler
+	sta COLOR0
+	stx HPOSP2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line75
-	lda #$FB ; 251 (spr=203)
+	stx HPOSP2
 	stx COLPM0
-	ldx #$20 ; 32 (spr=-16)
-	ldx #$9A ; 154 (spr=106)
-	lda #$91 ; 145 (spr=97)
+	sty COLBAK
+	nop 
 	ldy #$0B ; 11 (spr=-37)
-	sta COLOR0
+	ldx #$9B ; 155 (spr=107)
 	stx COLBAK
 	sty COLOR0
-	ldx #$87 ; 135 (spr=87)
+	ldx #$86 ; 134 (spr=86)
 	stx COLOR0
-	ldx #$8B ; 139 (spr=91)
+	ldx #$01 ; 1 (spr=-47)
 	sta COLBAK
+	ldx #$9B ; 155 (spr=107)
 	ldy #$84 ; 132 (spr=84)
-	stx COLPM2
 	sty COLOR0
-	ldx #$31 ; 49 (spr=1)
-	ldx #$20 ; 32 (spr=-16)
+	stx COLPM2
+	lda #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line76
-	ldx #$20 ; 32 (spr=-16)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$23 ; 35 (spr=-13)
 	nop 
-	ldy #$30 ; 48 (spr=0)
-	ldx #$21 ; 33 (spr=-15)
-	ldy #$F0 ; 240 (spr=192)
-	ldy #$0A ; 10 (spr=-38)
 	stx COLPM0
-	ldx #$31 ; 49 (spr=1)
-	sty COLOR0
-	ldy #$10 ; 16 (spr=-32)
-	lda #$11 ; 17 (spr=-31)
-	stx COLOR0
-	lda #$86 ; 134 (spr=86)
-	sta COLOR0
-	lda #$F2 ; 242 (spr=194)
-	ldy #$80 ; 128 (spr=80)
-	sty COLOR0
-	ldy #$86 ; 134 (spr=86)
+	ldy #$CE ; 206 (spr=158)
+	lda #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$2B ; 43 (spr=-5)
+	ldy #$0A ; 10 (spr=-38)
+	nop 
+	sty COLOR0
+	nop 
+	ldx #$30 ; 48 (spr=0)
+	stx COLOR0
+	ldy #$81 ; 129 (spr=81)
+	lda #$87 ; 135 (spr=87)
+	sta COLOR0
+	nop 
+	sty COLOR0
+	ldy #$96 ; 150 (spr=102)
+	lda #$F2 ; 242 (spr=194)
+	ldx #$8D ; 141 (spr=93)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line77
+	ldx #$2B ; 43 (spr=-5)
 	nop 
 	stx COLPM3
-	sta COLPM0
 	sty COLOR0
-	ldy #$00 ; 0 (spr=-48)
-	nop 
 	ldy #$09 ; 9 (spr=-39)
-	sty COLOR0
-	ldy #$74 ; 116 (spr=68)
 	nop 
+	ldx #$8D ; 141 (spr=93)
+	sty COLOR0
+	ldy #$75 ; 117 (spr=69)
+	sta COLPM0
 	sta COLOR0
-	lda #$96 ; 150 (spr=102)
+	lda #$97 ; 151 (spr=103)
 	sty COLOR0
 	sta COLPM2
 	lda #$73 ; 115 (spr=67)
 	sta COLOR0
-	ldx #$8D ; 141 (spr=93)
-	ldy #$09 ; 9 (spr=-39)
+	lda #$29 ; 41 (spr=-7)
+	ldy #$84 ; 132 (spr=84)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line78
-	lda #$29 ; 41 (spr=-7)
-	stx HPOSP2
-	ldy #$84 ; 132 (spr=84)
-	sty COLOR0
 	sta COLPM1
-	ldx #$82 ; 130 (spr=82)
+	stx HPOSP2
+	sty COLOR0
 	ldy #$09 ; 9 (spr=-39)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$00 ; 0 (spr=-48)
 	sty COLOR0
 	ldy #$20 ; 32 (spr=-16)
 	sta COLPM0
 	sty COLOR0
-	ldy #$00 ; 0 (spr=-48)
-	stx COLOR0
-	lda #$00 ; 0 (spr=-48)
-	ldx #$97 ; 151 (spr=103)
+	ldy #$83 ; 131 (spr=83)
+	sty COLOR0
 	nop 
-	lda #$35 ; 53 (spr=5)
-	nop ; filler
-	nop ; filler
+	nop 
+	lda #$07 ; 7 (spr=-41)
+	ldy #$82 ; 130 (spr=82)
+	ldx #$72 ; 114 (spr=66)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line79
-	ldy #$A8 ; 168 (spr=120)
-	ldx #$80 ; 128 (spr=80)
-	ldy #$90 ; 144 (spr=96)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$06 ; 6 (spr=-42)
-	ldy #$32 ; 50 (spr=2)
-	ldx #$80 ; 128 (spr=80)
-	ldx #$0E ; 14 (spr=-34)
+	ldx #$0F ; 15 (spr=-33)
+	nop 
+	nop 
+	lda #$40 ; 64 (spr=16)
+	ldy #$70 ; 112 (spr=64)
+	lda #$07 ; 7 (spr=-41)
+	nop 
+	ldy #$33 ; 51 (spr=3)
 	sty COLOR0
 	stx COLOR0
 	sta COLOR1
 	sty COLOR0
-	ldx #$83 ; 131 (spr=83)
+	ldx #$82 ; 130 (spr=82)
 	stx COLBAK
 	ldx #$81 ; 129 (spr=81)
 	stx COLOR1
+	lda #$F0 ; 240 (spr=192)
 	ldy #$82 ; 130 (spr=82)
-	lda #$35 ; 53 (spr=5)
-	nop 
-	nop ; filler
+	sta COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line80
-	ldx #$91 ; 145 (spr=97)
-	stx COLBAK
-	lda #$40 ; 64 (spr=16)
 	nop 
-	lda #$05 ; 5 (spr=-43)
-	ldx #$38 ; 56 (spr=8)
-	nop 
-	stx COLOR1
-	nop 
-	sta COLOR1
-	lda #$25 ; 37 (spr=-11)
-	sty COLBAK
-	sta COLOR1
-	stx COLOR1
-	nop 
-	lda #$06 ; 6 (spr=-42)
+	ldx #$40 ; 64 (spr=16)
 	ldx #$90 ; 144 (spr=96)
+	lda #$11 ; 17 (spr=-31)
+	stx COLBAK
 	nop 
-	nop 
-	ldy #$38 ; 56 (spr=8)
+	ldx #$39 ; 57 (spr=9)
+	stx COLOR1
+	lda #$04 ; 4 (spr=-44)
+	sta COLOR1
+	sty COLBAK
+	lda #$25 ; 37 (spr=-11)
+	sta COLOR1
+	stx COLOR1
+	ldx #$F1 ; 241 (spr=193)
+	ldx #$91 ; 145 (spr=97)
+	lda #$06 ; 6 (spr=-42)
+	ldy #$30 ; 48 (spr=0)
+	stx COLBAK
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line81
 	nop 
-	ldy #$14 ; 20 (spr=-28)
 	nop 
-	stx COLBAK
+	ldy #$36 ; 54 (spr=6)
+	nop 
 	ldx #$82 ; 130 (spr=82)
-	ldy #$90 ; 144 (spr=96)
-	nop 
+	sty COLOR1
+	ldy #$AF ; 175 (spr=127)
 	ldy #$38 ; 56 (spr=8)
 	sta COLOR1
 	stx COLBAK
 	ldx #$2E ; 46 (spr=-2)
-	sty COLOR1
 	stx COLPM3
-	ldy #$35 ; 53 (spr=5)
-	ldx #$90 ; 144 (spr=96)
+	sty COLOR1
+	ldx #$36 ; 54 (spr=6)
+	ldy #$34 ; 52 (spr=4)
 	sty COLOR0
-	stx COLOR0
-	sty COLOR0
+	stx COLOR1
+	ldx #$82 ; 130 (spr=82)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line82
-	ldy #$35 ; 53 (spr=5)
-	ldx #$90 ; 144 (spr=96)
-	nop 
+	ldy #$34 ; 52 (spr=4)
+	ldx #$8F ; 143 (spr=95)
 	stx HPOSP2
-	ldx #$27 ; 39 (spr=-9)
-	ldy #$90 ; 144 (spr=96)
+	ldy #$91 ; 145 (spr=97)
 	sty COLBAK
+	ldy #$06 ; 6 (spr=-42)
+	ldx #$35 ; 53 (spr=5)
 	sta COLOR1
-	ldx #$34 ; 52 (spr=4)
-	stx COLBAK
 	lda #$31 ; 49 (spr=1)
-	ldy #$83 ; 131 (spr=83)
+	stx COLBAK
+	ldy #$82 ; 130 (spr=82)
 	sta COLOR1
 	sty COLOR0
 	lda #$86 ; 134 (spr=86)
 	ldy #$39 ; 57 (spr=9)
 	sta COLPM2
+	lda #$34 ; 52 (spr=4)
 	lda #$90 ; 144 (spr=96)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line83
+	ldx #$00 ; 0 (spr=-48)
 	sty COLOR0
 	sta COLOR1
-	ldx #$2A ; 42 (spr=-6)
 	lda #$04 ; 4 (spr=-44)
-	ldx #$70 ; 112 (spr=64)
-	ldx #$30 ; 48 (spr=0)
+	ldx #$34 ; 52 (spr=4)
+	ldx #$31 ; 49 (spr=1)
 	sta COLOR0
 	sty COLOR1
 	lda #$2A ; 42 (spr=-6)
 	sta COLOR1
+	lda #$81 ; 129 (spr=81)
 	stx COLOR1
-	lda #$80 ; 128 (spr=80)
 	sta COLOR1
-	lda #$90 ; 144 (spr=96)
-	sty COLPM3
+	ldx #$2D ; 45 (spr=-3)
+	lda #$91 ; 145 (spr=97)
 	sty COLOR0
-	ldx #$91 ; 145 (spr=97)
+	nop 
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line84
-	ldx #$36 ; 54 (spr=6)
-	ldx #$90 ; 144 (spr=96)
 	sta COLOR1
-	ldx #$40 ; 64 (spr=16)
-	lda #$30 ; 48 (spr=0)
-	ldx #$2C ; 44 (spr=-4)
-	ldy #$07 ; 7 (spr=-41)
+	ldy #$36 ; 54 (spr=6)
+	sty COLPM3
+	lda #$91 ; 145 (spr=97)
+	lda #$F4 ; 244 (spr=196)
+	ldy #$06 ; 6 (spr=-42)
 	sty COLOR0
 	stx COLOR1
-	ldy #$36 ; 54 (spr=6)
-	ldx #$36 ; 54 (spr=6)
+	ldx #$37 ; 55 (spr=7)
+	lda #$30 ; 48 (spr=0)
 	sta COLOR1
 	lda #$80 ; 128 (spr=80)
-	ldy #$28 ; 40 (spr=-8)
 	sta COLOR0
 	stx COLOR1
-	ldy #$0A ; 10 (spr=-38)
 	lda #$2D ; 45 (spr=-3)
-	ldx #$91 ; 145 (spr=97)
-	nop ; filler
+	ldx #$90 ; 144 (spr=96)
+	stx COLOR0
+	ldx #$8B ; 139 (spr=91)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line85
 	sta COLPM3
-	stx COLOR0
-	lda #$7F ; 127 (spr=79)
-	ldx #$10 ; 16 (spr=-32)
-	lda #$36 ; 54 (spr=6)
-	ldx #$8A ; 138 (spr=90)
+	lda #$12 ; 18 (spr=-30)
+	ldy #$84 ; 132 (spr=84)
+	sty COLPM2
+	lda #$2F ; 47 (spr=-1)
+	ldy #$0A ; 10 (spr=-38)
 	stx COLOR1
 	sty COLOR1
 	sta COLOR1
-	lda #$30 ; 48 (spr=0)
+	lda #$F1 ; 241 (spr=193)
+	sta COLOR1
+	ldy #$9A ; 154 (spr=106)
+	lda #$39 ; 57 (spr=9)
+	sta COLOR1
 	ldx #$27 ; 39 (spr=-9)
-	sta COLOR1
-	lda #$38 ; 56 (spr=8)
-	sta COLOR1
-	nop 
-	lda #$80 ; 128 (spr=80)
-	ldy #$9B ; 155 (spr=107)
-	nop ; filler
+	lda #$36 ; 54 (spr=6)
+	stx COLPM1
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line86
-	lda #$2C ; 44 (spr=-4)
+	sty COLPM2
+	stx COLOR1
 	nop 
 	sty COLOR1
-	stx COLPM1
-	nop 
-	nop 
 	ldy #$37 ; 55 (spr=7)
 	nop 
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR1
-	ldx #$70 ; 112 (spr=64)
+	lda #$2C ; 44 (spr=-4)
 	sta COLOR1
 	lda #$F0 ; 240 (spr=192)
 	sta COLOR2
 	lda #$84 ; 132 (spr=84)
 	sty COLOR2
 	sta HPOSP1
-	lda #$07 ; 7 (spr=-41)
-	ldx #$29 ; 41 (spr=-7)
+	lda #$06 ; 6 (spr=-42)
+	ldy #$96 ; 150 (spr=102)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line87
-	ldx #$00 ; 0 (spr=-48)
-	sty COLOR1
+	sty COLPM2
 	ldy #$01 ; 1 (spr=-47)
-	nop 
+	ldx #$BC ; 188 (spr=140)
 	sta COLOR1
 	sty COLOR2
+	ldy #$01 ; 1 (spr=-47)
 	lda #$2A ; 42 (spr=-6)
 	sta COLOR1
-	lda #$F1 ; 241 (spr=193)
+	ldx #$09 ; 9 (spr=-39)
 	ldy #$36 ; 54 (spr=6)
-	ldx #$38 ; 56 (spr=8)
-	ldx #$08 ; 8 (spr=-40)
+	lda #$F1 ; 241 (spr=193)
+	nop 
 	sta COLOR1
 	stx COLOR1
 	sty COLOR1
-	ldx #$29 ; 41 (spr=-7)
-	lda #$2D ; 45 (spr=-3)
-	ldy #$87 ; 135 (spr=87)
-	nop ; filler
+	lda #$2C ; 44 (spr=-4)
+	ldx #$28 ; 40 (spr=-8)
+	nop 
+	ldy #$97 ; 151 (spr=103)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line88
 	sta COLPM2
-	lda #$82 ; 130 (spr=82)
-	lda #$39 ; 57 (spr=9)
-	lda #$28 ; 40 (spr=-8)
-	lda #$34 ; 52 (spr=4)
+	lda #$FF ; 255 (spr=207)
+	nop 
 	stx COLPM1
-	ldx #$90 ; 144 (spr=96)
+	nop 
+	lda #$99 ; 153 (spr=105)
+	lda #$34 ; 52 (spr=4)
 	sty COLBAK
 	sta COLBAK
-	ldx #$00 ; 0 (spr=-48)
 	ldx #$5B ; 91 (spr=43)
-	lda #$81 ; 129 (spr=81)
-	sty COLPM2
+	lda #$80 ; 128 (spr=80)
 	stx HPOSP2
+	sty COLPM2
+	ldx #$30 ; 48 (spr=0)
 	sta COLOR1
+	ldx #$37 ; 55 (spr=7)
 	lda #$07 ; 7 (spr=-41)
 	sta COLOR1
-	lda #$23 ; 35 (spr=-13)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line89
-	ldx #$80 ; 128 (spr=80)
-	lda #$34 ; 52 (spr=4)
-	ldy #$00 ; 0 (spr=-48)
-	stx COLPM2
-	sta COLPM2
-	ldy #$F0 ; 240 (spr=192)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$30 ; 48 (spr=0)
-	ldy #$2B ; 43 (spr=-5)
-	nop 
-	nop 
-	lda #$34 ; 52 (spr=4)
-	sty COLPM1
 	ldy #$FF ; 255 (spr=207)
-	stx COLPM0
-	nop 
-	lda #$2C ; 44 (spr=-4)
-	ldx #$29 ; 41 (spr=-7)
-	ldx #$00 ; 0 (spr=-48)
+	ldy #$10 ; 16 (spr=-32)
+	ldy #$2B ; 43 (spr=-5)
 	lda #$80 ; 128 (spr=80)
+	lda #$35 ; 53 (spr=5)
+	sta COLPM2
+	ldx #$36 ; 54 (spr=6)
+	ldx #$96 ; 150 (spr=102)
+	stx COLBAK
+	lda #$34 ; 52 (spr=4)
 	nop 
-	ldx #$32 ; 50 (spr=2)
+	ldx #$31 ; 49 (spr=1)
+	sty COLPM1
+	ldy #$81 ; 129 (spr=81)
+	sty COLOR0
+	sta COLBAK
+	ldy #$91 ; 145 (spr=97)
+	sty COLBAK
+	stx COLPM0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line90
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$36 ; 54 (spr=6)
-	lda #$28 ; 40 (spr=-8)
-	nop 
-	ldx #$28 ; 40 (spr=-8)
-	ldx #$26 ; 38 (spr=-10)
-	ldy #$90 ; 144 (spr=96)
-	nop 
 	sta COLOR0
-	sta COLPM2
+	ldx #$9A ; 154 (spr=106)
+	nop 
+	sty COLBAK
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	lda #$28 ; 40 (spr=-8)
+	sta COLOR0
+	stx COLBAK
+	nop 
 	sty COLOR0
+	sta COLPM2
+	ldy #$36 ; 54 (spr=6)
+	sty COLBAK
 	lda #$7F ; 127 (spr=79)
+	nop 
 	sta HPOSP1
 	ldx #$32 ; 50 (spr=2)
-	lda #$10 ; 16 (spr=-32)
-	ldy #$80 ; 128 (spr=80)
-	lda #$90 ; 144 (spr=96)
-	ldy #$84 ; 132 (spr=84)
-	lda #$8A ; 138 (spr=90)
-	lda #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line91
-	ldy #$91 ; 145 (spr=97)
-	nop 
-	ldy #$26 ; 38 (spr=-10)
-	nop 
-	lda #$05 ; 5 (spr=-43)
+	lda #$39 ; 57 (spr=9)
+	ldy #$92 ; 146 (spr=98)
 	stx COLBAK
-	ldx #$00 ; 0 (spr=-48)
 	nop 
-	lda #$92 ; 146 (spr=98)
-	sty COLOR0
-	ldy #$E0 ; 224 (spr=176)
+	nop 
+	lda #$3B ; 59 (spr=11)
+	lda #$94 ; 148 (spr=100)
 	ldy #$26 ; 38 (spr=-10)
+	nop 
+	sty COLOR0
 	ldy #$90 ; 144 (spr=96)
+	ldx #$F0 ; 240 (spr=192)
+	ldx #$26 ; 38 (spr=-10)
 	sta COLOR0
 	sty COLOR0
-	nop 
 	lda #$88 ; 136 (spr=88)
-	ldy #$07 ; 7 (spr=-41)
-	sta HPOSP1
+	ldy #$06 ; 6 (spr=-42)
 	ldx #$87 ; 135 (spr=87)
-	lda #$92 ; 146 (spr=98)
+	nop 
+	sta HPOSP1
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line92
-	sty COLBAK
+	nop 
+	nop 
 	stx COLBAK
-	lda #$00 ; 0 (spr=-48)
+	nop 
 	stx COLBAK
-	lda #$36 ; 54 (spr=6)
-	ldx #$92 ; 146 (spr=98)
+	nop 
+	lda #$37 ; 55 (spr=7)
 	sta COLOR1
 	lda #$29 ; 41 (spr=-7)
 	sta COLOR1
 	sty COLOR1
+	ldx #$00 ; 0 (spr=-48)
 	ldx #$3C ; 60 (spr=12)
-	stx COLOR1
 	ldy #$47 ; 71 (spr=23)
+	stx COLOR1
 	sty COLOR1
 	ldy #$04 ; 4 (spr=-44)
-	nop 
-	ldx #$06 ; 6 (spr=-42)
-	nop ; filler
+	lda #$30 ; 48 (spr=0)
+	ldx #$3B ; 59 (spr=11)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line93
-	sty COLOR1
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$09 ; 9 (spr=-39)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$F6 ; 246 (spr=198)
-	ldx #$00 ; 0 (spr=-48)
+	nop 
+	nop 
 	lda #$34 ; 52 (spr=4)
+	sty COLOR1
+	ldy #$47 ; 71 (spr=23)
+	nop 
+	ldx #$3B ; 59 (spr=11)
 	sta COLOR1
 	lda #$26 ; 38 (spr=-10)
 	sta COLOR1
-	ldx #$F0 ; 240 (spr=192)
-	ldx #$3A ; 58 (spr=10)
-	ldx #$40 ; 64 (spr=16)
-	nop 
 	ldx #$00 ; 0 (spr=-48)
-	lda #$07 ; 7 (spr=-41)
+	lda #$06 ; 6 (spr=-42)
+	nop 
+	ldy #$00 ; 0 (spr=-48)
+	nop 
+	nop 
 	sta COLOR2
 	sty COLBAK
-	ldx #$24 ; 36 (spr=-12)
-	lda #$90 ; 144 (spr=96)
-	lda #$40 ; 64 (spr=16)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$A5 ; 165 (spr=117)
+	ldx #$1F ; 31 (spr=-17)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line94
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	sty COLBAK
-	ldy #$F0 ; 240 (spr=192)
-	lda #$28 ; 40 (spr=-8)
-	ldy #$2B ; 43 (spr=-5)
-	lda #$40 ; 64 (spr=16)
-	lda #$95 ; 149 (spr=101)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	stx COLOR0
+	lda #$26 ; 38 (spr=-10)
+	ldx #$90 ; 144 (spr=96)
+	ldy #$10 ; 16 (spr=-32)
 	ldy #$81 ; 129 (spr=81)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$05 ; 5 (spr=-43)
+	lda #$02 ; 2 (spr=-46)
+	lda #$01 ; 1 (spr=-47)
+	lda #$95 ; 149 (spr=101)
+	sty COLOR0
+	stx COLOR0
+	ldx #$92 ; 146 (spr=98)
 	sta COLOR1
-	ldx #$9F ; 159 (spr=111)
-	lda #$90 ; 144 (spr=96)
+	stx COLOR1
 	sty COLOR0
 	ldy #$00 ; 0 (spr=-48)
+	lda #$3D ; 61 (spr=13)
 	sty COLPM2
-	lda #$39 ; 57 (spr=9)
 	sta COLOR0
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line95
-	ldy #$90 ; 144 (spr=96)
-	ldy #$90 ; 144 (spr=96)
-	lda #$94 ; 148 (spr=100)
+	ldx #$10 ; 16 (spr=-32)
+	ldx #$91 ; 145 (spr=97)
 	ldx #$26 ; 38 (spr=-10)
+	ldy #$91 ; 145 (spr=97)
 	nop 
 	sty COLOR1
+	ldy #$84 ; 132 (spr=84)
 	nop 
-	ldy #$90 ; 144 (spr=96)
-	ldy #$85 ; 133 (spr=85)
 	stx COLOR0
-	stx COLPM2
+	sta COLPM3
+	lda #$94 ; 148 (spr=100)
 	sta COLOR0
-	ldx #$29 ; 41 (spr=-7)
-	lda #$3C ; 60 (spr=12)
+	ldx #$28 ; 40 (spr=-8)
 	stx COLPM0
+	lda #$3B ; 59 (spr=11)
 	sta COLOR0
 	sty COLOR0
-	ldx #$37 ; 55 (spr=7)
-	lda #$5E ; 94 (spr=46)
+	ldx #$36 ; 54 (spr=6)
+	lda #$26 ; 38 (spr=-10)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line96
+	lda #$26 ; 38 (spr=-10)
+	nop 
+	nop 
 	nop 
 	stx COLOR0
-	ldx #$2C ; 44 (spr=-4)
-	nop 
-	nop 
-	ldx #$01 ; 1 (spr=-47)
-	ldy #$00 ; 0 (spr=-48)
-	stx COLPM3
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$10 ; 16 (spr=-32)
 	sta COLPM2
-	lda #$19 ; 25 (spr=-23)
-	ldy #$3A ; 58 (spr=10)
-	nop 
+	ldy #$26 ; 38 (spr=-10)
+	stx COLPM3
+	ldy #$93 ; 147 (spr=99)
 	ldx #$7A ; 122 (spr=74)
+	sty COLOR2
 	stx COLOR2
-	nop 
 	ldx #$05 ; 5 (spr=-43)
 	stx COLOR2
-	ldx #$06 ; 6 (spr=-42)
-	nop 
-	nop 
-	ldx #$A0 ; 160 (spr=112)
+	sty COLOR2
+	ldx #$83 ; 131 (spr=83)
+	ldy #$28 ; 40 (spr=-8)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line97
+	ldy #$94 ; 148 (spr=100)
 	nop 
-	nop 
-	ldx #$82 ; 130 (spr=82)
-	stx COLOR2
-	ldx #$8E ; 142 (spr=94)
-	ldy #$95 ; 149 (spr=101)
 	lda #$05 ; 5 (spr=-43)
-	ldx #$2C ; 44 (spr=-4)
 	nop 
+	nop 
+	stx COLOR2
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$2D ; 45 (spr=-3)
 	stx COLOR2
 	sta COLOR2
 	sty COLOR2
-	ldy #$28 ; 40 (spr=-8)
-	lda #$08 ; 8 (spr=-40)
-	sta COLOR2
+	lda #$09 ; 9 (spr=-39)
 	stx COLPM2
-	ldy #$87 ; 135 (spr=87)
+	sta COLOR2
+	ldy #$92 ; 146 (spr=98)
+	sty COLOR2
 	ldx #$00 ; 0 (spr=-48)
-	nop ; filler
-	nop ; filler
+	ldy #$0E ; 14 (spr=-34)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line98
-	ldx #$2E ; 46 (spr=-2)
-	sty COLOR2
-	ldy #$94 ; 148 (spr=100)
 	nop 
 	lda #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
+	ldy #$87 ; 135 (spr=87)
+	sty COLOR2
+	ldy #$00 ; 0 (spr=-48)
 	ldx #$2B ; 43 (spr=-5)
-	lda #$04 ; 4 (spr=-44)
+	nop 
+	ldy #$94 ; 148 (spr=100)
+	lda #$05 ; 5 (spr=-43)
 	stx COLOR2
 	sta COLOR2
 	sty COLOR2
-	lda #$0A ; 10 (spr=-38)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$0B ; 11 (spr=-37)
+	ldy #$00 ; 0 (spr=-48)
 	ldx #$86 ; 134 (spr=86)
 	sta COLOR2
 	stx COLOR2
+	ldx #$00 ; 0 (spr=-48)
 	ldy #$0D ; 13 (spr=-35)
-	ldx #$90 ; 144 (spr=96)
-	nop 
+	lda #$26 ; 38 (spr=-10)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line99
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$0C ; 12 (spr=-36)
 	sty COLPM2
-	lda #$28 ; 40 (spr=-8)
-	ldx #$2A ; 42 (spr=-6)
-	nop 
+	ldx #$87 ; 135 (spr=87)
+	ldx #$0C ; 12 (spr=-36)
+	lda #$A1 ; 161 (spr=113)
+	lda #$2F ; 47 (spr=-1)
 	ldy #$92 ; 146 (spr=98)
-	lda #$06 ; 6 (spr=-42)
+	ldx #$2B ; 43 (spr=-5)
+	nop 
+	lda #$07 ; 7 (spr=-41)
 	stx COLOR2
 	sta COLOR2
+	ldx #$0C ; 12 (spr=-36)
 	sty COLOR2
-	ldx #$2F ; 47 (spr=-1)
 	stx COLOR2
 	ldy #$07 ; 7 (spr=-41)
 	sty COLOR2
+	ldy #$86 ; 134 (spr=86)
+	lda #$26 ; 38 (spr=-10)
 	nop 
-	ldy #$96 ; 150 (spr=102)
-	ldx #$91 ; 145 (spr=97)
-	lda #$30 ; 48 (spr=0)
+	ldx #$8F ; 143 (spr=95)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line100
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$AD ; 173 (spr=125)
-	sty COLOR2
-	ldy #$08 ; 8 (spr=-40)
 	nop 
-	ldx #$2A ; 42 (spr=-6)
+	nop 
 	lda #$06 ; 6 (spr=-42)
+	sty COLOR2
+	ldy #$0A ; 10 (spr=-38)
+	ldx #$01 ; 1 (spr=-47)
 	ldy #$92 ; 146 (spr=98)
 	ldx #$2B ; 43 (spr=-5)
+	nop 
 	stx COLOR2
 	sta COLOR2
-	ldx #$87 ; 135 (spr=87)
+	lda #$09 ; 9 (spr=-39)
 	sty COLOR2
-	lda #$08 ; 8 (spr=-40)
-	nop 
+	ldx #$34 ; 52 (spr=4)
+	ldx #$87 ; 135 (spr=87)
 	sta COLOR2
 	stx COLOR2
-	ldx #$9E ; 158 (spr=110)
-	ldy #$28 ; 40 (spr=-8)
-	nop 
+	ldx #$93 ; 147 (spr=99)
+	ldx #$9F ; 159 (spr=111)
+	ldy #$10 ; 16 (spr=-32)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line101
+	nop 
+	ldy #$86 ; 134 (spr=86)
 	stx COLPM2
-	stx COLPM2
-	ldy #$F0 ; 240 (spr=192)
-	ldy #$F0 ; 240 (spr=192)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$28 ; 40 (spr=-8)
 	ldx #$2A ; 42 (spr=-6)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
+	stx COLPM1
 	ldy #$0F ; 15 (spr=-33)
 	stx COLOR2
 	sta COLOR2
 	sty COLOR2
-	ldx #$97 ; 151 (spr=103)
 	sta COLOR2
+	ldx #$97 ; 151 (spr=103)
+	nop 
+	nop 
 	stx COLPM2
-	ldx #$84 ; 132 (spr=84)
-	ldy #$28 ; 40 (spr=-8)
-	ldy #$7D ; 125 (spr=77)
-	nop ; filler
-	nop ; filler
+	ldx #$85 ; 133 (spr=85)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$10 ; 16 (spr=-32)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line102
-	nop 
-	ldy #$28 ; 40 (spr=-8)
-	nop 
+	ldy #$00 ; 0 (spr=-48)
+	sty COLBAK
 	stx COLOR2
+	ldy #$7B ; 123 (spr=75)
+	ldy #$28 ; 40 (spr=-8)
 	sty COLPM0
-	ldx #$40 ; 64 (spr=16)
-	nop 
-	sta COLOR2
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldx #$84 ; 132 (spr=84)
-	sty COLOR2
-	ldy #$9D ; 157 (spr=109)
-	lda #$42 ; 66 (spr=18)
 	sta COLOR2
 	lda #$00 ; 0 (spr=-48)
+	nop 
+	nop 
+	sty COLOR2
+	lda #$42 ; 66 (spr=18)
+	sta COLOR2
+	ldy #$8F ; 143 (spr=95)
+	ldy #$7C ; 124 (spr=76)
 	sty COLOR2
 	stx COLOR2
-	ldy #$0D ; 13 (spr=-35)
+	ldx #$08 ; 8 (spr=-40)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line103
-	ldx #$01 ; 1 (spr=-47)
-	ldx #$7A ; 122 (spr=74)
-	nop 
-	ldx #$A4 ; 164 (spr=116)
-	ldx #$02 ; 2 (spr=-46)
-	sta COLPM3
+	ldx #$04 ; 4 (spr=-44)
+	ldx #$09 ; 9 (spr=-39)
+	lda #$00 ; 0 (spr=-48)
+	ldy #$29 ; 41 (spr=-7)
+	ldy #$72 ; 114 (spr=66)
+	sta COLBAK
+	ldy #$6E ; 110 (spr=62)
 	lda #$51 ; 81 (spr=33)
-	ldx #$06 ; 6 (spr=-42)
 	stx COLOR2
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$36 ; 54 (spr=6)
 	ldx #$00 ; 0 (spr=-48)
 	sty COLBAK
-	sta HPOSP2
-	stx COLBAK
-	ldx #$00 ; 0 (spr=-48)
 	ldy #$7A ; 122 (spr=74)
+	stx COLBAK
+	sta COLOR2
 	sty COLOR2
+	sta HPOSP2
 	lda #$34 ; 52 (spr=4)
 	ldx #$57 ; 87 (spr=39)
-	ldy #$02 ; 2 (spr=-46)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line104
-	stx HPOSP0
-	stx HPOSP0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$E0 ; 224 (spr=176)
 	stx COLOR2
+	stx HPOSP0
+	ldx #$E0 ; 224 (spr=176)
+	ldy #$06 ; 6 (spr=-42)
+	stx COLOR2
+	ldx #$09 ; 9 (spr=-39)
 	nop 
-	ldx #$08 ; 8 (spr=-40)
 	stx COLOR2
 	sty COLOR0
 	sta COLOR0
 	ldx #$58 ; 88 (spr=40)
-	lda #$00 ; 0 (spr=-48)
 	stx HPOSP3
+	lda #$00 ; 0 (spr=-48)
+	ldy #$04 ; 4 (spr=-44)
 	ldx #$36 ; 54 (spr=6)
 	stx COLPM3
 	sta COLOR0
-	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line105
-	ldy #$90 ; 144 (spr=96)
-	stx COLBAK
-	ldy #$05 ; 5 (spr=-43)
-	ldx #$FF ; 255 (spr=207)
-	lda #$04 ; 4 (spr=-44)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$80 ; 128 (spr=80)
+	nop 
 	lda #$0E ; 14 (spr=-34)
-	ldx #$90 ; 144 (spr=96)
+	nop 
+	ldx #$34 ; 52 (spr=4)
+	stx COLBAK
 	sta COLBAK
 	sty COLOR2
-	ldx #$35 ; 53 (spr=5)
-	lda #$00 ; 0 (spr=-48)
-	stx COLOR2
-	lda #$08 ; 8 (spr=-40)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$2B ; 43 (spr=-5)
-	ldx #$84 ; 132 (spr=84)
 	nop 
+	ldy #$F8 ; 248 (spr=200)
+	stx COLOR2
+	ldx #$87 ; 135 (spr=87)
+	lda #$08 ; 8 (spr=-40)
+	stx COLBAK
+	ldy #$2A ; 42 (spr=-6)
 	sta COLOR2
 	sty COLPM2
-	nop ; filler
+	ldy #$35 ; 53 (spr=5)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line106
-	ldy #$35 ; 53 (spr=5)
-	sty COLBAK
+	ldx #$00 ; 0 (spr=-48)
+	nop 
+	nop 
 	sty COLPM3
-	ldy #$00 ; 0 (spr=-48)
-	lda #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$F1 ; 241 (spr=193)
+	sty COLBAK
 	nop 
-	ldy #$97 ; 151 (spr=103)
+	ldy #$96 ; 150 (spr=102)
+	lda #$00 ; 0 (spr=-48)
+	lda #$3C ; 60 (spr=12)
 	sty COLPM0
-	nop 
-	nop 
-	lda #$4F ; 79 (spr=31)
 	ldy #$35 ; 53 (spr=5)
+	sty COLOR2
+	ldx #$94 ; 148 (spr=100)
 	sta COLOR2
 	lda #$0B ; 11 (spr=-37)
 	stx COLOR2
-	sta COLOR2
-	ldx #$28 ; 40 (spr=-8)
+	ldx #$90 ; 144 (spr=96)
+	nop 
+	ldx #$05 ; 5 (spr=-43)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line107
+	nop 
 	sta COLBAK
+	stx COLPM3
 	lda #$36 ; 54 (spr=6)
 	sta COLOR2
-	stx COLPM3
-	nop 
 	sty COLOR2
 	ldx #$07 ; 7 (spr=-41)
 	stx COLOR2
+	ldx #$93 ; 147 (spr=99)
 	sty COLPM3
-	ldy #$01 ; 1 (spr=-47)
-	ldx #$40 ; 64 (spr=16)
+	stx COLBAK
+	lda #$29 ; 41 (spr=-7)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$06 ; 6 (spr=-42)
+	ldx #$0C ; 12 (spr=-36)
 	nop 
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	ldy #$00 ; 0 (spr=-48)
-	sta COLPM2
-	nop 
+	ldy #$86 ; 134 (spr=86)
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line108
+	nop 
 	sta COLPM1
-	sty COLOR0
+	stx COLBAK
+	ldx #$7F ; 127 (spr=79)
 	nop 
 	sta COLPM2
-	nop 
-	nop 
-	lda #$8F ; 143 (spr=95)
 	lda #$7F ; 127 (spr=79)
-	sta HPOSP0
-	ldy #$86 ; 134 (spr=86)
-	lda #$2C ; 44 (spr=-4)
-	sty HPOSP1
-	ldy #$00 ; 0 (spr=-48)
-	stx COLBAK
-	ldy #$90 ; 144 (spr=96)
-	ldy #$97 ; 151 (spr=103)
 	nop 
-	ldx #$85 ; 133 (spr=85)
+	sta HPOSP0
+	ldx #$01 ; 1 (spr=-47)
+	sty HPOSP1
+	ldx #$93 ; 147 (spr=99)
+	ldy #$41 ; 65 (spr=17)
+	sty COLBAK
+	lda #$2D ; 45 (spr=-3)
+	stx COLBAK
+	ldy #$97 ; 151 (spr=103)
 	sta COLBAK
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line109
-	sty COLPM0
+	ldx #$00 ; 0 (spr=-48)
+	nop 
+	nop 
+	nop 
+	ldx #$85 ; 133 (spr=85)
 	nop 
 	stx COLPM2
-	ldx #$04 ; 4 (spr=-44)
 	nop 
-	lda #$08 ; 8 (spr=-40)
-	ldx #$7F ; 127 (spr=79)
-	ldx #$74 ; 116 (spr=68)
-	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$39 ; 57 (spr=9)
+	sty COLPM3
+	nop 
+	ldy #$99 ; 153 (spr=105)
+	sty COLPM1
+	stx COLPM1
 	sty COLPM3
 	ldy #$04 ; 4 (spr=-44)
-	ldx #$3B ; 59 (spr=11)
-	ldy #$FF ; 255 (spr=207)
-	stx COLPM1
-	ldx #$39 ; 57 (spr=9)
-	nop 
-	ldy #$F0 ; 240 (spr=192)
 	lda #$BA ; 186 (spr=138)
-	nop 
-	ldy #$92 ; 146 (spr=98)
-	nop ; filler
+	stx COLPM2
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line110
-	sta COLPM1
-	stx COLPM1
-	sty COLPM2
 	nop 
-	ldy #$04 ; 4 (spr=-44)
+	nop 
 	stx COLPM2
+	nop 
+	sty COLPM2
+	stx COLPM2
+	nop 
 	sty COLPM3
-	ldy #$82 ; 130 (spr=82)
-	stx COLPM3
 	sta HPOSP3
-	ldx #$00 ; 0 (spr=-48)
+	stx COLPM3
+	ldy #$83 ; 131 (spr=83)
+	nop 
 	sty COLBAK
-	ldx #$59 ; 89 (spr=41)
-	ldy #$06 ; 6 (spr=-42)
-	lda #$91 ; 145 (spr=97)
-	stx HPOSP3
+	ldy #$92 ; 146 (spr=98)
+	sty COLPM3
 	lda #$A9 ; 169 (spr=121)
+	ldx #$50 ; 80 (spr=32)
+	ldy #$9A ; 154 (spr=106)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line111
+	sty COLBAK
 	ldy #$84 ; 132 (spr=84)
-	nop 
 	stx HPOSP3
-	ldx #$00 ; 0 (spr=-48)
+	sty COLBAK
 	nop 
-	sty COLPM3
-	ldx #$00 ; 0 (spr=-48)
 	ldy #$0A ; 10 (spr=-38)
+	ldx #$40 ; 64 (spr=16)
 	sta HPOSP3
-	lda #$2A ; 42 (spr=-6)
+	lda #$2B ; 43 (spr=-5)
 	sta COLBAK
 	sty COLPM3
-	lda #$A0 ; 160 (spr=112)
 	lda #$34 ; 52 (spr=4)
+	stx COLPM3
 	sta COLPM3
-	nop 
-	ldx #$2E ; 46 (spr=-2)
+	ldx #$2F ; 47 (spr=-1)
 	sty COLPM3
-	nop ; filler
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line112
 	nop 
-	sty COLPM3
-	sty COLPM3
-	ldy #$FF ; 255 (spr=207)
-	ldy #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$94 ; 148 (spr=100)
-	ldy #$EA ; 234 (spr=186)
+	sty COLPM3
+	sty COLPM3
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$90 ; 144 (spr=96)
+	nop 
+	nop 
+	ldy #$38 ; 56 (spr=8)
+	ldy #$00 ; 0 (spr=-48)
 	stx COLPM2
-	nop 
-	ldy #$92 ; 146 (spr=98)
 	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
+	nop 
+	ldx #$41 ; 65 (spr=17)
+	stx COLPM3
 	sta COLPM3
 	stx HPOSP1
-	nop 
-	ldy #$0A ; 10 (spr=-38)
 	ldy #$00 ; 0 (spr=-48)
-	ldy #$85 ; 133 (spr=85)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line113
-	lda #$0F ; 15 (spr=-33)
+	lda #$00 ; 0 (spr=-48)
+	lda #$82 ; 130 (spr=82)
+	ldy #$90 ; 144 (spr=96)
+	lda #$EC ; 236 (spr=188)
+	nop 
+	lda #$FA ; 250 (spr=202)
 	stx COLPM1
-	lda #$F0 ; 240 (spr=192)
+	ldx #$3F ; 63 (spr=15)
+	ldx #$00 ; 0 (spr=-48)
+	nop 
+	lda #$3E ; 62 (spr=14)
 	ldy #$FF ; 255 (spr=207)
+	ldx #$96 ; 150 (spr=102)
+	lda #$92 ; 146 (spr=98)
+	ldx #$FF ; 255 (spr=207)
 	nop 
-	ldx #$32 ; 50 (spr=2)
-	ldy #$A2 ; 162 (spr=114)
+	ldx #$08 ; 8 (spr=-40)
+	nop 
+	ldx #$33 ; 51 (spr=3)
+	nop 
+	sta COLPM3
 	ldy #$40 ; 64 (spr=16)
-	sty HPOSP1
-	nop 
-	nop 
-	ldy #$40 ; 64 (spr=16)
-	lda #$01 ; 1 (spr=-47)
-	lda #$39 ; 57 (spr=9)
-	nop 
-	nop 
-	nop 
-	nop 
-	sty HPOSP1
-	nop 
-	stx COLPM3
+	lda #$36 ; 54 (spr=6)
 	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line114
-	sta COLPM3
+	nop 
+	nop 
+	sty HPOSP1
 	nop 
 	nop 
 	nop 
-	sty COLPM1
 	sty COLPM3
 	stx COLPM1
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sta COLPM3
+	ldx #$92 ; 146 (spr=98)
+	nop 
+	sta COLPM2
+	lda #$38 ; 56 (spr=8)
+	sty COLPM3
+	nop 
+	stx COLOR1
+	sta COLPM3
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line115
-	sta COLPM3
-	ldy #$90 ; 144 (spr=96)
-	ldx #$94 ; 148 (spr=100)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$01 ; 1 (spr=-47)
-	lda #$3A ; 58 (spr=10)
+	ldy #$91 ; 145 (spr=97)
+	sty COLOR1
 	sta HPOSP3
-	stx COLOR0
 	nop 
-	lda #$00 ; 0 (spr=-48)
+	ldx #$2D ; 45 (spr=-3)
+	lda #$90 ; 144 (spr=96)
+	nop 
+	stx COLPM2
 	nop 
 	nop 
 	ldy #$00 ; 0 (spr=-48)
-	ldx #$2F ; 47 (spr=-1)
-	lda #$85 ; 133 (spr=85)
-	ldy #$FF ; 255 (spr=207)
-	ldx #$40 ; 64 (spr=16)
-	ldx #$04 ; 4 (spr=-44)
-	sta COLOR2
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	lda #$80 ; 128 (spr=80)
+	nop 
+	lda #$84 ; 132 (spr=84)
 	ldy #$28 ; 40 (spr=-8)
+	ldx #$90 ; 144 (spr=96)
+	sta COLOR2
+	ldx #$91 ; 145 (spr=97)
 	sty COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line116
-	ldy #$18 ; 24 (spr=-24)
 	lda #$08 ; 8 (spr=-40)
 	sta COLOR2
-	lda #$10 ; 16 (spr=-32)
-	ldy #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$91 ; 145 (spr=97)
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR1
-	lda #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
+	ldy #$FE ; 254 (spr=206)
+	lda #$90 ; 144 (spr=96)
 	ldy #$90 ; 144 (spr=96)
-	ldx #$30 ; 48 (spr=0)
-	lda #$92 ; 146 (spr=98)
+	ldx #$35 ; 53 (spr=5)
+	nop 
+	sty COLOR1
+	sta COLOR1
+	nop 
+	ldy #$1A ; 26 (spr=-22)
 	stx HPOSP3
-	lda #$00 ; 0 (spr=-48)
+	ldy #$28 ; 40 (spr=-8)
 	nop 
-	ldy #$84 ; 132 (spr=84)
+	nop 
+	ldy #$85 ; 133 (spr=85)
 	sty COLOR2
-	nop 
 	ldy #$06 ; 6 (spr=-42)
-	lda #$76 ; 118 (spr=70)
+	ldx #$2D ; 45 (spr=-3)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line117
-	lda #$00 ; 0 (spr=-48)
+	ldx #$30 ; 48 (spr=0)
 	sty COLOR2
-	sta COLOR0
-	nop 
+	ldy #$00 ; 0 (spr=-48)
 	ldx #$63 ; 99 (spr=51)
 	ldy #$26 ; 38 (spr=-10)
+	lda #$00 ; 0 (spr=-48)
+	nop 
 	stx HPOSP3
 	sty COLPM3
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$2E ; 46 (spr=-2)
+	sta COLOR0
 	ldx #$37 ; 55 (spr=7)
-	nop 
-	nop 
-	nop 
+	ldy #$28 ; 40 (spr=-8)
 	stx COLOR2
 	sty COLOR0
 	sta COLOR0
-	ldy #$01 ; 1 (spr=-47)
-	ldy #$06 ; 6 (spr=-42)
-	nop ; filler
+	lda #$2E ; 46 (spr=-2)
+	lda #$90 ; 144 (spr=96)
+	ldy #$FF ; 255 (spr=207)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line118
-	ldx #$FF ; 255 (spr=207)
-	nop 
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldx #$FF ; 255 (spr=207)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$98 ; 152 (spr=104)
-	ldx #$01 ; 1 (spr=-47)
+	ldy #$9E ; 158 (spr=110)
 	ldx #$7A ; 122 (spr=74)
+	nop 
+	ldy #$98 ; 152 (spr=104)
+	lda #$2C ; 44 (spr=-4)
+	lda #$90 ; 144 (spr=96)
+	nop 
+	sta COLOR1
 	sty COLPM1
 	stx HPOSP1
 	ldy #$92 ; 146 (spr=98)
 	sty COLPM1
-	sty COLPM3
 	lda #$30 ; 48 (spr=0)
+	sty COLPM2
 	sta COLBAK
-	lda #$2E ; 46 (spr=-2)
-	ldy #$00 ; 0 (spr=-48)
+	lda #$2F ; 47 (spr=-1)
 	ldx #$32 ; 50 (spr=2)
-	ldx #$41 ; 65 (spr=17)
-	nop 
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line119
-	sta COLPM3
-	nop 
 	sty COLPM2
-	ldx #$F0 ; 240 (spr=192)
-	nop 
+	ldx #$40 ; 64 (spr=16)
+	ldx #$92 ; 146 (spr=98)
 	ldx #$06 ; 6 (spr=-42)
-	stx COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	sty COLOR0
-	ldx #$31 ; 49 (spr=1)
+	sta COLPM3
 	lda #$2B ; 43 (spr=-5)
+	stx COLOR0
+	ldx #$32 ; 50 (spr=2)
+	sty COLOR0
+	ldy #$B0 ; 176 (spr=128)
+	ldy #$90 ; 144 (spr=96)
 	nop 
 	sta COLBAK
-	ldy #$90 ; 144 (spr=96)
+	lda #$2C ; 44 (spr=-4)
 	stx COLOR1
 	sty COLOR1
-	ldy #$06 ; 6 (spr=-42)
-	nop 
-	nop 
+	ldy #$07 ; 7 (spr=-41)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line120
 	sty COLPM2
-	sty COLPM2
-	ldy #$02 ; 2 (spr=-46)
-	nop 
-	nop 
-	nop 
+	ldx #$90 ; 144 (spr=96)
 	sty COLPM1
-	sta COLPM2
-	ldx #$36 ; 54 (spr=6)
-	nop 
-	ldy #$90 ; 144 (spr=96)
-	lda #$7B ; 123 (spr=75)
-	ldx #$00 ; 0 (spr=-48)
-	nop 
+	ldy #$02 ; 2 (spr=-46)
+	sty COLPM1
 	ldy #$32 ; 50 (spr=2)
+	ldx #$36 ; 54 (spr=6)
+	sta COLPM2
+	sty COLPM2
+	lda #$90 ; 144 (spr=96)
+	nop 
+	lda #$92 ; 146 (spr=98)
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
-	stx COLOR0
-	ldx #$92 ; 146 (spr=98)
-	nop ; filler
-	nop ; filler
+	ldx #$30 ; 48 (spr=0)
+	sta COLOR0
+	lda #$7B ; 123 (spr=75)
+	ldy #$24 ; 36 (spr=-12)
+	ldx #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line121
 	sta COLPM2
-	ldy #$00 ; 0 (spr=-48)
-	lda #$01 ; 1 (spr=-47)
-	ldy #$13 ; 19 (spr=-29)
-	sty COLPM1
-	ldy #$3A ; 58 (spr=10)
 	nop 
+	ldx #$92 ; 146 (spr=98)
+	lda #$06 ; 6 (spr=-42)
+	sty COLPM1
+	ldy #$3B ; 59 (spr=11)
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
 	sta COLOR0
 	stx COLPM1
-	ldy #$08 ; 8 (spr=-40)
-	lda #$A0 ; 160 (spr=112)
+	ldy #$09 ; 9 (spr=-39)
+	lda #$91 ; 145 (spr=97)
 	sty COLOR1
-	ldx #$2C ; 44 (spr=-4)
-	lda #$90 ; 144 (spr=96)
+	ldy #$02 ; 2 (spr=-46)
+	ldy #$36 ; 54 (spr=6)
 	sta COLOR1
-	lda #$90 ; 144 (spr=96)
-	ldy #$8F ; 143 (spr=95)
-	nop ; filler
+	ldx #$34 ; 52 (spr=4)
+	lda #$20 ; 32 (spr=-16)
+	ldy #$04 ; 4 (spr=-44)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line122
-	nop 
-	ldy #$E2 ; 226 (spr=178)
-	lda #$32 ; 50 (spr=2)
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldy #$18 ; 24 (spr=-24)
-	lda #$00 ; 0 (spr=-48)
-	nop 
 	ldy #$04 ; 4 (spr=-44)
-	lda #$32 ; 50 (spr=2)
+	ldx #$02 ; 2 (spr=-46)
+	lda #$30 ; 48 (spr=0)
+	ldx #$F0 ; 240 (spr=192)
 	nop 
+	ldy #$90 ; 144 (spr=96)
+	ldx #$0A ; 10 (spr=-38)
+	nop 
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$BD ; 189 (spr=141)
+	ldy #$04 ; 4 (spr=-44)
 	sta COLPM3
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$37 ; 55 (spr=7)
-	ldx #$27 ; 39 (spr=-9)
+	lda #$10 ; 16 (spr=-32)
+	ldx #$19 ; 25 (spr=-23)
 	sty COLPM0
+	lda #$32 ; 50 (spr=2)
 	sta COLOR0
 	lda #$00 ; 0 (spr=-48)
 	sta COLOR0
-	sty COLPM3
-	ldy #$38 ; 56 (spr=8)
+	ldx #$27 ; 39 (spr=-9)
+	ldy #$90 ; 144 (spr=96)
+	lda #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line123
-	ldy #$90 ; 144 (spr=96)
-	lda #$0D ; 13 (spr=-35)
+	ldy #$00 ; 0 (spr=-48)
 	stx COLPM0
+	nop 
+	nop 
+	ldy #$13 ; 19 (spr=-29)
+	lda #$81 ; 129 (spr=81)
+	ldx #$7D ; 125 (spr=77)
+	lda #$0C ; 12 (spr=-36)
 	sta COLPM3
 	ldx #$76 ; 118 (spr=70)
-	ldy #$10 ; 16 (spr=-32)
-	lda #$36 ; 54 (spr=6)
-	ldy #$12 ; 18 (spr=-30)
-	lda #$92 ; 146 (spr=98)
-	nop 
 	sty COLPM3
-	nop 
-	ldy #$80 ; 128 (spr=80)
-	nop 
-	lda #$91 ; 145 (spr=97)
+	ldy #$91 ; 145 (spr=97)
+	lda #$03 ; 3 (spr=-45)
+	sta COLOR1
 	stx COLOR1
 	sta COLOR1
+	sty COLOR1
+	ldy #$BA ; 186 (spr=138)
 	ldx #$98 ; 152 (spr=104)
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line124
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$16 ; 22 (spr=-26)
-	lda #$24 ; 36 (spr=-12)
-	ldy #$34 ; 52 (spr=4)
-	ldy #$0C ; 12 (spr=-36)
-	lda #$92 ; 146 (spr=98)
-	lda #$06 ; 6 (spr=-42)
-	sty COLPM2
-	nop 
-	nop 
-	stx COLOR1
-	sta COLOR1
-	lda #$0F ; 15 (spr=-33)
 	ldy #$90 ; 144 (spr=96)
-	lda #$2E ; 46 (spr=-2)
+	ldy #$0F ; 15 (spr=-33)
+	lda #$15 ; 21 (spr=-27)
+	sta COLPM0
+	nop 
+	lda #$92 ; 146 (spr=98)
+	nop 
+	lda #$08 ; 8 (spr=-40)
+	nop 
+	sty COLPM2
+	ldy #$28 ; 40 (spr=-8)
+	stx COLOR1
+	sty COLOR1
+	sta COLOR1
+	ldy #$90 ; 144 (spr=96)
+	lda #$2A ; 42 (spr=-6)
 	sty COLOR1
 	stx COLPM0
-	ldy #$91 ; 145 (spr=97)
+	lda #$72 ; 114 (spr=66)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line125
+	ldy #$00 ; 0 (spr=-48)
 	stx COLPM2
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$EF ; 239 (spr=191)
-	nop 
-	ldy #$8F ; 143 (spr=95)
-	nop 
-	ldy #$8B ; 139 (spr=91)
+	lda #$90 ; 144 (spr=96)
+	ldx #$9F ; 159 (spr=111)
 	ldx #$2A ; 42 (spr=-6)
+	ldy #$92 ; 146 (spr=98)
+	lda #$14 ; 20 (spr=-28)
+	lda #$2F ; 47 (spr=-1)
 	nop 
 	sta COLPM2
-	ldy #$34 ; 52 (spr=4)
-	ldy #$76 ; 118 (spr=70)
 	nop 
+	ldy #$00 ; 0 (spr=-48)
+	lda #$E4 ; 228 (spr=180)
 	stx COLPM0
+	lda #$26 ; 38 (spr=-10)
+	lda #$94 ; 148 (spr=100)
+	ldx #$33 ; 51 (spr=3)
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	ldx #$32 ; 50 (spr=2)
-	ldy #$01 ; 1 (spr=-47)
-	lda #$AC ; 172 (spr=124)
-	ldy #$A2 ; 162 (spr=114)
-	ldx #$31 ; 49 (spr=1)
-	nop ; filler
-	nop ; filler
+	sta COLOR2
+	lda #$36 ; 54 (spr=6)
+	ldy #$00 ; 0 (spr=-48)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line126
-	ldy #$34 ; 52 (spr=4)
-	ldx #$32 ; 50 (spr=2)
-	ldy #$45 ; 69 (spr=21)
-	lda #$36 ; 54 (spr=6)
-	ldy #$36 ; 54 (spr=6)
-	ldy #$14 ; 20 (spr=-28)
+	ldy #$8F ; 143 (spr=95)
+	lda #$90 ; 144 (spr=96)
 	stx COLOR2
+	ldx #$81 ; 129 (spr=81)
+	lda #$90 ; 144 (spr=96)
+	lda #$36 ; 54 (spr=6)
+	ldy #$18 ; 24 (spr=-24)
 	sta COLOR2
-	lda #$0A ; 10 (spr=-38)
+	lda #$0B ; 11 (spr=-37)
 	sta COLPM2
-	lda #$85 ; 133 (spr=85)
-	lda #$05 ; 5 (spr=-43)
+	lda #$F1 ; 241 (spr=193)
+	lda #$07 ; 7 (spr=-41)
 	sta COLOR1
-	stx COLOR1
-	ldx #$31 ; 49 (spr=1)
 	ldx #$86 ; 134 (spr=86)
+	ldy #$33 ; 51 (spr=3)
+	sty COLOR1
 	stx COLOR1
 	ldy #$0E ; 14 (spr=-34)
-	nop 
-	ldx #$09 ; 9 (spr=-39)
+	ldx #$93 ; 147 (spr=99)
+	lda #$30 ; 48 (spr=0)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line127
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	nop 
-	sta COLOR1
-	ldx #$90 ; 144 (spr=96)
-	lda #$04 ; 4 (spr=-44)
+	lda #$2A ; 42 (spr=-6)
 	sty COLPM3
+	ldy #$FF ; 255 (spr=207)
+	ldx #$15 ; 21 (spr=-27)
+	lda #$29 ; 41 (spr=-7)
+	ldx #$90 ; 144 (spr=96)
+	sta COLOR1
 	stx COLOR1
+	lda #$04 ; 4 (spr=-44)
 	sta COLPM3
-	ldx #$98 ; 152 (spr=104)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
+	ldx #$99 ; 153 (spr=105)
+	lda #$07 ; 7 (spr=-41)
+	ldy #$3F ; 63 (spr=15)
 	stx COLPM1
-	ldy #$26 ; 38 (spr=-10)
-	lda #$08 ; 8 (spr=-40)
+	ldx #$00 ; 0 (spr=-48)
 	ldy #$6F ; 111 (spr=63)
 	sta COLBAK
-	lda #$28 ; 40 (spr=-8)
-	ldx #$09 ; 9 (spr=-39)
-	nop 
+	lda #$30 ; 48 (spr=0)
+	ldx #$26 ; 38 (spr=-10)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line128
-	ldx #$92 ; 146 (spr=98)
-	nop 
-	ldx #$30 ; 48 (spr=0)
-	nop 
-	stx COLBAK
-	nop 
 	nop 
 	sta COLBAK
+	lda #$29 ; 41 (spr=-7)
+	stx COLPM0
+	stx COLPM0
+	sta COLBAK
+	nop 
+	nop 
+	ldx #$10 ; 16 (spr=-32)
+	nop 
+	ldx #$08 ; 8 (spr=-40)
 	sta COLPM0
-	ldx #$3C ; 60 (spr=12)
-	nop 
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	ldx #$09 ; 9 (spr=-39)
-	lda #$2A ; 42 (spr=-6)
+	lda #$90 ; 144 (spr=96)
+	lda #$2B ; 43 (spr=-5)
 	sta COLBAK
 	stx COLBAK
-	ldx #$32 ; 50 (spr=2)
 	nop 
-	nop ; filler
+	lda #$E0 ; 224 (spr=176)
+	lda #$38 ; 56 (spr=8)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line129
-	stx COLBAK
-	lda #$38 ; 56 (spr=8)
+	ldx #$32 ; 50 (spr=2)
 	lda #$00 ; 0 (spr=-48)
-	nop 
-	lda #$2D ; 45 (spr=-3)
+	stx COLBAK
+	ldx #$80 ; 128 (spr=80)
+	lda #$38 ; 56 (spr=8)
 	lda #$29 ; 41 (spr=-7)
 	ldx #$92 ; 146 (spr=98)
 	sta COLBAK
 	nop 
 	sty HPOSP2
 	ldy #$2B ; 43 (spr=-5)
-	nop 
 	sty COLPM0
-	nop 
+	stx COLOR1
 	nop 
 	sty COLOR1
 	stx COLBAK
-	nop 
-	ldx #$90 ; 144 (spr=96)
-	nop 
+	ldy #$90 ; 144 (spr=96)
+	ldx #$9D ; 157 (spr=109)
+	ldx #$02 ; 2 (spr=-46)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line130
-	ldy #$91 ; 145 (spr=97)
+	ldx #$30 ; 48 (spr=0)
 	ldx #$30 ; 48 (spr=0)
 	stx COLBAK
-	ldx #$36 ; 54 (spr=6)
+	ldx #$38 ; 56 (spr=8)
 	stx COLPM2
 	sta COLPM0
 	sty COLOR2
-	ldx #$1A ; 26 (spr=-22)
-	ldy #$92 ; 146 (spr=98)
-	ldy #$02 ; 2 (spr=-46)
-	ldx #$06 ; 6 (spr=-42)
-	ldy #$37 ; 55 (spr=7)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$36 ; 54 (spr=6)
+	ldx #$FF ; 255 (spr=207)
+	ldx #$09 ; 9 (spr=-39)
 	sty COLOR2
 	sta COLBAK
-	lda #$32 ; 50 (spr=2)
+	lda #$33 ; 51 (spr=3)
 	sta COLOR2
-	ldy #$94 ; 148 (spr=100)
-	ldy #$93 ; 147 (spr=99)
-	nop ; filler
+	ldy #$FF ; 255 (spr=207)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$92 ; 146 (spr=98)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line131
-	ldy #$91 ; 145 (spr=97)
 	stx COLPM2
-	ldy #$92 ; 146 (spr=98)
-	ldx #$34 ; 52 (spr=4)
-	ldy #$29 ; 41 (spr=-7)
-	ldx #$36 ; 54 (spr=6)
-	ldy #$80 ; 128 (spr=80)
 	ldy #$91 ; 145 (spr=97)
+	ldx #$04 ; 4 (spr=-44)
+	nop 
+	lda #$32 ; 50 (spr=2)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$37 ; 55 (spr=7)
+	ldy #$90 ; 144 (spr=96)
 	sty COLOR2
 	stx COLOR1
-	ldy #$93 ; 147 (spr=99)
+	ldy #$92 ; 146 (spr=98)
 	sty COLOR2
 	sta COLOR2
 	sty COLPM1
-	lda #$28 ; 40 (spr=-8)
-	nop 
+	lda #$C2 ; 194 (spr=146)
 	ldx #$90 ; 144 (spr=96)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
+	stx COLOR2
+	sta COLPM2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line132
-	ldy #$28 ; 40 (spr=-8)
-	ldy #$34 ; 52 (spr=4)
-	ldx #$36 ; 54 (spr=6)
-	ldx #$04 ; 4 (spr=-44)
-	ldx #$28 ; 40 (spr=-8)
-	ldx #$90 ; 144 (spr=96)
-	lda #$02 ; 2 (spr=-46)
-	nop 
 	nop 
 	stx COLOR2
-	ldx #$36 ; 54 (spr=6)
-	nop 
-	sta COLPM2
+	ldy #$32 ; 50 (spr=2)
 	sty COLOR2
-	ldy #$30 ; 48 (spr=0)
-	sty COLPM2
-	lda #$37 ; 55 (spr=7)
+	lda #$90 ; 144 (spr=96)
+	nop 
+	ldy #$0E ; 14 (spr=-34)
+	stx COLOR2
+	lda #$02 ; 2 (spr=-46)
+	ldy #$34 ; 52 (spr=4)
+	sta COLPM2
+	ldx #$90 ; 144 (spr=96)
+	sty COLOR2
+	ldy #$94 ; 148 (spr=100)
+	ldx #$36 ; 54 (spr=6)
+	ldy #$07 ; 7 (spr=-41)
+	sty COLOR1
 	lda #$2A ; 42 (spr=-6)
 	sta COLOR1
-	lda #$B6 ; 182 (spr=134)
-	ldy #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line133
+	ldx #$FF ; 255 (spr=207)
+	lda #$B6 ; 182 (spr=134)
 	sta COLPM1
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$36 ; 54 (spr=6)
-	ldx #$04 ; 4 (spr=-44)
-	ldx #$26 ; 38 (spr=-10)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$97 ; 151 (spr=103)
+	ldy #$10 ; 16 (spr=-32)
+	sty COLPM2
 	lda #$90 ; 144 (spr=96)
+	ldx #$97 ; 151 (spr=103)
 	sta COLOR1
-	ldy #$8E ; 142 (spr=94)
-	lda #$66 ; 102 (spr=54)
-	lda #$92 ; 146 (spr=98)
+	lda #$12 ; 18 (spr=-30)
+	lda #$04 ; 4 (spr=-44)
+	ldy #$B2 ; 178 (spr=130)
 	stx COLPM1
-	nop 
+	ldy #$01 ; 1 (spr=-47)
+	lda #$92 ; 146 (spr=98)
 	sta COLPM0
-	nop 
-	lda #$A6 ; 166 (spr=118)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$CA ; 202 (spr=154)
+	ldy #$A4 ; 164 (spr=116)
+	ldx #$BD ; 189 (spr=141)
+	lda #$A7 ; 167 (spr=119)
 	nop 
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line134
-	stx COLPM1
-	ldx #$87 ; 135 (spr=87)
-	nop 
 	sta COLPM2
-	lda #$30 ; 48 (spr=0)
+	nop 
+	lda #$00 ; 0 (spr=-48)
+	stx COLPM1
+	lda #$B7 ; 183 (spr=135)
+	ldy #$00 ; 0 (spr=-48)
 	ldx #$2A ; 42 (spr=-6)
 	ldy #$28 ; 40 (spr=-8)
-	lda #$34 ; 52 (spr=4)
-	ldy #$24 ; 36 (spr=-12)
-	lda #$01 ; 1 (spr=-47)
-	ldy #$37 ; 55 (spr=7)
 	nop 
+	nop 
+	sta COLOR1
+	ldy #$36 ; 54 (spr=6)
 	stx COLPM1
-	ldx #$27 ; 39 (spr=-9)
 	sty COLOR1
-	ldy #$91 ; 145 (spr=97)
-	nop 
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$90 ; 144 (spr=96)
 	sty COLOR1
-	nop 
-	nop 
-	nop 
+	lda #$32 ; 50 (spr=2)
+	ldy #$C4 ; 196 (spr=148)
+	ldy #$97 ; 151 (spr=103)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line135
-	ldy #$94 ; 148 (spr=100)
-	ldx #$90 ; 144 (spr=96)
-	lda #$36 ; 54 (spr=6)
-	ldx #$26 ; 38 (spr=-10)
-	lda #$94 ; 148 (spr=100)
-	ldy #$B4 ; 180 (spr=132)
-	ldx #$B6 ; 182 (spr=134)
-	ldx #$01 ; 1 (spr=-47)
-	stx COLOR0
-	ldx #$28 ; 40 (spr=-8)
+	nop 
+	nop 
+	nop 
+	lda #$10 ; 16 (spr=-32)
+	nop 
 	ldx #$05 ; 5 (spr=-43)
+	sty COLPM2
+	ldy #$E0 ; 224 (spr=176)
+	ldy #$97 ; 151 (spr=103)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$B4 ; 180 (spr=132)
 	sty COLOR1
-	stx COLOR1
-	ldy #$A4 ; 164 (spr=116)
 	ldy #$37 ; 55 (spr=7)
+	stx COLOR1
+	ldx #$92 ; 146 (spr=98)
 	sty COLOR1
-	ldy #$91 ; 145 (spr=97)
+	ldy #$90 ; 144 (spr=96)
+	stx COLOR1
 	sty COLOR1
-	nop 
-	nop 
-	ldx #$96 ; 150 (spr=102)
+	ldy #$D4 ; 212 (spr=164)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line136
 	nop 
+	lda #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$A6 ; 166 (spr=118)
-	nop 
-	stx COLPM2
+	ldx #$42 ; 66 (spr=18)
 	lda #$28 ; 40 (spr=-8)
-	ldy #$7A ; 122 (spr=74)
-	ldx #$A0 ; 160 (spr=112)
+	ldx #$8F ; 143 (spr=95)
+	sty COLPM3
+	ldy #$8A ; 138 (spr=90)
 	sty COLBAK
-	ldy #$E4 ; 228 (spr=180)
+	ldy #$58 ; 88 (spr=40)
 	ldy #$A6 ; 166 (spr=118)
 	sty COLPM1
-	ldy #$06 ; 6 (spr=-42)
+	ldy #$07 ; 7 (spr=-41)
 	sty COLBAK
 	sta COLBAK
-	nop 
-	nop 
-	nop 
-	nop 
-	ldx #$B6 ; 182 (spr=134)
+	ldx #$98 ; 152 (spr=104)
+	sty COLPM0
+	ldy #$04 ; 4 (spr=-44)
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line137
-	ldx #$98 ; 152 (spr=104)
 	sty COLPM0
+	ldy #$03 ; 3 (spr=-45)
 	nop 
+	sty COLPM3
+	ldy #$90 ; 144 (spr=96)
 	nop 
-	nop 
-	lda #$A0 ; 160 (spr=112)
-	ldy #$92 ; 146 (spr=98)
-	lda #$29 ; 41 (spr=-7)
+	ldy #$00 ; 0 (spr=-48)
 	stx COLBAK
 	sta COLBAK
-	lda #$5C ; 92 (spr=44)
+	ldy #$92 ; 146 (spr=98)
 	sty COLPM0
-	ldy #$34 ; 52 (spr=4)
-	lda #$A0 ; 160 (spr=112)
+	lda #$82 ; 130 (spr=82)
+	nop 
 	lda #$30 ; 48 (spr=0)
-	nop 
-	ldy #$36 ; 54 (spr=6)
+	ldy #$9C ; 156 (spr=108)
+	ldy #$00 ; 0 (spr=-48)
 	sta COLBAK
-	lda #$AC ; 172 (spr=124)
-	nop 
-	nop ; filler
+	lda #$8F ; 143 (spr=95)
+	ldy #$2E ; 46 (spr=-2)
+	ldy #$29 ; 41 (spr=-7)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line138
+	lda #$91 ; 145 (spr=97)
 	nop 
-	sta COLPM1
+	nop 
 	stx COLPM1
-	ldy #$28 ; 40 (spr=-8)
-	nop 
-	ldx #$0E ; 14 (spr=-34)
+	lda #$90 ; 144 (spr=96)
+	ldy #$29 ; 41 (spr=-7)
+	ldx #$00 ; 0 (spr=-48)
 	sty COLBAK
-	ldy #$36 ; 54 (spr=6)
 	ldx #$0B ; 11 (spr=-37)
-	nop 
+	ldy #$32 ; 50 (spr=2)
+	lda #$AE ; 174 (spr=126)
 	sta COLPM1
-	nop 
 	stx COLPM3
-	ldx #$30 ; 48 (spr=0)
-	nop 
-	stx COLBAK
-	ldx #$90 ; 144 (spr=96)
-	lda #$B6 ; 182 (spr=134)
-	lda #$C3 ; 195 (spr=147)
-	nop ; filler
+	lda #$31 ; 49 (spr=1)
+	stx COLPM1
+	sty COLBAK
+	sta COLBAK
+	ldy #$10 ; 16 (spr=-32)
+	lda #$82 ; 130 (spr=82)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line139
 	nop 
+	lda #$90 ; 144 (spr=96)
+	ldy #$37 ; 55 (spr=7)
 	ldx #$93 ; 147 (spr=99)
+	ldy #$36 ; 54 (spr=6)
+	lda #$C2 ; 194 (spr=146)
 	sta COLPM0
-	nop 
+	sty COLBAK
 	lda #$04 ; 4 (spr=-44)
 	sta COLPM1
-	sty COLBAK
-	nop 
-	ldy #$30 ; 48 (spr=0)
-	lda #$90 ; 144 (spr=96)
 	stx COLPM0
-	ldx #$36 ; 54 (spr=6)
-	ldy #$33 ; 51 (spr=3)
+	ldy #$28 ; 40 (spr=-8)
+	lda #$34 ; 52 (spr=4)
+	ldx #$33 ; 51 (spr=3)
+	sty COLOR1
 	stx COLBAK
-	ldx #$40 ; 64 (spr=16)
-	sty COLBAK
+	ldx #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$27 ; 39 (spr=-9)
-	lda #$02 ; 2 (spr=-46)
-	nop ; filler
+	lda #$A3 ; 163 (spr=115)
+	ldy #$91 ; 145 (spr=97)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line140
-	ldx #$36 ; 54 (spr=6)
-	ldx #$A1 ; 161 (spr=113)
-	ldx #$92 ; 146 (spr=98)
 	nop 
-	lda #$24 ; 36 (spr=-12)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$34 ; 52 (spr=4)
+	ldx #$90 ; 144 (spr=96)
 	ldy #$36 ; 54 (spr=6)
+	ldy #$36 ; 54 (spr=6)
+	nop 
+	lda #$90 ; 144 (spr=96)
 	sty COLBAK
 	nop 
-	lda #$A2 ; 162 (spr=114)
-	ldy #$8F ; 143 (spr=95)
+	sta COLOR1
+	ldx #$22 ; 34 (spr=-14)
+	lda #$B3 ; 179 (spr=131)
 	sta COLPM1
-	nop 
-	ldy #$33 ; 51 (spr=3)
-	ldx #$94 ; 148 (spr=100)
-	nop 
+	ldy #$A2 ; 162 (spr=114)
+	ldy #$30 ; 48 (spr=0)
 	ldx #$02 ; 2 (spr=-46)
+	stx COLPM1
 	sty COLBAK
-	ldy #$27 ; 39 (spr=-9)
-	lda #$02 ; 2 (spr=-46)
-	nop 
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line141
-	lda #$30 ; 48 (spr=0)
+	sta COLPM1
+	ldy #$28 ; 40 (spr=-8)
+	nop 
 	stx COLPM1
-	sta COLBAK
-	lda #$7A ; 122 (spr=74)
-	ldx #$29 ; 41 (spr=-7)
-	lda #$C2 ; 194 (spr=146)
+	nop 
+	ldx #$81 ; 129 (spr=81)
 	sty COLBAK
 	ldy #$32 ; 50 (spr=2)
-	nop 
-	ldy #$A0 ; 160 (spr=112)
-	nop 
+	ldy #$31 ; 49 (spr=1)
+	ldx #$34 ; 52 (spr=4)
+	ldx #$29 ; 41 (spr=-7)
 	sta COLPM1
-	nop 
-	ldy #$30 ; 48 (spr=0)
-	lda #$B2 ; 178 (spr=130)
+	lda #$04 ; 4 (spr=-44)
+	sta COLOR1
 	nop 
 	sty COLBAK
-	ldy #$58 ; 88 (spr=40)
-	nop 
-	ldy #$90 ; 144 (spr=96)
-	nop ; filler
+	ldy #$93 ; 147 (spr=99)
+	sty COLOR1
+	ldy #$BF ; 191 (spr=143)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line142
-	nop 
-	lda #$05 ; 5 (spr=-43)
-	ldy #$02 ; 2 (spr=-46)
-	sty COLPM3
-	sta COLPM1
-	ldy #$92 ; 146 (spr=98)
-	stx COLBAK
-	lda #$3B ; 59 (spr=11)
+	ldy #$E0 ; 224 (spr=176)
 	ldy #$90 ; 144 (spr=96)
+	sty COLPM3
+	nop 
+	sta COLPM1
+	lda #$3B ; 59 (spr=11)
+	stx COLBAK
+	ldx #$36 ; 54 (spr=6)
 	sta COLOR1
 	sty COLOR1
-	ldy #$30 ; 48 (spr=0)
-	ldx #$36 ; 54 (spr=6)
+	nop 
+	lda #$95 ; 149 (spr=101)
 	stx COLOR1
-	sty COLOR1
+	ldx #$31 ; 49 (spr=1)
+	stx COLOR1
 	ldx #$26 ; 38 (spr=-10)
-	lda #$90 ; 144 (spr=96)
-	lda #$3A ; 58 (spr=10)
-	ldy #$36 ; 54 (spr=6)
+	nop 
+	stx COLPM3
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line143
-	ldy #$04 ; 4 (spr=-44)
-	lda #$95 ; 149 (spr=101)
+	ldy #$28 ; 40 (spr=-8)
 	stx COLPM3
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$81 ; 129 (spr=81)
-	ldx #$91 ; 145 (spr=97)
-	ldy #$36 ; 54 (spr=6)
+	nop 
+	ldx #$0F ; 15 (spr=-33)
+	ldx #$90 ; 144 (spr=96)
+	ldy #$30 ; 48 (spr=0)
+	ldy #$90 ; 144 (spr=96)
 	sta COLOR1
 	stx COLOR1
-	ldx #$04 ; 4 (spr=-44)
 	ldx #$08 ; 8 (spr=-40)
 	stx COLPM1
 	lda #$33 ; 51 (spr=3)
+	ldy #$36 ; 54 (spr=6)
 	sta COLOR1
 	sty COLBAK
-	ldy #$6D ; 109 (spr=61)
+	lda #$90 ; 144 (spr=96)
 	lda #$00 ; 0 (spr=-48)
-	lda #$09 ; 9 (spr=-39)
-	ldx #$04 ; 4 (spr=-44)
-	ldx #$14 ; 20 (spr=-28)
+	nop 
+	ldx #$25 ; 37 (spr=-11)
+	ldy #$6C ; 108 (spr=60)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line144
-	ldx #$24 ; 36 (spr=-12)
-	lda #$32 ; 50 (spr=2)
+	lda #$00 ; 0 (spr=-48)
 	lda #$30 ; 48 (spr=0)
 	sta COLOR1
-	lda #$20 ; 32 (spr=-16)
-	nop 
 	lda #$91 ; 145 (spr=97)
+	stx COLPM3
+	nop 
+	sta COLOR1
+	ldx #$40 ; 64 (spr=16)
+	nop 
+	stx COLPM3
+	ldx #$80 ; 128 (spr=80)
+	lda #$33 ; 51 (spr=3)
+	ldx #$91 ; 145 (spr=97)
 	sta COLOR1
 	stx COLPM3
+	lda #$34 ; 52 (spr=4)
+	stx COLOR1
 	ldx #$00 ; 0 (spr=-48)
-	sta COLPM3
-	lda #$33 ; 51 (spr=3)
-	nop 
-	sta COLOR1
-	lda #$91 ; 145 (spr=97)
-	ldx #$34 ; 52 (spr=4)
 	ldx #$04 ; 4 (spr=-44)
-	sta COLOR1
-	lda #$10 ; 16 (spr=-32)
-	lda #$16 ; 22 (spr=-26)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line145
+	ldx #$06 ; 6 (spr=-42)
 	sty COLPM1
-	ldy #$92 ; 146 (spr=98)
-	lda #$26 ; 38 (spr=-10)
-	ldy #$0F ; 15 (spr=-33)
-	nop 
 	ldy #$30 ; 48 (spr=0)
+	ldx #$A0 ; 160 (spr=112)
 	sty COLOR1
+	nop 
+	ldx #$04 ; 4 (spr=-44)
 	stx COLOR1
 	lda #$90 ; 144 (spr=96)
-	nop 
-	ldy #$90 ; 144 (spr=96)
-	sta COLOR1
 	ldy #$33 ; 51 (spr=3)
+	ldx #$04 ; 4 (spr=-44)
+	sta COLOR1
+	lda #$34 ; 52 (spr=4)
 	stx COLOR1
 	sty COLOR1
-	ldx #$93 ; 147 (spr=99)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	nop ; filler
+	ldy #$91 ; 145 (spr=97)
+	sty COLOR1
+	ldy #$32 ; 50 (spr=2)
+	ldx #$30 ; 48 (spr=0)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line146
-	stx COLPM0
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	ldx #$2B ; 43 (spr=-5)
-	nop 
 	lda #$91 ; 145 (spr=97)
-	ldy #$07 ; 7 (spr=-41)
+	stx COLOR1
+	ldx #$20 ; 32 (spr=-16)
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$2C ; 44 (spr=-4)
+	nop 
+	ldy #$06 ; 6 (spr=-42)
+	sty COLOR1
 	stx COLOR1
 	sty COLOR1
-	ldx #$33 ; 51 (spr=3)
 	sta COLOR1
-	ldy #$28 ; 40 (spr=-8)
-	stx COLOR1
-	ldy #$00 ; 0 (spr=-48)
+	ldy #$32 ; 50 (spr=2)
+	sty COLOR1
+	ldy #$40 ; 64 (spr=16)
+	sty COLBAK
 	sta COLBAK
+	ldx #$34 ; 52 (spr=4)
 	ldx #$2C ; 44 (spr=-4)
-	lda #$36 ; 54 (spr=6)
-	nop ; filler
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line147
-	lda #$24 ; 36 (spr=-12)
-	lda #$34 ; 52 (spr=4)
-	lda #$F1 ; 241 (spr=193)
-	ldy #$40 ; 64 (spr=16)
-	lda #$36 ; 54 (spr=6)
 	nop 
+	lda #$24 ; 36 (spr=-12)
+	ldx #$15 ; 21 (spr=-27)
+	lda #$37 ; 55 (spr=7)
 	sty COLBAK
+	ldx #$2C ; 44 (spr=-4)
+	nop 
 	sta COLBAK
-	stx COLOR1
+	stx COLBAK
 	sta COLOR1
-	lda #$06 ; 6 (spr=-42)
+	sta COLBAK
 	sty COLOR1
 	ldy #$33 ; 51 (spr=3)
 	sty COLOR1
-	ldy #$99 ; 153 (spr=105)
+	ldy #$98 ; 152 (spr=104)
 	sty COLPM2
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$0F ; 15 (spr=-33)
-	nop ; filler
+	ldy #$0E ; 14 (spr=-34)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line148
+	lda #$C2 ; 194 (spr=146)
 	sty COLPM1
-	nop 
-	sta COLPM1
-	nop 
 	sty COLPM1
-	ldy #$40 ; 64 (spr=16)
+	ldy #$36 ; 54 (spr=6)
+	nop 
+	ldy #$41 ; 65 (spr=17)
+	nop 
 	stx COLOR1
 	sty COLOR1
-	ldy #$32 ; 50 (spr=2)
 	sta COLPM1
-	sta COLPM1
+	lda #$06 ; 6 (spr=-42)
+	nop 
+	ldy #$33 ; 51 (spr=3)
 	sty COLOR1
-	nop 
-	nop 
-	lda #$90 ; 144 (spr=96)
-	lda #$09 ; 9 (spr=-39)
-	lda #$90 ; 144 (spr=96)
+	sty COLOR1
+	sta COLPM1
+	ldx #$32 ; 50 (spr=2)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line149
-	ldy #$92 ; 146 (spr=98)
 	ldy #$20 ; 32 (spr=-16)
-	lda #$90 ; 144 (spr=96)
-	nop 
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	nop 
-	stx COLOR1
-	ldy #$33 ; 51 (spr=3)
-	ldx #$90 ; 144 (spr=96)
-	sta COLOR1
-	lda #$06 ; 6 (spr=-42)
-	sty COLOR1
-	sty COLPM1
-	sta COLBAK
-	nop 
+	lda #$53 ; 83 (spr=35)
+	ldx #$26 ; 38 (spr=-10)
 	nop 
 	ldx #$34 ; 52 (spr=4)
-	nop ; filler
+	ldy #$34 ; 52 (spr=4)
+	lda #$A4 ; 164 (spr=116)
+	nop 
+	ldx #$2A ; 42 (spr=-6)
+	stx COLOR1
+	ldx #$41 ; 65 (spr=17)
+	ldy #$33 ; 51 (spr=3)
+	sta COLOR1
+	sty COLOR1
+	sty COLPM1
+	stx COLBAK
+	lda #$08 ; 8 (spr=-40)
+	ldy #$2A ; 42 (spr=-6)
+	ldx #$36 ; 54 (spr=6)
+	sta COLBAK
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line150
-	ldx #$90 ; 144 (spr=96)
-	ldy #$33 ; 51 (spr=3)
-	ldy #$41 ; 65 (spr=17)
-	ldy #$40 ; 64 (spr=16)
+	ldy #$34 ; 52 (spr=4)
+	ldy #$50 ; 80 (spr=32)
 	nop 
+	ldy #$41 ; 65 (spr=17)
+	nop 
+	ldx #$82 ; 130 (spr=82)
+	ldx #$A2 ; 162 (spr=114)
 	ldx #$2A ; 42 (spr=-6)
 	nop 
-	nop 
-	lda #$80 ; 128 (spr=80)
 	stx COLOR1
+	ldx #$00 ; 0 (spr=-48)
 	sty COLBAK
-	ldy #$A0 ; 160 (spr=112)
-	ldx #$96 ; 150 (spr=102)
-	ldy #$92 ; 146 (spr=98)
-	ldx #$36 ; 54 (spr=6)
 	nop 
-	ldy #$33 ; 51 (spr=3)
+	ldy #$32 ; 50 (spr=2)
+	ldx #$C4 ; 196 (spr=148)
+	ldx #$FF ; 255 (spr=207)
+	ldx #$22 ; 34 (spr=-14)
 	sty COLOR1
-	ldx #$0F ; 15 (spr=-33)
-	lda #$3B ; 59 (spr=11)
-	ldy #$38 ; 56 (spr=8)
-	ldy #$2A ; 42 (spr=-6)
 	nop 
+	lda #$3B ; 59 (spr=11)
+	ldy #$2A ; 42 (spr=-6)
+	ldy #$04 ; 4 (spr=-44)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line151
+	ldy #$34 ; 52 (spr=4)
+	ldy #$2A ; 42 (spr=-6)
 	nop 
-	nop 
-	nop 
+	ldx #$0E ; 14 (spr=-34)
 	nop 
 	stx COLPM1
-	ldx #$26 ; 38 (spr=-10)
 	nop 
-	ldx #$32 ; 50 (spr=2)
+	ldx #$F0 ; 240 (spr=192)
 	sty COLOR1
 	ldy #$05 ; 5 (spr=-43)
-	nop 
+	ldy #$04 ; 4 (spr=-44)
 	sty COLPM1
 	sta HPOSP1
-	nop 
+	ldx #$33 ; 51 (spr=3)
 	stx COLOR1
-	ldx #$0D ; 13 (spr=-35)
-	nop 
-	lda #$28 ; 40 (spr=-8)
-	nop 
-	nop 
-	nop ; filler
+	ldx #$0C ; 12 (spr=-36)
+	lda #$29 ; 41 (spr=-7)
+	sty COLPM1
+	stx COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line152
 	stx COLOR1
-	ldx #$40 ; 64 (spr=16)
-	ldx #$32 ; 50 (spr=2)
 	sta COLBAK
+	ldx #$32 ; 50 (spr=2)
 	stx COLPM1
-	nop 
-	sty COLPM1
+	ldx #$34 ; 52 (spr=4)
 	ldx #$91 ; 145 (spr=97)
-	ldy #$43 ; 67 (spr=19)
+	sty COLPM1
+	lda #$00 ; 0 (spr=-48)
+	ldy #$42 ; 66 (spr=18)
 	stx COLOR0
-	ldx #$32 ; 50 (spr=2)
+	ldx #$31 ; 49 (spr=1)
 	sty COLOR0
-	stx COLBAK
 	ldy #$00 ; 0 (spr=-48)
+	stx COLOR0
 	sty COLOR0
-	sta COLBAK
-	ldy #$07 ; 7 (spr=-41)
+	ldx #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line153
-	stx COLPM1
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$91 ; 145 (spr=97)
-	ldy #$07 ; 7 (spr=-41)
-	ldx #$40 ; 64 (spr=16)
-	sta COLBAK
+	lda #$FF ; 255 (spr=207)
+	ldx #$2C ; 44 (spr=-4)
+	ldy #$91 ; 145 (spr=97)
 	nop 
+	lda #$41 ; 65 (spr=17)
+	ldy #$07 ; 7 (spr=-41)
+	ldx #$32 ; 50 (spr=2)
+	stx COLPM1
 	sty COLPM1
-	ldy #$33 ; 51 (spr=3)
+	ldy #$32 ; 50 (spr=2)
+	sta COLBAK
+	lda #$29 ; 41 (spr=-7)
 	sty COLPM1
-	stx COLBAK
-	ldx #$D0 ; 208 (spr=160)
 	sta COLBAK
 	sty COLBAK
-	ldx #$34 ; 52 (spr=4)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$0E ; 14 (spr=-34)
-	ldy #$34 ; 52 (spr=4)
-	nop ; filler
+	ldx #$35 ; 53 (spr=5)
+	ldx #$33 ; 51 (spr=3)
+	nop 
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$33 ; 51 (spr=3)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line154
-	ldx #$90 ; 144 (spr=96)
-	sta COLBAK
+	ldy #$F7 ; 247 (spr=199)
+	ldy #$90 ; 144 (spr=96)
 	nop 
-	ldx #$24 ; 36 (spr=-12)
-	ldx #$06 ; 6 (spr=-42)
+	ldx #$0E ; 14 (spr=-34)
 	sta COLBAK
-	ldy #$F1 ; 241 (spr=193)
-	stx COLPM1
 	ldy #$0F ; 15 (spr=-33)
-	sty COLPM2
-	ldx #$01 ; 1 (spr=-47)
-	ldx #$40 ; 64 (spr=16)
-	stx COLBAK
-	ldx #$32 ; 50 (spr=2)
-	stx COLBAK
-	stx COLPM1
 	nop 
-	nop ; filler
-	nop ; filler
+	ldx #$07 ; 7 (spr=-41)
+	stx COLPM1
+	ldx #$41 ; 65 (spr=17)
+	sty COLPM2
+	ldy #$35 ; 53 (spr=5)
+	stx COLBAK
+	ldx #$33 ; 51 (spr=3)
+	stx COLBAK
+	ldy #$40 ; 64 (spr=16)
+	sty COLBAK
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$32 ; 50 (spr=2)
+	ldx #$30 ; 48 (spr=0)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line155
+	ldx #$30 ; 48 (spr=0)
+	ldy #$04 ; 4 (spr=-44)
 	stx COLPM1
 	nop 
-	ldx #$40 ; 64 (spr=16)
+	ldx #$41 ; 65 (spr=17)
 	nop 
-	ldy #$24 ; 36 (spr=-12)
 	sta COLBAK
-	ldy #$06 ; 6 (spr=-42)
 	sty COLPM1
-	ldy #$05 ; 5 (spr=-43)
 	sty COLOR0
-	ldy #$00 ; 0 (spr=-48)
 	stx COLBAK
 	ldx #$32 ; 50 (spr=2)
-	stx COLBAK
+	ldy #$01 ; 1 (spr=-47)
+	stx COLOR1
 	sty COLOR0
-	nop 
-	ldy #$06 ; 6 (spr=-42)
-	nop 
-	nop 
+	stx COLPM1
+	ldy #$07 ; 7 (spr=-41)
+	ldx #$39 ; 57 (spr=9)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line156
-	stx COLPM1
+	sta COLBAK
+	sta COLOR1
+	stx COLOR1
 	ldx #$0A ; 10 (spr=-38)
-	sta COLBAK
-	sty COLBAK
-	sta COLBAK
+	ldx #$0C ; 12 (spr=-36)
+	ldx #$0C ; 12 (spr=-36)
 	sty COLPM1
-	stx COLOR0
+	stx COLOR1
 	sty COLOR0
+	ldy #$01 ; 1 (spr=-47)
 	ldx #$32 ; 50 (spr=2)
-	ldy #$00 ; 0 (spr=-48)
 	stx COLBAK
 	nop 
 	sty COLOR0
+	nop 
 	sta COLBAK
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line157
 	nop 
+	nop 
 	stx COLPM1
-	ldy #$30 ; 48 (spr=0)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$94 ; 148 (spr=100)
+	nop 
 	sta COLBAK
-	ldy #$F8 ; 248 (spr=200)
+	ldx #$94 ; 148 (spr=100)
+	ldy #$00 ; 0 (spr=-48)
 	stx COLPM1
+	ldy #$33 ; 51 (spr=3)
 	ldy #$0C ; 12 (spr=-36)
 	sta COLPM1
-	ldy #$06 ; 6 (spr=-42)
 	ldy #$0E ; 14 (spr=-34)
-	lda #$33 ; 51 (spr=3)
+	lda #$32 ; 50 (spr=2)
 	sty COLBAK
 	sta COLBAK
-	ldy #$32 ; 50 (spr=2)
-	ldy #$06 ; 6 (spr=-42)
-	lda #$00 ; 0 (spr=-48)
-	nop 
 	ldx #$57 ; 87 (spr=39)
+	ldy #$08 ; 8 (spr=-40)
+	lda #$32 ; 50 (spr=2)
+	lda #$36 ; 54 (spr=6)
+	lda #$5E ; 94 (spr=46)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line158
 	stx HPOSP3
-	nop 
-	sty COLPM2
+	lda #$6E ; 110 (spr=62)
+	sty COLOR1
 	stx HPOSP1
-	lda #$90 ; 144 (spr=96)
-	nop 
-	ldx #$32 ; 50 (spr=2)
-	nop 
-	ldy #$22 ; 34 (spr=-14)
-	sta COLOR0
+	sta COLPM2
 	ldy #$07 ; 7 (spr=-41)
+	lda #$0C ; 12 (spr=-36)
+	ldx #$32 ; 50 (spr=2)
+	sta COLOR1
 	lda #$00 ; 0 (spr=-48)
 	sty COLOR0
 	nop 
-	ldy #$34 ; 52 (spr=4)
+	lda #$01 ; 1 (spr=-47)
 	sta COLOR1
-	lda #$2B ; 43 (spr=-5)
+	lda #$2A ; 42 (spr=-6)
+	ldy #$34 ; 52 (spr=4)
 	sta COLBAK
 	ldy #$87 ; 135 (spr=87)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line159
 	stx COLOR0
-	lda #$36 ; 54 (spr=6)
-	ldx #$32 ; 50 (spr=2)
-	nop 
+	lda #$37 ; 55 (spr=7)
 	sta COLPM2
-	ldx #$46 ; 70 (spr=22)
-	ldx #$01 ; 1 (spr=-47)
+	nop 
+	nop 
+	ldx #$C4 ; 196 (spr=148)
+	ldx #$00 ; 0 (spr=-48)
 	ldx #$06 ; 6 (spr=-42)
 	stx COLOR0
 	ldx #$92 ; 146 (spr=98)
@@ -3748,1910 +3624,1816 @@ line159
 	stx COLPM1
 	sta COLPM0
 	sta COLOR2
-	lda #$33 ; 51 (spr=3)
 	sty HPOSP1
 	ldx #$74 ; 116 (spr=68)
-	nop 
+	ldy #$86 ; 134 (spr=86)
+	lda #$32 ; 50 (spr=2)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line160
 	sta COLBAK
+	ldy #$36 ; 54 (spr=6)
+	lda #$90 ; 144 (spr=96)
+	sta HPOSP2
 	stx HPOSP2
-	sta COLPM2
-	nop 
 	lda #$38 ; 56 (spr=8)
 	sta COLPM2
-	nop 
-	nop 
-	lda #$30 ; 48 (spr=0)
+	ldy #$86 ; 134 (spr=86)
 	sty COLOR1
 	ldy #$36 ; 54 (spr=6)
-	nop 
 	sty COLPM2
+	lda #$30 ; 48 (spr=0)
 	ldy #$00 ; 0 (spr=-48)
+	ldx #$32 ; 50 (spr=2)
 	sty COLOR2
-	ldy #$32 ; 50 (spr=2)
 	sta COLBAK
 	ldx #$98 ; 152 (spr=104)
+	lda #$32 ; 50 (spr=2)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line161
-	sty COLOR1
-	ldy #$90 ; 144 (spr=96)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$90 ; 144 (spr=96)
-	nop 
-	stx HPOSP0
+	sta COLOR1
+	lda #$7A ; 122 (spr=74)
+	ldy #$24 ; 36 (spr=-12)
+	ldy #$00 ; 0 (spr=-48)
 	stx COLPM3
+	stx HPOSP0
+	ldy #$90 ; 144 (spr=96)
 	sty COLOR1
 	stx COLOR2
-	lda #$33 ; 51 (spr=3)
-	ldx #$27 ; 39 (spr=-9)
-	nop 
+	ldy #$32 ; 50 (spr=2)
+	ldx #$28 ; 40 (spr=-8)
+	sty COLOR1
+	sta COLOR2
 	ldy #$00 ; 0 (spr=-48)
-	sta COLOR1
 	sty COLOR2
 	stx COLPM0
-	ldy #$9A ; 154 (spr=106)
-	nop ; filler
+	lda #$48 ; 72 (spr=24)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line162
-	nop 
-	lda #$36 ; 54 (spr=6)
-	lda #$F8 ; 248 (spr=200)
-	nop 
-	ldx #$34 ; 52 (spr=4)
-	lda #$56 ; 86 (spr=38)
+	ldx #$42 ; 66 (spr=18)
+	lda #$4E ; 78 (spr=30)
 	sta HPOSP0
 	nop 
+	lda #$30 ; 48 (spr=0)
+	lda #$37 ; 55 (spr=7)
+	ldy #$9A ; 154 (spr=106)
+	ldx #$34 ; 52 (spr=4)
 	ldx #$91 ; 145 (spr=97)
 	stx COLOR1
-	ldx #$36 ; 54 (spr=6)
 	sty COLOR2
+	ldx #$36 ; 54 (spr=6)
 	stx COLOR2
-	ldy #$01 ; 1 (spr=-47)
+	sta COLPM0
+	ldy #$00 ; 0 (spr=-48)
+	sty COLOR2
 	sty COLOR1
-	lda #$90 ; 144 (spr=96)
-	nop 
-	ldy #$90 ; 144 (spr=96)
-	lda #$08 ; 8 (spr=-40)
-	nop 
-	lda #$0F ; 15 (spr=-33)
+	ldx #$9A ; 154 (spr=106)
+	ldy #$92 ; 146 (spr=98)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line163
-	lda #$00 ; 0 (spr=-48)
-	lda #$36 ; 54 (spr=6)
-	nop 
-	ldx #$9B ; 155 (spr=107)
-	sty HPOSP0
 	sta COLPM2
-	sta COLPM0
+	sty COLOR2
+	sty COLOR2
+	ldy #$90 ; 144 (spr=96)
+	lda #$33 ; 51 (spr=3)
+	sta COLOR2
+	sty HPOSP0
 	stx COLOR2
-	lda #$00 ; 0 (spr=-48)
-	nop 
 	sty COLOR1
-	ldy #$32 ; 50 (spr=2)
-	sty COLOR2
+	sta COLOR2
+	nop 
 	ldy #$00 ; 0 (spr=-48)
-	lda #$36 ; 54 (spr=6)
 	sty COLOR2
-	ldy #$36 ; 54 (spr=6)
-	lda #$10 ; 16 (spr=-32)
+	ldy #$30 ; 48 (spr=0)
+	ldy #$92 ; 146 (spr=98)
+	ldy #$88 ; 136 (spr=88)
 	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line164
+	ldy #$96 ; 150 (spr=102)
 	nop 
 	nop 
-	lda #$2C ; 44 (spr=-4)
-	lda #$10 ; 16 (spr=-32)
-	ldy #$B2 ; 178 (spr=130)
-	nop 
+	ldy #$94 ; 148 (spr=100)
+	ldy #$30 ; 48 (spr=0)
+	ldy #$30 ; 48 (spr=0)
 	ldy #$90 ; 144 (spr=96)
-	lda #$33 ; 51 (spr=3)
+	ldy #$90 ; 144 (spr=96)
 	sta COLOR1
 	sty COLOR1
-	ldy #$01 ; 1 (spr=-47)
 	nop 
 	stx COLOR2
 	sta COLOR2
+	ldy #$A1 ; 161 (spr=113)
+	ldy #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$36 ; 54 (spr=6)
-	nop 
+	ldy #$00 ; 0 (spr=-48)
 	sty COLOR2
-	ldy #$36 ; 54 (spr=6)
+	ldy #$3E ; 62 (spr=14)
 	ldx #$28 ; 40 (spr=-8)
-	lda #$00 ; 0 (spr=-48)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line165
-	sty COLOR1
-	lda #$36 ; 54 (spr=6)
-	lda #$35 ; 53 (spr=5)
-	ldy #$2F ; 47 (spr=-1)
+	lda #$0C ; 12 (spr=-36)
+	lda #$34 ; 52 (spr=4)
+	ldy #$94 ; 148 (spr=100)
+	sty COLPM1
 	sta COLOR1
-	ldy #$90 ; 144 (spr=96)
-	ldy #$90 ; 144 (spr=96)
+	ldy #$98 ; 152 (spr=104)
+	ldy #$91 ; 145 (spr=97)
 	stx COLBAK
 	sty COLOR1
+	ldy #$36 ; 54 (spr=6)
 	nop 
-	ldy #$30 ; 48 (spr=0)
-	ldx #$26 ; 38 (spr=-10)
+	ldy #$31 ; 49 (spr=1)
 	sty COLBAK
 	sta COLOR1
+	ldy #$36 ; 54 (spr=6)
 	lda #$2B ; 43 (spr=-5)
-	ldy #$96 ; 150 (spr=102)
 	sta COLOR0
-	lda #$00 ; 0 (spr=-48)
-	nop ; filler
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$96 ; 150 (spr=102)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line166
-	sta COLOR2
-	sty COLPM1
 	lda #$92 ; 146 (spr=98)
 	sta HPOSP0
-	lda #$40 ; 64 (spr=16)
-	lda #$35 ; 53 (spr=5)
-	lda #$90 ; 144 (spr=96)
-	sta COLOR0
-	lda #$2A ; 42 (spr=-6)
-	ldy #$08 ; 8 (spr=-40)
-	sty COLOR2
-	ldx #$08 ; 8 (spr=-40)
-	sta COLOR0
+	ldx #$44 ; 68 (spr=20)
+	nop 
 	lda #$00 ; 0 (spr=-48)
+	sty COLPM1
+	lda #$91 ; 145 (spr=97)
+	ldy #$08 ; 8 (spr=-40)
+	sta COLOR0
+	lda #$82 ; 130 (spr=82)
 	sta COLOR2
-	ldx #$00 ; 0 (spr=-48)
-	lda #$36 ; 54 (spr=6)
-	lda #$36 ; 54 (spr=6)
+	lda #$2A ; 42 (spr=-6)
+	sty COLOR2
+	sta COLOR0
+	lda #$01 ; 1 (spr=-47)
+	sta COLOR2
+	lda #$2B ; 43 (spr=-5)
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line167
+	lda #$30 ; 48 (spr=0)
 	nop 
-	ldx #$0F ; 15 (spr=-33)
-	lda #$1A ; 26 (spr=-22)
-	nop 
-	ldx #$CC ; 204 (spr=156)
 	ldx #$00 ; 0 (spr=-48)
 	lda #$36 ; 54 (spr=6)
-	lda #$46 ; 70 (spr=22)
-	lda #$F0 ; 240 (spr=192)
+	nop 
+	lda #$90 ; 144 (spr=96)
+	ldx #$35 ; 53 (spr=5)
+	lda #$00 ; 0 (spr=-48)
+	nop 
 	lda #$90 ; 144 (spr=96)
 	sta COLOR0
-	nop 
+	lda #$44 ; 68 (spr=20)
 	sty COLOR2
 	ldy #$33 ; 51 (spr=3)
 	lda #$2B ; 43 (spr=-5)
 	sta COLOR0
-	lda #$01 ; 1 (spr=-47)
+	lda #$00 ; 0 (spr=-48)
 	sta COLOR2
 	sty COLBAK
-	ldy #$95 ; 149 (spr=101)
+	ldy #$94 ; 148 (spr=100)
 	lda #$91 ; 145 (spr=97)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line168
 	sty COLPM1
-	ldx #$26 ; 38 (spr=-10)
-	ldy #$36 ; 54 (spr=6)
-	nop 
+	ldx #$30 ; 48 (spr=0)
+	ldx #$34 ; 52 (spr=4)
+	ldx #$36 ; 54 (spr=6)
+	ldx #$91 ; 145 (spr=97)
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$46 ; 70 (spr=22)
-	ldy #$33 ; 51 (spr=3)
+	nop 
+	ldy #$00 ; 0 (spr=-48)
 	ldy #$09 ; 9 (spr=-39)
-	ldx #$28 ; 40 (spr=-8)
 	sta COLOR0
 	sty COLOR2
 	ldy #$30 ; 48 (spr=0)
 	lda #$2A ; 42 (spr=-6)
 	sta COLOR0
 	lda #$00 ; 0 (spr=-48)
+	sty COLOR2
 	sta COLOR2
 	sty COLBAK
-	ldy #$A4 ; 164 (spr=116)
-	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line169
-	lda #$91 ; 145 (spr=97)
-	ldy #$36 ; 54 (spr=6)
-	ldy #$92 ; 146 (spr=98)
-	ldy #$34 ; 52 (spr=4)
+	nop 
+	ldy #$30 ; 48 (spr=0)
+	ldx #$36 ; 54 (spr=6)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
 	ldx #$8E ; 142 (spr=94)
-	ldy #$36 ; 54 (spr=6)
 	nop 
 	nop 
-	ldy #$36 ; 54 (spr=6)
-	nop 
-	ldy #$06 ; 6 (spr=-42)
+	lda #$01 ; 1 (spr=-47)
+	lda #$90 ; 144 (spr=96)
 	sta COLOR0
+	lda #$29 ; 41 (spr=-7)
+	ldy #$07 ; 7 (spr=-41)
 	sty COLOR2
-	lda #$28 ; 40 (spr=-8)
 	sta COLOR0
 	lda #$00 ; 0 (spr=-48)
 	sta COLOR2
-	ldy #$27 ; 39 (spr=-9)
-	ldy #$36 ; 54 (spr=6)
-	ldy #$40 ; 64 (spr=16)
-	stx COLOR2
+	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldy #$30 ; 48 (spr=0)
+	nop 
+	ldy #$93 ; 147 (spr=99)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line170
 	sta HPOSP0
-	ldy #$30 ; 48 (spr=0)
 	stx HPOSP0
-	ldy #$91 ; 145 (spr=97)
+	ldx #$05 ; 5 (spr=-43)
+	nop 
+	nop 
 	sta COLOR2
-	ldx #$04 ; 4 (spr=-44)
-	nop 
+	ldy #$24 ; 36 (spr=-12)
 	stx COLPM3
-	nop 
 	ldx #$06 ; 6 (spr=-42)
+	ldy #$90 ; 144 (spr=96)
 	sty COLOR2
 	stx COLOR2
-	lda #$00 ; 0 (spr=-48)
+	nop 
+	sty COLOR0
 	sta COLOR2
-	ldy #$92 ; 146 (spr=98)
-	lda #$90 ; 144 (spr=96)
-	lda #$90 ; 144 (spr=96)
+	ldy #$93 ; 147 (spr=99)
 	sty COLPM1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line171
+	nop 
+	lda #$90 ; 144 (spr=96)
+	nop 
+	nop 
+	ldy #$10 ; 16 (spr=-32)
+	sta COLPM3
+	lda #$F0 ; 240 (spr=192)
 	stx COLPM3
-	ldy #$FF ; 255 (spr=207)
 	ldy #$36 ; 54 (spr=6)
-	ldy #$34 ; 52 (spr=4)
-	sta COLOR0
-	nop 
-	lda #$00 ; 0 (spr=-48)
-	lda #$06 ; 6 (spr=-42)
 	ldy #$94 ; 148 (spr=100)
-	nop 
-	lda #$30 ; 48 (spr=0)
+	lda #$00 ; 0 (spr=-48)
 	sty COLOR2
 	stx COLOR2
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	sty COLOR2
-	lda #$10 ; 16 (spr=-32)
-	ldy #$0F ; 15 (spr=-33)
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	ldy #$36 ; 54 (spr=6)
+	ldx #$E1 ; 225 (spr=177)
+	ldy #$09 ; 9 (spr=-39)
+	stx COLOR2
+	sta COLOR2
+	sty COLPM3
+	ldx #$41 ; 65 (spr=17)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line172
-	ldy #$35 ; 53 (spr=5)
-	ldx #$30 ; 48 (spr=0)
-	ldy #$0F ; 15 (spr=-33)
-	ldx #$6A ; 106 (spr=58)
 	ldy #$96 ; 150 (spr=102)
-	lda #$34 ; 52 (spr=4)
-	lda #$90 ; 144 (spr=96)
+	stx COLBAK
+	ldx #$31 ; 49 (spr=1)
+	ldx #$31 ; 49 (spr=1)
 	nop 
-	stx COLOR0
-	sta COLOR0
-	lda #$06 ; 6 (spr=-42)
+	nop 
+	nop 
+	stx COLBAK
+	ldx #$20 ; 32 (spr=-16)
 	sty COLOR2
-	ldy #$35 ; 53 (spr=5)
-	ldy #$00 ; 0 (spr=-48)
-	sta COLOR2
-	sty COLOR2
-	ldx #$21 ; 33 (spr=-15)
+	ldy #$06 ; 6 (spr=-42)
 	ldy #$36 ; 54 (spr=6)
-	lda #$36 ; 54 (spr=6)
-	nop 
+	ldy #$08 ; 8 (spr=-40)
+	ldx #$40 ; 64 (spr=16)
+	sty COLOR2
+	stx COLOR2
+	sta COLOR2
+	sty COLPM3
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line173
-	ldy #$35 ; 53 (spr=5)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$0F ; 15 (spr=-33)
-	ldx #$6A ; 106 (spr=58)
 	ldy #$96 ; 150 (spr=102)
-	lda #$34 ; 52 (spr=4)
-	lda #$90 ; 144 (spr=96)
+	stx COLBAK
+	ldx #$30 ; 48 (spr=0)
+	ldx #$31 ; 49 (spr=1)
 	nop 
-	stx COLOR0
-	sta COLOR0
 	nop 
-	lda #$06 ; 6 (spr=-42)
+	nop 
+	stx COLBAK
+	ldx #$20 ; 32 (spr=-16)
 	sty COLOR2
-	ldy #$35 ; 53 (spr=5)
-	ldy #$00 ; 0 (spr=-48)
-	sta COLOR2
-	sty COLOR2
-	ldx #$21 ; 33 (spr=-15)
+	ldy #$06 ; 6 (spr=-42)
 	ldy #$36 ; 54 (spr=6)
-	lda #$36 ; 54 (spr=6)
-	nop 
+	ldy #$08 ; 8 (spr=-40)
+	ldx #$40 ; 64 (spr=16)
+	sty COLOR2
+	stx COLOR2
+	sta COLOR2
+	ldy #$07 ; 7 (spr=-41)
+	sty COLPM3
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line174
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$30 ; 48 (spr=0)
-	ldy #$F0 ; 240 (spr=192)
-	ldx #$06 ; 6 (spr=-42)
+	ldx #$36 ; 54 (spr=6)
+	ldx #$40 ; 64 (spr=16)
+	stx COLBAK
 	lda #$36 ; 54 (spr=6)
-	lda #$34 ; 52 (spr=4)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$06 ; 6 (spr=-42)
-	nop 
+	lda #$90 ; 144 (spr=96)
 	ldy #$99 ; 153 (spr=105)
+	lda #$30 ; 48 (spr=0)
+	sta COLBAK
+	lda #$90 ; 144 (spr=96)
+	lda #$06 ; 6 (spr=-42)
+	sty COLOR2
+	sty COLOR2
+	ldy #$00 ; 0 (spr=-48)
+	sta COLOR2
 	stx COLOR2
 	sty COLOR2
-	ldy #$01 ; 1 (spr=-47)
-	sta COLOR2
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR2
-	lda #$01 ; 1 (spr=-47)
-	ldy #$00 ; 0 (spr=-48)
-	sty COLOR2
+	ldx #$FF ; 255 (spr=207)
+	ldx #$51 ; 81 (spr=33)
+	ldx #$30 ; 48 (spr=0)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line175
-	ldy #$32 ; 50 (spr=2)
-	ldx #$30 ; 48 (spr=0)
-	lda #$30 ; 48 (spr=0)
-	ldy #$92 ; 146 (spr=98)
-	lda #$34 ; 52 (spr=4)
-	lda #$26 ; 38 (spr=-10)
-	lda #$34 ; 52 (spr=4)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$00 ; 0 (spr=-48)
+	ldx #$36 ; 54 (spr=6)
+	ldx #$40 ; 64 (spr=16)
+	stx COLBAK
+	lda #$36 ; 54 (spr=6)
+	lda #$90 ; 144 (spr=96)
 	ldy #$98 ; 152 (spr=104)
-	nop 
-	stx COLOR2
+	lda #$30 ; 48 (spr=0)
+	sta COLBAK
+	lda #$90 ; 144 (spr=96)
 	lda #$06 ; 6 (spr=-42)
 	sty COLOR2
-	ldy #$01 ; 1 (spr=-47)
-	sta COLOR2
-	ldx #$90 ; 144 (spr=96)
 	sty COLOR2
-	ldy #$F0 ; 240 (spr=192)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$01 ; 1 (spr=-47)
+	ldy #$00 ; 0 (spr=-48)
+	sta COLOR2
+	stx COLOR2
+	sty COLOR2
+	ldx #$51 ; 81 (spr=33)
+	ldx #$40 ; 64 (spr=16)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line176
-	lda #$26 ; 38 (spr=-10)
-	ldx #$30 ; 48 (spr=0)
-	lda #$30 ; 48 (spr=0)
-	ldy #$92 ; 146 (spr=98)
-	lda #$34 ; 52 (spr=4)
-	ldy #$32 ; 50 (spr=2)
-	lda #$34 ; 52 (spr=4)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$00 ; 0 (spr=-48)
+	ldy #$14 ; 20 (spr=-28)
+	ldx #$36 ; 54 (spr=6)
+	ldx #$40 ; 64 (spr=16)
+	stx COLBAK
+	ldx #$38 ; 56 (spr=8)
 	ldy #$98 ; 152 (spr=104)
-	nop 
-	stx COLOR2
+	lda #$30 ; 48 (spr=0)
+	sta COLBAK
+	lda #$91 ; 145 (spr=97)
 	lda #$06 ; 6 (spr=-42)
+	stx COLOR2
 	sty COLOR2
 	ldy #$01 ; 1 (spr=-47)
 	sta COLOR2
-	ldx #$90 ; 144 (spr=96)
 	sty COLOR2
-	ldy #$F0 ; 240 (spr=192)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$01 ; 1 (spr=-47)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$41 ; 65 (spr=17)
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line177
-	ldy #$32 ; 50 (spr=2)
-	ldx #$30 ; 48 (spr=0)
-	lda #$30 ; 48 (spr=0)
-	ldy #$92 ; 146 (spr=98)
-	lda #$34 ; 52 (spr=4)
-	lda #$26 ; 38 (spr=-10)
-	lda #$34 ; 52 (spr=4)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$98 ; 152 (spr=104)
+	sty COLOR2
 	nop 
+	ldy #$30 ; 48 (spr=0)
+	nop 
+	ldy #$35 ; 53 (spr=5)
+	ldy #$98 ; 152 (spr=104)
+	ldx #$23 ; 35 (spr=-13)
+	ldx #$32 ; 50 (spr=2)
+	ldx #$39 ; 57 (spr=9)
+	sty COLPM3
 	stx COLOR2
-	lda #$06 ; 6 (spr=-42)
 	sty COLOR2
-	ldy #$01 ; 1 (spr=-47)
+	ldy #$00 ; 0 (spr=-48)
 	sta COLOR2
-	ldx #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$30 ; 48 (spr=0)
 	sty COLOR2
-	ldy #$F0 ; 240 (spr=192)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$01 ; 1 (spr=-47)
+	nop 
+	sta COLPM3
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line178
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$30 ; 48 (spr=0)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$F0 ; 240 (spr=192)
-	lda #$36 ; 54 (spr=6)
-	lda #$34 ; 52 (spr=4)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$06 ; 6 (spr=-42)
-	nop 
-	ldy #$99 ; 153 (spr=105)
+	ldy #$20 ; 32 (spr=-16)
+	ldx #$36 ; 54 (spr=6)
+	ldx #$41 ; 65 (spr=17)
+	stx COLBAK
+	ldx #$38 ; 56 (spr=8)
+	lda #$31 ; 49 (spr=1)
+	ldy #$08 ; 8 (spr=-40)
+	sta COLBAK
+	sta COLBAK
 	stx COLOR2
+	lda #$06 ; 6 (spr=-42)
 	sty COLOR2
-	ldy #$01 ; 1 (spr=-47)
-	sta COLOR2
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR2
-	lda #$01 ; 1 (spr=-47)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
+	lda #$41 ; 65 (spr=17)
 	ldy #$00 ; 0 (spr=-48)
+	sta COLOR2
+	sty COLOR2
+	stx COLBAK
+	lda #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line179
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$30 ; 48 (spr=0)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$F0 ; 240 (spr=192)
-	lda #$36 ; 54 (spr=6)
-	lda #$34 ; 52 (spr=4)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$06 ; 6 (spr=-42)
+	lda #$30 ; 48 (spr=0)
+	ldy #$9A ; 154 (spr=106)
+	ldx #$41 ; 65 (spr=17)
+	stx COLBAK
+	ldx #$37 ; 55 (spr=7)
+	ldx #$A0 ; 160 (spr=112)
 	nop 
-	ldy #$99 ; 153 (spr=105)
+	sta COLBAK
+	ldx #$38 ; 56 (spr=8)
+	lda #$06 ; 6 (spr=-42)
 	stx COLOR2
 	sty COLOR2
-	ldy #$01 ; 1 (spr=-47)
+	ldy #$90 ; 144 (spr=96)
 	sta COLOR2
-	lda #$00 ; 0 (spr=-48)
+	ldy #$01 ; 1 (spr=-47)
 	sty COLOR2
-	lda #$01 ; 1 (spr=-47)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
 	lda #$00 ; 0 (spr=-48)
+	ldx #$41 ; 65 (spr=17)
+	ldx #$90 ; 144 (spr=96)
+	ldx #$41 ; 65 (spr=17)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line180
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$30 ; 48 (spr=0)
 	ldx #$90 ; 144 (spr=96)
-	ldy #$F0 ; 240 (spr=192)
-	lda #$36 ; 54 (spr=6)
-	lda #$34 ; 52 (spr=4)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$39 ; 57 (spr=9)
-	lda #$20 ; 32 (spr=-16)
-	lda #$06 ; 6 (spr=-42)
-	nop 
 	ldy #$99 ; 153 (spr=105)
+	lda #$F0 ; 240 (spr=192)
+	ldx #$41 ; 65 (spr=17)
+	stx COLBAK
+	lda #$31 ; 49 (spr=1)
+	ldx #$38 ; 56 (spr=8)
+	sta COLBAK
+	lda #$92 ; 146 (spr=98)
+	nop 
+	stx COLOR2
+	lda #$06 ; 6 (spr=-42)
+	sty COLOR2
+	ldy #$92 ; 146 (spr=98)
+	sta COLOR2
+	ldy #$01 ; 1 (spr=-47)
+	sty COLOR2
+	lda #$10 ; 16 (spr=-32)
+	ldx #$31 ; 49 (spr=1)
+	ldx #$00 ; 0 (spr=-48)
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line181
+	ldx #$45 ; 69 (spr=21)
+	lda #$30 ; 48 (spr=0)
+	ldy #$99 ; 153 (spr=105)
+	ldx #$41 ; 65 (spr=17)
+	stx COLBAK
+	lda #$31 ; 49 (spr=1)
+	ldx #$39 ; 57 (spr=9)
+	sta COLBAK
+	nop 
+	lda #$11 ; 17 (spr=-31)
 	stx COLOR2
 	sty COLOR2
 	ldy #$01 ; 1 (spr=-47)
 	sta COLOR2
-	lda #$00 ; 0 (spr=-48)
 	sty COLOR2
-	lda #$01 ; 1 (spr=-47)
+	lda #$91 ; 145 (spr=97)
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line181
-	lda #$16 ; 22 (spr=-26)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	ldx #$38 ; 56 (spr=8)
-	lda #$30 ; 48 (spr=0)
-	lda #$34 ; 52 (spr=4)
-	lda #$00 ; 0 (spr=-48)
-	lda #$E0 ; 224 (spr=176)
-	nop 
-	ldy #$98 ; 152 (spr=104)
-	nop 
-	stx COLOR2
-	sty COLOR2
-	ldy #$30 ; 48 (spr=0)
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR2
-	sta COLOR2
-	nop 
-	ldx #$38 ; 56 (spr=8)
+	ldx #$90 ; 144 (spr=96)
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line182
 	nop 
-	ldy #$36 ; 54 (spr=6)
+	sta COLOR0
+	ldy #$40 ; 64 (spr=16)
 	nop 
-	lda #$32 ; 50 (spr=2)
+	nop 
+	nop 
+	ldx #$EF ; 239 (spr=191)
+	ldx #$39 ; 57 (spr=9)
 	ldy #$06 ; 6 (spr=-42)
 	nop 
-	ldx #$38 ; 56 (spr=8)
-	lda #$36 ; 54 (spr=6)
-	lda #$90 ; 144 (spr=96)
-	nop 
-	nop 
 	stx COLOR2
-	ldx #$8F ; 143 (spr=95)
+	ldx #$41 ; 65 (spr=17)
 	sty COLOR2
-	ldx #$36 ; 54 (spr=6)
 	ldy #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
+	sta HPOSP0
 	stx COLOR0
 	sty COLOR2
-	ldx #$04 ; 4 (spr=-44)
-	ldx #$94 ; 148 (spr=100)
-	ldy #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$41 ; 65 (spr=17)
+	ldx #$41 ; 65 (spr=17)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line183
-	ldy #$98 ; 152 (spr=104)
-	ldx #$92 ; 146 (spr=98)
-	ldx #$DE ; 222 (spr=174)
-	ldx #$9F ; 159 (spr=111)
+	ldx #$37 ; 55 (spr=7)
+	nop 
 	ldx #$36 ; 54 (spr=6)
-	nop 
-	nop 
-	nop 
+	stx COLPM0
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$99 ; 153 (spr=105)
+	ldx #$36 ; 54 (spr=6)
 	stx COLOR0
 	sta COLOR0
-	nop 
+	sty COLOR2
+	ldy #$30 ; 48 (spr=0)
+	ldy #$31 ; 49 (spr=1)
+	ldy #$33 ; 51 (spr=3)
 	sty COLOR2
 	ldy #$00 ; 0 (spr=-48)
-	ldx #$06 ; 6 (spr=-42)
 	sty COLOR2
 	ldx #$41 ; 65 (spr=17)
-	nop 
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop ; filler
-	nop ; filler
+	ldy #$46 ; 70 (spr=22)
+	ldy #$48 ; 72 (spr=24)
+	ldy #$01 ; 1 (spr=-47)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line184
-	ldy #$00 ; 0 (spr=-48)
-	sty COLOR0
-	ldy #$32 ; 50 (spr=2)
-	nop 
-	ldy #$2A ; 42 (spr=-6)
+	ldy #$8E ; 142 (spr=94)
 	stx COLOR0
+	sty HPOSP0
+	ldy #$34 ; 52 (spr=4)
+	ldy #$31 ; 49 (spr=1)
+	ldy #$92 ; 146 (spr=98)
 	ldy #$98 ; 152 (spr=104)
 	sta COLOR0
 	lda #$04 ; 4 (spr=-44)
 	sty COLOR2
-	ldy #$00 ; 0 (spr=-48)
+	ldy #$01 ; 1 (spr=-47)
 	sta COLPM3
 	sta COLOR2
 	sty COLOR2
 	stx COLOR0
-	nop 
-	lda #$A9 ; 169 (spr=121)
-	nop 
+	lda #$30 ; 48 (spr=0)
+	ldx #$90 ; 144 (spr=96)
+	lda #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line185
+	lda #$00 ; 0 (spr=-48)
+	lda #$EC ; 236 (spr=188)
 	nop 
-	ldy #$26 ; 38 (spr=-10)
-	ldx #$36 ; 54 (spr=6)
-	ldx #$30 ; 48 (spr=0)
+	ldx #$33 ; 51 (spr=3)
 	lda #$90 ; 144 (spr=96)
 	nop 
-	ldx #$36 ; 54 (spr=6)
-	ldy #$40 ; 64 (spr=16)
+	ldx #$37 ; 55 (spr=7)
+	nop 
 	stx COLOR0
 	sta COLOR0
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
+	ldy #$35 ; 53 (spr=5)
 	lda #$33 ; 51 (spr=3)
-	sty HPOSP0
-	sta COLOR0
+	nop 
+	ldy #$40 ; 64 (spr=16)
 	ldx #$91 ; 145 (spr=97)
+	sta COLOR0
+	sty HPOSP0
 	stx COLOR0
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$31 ; 49 (spr=1)
-	nop ; filler
+	ldy #$32 ; 50 (spr=2)
+	ldx #$36 ; 54 (spr=6)
+	ldx #$41 ; 65 (spr=17)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line186
-	sta COLPM0
-	ldx #$91 ; 145 (spr=97)
-	ldx #$40 ; 64 (spr=16)
-	lda #$36 ; 54 (spr=6)
-	lda #$7C ; 124 (spr=76)
-	ldy #$00 ; 0 (spr=-48)
 	stx COLBAK
-	lda #$30 ; 48 (spr=0)
+	ldx #$40 ; 64 (spr=16)
+	ldy #$32 ; 50 (spr=2)
+	nop 
+	sta COLPM0
 	ldx #$39 ; 57 (spr=9)
+	ldy #$92 ; 146 (spr=98)
+	lda #$34 ; 52 (spr=4)
+	ldy #$33 ; 51 (spr=3)
 	stx COLOR2
-	ldx #$30 ; 48 (spr=0)
-	lda #$30 ; 48 (spr=0)
-	sty HPOSP1
 	lda #$83 ; 131 (spr=83)
-	stx COLOR2
+	ldx #$10 ; 16 (spr=-32)
+	nop 
 	sta HPOSP1
+	sty COLOR2
+	stx COLOR1
+	ldx #$00 ; 0 (spr=-48)
+	stx COLOR2
 	ldy #$40 ; 64 (spr=16)
-	ldx #$30 ; 48 (spr=0)
-	nop ; filler
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line187
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$31 ; 49 (spr=1)
-	ldx #$30 ; 48 (spr=0)
 	ldy #$30 ; 48 (spr=0)
-	ldx #$30 ; 48 (spr=0)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$E0 ; 224 (spr=176)
-	stx COLOR2
+	ldy #$34 ; 52 (spr=4)
 	sta COLOR2
 	stx COLOR2
-	nop 
+	ldy #$34 ; 52 (spr=4)
+	lda #$01 ; 1 (spr=-47)
+	ldx #$E0 ; 224 (spr=176)
+	sty COLOR1
+	stx COLOR2
 	ldx #$30 ; 48 (spr=0)
-	lda #$37 ; 55 (spr=7)
+	nop 
+	lda #$36 ; 54 (spr=6)
 	sta COLOR1
 	stx COLOR1
 	sta COLOR1
-	ldx #$30 ; 48 (spr=0)
-	sta COLPM2
-	ldy #$34 ; 52 (spr=4)
+	lda #$80 ; 128 (spr=80)
+	sta HPOSP2
+	lda #$01 ; 1 (spr=-47)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line188
-	sty COLPM2
-	sty COLPM2
 	stx COLPM0
-	lda #$34 ; 52 (spr=4)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$92 ; 146 (spr=98)
-	ldx #$34 ; 52 (spr=4)
+	sty COLPM2
+	sty COLPM2
+	ldx #$91 ; 145 (spr=97)
+	ldx #$E0 ; 224 (spr=176)
+	ldx #$D0 ; 208 (spr=160)
+	ldy #$93 ; 147 (spr=99)
 	nop 
-	nop 
+	ldx #$D0 ; 208 (spr=160)
 	sty COLPM3
-	ldy #$5F ; 95 (spr=47)
-	ldx #$98 ; 152 (spr=104)
+	ldx #$99 ; 153 (spr=105)
+	nop 
 	stx COLPM1
-	lda #$01 ; 1 (spr=-47)
 	sta COLOR1
 	lda #$40 ; 64 (spr=16)
 	sta COLPM2
-	lda #$01 ; 1 (spr=-47)
-	nop ; filler
+	ldx #$F0 ; 240 (spr=192)
+	ldy #$5F ; 95 (spr=47)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line189
-	lda #$40 ; 64 (spr=16)
-	lda #$40 ; 64 (spr=16)
 	nop 
+	lda #$AF ; 175 (spr=127)
+	lda #$36 ; 54 (spr=6)
+	ldx #$43 ; 67 (spr=19)
 	sty HPOSP2
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$32 ; 50 (spr=2)
-	lda #$34 ; 52 (spr=4)
-	lda #$37 ; 55 (spr=7)
+	ldy #$33 ; 51 (spr=3)
+	ldx #$E0 ; 224 (spr=176)
+	nop 
 	sty COLOR2
 	sta COLOR2
-	ldx #$E0 ; 224 (spr=176)
 	sty COLBAK
+	lda #$1F ; 31 (spr=-17)
 	nop 
-	lda #$41 ; 65 (spr=17)
+	lda #$40 ; 64 (spr=16)
 	stx COLOR2
-	ldx #$B9 ; 185 (spr=137)
 	sta COLBAK
+	ldx #$B9 ; 185 (spr=137)
 	stx HPOSP0
 	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line190
-	ldy #$90 ; 144 (spr=96)
 	nop 
-	nop 
+	ldx #$32 ; 50 (spr=2)
 	sta COLPM0
-	lda #$34 ; 52 (spr=4)
-	ldx #$92 ; 146 (spr=98)
-	ldy #$92 ; 146 (spr=98)
-	ldy #$32 ; 50 (spr=2)
 	sty COLOR2
+	ldy #$F1 ; 241 (spr=193)
+	ldx #$02 ; 2 (spr=-46)
+	sty COLBAK
 	stx COLPM1
-	ldx #$21 ; 33 (spr=-15)
-	ldy #$E0 ; 224 (spr=176)
-	ldy #$E0 ; 224 (spr=176)
+	lda #$35 ; 53 (spr=5)
+	ldx #$92 ; 146 (spr=98)
+	stx COLPM1
 	sta COLBAK
 	sty COLBAK
-	ldy #$40 ; 64 (spr=16)
-	lda #$36 ; 54 (spr=6)
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	ldx #$20 ; 32 (spr=-16)
+	lda #$34 ; 52 (spr=4)
+	sta HPOSP2
+	sta COLBAK
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line191
-	ldy #$90 ; 144 (spr=96)
-	lda #$E0 ; 224 (spr=176)
 	stx HPOSP2
-	ldx #$90 ; 144 (spr=96)
-	ldx #$C0 ; 192 (spr=144)
-	ldx #$00 ; 0 (spr=-48)
-	lda #$35 ; 53 (spr=5)
-	ldy #$94 ; 148 (spr=100)
-	sta COLBAK
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$26 ; 38 (spr=-10)
+	ldy #$E0 ; 224 (spr=176)
+	ldx #$33 ; 51 (spr=3)
+	ldy #$E0 ; 224 (spr=176)
 	nop 
-	ldy #$30 ; 48 (spr=0)
-	lda #$00 ; 0 (spr=-48)
-	sty COLOR1
+	ldx #$31 ; 49 (spr=1)
+	sty COLBAK
+	sta COLBAK
+	ldy #$44 ; 68 (spr=20)
+	ldy #$00 ; 0 (spr=-48)
+	sta COLBAK
+	nop 
+	nop 
 	stx COLOR1
-	lda #$40 ; 64 (spr=16)
-	ldy #$A0 ; 160 (spr=112)
-	ldy #$32 ; 50 (spr=2)
-	sty COLOR2
+	sty COLOR1
+	lda #$A0 ; 160 (spr=112)
+	nop 
+	ldx #$40 ; 64 (spr=16)
+	nop 
+	ldx #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line192
-	ldy #$00 ; 0 (spr=-48)
+	ldy #$04 ; 4 (spr=-44)
+	ldx #$91 ; 145 (spr=97)
+	ldy #$35 ; 53 (spr=5)
+	ldy #$93 ; 147 (spr=99)
 	nop 
-	ldy #$10 ; 16 (spr=-32)
-	ldy #$40 ; 64 (spr=16)
-	ldx #$C0 ; 192 (spr=144)
 	nop 
-	lda #$04 ; 4 (spr=-44)
-	lda #$02 ; 2 (spr=-46)
-	sta COLPM2
-	stx HPOSP2
-	ldx #$92 ; 146 (spr=98)
-	nop 
-	ldx #$81 ; 129 (spr=81)
-	ldy #$00 ; 0 (spr=-48)
 	lda #$90 ; 144 (spr=96)
+	lda #$03 ; 3 (spr=-45)
+	sta COLPM2
+	nop 
+	ldy #$50 ; 80 (spr=32)
+	lda #$40 ; 64 (spr=16)
 	ldy #$E0 ; 224 (spr=176)
+	ldx #$BA ; 186 (spr=138)
+	stx HPOSP2
+	nop 
 	nop 
 	sty COLOR2
 	ldy #$30 ; 48 (spr=0)
-	stx HPOSP1
-	ldx #$95 ; 149 (spr=101)
-	lda #$FF ; 255 (spr=207)
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line193
-	stx COLPM3
-	sty COLBAK
-	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
+	ldx #$94 ; 148 (spr=100)
 	lda #$82 ; 130 (spr=82)
 	nop 
 	nop 
-	ldy #$30 ; 48 (spr=0)
-	sta HPOSP3
-	ldy #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$96 ; 150 (spr=102)
-	sty COLPM3
-	ldy #$41 ; 65 (spr=17)
-	nop 
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line193
 	sty COLBAK
-	nop 
-	nop 
-	lda #$92 ; 146 (spr=98)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$30 ; 48 (spr=0)
+	ldy #$81 ; 129 (spr=81)
+	sty HPOSP1
+	ldy #$90 ; 144 (spr=96)
+	sta COLPM2
+	stx COLPM3
+	sta HPOSP3
+	lda #$90 ; 144 (spr=96)
+	lda #$00 ; 0 (spr=-48)
+	ldx #$40 ; 64 (spr=16)
+	ldy #$32 ; 50 (spr=2)
+	sty COLOR1
+	sta COLOR1
+	ldx #$40 ; 64 (spr=16)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line194
-	sta COLPM2
-	ldy #$80 ; 128 (spr=80)
 	nop 
-	ldx #$40 ; 64 (spr=16)
-	ldx #$00 ; 0 (spr=-48)
-	sty COLPM2
-	ldx #$92 ; 146 (spr=98)
 	stx COLBAK
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$40 ; 64 (spr=16)
-	lda #$00 ; 0 (spr=-48)
-	sty COLBAK
-	lda #$31 ; 49 (spr=1)
-	ldx #$35 ; 53 (spr=5)
+	ldx #$51 ; 81 (spr=33)
+	stx HPOSP1
+	ldy #$84 ; 132 (spr=84)
+	sta COLOR1
 	nop 
-	stx COLPM2
-	lda #$92 ; 146 (spr=98)
-	lda #$40 ; 64 (spr=16)
-	ldy #$2A ; 42 (spr=-6)
+	sty HPOSP1
+	ldy #$F0 ; 240 (spr=192)
+	ldx #$04 ; 4 (spr=-44)
 	ldy #$00 ; 0 (spr=-48)
-	lda #$92 ; 146 (spr=98)
+	ldy #$18 ; 24 (spr=-24)
+	lda #$0F ; 15 (spr=-33)
+	ldy #$90 ; 144 (spr=96)
+	sta COLPM2
+	ldy #$01 ; 1 (spr=-47)
+	ldy #$97 ; 151 (spr=103)
+	sty COLPM3
+	lda #$00 ; 0 (spr=-48)
+	ldx #$40 ; 64 (spr=16)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line195
-	nop 
-	lda #$90 ; 144 (spr=96)
-	ldy #$00 ; 0 (spr=-48)
-	stx COLOR0
-	ldx #$46 ; 70 (spr=22)
-	ldy #$44 ; 68 (spr=20)
 	ldy #$90 ; 144 (spr=96)
-	ldx #$F0 ; 240 (spr=192)
-	sty COLOR0
-	ldy #$3F ; 63 (spr=15)
-	ldx #$00 ; 0 (spr=-48)
 	ldy #$40 ; 64 (spr=16)
-	ldy #$32 ; 50 (spr=2)
-	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
+	ldx #$35 ; 53 (spr=5)
+	lda #$90 ; 144 (spr=96)
+	stx COLPM2
+	ldy #$91 ; 145 (spr=97)
+	stx COLOR0
 	sty COLOR0
-	ldy #$34 ; 52 (spr=4)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$33 ; 51 (spr=3)
 	nop 
+	nop 
+	lda #$92 ; 146 (spr=98)
+	nop 
+	sty COLOR0
 	ldx #$94 ; 148 (spr=100)
-	lda #$00 ; 0 (spr=-48)
-	lda #$36 ; 54 (spr=6)
-	ldy #$2A ; 42 (spr=-6)
-	lda #$10 ; 16 (spr=-32)
+	nop 
+	nop 
+	ldy #$40 ; 64 (spr=16)
+	ldy #$10 ; 16 (spr=-32)
+	nop 
+	ldy #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line196
 	lda #$00 ; 0 (spr=-48)
-	lda #$01 ; 1 (spr=-47)
-	ldy #$40 ; 64 (spr=16)
-	ldy #$91 ; 145 (spr=97)
-	sta COLOR1
-	lda #$90 ; 144 (spr=96)
 	lda #$E1 ; 225 (spr=177)
+	ldy #$10 ; 16 (spr=-32)
+	lda #$30 ; 48 (spr=0)
+	ldy #$92 ; 146 (spr=98)
+	nop 
+	ldy #$E0 ; 224 (spr=176)
+	ldy #$90 ; 144 (spr=96)
 	sty COLOR0
 	stx COLOR2
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$84 ; 132 (spr=84)
-	sty HPOSP1
+	ldy #$90 ; 144 (spr=96)
+	ldx #$33 ; 51 (spr=3)
+	ldy #$40 ; 64 (spr=16)
+	sty COLOR2
+	ldy #$40 ; 64 (spr=16)
 	sta COLOR2
-	lda #$00 ; 0 (spr=-48)
-	ldy #$9A ; 154 (spr=106)
-	nop 
-	ldy #$32 ; 50 (spr=2)
-	nop 
-	nop 
-	nop 
-	nop ; filler
+	stx COLOR2
+	ldx #$93 ; 147 (spr=99)
+	lda #$91 ; 145 (spr=97)
+	lda #$40 ; 64 (spr=16)
+	lda #$E0 ; 224 (spr=176)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line197
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$A0 ; 160 (spr=112)
-	lda #$D0 ; 208 (spr=160)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$92 ; 146 (spr=98)
-	nop 
-	nop 
-	ldx #$00 ; 0 (spr=-48)
-	nop 
-	sty COLBAK
+	sty COLPM0
 	lda #$E0 ; 224 (spr=176)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$40 ; 64 (spr=16)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
+	lda #$9F ; 159 (spr=111)
+	nop 
+	lda #$E0 ; 224 (spr=176)
+	sta COLOR2
+	ldy #$30 ; 48 (spr=0)
 	stx COLBAK
-	nop 
-	ldy #$01 ; 1 (spr=-47)
-	nop 
-	nop 
-	lda #$72 ; 114 (spr=66)
-	nop ; filler
-	nop ; filler
+	lda #$90 ; 144 (spr=96)
+	sty COLBAK
+	ldy #$92 ; 146 (spr=98)
+	sta COLOR0
+	ldy #$41 ; 65 (spr=17)
+	lda #$10 ; 16 (spr=-32)
+	sty COLBAK
+	ldx #$00 ; 0 (spr=-48)
+	lda #$90 ; 144 (spr=96)
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$3E ; 62 (spr=14)
+	lda #$90 ; 144 (spr=96)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line198
-	lda #$92 ; 146 (spr=98)
-	ldy #$BA ; 186 (spr=138)
+	ldx #$FF ; 255 (spr=207)
 	ldy #$92 ; 146 (spr=98)
-	ldx #$90 ; 144 (spr=96)
+	lda #$92 ; 146 (spr=98)
 	nop 
+	lda #$90 ; 144 (spr=96)
 	nop 
+	ldx #$92 ; 146 (spr=98)
+	lda #$72 ; 114 (spr=66)
+	stx COLBAK
 	nop 
-	nop 
+	ldy #$91 ; 145 (spr=97)
+	ldy #$40 ; 64 (spr=16)
+	sta HPOSP3
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$30 ; 48 (spr=0)
+	stx COLBAK
+	ldx #$92 ; 146 (spr=98)
 	sty COLBAK
 	nop 
-	lda #$72 ; 114 (spr=66)
-	ldy #$01 ; 1 (spr=-47)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$41 ; 65 (spr=17)
-	ldx #$F0 ; 240 (spr=192)
-	stx COLPM2
-	nop 
-	sta HPOSP3
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	nop ; filler
-	nop ; filler
+	ldy #$E0 ; 224 (spr=176)
+	lda #$90 ; 144 (spr=96)
+	ldy #$41 ; 65 (spr=17)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line199
-	lda #$91 ; 145 (spr=97)
-	ldx #$40 ; 64 (spr=16)
+	ldy #$00 ; 0 (spr=-48)
+	lda #$01 ; 1 (spr=-47)
+	ldy #$00 ; 0 (spr=-48)
 	nop 
-	lda #$00 ; 0 (spr=-48)
-	nop 
+	stx COLPM1
+	lda #$90 ; 144 (spr=96)
+	ldy #$30 ; 48 (spr=0)
 	stx COLBAK
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$01 ; 1 (spr=-47)
-	nop 
-	ldx #$32 ; 50 (spr=2)
-	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	nop 
-	lda #$34 ; 52 (spr=4)
-	stx COLOR0
-	nop 
-	nop 
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	sta COLOR0
-	nop 
+	ldy #$31 ; 49 (spr=1)
+	ldx #$40 ; 64 (spr=16)
+	ldx #$00 ; 0 (spr=-48)
+	sty COLBAK
+	ldy #$33 ; 51 (spr=3)
+	lda #$35 ; 53 (spr=5)
+	ldx #$40 ; 64 (spr=16)
+	sty COLOR0
+	ldy #$90 ; 144 (spr=96)
+	stx COLBAK
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line200
+	nop 
+	ldy #$3F ; 63 (spr=15)
+	sta COLOR0
+	ldy #$00 ; 0 (spr=-48)
 	ldx #$90 ; 144 (spr=96)
-	sta COLPM2
-	sta COLPM2
-	sta COLPM2
+	nop 
 	nop 
 	stx COLOR0
-	nop 
-	nop 
-	stx COLOR0
-	ldy #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$8E ; 142 (spr=94)
 	ldx #$90 ; 144 (spr=96)
+	ldy #$4E ; 78 (spr=30)
+	ldy #$10 ; 16 (spr=-32)
+	ldy #$30 ; 48 (spr=0)
 	ldx #$36 ; 54 (spr=6)
 	sty COLOR0
+	ldy #$E1 ; 225 (spr=177)
+	ldy #$2F ; 47 (spr=-1)
 	stx COLOR0
-	ldx #$E0 ; 224 (spr=176)
-	ldx #$38 ; 56 (spr=8)
 	sta COLOR0
-	lda #$00 ; 0 (spr=-48)
+	ldy #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line201
+	lda #$40 ; 64 (spr=16)
+	lda #$20 ; 32 (spr=-16)
+	lda #$90 ; 144 (spr=96)
+	ldx #$00 ; 0 (spr=-48)
+	ldx #$E8 ; 232 (spr=184)
+	ldy #$E1 ; 225 (spr=177)
+	nop 
+	nop 
+	sta COLOR0
+	ldx #$39 ; 57 (spr=9)
 	stx COLPM2
 	ldy #$90 ; 144 (spr=96)
-	ldx #$90 ; 144 (spr=96)
-	ldy #$40 ; 64 (spr=16)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	stx COLOR0
-	lda #$34 ; 52 (spr=4)
-	ldy #$10 ; 16 (spr=-32)
-	lda #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$90 ; 144 (spr=96)
-	ldx #$90 ; 144 (spr=96)
 	lda #$32 ; 50 (spr=2)
+	nop 
+	nop 
 	ldx #$90 ; 144 (spr=96)
 	sta COLOR0
-	nop 
-	ldx #$40 ; 64 (spr=16)
-	ldx #$38 ; 56 (spr=8)
+	lda #$35 ; 53 (spr=5)
+	sta COLOR0
+	lda #$36 ; 54 (spr=6)
 	stx COLOR0
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line202
-	ldx #$00 ; 0 (spr=-48)
-	lda #$37 ; 55 (spr=7)
-	sty COLOR0
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
 	nop 
+	ldy #$82 ; 130 (spr=82)
+	ldy #$A0 ; 160 (spr=112)
+	ldx #$F6 ; 246 (spr=198)
+	ldx #$95 ; 149 (spr=101)
+	ldy #$31 ; 49 (spr=1)
+	ldx #$A0 ; 160 (spr=112)
+	ldx #$F0 ; 240 (spr=192)
+	sty COLBAK
 	sta COLPM2
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
-	lda #$36 ; 54 (spr=6)
-	stx COLOR1
-	lda #$44 ; 68 (spr=20)
 	nop 
 	ldy #$00 ; 0 (spr=-48)
-	ldx #$90 ; 144 (spr=96)
-	ldx #$40 ; 64 (spr=16)
-	ldy #$30 ; 48 (spr=0)
-	lda #$96 ; 150 (spr=102)
+	nop 
+	nop 
+	nop 
+	lda #$90 ; 144 (spr=96)
+	lda #$00 ; 0 (spr=-48)
+	stx COLBAK
+	ldx #$E0 ; 224 (spr=176)
 	lda #$53 ; 83 (spr=35)
+	ldy #$36 ; 54 (spr=6)
 	sta HPOSP2
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line203
-	lda #$41 ; 65 (spr=17)
+	lda #$E0 ; 224 (spr=176)
+	lda #$93 ; 147 (spr=99)
 	stx COLPM2
+	sta COLPM2
+	lda #$00 ; 0 (spr=-48)
+	lda #$F0 ; 240 (spr=192)
 	ldx #$40 ; 64 (spr=16)
-	stx COLPM2
-	ldx #$00 ; 0 (spr=-48)
-	sta COLPM0
+	ldy #$30 ; 48 (spr=0)
+	stx COLBAK
+	lda #$32 ; 50 (spr=2)
+	ldx #$94 ; 148 (spr=100)
+	stx COLOR2
+	ldx #$E1 ; 225 (spr=177)
+	stx COLOR2
+	sta COLOR0
 	lda #$40 ; 64 (spr=16)
 	nop 
-	ldy #$F0 ; 240 (spr=192)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$32 ; 50 (spr=2)
-	nop 
-	sta COLOR0
-	ldx #$D1 ; 209 (spr=161)
-	ldx #$01 ; 1 (spr=-47)
-	nop 
-	ldx #$90 ; 144 (spr=96)
-	ldy #$40 ; 64 (spr=16)
-	ldx #$90 ; 144 (spr=96)
+	sta COLPM2
+	ldx #$3F ; 63 (spr=15)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line204
+	sty COLBAK
+	nop 
+	ldx #$F0 ; 240 (spr=192)
+	sta COLBAK
+	lda #$91 ; 145 (spr=97)
 	stx COLOR0
-	ldy #$40 ; 64 (spr=16)
-	ldx #$91 ; 145 (spr=97)
-	ldx #$E0 ; 224 (spr=176)
+	sta COLOR0
+	nop 
+	lda #$93 ; 147 (spr=99)
+	ldx #$02 ; 2 (spr=-46)
+	sta COLPM1
 	nop 
 	nop 
-	ldy #$E0 ; 224 (spr=176)
-	ldy #$00 ; 0 (spr=-48)
 	nop 
-	ldy #$00 ; 0 (spr=-48)
-	lda #$33 ; 51 (spr=3)
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	lda #$32 ; 50 (spr=2)
+	sty COLOR2
+	stx COLOR2
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line205
-	ldx #$E1 ; 225 (spr=177)
+	nop 
 	sta COLOR2
-	lda #$20 ; 32 (spr=-16)
-	ldy #$30 ; 48 (spr=0)
-	lda #$71 ; 113 (spr=65)
+	lda #$B8 ; 184 (spr=136)
+	nop 
+	nop 
 	nop 
 	nop 
 	lda #$E0 ; 224 (spr=176)
 	sta COLOR2
 	sty COLOR2
-	ldy #$10 ; 16 (spr=-32)
-	ldy #$34 ; 52 (spr=4)
 	lda #$30 ; 48 (spr=0)
-	nop 
-	ldx #$90 ; 144 (spr=96)
-	lda #$32 ; 50 (spr=2)
+	ldy #$41 ; 65 (spr=17)
+	lda #$33 ; 51 (spr=3)
+	ldy #$02 ; 2 (spr=-46)
+	ldx #$E0 ; 224 (spr=176)
+	ldy #$34 ; 52 (spr=4)
 	sty COLOR0
+	ldx #$32 ; 50 (spr=2)
+	nop 
 	sta COLOR0
-	ldx #$34 ; 52 (spr=4)
-	ldy #$30 ; 48 (spr=0)
-	ldy #$2C ; 44 (spr=-4)
+	ldx #$03 ; 3 (spr=-45)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line206
-	ldx #$40 ; 64 (spr=16)
-	ldy #$36 ; 54 (spr=6)
+	ldy #$32 ; 50 (spr=2)
+	ldy #$30 ; 48 (spr=0)
 	lda #$91 ; 145 (spr=97)
-	sty COLPM0
+	ldx #$A1 ; 161 (spr=113)
 	nop 
-	ldx #$32 ; 50 (spr=2)
 	sty COLPM0
+	ldy #$31 ; 49 (spr=1)
+	nop 
 	sta COLOR0
-	ldy #$34 ; 52 (spr=4)
-	lda #$32 ; 50 (spr=2)
 	nop 
-	ldx #$90 ; 144 (spr=96)
-	ldx #$30 ; 48 (spr=0)
-	ldy #$92 ; 146 (spr=98)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$35 ; 53 (spr=5)
-	sty COLOR0
-	ldy #$91 ; 145 (spr=97)
+	lda #$31 ; 49 (spr=1)
 	ldy #$36 ; 54 (spr=6)
+	lda #$30 ; 48 (spr=0)
+	sty COLPM0
 	ldy #$34 ; 52 (spr=4)
-	ldy #$02 ; 2 (spr=-46)
 	nop 
+	sty COLOR0
+	lda #$38 ; 56 (spr=8)
+	ldx #$01 ; 1 (spr=-47)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$92 ; 146 (spr=98)
+	ldy #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line207
+	nop 
+	ldy #$95 ; 149 (spr=101)
+	ldx #$33 ; 51 (spr=3)
+	ldy #$30 ; 48 (spr=0)
+	ldy #$40 ; 64 (spr=16)
+	ldx #$F0 ; 240 (spr=192)
+	ldy #$34 ; 52 (spr=4)
 	ldx #$90 ; 144 (spr=96)
-	ldy #$34 ; 52 (spr=4)
-	ldx #$E0 ; 224 (spr=176)
-	ldy #$30 ; 48 (spr=0)
-	ldy #$30 ; 48 (spr=0)
-	ldx #$91 ; 145 (spr=97)
-	lda #$41 ; 65 (spr=17)
 	nop 
-	ldy #$6E ; 110 (spr=62)
 	stx COLOR0
-	ldx #$97 ; 151 (spr=103)
-	ldy #$34 ; 52 (spr=4)
-	nop 
 	sty COLBAK
-	ldy #$34 ; 52 (spr=4)
-	nop 
+	sty COLBAK
+	ldx #$96 ; 150 (spr=102)
+	ldy #$92 ; 146 (spr=98)
+	ldy #$00 ; 0 (spr=-48)
 	stx COLPM1
-	ldx #$38 ; 56 (spr=8)
-	nop 
-	ldx #$00 ; 0 (spr=-48)
+	sta COLOR2
+	lda #$40 ; 64 (spr=16)
 	sta COLBAK
-	ldy #$35 ; 53 (spr=5)
+	lda #$E1 ; 225 (spr=177)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line208
-	ldx #$32 ; 50 (spr=2)
-	lda #$E0 ; 224 (spr=176)
+	ldx #$DF ; 223 (spr=175)
+	ldy #$90 ; 144 (spr=96)
 	sta COLPM3
-	stx COLOR2
-	nop 
-	lda #$31 ; 49 (spr=1)
+	lda #$34 ; 52 (spr=4)
 	ldx #$32 ; 50 (spr=2)
+	ldy #$92 ; 146 (spr=98)
+	stx COLOR2
+	lda #$31 ; 49 (spr=1)
+	sty COLOR2
 	sta COLOR2
-	lda #$35 ; 53 (spr=5)
-	ldy #$40 ; 64 (spr=16)
-	ldy #$2F ; 47 (spr=-1)
-	ldy #$40 ; 64 (spr=16)
-	ldy #$30 ; 48 (spr=0)
+	lda #$34 ; 52 (spr=4)
+	sty COLOR2
 	stx COLOR2
 	sta COLOR0
-	nop 
-	lda #$40 ; 64 (spr=16)
-	ldx #$93 ; 147 (spr=99)
-	nop ; filler
-	nop ; filler
+	ldx #$FF ; 255 (spr=207)
+	ldy #$90 ; 144 (spr=96)
+	ldy #$35 ; 53 (spr=5)
+	ldx #$90 ; 144 (spr=96)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line209
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$34 ; 52 (spr=4)
-	nop 
+	ldy #$30 ; 48 (spr=0)
 	sty COLPM2
-	ldx #$91 ; 145 (spr=97)
-	ldy #$DF ; 223 (spr=175)
-	ldy #$35 ; 53 (spr=5)
+	ldx #$90 ; 144 (spr=96)
 	nop 
+	nop 
+	lda #$20 ; 32 (spr=-16)
+	lda #$40 ; 64 (spr=16)
+	ldy #$35 ; 53 (spr=5)
 	stx COLOR0
-	sty COLBAK
-	ldy #$90 ; 144 (spr=96)
-	ldx #$41 ; 65 (spr=17)
 	sta COLPM0
 	stx COLOR0
-	lda #$DF ; 223 (spr=175)
+	nop 
+	ldx #$40 ; 64 (spr=16)
+	nop 
+	sty COLOR0
+	stx COLOR0
+	ldy #$39 ; 57 (spr=9)
 	ldx #$31 ; 49 (spr=1)
-	nop 
-	lda #$40 ; 64 (spr=16)
-	lda #$34 ; 52 (spr=4)
-	nop 
-	nop ; filler
+	lda #$E1 ; 225 (spr=177)
+	lda #$E0 ; 224 (spr=176)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line210
 	stx COLPM3
-	lda #$E0 ; 224 (spr=176)
-	ldy #$38 ; 56 (spr=8)
-	ldx #$90 ; 144 (spr=96)
 	sty COLBAK
-	ldy #$23 ; 35 (spr=-13)
+	ldy #$90 ; 144 (spr=96)
 	ldy #$92 ; 146 (spr=98)
+	ldx #$34 ; 52 (spr=4)
+	lda #$E1 ; 225 (spr=177)
+	ldx #$91 ; 145 (spr=97)
 	stx COLOR0
 	sta COLOR2
-	lda #$FF ; 255 (spr=207)
+	ldx #$86 ; 134 (spr=86)
 	sty COLOR2
-	ldy #$33 ; 51 (spr=3)
+	ldy #$32 ; 50 (spr=2)
 	sty COLOR2
-	ldx #$87 ; 135 (spr=87)
+	ldy #$30 ; 48 (spr=0)
 	stx HPOSP0
-	ldy #$81 ; 129 (spr=81)
-	ldx #$99 ; 153 (spr=105)
-	lda #$32 ; 50 (spr=2)
-	ldy #$80 ; 128 (spr=80)
+	ldx #$98 ; 152 (spr=104)
+	nop ; filler
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line211
+	ldy #$22 ; 34 (spr=-14)
+	ldy #$38 ; 56 (spr=8)
 	stx COLPM0
-	lda #$92 ; 146 (spr=98)
-	sta COLPM1
-	lda #$22 ; 34 (spr=-14)
-	ldy #$80 ; 128 (spr=80)
-	ldy #$38 ; 56 (spr=8)
-	ldy #$38 ; 56 (spr=8)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$34 ; 52 (spr=4)
-	lda #$40 ; 64 (spr=16)
-	ldx #$22 ; 34 (spr=-14)
-	ldy #$91 ; 145 (spr=97)
-	sty COLPM2
+	ldx #$92 ; 146 (spr=98)
+	ldy #$28 ; 40 (spr=-8)
+	stx COLPM1
+	nop 
 	ldy #$4A ; 74 (spr=26)
-	stx COLOR0
-	sta COLOR0
-	lda #$32 ; 50 (spr=2)
+	ldx #$36 ; 54 (spr=6)
+	sta COLPM2
+	lda #$40 ; 64 (spr=16)
 	sty HPOSP1
-	ldy #$81 ; 129 (spr=81)
+	ldy #$22 ; 34 (spr=-14)
+	sty COLOR0
+	sta COLOR0
+	ldy #$90 ; 144 (spr=96)
+	ldx #$18 ; 24 (spr=-24)
+	sty COLPM2
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line212
+	lda #$32 ; 50 (spr=2)
 	lda #$38 ; 56 (spr=8)
-	nop 
+	ldx #$23 ; 35 (spr=-13)
 	sta COLPM1
-	ldy #$90 ; 144 (spr=96)
-	lda #$30 ; 48 (spr=0)
-	sta COLPM3
-	lda #$06 ; 6 (spr=-42)
 	lda #$22 ; 34 (spr=-14)
-	lda #$E0 ; 224 (spr=176)
-	sta COLOR1
-	sty COLOR0
-	lda #$30 ; 48 (spr=0)
-	ldy #$00 ; 0 (spr=-48)
-	stx COLOR1
-	sty COLOR1
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$29 ; 41 (spr=-7)
-	ldy #$33 ; 51 (spr=3)
+	lda #$E1 ; 225 (spr=177)
 	nop 
-	nop ; filler
+	stx COLOR0
+	sta COLOR0
+	stx COLOR1
+	sty COLOR0
+	ldy #$01 ; 1 (spr=-47)
+	lda #$3B ; 59 (spr=11)
+	sta COLOR1
+	sty COLOR1
+	nop 
+	ldx #$28 ; 40 (spr=-8)
+	sta COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line213
-	nop 
-	stx COLPM1
-	ldx #$38 ; 56 (spr=8)
-	sta COLPM2
-	nop 
-	nop 
-	lda #$38 ; 56 (spr=8)
-	sta COLPM1
 	lda #$32 ; 50 (spr=2)
-	sta COLPM1
+	lda #$30 ; 48 (spr=0)
+	sta COLPM2
+	ldy #$36 ; 54 (spr=6)
+	nop 
+	lda #$33 ; 51 (spr=3)
+	stx COLPM1
+	sty COLPM1
 	sta COLOR2
+	lda #$90 ; 144 (spr=96)
+	ldx #$30 ; 48 (spr=0)
+	ldy #$43 ; 67 (spr=19)
 	lda #$3B ; 59 (spr=11)
-	nop 
+	ldy #$90 ; 144 (spr=96)
 	sta COLOR0
-	lda #$34 ; 52 (spr=4)
+	lda #$35 ; 53 (spr=5)
+	sta COLOR0
 	sta COLOR2
-	ldx #$44 ; 68 (spr=20)
-	nop 
-	nop ; filler
+	ldy #$32 ; 50 (spr=2)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line214
-	lda #$F0 ; 240 (spr=192)
+	stx COLPM1
 	lda #$90 ; 144 (spr=96)
 	sta COLOR0
-	lda #$42 ; 66 (spr=18)
-	lda #$33 ; 51 (spr=3)
 	ldx #$96 ; 150 (spr=102)
+	lda #$33 ; 51 (spr=3)
 	sty COLPM1
-	ldy #$44 ; 68 (spr=20)
-	stx COLPM0
-	stx COLPM0
+	ldy #$2C ; 44 (spr=-4)
 	sta COLBAK
 	stx COLPM2
+	stx COLPM0
+	lda #$34 ; 52 (spr=4)
+	ldx #$21 ; 33 (spr=-15)
+	ldx #$34 ; 52 (spr=4)
+	ldx #$90 ; 144 (spr=96)
 	lda #$40 ; 64 (spr=16)
-	ldy #$97 ; 151 (spr=103)
-	ldy #$34 ; 52 (spr=4)
 	sta COLOR2
-	ldx #$00 ; 0 (spr=-48)
-	lda #$90 ; 144 (spr=96)
 	nop 
+	lda #$94 ; 148 (spr=100)
+	ldy #$2F ; 47 (spr=-1)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line215
-	lda #$00 ; 0 (spr=-48)
-	nop 
-	ldx #$30 ; 48 (spr=0)
-	lda #$34 ; 52 (spr=4)
+	ldx #$10 ; 16 (spr=-32)
 	ldy #$31 ; 49 (spr=1)
 	sty COLBAK
-	lda #$32 ; 50 (spr=2)
-	sty COLPM3
-	ldx #$78 ; 120 (spr=72)
-	ldy #$36 ; 54 (spr=6)
-	stx HPOSP3
-	stx HPOSP0
-	ldx #$2C ; 44 (spr=-4)
 	nop 
-	stx COLPM0
+	sta COLPM0
+	stx COLPM3
 	ldx #$40 ; 64 (spr=16)
+	ldx #$01 ; 1 (spr=-47)
+	ldy #$32 ; 50 (spr=2)
+	ldy #$36 ; 54 (spr=6)
+	ldx #$78 ; 120 (spr=72)
+	lda #$00 ; 0 (spr=-48)
+	stx HPOSP0
+	stx HPOSP3
+	ldx #$2C ; 44 (spr=-4)
+	stx COLPM0
+	nop 
 	sty COLOR2
-	ldy #$34 ; 52 (spr=4)
-	sty COLPM3
+	lda #$32 ; 50 (spr=2)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line216
-	stx COLBAK
 	ldy #$34 ; 52 (spr=4)
-	sty COLPM3
 	sta COLBAK
-	lda #$93 ; 147 (spr=99)
-	ldx #$01 ; 1 (spr=-47)
+	ldx #$42 ; 66 (spr=18)
+	lda #$39 ; 57 (spr=9)
+	sty COLPM3
 	sty COLPM1
+	ldx #$00 ; 0 (spr=-48)
+	sta COLPM1
+	lda #$93 ; 147 (spr=99)
 	sta COLOR1
-	nop 
-	lda #$34 ; 52 (spr=4)
 	sty COLOR2
 	ldy #$40 ; 64 (spr=16)
 	sty COLOR1
 	stx COLOR2
-	lda #$24 ; 36 (spr=-12)
-	ldy #$E0 ; 224 (spr=176)
-	nop ; filler
-	nop ; filler
+	ldx #$78 ; 120 (spr=72)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$32 ; 50 (spr=2)
+	ldy #$FF ; 255 (spr=207)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line217
-	ldx #$0E ; 14 (spr=-34)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$FF ; 255 (spr=207)
+	ldy #$00 ; 0 (spr=-48)
+	ldx #$3A ; 58 (spr=10)
 	nop 
-	lda #$2B ; 43 (spr=-5)
-	ldx #$92 ; 146 (spr=98)
 	ldy #$3A ; 58 (spr=10)
-	ldx #$90 ; 144 (spr=96)
-	sta COLPM1
+	lda #$2A ; 42 (spr=-6)
+	nop 
 	sty COLOR2
 	sta COLOR1
-	lda #$40 ; 64 (spr=16)
-	nop 
+	sta COLPM1
 	ldy #$00 ; 0 (spr=-48)
 	sty COLOR1
-	ldx #$36 ; 54 (spr=6)
+	lda #$40 ; 64 (spr=16)
+	ldx #$33 ; 51 (spr=3)
 	sta COLOR0
-	ldx #$00 ; 0 (spr=-48)
+	lda #$2C ; 44 (spr=-4)
+	stx COLBAK
+	ldx #$0A ; 10 (spr=-38)
 	nop 
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	stx COLOR1
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line218
-	ldx #$90 ; 144 (spr=96)
-	lda #$40 ; 64 (spr=16)
+	ldy #$0A ; 10 (spr=-38)
+	lda #$3A ; 58 (spr=10)
+	nop 
+	nop 
+	ldx #$02 ; 2 (spr=-46)
 	nop 
 	lda #$91 ; 145 (spr=97)
-	ldx #$38 ; 56 (spr=8)
-	ldy #$0B ; 11 (spr=-37)
-	nop 
-	nop 
 	ldx #$06 ; 6 (spr=-42)
+	nop 
 	sta COLOR0
 	sty COLOR1
 	stx COLOR1
 	ldy #$38 ; 56 (spr=8)
 	sty COLOR2
-	ldy #$00 ; 0 (spr=-48)
-	lda #$B6 ; 182 (spr=134)
+	ldy #$01 ; 1 (spr=-47)
+	lda #$B7 ; 183 (spr=135)
 	sty COLOR1
-	ldx #$00 ; 0 (spr=-48)
 	ldx #$3B ; 59 (spr=11)
+	ldy #$40 ; 64 (spr=16)
 	nop 
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line219
-	nop 
 	stx COLPM2
+	ldx #$8F ; 143 (spr=95)
 	nop 
 	nop 
 	nop 
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$00 ; 0 (spr=-48)
-	ldy #$99 ; 153 (spr=105)
+	ldy #$10 ; 16 (spr=-32)
+	nop 
+	ldy #$98 ; 152 (spr=104)
 	sty COLBAK
 	sty COLBAK
 	ldx #$33 ; 51 (spr=3)
 	sty COLPM0
-	ldy #$06 ; 6 (spr=-42)
 	stx COLBAK
-	ldy #$94 ; 148 (spr=100)
+	ldy #$95 ; 149 (spr=101)
 	sty COLPM2
-	ldx #$80 ; 128 (spr=80)
 	ldy #$43 ; 67 (spr=19)
+	ldx #$80 ; 128 (spr=80)
 	nop 
-	nop ; filler
+	stx HPOSP2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line220
 	nop 
 	stx HPOSP2
-	ldx #$3B ; 59 (spr=11)
+	stx COLPM0
+	nop 
+	ldx #$3A ; 58 (spr=10)
 	nop 
 	nop 
 	stx COLPM0
-	nop 
 	sta HPOSP1
-	stx COLPM0
-	lda #$02 ; 2 (spr=-46)
+	lda #$03 ; 3 (spr=-45)
 	sta COLPM1
 	sty HPOSP3
 	stx COLBAK
-	ldx #$44 ; 68 (spr=20)
-	ldy #$21 ; 33 (spr=-15)
-	nop 
 	sta COLBAK
-	lda #$32 ; 50 (spr=2)
+	lda #$33 ; 51 (spr=3)
+	ldx #$44 ; 68 (spr=20)
+	nop 
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line221
 	stx HPOSP2
 	nop 
 	sta COLPM0
-	ldy #$90 ; 144 (spr=96)
-	nop 
-	ldy #$90 ; 144 (spr=96)
-	ldy #$37 ; 55 (spr=7)
-	ldx #$38 ; 56 (spr=8)
-	lda #$34 ; 52 (spr=4)
+	lda #$35 ; 53 (spr=5)
+	ldy #$3A ; 58 (spr=10)
+	sta COLPM3
+	ldx #$36 ; 54 (spr=6)
+	ldy #$36 ; 54 (spr=6)
 	sta COLBAK
-	ldx #$92 ; 146 (spr=98)
-	lda #$32 ; 50 (spr=2)
-	nop 
+	ldx #$93 ; 147 (spr=99)
+	lda #$26 ; 38 (spr=-10)
+	sta COLOR2
 	sty COLOR2
 	ldy #$38 ; 56 (spr=8)
+	lda #$00 ; 0 (spr=-48)
 	sty COLPM0
-	ldy #$40 ; 64 (spr=16)
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	nop 
+	lda #$44 ; 68 (spr=20)
+	lda #$81 ; 129 (spr=81)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line222
 	nop 
-	sta COLOR0
+	ldy #$40 ; 64 (spr=16)
 	sty COLOR2
-	ldy #$32 ; 50 (spr=2)
-	nop 
-	ldy #$32 ; 50 (spr=2)
-	lda #$00 ; 0 (spr=-48)
-	ldy #$24 ; 36 (spr=-12)
-	lda #$36 ; 54 (spr=6)
+	lda #$E0 ; 224 (spr=176)
+	sta COLOR0
+	lda #$32 ; 50 (spr=2)
+	sta COLOR0
+	lda #$37 ; 55 (spr=7)
 	sta COLBAK
 	stx COLPM2
+	lda #$30 ; 48 (spr=0)
+	ldy #$00 ; 0 (spr=-48)
 	ldy #$04 ; 4 (spr=-44)
-	ldx #$3A ; 58 (spr=10)
-	nop 
-	lda #$32 ; 50 (spr=2)
-	sty COLOR2
 	lda #$82 ; 130 (spr=82)
-	ldy #$20 ; 32 (spr=-16)
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLOR2
+	ldy #$41 ; 65 (spr=17)
+	nop 
+	nop 
+	ldx #$3B ; 59 (spr=11)
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line223
-	ldy #$40 ; 64 (spr=16)
 	stx COLOR2
-	sta COLOR2
 	nop 
+	sta COLOR2
 	sty COLOR2
-	ldy #$30 ; 48 (spr=0)
+	ldy #$04 ; 4 (spr=-44)
+	ldy #$31 ; 49 (spr=1)
 	sta HPOSP2
 	stx COLOR1
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$01 ; 1 (spr=-47)
 	sty COLOR1
 	stx COLOR1
-	nop 
-	lda #$72 ; 114 (spr=66)
-	lda #$10 ; 16 (spr=-32)
-	nop 
-	ldx #$36 ; 54 (spr=6)
-	lda #$32 ; 50 (spr=2)
+	ldx #$30 ; 48 (spr=0)
+	lda #$38 ; 56 (spr=8)
+	ldx #$3A ; 58 (spr=10)
+	ldx #$02 ; 2 (spr=-46)
 	lda #$00 ; 0 (spr=-48)
-	nop ; filler
+	nop 
+	nop 
+	nop 
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line224
-	nop 
-	nop 
-	ldx #$38 ; 56 (spr=8)
-	lda #$32 ; 50 (spr=2)
-	ldx #$3B ; 59 (spr=11)
-	nop 
-	lda #$90 ; 144 (spr=96)
-	nop 
-	sta COLOR1
-	lda #$34 ; 52 (spr=4)
-	stx COLOR1
-	lda #$2A ; 42 (spr=-6)
-	lda #$00 ; 0 (spr=-48)
-	sta COLOR1
-	nop 
+	ldx #$F0 ; 240 (spr=192)
+	ldx #$34 ; 52 (spr=4)
+	lda #$FF ; 255 (spr=207)
 	ldy #$AE ; 174 (spr=126)
 	nop 
-	lda #$24 ; 36 (spr=-12)
-	ldx #$00 ; 0 (spr=-48)
+	lda #$E0 ; 224 (spr=176)
+	lda #$90 ; 144 (spr=96)
+	ldx #$3B ; 59 (spr=11)
+	sta COLOR1
 	nop 
+	stx COLOR1
+	lda #$35 ; 53 (spr=5)
+	lda #$E0 ; 224 (spr=176)
+	sta COLOR1
+	lda #$01 ; 1 (spr=-47)
+	sta COLOR1
 	nop 
-	ldx #$32 ; 50 (spr=2)
-	nop ; filler
+	lda #$34 ; 52 (spr=4)
+	nop 
+	lda #$30 ; 48 (spr=0)
+	ldx #$42 ; 66 (spr=18)
+	lda #$00 ; 0 (spr=-48)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line225
-	ldx #$32 ; 50 (spr=2)
+	ldx #$F2 ; 242 (spr=194)
 	lda #$34 ; 52 (spr=4)
-	lda #$03 ; 3 (spr=-45)
-	sta COLPM1
-	ldx #$42 ; 66 (spr=18)
+	ldx #$40 ; 64 (spr=16)
 	nop 
-	ldx #$12 ; 18 (spr=-30)
-	lda #$00 ; 0 (spr=-48)
-	ldx #$3B ; 59 (spr=11)
+	ldx #$32 ; 50 (spr=2)
+	sta HPOSP1
+	ldx #$3A ; 58 (spr=10)
+	sty HPOSP1
 	stx COLOR1
-	lda #$34 ; 52 (spr=4)
 	sta COLOR1
-	ldx #$02 ; 2 (spr=-46)
-	lda #$3A ; 58 (spr=10)
+	ldy #$40 ; 64 (spr=16)
+	ldx #$03 ; 3 (spr=-45)
 	lda #$00 ; 0 (spr=-48)
+	ldy #$33 ; 51 (spr=3)
 	stx COLPM2
 	sta COLOR1
-	sty HPOSP1
-	ldx #$32 ; 50 (spr=2)
+	lda #$20 ; 32 (spr=-16)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$34 ; 52 (spr=4)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line226
-	lda #$50 ; 80 (spr=32)
+	sty HPOSP2
+	ldx #$39 ; 57 (spr=9)
 	nop 
-	stx HPOSP2
-	ldx #$38 ; 56 (spr=8)
-	ldy #$00 ; 0 (spr=-48)
+	lda #$F0 ; 240 (spr=192)
 	nop 
-	lda #$34 ; 52 (spr=4)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$35 ; 53 (spr=5)
+	nop 
+	ldy #$37 ; 55 (spr=7)
+	sta COLOR1
 	stx COLOR1
-	ldx #$2F ; 47 (spr=-1)
-	sty COLOR1
+	ldx #$33 ; 51 (spr=3)
 	ldx #$01 ; 1 (spr=-47)
 	stx COLOR1
+	lda #$34 ; 52 (spr=4)
 	sta COLOR2
-	nop 
-	lda #$33 ; 51 (spr=3)
-	ldy #$38 ; 56 (spr=8)
+	sty COLOR0
 	ldx #$40 ; 64 (spr=16)
-	sta COLPM3
+	lda #$00 ; 0 (spr=-48)
+	lda #$33 ; 51 (spr=3)
+	nop 
+	ldy #$37 ; 55 (spr=7)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line227
-	nop 
 	stx COLOR0
-	lda #$33 ; 51 (spr=3)
-	ldx #$02 ; 2 (spr=-46)
+	ldx #$F0 ; 240 (spr=192)
+	ldx #$3B ; 59 (spr=11)
+	ldy #$31 ; 49 (spr=1)
 	nop 
-	ldx #$90 ; 144 (spr=96)
-	ldx #$3A ; 58 (spr=10)
+	sta COLPM3
+	sty COLOR1
 	stx COLOR1
-	nop 
-	stx HPOSP2
-	ldy #$38 ; 56 (spr=8)
-	ldx #$00 ; 0 (spr=-48)
 	sta COLOR1
-	ldy #$50 ; 80 (spr=32)
+	ldx #$10 ; 16 (spr=-32)
+	ldy #$40 ; 64 (spr=16)
+	ldy #$3A ; 58 (spr=10)
 	ldy #$38 ; 56 (spr=8)
+	ldx #$01 ; 1 (spr=-47)
 	stx COLOR1
+	ldy #$38 ; 56 (spr=8)
 	sty COLBAK
-	ldx #$27 ; 39 (spr=-9)
-	nop 
-	lda #$32 ; 50 (spr=2)
+	ldx #$48 ; 72 (spr=24)
+	ldy #$31 ; 49 (spr=1)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line228
-	lda #$32 ; 50 (spr=2)
-	ldx #$81 ; 129 (spr=81)
-	ldx #$36 ; 54 (spr=6)
+	nop 
 	ldy #$31 ; 49 (spr=1)
-	stx HPOSP2
+	nop 
+	ldx #$39 ; 57 (spr=9)
 	sty COLPM3
+	ldx #$36 ; 54 (spr=6)
+	nop 
 	sta COLOR1
 	ldy #$00 ; 0 (spr=-48)
 	stx COLOR0
+	stx COLBAK
+	stx HPOSP3
 	sta COLBAK
-	nop 
-	stx COLPM0
-	sta HPOSP2
 	sty COLOR1
-	ldx #$00 ; 0 (spr=-48)
 	sta COLOR0
-	ldy #$38 ; 56 (spr=8)
+	lda #$38 ; 56 (spr=8)
+	nop ; filler
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line229
-	ldy #$38 ; 56 (spr=8)
-	lda #$32 ; 50 (spr=2)
-	stx HPOSP3
-	ldx #$40 ; 64 (spr=16)
-	nop 
+	lda #$35 ; 53 (spr=5)
+	ldy #$04 ; 4 (spr=-44)
 	lda #$2A ; 42 (spr=-6)
 	sty COLPM3
+	stx COLPM0
+	ldx #$41 ; 65 (spr=17)
+	ldy #$26 ; 38 (spr=-10)
 	stx COLOR0
 	sta COLOR0
 	lda #$79 ; 121 (spr=73)
 	stx COLOR0
 	sta HPOSP3
-	ldy #$3F ; 63 (spr=15)
-	lda #$3A ; 58 (spr=10)
-	ldx #$26 ; 38 (spr=-10)
+	sty HPOSP2
+	nop 
+	ldy #$38 ; 56 (spr=8)
 	nop 
 	nop 
-	ldy #$E1 ; 225 (spr=177)
-	sta COLOR1
+	lda #$38 ; 56 (spr=8)
+	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line230
-	ldy #$00 ; 0 (spr=-48)
+	sty COLPM3
+	ldx #$A4 ; 164 (spr=116)
 	nop 
-	stx HPOSP2
-	ldx #$36 ; 54 (spr=6)
+	ldx #$04 ; 4 (spr=-44)
+	lda #$3B ; 59 (spr=11)
+	ldy #$FF ; 255 (spr=207)
+	ldy #$00 ; 0 (spr=-48)
+	ldy #$E0 ; 224 (spr=176)
 	sty COLOR1
+	sta COLOR1
+	ldy #$30 ; 48 (spr=0)
+	lda #$40 ; 64 (spr=16)
+	sty COLOR1
+	lda #$00 ; 0 (spr=-48)
+	stx COLOR1
+	sta COLOR1
+	ldy #$37 ; 55 (spr=7)
+	ldy #$E1 ; 225 (spr=177)
+	ldx #$34 ; 52 (spr=4)
+	lda #$3A ; 58 (spr=10)
+	nop ; filler
+	cmp byt2; on zero page so 3 cycles
+line231
+	nop 
+	ldx #$40 ; 64 (spr=16)
+	ldx #$31 ; 49 (spr=1)
+	stx HPOSP2
+	lda #$3A ; 58 (spr=10)
+	ldy #$5C ; 92 (spr=44)
 	nop 
 	ldy #$E1 ; 225 (spr=177)
 	sty COLOR1
 	sta COLOR1
-	lda #$40 ; 64 (spr=16)
-	ldy #$30 ; 48 (spr=0)
-	sty COLOR1
-	ldx #$40 ; 64 (spr=16)
-	ldy #$00 ; 0 (spr=-48)
-	sty COLOR1
-	ldx #$34 ; 52 (spr=4)
-	ldy #$3A ; 58 (spr=10)
-	nop 
-	lda #$02 ; 2 (spr=-46)
-	nop 
-	nop ; filler
-	cmp byt2; on zero page so 3 cycles
-line231
-	ldy #$29 ; 41 (spr=-7)
-	stx HPOSP2
-	lda #$24 ; 36 (spr=-12)
-	nop 
-	ldy #$3A ; 58 (spr=10)
-	lda #$47 ; 71 (spr=23)
-	ldy #$04 ; 4 (spr=-44)
-	ldx #$34 ; 52 (spr=4)
-	ldy #$3A ; 58 (spr=10)
-	ldx #$3A ; 58 (spr=10)
-	sty COLOR1
 	ldy #$01 ; 1 (spr=-47)
-	lda #$3A ; 58 (spr=10)
-	nop 
-	lda #$2A ; 42 (spr=-6)
-	ldx #$00 ; 0 (spr=-48)
+	stx COLOR1
+	ldx #$05 ; 5 (spr=-43)
+	stx COLOR1
 	sty COLOR1
-	ldy #$30 ; 48 (spr=0)
-	ldx #$31 ; 49 (spr=1)
+	ldx #$29 ; 41 (spr=-7)
+	ldy #$E1 ; 225 (spr=177)
 	nop 
+	ldy #$E0 ; 224 (spr=176)
 	nop 
-	nop 
-	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line232
-	ldy #$01 ; 1 (spr=-47)
-	stx HPOSP2
-	sty COLOR1
-	ldy #$45 ; 69 (spr=21)
-	ldx #$00 ; 0 (spr=-48)
-	ldx #$3B ; 59 (spr=11)
+	ldy #$35 ; 53 (spr=5)
+	nop 
+	ldy #$E0 ; 224 (spr=176)
+	sta COLPM0
+	nop 
+	ldx #$32 ; 50 (spr=2)
+	lda #$2A ; 42 (spr=-6)
 	ldy #$E0 ; 224 (spr=176)
 	sty COLOR1
 	sta COLOR1
-	ldx #$28 ; 40 (spr=-8)
+	ldx #$22 ; 34 (spr=-14)
 	sty COLOR1
 	ldy #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
+	nop 
 	sty COLOR1
-	lda #$F0 ; 240 (spr=192)
-	lda #$50 ; 80 (spr=32)
-	lda #$02 ; 2 (spr=-46)
-	ldy #$00 ; 0 (spr=-48)
-	lda #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$3A ; 58 (spr=10)
+	ldx #$32 ; 50 (spr=2)
+	lda #$2A ; 42 (spr=-6)
+	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line233
-	ldx #$36 ; 54 (spr=6)
-	lda #$3A ; 58 (spr=10)
-	nop 
 	nop 
 	sta COLPM0
+	ldy #$E0 ; 224 (spr=176)
+	ldx #$00 ; 0 (spr=-48)
+	lda #$38 ; 56 (spr=8)
 	nop 
-	lda #$E1 ; 225 (spr=177)
-	ldy #$38 ; 56 (spr=8)
+	ldx #$E0 ; 224 (spr=176)
+	lda #$3A ; 58 (spr=10)
+	stx COLOR1
 	sta COLOR1
-	lda #$34 ; 52 (spr=4)
-	lda #$40 ; 64 (spr=16)
+	lda #$01 ; 1 (spr=-47)
+	sta COLOR1
+	lda #$32 ; 50 (spr=2)
+	sta COLOR2
+	lda #$04 ; 4 (spr=-44)
+	ldy #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$32 ; 50 (spr=2)
 	lda #$00 ; 0 (spr=-48)
-	ldy #$38 ; 56 (spr=8)
-	sta COLOR1
-	ldy #$3A ; 58 (spr=10)
-	ldx #$35 ; 53 (spr=5)
-	lda #$34 ; 52 (spr=4)
-	ldx #$32 ; 50 (spr=2)
-	lda #$40 ; 64 (spr=16)
-	ldy #$1A ; 26 (spr=-22)
+	nop 
+	nop 
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line234
-	lda #$00 ; 0 (spr=-48)
 	nop 
-	ldx #$F0 ; 240 (spr=192)
+	lda #$02 ; 2 (spr=-46)
 	nop 
-	lda #$34 ; 52 (spr=4)
-	lda #$2B ; 43 (spr=-5)
-	ldx #$01 ; 1 (spr=-47)
-	ldx #$36 ; 54 (spr=6)
-	sta COLPM0
-	lda #$3B ; 59 (spr=11)
-	sta COLOR1
-	lda #$00 ; 0 (spr=-48)
-	sta COLOR1
-	sty COLPM0
-	ldy #$34 ; 52 (spr=4)
-	ldy #$00 ; 0 (spr=-48)
+	stx COLOR2
+	nop 
+	nop 
 	nop 
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$3A ; 58 (spr=10)
-	lda #$34 ; 52 (spr=4)
-	nop ; filler
-	nop ; filler
+	lda #$3A ; 58 (spr=10)
+	ldx #$00 ; 0 (spr=-48)
+	sta COLOR1
+	lda #$35 ; 53 (spr=5)
+	sta COLOR1
+	lda #$20 ; 32 (spr=-16)
+	sty COLOR2
+	stx COLOR1
+	ldx #$36 ; 54 (spr=6)
+	stx HPOSP2
+	lda #$3B ; 59 (spr=11)
+	lda #$30 ; 48 (spr=0)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line235
-	lda #$00 ; 0 (spr=-48)
-	nop 
+	sta COLOR2
+	ldy #$30 ; 48 (spr=0)
 	ldx #$F0 ; 240 (spr=192)
-	nop 
-	lda #$34 ; 52 (spr=4)
-	lda #$2B ; 43 (spr=-5)
-	ldx #$01 ; 1 (spr=-47)
-	ldx #$36 ; 54 (spr=6)
-	sta COLPM0
-	lda #$3B ; 59 (spr=11)
-	sta COLOR1
-	lda #$00 ; 0 (spr=-48)
-	sta COLOR1
-	sty COLPM0
-	ldy #$34 ; 52 (spr=4)
-	ldy #$00 ; 0 (spr=-48)
-	nop 
 	ldx #$00 ; 0 (spr=-48)
-	ldy #$3A ; 58 (spr=10)
+	sta COLOR2
+	lda #$3B ; 59 (spr=11)
+	ldx #$F1 ; 241 (spr=193)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$E0 ; 224 (spr=176)
+	sta COLOR1
 	lda #$34 ; 52 (spr=4)
+	sta COLOR2
+	stx COLOR1
+	sty COLOR2
+	ldx #$33 ; 51 (spr=3)
+	lda #$30 ; 48 (spr=0)
+	sta COLOR2
 	nop ; filler
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line236
-	nop 
-	ldx #$36 ; 54 (spr=6)
-	nop 
-	lda #$34 ; 52 (spr=4)
-	lda #$2B ; 43 (spr=-5)
-	ldx #$01 ; 1 (spr=-47)
-	nop 
-	sta COLPM0
-	sty COLPM0
-	sta COLOR1
-	lda #$01 ; 1 (spr=-47)
-	sta COLOR1
-	ldx #$01 ; 1 (spr=-47)
-	lda #$3B ; 59 (spr=11)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldx #$2A ; 42 (spr=-6)
+	sta COLOR2
+	ldy #$30 ; 48 (spr=0)
 	ldx #$00 ; 0 (spr=-48)
-	nop 
+	ldx #$00 ; 0 (spr=-48)
+	sta COLOR2
+	lda #$3B ; 59 (spr=11)
+	ldx #$F1 ; 241 (spr=193)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$E0 ; 224 (spr=176)
+	sta COLOR1
+	lda #$34 ; 52 (spr=4)
+	sta COLOR2
+	stx COLOR1
+	sty COLOR2
+	ldx #$33 ; 51 (spr=3)
 	lda #$00 ; 0 (spr=-48)
-	lda #$10 ; 16 (spr=-32)
-	nop ; filler
+	sta COLOR2
+	sta COLOR2
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line237
-	lda #$34 ; 52 (spr=4)
-	ldy #$32 ; 50 (spr=2)
-	ldx #$36 ; 54 (spr=6)
-	ldy #$00 ; 0 (spr=-48)
+	stx HPOSP2
+	lda #$30 ; 48 (spr=0)
+	nop 
+	ldy #$34 ; 52 (spr=4)
+	stx COLOR2
+	ldx #$00 ; 0 (spr=-48)
 	sta COLOR2
 	lda #$3B ; 59 (spr=11)
-	ldy #$2A ; 42 (spr=-6)
-	sta COLPM0
-	ldx #$00 ; 0 (spr=-48)
 	sta COLOR1
-	ldy #$3A ; 58 (spr=10)
-	nop 
+	lda #$35 ; 53 (spr=5)
+	sta COLOR2
 	stx COLOR1
-	ldx #$0D ; 13 (spr=-35)
-	sty HPOSP2
-	ldx #$00 ; 0 (spr=-48)
+	ldx #$32 ; 50 (spr=2)
 	lda #$2A ; 42 (spr=-6)
-	lda #$00 ; 0 (spr=-48)
-	sta COLPM0
-	nop ; filler
+	ldy #$40 ; 64 (spr=16)
+	ldy #$00 ; 0 (spr=-48)
+	nop 
+	ldx #$E8 ; 232 (spr=184)
+	ldx #$00 ; 0 (spr=-48)
+	ldy #$37 ; 55 (spr=7)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line238
-	lda #$B6 ; 182 (spr=134)
-	lda #$00 ; 0 (spr=-48)
-	lda #$F0 ; 240 (spr=192)
-	lda #$2B ; 43 (spr=-5)
-	ldx #$27 ; 39 (spr=-9)
-	sta COLPM0
+	ldy #$33 ; 51 (spr=3)
+	nop 
+	nop 
+	sty COLBAK
+	ldy #$3A ; 58 (spr=10)
 	sty COLPM0
-	nop 
+	ldy #$37 ; 55 (spr=7)
+	ldx #$00 ; 0 (spr=-48)
+	sty COLOR1
 	sta COLOR1
-	lda #$00 ; 0 (spr=-48)
-	nop 
+	lda #$E1 ; 225 (spr=177)
 	sta COLOR1
-	ldx #$40 ; 64 (spr=16)
-	ldx #$10 ; 16 (spr=-32)
-	ldy #$FF ; 255 (spr=207)
-	ldx #$36 ; 54 (spr=6)
-	lda #$3A ; 58 (spr=10)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$00 ; 0 (spr=-48)
-	ldy #$34 ; 52 (spr=4)
-	ldy #$36 ; 54 (spr=6)
-	lda #$36 ; 54 (spr=6)
+	lda #$34 ; 52 (spr=4)
+	stx COLOR2
+	ldx #$37 ; 55 (spr=7)
+	ldy #$40 ; 64 (spr=16)
+	sta COLOR1
+	nop 
+	lda #$E2 ; 226 (spr=178)
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles
 line239
-	ldx #$36 ; 54 (spr=6)
-	sta COLOR0
-	ldx #$01 ; 1 (spr=-47)
 	nop 
 	lda #$00 ; 0 (spr=-48)
+	lda #$36 ; 54 (spr=6)
+	stx HPOSP2
+	ldx #$36 ; 54 (spr=6)
+	stx COLOR0
+	lda #$34 ; 52 (spr=4)
+	sty HPOSP2
 	lda #$00 ; 0 (spr=-48)
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
-	nop ; filler
+	sty COLOR2
+	nop 
+	ldx #$00 ; 0 (spr=-48)
+	sta COLOR0
+	lda #$32 ; 50 (spr=2)
+	ldy #$11 ; 17 (spr=-31)
+	lda #$40 ; 64 (spr=16)
+	stx COLPM3
+	nop 
+	ldx #$02 ; 2 (spr=-46)
 	nop ; filler
 	nop ; filler
 	cmp byt2; on zero page so 3 cycles

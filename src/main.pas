@@ -280,7 +280,10 @@ begin
                 {$ifdef CHEAT}
                 // overview page M
                 if byte(ch) = $65 then
+                begin;
                     addMoney(10000);
+                    Waitframes(30);
+                end;
                 // W                    
                 if byte(ch) = $6e then
                 begin;
@@ -288,6 +291,7 @@ begin
                     plOpportunity[currentPlayer] := 255;
                     plMoneyTransporter[currentPlayer] := 1;
                     plKilledMajor[currentPlayer] := 1;
+                    Waitframes(30);
                 end;
                 {$endif}
 

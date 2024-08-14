@@ -165,12 +165,11 @@ begin;
         end; 
 
         if plNGangsters[currentPlayer] > 1 then 
-        begin
             CRT_Writeln_LocStr(13); // who
-            showWeapons := 0;
-            selectGangster();
-            if currentGangster = 99 then exit;
-        end;
+
+        showWeapons := 0;
+        selectGangster();
+        if currentGangster = 99 then exit;
 
         ShowLocationHeader;
         camp := 0;
