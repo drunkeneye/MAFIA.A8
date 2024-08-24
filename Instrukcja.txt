@@ -25,7 +25,7 @@ Rywalizuj ze swoimi współgraczami!
 Za każdą robotę, każde morderstwo, za każdy przemyt, każdą łapówkę i każdy
 napad zdobywasz więcej sławy (i punktów).
 
-Ale tylko ten, kto na końcu 'przekupi' burmistrza i 'pożyczy' złoto
+Ale tylko ten, kto na końcu 'utrąci' burmistrza i 'pożyczy' złoto
 z konwoju może zostać bossem podziemia...
 
 
@@ -38,17 +38,17 @@ Gra jest sterowana klawiaturą, ale prawie zawsze można także
 używać klawiatury.
 
 Mapa:
-ESC = Pokaż gangsterów i aktualny stan gry
+ESC = pokaż gangsterów i aktualny stan gry
 
 
 
 Walka
 =====
 
-Walka odbywa się turowo, każdy gangster może się poruszyć lub strzelać.
+Walka odbywa się w turach, każdy gangster może się poruszyć lub strzelić.
 
-Naciśnij Return, aby wyciągnąć broń i strzałkę, aby strzelić w tym
-kierunku.
+Naciśnij Return, aby wyciągnąć broń i klawisz strzałki, aby oddać strzał
+we wskazanym kierunku.
 
 q = Poddaj walkę (tylko dla początkujących)
 i = Aktywuj AI (po następnym ruchu)
