@@ -35,7 +35,7 @@ Sterowanie
 ==========
 
 Gra jest sterowana klawiaturą, ale prawie zawsze można także
-używać klawiatury.
+używać joysticka.
 
 Mapa:
 ESC = pokaż gangsterów i aktualny stan gry
@@ -47,8 +47,8 @@ Walka
 
 Walka odbywa się w turach, każdy gangster może się poruszyć lub strzelić.
 
-Naciśnij Return, aby wyciągnąć broń i klawisz strzałki, aby oddać strzał
-we wskazanym kierunku.
+Naciśnij Return, aby wyciągnąć broń i klawisz strzałki (kursora),
+aby oddać strzał we wskazanym kierunku.
 
 q = Poddaj walkę (tylko dla początkujących)
 i = Aktywuj AI (po następnym ruchu)
