@@ -3,14 +3,14 @@ Sklep z bronia
 $38, $af, $ff, $38
 Rusznikarz
 Bron Palna u Axla
-Ostre Towary Stalowe
-Flinty Kurta
+Towary Stalowe u Kurta
+Flinty & Amunicja
 0,3,6,9
 Dzien dobry. Mamy pare fajnych zabawek na zapleczu...
 3
 Jasne, zobaczmy co tam jest.
 Nauczysz moich chlopcow strzelac? Sa za slabi!
-Dzieki, dzieki! Nie ma potrzeby. Czesc!
+Dzieki, ale nie potrzebuje. Pa!
 50
 Ok, mamy nastepujaca bron:
 ...swieza dostawa! Wlasnie dotarla 
@@ -28,7 +28,7 @@ Kogo mam wyszkolic?
 Krotkie szkolenie na strzelnicy lub
 To cie bedzie kosztowac 
 $ (T/N).
- wyszkolony na strzelnicy...
+ szkoli sie na strzelnicy...
  jest w obozie szkoleniowym...
 Twoj gangster stal sie silniejszy,
 inteligentniejszy i brutalniejszy!
