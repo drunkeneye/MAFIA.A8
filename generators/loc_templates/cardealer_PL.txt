@@ -1,10 +1,10 @@
 LOCACARS.gfx
-Dealer samochodowy
+Sklep z autami
 $0b, $af, $90, $0b
-Mopel Berghausser
-Nikola Graesslah
-Carpoint Speed
-TOGGOs Szybkie auto
+Smith Brothers Motors
+Chicago Auto Sales
+Hammerly Locomobile
+Mid-City Motors
 1,4,6,8
 Obszerny wybor najszybszych bryk...
 3
@@ -17,7 +17,7 @@ modeli.
 Ktory samochod wybierasz?
 Oferuje ci 
 $ za twoj stary grat.
-Facet podaje ci kluczyki.
+Koles podaje ci kluczyki.
 Dostajesz takze 
 Jest tu za duzo ludzi!
 Kto ma otworzyc samochod?
