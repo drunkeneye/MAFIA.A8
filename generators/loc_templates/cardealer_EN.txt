@@ -3,7 +3,7 @@ Car Dealer
 $0b, $af, $90, $0b
 Smith Brothers Motors
 Chicago Auto Sales
-Great Lakes Ford
+Hammerly Locomobile
 Mid-City Motors
 1,4,6,8
 A wide range of the fastest rides...

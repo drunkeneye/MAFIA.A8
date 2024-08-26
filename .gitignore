@@ -7,3 +7,10 @@ DELME
 __pycache__
 src/output/
 *.ATR
+assets/*
+src/atr.assets/*
+src/atr.assets/**
+src/atr.assets/*.apl
+atr.assets/*
+*/atr.assets/*
+./assets/*

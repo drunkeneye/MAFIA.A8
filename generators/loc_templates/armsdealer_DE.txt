@@ -3,7 +3,7 @@ Waffenladen
 $38, $af, $ff, $38
 Chicago Gun Shop
 Midwest Firearms
-Marshall Field & Company
+A.F. Stoeger Inc.
 Windy City Guns & Ammo
 0,3,6,9
 'Tag, Mister. Ein paar gute Handboeller gefaellig? Sind im Hinterzimmer...

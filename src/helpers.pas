@@ -309,6 +309,8 @@ begin;
         Poke($e500+k, b);
     end;
 
+    CRT_Writeln(buf_gangsterName);
+    CRT_NewLine;
     CRT_Writeln(buf_gangsterText1);
     CRT_Writeln(buf_gangsterText2);
     CRT_Writeln(buf_gangsterText3);

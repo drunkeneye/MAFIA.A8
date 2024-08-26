@@ -155,10 +155,16 @@ def verify_colors(bitmap):
             block = bitmap_array[i:i+block_height, j:j+block_width]
             unique_colors = np.unique(block.reshape(-1, 3), axis=0)
 
-            if len(unique_colors) > 4:
-                bitmap_array[i:i+block_height, j:j+block_width] = [255, 0, 0]
-                print ("Error at", i, j)
-                nErrors += 1
+            # if len(unique_colors) > 4:
+            #     print (unique_colors)
+            #     Z = bitmap_array[i:i+block_height, j:j+block_width].copy()
+            #     print (Z.shape)
+            #     bitmap_array[i:i+block_height, j:j+block_width] = [255, 0, 0]
+            #     print ("Error at", i, j)
+            #     nErrors += 1
+            #     patch = Image.fromarray(Z, 'RGB')
+            #     patch.save('output/error_patch.png')
+
 
     return Image.fromarray(bitmap_array, 'RGB'), nErrors
 

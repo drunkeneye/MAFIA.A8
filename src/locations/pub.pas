@@ -132,8 +132,6 @@ begin;
         // load gangster 
         CRT_NewLine;
         loadGangster(g);
-        CRT_Writeln(buf_gangsterName);
-        CRT_NewLine;
         CRT_Write_LocStr(39);
         CRT_Write(buf_gangsterPrice);
         CRT_Write_LocStr(40);

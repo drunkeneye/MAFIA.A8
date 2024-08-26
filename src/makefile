@@ -86,11 +86,12 @@ ASSET_FILES := acombmap.gfx \
 	wantefmf.gfx  wantefms.gfx\
 	afmapfnt.gfx  afmapscr.gfx \
 	safeclmf.gfx   safeclms.gfx \
-	finampic.gfx finawpic.gfx finagpic.gfx \
+	finampic.gfx \
 	fmusb800.gfx tmusb800.gfx \
 	playb000.gfx \
 	playb0rz.gfx \
 	titlepic.gfx
+# finawpic.gfx finagpic.gfx
 
 LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \
 	LOCABANK.gfx_$(LOCATION)  \

@@ -3,7 +3,7 @@ Automobil-Haendler
 $0b, $af, $90, $0b
 Smith Brothers Motors
 Chicago Auto Sales
-Great Lakes Ford
+Hammerly Locomobile
 Mid-City Motors
 1,4,6,8
 Ein umfangreiches Sortiment der flottesten Schlitten...
