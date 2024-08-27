@@ -17,9 +17,9 @@ to remove an uninvited guest...
 There was nothing to do today!
 A guy starts causing trouble!
 You must do something!
-SausageLisa
-MonkeyFaceAlf
-The Butcher
+SausageLisa#
+MonkeyFaceAlf#
+The Butcher#
 A drunken, wealthy guest
 wants to gamble. You can fleece him!
 Which trick do you want to use?
@@ -41,6 +41,6 @@ and you make
 $ income!
 Your financial institution is
 experiencing a boring slump...
-Players
-Poor victim
+Players#
+Poor victim#
 News

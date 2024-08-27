@@ -1,3 +1,7 @@
+// stupid delphi
+procedure loadMap();forward;
+procedure preloadMap();forward;
+
 
 const 
     last_Forgery: byte = 1;
@@ -63,27 +67,29 @@ end;
 
 procedure loadLocation(L:byte);
 var    locfname:   TString;
+    displayBMP: byte;
 begin;
+    displayBMP := 0;
     if lastLocationStrings = L then exit;
     lastLocationStrings := L;
     case L of 
-        BANK_:   locfname := LOCABANKfname;
-        FORGERY_:   locfname := LOCAFORGfname;
-        MONEYTRANSPORT_: locfname := LOCAMONYfname; 
-        LOANSHARK_: locfname := LOCALOANfname;
-        POLICE_: locfname := LOCAPOLIfname;
-        CARDEALER_: locfname := LOCACARSfname;
-        PUB_: locfname := LOCAPUBBfname;
+        BANK_: locfname := LOCABANKfname;  //  displayBMP := 1; end;
+        FORGERY_:   locfname := LOCAFORGfname; //  displayBMP := 1; end;
+        MONEYTRANSPORT_: locfname := LOCAMONYfname; //  displayBMP := 1; end;
+        LOANSHARK_: locfname := LOCALOANfname; //  displayBMP := 1; end;
+        POLICE_: locfname := LOCAPOLIfname; //  displayBMP := 1; end;
+        CARDEALER_: locfname := LOCACARSfname; //  displayBMP := 1; end;
+        PUB_: locfname := LOCAPUBBfname; //  displayBMP := 1; end;
         PUB2_: locfname := LOCAPUBCfname;
-        STORE_: locfname := LOCASTORfname;
-        HIDEOUT_: locfname := LOCAHIDEfname;
-        GAMBLING_:locfname := LOCAGAMBfname;
-        SUBWAY_: locfname := LOCASUBWfname;
-        ARMSDEALER_:locfname := LOCAARMSfname;
+        STORE_: locfname := LOCASTORfname; //  displayBMP := 1; end;
+        HIDEOUT_: locfname := LOCAHIDEfname; //  displayBMP := 1; end;
+        GAMBLING_:locfname := LOCAGAMBfname; //  displayBMP := 1; end;
+        SUBWAY_: begin; locfname := LOCASUBWfname; displayBMP := 1; end;
+        ARMSDEALER_:locfname := LOCAARMSfname; //  displayBMP := 1; end;
         MAIN_:locfname := LOCAMAINfname;
         JOB_: locfname:= LOCAJOBBfname;
-        MAJOR_: locfname := LOCAMAJOfname; 
-        CENTRALSTATION_: locfname := LOCACENTfname;
+        MAJOR_: locfname := LOCAMAJOfname; //  displayBMP := 1; end;
+        CENTRALSTATION_: locfname := LOCACENTfname; //  displayBMP := 1; end;
         COURT_: locfname := LOCACOURfname;
         CAUGHT_: locfname := LOCACAUGfname;
         ROADBLOCK_: locfname := LOCAROADfname;
@@ -92,6 +98,23 @@ begin;
         CREDITS_: locfname := LOCACREDfname;
     end;    
     loadxAPL (locfname, Pointer(baseAddress));
+
+    if showBitmaps = 0 then exit;
+
+    if displayBMP = 1 then 
+    begin;
+        enableMapConsole;
+        mapColorA := $04;
+        FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
+        locfname[1] := 'B';
+        loadxAPL (locfname, Pointer(MAP_FNT_ADDRESS));
+        locfname[1] := 'L';
+        CRT_ReadKey();
+        FillChar(Pointer(MAP_SCR_ADDRESS+40*15), 40*9, 0);
+        preloadMap(); // stupid, but true, need to reload the map now
+        mapColorA := $88;
+        enableConsole;
+    end; 
 end;
 
 

@@ -17,9 +17,9 @@ aby usunac nieproszonego goscia...
 Dzis nie bylo nic do roboty!
 Ktos zaczyna sie awanturowac!
 Musisz cos zrobic!
-Liza Kielbaska
-Alf Malpia Geba
-Rzeznik
+Liza Kielbaska#
+Alf Malpia Geba#
+Rzeznik#
 Pijany, bogaty gosc
 chce zagrac. Mozesz go okrasc!
 Ktorej sztuczki chcesz uzyc?
@@ -41,7 +41,7 @@ a ty zarabiasz
 $!
 W twojej instytucji kredytowej panuje
 nudny zastoj...
-Gracze
-Biedna ofiara
+Gracze#
+Biedna ofiara#
 Nowiny
 

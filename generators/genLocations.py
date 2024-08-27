@@ -25,7 +25,7 @@ def split_description(description, current_opt, maxn = 2):
         current_part = current_part[:-1]
         description_parts.append(current_part)
     
-    print (description_parts)
+    #print (description_parts)
     if len(description_parts) > maxn:
         raise ValueError("Too many description parts (maximum 5 allowed)")
     return description_parts
@@ -63,7 +63,7 @@ def create_location_data(txtfile, suffix):
     print("noptions:", num_options)
     print("Options:", options)
     print("noptions:", num_strings)
-    print("Strings:", strings)
+    #print("Strings:", strings)
 
     byte_stream = bytearray()
 
@@ -114,8 +114,13 @@ def create_location_data(txtfile, suffix):
         byte_stream.append(0)
 
     # each string save it 
-    print("Strings:", strings)
+    #print("Strings:", strings)
     for k in range(41):
+        if len(strings[k]) > 2:
+            if strings[k][-2] == "#":
+                assert(len(strings[k]) < 40)
+                dumpYString(byte_stream, strings[k][0:-2])
+                continue
         try:
             description_parts = split_description(strings[k], None, 1)
         except:

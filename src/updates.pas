@@ -49,15 +49,9 @@ begin
         FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
         tmp := currentPlayer SHL 3;
         if gangsterSex[tmp] = 0 then 
-        begin
-            loadxAPL (wanted_m_mfname, Pointer(MAP_FNT_ADDRESS));
-            loadxAPL (wanted_m_msname, Pointer(MAP_SCR_ADDRESS));
-        end
+            loadxAPL (wanted_m_fname, Pointer(MAP_FNT_ADDRESS))
         else 
-        begin
-            loadxAPL (wanted_f_mfname, Pointer(MAP_FNT_ADDRESS));
-            loadxAPL (wanted_f_msname, Pointer(MAP_SCR_ADDRESS));
-        end;
+            loadxAPL (wanted_f_fname, Pointer(MAP_FNT_ADDRESS));
         enableMapConsole();
         mapColorA := $04;
 

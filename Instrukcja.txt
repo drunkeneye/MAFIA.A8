@@ -39,6 +39,7 @@ używać joysticka.
 
 Mapa:
 ESC = pokaż gangsterów i aktualny stan gry
+START = przełącz wyświetlanie bitmapy po wprowadzeniu lokalizacji
 
 
 

@@ -39,6 +39,7 @@ Joystick benutzen.
 
 Karte:
 ESC = Zeige Gangster und aktuellen Spielstand an
+START = Schalte die Bitmap Anzeige um, wenn ein Ort betreten wird
 
 
 

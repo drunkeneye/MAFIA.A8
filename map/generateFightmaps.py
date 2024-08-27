@@ -306,11 +306,14 @@ if __name__ == '__main__':
         if len(charset) > 127:
             raise Exception ("diz not goen.")
         byte_stream = convert_charset_to_bytestream(charset, colormap)
-        save_byte_stream(byte_stream, f'../assets/{fm}fmapfnt.gfx')
+        byte_stream = byte_stream.ljust(0x400, b'\x00')
+        #save_byte_stream(byte_stream, f'../assets/{fm}fmapfnt.gfx')
 
         # convert charmap
         flat_charmap = bytes([byte for sublist in charmap for byte in sublist])
-        save_byte_stream(flat_charmap, f'../assets/{fm}fmapscr.gfx')
+        final_bytestream = byte_stream + flat_charmap
+        save_byte_stream(final_bytestream, f'../assets/{fm}fmapbmp.gfx')
+
 
 
 #

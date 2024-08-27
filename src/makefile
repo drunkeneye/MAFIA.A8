@@ -82,15 +82,17 @@ ASSET_FILES := acombmap.gfx \
 	hcombmap.gfx \
 	icombmap.gfx \
 	jcombmap.gfx \
-	wantemmf.gfx  wantemms.gfx\
-	wantefmf.gfx  wantefms.gfx\
-	afmapfnt.gfx  afmapscr.gfx \
-	safeclmf.gfx   safeclms.gfx \
+	wantmbmp.gfx \
+	wantfbmp.gfx \
+	afmapbmp.gfx \
+	safecbmp.gfx \
 	finampic.gfx \
 	fmusb800.gfx tmusb800.gfx \
 	playb000.gfx \
 	playb0rz.gfx \
-	titlepic.gfx
+	titlepic.gfx \
+	BOCASUBW.gfx
+
 # finawpic.gfx finagpic.gfx
 
 LOC_FILES := LOCAARMS.gfx_$(LOCATION)  \

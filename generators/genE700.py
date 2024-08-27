@@ -163,12 +163,12 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 
 
     dumpTString (byte_stream, fntname) # not needed anymore, but stays to keep pading intact
-    dumpTString (byte_stream, wanted_m_mfname)
-    dumpTString (byte_stream, wanted_m_msname)
-    dumpTString (byte_stream, wanted_f_mfname)
-    dumpTString (byte_stream, wanted_f_msname)
-    dumpTString (byte_stream, fightscrname)
-    dumpTString (byte_stream, fightfntname)
+    dumpTString (byte_stream, wanted_m_fname)
+    dumpTString (byte_stream, wanted_m_fname) # NOT NEEDED, so just copy for now
+    dumpTString (byte_stream, wanted_f_fname)
+    dumpTString (byte_stream, wanted_f_fname) # NOT NEEDED
+    dumpTString (byte_stream, fight_map_fname)
+    dumpTString (byte_stream, fight_map_fname) # NOT NEEDED
     dumpTString (byte_stream, gangsterFilename)
 
     for f in fstrings:
@@ -236,12 +236,9 @@ fpPosStart = [40*10+10,
 #scrname = 'AAMAPSCRAPL'
 fntname = 'ACOMBMAPAPL'
 #locname = 'AAMAPLOCAPL'
-wanted_m_mfname = 'WANTEMMFAPL'
-wanted_m_msname = 'WANTEMMSAPL'
-wanted_f_mfname = 'WANTEFMFAPL'
-wanted_f_msname = 'WANTEFMSAPL'
-fightscrname = 'AFMAPSCRAPL'
-fightfntname = 'AFMAPFNTAPL'
+wanted_m_fname = 'WANTMBMPAPL'
+wanted_f_fname = 'WANTFBMPAPL'
+fight_map_fname = 'AFMAPBMPAPL'
 gangsterFilename = 'GANGSTASDAT'
 
 

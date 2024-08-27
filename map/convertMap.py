@@ -273,6 +273,15 @@ def save_byte_stream(byte_stream, filename):
 
 
 
+def save_byte_stream_padded(byte_stream, filename, fsize):
+    if len(byte_stream) > fsize:
+        raise ValueError(f"Cannot save byte stream: Too many bytes!!?")
+    byte_stream = byte_stream.ljust(fsize, b'\x00')
+    with open(filename, 'wb') as file:
+        file.write(byte_stream)
+
+
+
 def render_used_characters(charset, border=0):
     # assume 4x8
     num_chars = len(charset)

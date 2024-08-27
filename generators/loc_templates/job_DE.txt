@@ -17,9 +17,9 @@ einen ungebetenen Gast zu entfernen...
 Heute gab es nichts zu tun!
 Ein Bursche faengt an, zu randalieren!
 Du musst etwas tun!
-WurstLise
-AffenFaceAlf
-Der Schlachter
+WurstLise#
+AffenFaceAlf#
+Der Schlachter#
 Ein betrunknener, schwerreicher Gast
 will spielen. Den kannst du ausnehmen!
 Welchen Trick moechtest du nutzen?
@@ -41,7 +41,7 @@ machst
 $ Einnahmen!
 In deinem Kreditinstitut herrscht
 langweilige Flaute...
-Spieler
-Armes Opfer
+Spieler#
+Armes Opfer#
 Neuigkeiten
 

@@ -187,6 +187,7 @@ begin
     msx.modul:=pointer(rmt_modul);
     msx.init(0);
     playMusic := 0; // for now
+    showBitmaps := 1;
 
     currentPlayer := 0;
     currentMonth := 1;
@@ -276,6 +277,12 @@ begin
 
             repeat;
                 ch := readKeyAndStick();
+
+                // load gfx?
+                if byte(ch) = $20 then begin;
+                    showBitmaps := showBitmaps xor 1;
+                end;
+
 
                 {$ifdef CHEAT}
                 // overview page M

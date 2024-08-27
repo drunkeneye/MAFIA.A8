@@ -1,8 +1,4 @@
 
-// stupid delphi
-procedure loadMap();forward;
-procedure preloadMap();forward;
-
 
 procedure nextPlayer();
 begin

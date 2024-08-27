@@ -69,12 +69,12 @@ var
     weaponSound:   array[0..8] of byte absolute e7adr + 63;
 
     fntname:   TString  absolute e7adr + 72;
-    wanted_m_mfname:   TString  absolute e7adr + 88;
-    wanted_m_msname:   TString absolute e7adr + 104;
-    wanted_f_mfname:   TString absolute e7adr + 120;
-    wanted_f_msname:   TString absolute e7adr + 136;
-    fightscrname:   TString absolute e7adr + 152;
-    fightfntname:   TString absolute e7adr + 168;
+    wanted_m_fname:   TString  absolute e7adr + 88;
+    // wanted_m_msname:   TString absolute e7adr + 104; EMPTY, USEABLE
+    wanted_f_fname:   TString absolute e7adr + 120;
+    // wanted_f_msname:   TString absolute e7adr + 136; EMPTY, USEABLE
+    fight_map_fname:   TString absolute e7adr + 152;
+    // fightfntname:   TString absolute e7adr + 168; EMPTY, USABLE
     gangsterFilename: TString absolute e7adr + 184;
     
     LOCABANKfname: TString absolute e7adr + 200;
@@ -170,6 +170,7 @@ var
     finalfname: TString;// = 'FINALMAPAPL';
     mapReloaded: Byte;
     spriteOffset: byte;
+    showBitmaps: byte;
 
 var  // for sprites 
     stick :   byte absolute $278;
