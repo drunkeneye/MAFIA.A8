@@ -447,7 +447,7 @@ gangsters_data_PL = [
         "Hazardzista Alf", "go", 0, 5, 80, 65, 0, 2300),
         ("Barman przedstawia ci Pistoletowego Henry'ego, moze nie najmadrzejszego, "
         "ale zdecydowanie budzacego strach ze wzgledu na swoje akrobatyczne strzaly.",
-        "Pistolet Henry", "go", 0, 40, 15, 60, 6, 3100),
+        "Henry Pistolet", "go", 0, 40, 15, 60, 6, 3100),
         ("Jeff Smart wyglada jakby wyszedl prosto z komiksu, ale nie lekcewaz go. "
          "Potrafi doprowadzic kazdego do szalu.",
          "Jeff Smart", "go", 0, 40, 80, 15, 0, 2300),
