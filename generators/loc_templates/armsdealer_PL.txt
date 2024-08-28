@@ -1,9 +1,9 @@
 LOCAARMS.gfx
 Sklep z bronia
 $38, $af, $ff, $38
-Rusznikarz
+Chicago Gun Shop
 Bron Palna u Axla
-Towary Stalowe u Kurta
+A.F. Stoeger Inc.
 Flinty & Amunicja
 0,3,6,9
 Dzien dobry. Mamy pare fajnych zabawek na zapleczu...
@@ -12,7 +12,7 @@ Jasne, zobaczmy co tam jest.
 Nauczysz moich chlopcow strzelac? Sa za slabi!
 Dzieki, ale nie potrzebuje. Pa!
 50
-Ok, mamy nastepujaca bron:
+OK, mamy nastepujaca bron:
 ...swieza dostawa! Wlasnie dotarla 
 partia granatow recznych armii!
 Twoj wybor?
@@ -32,7 +32,7 @@ $ (T/N).
  jest w obozie szkoleniowym...
 Twoj gangster stal sie silniejszy,
 inteligentniejszy i brutalniejszy!
-dlugie w obozie treningowym (S/O)?
+dlugie w obozie treningowym (S/O)? 
 Zachowujesz swoja stara bron.
 Dla ktorego gangstera?
 Wlasnie trenowales!
