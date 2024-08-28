@@ -1,5 +1,5 @@
 LOCACARS.gfx
-Sklep z autami
+Dealer aut
 $0b, $af, $90, $0b
 Smith Brothers Motors
 Chicago Auto Sales
