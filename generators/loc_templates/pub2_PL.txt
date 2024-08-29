@@ -1,5 +1,5 @@
 LOCAPUBC.gfx
-Pub/Bar (mroczna knajpa)
+Pub/Bar (szemrana knajpa)
 $30, $af, $ff, $30
  
  
