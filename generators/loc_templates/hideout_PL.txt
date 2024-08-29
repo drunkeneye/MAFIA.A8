@@ -2,9 +2,9 @@ LOCAHIDE.gfx
 Hotel (kryjowka)
 $02, $af, $ff, $02
 Hotel Sherman
-The Blackstone
-The Edgewater Beach Hotel
+Czarny Kamien
 Hotel Parkowy
+Hotel Przy Plazy
 1,5,8,9
 Ach, klient! Czego pan sobie zyczy?
 4
@@ -23,7 +23,7 @@ Platnosc z gory!
 Masz tu schronienie na jeszcze
  mies.!
 Na ile miesiecy chcesz wynajac? 
-Zycze panu milego dnia!
+Zycze milego dnia!
 Wojna gangow!
 Ale tu nikt nie mieszka...
 Dzwonisz do 
