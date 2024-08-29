@@ -1,12 +1,12 @@
 LOCALOAN.gfx
 Rekin Kredytowy
 $46, $af, $ff, $46
-U Petera
-Bracia Dynamit
-Dom Pieniezny Hansel
-Raz Dwa
+Riverfront Credit Line
+Downtown Credit Agency
+Chicago Loan & Trust
+Windy City Financial Group
 1,2,7,8
-Dzien dobry, w czyms moge pomoc?
+Dzien bardzo dobry, w czyms moge pomoc?
 6
 Tak. Potrzebuje troche gotowki!
 Nie, nie! Chce tylko splacic dlugi!
