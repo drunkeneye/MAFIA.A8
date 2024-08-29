@@ -17,6 +17,6 @@ Czy chcesz adwokata (T/N)?
 Ile gotowki wplacasz (0-10000$)?
 Zostajesz uniewinniony!
 Twoj adwokat wywalczyl kare
- miesiecy!
+ mies.!
 Spedzisz 
- miesiecy za kratkami!
+ mies. za kratkami!
