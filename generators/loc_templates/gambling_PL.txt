@@ -1,9 +1,9 @@
 LOCAGAMB.gfx
 Szulernia
 $1e, $af, $00, $1e
-Pokerface Den
-Hazardotopia
+Klub Gwiezdny Pył
 Jokerowy Raj
+Zlota Podkowa
 Kasyno Carlos
 2,4,5,7
 Ej, kolego, co powiesz na gre? Karty? Ruletka?
