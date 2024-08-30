@@ -1,7 +1,7 @@
 LOCASTOR.gfx
 Zwykly sklep
 $d4, $af, $ff, $d4
-Tiffany & Co.
+Bracia Mandel
 Market przy Glownej
 Spozywczy
 Woolworth
@@ -24,7 +24,7 @@ Jack odchodzi na razie z tego
 rewiru, az wszystko wroci do normy.
 Ach, stara sztuczka policyjna! 
 Nikogo juz nie oszukasz!
-Ju..j..juz place! T..tutaj 
+Ju...j..juz place! T..tutaj 
 m..masz..
 (chlip) Twoja biedna mama! Daj jej
 Mam
@@ -45,7 +45,7 @@ znajdowalo sie
 Obiecuje ci piekny nagrobek i laduje
 swoja bron maszynowa!
 Sklepikarz
-Bezczelny facet nie zyje.
+Bezczelny typ zbity na kwasne jablko.
 Mial jeszcze
 $ w kieszeni!
 Gang Jacka z Blizna
