@@ -150,8 +150,9 @@ begin;
         // show safe
         FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
         enableMapConsole();
+        mapColorA := $04;
+        mapColorB := $0a;
         loadxAPL (safeclmfname, Pointer(MAP_FNT_ADDRESS));
-        // loadxAPL (safeclmsname, Pointer(MAP_SCR_ADDRESS));
         FillChar(Pointer(MAP_SCR_ADDRESS+17*40), 80, 0); // remove number chars
         didFight := 1; // remember to reload map
         t[0] := Random(10);
@@ -163,12 +164,13 @@ begin;
 
         safeOpen := 0; 
         whpos := 0;
-        base := MAP_SCR_ADDRESS+6*40+17;
-        repeat;    
-            Poke(base+whpos SHL 1, 107);
-            Poke(base+whpos SHL 1+2, 108);
+        base := MAP_SCR_ADDRESS+6*40+16; 
+        repeat;
+            // the two 'handles' $70=pos of 0
+            Poke(base+whpos SHL 1, $70-2);
+            Poke(base+whpos SHL 1+2, $70-1);
             for k := 0 to 2 do 
-                Poke(base+1+k+k, 109+c[k]);
+                Poke(base+1+k+k, $70+c[k]);
             repeat;
                 ch := checkKeyAndStick ();
             until (ch = #15) or (ch = #14) or (ch = #07) or (ch = #06) or (ch = #$2f);
@@ -222,6 +224,8 @@ begin;
             WaitFrames(100);
             waitForKey();
             enableConsole();
+            mapColorA := $88;
+            mapColorB := $06;
             exit;
         end;
 
@@ -230,6 +234,8 @@ begin;
             // SAFE ANIMATION TODO
             WaitFrames(60); 
             waitForKey();
+            mapColorA := $88;
+            mapColorB := $06;
             crackedBank(BANK_); 
             exit;
         end;
@@ -253,6 +259,8 @@ begin;
         playMusic := 0;
 
         waitForKey();
+        mapColorA := $88;
+        mapColorB := $06;
         prepareFightAgainstPolice();
         if doFight() = 1 then
         begin;

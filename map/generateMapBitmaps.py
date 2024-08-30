@@ -62,9 +62,10 @@ def process_bitmap(image_path, output_prefix, remap = False, resize = True):
     # Create charset and charmap
     charset, charmap = create_charset_and_charmap(bitmap_result)
     print(len(charset))
+    # save it anyway
+    img_charset = render_used_characters_padded(charset)
+    img_charset.save(f'output/charset_{output_prefix}.png')
     if len(charset) > 127:
-        img_charset = render_used_characters_padded(charset)
-        img_charset.save(f'output/charset_{output_prefix}.png')
         raise Exception("diz not goen.")
 
     # Convert charset to byte stream and pad
