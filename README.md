@@ -1,6 +1,6 @@
 # MAFIA
 
-A game originally by Igelsoft, ported to Atari 8-bit by drunkeneye.
+A game originally by Igelsoft, ported to Atari 8-bit by drunkeneye, +Adam+ and Miker.
 
 
 
