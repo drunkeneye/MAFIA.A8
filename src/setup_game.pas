@@ -68,17 +68,22 @@ begin
         CRT_WriteCentered_LocStr(4, 4);
         CRT_Write(j+1);
         CRT_NewLine();
-        CRT_WriteCentered_LocStr(6, 5);
-        CRT_GotoXY(20-8-1,7);
-        gangsterNames[tmp] := Atascii2Antic(CRT_ReadString(15));
+
+        repeat;
+            CRT_WriteCentered_LocStr(6, 5);
+            CRT_GotoXY(20-8-1,7);
+            gangsterNames[tmp] := Atascii2Antic(CRT_ReadString(15));
+        until Length(gangsterNames[tmp]) > 0;
 
         // init gangsters as well
         plNGangsters[currentPlayer] := 1;
         plGangsters[tmp] := j;
 
-        CRT_WriteCentered_LocStr(9, 6);
-        CRT_GotoXY(20-8-1,10);
-        plGang[currentPlayer] := Atascii2Antic(CRT_ReadString(15));
+        repeat;
+            CRT_WriteCentered_LocStr(9, 6);
+            CRT_GotoXY(20-8-1,10);
+            plGang[currentPlayer] := Atascii2Antic(CRT_ReadString(15));
+        until Length(plGang[currentPlayer]) > 0;
 
         CRT_WriteCentered_LocStr(12, 7);
         CRT_WriteCentered_LocStr(14, 13);

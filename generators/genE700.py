@@ -35,7 +35,7 @@ def dumpStrings_EN(byte_stream):
     dumpTStringATASCII (byte_stream, 'You hit ');
     dumpTStringATASCII (byte_stream, ' !');
     dumpTStringATASCII (byte_stream, 'Unfortunately,');
-    dumpTStringATASCII (byte_stream, 'is now dead.');
+    dumpTStringATASCII (byte_stream, 'is done for.');
     dumpTStringATASCII (byte_stream, 'You missed!');
     dumpTStringATASCII (byte_stream, 'Winner is ');
 
@@ -69,7 +69,7 @@ def dumpStrings_DE(byte_stream):
     dumpTStringATASCII (byte_stream, 'Du hast ');
     dumpTStringATASCII (byte_stream, ' getroffen!');
     dumpTStringATASCII (byte_stream, 'Leider ist');
-    dumpTStringATASCII (byte_stream, 'jetzt tot.');
+    dumpTStringATASCII (byte_stream, 'erledigt.');
     dumpTStringATASCII (byte_stream, 'Verfehlt!');
     dumpTStringATASCII (byte_stream, 'Gewonnen hat ');
 

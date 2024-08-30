@@ -49,6 +49,7 @@ Procedure enableMapConsole();
 Begin;
     if consoleState = 2 then exit;
     mapColorA := $88; // ensure this when enabling
+    mapColorB := $06;
     EnableDLI(@dli_map);
     DLISTL := DL_MAP_ADR;
     SetCharset (Hi(MAP_FNT_ADDRESS));

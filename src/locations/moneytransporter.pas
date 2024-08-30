@@ -1,6 +1,5 @@
  
 function moneyTransporterChoices:   byte;
-var k:   byte;
 begin;
     loadLocation(MONEYTRANSPORT_);
     ShowLocationHeader;

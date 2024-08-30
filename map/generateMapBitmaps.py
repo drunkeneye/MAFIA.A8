@@ -20,22 +20,38 @@ def pad_image(img, output_size):
     return new_img
  
 
+def closest_gray_color(color):
+    gray_value = int(round(np.mean(color)))  # Get average to convert to grayscale
+    if gray_value < (91 + 0) // 2:
+        return (0, 0, 0)
+    elif gray_value < (169 + 91) // 2:
+        return (91, 91, 91)
+    elif gray_value < (255 + 169) // 2:
+        return (169, 169, 169)
+    else:
+        return (255, 255, 255)
 
-def process_bitmap(image_path, output_prefix):
+
+def process_bitmap(image_path, output_prefix, remap = False, resize = True):
     bitmap_result = Image.open(image_path).convert('RGB')
-    if bitmap_result.size != (50, 100):
-        bitmap_result = bitmap_result.resize((50, 100))
-        # warn maybe?
-        print (f"### this image {image_path} is not 50x100. why?")
+
+    if resize == True:
+        if bitmap_result.size != (50, 100):
+            bitmap_result = bitmap_result.resize((50, 100), Image.NEAREST)
+            print (f"### this image {image_path} is not 50x100. why?")
+            # these images will eb converted to the 4 color greys we had.
+            # so nothing to do
+
+    if remap == True:
+        image_np = np.array(bitmap_result)
+        remapped_image_np = np.apply_along_axis(closest_gray_color, 2, image_np)
+        bitmap_result = Image.fromarray(np.uint8(remapped_image_np))
+
 
     bitmap_result = pad_image(bitmap_result, (160, 152))
 
     # Replace specific colors
     pixels = bitmap_result.load()
-    for x in range(bitmap_result.width):
-        for y in range(bitmap_result.height):
-            if pixels[x, y] in [(15, 15, 26), (14, 14, 26)]:
-                pixels[x, y] = (0, 0, 0)
 
     # Verify colors and handle errors
     verification_result, nErrors = verify_colors(np.array(bitmap_result))
@@ -79,6 +95,11 @@ if __name__ == '__main__':
         [128, 128, 0],   # CyanBlue
     ]
 
+
+    process_bitmap("./bitmaps/wanted_m_final.png", "wantm", True)
+    process_bitmap("./bitmaps/wanted_f_final.png", "wantf", True)
+    process_bitmap("./bitmaps/safeC_final.png", "safec", True, False)
+
     process_bitmap("./locations/subway.png", "BOCASUBW")
     process_bitmap("./locations/store.png", "BOCASTOR")
     process_bitmap("./locations/police.png", "BOCAPOLI")
@@ -95,11 +116,6 @@ if __name__ == '__main__':
     process_bitmap("./locations/gambling.png", "BOCAGAMB")
     process_bitmap("./locations/major.png", "BOCAMAJO")
 #    process_bitmap("./bitmaps/centralstation.png", "BOCASUBW")
-
-    process_bitmap("./bitmaps/wanted_m_final.png", "wantm")
-    process_bitmap("./bitmaps/wanted_f_final.png", "wantf")
-
-    process_bitmap("./bitmaps/safeC_final.png", "safec")
 
  
 

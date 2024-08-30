@@ -1,7 +1,7 @@
 LOCAGAMB.gfx
 Szulernia
 $1e, $af, $00, $1e
-Klub Gwiezdny Pył
+Klub Gwiezdny Pyl
 Jokerowy Raj
 Zlota Podkowa
 Kasyno Carlos

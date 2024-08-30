@@ -90,7 +90,6 @@ end;
 
 
 procedure drawMajorMoney();
-var i:byte;
 begin 
     if currentMap = 7 then 
     begin 
@@ -133,13 +132,13 @@ begin
             DPoke($fa6e, $4d4d);
             // 	FA60 : 58 58 44 44 44 44 2E 2E 2E 2E 4D 4D 4D 4D 4D 4D XXDDDD....MMMMMM
             // [('0x49', '0x4a', 'M'), ('0x4b', '0x4c', 'M'), ('0x4d', '0x4e', 'M')]
-            DPoke($f642, $4a49);
-            DPoke($f644, $4c4b);
-            DPoke($f646, $4e4d);
+            DPoke($f642, $4b4a);
+            DPoke($f644, $4d4c);
+            DPoke($f646, $4f4e);
             // [('0x55', '0x56', 'M'), ('0x57', '0x58', 'M'), ('0x59', '0x5a', 'M')]
-            DPoke($f66a, $5655);
-            DPoke($f66c, $5857);
-            DPoke($f66e, $5a59);
+            DPoke($f66a, $5756);
+            DPoke($f66c, $5958);
+            DPoke($f66e, $5b5a);
         end; 
 
         // major 
@@ -192,8 +191,8 @@ begin
             DPoke($f962-4, $4e4e);
 
             // ('0x1c', '0x40', 'N'), ('0x41', '0x42', 'N'), 
-            DPoke($f560-4, $401c);
-            DPoke($f562-4, $4241);
+            DPoke($f560-4, $411c);
+            DPoke($f562-4, $4342);
         end 
     end;
 end; 

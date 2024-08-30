@@ -247,9 +247,7 @@ procedure paintPlayer(clear: byte);
 var
     playerHeight:   byte;
     playerOfs:   word;
-    i, j, z: byte;
-    reversedByte, originalByte: byte;
-    srcAdr, tgtAdr: word;
+    z: byte;
 begin
     z := currentPlayer SHL 3;
 

@@ -13,8 +13,9 @@ dli1:
     sta WSYNC
 
     mva #$0e atari.colpf0 ; white 
-    mva #$06 atari.colpf1 ; lightgrey
-    
+
+    mva mapColorB atari.colpf1
+    ; mva #$06 atari.colpf1 ; lightgrey
     
     mva mapColorA atari.colpf2
     ; mva #$88 atari.colpf2 ; bluish

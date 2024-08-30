@@ -2,8 +2,7 @@
  
 
 var
-    safeclmfname:   TString =   'SAFECLMFAPL';
-    safeclmsname:   TString =   'SAFECLMSAPL';
+    safeclmfname:   TString =   'SAFECBMPAPL';
 
     
 function bankChoices: byte;
@@ -152,7 +151,7 @@ begin;
         FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
         enableMapConsole();
         loadxAPL (safeclmfname, Pointer(MAP_FNT_ADDRESS));
-        loadxAPL (safeclmsname, Pointer(MAP_SCR_ADDRESS));
+        // loadxAPL (safeclmsname, Pointer(MAP_SCR_ADDRESS));
         FillChar(Pointer(MAP_SCR_ADDRESS+17*40), 80, 0); // remove number chars
         didFight := 1; // remember to reload map
         t[0] := Random(10);

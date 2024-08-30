@@ -4,9 +4,9 @@ procedure preloadMap();forward;
 
 
 const 
-    last_Forgery: byte = 1;
+    // last_Forgery: byte = 1;
     last_Train: byte = 2;
-    last_Bribe: byte = 3;
+    // last_Bribe: byte = 3;
 
 const 
     BANK_: byte = 1;
@@ -63,8 +63,9 @@ begin;
     CRT_WriteCentered(2, currentSubLocationName);
     CRT_GotoXY(0, 4);
 end;
+ 
 
-
+{$ifdef LOCATIONSGFX} 
 procedure loadLocation(L:byte);
 var    locfname:   TString;
     displayBMP: byte;
@@ -73,22 +74,22 @@ begin;
     if lastLocationStrings = L then exit;
     lastLocationStrings := L;
     case L of 
-        BANK_: locfname := LOCABANKfname;  //  displayBMP := 1; end;
-        FORGERY_:   locfname := LOCAFORGfname; //  displayBMP := 1; end;
-        MONEYTRANSPORT_: locfname := LOCAMONYfname; //  displayBMP := 1; end;
-        LOANSHARK_: locfname := LOCALOANfname; //  displayBMP := 1; end;
-        POLICE_: locfname := LOCAPOLIfname; //  displayBMP := 1; end;
-        CARDEALER_: locfname := LOCACARSfname; //  displayBMP := 1; end;
-        PUB_: locfname := LOCAPUBBfname; //  displayBMP := 1; end;
+        BANK_: begin; locfname := LOCABANKfname;  displayBMP := 1; end;
+        FORGERY_:  begin; locfname := LOCAFORGfname;  displayBMP := 1; end;
+        MONEYTRANSPORT_: begin; locfname := LOCAMONYfname;  displayBMP := 1; end;
+        LOANSHARK_: begin; locfname := LOCALOANfname;  displayBMP := 1; end;
+        POLICE_: begin;  locfname := LOCAPOLIfname;  displayBMP := 1; end;
+        CARDEALER_: begin; locfname := LOCACARSfname;  displayBMP := 1; end;
+        PUB_: begin; locfname := LOCAPUBBfname;  displayBMP := 1; end;
         PUB2_: locfname := LOCAPUBCfname;
-        STORE_: locfname := LOCASTORfname; //  displayBMP := 1; end;
-        HIDEOUT_: locfname := LOCAHIDEfname; //  displayBMP := 1; end;
-        GAMBLING_:locfname := LOCAGAMBfname; //  displayBMP := 1; end;
+        STORE_: begin; locfname := LOCASTORfname;  displayBMP := 1; end;
+        HIDEOUT_: begin; locfname := LOCAHIDEfname;  displayBMP := 1; end;
+        GAMBLING_: begin; locfname := LOCAGAMBfname; displayBMP := 1; end;
         SUBWAY_: begin; locfname := LOCASUBWfname; displayBMP := 1; end;
-        ARMSDEALER_:locfname := LOCAARMSfname; //  displayBMP := 1; end;
+        ARMSDEALER_: begin; locfname := LOCAARMSfname;  displayBMP := 1; end;
         MAIN_:locfname := LOCAMAINfname;
         JOB_: locfname:= LOCAJOBBfname;
-        MAJOR_: locfname := LOCAMAJOfname; //  displayBMP := 1; end;
+        MAJOR_: begin; locfname := LOCAMAJOfname;  displayBMP := 1; end;
         CENTRALSTATION_: locfname := LOCACENTfname; //  displayBMP := 1; end;
         COURT_: locfname := LOCACOURfname;
         CAUGHT_: locfname := LOCACAUGfname;
@@ -116,6 +117,42 @@ begin;
         enableConsole;
     end; 
 end;
+{$else}
+procedure loadLocation(L:byte);
+var    locfname:   TString;
+begin;
+    if lastLocationStrings = L then exit;
+    lastLocationStrings := L;
+    case L of 
+        BANK_:   locfname := LOCABANKfname;
+        FORGERY_:   locfname := LOCAFORGfname;
+        MONEYTRANSPORT_: locfname := LOCAMONYfname; 
+        LOANSHARK_: locfname := LOCALOANfname;
+        POLICE_: locfname := LOCAPOLIfname;
+        CARDEALER_: locfname := LOCACARSfname;
+        PUB_: locfname := LOCAPUBBfname;
+        PUB2_: locfname := LOCAPUBCfname;
+        STORE_: locfname := LOCASTORfname;
+        HIDEOUT_: locfname := LOCAHIDEfname;
+        GAMBLING_:locfname := LOCAGAMBfname;
+        SUBWAY_: locfname := LOCASUBWfname;
+        ARMSDEALER_:locfname := LOCAARMSfname;
+        MAIN_:locfname := LOCAMAINfname;
+        JOB_: locfname:= LOCAJOBBfname;
+        MAJOR_: locfname := LOCAMAJOfname; 
+        CENTRALSTATION_: locfname := LOCACENTfname;
+        COURT_: locfname := LOCACOURfname;
+        CAUGHT_: locfname := LOCACAUGfname;
+        ROADBLOCK_: locfname := LOCAROADfname;
+        UPDATES_: locfname := LOCAUPDTfname;
+        SETUP_: locfname := LOCASETUfname;
+        CREDITS_: locfname := LOCACREDfname;
+    end;    
+    loadxAPL (locfname, Pointer(baseAddress));
+end;
+{$endif}
+
+
 
 
 function ShowLocation(L: byte):   byte;

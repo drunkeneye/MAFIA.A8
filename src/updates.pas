@@ -54,7 +54,7 @@ begin
             loadxAPL (wanted_f_fname, Pointer(MAP_FNT_ADDRESS));
         enableMapConsole();
         mapColorA := $04;
-
+        mapColorB := $0a;
         CRT_WriteCentered_LocStr(19, 3);
         CRT_NewLine();
         CRT_Write_LocStr(4);
@@ -71,6 +71,7 @@ begin
         CRT_Write_LocStr(10);
         CRT_ReadKey();
         mapColorA := $88;
+        mapColorB := $06;
         blackConsole();
         FillChar(Pointer(MAP_SCR_ADDRESS+40*15), 40*9, 0);
         plRank[currentPlayer] := newRank;

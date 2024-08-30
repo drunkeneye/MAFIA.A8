@@ -160,7 +160,8 @@ var
     LOCACENTfname: TString absolute e7adr + 944+16+64; //$e9fe
     LOCACREDfname: TString absolute e7adr + 944+16+64+16; //$ea10 <--hopefully
     mapColorA: byte absolute $ea11;
-    spriteMoveDir: shortint absolute $ea12;
+    mapColorB: byte absolute $ea12;
+    spriteMoveDir: shortint absolute $ea13;
 
 var 
     e7fname: TString = 'E700PAGEAPL';
