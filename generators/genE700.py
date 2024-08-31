@@ -100,11 +100,11 @@ def dumpStrings_DE(byte_stream):
 
 
 def dumpStrings_PL(byte_stream):
-    dumpTStringATASCII (byte_stream, 'Trafiles ');
-    dumpTStringATASCII (byte_stream, '!!');
+    dumpTStringATASCII (byte_stream, 'Trafiony ');
+    dumpTStringATASCII (byte_stream, '!');
     dumpTStringATASCII (byte_stream, 'Niestety,');
-    dumpTStringATASCII (byte_stream, ' nie zyje!');
-    dumpTStringATASCII (byte_stream, 'Chybiles!');
+    dumpTStringATASCII (byte_stream, ' odpada z walki!');
+    dumpTStringATASCII (byte_stream, 'Pudlo!');
     dumpTStringATASCII (byte_stream, 'Kto wygral? ');
 
     dumpYStringATASCII (byte_stream, 'Nacisnij klawisz!');
