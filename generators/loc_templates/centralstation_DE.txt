@@ -1,6 +1,6 @@
 LOCACENT.gfx
 Central Station (Bahnhof)
-$a6, $af, $ff, $a6
+$a2, $ad, $ff, $a2
  
   
  
