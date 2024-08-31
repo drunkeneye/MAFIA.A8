@@ -1,6 +1,6 @@
 LOCAPOLI.gfx
 Komisariat Policji
-$86, $af, $ff, $86
+$84, $af, $ff, $84
 Komisariat Zachodni
 Centrala Polnocna
 Posterunek Poludniowy
