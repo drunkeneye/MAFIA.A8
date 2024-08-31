@@ -1,6 +1,6 @@
 LOCAROAD.gfx
 Roadblock!!!
-$70, $af, $0e, $70
+$80, $af, $0e, $80
   
   
   
