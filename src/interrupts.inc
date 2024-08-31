@@ -40,8 +40,12 @@ dli1:
     rti
 
 dli2:
-    mva #$ff atari.colpf1 ; lum
+    nop
+    nop
+    nop
+    nop
     mva #$00 atari.colpf2 ; hue
+    mva #$ff atari.colpf1 ; lum
 
     lda #>MAINFONT_ADR
     sta $D409 ; CHBAS_real
