@@ -1,6 +1,6 @@
 LOCASUBW.gfx
 Stacja metra
-$72, $af, $ff, $72
+$d0, $ad, $ff, $d0
 Ogden Station
 Roosevelt Station
 Pulaski Station
