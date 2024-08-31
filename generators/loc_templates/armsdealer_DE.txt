@@ -1,6 +1,6 @@
 LOCAARMS.gfx
 Waffenladen
-$38, $af, $ff, $38
+$74, $af, $ff, $74
 Chicago Gun Shop
 Midwest Firearms
 A.F. Stoeger Inc.
