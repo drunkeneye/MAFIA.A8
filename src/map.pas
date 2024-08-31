@@ -137,9 +137,9 @@ begin
             DPoke($f642, $4d4c);
             DPoke($f644, $4f4e);
             DPoke($f646, $5150);
-            DPoke($f66a, $5857);
-            DPoke($f66c, $5a59);
-            DPoke($f66e, $5c5b);
+            DPoke($f66a, $5958);
+            DPoke($f66c, $5b5a);
+            DPoke($f66e, $5d5c);
         end; 
 
         // major 
