@@ -1,6 +1,6 @@
 LOCASUBW.gfx
 Subway Station (Subway)
-$d0, $ad, $ff, $d0
+$d0, $ad, $dd, $d0
 Ogden Station
 Roosevelt Station
 Pulaski Station
