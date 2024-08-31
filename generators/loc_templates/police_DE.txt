@@ -1,6 +1,6 @@
 LOCAPOLI.gfx
 Polizei-Praesidium
-$86, $af, $ff, $86
+$84, $af, $ff, $84
 Praesidium West
 Zentrale Nord
 Station Sued
