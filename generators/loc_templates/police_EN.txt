@@ -1,6 +1,6 @@
 LOCAPOLI.gfx
 Police Headquarters
-$86, $af, $ff, $86
+$84, $af, $ff, $84
 West Precinct
 North Central
 South Station
