@@ -1,6 +1,6 @@
 LOCAARMS.gfx
 Sklep z bronia
-$38, $af, $ff, $38
+$74, $af, $ff, $74
 Chicago Gun Shop
 Bron Palna u Axla
 A.F. Stoeger Inc.
