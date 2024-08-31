@@ -1,7 +1,7 @@
 LOCASTOR.gfx
 Einfacher Laden
 $d4, $af, $ff, $d4
-Tiffany & Co.
+Mandel Brueder
 Main Street Market
 Neighborhood Grocer
 Woolworth
