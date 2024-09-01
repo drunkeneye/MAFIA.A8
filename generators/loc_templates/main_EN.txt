@@ -1,6 +1,6 @@
 LOCAMAIN.gfx
 Overview
-$f4, $af, $10, $f4
+$18, $af, $10, $18
  
  
  
