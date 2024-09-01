@@ -39,7 +39,6 @@ use the joystick.
 
 Map:
 ESC = Show gangsters and current game status
-START = Toggle bitmap display when a location is entered
 
 
 

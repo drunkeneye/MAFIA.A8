@@ -10,9 +10,9 @@ Einen wunderschoenen guten Tag, kann ich ihnen helfen?
 6
 Ja. Ich brauche ein bisschen Knete!
 Nein, nein! Ich will nur meine Schulden abzahlen!
-Laden aufkaufen bzw. verkaufen
-Kapital im Laden aendern (bei eigenem Kreditgeschaeft)
-Ueberfaellige Schulden eintreiben (bei eigenem Geschaeft)
+Business aufkaufen bzw. verkaufen
+Kapital im Business aendern (bei eigenem Kreditgeschaeft)
+Ueberfaellige Schulden eintreiben (bei eigenem Business)
 Ich helfe mir selbst
 50
 Zahle erstmal deine alten Schulden ab!
@@ -26,7 +26,7 @@ Du hast deine Schulden zurueckgezahlt!
 Ok, du hast jetzt noch 
 Schulden!
 Du hast schon ein Kreditgeschaeft!
-Dieser Laden gehoert dir nicht!
+Dieses Business gehoert dir nicht!
 Alle Schuldner haben zeitig gezahlt!
 Ein Kunde schuldet dir noch was.
 Aber er lauert dir mit einem Gewehr
