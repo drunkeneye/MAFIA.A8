@@ -415,7 +415,7 @@ begin
     CRT_Clear();
 
     loadLocation(MAIN_);
-    // if one player won, it sok, if not all have won
+    // if one player won, its ok, if not all have won
     if plNWinners = 1 then begin
         for k := 0 to nPlayers-1 do
         begin
@@ -450,17 +450,15 @@ begin
         CRT_WriteCentered_LocStr(7+currentChoice+2, 39);
         finalfname := 'FINAGPICAPL';
     end;
-    waitForKey();
 
     DisableDLI;
     DLISTL := DL_BLACK_CONSOLE_ADR;
     Waitframes(10);
 
     // DisableVBLI;
+    // this will be around $9890 right now, so we will not overwrite this code.
     loadxAPL (finalfname, Pointer($3000-6));
 
-
-    // this will be around $9890 right now
     finalfname := 'FMUSB800APL';
     loadxAPL(finalfname, pointer($b800));
     finalfname := 'PLAYB0RZAPL';

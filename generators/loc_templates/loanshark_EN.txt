@@ -10,9 +10,9 @@ A very good day, can I help you?
 6
 Yes. I need some cash!
 No, no! I just want to pay off my debts!
-Buy or sell a shop
-Change capital in the shop (in your own credit business)
-Collect overdue debts (in your own business)
+Buy or sell the business
+Change capital (if your own business)
+Collect overdue debts (if your own business)
 I'll help myself
 50
 First, pay off your old debts!

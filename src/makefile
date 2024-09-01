@@ -86,7 +86,7 @@ ASSET_FILES := acombmap.gfx \
 	wantfbmp.gfx \
 	afmapbmp.gfx \
 	safecbmp.gfx \
-	finampic.gfx \
+	finagpic.gfx \
 	fmusb800.gfx tmusb800.gfx \
 	playb000.gfx \
 	playb0rz.gfx \
