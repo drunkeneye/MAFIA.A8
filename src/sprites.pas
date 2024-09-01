@@ -309,12 +309,18 @@ begin
     // we must be on the street because else.
     dir_x := 0;
     dir_y := 0;
-    
+
     case ch of
-        #06:   begin; dir_x := -1; spriteMoveDir := -1; end;
-        #07:   begin; dir_x := 1; spriteMoveDir := 1; end;
-        #14:   dir_y := -1;
-        #15:   dir_y := +1;
+        #06:    begin; 
+                    dir_x := -1; 
+                    spriteMoveDir := -1; 
+                end;
+        #07:    begin; 
+                    dir_x := 1; 
+                    spriteMoveDir := 1; 
+                end;
+        #14:    dir_y := -1;
+        #15:    dir_y := +1;
         else
             begin;
                 WaitFrames(moveSpeed);
@@ -358,6 +364,8 @@ begin
     if curLoc = NONE_ then
     begin;
         result := STREET_;
+        spriteOffset := 0;
+        paintPlayer (1); // repaint player nonethless, because they might have 'changed' their direction
         exit;
     end;
 
@@ -442,7 +450,7 @@ procedure enableSprites();
 begin;
     // clear sprite first
     clearSprites();
-    spriteMoveDir := 0;
+    spriteMoveDir := 1;
     //https://github.com/playermissile/dli_tutorial/blob/master/src/util_pmg.s
     asm;
         // we need to put it into registers directly,  because we do not have

@@ -86,6 +86,7 @@ begin
   mapPos_Y := plMapPosY[currentPlayer];
   playerPos_X := 49+mapPos_X*8;
   playerPos_Y := 36+mapPos_Y*8;
+  spriteMoveDir := 1;
   currentMap := plCurrentMap[currentPlayer];
   // loadMap();
 end;

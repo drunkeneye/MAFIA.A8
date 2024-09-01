@@ -25,7 +25,18 @@ dli1:
     mva #$00 atari.colbk  ; black
 
     ; move PMG to current position
+    lda spriteMoveDir
+    cmp #$01
+    beq dli1_X
     lda PLAYERPOS_X
+    sec 
+    sbc #$01
+    jmp dli1_X2
+dli1_X:
+    lda PLAYERPOS_X
+    ; clc
+    ; adc #$01
+dli1_X2:
     sta HPOSP0
     sta HPOSP1
     sta HPOSP2

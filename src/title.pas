@@ -26,6 +26,7 @@ var  // for sprites
     PCOLR2:   byte absolute $D014;
     PCOLR3:   byte absolute $D015;
     playerPos_X:   byte absolute e7adr + 936+16;
+    spriteMoveDir: shortint absolute $ea13;
 
     // not used
     loccolbk:            Byte absolute baseAddress + $2B0 + 41 * $28;
