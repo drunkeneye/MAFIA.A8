@@ -1,5 +1,5 @@
 LOCALOAN.gfx
-Rekin Kredytowy
+Rekin pozyczkowy
 $44, $af, $ff, $44
 Riverfront Credit Line
 Downtown Credit Agency
@@ -10,9 +10,9 @@ Dzien bardzo dobry, w czyms moge pomoc?
 6
 Tak. Potrzebuje troche gotowki!
 Nie, nie! Chce tylko splacic dlugi!
-Wykup lub sprzedaj sklep
-Zmiana kapitalu (w przypadku wlasnej dzialalnosci kredytowej)
-Windykacja naleznosci (w przypadku wlasnej dzialalnosci)
+Wykup lub sprzedaj te firme
+Zmiana kapitalu (w przypadku wlasnej firmy pozyczkowej)
+Windykacja naleznosci (w przypadku wlasnej firmy)
 Pomoge sobie sam
 50
 Najpierw splac swoje stare dlugi!
@@ -25,8 +25,8 @@ Ile pieniedzy chcesz splacic?
 Splaciles swoje dlugi!
 Ok, teraz masz jeszcze
 dlugi!
-Masz juz sklep kredytowy!
-Ten sklep nie nalezy do ciebie!
+Masz juz firme pozyczkowa!
+Ta firma nie nalezy do ciebie!
 Wszyscy dluznicy zaplacili na czas!
 Jeden z klientow nadal ma dlugi.
 Czeka na ciebie z karabinem,
@@ -37,20 +37,20 @@ Mial jeszcze
 $ przy sobie!
 Najpierw splac swoje wlasne dlugi!
 Kupiec oferuje ci
-$ za sklep.
+$ za twoja firme.
 Czy zgadzasz sie (T/N)?
 Zyczysz mu powodzenia.
-Ten sklep juz nalezy do
+Ta firma juz nalezy do
 Wlasciciel zada
-$ za sklep.
+$ za firme.
 Czy zgadzasz sie (T/N)?
-Teraz sklep nalezy do ciebie!
+Teraz firma nalezy do ciebie!
 Masz
-$ w sklepie.
+$ w firmie.
 O ile chcesz zmienic swoja inwestycje
 (max. 5000$)? 
 Masz teraz
-w sklepie.
-Nie mozesz brac kredytow,
-jesli posiadasz sklep kredytowy!
+w firmie.
+Nie mozesz brac pozyczek,
+jesli posiadasz firme pozyczkowa!
 
