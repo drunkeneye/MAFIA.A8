@@ -1,6 +1,6 @@
 LOCASETU.gfx
 MAFIA
-$f2, $af, $ff, $f2
+$18, $af, $10, $18
  
  
  
