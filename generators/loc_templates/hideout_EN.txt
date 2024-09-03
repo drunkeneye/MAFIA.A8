@@ -1,6 +1,6 @@
 LOCAHIDE.gfx
 Hotel (Hideout)
-$02, $af, $ff, $02
+$02, $af, $0c, $02
 Hotel Sherman
 The Blackstone
 Park Hotel
