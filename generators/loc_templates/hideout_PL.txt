@@ -1,6 +1,6 @@
 LOCAHIDE.gfx
 Hotel (kryjowka)
-$02, $af, $ff, $02
+$02, $af, $0c, $02
 Hotel Sherman
 Czarny Kamien
 Hotel Parkowy

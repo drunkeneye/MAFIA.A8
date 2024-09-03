@@ -1,6 +1,6 @@
 LOCAUPDT.gfx
 Podsumowanie
-$bf, $af, $00, $bf
+$bc, $af, $00, $bc
  
  
  

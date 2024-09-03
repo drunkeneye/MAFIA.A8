@@ -1,6 +1,6 @@
 LOCAGAMB.gfx
 Szulernia
-$1e, $af, $00, $1e
+$22, $af, $2c, $22
 Klub Gwiezdny Pyl
 Jokerowy Raj
 Zlota Podkowa
@@ -19,6 +19,6 @@ Jaka decyzja?
 Masz
 Twoj zaklad (0-
 Przechodzisz do stolu gry...
-Wygrales
+Wygrywasz
 $!
 Niestety, przegrana!

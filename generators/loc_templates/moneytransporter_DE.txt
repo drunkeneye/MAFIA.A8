@@ -1,6 +1,6 @@
 LOCAMONY.gfx
 Geldtransporter
-$70, $af, $0e, $70
+$62, $af, $6e, $62
  
   
  
