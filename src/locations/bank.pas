@@ -148,12 +148,13 @@ begin;
         waitForKey();
 
         // show safe
+        blackConsole();
         FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
+        loadxAPL (safeclmfname, Pointer(MAP_FNT_ADDRESS));
+        FillChar(Pointer(MAP_SCR_ADDRESS+17*40), 80, 0); // remove number chars
         enableMapConsole();
         mapColorA := $04;
         mapColorB := $0a;
-        loadxAPL (safeclmfname, Pointer(MAP_FNT_ADDRESS));
-        FillChar(Pointer(MAP_SCR_ADDRESS+17*40), 80, 0); // remove number chars
         didFight := 1; // remember to reload map
         t[0] := Random(10);
         t[1] := Random(10);

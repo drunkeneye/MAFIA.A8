@@ -102,6 +102,7 @@ begin;
         begin
             CRT_Write_LocStr(8);
             waitForKey();
+            result := CARDEALER_;
             exit;
         end;
 

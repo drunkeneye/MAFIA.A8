@@ -16,7 +16,7 @@ The seller shows you a selection
 of models.
 Which car will it be?
 They offer you
-$ for your old clunker.
+$ for your old car.
 The guy hands you the keys.
 You also get
 There are too many people here!
@@ -30,6 +30,6 @@ After murdering the owner, you have to
 quickly disappear without a car!
 pulls out his hefty revolver!
 Do you accept the offer (Y/N)?
-Car owner
+Car owner#
 Your new car does not have enough
 room for all that alcohol!

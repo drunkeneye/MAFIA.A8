@@ -7,11 +7,12 @@ begin
     PLAYERPOS_X := 0;
     PLAYERPOS_Y := 0;
     // clear area below, since map will not cover all screen
+    blackConsole();
     FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
-    enableMapConsole();
     loadxAPL (fight_map_fname, Pointer(MAP_FNT_ADDRESS));
     // loadxAPL (fightscrname, Pointer(MAP_SCR_ADDRESS));
     FillChar (Pointer (MAP_SCR_ADDRESS+19*40), 5*40, ' '~);
+    enableMapConsole();
     
     // remember that we loaded a new map
     didFight := 1;

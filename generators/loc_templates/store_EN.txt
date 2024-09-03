@@ -39,14 +39,15 @@ Your choice?
 You pocket the cash and scram.
 You scumbag! You'll pay for this!
 The guy's calling some thugs!
-Thug
+Thugs#
 You've made a mess out of the store.
 In the register there were
 He promises you a nice tombstone and 
 readies his submachine gun!
-Store owner
+Store owner#
 The cheeky guy is down. He still had
 some 
 $ in change in his pocket!
-Scarface Jack Gang
-Gang member
+Scarface Jack Gang#
+Gang member#
+Thug#

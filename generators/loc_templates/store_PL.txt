@@ -39,7 +39,7 @@ Twoj wybor?
 Bierzesz pieniadze i uciekasz.
 Cholerny gang! Zaplacicie za to!
 Facet wzywa kilku oprychow!
-Oprych
+Oprych#
 Rozpirzyles sklep w drzazgi. W kasie 
 znajdowalo sie
 Obiecuje ci piekny nagrobek i laduje
@@ -48,5 +48,6 @@ Sklepikarz
 Bezczelny typ zbity na kwasne jablko.
 Mial jeszcze
 $ w kieszeni!
-Gang Jacka z Blizna
-Czlonek gangu
+Gang Jacka z Blizna#
+Czlonek gangu#
+Oprychy#

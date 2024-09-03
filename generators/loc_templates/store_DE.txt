@@ -39,14 +39,15 @@ Deine Wahl?
 Du steckst die Knete ein und haust ab.
 Saubande! Das werdet ihr buessen!
 Der Kerl ruft ein paar Schlaeger!
-Schlaeger
+Schlaeger#
 Du hast Kleinholz aus dem Laden
 gemacht. In der Kasse waren
 Er verspricht dir einen schoenen Grab-
 stein und laed seine Maschinenpistole!
-Ladenbesitzer
+Ladenbesitzer#
 Der aufmuepfige Kerl ist KO.
 Er hatte noch
 $ in der Tasche!
-NarbenJack-Gang
-Gangmitglied
+NarbenJack-Gang#
+Gangmitglied#
+Schlaeger#

@@ -209,7 +209,7 @@ begin;
             else
                 CRT_Write(fight_string_7);
             CRT_Write(fp_name[t]);
-            CRT_Write(' '~);
+            //CRT_Write(' '~);
             CRT_Write(fight_string_2);
 
             // st := Concat(fight_string_1, fp_name[t]);
@@ -389,7 +389,7 @@ begin;
             exit;
         end;
 
-        // set to AI mode now  = 'q' key, will take over after this move
+        // set to AI mode now  = 'i' key, will take over after this move
         if (fp_currentCommand = #13) then
             fp_AI[fp_currentSite] := 1; 
 
@@ -399,7 +399,7 @@ begin;
             exit;
         end;
 
-        // else we first try to move
+        // else we first check for movement
         fight_moveCurrentPlayer();
         // no valid move or command was not move
         if fp_validCmd = 0 then

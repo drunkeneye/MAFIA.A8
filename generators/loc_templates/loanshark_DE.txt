@@ -32,7 +32,7 @@ Ein Kunde schuldet dir noch was.
 Aber er lauert dir mit einem Gewehr
 auf, als du kassieren willst!
 Schuldner
-Du hast den Typ eiskalt erledigt.
+Du hast den Typ erledigt.
 Er hatte noch 
 $ dabei!
 Zahle erstmal deine eigenen Schulden!

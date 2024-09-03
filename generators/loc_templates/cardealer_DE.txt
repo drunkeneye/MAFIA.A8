@@ -30,7 +30,7 @@ Nach dem Mord an dem Besitzer musst du
 ohne Wagen schnell verschwinden!
 zueckt seinen fetten Revolver!
 Nimmst du das Angebot an (J/N)?
-Wagenbesitzer
+Wagenbesitzer#
 Dein Auto hat nicht genug Platz fuer
 den ganzen Alkohol! 
 

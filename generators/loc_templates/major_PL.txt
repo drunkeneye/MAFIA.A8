@@ -12,11 +12,11 @@ Pozycz troche gotowki...
 Masz za malo gangsterow!
 Niestety, transport pieniezny jest 
 eskortowany przez policje!
-Eskorta
-Ochroniarz
+Eskorta#
+Ochroniarz#
 Burmistrz ukrywa sie za swoimi 
 ochroniarzami!
-Ochroniarz
-Burmistrz
+Ochroniarz#
+Burmistrz#
 Za swoje zle uczynki otrzymasz 
 dodatkowe 7000$ i nowy paszport!

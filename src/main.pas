@@ -380,13 +380,14 @@ begin
 
             // did we go into a fight? if sn, reload map
             if didFight = 1 then begin;
-                loadMap();
-                enableSprites();
                 didFight := 0;
                 mapPos_X := oldMapPos_X;
                 mapPos_Y := oldMapPos_Y;
                 playerPos_X := oldPlayerPos_X;
                 playerPos_Y := oldPlayerPos_Y;
+                if (plSteps[currentPlayer] = 0) or (currentLocation = END_TURN_) then break;
+                loadMap();
+                enableSprites();
                 printMapStatus();
             end;
         end;

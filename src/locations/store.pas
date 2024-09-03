@@ -199,9 +199,9 @@ begin;
                 asl 
                 tay
 
-                lda loc_string_26
+                lda loc_string_37
                 sta adr.FP_NAME+$20,y
-                lda loc_string_26+1
+                lda loc_string_37+1
                 sta adr.FP_NAME+1+$20,y
 
                 tya

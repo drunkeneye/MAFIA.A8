@@ -33,7 +33,7 @@ def dumpYStringATASCII(byte_stream, p):
 def dumpStrings_EN(byte_stream):
     # fight_str_1..6
     dumpTStringATASCII (byte_stream, 'You hit ');
-    dumpTStringATASCII (byte_stream, ' !');
+    dumpTStringATASCII (byte_stream, '!');
     dumpTStringATASCII (byte_stream, 'Unfortunately,');
     dumpTStringATASCII (byte_stream, 'is done for.');
     dumpTStringATASCII (byte_stream, 'You missed!');

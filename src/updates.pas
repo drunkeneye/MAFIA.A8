@@ -147,11 +147,11 @@ procedure updateLoanShark();
 var p:   word;
     k:   byte;
 begin
-    loadLocation(UPDATES_);
     p := plLoanInvest[currentPlayer];
     // if there is invest, there cannot be any loan, so can skip below
     if p > 0 then
     begin;
+        loadLocation(UPDATES_);
         jobWorking;
         if Random(3) = 0 then
         begin
@@ -177,6 +177,7 @@ begin
     if plLoan[currentPlayer] > 0 then
     begin
         k := plLoanTime[currentPlayer];
+        loadLocation(UPDATES_);
         jobWorking;
         if k > 0 then
         begin

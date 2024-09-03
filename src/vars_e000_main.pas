@@ -162,6 +162,7 @@ var
     mapColorA: byte absolute $ea11;
     mapColorB: byte absolute $ea12;
     spriteMoveDir: shortint absolute $ea13;
+    joystickused: byte absolute $ea14;
 
 var 
     e7fname: TString = 'E700PAGEAPL';

@@ -1,5 +1,5 @@
 LOCAJOBB.gfx
-News
+
 $cc, $af, $00, $cc
  
 

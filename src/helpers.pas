@@ -90,12 +90,22 @@ var
 begin;
   asm;
         phr
+        lda #$00
+        sta joystickused
   loop:
         lda $d300
         and #$0f
         cmp #$0f 
         bne foundstick
 
+        lda $d010 ; try stick button 
+        cmp #$00
+        bne nofire 
+        lda #$0c
+        sta joystickused
+        jmp loopend
+
+nofire:
         lda consol		; START
         cmp #$05
         beq foundsave
@@ -116,6 +126,7 @@ begin;
   foundstick:
         tay
         lda stickdata,y
+        sta joystickused
         jmp loopend
   foundsave:
         lda #$1f 
@@ -189,6 +200,11 @@ end;
 procedure waitForKeyRelease;
 var ch, tmpch: char;
 begin;
+    // if joystickused > 0 then 
+    // begin;
+    //   joystickused := 0;
+    //   exit;
+    // end;
     ch := readKeyAndStick();
     repeat;
         tmpch := checkKeyAndStick ();
