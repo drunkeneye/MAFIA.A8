@@ -203,7 +203,7 @@ begin
         begin
             tmp := Random(2);
             fp_sex[16+k] := tmp;
-            fp_name[16+k] := loc_string_12;
+            fp_name[16+k] := loc_string_21;
             fp_weapon[16+k] := 3;
             fp_energy[16+k] := 30;
             fp_strength[16+k] := 30;
@@ -419,7 +419,7 @@ begin;
                 fp_name[16] := loc_string_30;
                 fp_gang[1] := loc_string_30;
                 fp_sex[16] := 0;
-                fp_weapon[16] := 1;
+                fp_weapon[16] := 2;
                 fp_energy[16] := 10;
                 fp_strength[16] := 30;
                 fp_brutality[16] := 30;

@@ -266,9 +266,9 @@ rankNames_DE  =  ['Anfaenger', 'Schlaeger', 'Kleiner Fisch',
 carNames_DE =  ['Fuesse', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 weaponNames_DE  = ['Haende', 'Colt M1911', 'Savage 1907',
-                                        'Remington 11', 'Winchester 97', 'Luger P08',
+                                        'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
                                         'Thomson SMG', 'Browning Bar', 'Handgranaten']
-
+ 
                    #  Colt,  Sav,  Rem,  Win, LugP,  SMG,  Bar
 weaponPrices   =  [0, 2000, 2500, 3000, 3000, 4000, 4500, 8000, 10000]
 weaponReach    =  [1,    9,   10,   15,   11,   12,   16,   17,    20]
@@ -297,7 +297,7 @@ weaponSound     = [2,    2,    2,    2,    2,    2,    4,    4,     6]
 # Price: $25
 # Range: 100 yards (varies with load)
 # Accuracy: Moderate
-# Luger P08 (Pistol)
+# Luger P08 (Pistol) --> now Smith&Wesson 10
 
 # Price: $50
 # Range: 50-75 yards
@@ -317,7 +317,7 @@ rankNames_EN = ['Rookie', 'Rowdy', 'Small Fry',
                                             'Snatch', 'Crook', 'Mafioso', 'Cop Fright', 'Assassin',
                                             'Gangster Boss', 'Right Hand', 'The Don']
 weaponNames_EN  = ['Hands', 'Colt M1911', 'Savage 1907',
-                                        'Remington 11', 'Winchester 97', 'Luger P08',
+                                        'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
                                         'Thomson SMG', 'Browning Bar', 'Grenades']
 
 
@@ -328,7 +328,7 @@ rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek',
                              'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
                             'Szef gangsterow', 'Prawa reka', 'Ojc. chrzestny']
 weaponNames_PL  = ['Rece', 'Colt M1911', 'Savage 1907',
-                                        'Remington 11', 'Winchester 97', 'Luger P08',
+                                        'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
                                         'Thomson SMG', 'Browning Bar', 'Granaty']
 carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 

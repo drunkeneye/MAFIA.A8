@@ -3,6 +3,7 @@
 procedure printMapStatus();
 var 
     l, z, i, p: byte;
+    w: word;
 begin
     // static part first
     if mapReloaded = 0 then 
@@ -70,8 +71,8 @@ begin
 
         CRT_GotoXY(23, 23);
         CRT_Write(map_string_credit);
-        z :=plLoan[currentPlayer];
-        CRT_Write(z);
+        w := plLoan[currentPlayer];
+        CRT_Write(w);
         CRT_GotoXY(35, 23);
         CRT_Write('('~);
         tmp := plLoanTime[currentPlayer];

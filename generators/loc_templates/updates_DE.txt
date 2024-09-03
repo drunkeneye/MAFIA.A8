@@ -23,7 +23,7 @@ bleiben noch
  Monate, sie zu zaheln!
 Der KreditHai hetzt seine Eintreiber
 auf dich...
-Eintreiber
+Die Eintreiber#
 Die Kerle nehmen dein ganzes Geld
 mit und verschwinden...
 Du konntest sie gerade noch einmal
@@ -32,4 +32,4 @@ wieder besuchen...
 Das Spiel dauert noch 
  Jahre.
 Deine Gangster:
-
+Eintreiber#

@@ -260,7 +260,7 @@ begin;
             fp_AI[1] := 1;
             fp_N[1] := 1;
             fp_name[16] := loc_string_31;
-            fp_weapon[16] := 7;
+            fp_weapon[16] := 6;
             fp_energy[16] := 30;
 
             if doFight() = 1 then
