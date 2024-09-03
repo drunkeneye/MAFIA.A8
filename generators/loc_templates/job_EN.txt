@@ -1,6 +1,6 @@
 LOCAJOBB.gfx
 News
-$bd, $af, $b0, $bd
+$cc, $af, $00, $cc
  
 
  
