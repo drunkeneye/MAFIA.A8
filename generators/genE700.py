@@ -215,11 +215,6 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 carPrices = [0, 3500, 4000, 6500, 7000, 7500]
 carCargo = [50, 100, 120, 200, 150, 100]
 carRange = [35, 45, 55, 60, 65, 50]  # add some more range to accommodate the larger map
-weaponPrices = [0, 100, 200, 500, 3000, 4000, 4500, 8000, 10000]
-weaponReach = [2, 2, 3, 4, 8, 12, 16, 14, 20]
-weaponPrecision = [2, 3, 4, 4, 2, 5, 5, 6, 7]
-weaponEffect = [2, 5, 3, 4, 7, 10, 12, 15, 18]
-weaponSound = [2, 2, 2, 2, 2, 2, 2, 4, 6]
 fpPosStart = [40*10+10,
                         40*8+8,  40*12+8,
                         40*6+6, 40*10+6, 40*12+6,
@@ -268,27 +263,76 @@ fstrings = [
 rankNames_DE  =  ['Anfaenger', 'Schlaeger', 'Kleiner Fisch',
                                             'Langfinger', 'Ganove', 'Mafiosi', 'Bullenschreck', 'Meuchelmoerder',
                                             'Gangsterboss', 'Rechte Hand',  'Der Pate']
-weaponNames_DE  = ['Haende', 'Messer', 'Knueppel',
-                                                'Schlagkette', 'Wurfsterne', 'Revolver',
-                                                'Gewehr', 'Maschinengewehr', 'Handgranaten']
 carNames_DE =  ['Fuesse', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
+weaponNames_DE  = ['Haende', 'Colt M1911', 'Savage 1907',
+                                        'Remington 11', 'Winchester 97', 'Luger P08',
+                                        'Thomson SMG', 'Browning Bar', 'Handgranaten']
+
+                   #  Colt,  Sav,  Rem,  Win, LugP,  SMG,  Bar
+weaponPrices   =  [0, 2000, 2500, 3000, 3000, 4000, 4500, 8000, 10000]
+weaponReach    =  [1,    9,   10,   15,   11,   12,   16,   17,    20]
+weaponPrecision = [2,    5,    4,    6,    3,    5,    5,    6,     7]
+weaponEffect    = [2,    3,    3,    4,    9,   10,   12,   15,    18]
+weaponSound     = [2,    2,    2,    2,    2,    2,    4,    4,     6]
+
+
+# Colt M1911 (Pistol)
+
+# Price: $20
+# Range: 50 yards
+# Accuracy: High
+# Savage 1907 (Pistol)
+
+# Price: $30
+# Range: 50 yards
+# Accuracy: Moderate
+# Remington 11 (Shotgun)
+
+# Price: $30
+# Range: 100 yards (varies with load)
+# Accuracy: Moderate
+# Winchester 97 (Shotgun)
+
+# Price: $25
+# Range: 100 yards (varies with load)
+# Accuracy: Moderate
+# Luger P08 (Pistol)
+
+# Price: $50
+# Range: 50-75 yards
+# Accuracy: High
+# Thompson SMG (Submachine Gun)
+
+# Price: $200
+# Range: 50-100 yards
+# Accuracy: Moderate
+# Browning BAR (Machine Gun)
+
+# Price: $200
+# Range: 100-600 yards
+# Accuracy: Moderate to High
 
 rankNames_EN = ['Rookie', 'Rowdy', 'Small Fry',
                                             'Snatch', 'Crook', 'Mafioso', 'Cop Fright', 'Assassin',
                                             'Gangster Boss', 'Right Hand', 'The Don']
-weaponNames_EN = ['Hands', 'Knife', 'Club',
-                                            'Brass Knuckles', 'Shuriken', 'Revolver',
-                                            'Rifle', 'Machine Gun', 'Grenades']
+weaponNames_EN  = ['Hands', 'Colt M1911', 'Savage 1907',
+                                        'Remington 11', 'Winchester 97', 'Luger P08',
+                                        'Thomson SMG', 'Browning Bar', 'Grenades']
+
+
+
 carNames_EN = ['Feet', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek',
                              'Zlodziej', 'Oszust', 'Mafioso', 'Postrach glin', 'Morderca',
                             'Szef gangsterow', 'Prawa reka', 'Ojc. chrzestny']
-weaponNames_PL = ['Rece', 'Noz', 'Palka',
-                        'Lancuch', 'Shuriken', 'Rewolwer',
-                        'Strzelba', 'Karabin maszyn.', 'Granaty']
+weaponNames_PL  = ['Rece', 'Colt M1911', 'Savage 1907',
+                                        'Remington 11', 'Winchester 97', 'Luger P08',
+                                        'Thomson SMG', 'Browning Bar', 'Granaty']
 carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
+
+
 
 
 
