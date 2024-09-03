@@ -1,6 +1,6 @@
 LOCAMONY.gfx
-Transporter pieniezny
-$62, $af, $6e, $62
+Furgonetka z pieniedzmi
+$70, $af, $0e, $70
  
   
  
