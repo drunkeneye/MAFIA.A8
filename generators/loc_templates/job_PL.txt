@@ -12,7 +12,7 @@ $cc, $af, $00, $cc
  
  
 50
-Czekasz na sygnal szefa,
+Czekasz na sygnal od szefa,
 aby usunac nieproszonego goscia...
 Dzis nie bylo nic do roboty!
 Ktos zaczyna sie awanturowac!
