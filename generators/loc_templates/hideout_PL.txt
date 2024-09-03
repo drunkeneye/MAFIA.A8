@@ -1,6 +1,6 @@
 LOCAHIDE.gfx
 Hotel (kryjowka)
-$02, $af, $ff, $02
+$02, $af, $0c, $02
 Hotel Sherman
 Czarny Kamien
 Hotel Parkowy
@@ -11,7 +11,7 @@ Ach, klient! Czego pan sobie zyczy?
 Zakwaterowanie, ale szybko! Nie chce, by mi przeszkadzano!
 Chce zaplacic czynsz!
 Zacznij wojne gangow.
-Nie chce niczego. A pan?
+Nie mam zyczen, dziekuje.
 50
 Juz tu mieszkasz!
 Brak wolnych miejsc!

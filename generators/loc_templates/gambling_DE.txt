@@ -1,6 +1,6 @@
 LOCAGAMB.gfx
 Spielhoelle
-$1e, $af, $00, $1e
+$22, $af, $2c, $22
 The Stardust Club
 Windy City Casino
 The Golden Horseshoe

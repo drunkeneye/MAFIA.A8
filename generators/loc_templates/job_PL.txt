@@ -1,6 +1,6 @@
 LOCAJOBB.gfx
  
-$bf, $af, $00, $bf
+$cc, $af, $00, $cc
  
 
  
@@ -32,7 +32,7 @@ Facet przejrzal twoje sztuczki
 i wyciaga noz!
 Znalazles faceta ze zdjecia
 i zwabiles go w ciemna uliczke...
-Wykonales zadanie i otrzymujesz
+Zadanie wykonane, otrzymujesz
 $ wynagrodzenia
 Nie wykonales zadania!
 To oznacza, ze jestes zwolniony!
