@@ -1,6 +1,6 @@
 LOCAJOBB.gfx
  
-$bf, $af, $00, $bf
+$cc, $af, $00, $cc
  
 
  
