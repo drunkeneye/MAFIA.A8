@@ -63,11 +63,15 @@ begin
     CRT_WriteCentered_LocStr(9, 41);
     ch := readKeyAndStick();
     if byte(ch) = $1e then begin;
+        loadLocation(SETUP_);
         loadGame();
+        loadLocation(MAIN_);
         result := RESET_;
     end;
     if byte(ch) = $1f then begin;
+        loadLocation(SETUP_);
         saveGame();
+        loadLocation(MAIN_);
     end;
   end
   else

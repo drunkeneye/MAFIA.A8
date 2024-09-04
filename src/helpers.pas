@@ -338,8 +338,9 @@ end;
 
 procedure saveGame ();
 begin;
+    // loaded location will always be SETUP_
     CRT_Clear;
-    CRT_WriteCentered(1,'Saving...'~);
+    CRT_WriteCentered_LocStr(1, 19);
     xBiosOpenFile(saveFname);
     xBiosSetLength($0a1f); // just dump all of it 
     xBiosWriteData(Pointer($e000));
@@ -369,11 +370,12 @@ end;
 
 procedure loadGame ();
 begin;
+    // loaded location will always be SETUP_
     CRT_Clear;
-    CRT_WriteCentered(1,'Loading...'~);
+    CRT_WriteCentered_LocStr(1,17);
     // first check if its plausible
     if checkSavedGame() = 0 then begin;
-        CRT_WriteCentered(3, 'Invalid save game!'~);
+        CRT_WriteCentered_LocStr(3, 18);
         waitForKey;
         exit;
     end;
@@ -385,6 +387,4 @@ begin;
     xBiosFlushBuffer();
     waitForKey();    
 end; 
-
-
 

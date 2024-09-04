@@ -14,6 +14,7 @@ begin
         CRT_WriteCentered_LocStr(4, 16);
         if getYesNo() = 1 then begin;
             loadGame();
+            lastLocationStrings := 254; // force reloading MAIN_ location
             exit;
         end;
     end;

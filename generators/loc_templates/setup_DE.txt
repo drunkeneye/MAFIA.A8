@@ -28,3 +28,6 @@ Bist du weiblich oder maennlich (w/m)?
 Kurzes oder langes Spiel (K/L)?
 Gespeicherten Spielstand gefunden!
 Willst du ihn laden (J/N)?
+Lade Spielstand...
+Spielstand ist ungueltig!
+Speichere Spielstand...

@@ -28,3 +28,6 @@ Jestes kobieta czy mezczyzna (K/M)?
 Krotka czy dluga gra (K/D)?
 Wykryto zapisana gre!
 Czy chcesz ja zaladowac (T/N)?
+Wczytywanie zapisu gry...
+Zapis gry jest uszkodzony!
+Zapisywanie gry...
