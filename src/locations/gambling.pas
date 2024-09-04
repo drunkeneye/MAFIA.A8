@@ -26,8 +26,7 @@ begin;
         end;
     until game <> 99;
 
-    CRT_NewLine();
-    CRT_NewLine();
+    CRT_NewLine2();
     CRT_Write_LocStr(6);
     CRT_Write(plMoney[currentPlayer]);
     CRT_Write('$.'~);
@@ -45,8 +44,7 @@ begin;
     if payMoney(einsatz) = 0 then exit;
     // should NEVER happen, since we check for the money there
 
-    CRT_NewLine();
-    CRT_NewLine();
+    CRT_NewLine2();
     CRT_Writeln2_LocStr(8);
     CRT_NewLine();
 

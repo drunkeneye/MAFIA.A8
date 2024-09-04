@@ -32,8 +32,7 @@ begin
         if loan = 0 then 
             exit;
 
-        CRT_NewLine();
-        CRT_NewLine();
+        CRT_NewLine2();
         CRT_Writeln_LocStr(4);
         CRT_Writeln_LocStr(5);
         p := loan;
@@ -68,15 +67,13 @@ begin
         plLoan[currentPlayer] := plLoan[currentPlayer] - loan;
         if plLoan[currentPlayer] = 0 then
         begin
-            CRT_NewLine();
-            CRT_NewLine();
+            CRT_NewLine2();
             plLoanTime[currentPlayer] := 0;
             CRT_Writeln_LocStr(8);
         end
         else
         begin
-            CRT_NewLine();
-            CRT_NewLine();
+            CRT_NewLine2();
             CRT_Write_LocStr(9);
             CRT_Write(plLoan[currentPlayer]);
             CRT_Write('$ '~);

@@ -227,11 +227,16 @@ begin
 end;
 
 
+procedure CRT_NewLine2();
+begin
+  CRT_NewLine();
+  CRT_NewLine();
+end;
+
 procedure CRT_Writeln2 (S: String);
 begin
   CRT_Write(S);
-  CRT_NewLine();
-  CRT_NewLine();
+  CRT_NewLine2();
 end;
 
 

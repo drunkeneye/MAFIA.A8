@@ -39,8 +39,7 @@ begin;
         if r = 0 then exit;
         if payMoney (c) = 0 then exit;
         
-        CRT_NewLine();
-        CRT_NewLine();
+        CRT_NewLine2();
         CRT_Writeln_LocStr(7);
         plForgedID[currentPlayer] := 1;
         addPoints(1);
@@ -71,8 +70,7 @@ begin;
 
         tmp := Random(0);
         p := c + c + tmp + tmp + tmp;
-        CRT_NewLine();
-        CRT_NewLine();
+        CRT_NewLine2();
         CRT_Write_LocStr(11);
         CRT_Write(p);
         CRT_Write_LocStr(12);
@@ -81,8 +79,7 @@ begin;
         if r = 0 then exit;
         if payMoney (c) = 0 then exit;
 
-        CRT_NewLine;
-        CRT_NewLine;
+        CRT_NewLine2();
         CRT_Writeln_LocStr(13);
 
         addMoney(p);

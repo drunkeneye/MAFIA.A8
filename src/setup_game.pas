@@ -33,8 +33,7 @@ begin
         gameLength := 50; // 50 years
         gamePoints := 200;
     end;
-    CRT_NewLine();
-    CRT_NewLine();
+    CRT_NewLine2();
     k := 6;
 
     // repeat

@@ -58,8 +58,7 @@ begin;
         begin
             CRT_Write_LocStr(2);
             lawyer := readValue(0, 10000);
-            CRT_NewLine();
-            CRT_NewLine();
+            CRT_NewLine2();
             t := payMoney (lawyer);
             if t = 1 then
             begin
@@ -132,8 +131,7 @@ begin
 
     CRT_Write_LocStr(7);
     a := readValueNoZero(1,3);
-    CRT_NewLine();
-    CRT_NewLine();
+    CRT_NewLine2();
     if a = 1 then
     begin
         price := 500 + 500*plRank[currentPlayer];

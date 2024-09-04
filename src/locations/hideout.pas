@@ -71,8 +71,7 @@ begin;
         ShowLocationHeader;
         CRT_NewLine();
         CRT_WriteCentered_LocStr(4, 12);
-        CRT_NewLine;
-        CRT_NewLine;
+        CRT_NewLine2();
 
         tmp := pl  SHR 3;
         if w = 1 then 
@@ -179,8 +178,7 @@ begin;
     CRT_Write_LocStr(6);
     CRT_NewLine();
     CRT_Write_LocStr(7);
-    CRT_NewLine();
-    CRT_NewLine();
+    CRT_NewLine2();
 
     if plRentMonths[currentPlayer] > 0 then
     begin;
@@ -210,8 +208,7 @@ begin;
     plRentCost[currentPlayer] := price;
     plRent[currentSubLocation] := currentPlayer;
 
-    CRT_NewLine();
-    CRT_NewLine();
+    CRT_NewLine2();
     CRT_Write_LocStr(11);
     waitForKey();
 end;
