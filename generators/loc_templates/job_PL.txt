@@ -1,6 +1,6 @@
 LOCAJOBB.gfx
  
-$cc, $af, $00, $cc
+$ca, $af, $00, $ca
  
 
  
@@ -29,7 +29,7 @@ Ktorej sztuczki chcesz uzyc?
 Wygrywasz i otrzymujesz
 bonus w wysokosci
 Facet przejrzal twoje sztuczki
-i wyciaga noz!
+i wyciaga pistolet kieszonkowy!
 Znalazles faceta ze zdjecia
 i zwabiles go w ciemna uliczke...
 Zadanie wykonane, otrzymujesz
