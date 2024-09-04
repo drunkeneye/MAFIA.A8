@@ -176,11 +176,11 @@ begin
     // repeat; until false;
     clearMemory();
     loadxAPL (e7fname, Pointer(e7adrm6));
-    //setupGame();
+    
     initGlobalVars();
     showCredits();
+
     setupGame();
-    initPlayers();
 
 
     msx.player:=pointer(rmt_player);

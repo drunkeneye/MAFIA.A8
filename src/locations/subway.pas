@@ -44,11 +44,12 @@ begin
     ShowLocationHeader;
     if plNGangsters[currentPlayer] > 1 then 
         CRT_Write_LocStr(3);
-    showWeapons :=0 ;
+    showWeapons :=0;
     selectGangster();
     if currentGangster = 99 then exit;
 
-    ShowLocationHeader;
+    if plNGangsters[currentPlayer] > 1 then 
+        ShowLocationHeader;
     CRT_Newline;
     CRT_Writeln_LocStr(4);
     WaitFrames(90);

@@ -271,7 +271,7 @@ weaponNames_DE  = ['Haende', 'Colt M1911', 'Savage 1907',
  
                    #  Colt,  Sav,  Rem,  Win,  S&W,  SMG,  BAR
 weaponPrices   =  [0, 2000, 2500, 3000, 3000, 4000, 4500, 8000, 10000]
-weaponReach    =  [1,    9,   10,   15,   11,   12,   16,   17,    20]
+weaponReach    =  [1,    9,   10,   14,   11,   12,   15,   16,    20]
 weaponPrecision = [2,    5,    4,    6,    3,    5,    5,    6,     7]
 weaponEffect    = [2,    3,    3,    4,    9,   10,   12,   15,    18]
 weaponSound     = [2,    2,    2,    2,    2,    2,    4,    4,     6]

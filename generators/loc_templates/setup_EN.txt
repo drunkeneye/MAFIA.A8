@@ -26,3 +26,5 @@ Energy:
 Money:
 Are you female or male (F/M)?
 Short or long game (S/L)?
+Found a saved game!
+Do you want to load it (Y/N)?
