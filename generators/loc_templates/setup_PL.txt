@@ -26,5 +26,5 @@ Energia:
 Kapital:
 Jestes kobieta czy mezczyzna (K/M)?
 Krotka czy dluga gra (K/D)?
-Found a saved game!
-Do you want to load it (Y/N)?
+Wykryto zapisana gre!
+Czy chcesz ja zaladowac (T/N)?
