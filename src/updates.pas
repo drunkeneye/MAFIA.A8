@@ -341,6 +341,7 @@ function updateJob ():   byte;
 var jobdone:   byte;
     r:   byte;
     p:   word;
+    ch: char;
 begin;
     loadLocation(JOB_);
     jobWorking;
@@ -394,7 +395,16 @@ begin;
         CRT_Writeln_LocStr(13);
         CRT_Write_LocStr(14);
         CRT_Newline();
-        r := readValue(1, 3);
+        r := 99;
+        repeat;
+            ch := readKeyAndStick();
+            case byte(ch) of 
+                $1f: r := 1;
+                $1e: r := 2;
+                $1a: r := 3;
+            end;
+        until r <> 99;
+
         CRT_NewLine;
         CRT_NewLine;
 

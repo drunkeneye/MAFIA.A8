@@ -1,14 +1,5 @@
 
 
-// procedure initCurrentPlayer ();
-// begin;
-//     plCar[currentPlayer] := 0;
-//     plRentMonths[currentPlayer] := 0;
-//     plBribe[currentPlayer] := 0;
-// end;
-
-
-{$ifndef fake}
 procedure setupGame();
 var 
     j, r:   byte;
@@ -16,8 +7,18 @@ var
 begin
     loadLocation(SETUP_);
 
+    // check if we have a savegame
     ShowLocationHeader;
+    if checkSavedGame() <> 0 then begin;
+        CRT_WriteCentered_LocStr(3, 15);
+        CRT_WriteCentered_LocStr(4, 16);
+        if getYesNo() = 1 then begin;
+            loadGame();
+            exit;
+        end;
+    end;
 
+    ShowLocationHeader;
     CRT_WriteCentered_LocStr(3, 14);
     CRT_ClearRow(4);
     CRT_GotoXY(20-2,4);
@@ -102,7 +103,13 @@ begin
         plMoney[currentPlayer] := getRandom (5000, 9999, 250, 24, 19);
         waitForKey;
     end;
+
+    // some init routines 
+    initPlayers();
+    currentPlayer := 0;
+    currentMonth := 1;
+    currentYear := 0;
+
 end;
-{$endif}
 
 

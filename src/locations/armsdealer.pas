@@ -88,27 +88,62 @@ begin;
         ShowLocationHeader;
 
         ga := 0;
-        if (gangsterInt[currentGangster] < 40) and (selectedWeapon > 5) then
-        begin
-            CRT_Writeln_LocStr(5);
-            waitForKey();
-            ga := -1;
-        end
-        else if (gangsterStr[currentGangster]  < 20) and ((selectedWeapon = 2) or (selectedWeapon = 3)) then
-            begin
+
+        // if the weapon has a large reach, one needs strength (because backfire)
+        if weaponReach[selectedWeapon] > 11 then begin;
+            if gangsterStr[currentGangster] < 40 then begin; 
                 CRT_Write_LocStr(6);
-                removePoints(1);
-                waitForKey();
                 ga := -1;
-            end
-        else if (gangsterBrut[currentGangster]  < 40) and ((selectedWeapon = 3) or (selectedWeapon > 6)) then
-            begin
+            end; 
+        end; 
+
+        // if the weapon has a large accuracy, one needs intelligence (because aiming smartly)
+        if weaponPrecision[selectedWeapon] > 4 then begin;
+            if gangsterInt[currentGangster] < 40 then begin; 
+                CRT_Write_LocStr(5);
+                ga := -1;
+            end; 
+        end; 
+
+        // if the weapon has a large effect, one needs brutality (because blood)
+        if weaponEffect[selectedWeapon] > 9 then begin;
+            if gangsterBrut[currentGangster] < 40 then begin; 
                 CRT_Write_LocStr(7);
-                removePoints(1);
-                waitForKey();
                 ga := -1;
-            end;
-        if ga < 0 then exit;
+            end; 
+        end; 
+
+        // nice try
+        if ga < 0 then begin;
+            // removePoints(1);
+            waitForKey();
+            exit;
+        end; 
+
+
+
+        // ga := 0;
+        // if (gangsterInt[currentGangster] < 40) and (selectedWeapon > 5) then
+        // begin
+        //     CRT_Writeln_LocStr(5);
+        //     waitForKey();
+        //     ga := -1;
+        // end
+        // else if (gangsterStr[currentGangster]  < 20) and ((selectedWeapon = 2) or (selectedWeapon = 3)) then
+        //     begin
+        //         CRT_Write_LocStr(6);
+        //         removePoints(1);
+        //         waitForKey();
+        //         ga := -1;
+        //     end
+        // else if (gangsterBrut[currentGangster]  < 40) and ((selectedWeapon = 3) or (selectedWeapon > 6)) then
+        //     begin
+        //         CRT_Write_LocStr(7);
+        //         removePoints(1);
+        //         waitForKey();
+        //         ga := -1;
+        //     end;
+        // if ga < 0 then exit;
 
         // pay
         if payMoney (weaponPrices[selectedWeapon]) = 0 then exit;

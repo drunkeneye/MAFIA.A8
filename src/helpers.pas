@@ -243,7 +243,6 @@ end;
 
 
 // 0 = A, 1 = B
-// WILL NOT WORK BECAUSE OF KEYBOARD CODE --> CHAR CONVERSION
 function getAnswer(A:byte; B:byte):   byte;
 begin
     repeat;
@@ -252,7 +251,7 @@ begin
    result := byte(result = B);
 end;
 
-// FIXME: localize
+
 // 0 = N, 1 = Y
 function getYesNo:   byte;
 begin
@@ -337,62 +336,55 @@ end;
 
 
 
-    procedure saveGame ();
-    begin;
-//        enableConsole();
-        CRT_Clear;
-        CRT_WriteCentered(1,'Saving...'~);
-        xBiosOpenFile(saveFname);
-        xBiosSetLength($1000); // just dump all of it 
-        xBiosWriteData(Pointer($e000));
+procedure saveGame ();
+begin;
+    CRT_Clear;
+    CRT_WriteCentered(1,'Saving...'~);
+    xBiosOpenFile(saveFname);
+    xBiosSetLength($0a1f); // just dump all of it 
+    xBiosWriteData(Pointer($e000));
         // we pray instead.
         // if (xBiosIOresult = 0) then
         //     CRT_WriteCentered(3,'Successful!'~)
         // else
         //     CRT_WriteCentered(3,'ERROR!'~);
-        xBiosFlushBuffer();
-        waitForKey();
-  //      enableMapConsole();
+    xBiosFlushBuffer();
+    waitForKey();
+end;
+
+
+function checkSavedGame (): byte;
+var tmp:byte;
+begin; 
+    xBiosOpenFile(saveFname);
+    xBiosSetLength($1);
+    xBiosLoadData(@tmp);
+    if (tmp > 4) or (tmp = 0) then begin;
+        result := 0;  // invalid
+        exit;
+    end;
+    result := 1;
+end; 
+
+
+procedure loadGame ();
+begin;
+    CRT_Clear;
+    CRT_WriteCentered(1,'Loading...'~);
+    // first check if its plausible
+    if checkSavedGame() = 0 then begin;
+        CRT_WriteCentered(3, 'Invalid save game!'~);
+        waitForKey;
+        exit;
     end;
 
-
-    procedure loadGame ();
-    var tmp: byte;
-    begin;
-//        enableConsole();
-        CRT_Clear;
-        CRT_WriteCentered(1,'Loading...'~);
-        xBiosOpenFile(saveFname);
-        // first check if its plausible
-
-        tmp := 99;
-        xBiosSetLength($1); // just dump all of it 
-        xBiosLoadData(@tmp);
-        if  (tmp > 4) or (tmp = 0) then begin 
-            CRT_WriteCentered(3, 'Invalid save game!'~);
-            waitForKey;
-//            enableMapConsole();
-            exit;
-        end;
-        // if (xBiosIOresult = 0) then
-        //     CRT_WriteCentered(3,'Successful!'~)
-        // else
-        //     CRT_WriteCentered(3,'ERROR!'~);
-
-        // reopen 
-        xBiosOpenFile(saveFname);
-        xBiosSetLength($1000); // just dump all of it 
-        xBiosLoadData(Pointer($e000));
-        // if (xBiosIOresult = 0) then
-        //     CRT_WriteCentered(3,'Successful!'~)
-        // else
-        //     CRT_WriteCentered(3,'ERROR!'~);
-        xBiosFlushBuffer();
-        waitForKey();
-        // placeCurrentPlayer ();
-        // loadMap();
-        // enableMapConsole();
-    end; 
+    // reopen 
+    xBiosOpenFile(saveFname);
+    xBiosSetLength($0a1f); // just dump all of it 
+    xBiosLoadData(Pointer($e000));
+    xBiosFlushBuffer();
+    waitForKey();    
+end; 
 
 
 
