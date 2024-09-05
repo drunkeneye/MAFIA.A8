@@ -216,15 +216,24 @@ begin;
 end;
 
 
+function CRT_ReadKeyOrFire():byte;
+begin;
+    result := kbcode;
+    repeat until (not CRT_KeyPressed) or (result<>kbcode);
+    repeat until CRT_KeyPressed or (checkKeyAndStick = #$0c);
+    result := kbcode;
+end; 
+
 
 procedure waitForKey();
 var k:byte;
 begin
-  k := CRT_WhereY();
-  k := k + 2;
-  CRT_WriteCentered(k, waitKey_String);
-  CRT_ReadKey();
+    k := CRT_WhereY();
+    k := k + 2;
+    CRT_WriteCentered(k, waitKey_String);
+    CRT_ReadKeyOrFire();
 end;
+
 
 
 procedure CRT_NewLine2();
@@ -251,7 +260,7 @@ end;
 function getAnswer(A:byte; B:byte):   byte;
 begin
     repeat;
-        result := byte(CRT_ReadKey());
+        result := byte(CRT_ReadKeyOrFire());
     until (A = result) or (B = result);
    result := byte(result = B);
 end;
@@ -315,11 +324,11 @@ var b, k:   byte;
   p: cardinal;
 begin;
     xBiosOpenFile(gangsterFilename);
-    if (xBiosIOresult <> 0) then
-    begin;
-        CRT_Write('Unable to load GANGSTERS!'~);
-        waitForKey();
-    end;
+    // if (xBiosIOresult <> 0) then
+    // begin;
+    //     CRT_Write('Unable to load GANGSTERS!'~);
+    //     waitForKey();
+    // end;
     p := g SHL 8;
     xBiosSetFileOffset(p);
     xBiosSetLength(255);

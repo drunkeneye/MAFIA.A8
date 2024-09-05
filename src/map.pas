@@ -133,14 +133,7 @@ begin
             DPoke($fa6e, $4d4d);
             // 	FA60 : 58 58 44 44 44 44 2E 2E 2E 2E 4D 4D 4D 4D 4D 4D XXDDDD....MMMMMM
 
-            // [('0x4c', '0x4d', 'M'), ('0x4e', '0x4f', 'M'), ('0x50', '0x51', 'M')]
-            // [('0x57', '0x58', 'M'), ('0x59', '0x5a', 'M'), ('0x5b', '0x5c', 'M')]
-            DPoke($f642, $4d4c);
-            DPoke($f644, $4f4e);
-            DPoke($f646, $5150);
-            DPoke($f66a, $5958);
-            DPoke($f66c, $5b5a);
-            DPoke($f66e, $5d5c);
+            {$I moneytransporter_poke.pas}
         end; 
 
         // major 
@@ -183,15 +176,7 @@ begin
             DPoke($f960-4, $4e4e);
             DPoke($f962-4, $4e4e);
 
-            // ('0x2c', '0x2d', 'N'), ('0x2e', '0x2f', 'N'), 
-            // ('0x2c', '0x38', 'N'), ('0x39', '0x3a', 'N'), 
-            // ('0x1c', '0x4', 'N'), ('0x41', '0x42', 'N'), 
-            DPoke($f50c, $2d2c);
-            DPoke($f50e, $2f2e);
-            DPoke($f534, $382c);
-            DPoke($f536, $3a39);
-            DPoke($f560-4, $411c);
-            DPoke($f562-4, $4342);
+            {$I ./major_poke.pas}
         end 
     end;
 end; 

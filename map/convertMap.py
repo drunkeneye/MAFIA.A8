@@ -432,10 +432,53 @@ if __name__ == '__main__':
             locmap = ''.join(char_array)
             img_charset = render_used_characters_padded(charset, border = 1)
 
-            for cm_row, cg_row in zip(charmap, cut_grid):
-                result = [(hex(cm_row[i]), hex(cm_row[i+1]), cg_row[i//2]) for i in range(0, len(cm_row), 2) if cg_row[i//2] == 'N' or cg_row[i//2] == 'M']
-                if len(result) > 1: 
+
+            base_address_major = 0xf50c  
+            base_address_money = 0xf642  
+            major_offset = 0  
+            money_offset = 0  
+            major_jump_offset = 0x4   # The jump offset for major_poke
+
+            major_pokes = []  
+            moneytransporter_pokes = []  
+
+            for cm_row, cg_row in zip(charmap, cut_grid):  
+                result = [(hex(cm_row[i]), hex(cm_row[i+1]), cg_row[i//2])  
+                        for i in range(0, len(cm_row), 2)  
+                        if cg_row[i//2] == 'N' or cg_row[i//2] == 'M']  
+                
+                if len(result) > 1:  
                     print(result)
+                    for hex1, hex2, type_char in result:  
+                        combined_value = f"${int(hex2, 16):02x}{int(hex1, 16):02x}"  
+                
+                        if type_char == 'N':  
+                            if int(hex1, 16) < 0x10:  
+                                hex1 = f"${0x40:02x}{int(hex1, 16):02x}"  
+                            current_address = f"${base_address_major + major_offset:04x}"  
+                            major_pokes.append(f"DPoke({current_address}, {combined_value});")  
+                            major_offset += 2  
+                            if major_offset == 4 or major_offset == 8+0x24:  # Apply jump for major_poke  
+                                major_offset += 0x24  
+                
+                        elif type_char == 'M':  
+                            current_address = f"${base_address_money + money_offset:04x}"  
+                            moneytransporter_pokes.append(f"DPoke({current_address}, {combined_value});")  
+                            money_offset += 2  
+                            if money_offset == 6:  # Apply jump for major_poke  
+                                money_offset += 0x22  
+
+            if major_offset > 0:
+                with open("../src/major_poke.pas", "w") as major_file:
+                    major_file.write("\n".join(major_pokes))
+                print ("MAJOR:")
+                print ("\n".join(major_pokes))
+
+            if money_offset > 0:
+                with open("../src/moneytransporter_poke.pas", "w") as money_file:
+                    money_file.write("\n".join(moneytransporter_pokes))
+                print ("MONEY:")
+                print ("\n".join(moneytransporter_pokes))
 
             id = N+M*5 # FIXME if the number of screens change
             id = chr(ord('a') + id)

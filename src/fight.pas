@@ -17,11 +17,11 @@ begin
     // remember that we loaded a new map
     didFight := 1;
 
-    if (fp_N[0] < 1) or (fp_N[1] < 1) then begin 
-        CRT_WriteCentered(22, 'ERROR:0 enemy.'~);
-        CRT_ReadKey();
-        exit;
-    end;
+    // if (fp_N[0] < 1) or (fp_N[1] < 1) then begin 
+    //     CRT_WriteCentered(22, 'ERROR:0 enemy.'~);
+    //     CRT_ReadKey();
+    //     exit;
+    // end;
 
     // set positions
     for i := 0 to 31 do
@@ -59,7 +59,7 @@ begin
     FillChar (Pointer (MAP_SCR_ADDRESS+19*40), 5*40, ' '~);
     CRT_WriteCentered(21, fight_string_6);
     CRT_WriteCentered(22, fp_gang[fp_winner]);
-    CRT_ReadKey();
+    CRT_ReadKeyOrFire();
     result := fp_winner;
 end;
 

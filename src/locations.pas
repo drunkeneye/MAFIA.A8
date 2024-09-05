@@ -110,7 +110,7 @@ begin;
         locfname[1] := 'B';
         loadxAPL (locfname, Pointer(MAP_FNT_ADDRESS));
         locfname[1] := 'L';
-        CRT_ReadKey();
+        CRT_ReadKeyOrFire();
         FillChar(Pointer(MAP_SCR_ADDRESS+40*15), 40*9, 0);
         preloadMap(); // stupid, but true, need to reload the map now
         mapColorA := $88;

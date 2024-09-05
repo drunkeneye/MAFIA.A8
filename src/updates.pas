@@ -69,7 +69,7 @@ begin
         CRT_Write(', '~);
         CRT_Write(plPoints[currentPlayer]);
         CRT_Write_LocStr(10);
-        CRT_ReadKey();
+        CRT_ReadKeyOrFire();
         mapColorA := $88;
         mapColorB := $06;
         blackConsole();

@@ -114,7 +114,7 @@ begin;
     begin
         CRT_NewLine();
         CRT_Writeln(not_enough_money_string);
-        CRT_ReadKey();
+        CRT_ReadKeyOrFire();
         result := 0;
         exit;
     end;
