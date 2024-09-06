@@ -182,16 +182,12 @@ begin
 
     setupGame();
 
-
     msx.player:=pointer(rmt_player);
     msx.modul:=pointer(rmt_modul);
     msx.init(0);
     playMusic := 0; // for now
     showBitmaps := 1;
 
-    currentPlayer := 0;
-    currentMonth := 1;
-    currentYear := 0;
     repeat;
         loadLocation(MAIN_);
         enableConsole();

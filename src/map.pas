@@ -104,6 +104,7 @@ begin
             DPoke($fa42, $5858);
             DPoke($fa44, $5858);
             DPoke($fa46, $5858);
+
             Poke($f642, $04);
             Poke($f644, $04);
             Poke($f646, $04);
@@ -114,12 +115,13 @@ begin
             DPoke($fa6a, $2e2e);
             DPoke($fa6c, $2e2e);
             DPoke($fa6e, $2e2e);
+
             Poke($f66a, $1c);
             Poke($f66c, $1c);
             Poke($f66e, $1c);
-            Poke($f66b, $1d);
-            Poke($f66d, $1d);
-            Poke($f66f, $1d);
+            Poke($f66b, $1c);
+            Poke($f66d, $1c);
+            Poke($f66f, $1c);
         end
         else 
         begin  
@@ -160,8 +162,8 @@ begin
             DPoke($f962-4, $2e2e);
             Poke($f560-4, $1c);
             Poke($f562-4, $1c);
-            Poke($f561-4, $1d);
-            Poke($f563-4, $1d);
+            Poke($f561-4, $1c);
+            Poke($f563-4, $1c);
         end
         else 
         begin 
