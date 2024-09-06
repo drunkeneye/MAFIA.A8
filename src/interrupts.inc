@@ -14,13 +14,8 @@ dli1:
 
     mva #$0e atari.colpf0 ; white 
 
-    mva mapColorB atari.colpf1
-    ; mva #$06 atari.colpf1 ; lightgrey
-    
-    mva mapColorA atari.colpf2
-    ; mva #$88 atari.colpf2 ; bluish
-    
-    
+    mva mapColorB atari.colpf1 ; $06 for map
+    mva mapColorA atari.colpf2 ; $88 for map 
     mva #$2a atari.colpf3 ; orangish
     mva #$00 atari.colbk  ; black
 

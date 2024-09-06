@@ -218,6 +218,7 @@ begin
         CRT_Write('>'~);
 
         ch := readKeyAndStick();
+        WaitFrames(10);
         repeat;
             tmpch := checkKeyAndStick ();
         until tmpch <> ch; // wait for key release or so..

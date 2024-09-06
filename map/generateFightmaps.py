@@ -12,8 +12,8 @@ from math import ceil
 colormap = [
     [0, 0, 0],      # Black
     [255, 255, 255], # White
-    [128, 128, 128], # Grey
-    [240, 128, 0],   # Orange
+    [115, 68, 4], # Grey Brown now
+    [157, 12, 12],   # Orange/red
     [0, 80, 160],   # CyanBlue
 ]
 

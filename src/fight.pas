@@ -13,7 +13,7 @@ begin
     // loadxAPL (fightscrname, Pointer(MAP_SCR_ADDRESS));
     FillChar (Pointer (MAP_SCR_ADDRESS+19*40), 5*40, ' '~);
     enableMapConsole();
-    
+    mapColorB := $f4; // border wall color/beard
     // remember that we loaded a new map
     didFight := 1;
 

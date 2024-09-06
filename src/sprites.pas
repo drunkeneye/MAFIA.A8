@@ -466,7 +466,7 @@ begin;
 
         lda #$00     // eyes and tie
         sta PCOLR0
-        lda #$14   // face/beard
+        lda #$f4   // face/beard
         sta PCOLR1
         lda #$74        // main player color
         sta PCOLR2
