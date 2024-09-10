@@ -92,7 +92,7 @@ begin
         gangsterSex[tmp] := 1-r; // so M=0, F=1
 
         CRT_WriteCentered_LocStr(15, 8);
-        gangsterStr[tmp] := getRandom (10, 99, 5, 23, 15);
+        gangsterStr[tmp] := getRandom (10, 99, 5, 26, 15);
         CRT_WriteCentered_LocStr(16, 9);
         gangsterInt[tmp] := getRandom (10, 99, 5, 26, 16);
         CRT_WriteCentered_LocStr(17, 10);

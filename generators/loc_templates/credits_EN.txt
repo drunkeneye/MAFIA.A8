@@ -1,5 +1,5 @@
 LOCACRED.gfx
-MAFIA v1.1 (20240906)
+MAFIA v1.1 (20240911)
 $70, $af, $0e, $70
   
   
