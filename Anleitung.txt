@@ -3,14 +3,14 @@ M A F I A  -  ANLEITUNG
 =======================
 
 
-Es ist das Jahr 1920 in Chicago. Alkohol ist verboten, das Verbrechen blueht 
-auf. Ladenbesitzer leben in staendiger Angst vor Ueberfaellen und Erpressungen,
-die immer haeufiger werden. Jeder kann sich illegale Schusswaffen besorgen, 
+Es ist das Jahr 1920 in Chicago. Alkohol ist verboten, das Verbrechen blüht 
+auf. Ladenbesitzer leben in ständiger Angst vor Überfaellen und Erpressungen,
+die immer häufiger werden. Jeder kann sich illegale Schusswaffen besorgen, 
 und die korrupte Polizei ist keine Hilfe. 
 
-Du bist ein Niemand, der gerade aus dem Gefaengnis entlassen wurde, und selbst
-die Hotdogverkaeufer lachen ueber dich. Es reicht. Du willst die Herrschaft 
-ueber die Unterwelt. Aber der Weg zum Thron der Mafia ist lang und hart. 
+Du bist ein Niemand, der gerade aus dem Gefängnis entlassen wurde, und selbst
+die Hotdogverkäufer lachen über dich. Es reicht. Du willst die Herrschaft 
+über die Unterwelt. Aber der Weg zum Thron der Mafia ist lang und hart. 
 
 Wirst du es schaffen?
 
@@ -22,10 +22,10 @@ Ziel
 Steige auf und werde der Boss der Unterwelt! 
 Setze dich gegen deine Mitspieler durch!
 
-Fuer jeden Job, jeden Mord, fuer jeden Schmuggel, jede Bestechung und jeden 
-Ueberfall erhaelst du mehr Ruhm (und Punkte).
+Für jeden Job, jeden Mord, für jeden Schmuggel, jede Bestechung und jeden 
+Überfall erhälst du mehr Ruhm (und Punkte).
 
-Aber nur, wer am Ende auch den Buergermeister 'umdreht' und sich das Gold 
+Aber nur, wer am Ende auch den Bürgermeister 'umdreht' und sich das Gold 
 im Geldtransporter 'ausleiht' kann Boss der Unterwelt sein...
 
 
@@ -35,7 +35,8 @@ Steuerung
 =========
 
 Das Spiel wird mit Tastatur gesteuert, aber fast immer kann man auch den
-Joystick benutzen.
+Joystick benutzen. In einigen Situationen kann man mittels '0' zurück,
+z.B. beim Kauf einer Waffe oder eines Autos.
 
 Karte:
 ESC = Zeige Gangster und aktuellen Spielstand an
@@ -45,13 +46,14 @@ ESC = Zeige Gangster und aktuellen Spielstand an
 Kampf 
 =====
 
-Der Kampf funktioniert rundenweise, jeder Gangster kann sich bewergen oder 
-schiessen. 
+Der Kampf funktioniert rundenweise, jeder Gangster kann sich bewegen oder 
+schießen. 
 
-Druecke Return, um deine Waffe zu ziehen und eine Pfeiltaste, um in diese 
-Richtung zu schiessen.
+Drücke Enter (oder Feuer), um deine Waffe zu ziehen und eine 
+Pfeiltaste (oder bewege deinen Joystick), um in diese 
+Richtung zu schießen.
 
-q = Gebe den Kampf auf (nur fuer Anfaenger)
+q = Gebe den Kampf auf (nur für Angsthasen)
 i = Aktiviere die AI (nach dem naechsten Spielzug)
 Leertaste = Setze die Runde aus 
 

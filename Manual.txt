@@ -35,7 +35,8 @@ Controls
 ========
 
 The game is controlled with the keyboard, but almost always you can also
-use the joystick.
+use the joystick. In some situations, you can go back by pressing '0', 
+for example, when purchasing a weapon or a car.
 
 Map:
 ESC = Show gangsters and current game status
@@ -48,8 +49,8 @@ Fight
 
 Combat is turn-based, each gangster can move or shoot.
 
-Press Return to draw your weapon and an arrow key to shoot in that
-direction.
+Press Return (or fire) to draw your weapon and an arrow key 
+(or move your joystick) to shoot in that direction.
 
 q = Give up the fight (beginners only)
 i = Activate the AI (after the next move)
