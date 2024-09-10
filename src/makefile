@@ -90,20 +90,20 @@ ASSET_FILES := acombmap.gfx \
 	fmusb800.gfx tmusb800.gfx \
 	playb000.gfx \
 	playb0rz.gfx \
-	titlepic.gfx \
-	BOCAARMS.gfx \
-	BOCABANK.gfx \
-	BOCACARS.gfx \
-	BOCAFORG.gfx \
-	BOCAGAMB.gfx \
-	BOCAHIDE.gfx \
-	BOCALOAN.gfx \
-	BOCAMAJO.gfx \
-	BOCAMONY.gfx \
-	BOCAPOLI.gfx \
-	BOCAPUBB.gfx \
-	BOCASTOR.gfx \
-	BOCASUBW.gfx
+	titlepic.gfx
+# BOCAARMS.gfx \
+# BOCABANK.gfx \
+# BOCACARS.gfx \
+# BOCAFORG.gfx \
+# BOCAGAMB.gfx \
+# BOCAHIDE.gfx \
+# BOCALOAN.gfx \
+# BOCAMAJO.gfx \
+# BOCAMONY.gfx \
+# BOCAPOLI.gfx \
+# BOCAPUBB.gfx \
+# BOCASTOR.gfx \
+# BOCASUBW.gfx
 
 
 # finawpic.gfx finagpic.gfx

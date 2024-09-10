@@ -101,24 +101,25 @@ if __name__ == '__main__':
     process_bitmap("./bitmaps/wanted_f_final.png", "wantf", True)
     process_bitmap("./bitmaps/safeC_final.png", "safec", True, False)
 
-    process_bitmap("./locations/subway.png", "BOCASUBW")
-    process_bitmap("./locations/store.png", "BOCASTOR")
-    process_bitmap("./locations/police.png", "BOCAPOLI")
-    process_bitmap("./locations/moneytransporter.png", "BOCAMONY")
-    process_bitmap("./locations/loanshark.png", "BOCALOAN")
+    locationGFX = False
+    if locationGFX == True:
+        process_bitmap("./locations/subway.png", "BOCASUBW")
+        process_bitmap("./locations/store.png", "BOCASTOR")
+        process_bitmap("./locations/police.png", "BOCAPOLI")
+        process_bitmap("./locations/moneytransporter.png", "BOCAMONY")
+        process_bitmap("./locations/loanshark.png", "BOCALOAN")
 
-    process_bitmap("./locations/hideout.png", "BOCAHIDE")
-    process_bitmap("./locations/forgery.png", "BOCAFORG")
-    process_bitmap("./locations/cardealer.png", "BOCACARS")
-    process_bitmap("./locations/armsdealer.png", "BOCAARMS")
-    process_bitmap("./locations/bank.png", "BOCABANK")
-    
-    process_bitmap("./locations/pub.png", "BOCAPUBB")
-    process_bitmap("./locations/gambling.png", "BOCAGAMB")
-    process_bitmap("./locations/major.png", "BOCAMAJO")
-#    process_bitmap("./bitmaps/centralstation.png", "BOCASUBW")
+        process_bitmap("./locations/hideout.png", "BOCAHIDE")
+        process_bitmap("./locations/forgery.png", "BOCAFORG")
+        process_bitmap("./locations/cardealer.png", "BOCACARS")
+        process_bitmap("./locations/armsdealer.png", "BOCAARMS")
+        process_bitmap("./locations/bank.png", "BOCABANK")
+        
+        process_bitmap("./locations/pub.png", "BOCAPUBB")
+        process_bitmap("./locations/gambling.png", "BOCAGAMB")
+        process_bitmap("./locations/major.png", "BOCAMAJO")
+        #    process_bitmap("./bitmaps/centralstation.png", "BOCASUBW")
 
- 
 
 
 #

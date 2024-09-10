@@ -56,7 +56,7 @@ begin;
         r := getYesNo();
         if r = 1 then
         begin
-            CRT_Write_LocStr(2);
+            CRT_Writeln_LocStr(2);
             lawyer := readValue(0, 10000);
             CRT_NewLine2();
             t := payMoney (lawyer);
