@@ -51,5 +51,5 @@ Byles najbardziej brutalny,
 podly i sprytny ze wszystkich!
 Tym razem kilka osob wygralo! Wszyscy
 byli rownie sprawnymi gangsterami!
-Nacisnij dowolny klawisz lub SELECT by
-zapisac gre lub OPTION aby zaladowac.
+Nacisnij dowolny klawisz / SELECT, by
+zapisac gre / OPTION, aby zaladowac.
