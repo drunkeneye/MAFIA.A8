@@ -20,3 +20,4 @@ Bodyguards#
 Mayor#
 For your heinous deed, you also 
 receive $7000 and a new passport!
+Bodyguard#

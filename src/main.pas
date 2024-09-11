@@ -189,6 +189,22 @@ begin
     showBitmaps := 1;
 
     repeat;
+        // check for end first
+        gameEnds := Byte(currentYear > gameLength);
+        // check only at the end of the round to allow for each player to win
+        if currentPlayer = 0 then begin;
+            for k := 0 to nPlayers-1 do
+                if (plPoints[k] >= gamePoints) then
+                    if (plMoneyTransporter[k] = 1) then
+                      if (plKilledMajor[k] = 1) then
+                        begin
+                            plWinners[k] := 1;
+                            gameEnds := gameEnds + 1;
+                            plNWinners := plNWinners + 1;
+                        end;
+        end;
+        if gameEnds > 0 then break;
+
         loadLocation(MAIN_);
         enableConsole();
         if playersTurn() = RESET_ then
@@ -394,17 +410,6 @@ begin
         plCurrentMap[currentPlayer] := currentMap;
 
         nextPlayer();
-
-        gameEnds := Byte(currentYear > gameLength);
-        for k := 0 to nPlayers-1 do
-            if (plPoints[k] >= gamePoints) then
-                if (plMoneyTransporter[k] = 1) then
-                  if (plKilledMajor[k] = 1) then
-                    begin
-                        plWinners[k] := 1;
-                        gameEnds := gameEnds + 1;
-                        plNWinners := plNWinners + 1;
-                    end;
     until gameEnds = 1;
 
     // reuse plCurrentMap for winners
@@ -412,6 +417,8 @@ begin
     CRT_Clear();
 
     loadLocation(MAIN_);
+    finalfname := 'FINAGPICAPL';
+
     // if one player won, its ok, if not all have won
     if plNWinners = 1 then begin
         for k := 0 to nPlayers-1 do
@@ -423,11 +430,11 @@ begin
                 CRT_WriteCentered_LocStr(7, 35);
                 CRT_WriteCentered_LocStr(8, 36);
                 CRT_WriteCentered_LocStr(9, 37);
-                if gangsterSex[tmp] = 1 then
-                    finalfname := 'FINAGPICAPL' // CHANGED TO G
-                else
-                    finalfname := 'FINAGPICAPL'; // CHANGED TO G
-                break;
+                // if gangsterSex[tmp] = 1 then
+                //     finalfname := 'FINAGPICAPL' // CHANGED TO G
+                // else
+                //     finalfname := 'FINAGPICAPL'; // CHANGED TO G
+                // break;
             end;
         end;
     end
@@ -440,14 +447,14 @@ begin
             if plWinners[k] = 1 then
             begin
                 tmp := k SHL 3;
-                CRT_WriteCentered(7+currentChoice,gangsterNames[k]);
+                CRT_WriteCentered(7+currentChoice,gangsterNames[tmp]);
                 currentChoice := currentChoice + 1;
             end;
         end;
         CRT_WriteCentered_LocStr(7+currentChoice+2, 39);
-        finalfname := 'FINAGPICAPL';
     end;
 
+    CRT_ReadKeyOrFire();
     DisableDLI;
     DLISTL := DL_BLACK_CONSOLE_ADR;
     Waitframes(10);

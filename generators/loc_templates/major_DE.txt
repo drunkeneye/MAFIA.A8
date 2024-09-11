@@ -16,7 +16,8 @@ Eskorte#
 Wachmann#
 Der Buergermeister verschanzt sich
 hinter seinen Leibwaechtern!
-Leibwaechter#
+Leibwache#
 Buergermeister#
 Fuer deine ruchlose Tat bekommst du
 auch noch 7000$ und einen neuen Pass!
+Leibwaechter#
