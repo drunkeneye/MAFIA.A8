@@ -330,7 +330,7 @@ rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek',
 weaponNames_PL  = ['Rece', 'Colt M1911', 'Savage 1907',
                                         'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
                                         'Thomson SMG', 'Browning BAR', 'Granaty']
-carNames_PL = ['Stopy', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
+carNames_PL = ['Nogi', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
 
