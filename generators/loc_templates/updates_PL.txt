@@ -12,16 +12,16 @@ $bc, $af, $00, $bc
  
  
 50
-Twoja instytucja kredytowa kwitnie, 
+Twoja firma pozyczkowa kwitnie, 
 a ty zarabiasz
 $!
-W twojej instytucji kredytowej panuje
+W twojej firmie pozyczkowej panuje
 nudny marazm...
 Nadal masz jeszcze
 $ dlugu i zostalo
 ci tylko
  mies. na jego splate!
-Rekin kredytowy nasyla na ciebie 
+Rekin pozyczkowy nasyla na ciebie 
 swoich windykatorow...
 Windykatorzy#
 Goscie zabieraja wszystkie twoje 
