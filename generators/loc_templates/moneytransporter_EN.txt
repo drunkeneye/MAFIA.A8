@@ -12,11 +12,11 @@ Borrowing a bit of cash...
 You don't have enough gangsters!
 Unfortunately, the money transport is 
 accompanied by a police escort!
-Escort
-Guard
+Escort#
+Guard#
 The fat, ugly mayor cowardly hides
 behind his many bodyguards!
-Bodyguards
-Mayor
+Bodyguards#
+Mayor#
 For your heinous deed, you also 
 receive $7000 and a new passport!

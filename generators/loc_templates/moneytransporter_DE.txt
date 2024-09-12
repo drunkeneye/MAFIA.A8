@@ -12,11 +12,11 @@ Ein bisschen Bargeld borgen...
 Du hast zuwenig Gangster!
 Leider wird der Geldtransport von 
 einer Polizeieskorte begleitet!
-Eskorte
-Wachmann
+Eskorte#
+Wachmann#
 Der Buergermeister verschanzt sich
 hinter seinen Leibwaechtern!
-Leibwaechter
-Buergermeister
+Leibwaechter#
+Buergermeister#
 Fuer deine ruchlose Tat bekommst du
 auch noch 7000$ und einen neuen Pass!
