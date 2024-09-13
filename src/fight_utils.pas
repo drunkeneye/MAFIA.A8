@@ -375,9 +375,15 @@ end;
 
 
 procedure fight_playerMove();
+var tmpch:char;
 begin;
     repeat;
         fight_waitForCommand();
+
+        WaitFrames(10);
+        repeat;
+            tmpch := checkKeyAndStick ();
+        until tmpch <> fp_currentCommand; // wait for key release or so..
 
         // next player if space is pressed
         if (fp_currentCommand = #$21) then exit;
