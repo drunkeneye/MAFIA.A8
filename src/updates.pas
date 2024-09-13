@@ -281,9 +281,11 @@ begin
     for j := 0 to 31 do
     begin
         en := gangsterHealth[j];
-        en := en + gangsterStr[j] SHR 3+1 + 1;
-        maxx := 2 + gangsterBrut[j] SHR 2 + gangsterInt[j] SHR 2;
+        en := en + gangsterStr[j] SHR 2;
+        maxx := gangsterBrut[j] SHR 1 + gangsterInt[j] SHR 1 + 1;
+        if maxx < 35 then maxx := 35;
         if en > maxx then en := maxx;
+        if en > 99 then en := 99;
         gangsterHealth[j] := en;
     end;
 end;

@@ -97,9 +97,10 @@ begin
         gangsterInt[tmp] := getRandom (10, 99, 5, 26, 16);
         CRT_WriteCentered_LocStr(17, 10);
         gangsterBrut[tmp] := getRandom (10, 99, 5, 26, 17);
-        CRT_WriteCentered_LocStr(18, 11);
-        gangsterHealth[tmp] := getRandom (10, 99, 5, 26, 18);
-        CRT_WriteCentered_LocStr(19, 12);
+        gangsterHealth[tmp] := 30;
+        // CRT_WriteCentered_LocStr(18, 11);
+        // gangsterHealth[tmp] := getRandom (10, 99, 5, 26, 18);
+        CRT_WriteCentered_LocStr(18, 12);
         plMoney[currentPlayer] := getRandom (5000, 9999, 250, 24, 19);
         waitForKey;
     end;

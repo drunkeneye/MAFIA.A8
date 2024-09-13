@@ -313,7 +313,7 @@ begin;
     begin;
         // ensure player is drawn
         fight_drawCurrentPlayer();
-        waitForKeyRelease();
+        //waitForKeyRelease();
 
         currentBlink := 0;
         repeat;
