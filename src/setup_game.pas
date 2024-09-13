@@ -101,7 +101,7 @@ begin
         // CRT_WriteCentered_LocStr(18, 11);
         // gangsterHealth[tmp] := getRandom (10, 99, 5, 26, 18);
         CRT_WriteCentered_LocStr(18, 12);
-        plMoney[currentPlayer] := getRandom (5000, 9999, 250, 24, 19);
+        plMoney[currentPlayer] := getRandom (5000, 9999, 250, 24, 18);
         waitForKey;
     end;
 
