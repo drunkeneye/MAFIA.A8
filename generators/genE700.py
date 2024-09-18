@@ -267,7 +267,7 @@ carNames_DE =  ['Fuesse', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Aubur
 
 weaponNames_DE  = ['Haende', 'Colt M1911', 'Savage 1907',
                                         'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
-                                        'Thomson SMG', 'Browning BAR', 'Handgranaten']
+                                        'Thompson SMG', 'Browning BAR', 'Handgranaten']
  
                    #  Colt,  Sav,  Rem,  Win,  S&W,  SMG,  BAR
 weaponPrices   =  [0, 2000, 2500, 3000, 3000, 4000, 4500, 8000, 10000]
@@ -318,7 +318,7 @@ rankNames_EN = ['Rookie', 'Rowdy', 'Small Fry',
                                             'Gangster Boss', 'Right Hand', 'The Don']
 weaponNames_EN  = ['Hands', 'Colt M1911', 'Savage 1907',
                                         'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
-                                        'Thomson SMG', 'Browning BAR', 'Grenades']
+                                        'Thompson SMG', 'Browning BAR', 'Grenades']
 
 
 
@@ -329,7 +329,7 @@ rankNames_PL = ['Poczatkujacy', 'Zbir', 'Pionek',
                             'Szef gangsterow', 'Prawa reka', 'Ojc. chrzestny']
 weaponNames_PL  = ['Rece', 'Colt M1911', 'Savage 1907',
                                         'Remington 11', 'Winchester 97', 'Smith&Wesson 10',
-                                        'Thomson SMG', 'Browning BAR', 'Granaty']
+                                        'Thompson SMG', 'Browning BAR', 'Granaty']
 carNames_PL = ['Nogi', 'Talbot 90', 'Chevy Roadster', 'Buick Century', 'Auburn 120', 'Citroen t.a.']
 
 
