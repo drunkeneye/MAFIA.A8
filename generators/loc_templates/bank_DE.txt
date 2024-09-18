@@ -1,9 +1,9 @@
 LOCABANK.gfx
-Bank/Postamt
+Bank
 $e6, $af, $ff, $e6
 Continental Bank
 First National Bank
-Harris Trust&Savings Bank
+Harris Trust&Savings
 The Northern Trust Company
 0,2,6,8
 Guten Tag, mein Herr! Was ist ihr Begehr?
