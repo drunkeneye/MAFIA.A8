@@ -105,6 +105,7 @@ begin
             if getYesNo() =0 then exit;
             addMoney(p);
             plLoanShark[currentPlayer] := 99;
+            plLoanInvest[currentPlayer] := 0; // player looses his invested money too
             CRT_NewLine;
             CRT_Writeln_LocStr(25);
             waitForKey();

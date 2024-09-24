@@ -1,7 +1,5 @@
 {$DEFINE ROMOFF}    // http://mads.atari8.info/doc/en/syntax/#romoff
 {$DEFINE NOROMFONT}
-// https://github.com/tebe6502/Mad-Pascal/commit/cd5e0df799e0a7c51ff0af1f26e839fc02c2cbf9
-
 
 program MAFIA;
 
@@ -15,7 +13,6 @@ program MAFIA;
 
 
 uses atari, pmg, xbios, crt, cio, aplib, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
-
 
 const
 {$i const.inc}
@@ -440,7 +437,9 @@ begin
     end
     else
     begin
-        CRT_WriteCentered_LocStr(5, 38);
+        // no space for another string..
+        if plNWinners > 0 then 
+            CRT_WriteCentered_LocStr(5, 38);
         currentChoice := 0;
         for k := 0 to nPlayers-1 do
         begin;

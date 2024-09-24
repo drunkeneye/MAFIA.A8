@@ -64,7 +64,7 @@ begin;
             begin
                 // yes, can affort it
                 change := lawyer SHR 10+1; // if this is zero, Random(0) is 0..255
-                change := Random(change) + 2;
+                change := Random(change);
                 prisonTime := prisonTime - change;
                 if prisonTime < 0 then
                     prisonTime := 0;
