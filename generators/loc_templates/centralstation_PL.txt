@@ -1,5 +1,5 @@
 LOCACENT.gfx
-Stacja Centralna (Dworzec)
+Dworzec Centralny
 $a2, $ad, $ad, $a2
  
   
