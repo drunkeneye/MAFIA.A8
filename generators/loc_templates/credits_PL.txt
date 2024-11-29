@@ -1,5 +1,5 @@
 LOCACRED.gfx
-MAFIA v1.11 (20241003)
+MAFIA v1.12 (20241239)
 $70, $af, $0e, $70
 
 
@@ -35,6 +35,7 @@ Support: +Adam+
 Polska lokalizacja:  +Adam+
 Muzyka: Andy, Cedyn
 Dzwiek: Miker
+xBios: xxl
 
 Link do zrodel i aktualnej wersji:
 http://github.com/drunkeneye/MAFIA.A8

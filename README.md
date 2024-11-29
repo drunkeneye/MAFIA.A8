@@ -11,10 +11,10 @@ Atari 8-bit with 64 kB of RAM.
 
 ## Tools
 
-Developed using MAD Assembler and MAD Pascal.
-An several other tools like atari-tools (https://github.com/jhallen/atari-tools).
+Developed using MAD Assembler and MAD Pascal, and xBios by xxl.
+And several other tools like atari-tools (https://github.com/jhallen/atari-tools).
 
-Currently, the code only compiles well on MAD Pascal v1.7.0.
+Currently, the code compiles well on MAD Pascal v1.7.0.
 
 
 
