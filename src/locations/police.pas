@@ -19,7 +19,7 @@ begin;
         ShowLocationHeader;
         CRT_Writeln_LocStr(1);
         CRT_Write_LocStr(2);
-        m := readValue (0, 100);
+        m := readValue (0, 12); 
         if m = 0 then exit;
         if payMoney(m*1000) = 0 then exit;
 
@@ -61,7 +61,8 @@ begin;
         CRT_NewLine;        
         CRT_Writeln_LocStr(7);
         repeat;
-            r := readValueNoZero(1,nPlayers);
+            r := readValue(1, nPlayers); 
+            //r := readValueNoZero(1,nPlayers);
         until plPrison[r-1] > 0;
         r := r -1;
         p  := Random(5) SHL 9 + 3000;

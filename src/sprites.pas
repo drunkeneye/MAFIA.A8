@@ -130,15 +130,17 @@ begin
     CRT_Writeln2_LocStr(6);
 
     CRT_Write_LocStr(7);
-    a := readValueNoZero(1,3);
+    a := readValue(1, 3); 
+    // a := readValueNoZero(1,3);
     CRT_NewLine2();
     if a = 1 then
     begin
         price := 500 + 500*plRank[currentPlayer];
         CRT_Write_LocStr(8);
         CRT_Write(price);
-        CRT_Writeln2_LocStr(9);
+        CRT_Write_LocStr(9);
         r := getYesNo();
+        CRT_NewLine();
         if r = 1 then // N=0, Y=1
         begin
             if payMoney(price) = 0 then
@@ -377,9 +379,15 @@ begin
 
 
     // we can walk
+    {$ifdef CART}
     msx.init ($0e);
     msx.play();
     playMusic := 1;
+    {$else}
+    msx.init ($0e);
+    msx.play();
+    playMusic := 1;
+    {$endif}
 
     if dir_y <> 0 then
     begin;
@@ -404,8 +412,13 @@ begin
         end;
     end;
 
+    {$ifdef CART}
     msx.stop();
     playMusic := 0;
+    {$else}
+    msx.stop();
+    playMusic := 0;
+    {$endif}
 
 
     // check for roadblock now
@@ -440,7 +453,8 @@ end;
 
 procedure clearSprites();
 begin;
-    FillChar(Pointer(PMG_BASE_ADR+768),2048-768,$0);
+    // -3*16, maybe we kill cart here, if we write at BFDA or later?
+    FillChar(Pointer(PMG_BASE_ADR+768),2048-768-3*16,$0);
 end;
 
 

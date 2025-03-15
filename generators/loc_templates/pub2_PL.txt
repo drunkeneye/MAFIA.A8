@@ -1,4 +1,4 @@
-LOCAPUBC.gfx
+PUBCLOCA.gfx
 Pub/Bar (szemrana knajpa)
 $30, $af, $ff, $30
  

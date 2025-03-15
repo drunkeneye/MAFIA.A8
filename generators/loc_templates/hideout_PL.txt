@@ -1,4 +1,4 @@
-LOCAHIDE.gfx
+HIDELOCA.gfx
 Hotel (kryjowka)
 $02, $af, $0c, $02
 Hotel Sherman

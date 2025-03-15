@@ -1,4 +1,4 @@
-LOCAMAIN.gfx
+MAINLOCA.gfx
 Podsumowanie
 $18, $af, $10, $18
  

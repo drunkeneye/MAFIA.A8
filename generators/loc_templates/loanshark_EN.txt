@@ -1,4 +1,4 @@
-LOCALOAN.gfx
+LOANLOCA.gfx
 Loan Shark
 $44, $af, $ff, $44
 Riverfront Credit Line

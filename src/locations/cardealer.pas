@@ -16,7 +16,6 @@ end;
 
 function carDealerChoices:  byte;
 var r:   byte;
-    minCar:   byte;
     maxCar:   byte;
     price:   word;
     oldPrice:   word;
@@ -31,14 +30,13 @@ begin;
         CRT_Writeln_LocStr(2);
 
         // depends on location
-        minCar := 1;
         maxCar := 4;
         if currentSubLocation > 2 then
             maxCar := 5;
 
         // show cars
         CRT_NewLine;
-        for r := minCar to maxCar do
+        for r := 1 to maxCar do
         begin
             CRT_Write('  '~);
             CRT_Write(r);
@@ -51,7 +49,7 @@ begin;
 
         CRT_NewLine();
         CRT_Write_LocStr(3);
-        newCar := readValue (minCar, maxCar);
+        newCar := readValue (0, maxCar);
         if newCar = 0 then exit;
         CRT_Newline;
         price := carPrices[newCar];
@@ -115,9 +113,9 @@ begin;
         // ifint(rnd(1)*(in/40+kr/30))=0
         r := gangsterInt[currentGangster] shr 2;
         // reuse 
-        minCar := gangsterStr[currentGangster] shr 2;
-        minCar := minCar + r+r+r;
-        if (Random(100) < minCar) then
+        maxCar := gangsterStr[currentGangster] shr 2;
+        maxCar := maxCar + r+r+r;
+        if (Random(100) < maxCar) then
         begin
             // worked
             CRT_Writeln_LocStr(10);

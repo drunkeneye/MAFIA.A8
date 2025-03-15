@@ -1,0 +1,33 @@
+
+;;;; dlists
+
+DL_CONSOLE_ADR rcasm 'dlists/dlist_console.asm'
+DL_BLACK_CONSOLE_ADR rcasm 'dlists/dlist_black_console.asm'
+DL_MAP_ADR rcasm 'dlists/dlist_map.asm'
+DL_BITMAP_ADR rcasm 'dlists/dlist_bitmap.asm'
+
+;;;; map
+
+PMG_BASE_ADR rcdata '../assets/player.pmg'
+
+
+;;;;; fonts
+
+MAINFONT_ADR rcdata '../assets/mafia.fnt'
+
+
+;;;;; msx
+
+; b000-etc is own data/loading area
+; load some byte there and hope that madpascal
+; will detect any overlap 
+TXT_ADDRESS rcasm 'dlists/dlist_black_console.asm'
+
+;rmt_player	RMTPLAY2	'../music/testninja.feat' 0
+;rmt_modul	RMT		'../music/testninja.rmt'
+
+rmt_player	RMTPLAY2	'../music/sfx_s.feat' 0
+rmt_modul	RMT		'../music/sfx_s.rmt'
+
+;rmt_player	RMTPLAY2	'../music/pacmad.feat' 0
+;rmt_modul	RMT		'../music/pacmad.rmt'

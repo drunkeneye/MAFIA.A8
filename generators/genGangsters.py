@@ -62,7 +62,7 @@ def create_gangster_file(gangsters, suffix):
         byte_stream.extend([0] * zeros_to_add)
 
     # Write the byte stream to the file
-    filename = f"../assets/gangstas.dat_{suffix}"
+    filename = f"../assets/gangstas.gfx_{suffix}"
     with open(filename, 'wb') as f:
         f.write(byte_stream)
 

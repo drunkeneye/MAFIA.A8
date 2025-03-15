@@ -1,8 +1,5 @@
 
 Var 
-//    msx          :   TRMT;
-    //priorDefault :   byte;
-    //old_vbl      :   pointer absolute $238;
     consoleState: byte;
 
  
@@ -16,13 +13,6 @@ Begin
 End;
 
  
-// Procedure vblMusic;
-// interrupt;
-// Begin
-//     msx.play;
-// End;
-
-
 Procedure blackConsole();
 Begin;
     if consoleState = 0 then exit;
@@ -55,6 +45,17 @@ Begin;
     SetCharset (Hi(MAP_FNT_ADDRESS));
     CRT_Init(MAP_SCR_ADDRESS, 40, 25);
     consoleState := 2;
+End;
+
+
+Procedure enableBitmapConsole();
+Begin;
+    if consoleState = 3 then exit;
+    EnableDLI(@dli_bitmap);
+    DLISTL := DL_BITMAP_ADR;
+    SetCharset (Hi(MAP_FNT_ADDRESS));
+    CRT_Init(MAP_SCR_ADDRESS, 40, 25);
+    consoleState := 3;
 End;
 
 //

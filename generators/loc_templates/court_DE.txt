@@ -1,4 +1,4 @@
-LOCACOUR.gfx
+COURLOCA.gfx
 Gerichtsverhandlung
 $70, $af, $0e, $70
   

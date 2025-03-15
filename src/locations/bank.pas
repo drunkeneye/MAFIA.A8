@@ -203,7 +203,7 @@ begin;
                 if c[whpos] < 0 then c[whpos] := 9;
                 nAttempts := nAttempts - 1;
 
-
+                {$ifdef CART}
                 if (hops = False) and (t[whpos] = c[whpos]) then 
                     msx.init ($0a)
                 else 
@@ -213,7 +213,17 @@ begin;
                 WaitFrames(10);
                 msx.stop();
                 playMusic := 0;
-                 
+                {$else}
+                if (hops = False) and (t[whpos] = c[whpos]) then 
+                    msx.init ($0a)
+                else 
+                    msx.init ($0c);
+                msx.play();
+                playMusic := 1;
+                WaitFrames(10);
+                msx.stop();
+                playMusic := 0;
+                {$endif}
             end;
             if (hops = False) and (t[0] = c[0]) and (t[1] = c[1]) and (t[2] = c[2]) then safeOpen := 1;
         until (ch = #$2f) or (nAttempts = 0) or (safeOpen = 1);

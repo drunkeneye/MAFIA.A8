@@ -1,6 +1,6 @@
-DPoke($f642, $4a49);
-DPoke($f644, $4c4b);
-DPoke($f646, $4e4d);
-DPoke($f66a, $5655);
-DPoke($f66c, $5857);
-DPoke($f66e, $5a59);
+DPoke(MAP_FNT_ADDRESS + $0642, $4a49);
+DPoke(MAP_FNT_ADDRESS + $0644, $4c4b);
+DPoke(MAP_FNT_ADDRESS + $0646, $4e4d);
+DPoke(MAP_FNT_ADDRESS + $066a, $5655);
+DPoke(MAP_FNT_ADDRESS + $066c, $5857);
+DPoke(MAP_FNT_ADDRESS + $066e, $5a59);

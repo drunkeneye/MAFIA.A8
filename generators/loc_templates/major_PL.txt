@@ -1,4 +1,4 @@
-LOCAMAJO.gfx
+MAJOLOCA.gfx
 Burmistrz
 $62, $af, $6e, $62
  

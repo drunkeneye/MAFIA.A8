@@ -1,4 +1,5 @@
 DL_CONSOLE_ADR rcasm 'dlists/dlist_console.asm'
 DL_BLACK_CONSOLE_ADR rcasm 'dlists/dlist_black_console.asm'
 DL_LOGO_ADR rcasm 'dlists/dlist_logo.asm'
+DL_MAP_ADR rcasm 'dlists/dlist_flags.asm'
 

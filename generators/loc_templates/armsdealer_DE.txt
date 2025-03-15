@@ -1,4 +1,4 @@
-LOCAARMS.gfx
+ARMSLOCA.gfx
 Waffenladen
 $74, $af, $ff, $74
 Chicago Gun Shop
@@ -27,7 +27,7 @@ Du hast nun die neue Waffe!
 Wen soll ich trainieren?
 Kurzes Training im Schiesstand, oder
 Das kostet dich 
-$ (J/N).
+$ (J/N)
  trainiert schiessen...
  ist im Trainingslager...
 Dein Gangster ist staerker,

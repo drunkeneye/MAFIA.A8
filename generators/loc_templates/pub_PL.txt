@@ -1,4 +1,4 @@
-LOCAPUBB.gfx
+PUBBLOCA.gfx
 Pub/Bar (szemrana knajpa)
 $30, $af, $ff, $30
 Albatros

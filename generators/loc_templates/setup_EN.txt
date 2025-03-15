@@ -1,4 +1,4 @@
-LOCASETU.gfx
+SETULOCA.gfx
 MAFIA
 $18, $af, $10, $18
  
@@ -29,5 +29,5 @@ Short or long game (S/L)?
 Found a save game!
 Do you want to load it (Y/N)?
 Loading save game...
-Save game is corrupt!
-Saving game...
+No saved game found!
+Game was saved.

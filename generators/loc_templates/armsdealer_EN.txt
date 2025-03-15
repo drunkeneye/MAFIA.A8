@@ -1,4 +1,4 @@
-LOCAARMS.gfx
+ARMSLOCA.gfx
 Gun Shop
 $74, $af, $ff, $74
 Chicago Gun Shop
@@ -27,7 +27,7 @@ You now have the new weapon!
 Who should I train?
 Quick shooting range training, or
 That'll cost you
-$ (Y/N).
+$ (Y/N)
  trained shooting...
  is in training camp...
 Your gangster has become stronger,

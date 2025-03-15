@@ -29,10 +29,14 @@ DL_MODE_320x192G2 = $F;
 DL_JMP = %00000001; // Order to jump
 DL_JVB = %01000001; // Jump to begining
 
-; It's always useful to include your program global constants here
-    icl 'const.inc'
 
-; and declare display list itself
+.ifdef CART 
+    icl 'const_car.inc'
+.else 
+    icl 'const_car.inc'
+.endif
+
+
 
 dl_start
     dta DL_DLI + DL_BLANK8                                        ; // 8 blank line

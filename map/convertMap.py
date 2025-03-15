@@ -6,6 +6,7 @@ from scipy.spatial.distance import cdist
 from bitarray import bitarray
 from glob import glob
 from math import ceil
+import json
 
 
 # maybe 26,72 on xl and 0, 04, 0e for grey scale
@@ -17,6 +18,48 @@ colormap = [
     [0, 80, 160],   # CyanBlue
 ]
 
+
+# because we changed some code later we need to swap
+colormap2 = [
+    [0, 0, 0],      # Black
+    [255, 255, 255], # White
+    [128, 128, 128], # Grey
+    [0, 80, 160],   # CyanBlue
+    [240, 128, 0],   # Orange
+]
+
+
+def export_as_atrview(chars, data, output_path):
+    if len(data) < 1040:
+        print ("Data length should be exactly 1040 bytes (40x25 grid).")
+        print (f"Length is currently {len(data)}")
+        print ("Just padding")
+        data += b'\x00'*(1040-len(data))
+        print (f"Length is now {len(data)}")
+    
+    if len(data) > 1040:
+        print ("Data too long!! ")
+        print (f"Length is currently {len(data)}")
+        return None 
+        
+    # Create dictionary for .atrview format
+    atrview_content = {
+         "version": "2007",
+         "coloredGfx": "1",
+         "chars": data.hex() + "00"*40,  
+         "lines": "0" * 52,  
+         "colors": "0E00767A9406", 
+         "fontname1": "default1.fnt",
+         "fontname2": "default2.fnt",
+         "data": chars.hex() + chars.hex(), 
+         "fortyBytes": "1"
+    }
+
+    # Save to file
+    # overwrite right now
+    with open(output_path, "w") as atrview_file:
+        atrview_file.write(json.dumps(atrview_content, separators=(',', ':')))
+ 
 
 
 def setspace (grid, i,j, v):
@@ -182,7 +225,7 @@ def load_grid(filename):
     return grid
 
 
-def create_charset_and_charmap(bitmap, block_size=(4, 8)):
+def create_charset_and_charmap(bitmap, colormap, block_size=(4, 8)):
     charset = []
     charsetidx = [] # maybe stupid i dont care
     charmap = []
@@ -204,8 +247,8 @@ def create_charset_and_charmap(bitmap, block_size=(4, 8)):
             else:
                 idx = charsetidx.index(block_hash)
 
-            orange = np.any([(s == colormap[4]).all() for k in block_array for s in k])
-            cyan = np.any([(s == colormap[3]).all() for k in block_array for s in k])
+            orange = np.any([(s == colormap[3]).all() for k in block_array for s in k])
+            cyan = np.any([(s == colormap[4]).all() for k in block_array for s in k])
             if orange and cyan:
                 print (i,j)
                 print (block_array)
@@ -220,6 +263,7 @@ def create_charset_and_charmap(bitmap, block_size=(4, 8)):
     # Print the number of different indices in each row of the charmap
     for row in charmap:
         print(len(set(row)), end=' ')
+    print("Charmap length:", len(charmap))
     print()  # Move to the next line
 
     return charset, charmap
@@ -403,7 +447,7 @@ if __name__ == '__main__':
     full_bitmap.save('output/map_visualized.png')
 
     # test full grid first
-    charset, charmap = create_charset_and_charmap(full_bitmap)
+    charset, charmap = create_charset_and_charmap(full_bitmap, colormap = colormap2)
     print (f"Whole map has altogether {len(charset)} chars.")
     img_charset = render_used_characters_padded(charset)
     img_charset.save('output/charset_all.png')
@@ -425,7 +469,7 @@ if __name__ == '__main__':
                 print (f"{nErrors} color errors found.")
                 raise Exception ("Fix it")
 
-            charset, charmap = create_charset_and_charmap(bitmap_result)
+            charset, charmap = create_charset_and_charmap(bitmap_result, colormap = colormap2)
             cut_map = [''.join([char*2 for char in string]) for string in cut_grid]
             mapping = {num: char for sublist, string in zip(charmap, cut_map) for num, char in zip(sublist, string)}
             char_array = [mapping.get(i, '-') for i in range(max(mapping.keys()) + 1)]
@@ -433,8 +477,8 @@ if __name__ == '__main__':
             img_charset = render_used_characters_padded(charset, border = 1)
 
 
-            base_address_major = 0xf50c  
-            base_address_money = 0xf642  
+            base_address_major = 0x050c
+            base_address_money = 0x0642
             major_offset = 0  
             money_offset = 0  
             major_jump_offset = 0x4   # The jump offset for major_poke
@@ -456,14 +500,14 @@ if __name__ == '__main__':
                             if int(hex1, 16) < 0x10:  
                                 hex1 = f"${0x40:02x}{int(hex1, 16):02x}"  
                             current_address = f"${base_address_major + major_offset:04x}"  
-                            major_pokes.append(f"DPoke({current_address}, {combined_value});")  
+                            major_pokes.append(f"DPoke(MAP_FNT_ADDRESS + {current_address}, {combined_value});")
                             major_offset += 2  
                             if major_offset == 4 or major_offset == 8+0x24:  # Apply jump for major_poke  
                                 major_offset += 0x24  
                 
                         elif type_char == 'M':  
                             current_address = f"${base_address_money + money_offset:04x}"  
-                            moneytransporter_pokes.append(f"DPoke({current_address}, {combined_value});")  
+                            moneytransporter_pokes.append(f"DPoke(MAP_FNT_ADDRESS + {current_address}, {combined_value});")
                             money_offset += 2  
                             if money_offset == 6:  # Apply jump for major_poke  
                                 money_offset += 0x22  

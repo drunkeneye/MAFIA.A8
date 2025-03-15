@@ -101,38 +101,38 @@ begin
         if plOpportunity[currentPlayer] and (1 SHL 2) = 0 then 
         begin;
     	    // FA40 : 58 58 4D 4D 4D 4D 4D 4D 58 58 58 58 52 52 52 52 XXMMMMMMXXXXRRRR
-            DPoke($fa42, $5858);
-            DPoke($fa44, $5858);
-            DPoke($fa46, $5858);
+            DPoke(MAP_FNT_ADDRESS + $a42, $5858);
+            DPoke(MAP_FNT_ADDRESS + $a44, $5858);
+            DPoke(MAP_FNT_ADDRESS + $a46, $5858);
 
-            Poke($f642, $04);
-            Poke($f644, $04);
-            Poke($f646, $04);
-            Poke($f643, $05);
-            Poke($f645, $05);
-            Poke($f647, $05);
+            Poke(MAP_FNT_ADDRESS + $642, $04);
+            Poke(MAP_FNT_ADDRESS + $644, $04);
+            Poke(MAP_FNT_ADDRESS + $646, $04);
+            Poke(MAP_FNT_ADDRESS + $643, $05);
+            Poke(MAP_FNT_ADDRESS + $645, $05);
+            Poke(MAP_FNT_ADDRESS + $647, $05);
             // 	FA60 : 58 58 44 44 44 44 2E 2E 2E 2E 4D 4D 4D 4D 4D 4D XXDDDD....MMMMMM
-            DPoke($fa6a, $2e2e);
-            DPoke($fa6c, $2e2e);
-            DPoke($fa6e, $2e2e);
+            DPoke(MAP_FNT_ADDRESS + $a6a, $2e2e);
+            DPoke(MAP_FNT_ADDRESS + $a6c, $2e2e);
+            DPoke(MAP_FNT_ADDRESS + $a6e, $2e2e);
 
-            Poke($f66a, $1c);
-            Poke($f66c, $1c);
-            Poke($f66e, $1c);
-            Poke($f66b, $1c);
-            Poke($f66d, $1c);
-            Poke($f66f, $1c);
+            Poke(MAP_FNT_ADDRESS + $66a, $1c);
+            Poke(MAP_FNT_ADDRESS + $66c, $1c);
+            Poke(MAP_FNT_ADDRESS + $66e, $1c);
+            Poke(MAP_FNT_ADDRESS + $66b, $1c);
+            Poke(MAP_FNT_ADDRESS + $66d, $1c);
+            Poke(MAP_FNT_ADDRESS + $66f, $1c);
         end
         else 
         begin  
             // car
     	    // FA40 : 58 58 4D 4D 4D 4D 4D 4D 58 58 58 58 52 52 52 52 XXMMMMMMXXXXRRRR
-            DPoke($fa42, $4d4d);
-            DPoke($fa44, $4d4d);
-            DPoke($fa46, $4d4d);
-            DPoke($fa6a, $4d4d);
-            DPoke($fa6c, $4d4d);
-            DPoke($fa6e, $4d4d);
+            DPoke(MAP_FNT_ADDRESS + $a42, $4d4d);
+            DPoke(MAP_FNT_ADDRESS + $a44, $4d4d);
+            DPoke(MAP_FNT_ADDRESS + $a46, $4d4d);
+            DPoke(MAP_FNT_ADDRESS + $a6a, $4d4d);
+            DPoke(MAP_FNT_ADDRESS + $a6c, $4d4d);
+            DPoke(MAP_FNT_ADDRESS + $a6e, $4d4d);
             // 	FA60 : 58 58 44 44 44 44 2E 2E 2E 2E 4D 4D 4D 4D 4D 4D XXDDDD....MMMMMM
 
             {$I moneytransporter_poke.pas}
@@ -143,40 +143,40 @@ begin
         begin
             // 	F900 : 52 52 52 52 58 58 2E 2E 58 58 58 58 58 58 58 58 RRRRXX..XXXXXXXX
             // 	F910 : 48 48 48 48 58 58 58 58 50 50 50 50 58 58 58 58 HHHHXXXXPPPPXXXX
-            DPoke($f90c, $5858);
-            DPoke($f90e, $5858);
+            DPoke(MAP_FNT_ADDRESS + $90c, $5858);
+            DPoke(MAP_FNT_ADDRESS + $90e, $5858);
             //	F930 : 58 58 58 58 58 58 58 58 48 48 48 48 58 58 58 58 XXXXXXXXHHHHXXXX
-            DPoke($f934, $2e2e);
-            DPoke($f936, $2e2e);
+            DPoke(MAP_FNT_ADDRESS + $934, $2e2e);
+            DPoke(MAP_FNT_ADDRESS + $936, $2e2e);
 
-            Poke($f50c, $04);
-            Poke($f50e, $04);
-            Poke($f534, $04);
-            Poke($f536, $04);
-            Poke($f50d, $05);
-            Poke($f50f, $05);
-            Poke($f535, $05);
-            Poke($f537, $05);
+            Poke(MAP_FNT_ADDRESS + $50c, $04);
+            Poke(MAP_FNT_ADDRESS + $50e, $04);
+            Poke(MAP_FNT_ADDRESS + $534, $04);
+            Poke(MAP_FNT_ADDRESS + $536, $04);
+            Poke(MAP_FNT_ADDRESS + $50d, $05);
+            Poke(MAP_FNT_ADDRESS + $50f, $05);
+            Poke(MAP_FNT_ADDRESS + $535, $05);
+            Poke(MAP_FNT_ADDRESS + $537, $05);
 	        // F960 : 2E 2E 2E 2E 2E 2E 2E 2E 50 50 50 50 58 58 2E 2E ........PPPPXX..
-            DPoke($f960-4, $2e2e);
-            DPoke($f962-4, $2e2e);
-            Poke($f560-4, $1c);
-            Poke($f562-4, $1c);
-            Poke($f561-4, $1c);
-            Poke($f563-4, $1c);
+            DPoke(MAP_FNT_ADDRESS + $960-4, $2e2e);
+            DPoke(MAP_FNT_ADDRESS + $962-4, $2e2e);
+            Poke(MAP_FNT_ADDRESS + $560-4, $1c);
+            Poke(MAP_FNT_ADDRESS + $562-4, $1c);
+            Poke(MAP_FNT_ADDRESS + $561-4, $1c);
+            Poke(MAP_FNT_ADDRESS + $563-4, $1c);
         end
         else 
         begin 
             // 	F900 : 52 52 52 52 58 58 2E 2E 58 58 58 58 58 58 58 58 RRRRXX..XXXXXXXX
             // 	F910 : 48 48 48 48 58 58 58 58 50 50 50 50 58 58 58 58 HHHHXXXXPPPPXXXX
-            DPoke($f90c, $4e4e);
-            DPoke($f90e, $4e4e);
+            DPoke(MAP_FNT_ADDRESS + $90c, $4e4e);
+            DPoke(MAP_FNT_ADDRESS + $90e, $4e4e);
 	        // F960 : 2E 2E 2E 2E 2E 2E 2E 2E 50 50 50 50 58 58 2E 2E ........PPPPXX..
             //	F930 : 58 58 58 58 58 58 58 58 48 48 48 48 58 58 58 58 XXXXXXXXHHHHXXXX
-            DPoke($f934, $4e4e);
-            DPoke($f936, $4e4e);
-            DPoke($f960-4, $4e4e);
-            DPoke($f962-4, $4e4e);
+            DPoke(MAP_FNT_ADDRESS + $934, $4e4e);
+            DPoke(MAP_FNT_ADDRESS + $936, $4e4e);
+            DPoke(MAP_FNT_ADDRESS + $960-4, $4e4e);
+            DPoke(MAP_FNT_ADDRESS + $962-4, $4e4e);
 
             {$I ./major_poke.pas}
         end 

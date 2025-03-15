@@ -1,4 +1,4 @@
-LOCACAUG.gfx
+CAUGLOCA.gfx
 Arrest
 $70, $af, $0e, $70
  

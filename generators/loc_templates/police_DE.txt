@@ -1,4 +1,4 @@
-LOCAPOLI.gfx
+POLILOCA.gfx
 Polizei-Praesidium
 $84, $af, $ff, $84
 Praesidium West

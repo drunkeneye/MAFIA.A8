@@ -5,17 +5,33 @@ program MAFIA;
 
 
 {$define basicoff}
-{$librarypath '../../tools/Mad-Pascal/blibs/'}
-{$librarypath '../../tools/Mad-Pascal/base/'}
-{$librarypath '../../tools/Mad-Pascal/lib/'}
+{$librarypath '../../tools/Mad-Pascal-1.7.2/blibs/'}
+{$librarypath '../../tools/Mad-Pascal-1.7.2/base/'}
+{$librarypath '../../tools/Mad-Pascal-1.7.2/lib/'}
 
-{$r ./resources.rc}
+{$ifdef CART}
+    {$r ./resources_car.rc}
+{$else}
+    {$r ./resources_car.rc}  
+{$endif}
 
+// NOTE: b_maxFlash8Mb.pas CANNOT be found due to lower/upper case.
+// for this to work, copy it to b_maxflash8mb.pas in tools/Mad-Pascal-1.7.2/blibs
+uses atari, pmg, xbios, crt, b_utils, rmt,  sysutils, b_system, b_crt;
 
-uses atari, pmg, xbios, crt, cio, aplib, b_utils, rmt, b_pmg, sysutils, b_system, b_crt;
-
+{$ifdef CART}
 const
-{$i const.inc}
+    {$i const_car.inc}
+    {$i b_maxflash.pas}
+{$else}
+const
+    {$i const_car.inc}
+    // fix return of checkSavedGame...
+    SAVE_LOCATION_ADR = LOCATION_ADR + $200; // this is option 7... not be used in setup
+
+var
+    save_gameFound: byte absolute SAVE_LOCATION_ADR + $5;
+{$endif}
 
 
 var
@@ -23,11 +39,17 @@ var
 	msx: TRMT;
 
 
-{$i vars_e000_main.pas}
-{$i vars_ec00_fight.pas}
-{$i vars_be80_location.pas}
-{$i vars_e100_gangsters.pas}
-{$I vars_ea00_strings.pas}
+type 
+    XString =   String[15];
+    YString =   String[40];
+
+
+{$i vars_main.pas}
+{$i vars_fight.pas}
+{$i vars_location.pas}
+{$i vars_gangsters.pas}
+{$I vars_localization.pas}
+{$I vars_loc_strings.pas}
 
 
 
@@ -41,6 +63,7 @@ end;
 
 
 
+{$I helpers_input.pas}
 {$I helpers.pas}
 {$I interrupts.inc}
 {$I xbaplib.pas}
@@ -49,12 +72,17 @@ end;
 procedure loadxAPL(var fname: TString; outputPointer: pointer);
 var msxstatus: byte;
 begin;
+    {$ifdef CART}
+    xbunAPL(fname, outputPointer);
+    {$else}
     msxstatus := playMusic;
     if playMusic = 1 then
         msx.stop();
     playMusic := 0;
     xbunAPL(fname, outputPointer);
     playMusic := msxstatus;
+    {$endif}
+
 end;
 
 
@@ -96,8 +124,9 @@ end;
 
 procedure clearMemory();
 begin;
-    FillChar (Pointer($e000), $fc00-$e000, 0);
-    FillChar (Pointer($be80), $cc00-$be80, 0);
+    FillChar (Pointer(MAP_FNT_ADDRESS), $1800, 0);
+    FillChar (Pointer(LOCATION_ADR), $1000, 0);
+    FillChar (Pointer(VARBLOCK1), $44, 0);
 end;
 
 
@@ -140,7 +169,7 @@ end;
 var
     k:   byte;
     outcome: byte;
-    cs:   word;
+    // cs:   word;
     ch:   char;
 begin
     DMACTL := $22;
@@ -156,12 +185,12 @@ begin
     SystemOff;
 
     // check xbios from StarVagrant
-    cs := dPeek($0800);
-    if (char(Lo(cs)) <> 'x') or (char(Hi(cs)) <> 'B') then
-        // make it crash if no xbios is there
-        repeat;
-            CRT_Write('NO XBIOS!'~);
-        until false;
+    // cs := dPeek($0800);
+    // if (char(Lo(cs)) <> 'x') or (char(Hi(cs)) <> 'B') then
+    //     // make it crash if no xbios is there
+    //     repeat;
+    //         CRT_Write('NO XBIOS!'~);
+    //     until false;
 
     playMusic := 0;
 
@@ -172,17 +201,22 @@ begin
     enableConsole();
     // repeat; until false;
     clearMemory();
-    loadxAPL (e7fname, Pointer(e7adrm6));
-    
+    loadxAPL (e7fname, Pointer(E7_ADR));
+
     initGlobalVars();
     showCredits();
 
     setupGame();
-
+    // repeat; until false;
     msx.player:=pointer(rmt_player);
     msx.modul:=pointer(rmt_modul);
-    msx.init(0);
+
+    {$ifdef CART}
     playMusic := 0; // for now
+    {$else}
+    playMusic := 0; // for now
+    {$endif}
+    
     showBitmaps := 1;
 
     repeat;
@@ -209,6 +243,7 @@ begin
             continue;
         end;
         blackConsole();
+        //playMusic := 1; // doesnt work like that
         currentLocation := NONE_;
         lastLocation := NONE_;
 
@@ -276,7 +311,7 @@ begin
         printMapStatus();
 
         lastAction := 0;
-        
+
         while (plSteps[currentPlayer] > 0) and (currentLocation <> END_TURN_) do
         begin;
             // EnableVBLI(@vbl);
@@ -288,7 +323,12 @@ begin
                 ch := readKeyAndStick();
 
                 // load gfx?
-                if byte(ch) = $20 then begin;
+                // if byte(ch) = $20 then begin;
+                //     playMusic := playMusic xor 1;
+                // end;
+
+                // load gfx?
+                if byte(ch) = $1f then begin;
                     showBitmaps := showBitmaps xor 1;
                 end;
 
@@ -300,7 +340,7 @@ begin
                     addMoney(10000);
                     Waitframes(30);
                 end;
-                // W                    
+                // W
                 if byte(ch) = $6e then
                 begin;
                     plPoints[currentPlayer] := plPoints[currentPlayer]+5;
@@ -438,7 +478,7 @@ begin
     else
     begin
         // no space for another string..
-        if plNWinners > 0 then 
+        if plNWinners > 0 then
             CRT_WriteCentered_LocStr(5, 38);
         currentChoice := 0;
         for k := 0 to nPlayers-1 do

@@ -1,4 +1,4 @@
-LOCAJOBB.gfx
+JOBBLOCA.gfx
  
 $ca, $af, $00, $ca
  

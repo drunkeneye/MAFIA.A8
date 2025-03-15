@@ -1,4 +1,4 @@
-LOCALOAN.gfx
+LOANLOCA.gfx
 Rekin pozyczkowy
 $44, $af, $ff, $44
 Riverfront Credit Line

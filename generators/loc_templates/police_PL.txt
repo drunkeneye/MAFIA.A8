@@ -1,4 +1,4 @@
-LOCAPOLI.gfx
+POLILOCA.gfx
 Komisariat Policji
 $84, $af, $ff, $84
 Komisariat Zachodni

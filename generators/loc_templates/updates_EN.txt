@@ -1,4 +1,4 @@
-LOCAUPDT.gfx
+UPDTLOCA.gfx
 Overview
 $bc, $af, $00, $bc
  

@@ -101,7 +101,7 @@ begin
             CRT_Write_LocStr(22);
             CRT_Write(p);
             CRT_Writeln_LocStr(23);
-            CRT_Writeln_LocStr(24);
+            CRT_Write_LocStr(24);
             if getYesNo() =0 then exit;
             addMoney(p);
             plLoanShark[currentPlayer] := 99;

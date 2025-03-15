@@ -1,4 +1,4 @@
-LOCASUBW.gfx
+SUBWLOCA.gfx
 Stacja metra
 $d0, $ad, $dd, $d0
 Ogden Station

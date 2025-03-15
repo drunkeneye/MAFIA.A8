@@ -1,4 +1,4 @@
-LOCACARS.gfx
+CARSLOCA.gfx
 Car Dealer
 $0b, $af, $90, $0b
 Smith Brothers Motors

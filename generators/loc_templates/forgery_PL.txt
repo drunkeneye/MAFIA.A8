@@ -1,4 +1,4 @@
-LOCAFORG.gfx
+FORGLOCA.gfx
 Falszerz Eddie
 $ba, $00, $00, $ba
 W ciemnej piwnicy 

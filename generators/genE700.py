@@ -164,12 +164,40 @@ def createE700(rankNames, weaponNames, carNames, suffix):
 
     dumpTString (byte_stream, fntname) # not needed anymore, but stays to keep pading intact
     dumpTString (byte_stream, wanted_m_fname)
-    dumpTString (byte_stream, wanted_m_fname) # NOT NEEDED, so just copy for now
     dumpTString (byte_stream, wanted_f_fname)
-    dumpTString (byte_stream, wanted_f_fname) # NOT NEEDED
     dumpTString (byte_stream, fight_map_fname)
-    dumpTString (byte_stream, fight_map_fname) # NOT NEEDED
+
+    # gangsters depend on location
+    gangsterFilename = f'GANGSTASA{suffix}'
     dumpTString (byte_stream, gangsterFilename)
+
+    fstrings = [
+        f'BANKLOCAA{suffix}',
+        f'FORGLOCAA{suffix}',
+        f'MONYLOCAA{suffix}',
+        f'LOANLOCAA{suffix}',
+        f'POLILOCAA{suffix}',
+        f'CARSLOCAA{suffix}',
+        f'PUBBLOCAA{suffix}',
+        f'PUBCLOCAA{suffix}',
+        f'STORLOCAA{suffix}',
+        f'HIDELOCAA{suffix}',
+        f'GAMBLOCAA{suffix}',
+        f'SUBWLOCAA{suffix}',
+        f'ARMSLOCAA{suffix}',
+        f'MAINLOCAA{suffix}',
+        f'JOBBLOCAA{suffix}',
+        f'MAJOLOCAA{suffix}',
+        f'COURLOCAA{suffix}',
+        f'CAUGLOCAA{suffix}',
+        f'ROADLOCAA{suffix}',
+        f'UPDTLOCAA{suffix}',
+        f'SETULOCAA{suffix}',
+        f'CENTLOCAA{suffix}',
+        f'CREDLOCAA{suffix}',
+    ]
+
+ 
 
     for f in fstrings:
         dumpTString (byte_stream, f)
@@ -187,9 +215,8 @@ def createE700(rankNames, weaponNames, carNames, suffix):
     for k in fpPosStart:
         byte_stream.extend(struct.pack('<H', k))
 
-    # too late to the party
-    dumpTString (byte_stream, 'LOCACENTAPL')
-    dumpTString (byte_stream, 'LOCACREDAPL')
+    for k in range(4):
+        byte_stream.append(0)  # mapcolor/movedir
 
 
     if suffix == "DE":
@@ -208,7 +235,7 @@ def createE700(rankNames, weaponNames, carNames, suffix):
     with open(filename, 'wb') as f:
         f.write(byte_stream)
     print(len(byte_stream))
-    assert(len(byte_stream) == 1487)
+    assert(len(byte_stream) == 1443)
 
 
 
@@ -234,32 +261,8 @@ fntname = 'ACOMBMAPAPL'
 wanted_m_fname = 'WANTMBMPAPL'
 wanted_f_fname = 'WANTFBMPAPL'
 fight_map_fname = 'AFMAPBMPAPL'
-gangsterFilename = 'GANGSTASDAT'
 
 
-fstrings = [
-    'LOCABANKAPL',
-    'LOCAFORGAPL',
-    'LOCAMONYAPL',
-    'LOCALOANAPL',
-    'LOCAPOLIAPL',
-    'LOCACARSAPL',
-    'LOCAPUBBAPL',
-    'LOCAPUBCAPL',
-    'LOCASTORAPL',
-    'LOCAHIDEAPL',
-    'LOCAGAMBAPL',
-    'LOCASUBWAPL',
-    'LOCAARMSAPL',
-    'LOCAMAINAPL',
-    'LOCAJOBBAPL',
-    'LOCAMAJOAPL',
-    'LOCACOURAPL',
-    'LOCACAUGAPL',
-    'LOCAROADAPL',
-    'LOCAUPDTAPL',
-    'LOCASETUAPL'
-]
 rankNames_DE  =  ['Anfaenger', 'Schlaeger', 'Kleiner Fisch',
                                             'Langfinger', 'Ganove', 'Mafiosi', 'Bullenschreck', 'Meuchelmoerder',
                                             'Gangsterboss', 'Rechte Hand',  'Der Pate']

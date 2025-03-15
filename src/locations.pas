@@ -65,10 +65,11 @@ begin;
 end;
  
 
-{$ifdef LOCATIONSGFX} 
+{$ifdef CART} 
 procedure loadLocation(L:byte);
 var    locfname:   TString;
     displayBMP: byte;
+    e1, e2: char;
 begin;
     displayBMP := 0;
     if lastLocationStrings = L then exit;
@@ -98,21 +99,29 @@ begin;
         SETUP_: locfname := LOCASETUfname;
         CREDITS_: locfname := LOCACREDfname;
     end;    
-    loadxAPL (locfname, Pointer(baseAddress));
+    loadxAPL (locfname, Pointer(LOCATION_ADR));
 
     if showBitmaps = 0 then exit;
 
     if displayBMP = 1 then 
     begin;
-        enableMapConsole;
-        mapColorA := $04;
         FillChar(Pointer(MAP_SCR_ADDRESS), 40*24, 0);
-        locfname[1] := 'B';
+        locfname[5] := 'B';
+        e1 := locfname[10];
+        e2 := locfname[11];
+        locfname[10] := 'P';
+        locfname[11] := 'L';
         loadxAPL (locfname, Pointer(MAP_FNT_ADDRESS));
-        locfname[1] := 'L';
+        locfname[5] := 'L';
+        locfname[10] := e1;
+        locfname[11] := e2;
+        mapColorA := $04;
+        mapColorB := $0a;
+        enableBitMapConsole;
         CRT_ReadKeyOrFire();
-        FillChar(Pointer(MAP_SCR_ADDRESS+40*15), 40*9, 0);
+        //FillChar(Pointer(MAP_SCR_ADDRESS+40*15), 40*9, 0);
         preloadMap(); // stupid, but true, need to reload the map now
+        mapColorB := $06;
         mapColorA := $88;
         enableConsole;
     end; 
@@ -148,7 +157,7 @@ begin;
         SETUP_: locfname := LOCASETUfname;
         CREDITS_: locfname := LOCACREDfname;
     end;    
-    loadxAPL (locfname, Pointer(baseAddress));
+    loadxAPL (locfname, Pointer(LOCATION_ADR));
 end;
 {$endif}
 
@@ -241,28 +250,29 @@ begin
         // if byte(ch) < $18 then continue;
         // if byte(ch) > $35 then continue;
         
-        case byte(ch) of 
-            $1f: ch := #49; // 1
-            $1e: ch := #50; // 2
-            $1a: ch := #51;
-            $18: ch := #52;
-            $1d: ch := #53;
-            $1b: ch := #54;
-            $33: ch := #55;
-            $35: ch := #56;
-            $30: ch := #57;
-            $32: ch := #58; // 0
-        end;
+    // no more use-keyboard for selection
+    //     case byte(ch) of 
+    //         $1f: ch := #49; // 1
+    //         $1e: ch := #50; // 2
+    //         $1a: ch := #51;
+    //         $18: ch := #52;
+    //         $1d: ch := #53;
+    //         $1b: ch := #54;
+    //         $33: ch := #55;
+    //         $35: ch := #56;
+    //         $30: ch := #57;
+    //         $32: ch := #58; // 0
+    //     end;
 
-    //     'v', #$ff, 'c', #$ff, #$ff, 'b', 'x', 'z', '4', #$ff, '3', '6', CHAR_ESCAPE, '5', '2', '1',
-    //     ',', ' ', '.', 'n', #$ff, 'm', '/', CHAR_INVERSE, 'r', #$ff, 'e', 'y', CHAR_TAB, 't', 'w', 'q',
-    //     '9', #$ff, '0', '7', CHAR_BACKSPACE, '8', '>', #$ff, 'f', 'h', 'd', #$ff, CHAR_CAPS, 'g', 's', 'a',
+    // //     'v', #$ff, 'c', #$ff, #$ff, 'b', 'x', 'z', '4', #$ff, '3', '6', CHAR_ESCAPE, '5', '2', '1',
+    // //     ',', ' ', '.', 'n', #$ff, 'm', '/', CHAR_INVERSE, 'r', #$ff, 'e', 'y', CHAR_TAB, 't', 'w', 'q',
+    // //     '9', #$ff, '0', '7', CHAR_BACKSPACE, '8', '>', #$ff, 'f', 'h', 'd', #$ff, CHAR_CAPS, 'g', 's', 'a',
 
-        if (byte(ch) > 48) and (byte(ch) < 48+loc_nOptions+1) then 
-        begin
-            result := byte(ch) - 48;
-            exit;
-        end; 
+    //     if (byte(ch) > 48) and (byte(ch) < 48+loc_nOptions+1) then 
+    //     begin
+    //         result := byte(ch) - 48;
+    //         exit;
+    //     end; 
     until ch = #$0c;
     // should never get here 
     result := choice+1; 

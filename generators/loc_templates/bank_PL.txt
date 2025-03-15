@@ -1,4 +1,4 @@
-LOCABANK.gfx
+BANKLOCA.gfx
 Bank
 $e6, $af, $ff, $e6
 Continental Bank

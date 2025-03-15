@@ -49,12 +49,22 @@ begin
   CRT_WriteCentered(5, gangsterNames[z]);
   CRT_WriteCentered_LocStr(6, 2);
 
+  {$ifdef CART}
   msx.init (0);
   msx.play();
   playMusic := 1;
   WaitFrames(120);
   msx.stop();
   playMusic := 0;
+  {$else}
+  msx.init (0);
+  msx.play();
+  playMusic := 1;
+  WaitFrames(120);
+  msx.stop();
+  playMusic := 0;
+  {$endif}
+
 
   result := 0;
   if currentPlayer = 0 then
@@ -65,12 +75,18 @@ begin
     if byte(ch) = $1e then begin;
         loadLocation(SETUP_);
         loadGame();
+        waitForKey();
         loadLocation(MAIN_);
         result := RESET_;
     end;
     if byte(ch) = $1f then begin;
         loadLocation(SETUP_);
+        blackConsole();
         saveGame();
+        enableConsole();
+        CRT_Clear;
+        CRT_WriteCentered_LocStr(1, 19);
+        waitForKey();
         loadLocation(MAIN_);
     end;
   end

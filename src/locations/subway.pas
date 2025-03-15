@@ -12,7 +12,7 @@ begin
     if currentChoice = 2 then
     begin
         CRT_Writeln_LocStr(1);
-        CRT_Writeln_LocStr(2);
+        CRT_Write_LocStr(2);
         if getYesNo() =0 then exit;
         if payMoney (50) = 0 then exit;
         loot := Random(4); // =new place on map

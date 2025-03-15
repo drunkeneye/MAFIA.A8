@@ -1,4 +1,4 @@
-LOCACENT.gfx
+CENTLOCA.gfx
 Dworzec Centralny
 $a2, $ad, $ad, $a2
  

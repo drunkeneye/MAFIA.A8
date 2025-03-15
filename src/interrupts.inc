@@ -102,6 +102,58 @@ end;
 
 
 
+procedure dli_bitmap;assembler;interrupt;
+asm {
+dli:
+    phr ; store registers
+
+dlijmp:
+    jmp dli1
+
+dli1:
+    lda #>MAP_FNT_ADDRESS
+    sta $D409 ; CHBAS_real
+    sta WSYNC
+
+    mva #$0e atari.colpf0 ; white 
+    mva mapColorB atari.colpf1 ; $06 for map
+    mva mapColorA atari.colpf2 ; $88 for map 
+    mva #$2a atari.colpf3 ; orangish
+    mva #$00 atari.colbk  ; black
+
+    lda #<dli2
+    sta dlijmp+1
+    lda #>dli2
+    sta dlijmp+2
+
+    plr
+    rti
+
+dli2:
+    nop
+    nop
+    nop
+    nop
+
+    lda #>LOC_MAP_ADR
+    sta $D409 ; CHBAS_real
+    sta WSYNC
+
+    jsr main.musicproxy
+
+    lda #<dli1
+    sta dlijmp+1
+    lda #>dli1
+    sta dlijmp+2
+
+    plr
+    rti
+
+};
+end;
+
+
+
 procedure dli_black_console;assembler;interrupt;
 asm {
     phr 

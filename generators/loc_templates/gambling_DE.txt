@@ -1,4 +1,4 @@
-LOCAGAMB.gfx
+GAMBLOCA.gfx
 Spielhoelle
 $22, $af, $2c, $22
 The Stardust Club

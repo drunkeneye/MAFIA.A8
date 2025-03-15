@@ -1,4 +1,4 @@
-LOCASTOR.gfx
+STORLOCA.gfx
 Simple Store
 $d4, $af, $ff, $d4
 Mandel Brothers

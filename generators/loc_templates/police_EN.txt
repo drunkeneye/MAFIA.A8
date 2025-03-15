@@ -1,4 +1,4 @@
-LOCAPOLI.gfx
+POLILOCA.gfx
 Police Headquarters
 $84, $af, $ff, $84
 West Precinct

@@ -189,18 +189,9 @@ begin;
         CRT_NewLine();
     end;
     CRT_Write_LocStr(10);
-    m := readValue(0, 99);
+    m := readValue(0, 36-plRentMonths[currentPlayer]);
     // FIXME, maybe we need readByteValue? no overflow should happen value < 100
     if (m = 0) then exit;
-    if (plRentMonths[currentPlayer]+m > 36) then 
-    begin
-        CRT_NewLine();
-        CRT_Writeln_LocStr(26);
-        CRT_Writeln_LocStr(27);
-        waitForKey();
-        exit;
-    end;
-
     if payMoney (price*m) = 0 then exit;
 
     // update rent

@@ -1,4 +1,4 @@
-LOCALOAN.gfx
+LOANLOCA.gfx
 Kredit-Hai
 $44, $af, $ff, $44
 Riverfront Credit Line

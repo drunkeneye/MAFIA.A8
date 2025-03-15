@@ -1,4 +1,4 @@
-LOCAGAMB.gfx
+GAMBLOCA.gfx
 Szulernia
 $22, $af, $2c, $22
 Klub Gwiezdny Pyl

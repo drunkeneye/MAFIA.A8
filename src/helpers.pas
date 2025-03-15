@@ -27,31 +27,10 @@ end;
 procedure CRT_WriteCentered_LocStr(r: byte; b: byte);
 var z: word;
   tmpstr: ^String;
-begin; 
+begin;
   z := (b-1)*$28;
   tmpstr := Pointer(loc_string_1) + z;
   CRT_WriteCentered(r, tmpstr);
-end;
-
-
-function getRandom(minp:word; maxp:word; steps:word; x:byte; y:byte):   word;
-var prop:   word;
-begin;
-    prop := minp;
-    repeat
-    until not CRT_KeyPressed;
-
-    repeat
-        prop := prop + steps;
-        if prop > maxp then
-            prop := minp;
-        CRT_GotoXY (x,y);
-        Waitframe;
-        CRT_Write (prop);
-        CRT_Write('  '~);
-        // ensure overwrite
-    until CRT_KeyPressed;
-    result := prop;
 end;
 
 
@@ -63,156 +42,18 @@ end;
 
 
 
-
-    // CRT_keycode: array [0..255] of char = ( //@nodoc
-    //     'l', 'j', ';', #$ff, #$ff, 'k', '+', '*', 'o', #$ff, 'p', 'u', CHAR_RETURN, 'i', '-', '=', //@nodoc
-    //     'v', #$ff, 'c', #$ff, #$ff, 'b', 'x', 'z', '4', #$ff, '3', '6', CHAR_ESCAPE, '5', '2', '1',
-    //     ',', ' ', '.', 'n', #$ff, 'm', '/', CHAR_INVERSE, 'r', #$ff, 'e', 'y', CHAR_TAB, 't', 'w', 'q',
-    //     '9', #$ff, '0', '7', CHAR_BACKSPACE, '8', '>', #$ff, 'f', 'h', 'd', #$ff, CHAR_CAPS, 'g', 's', 'a',
-    //     'L', 'J', ':', #$ff, #$ff, 'K', '\', '^', 'O', #$ff, 'P', 'U', #$ff, 'I', '_', '|',
-    //     'V', #$ff, 'C', #$ff, #$ff, 'B', 'X', 'Z', '$', #$ff, '#', '&', #$ff, '%', '"', '!',
-    //     '[', ';', ']', 'N', #$ff, 'M', '?', #$ff, 'R', #$ff, 'E', 'Y', #$ff, 'T', 'W', 'Q',
-    //     '(', #$ff, ')', '''', #$ff, '@', #$ff, #$ff, 'F', 'H', 'D', #$ff, #$ff, 'G', 'S', 'A',
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff,
-    //     #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff, #$ff
-    // );
-
-
-function readKeyAndStick():char;
-var
-    ch:char;
+function CRT_ReadKeyOrJoystick():byte;
+var z: char;
 begin;
-  asm;
-        phr
-        lda #$00
-        sta joystickused
-  loop:
-        lda $d300
-        and #$0f
-        cmp #$0f 
-        bne foundstick
-
-        lda $d010 ; try stick button 
-        cmp #$00
-        bne nofire 
-        lda #$0c
-        sta joystickused
-        jmp loopend
-
-nofire:
-        lda consol		; START
-        cmp #$05
-        beq foundsave
-        cmp #$03
-        beq foundload
-        cmp #$06
-        beq foundmsx
-
-        lda skctl		; ANY KEY
-        and #$04
-        bne loop
-
-        lda kbcode
-        jmp loopend
-  stickdata:
-        // right, left, down, up --> 7= 0111=right;  11=1011=left, 13=1101=down, 14=1110=up
-        dta 0,0,0,0,    0,0, 0, 07,   0, 0,0, 06, 0,     15, 14
-  foundstick:
-        tay
-        lda stickdata,y
-        sta joystickused
-        jmp loopend
-  foundsave:
-        lda #$1f 
-        jmp loopend
-  foundmsx:
-        lda #$20
-        jmp loopend
-  foundload:
-        lda #$1e
-        // check for key
-  loopend:
-        sta ch
-        plr
-  end;
-  result := ch;
-end;
-
-
-
-
-function checkKeyAndStick():char;
-var
-    ch:char;
-begin;
-  ch := #$0;
-  asm;
-        phr
-
-        lda $d300
-        and #$0f
-        cmp #$0f   
-        bne foundstick
-
-        lda $d010 ; try stick button 
-        cmp #$00
-        bne nofire 
-        lda #$0c
-        jmp loopend
-
-  nofire:
-        lda consol		; START
-        and #1
-        beq foundconsol
-
-        lda skctl		; ANY KEY
-        and #$04
-        bne loopend_zero
-
-        lda kbcode
-        jmp loopend
-  stickdata:
-        dta 0,0,0,0,    0,0, 0, 07,   0, 0,0, 06, 0,     15, 14
-  foundstick:
-        tay
-        lda stickdata,y
-        jmp loopend
-  foundconsol:
-        // check for key
-  loopend_zero:
-        lda #$00
-  loopend:
-        sta ch
-        plr
-  end;
-  result := ch;
-end;
-
-
-
-// just for return key for now
-procedure waitForKeyRelease;
-var ch, tmpch: char;
-begin;
-    // if joystickused > 0 then 
-    // begin;
-    //   joystickused := 0;
-    //   exit;
-    // end;
-    ch := readKeyAndStick();
-    repeat;
-        tmpch := checkKeyAndStick ();
-    until tmpch <> ch; // wait for key release or so..
-    // // wait for return key to be released 
-    // repeat;
-    //     ch := checkKeyAndStick ();
-    // until ch <> #$0c;
+    result := kbcode;
+    repeat until (not CRT_KeyPressed) or (result<>kbcode);
+    repeat
+      z := checkKeyAndStick();
+    until CRT_KeyPressed or (z = #$0c) or (z = #14) or (z = #15) or (z = #06) or (z = #07);
+    if byte(z) <> 0 then
+      result := byte(z)
+    else
+      result := kbcode;
 end;
 
 
@@ -222,7 +63,7 @@ begin;
     repeat until (not CRT_KeyPressed) or (result<>kbcode);
     repeat until CRT_KeyPressed or (checkKeyAndStick = #$0c);
     result := kbcode;
-end; 
+end;
 
 
 procedure waitForKey();
@@ -256,87 +97,188 @@ begin
 end;
 
 
-// 0 = A, 1 = B
-function getAnswer(A:byte; B:byte):   byte;
-begin
+function getRandom(minp:word; maxp:word; steps:word):   word;
+var prop:   word;
+  x,y: byte;
+begin;
+    x := CRT_WhereX;
+    y := CRT_WhereY;
+    prop := minp;
+    repeat
+    until not CRT_KeyPressed;
+
+    repeat
+        prop := prop + steps;
+        if prop > maxp then
+            prop := minp;
+        CRT_GotoXY (x,y);
+        Waitframe;
+        CRT_Write (prop);
+        CRT_Write('  '~);
+        // ensure overwrite
+    until checkKeyAndStick() <> #0;
     repeat;
-        result := byte(CRT_ReadKeyOrFire());
-    until (A = result) or (B = result);
-   result := byte(result = B);
+      ch := byte(checkKeyAndStick()); // ensure we have read all there is
+    until (ch = 0) and (not CRT_KeyPressed);
+    result := prop;
+end;
+
+
+
+function getAnswerChar(Akey:byte; Bkey:byte; A:char; B:char): byte;
+var x, y: byte;
+  ch: byte;
+  answer: char;
+begin
+  x := CRT_WhereX;
+  y := CRT_WhereY;
+  answer := A;
+  repeat
+    CRT_GotoXY(x, y);
+    CRT_Write(answer);
+    CRT_Write(' '~);
+    ch := CRT_ReadKeyOrJoystick();
+    if ch = $0c then break;
+    if (ch = 14) or (ch = Akey) then answer := A;
+    if (ch = 15) or (ch = Bkey) then answer := B;
+  until false;
+  if answer = A then result := 0 else result := 1;
 end;
 
 
 // 0 = N, 1 = Y
 function getYesNo:   byte;
 begin
-    result := getAnswer(N_keycode, Y_keycode);
+    result := getAnswerChar(N_keycode, Y_keycode, N_charcode, Y_charcode);
 end;
 
 
-function readValue(minValue:SMALLINT; maxValue:SMALLINT): SMALLINT;
+const
+  FAST_ADJUST_DELAY: byte = 16;
+
+
+function readValue(minValue: SMALLINT; maxValue: SMALLINT): SMALLINT; //overload;
 var
-  ivalue: SMALLINT;
+  value: integer; // To ensure that +step does not overflow
+  step: SMALLINT;
   x, y: byte;
-  k: String;
-begin;
+  tmpch, ch: char;
+  curDelay: byte;
+  fastAdjustCounter: byte;
+begin
   x := CRT_WhereX;
   y := CRT_WhereY;
+
+  value := minValue;
+  step := 1;
+  fastAdjustCounter := 0;
+  curDelay := FAST_ADJUST_DELAY;
+  CRT_Write(value);
+  CRT_Write('    '~);
+  ch := char(CRT_ReadKeyOrJoystick()); //this will wait for release
   repeat
-    //CRT_ClearRow(y);
-    CRT_GotoXY (x, y);
-    CRT_Write('      '~);
-    CRT_GotoXY (x, y);
-    //ivalue := StrToInt(CRT_ReadString(5));
-    k := CRT_ReadStringI(5);
-    k := Antic2Atascii(k);
-    ivalue := StrToInt(k);
-  until ((minValue <= ivalue) and (ivalue <= maxValue)) or (ivalue = 0);
-  result := ivalue;
-end;
+    ch := checkKeyAndStick();
 
+    if byte(ch) = $0c then break;
 
+    if byte(ch) = 14 then
+    begin
+      if fastAdjustCounter = 0 then
+      begin
+        value := value + step;
+        if value > maxValue then
+          value := maxValue;
+        if curDelay > 2 then
+          curDelay := curDelay - 1
+        else
+          step := 2;
+        fastAdjustCounter := curDelay;
+      end;
+    end
+    else if byte(ch) = 07 then
+    begin
+      value := value + 500;
+      if value > maxValue then
+        value := maxValue;
+      // wait
+      repeat;
+          tmpch := checkKeyAndStick ();
+      until tmpch <> ch; // wait for key release or so..
+    end
+    else if byte(ch) = 06 then
+    begin
+      value := value - 500;
+      if value < minValue then
+        value := minValue;
+      // wait
+      repeat;
+          tmpch := checkKeyAndStick ();
+      until tmpch <> ch; // wait for key release or so..
+    end
+    else if byte(ch) = 15 then
+    begin
+      if fastAdjustCounter = 0 then
+      begin
+        value := value - step;
+        if value < minValue then
+          value := minValue;
+        if curDelay > 2 then
+          curDelay := curDelay - 1
+        else
+          step := 2;
+        fastAdjustCounter := curDelay;
+      end;
+    end
+    else
+    begin
+      fastAdjustCounter := 0;
+      curDelay := FAST_ADJUST_DELAY;
+      step := 1;
+    end;
 
+    if fastAdjustCounter > 0 then
+      fastAdjustCounter := fastAdjustCounter-1;
 
-function readValueNoZero(minValue:SMALLINT; maxValue:SMALLINT): SMALLINT;
-var
-  ivalue: SMALLINT;
-  x, y: byte;
-  k: String;
-begin;
-  x := CRT_WhereX;
-  y := CRT_WhereY;
-  repeat
-    //CRT_ClearRow(y);
-    CRT_GotoXY (x, y);
-    CRT_Write('      '~);
-    CRT_GotoXY (x, y);
-    //ivalue := StrToInt(CRT_ReadString(5));
-    k := CRT_ReadStringI(5);
-    k := Antic2Atascii(k);
-    ivalue := StrToInt(k);
-  until ((minValue <= ivalue) and (ivalue <= maxValue));
-  result := ivalue;
+    CRT_GotoXY(x, y);
+    CRT_Write(value);
+    CRT_Write('    '~);
+    WaitFrame;
+  until false;
+
+  result := value;
 end;
 
 
 procedure loadGangster(g: byte);
 var b, k:   byte;
-  p: cardinal;
+{$ifndef CART}
+  p: cardinal; // save a few bytes..
+{$endif}
 begin;
+    {$ifdef CART}
     xBiosOpenFile(gangsterFilename);
-    // if (xBiosIOresult <> 0) then
-    // begin;
-    //     CRT_Write('Unable to load GANGSTERS!'~);
-    //     waitForKey();
-    // end;
+    // NO IDEA how to do this differently, loading with setlength did not work
+    // p := g SHL 8;
+    // xBiosSetFileOffset(p);
+    // xBiosSetLength(255-17);
+    // xBiosLoadData(Pointer(VARBLOCK1+$470));
+    for b := 0 to g-1 do
+    begin;
+      for k := 0 to 255-17 do // $470-$55e incl.
+        Poke(VARBLOCK1+$470+k, xBiosGetByte); // pointer to buf_gangsterText1
+      for k := 0 to 17-1 do
+        xBiosGetByte; // do not save anywhere
+    end;
+
+    {$else}
+
+    xBiosOpenFile(gangsterFilename);
     p := g SHL 8;
     xBiosSetFileOffset(p);
     xBiosSetLength(255);
-    for k := 0 to 255 do
-    begin
-        b := xBiosGetByte;
-        Poke($e500+k, b);
-    end;
+    for k := 0 to 255-17 do // $470-$55e incl.
+        Poke(VARBLOCK1+$470+k, xBiosGetByte); // pointer to buf_gangsterText1
+    {$endif}
 
     CRT_Writeln(buf_gangsterName);
     CRT_NewLine;
@@ -349,37 +291,154 @@ end;
 
 
 
+{$ifdef CART}
+
+// these things taken from flob
+// https://gitlab.com/bocianu/flob/
+
+
+// these correspond to the end of the card
+const
+    SAVE_SECTOR = 7;
+    SAVE_BASEBANK = SAVE_SECTOR * 8;
+    SAVE_SIZE = $d000-$c920-1;
+    SAVE_PAGES = 8;
+    SAVE_SLOTS = 32;
+
+// ALL THESE ROUTINES DO NOT USE 'LOCAL' VARIABLES
+// THESE COULD BE IN MEMORY BANK SWITCH AREA
+// SO WE FIX THEM TO BE AT SAY C700+... instead
+
+
+
+// this can yield saveBank between 56 and 63,
+// so end of card
+procedure ResolveSaveAddress; //(save_slot: byte); stdcall;
+begin
+    saveBank := SAVE_BASEBANK + (save_slot shr 2);
+    saveAddress := ($a0 + ((save_slot and $3) shl 3)) shl 8;
+    // saveBank := SAVE_BASEBANK + (save_savenum shr 5);
+    // saveAddress := ($a0 + (save_savenum and $1F)) shl 8;
+end;
+
+
+procedure checkForSavedGame();
+begin
+    save_gameFound := 0;
+    save_lastSave := 0;
+    CmdInit();
+    for save_slot := 0 to SAVE_SLOTS-1 do
+    begin;
+        ResolveSaveAddress;
+        bank_bank := saveBank;
+        SetBank;
+        bank_src := dpeek(saveAddress + $4A0);
+        if bank_src = $abcd then 
+        begin;
+            save_gameFound := 1;
+            save_lastSave := save_slot;
+        end;
+    end;
+    CmdCleanup();
+end;
+
+
+procedure saveGame ();
+begin;
+    WaitFrame;
+
+    // first check if we had a last game
+    checkForSavedGame();
+    if save_gameFound = 1 then 
+    begin;
+        save_lastSave := save_lastSave + 1;
+        if save_lastSave = SAVE_SLOTS then 
+        begin
+            save_lastSave := 0;
+            bank_sector := SAVE_SECTOR;
+            EraseSector; // always the same sector
+        end;
+    end;
+
+    save_slot := save_lastSave;
+    ResolveSaveAddress;
+    // WHYEVER THIS WILL DESTROY THE SAVEADRESS BYTES 
+    // AND COPY VARBLOCK OVER. so maybe we save it first and then retrieve..
+    tmp_55 := Peek($b555);
+    tmp_aa := Peek($aaaa);
+    // for now the save size is fixed, we do not have more than $800 bytes there anyway
+    // Move(Pointer(saveAddress), Pointer(MAP_FNT_ADDRESS), $800); 
+    // Cmdinit();
+    
+    bank_bank := saveBank;
+    SetBank; 
+
+    saveGameMagic := $abcd;
+    asm sei end;
+    bank_bank := saveBank;
+    bank_src := VARBLOCK2;
+    bank_dest := saveAddress;
+    bank_size := SAVE_SIZE;
+    BurnBlock;
+
+    asm cli end;
+    cmdCleanup();
+    Poke($b555, tmp_55);
+    Poke($aaaa, tmp_aa);
+end;
+
+
+procedure loadGame ();
+begin;
+    // loaded location will always be SETUP_
+    CRT_Clear;
+    CRT_WriteCentered_LocStr(1,17); // this will access say $A5A1, but its ok, we dont access banks yet
+    // first check if its plausible
+    checkForSavedGame();
+    if save_gameFound = 0 then begin;
+        CRT_WriteCentered_LocStr(3, 18);
+        waitForKey;
+        exit;
+    end;
+    // load game now
+    save_slot := save_lastSave;
+    ResolveSaveAddress;
+    CmdInit();
+    bank_bank := saveBank;
+    SetBank;
+    Move(pointer(saveAddress), pointer(VARBLOCK2), SAVE_SIZE);
+    cmdCleanup;
+end;
+
+
+{$else}
+
+const
+  saveGameLength = $d000-$c920;
+
 
 procedure saveGame ();
 begin;
     // loaded location will always be SETUP_
-    CRT_Clear;
-    CRT_WriteCentered_LocStr(1, 19);
     xBiosOpenFile(saveFname);
-    xBiosSetLength($0a1f); // just dump all of it 
-    xBiosWriteData(Pointer($e000));
-        // we pray instead.
-        // if (xBiosIOresult = 0) then
-        //     CRT_WriteCentered(3,'Successful!'~)
-        // else
-        //     CRT_WriteCentered(3,'ERROR!'~);
+    xBiosSetLength(saveGameLength); // just dump all of it
+    xBiosWriteData(Pointer(VARBLOCK2));
     xBiosFlushBuffer();
-    waitForKey();
 end;
 
 
-function checkSavedGame (): byte;
+procedure checkForSavedGame ();
 var tmp:byte;
-begin; 
+begin;
     xBiosOpenFile(saveFname);
     xBiosSetLength($1);
     xBiosLoadData(@tmp);
     if (tmp > 4) or (tmp = 0) then begin;
-        result := 0;  // invalid
+        save_gameFound := 0;  // invalid
         exit;
     end;
-    result := 1;
-end; 
+    save_gameFound := 1;
+end;
 
 
 procedure loadGame ();
@@ -388,17 +447,20 @@ begin;
     CRT_Clear;
     CRT_WriteCentered_LocStr(1,17);
     // first check if its plausible
-    if checkSavedGame() = 0 then begin;
+    checkForSavedGame();
+    if save_gameFound = 0 then begin;
         CRT_WriteCentered_LocStr(3, 18);
         waitForKey;
         exit;
     end;
 
-    // reopen 
+    // reopen
     xBiosOpenFile(saveFname);
-    xBiosSetLength($0a1f); // just dump all of it 
-    xBiosLoadData(Pointer($e000));
+    xBiosSetLength(saveGameLength); // just dump all of it
+    xBiosLoadData(Pointer(VARBLOCK2));
     xBiosFlushBuffer();
-    waitForKey();    
-end; 
+    waitForKey();
+end;
 
+
+{$endif}

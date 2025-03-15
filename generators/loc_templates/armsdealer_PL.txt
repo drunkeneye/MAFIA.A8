@@ -1,4 +1,4 @@
-LOCAARMS.gfx
+ARMSLOCA.gfx
 Sklep z bronia
 $74, $af, $ff, $74
 Chicago Gun Shop
@@ -27,7 +27,7 @@ Masz teraz nowa bron!
 Kogo mam wyszkolic?
 Krotkie szkolenie na strzelnicy lub
 To cie bedzie kosztowac
-$ (T/N).
+$ (T/N)
  szkoli sie na strzelnicy...
  jest w obozie szkoleniowym...
 Twoj gangster stal sie silniejszy,

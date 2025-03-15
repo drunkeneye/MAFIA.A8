@@ -1,7 +1,6 @@
 
 procedure fight_displayStats();
 begin;
-//    FillChar (Pointer (MAP_SCR_ADDRESS+21*40), 3*40, ' '~);
     if fp_currentSite = 0 then
     begin;
         FillChar (Pointer (MAP_SCR_ADDRESS+21*40), 20, ' '~);
@@ -45,7 +44,7 @@ begin;
 end;
 
 
-// TODO: add facing direction maybe
+
 procedure fight_drawCurrentPlayer;
 var p:   word;
     s:   byte;
@@ -119,11 +118,6 @@ begin
             if (k = z) then exit; 
             z := z + 1;
             if (k = z) then exit; 
-            // if (k = z) or (k = z+1) or (k = z+40) or (k = z+41) then
-            // begin
-            //     result := s SHL 4 + i;
-            //     exit;
-            // end;
         end;
     result := 128;
 end;
@@ -160,7 +154,6 @@ begin;
         // check for reach
         if v = r then exit;
 
-
         // 40=max of screen in any direction
         k := f_curPos+shoot_start+shoot_diff;
         w := Peek(k);
@@ -182,9 +175,15 @@ begin;
         t := checkHit (k);
         if t < 128 then
         begin;
+            {$ifdef CART}
             msx.init (weaponSound[e]);
             msx.play();
             playMusic := 1;
+            {$else}
+            msx.init (weaponSound[e]);
+            msx.play();
+            playMusic := 1;
+            {$endif}
             WaitFrames(fight_hitTime);
 
             // compute damage
@@ -198,8 +197,15 @@ begin;
             // if (Random(8) > weaponPrecision[e] SHL 1) and (Random(12) < fp_strength[fp_currentPlayer] SHR 3+1) then break;
             hit := (weaponEffect[e] + fp_brutality[fp_currentPlayer] SHR 3);
 
+            {$ifdef CART}
             msx.stop();
             playMusic := 0;
+            {$else}
+            msx.stop();
+            playMusic := 0;
+            {$endif}
+
+
 
             if hit = 0 then break;
 

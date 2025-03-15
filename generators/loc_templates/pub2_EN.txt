@@ -1,4 +1,4 @@
-LOCAPUBC.gfx
+PUBCLOCA.gfx
 Pub/Bar (a shady establishment)
 $30, $af, $ff, $30
  

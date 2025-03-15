@@ -1,4 +1,4 @@
-LOCAPUBB.gfx
+PUBBLOCA.gfx
 Pub/Bar (a shady establishment)
 $30, $af, $ff, $30
 Albatross

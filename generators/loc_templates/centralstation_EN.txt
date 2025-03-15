@@ -1,4 +1,4 @@
-LOCACENT.gfx
+CENTLOCA.gfx
 Central Station (Train Station)
 $a2, $ad, $ad, $a2
  

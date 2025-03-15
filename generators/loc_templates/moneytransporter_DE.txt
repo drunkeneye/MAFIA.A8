@@ -1,4 +1,4 @@
-LOCAMONY.gfx
+MONYLOCA.gfx
 Geldtransporter
 $62, $af, $6e, $62
  

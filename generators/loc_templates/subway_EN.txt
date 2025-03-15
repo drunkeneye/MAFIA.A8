@@ -1,4 +1,4 @@
-LOCASUBW.gfx
+SUBWLOCA.gfx
 Subway Station (Subway)
 $d0, $ad, $dd, $d0
 Ogden Station

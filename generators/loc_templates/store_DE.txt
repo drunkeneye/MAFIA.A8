@@ -1,4 +1,4 @@
-LOCASTOR.gfx
+STORLOCA.gfx
 Einfacher Laden
 $d4, $af, $ff, $d4
 Mandel Brueder

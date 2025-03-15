@@ -1,4 +1,4 @@
-LOCACOUR.gfx
+COURLOCA.gfx
 Rozprawa sadowa
 $70, $af, $0e, $70
   

@@ -6,7 +6,13 @@ DL_MODE_40x24T5 = 4;
 DL_MODE_40x12T5 = 5;
 DL_JVB = %01000001;
 
-  icl 'const.inc'
+
+.ifdef CART 
+    icl 'const_car.inc'
+.else 
+    icl 'const_car.inc'
+.endif
+
 
 dl_start
     dta DL_BLANK8

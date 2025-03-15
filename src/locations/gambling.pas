@@ -15,17 +15,8 @@ begin;
     CRT_Writeln2_LocStr(4);  
 
     CRT_Write_LocStr(5);
-    game := 99;
-    repeat;
-        ch := readKeyAndStick();
-        case byte(ch) of 
-            $1f: game := 1;
-            $1e: game := 2;
-            $1a: game := 3;
-            $32: exit;
-        end;
-    until game <> 99;
-
+    game := readValue (0,3);
+    if game = 0 then exit;
     CRT_NewLine2();
     CRT_Write_LocStr(6);
     CRT_Write(plMoney[currentPlayer]);
@@ -42,7 +33,6 @@ begin;
     if einsatz = 0 then
         exit;
     if payMoney(einsatz) = 0 then exit;
-    // should NEVER happen, since we check for the money there
 
     CRT_NewLine2();
     CRT_Writeln2_LocStr(8);

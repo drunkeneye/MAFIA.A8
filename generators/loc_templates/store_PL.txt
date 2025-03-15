@@ -1,4 +1,4 @@
-LOCASTOR.gfx
+STORLOCA.gfx
 Zwykly sklep
 $d4, $af, $ff, $d4
 Bracia Mandel

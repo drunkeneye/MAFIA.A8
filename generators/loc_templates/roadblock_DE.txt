@@ -1,4 +1,4 @@
-LOCAROAD.gfx
+ROADLOCA.gfx
 Strassensperre!!!
 $80, $af, $0e, $80
   

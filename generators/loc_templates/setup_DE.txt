@@ -1,4 +1,4 @@
-LOCASETU.gfx
+SETULOCA.gfx
 MAFIA
 $18, $af, $10, $18
  
@@ -19,15 +19,15 @@ Spieler
 Wie ist dein Name?
 Bandenname?
 Deine Eigenschaften:
-Starke:
+Staerke:
 Intelligenz:
 Brutalitaet:
 Energie:
 Geld:
-Bist du weiblich oder maennlich (w/m)?
+Bist du weiblich oder maennlich (W/M)?
 Kurzes oder langes Spiel (K/L)?
 Gespeicherten Spielstand gefunden!
 Willst du ihn laden (J/N)?
 Lade Spielstand...
-Spielstand ist ungueltig!
-Speichere Spielstand...
+Kein Spielstand gefunden!
+Spielstand wurde gespeichert.

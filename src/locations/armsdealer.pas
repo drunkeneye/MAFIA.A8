@@ -213,7 +213,7 @@ begin;
         begin
             CRT_Writeln_LocStr(14);
             CRT_Write_LocStr(21);
-            r := getAnswer(shooting_range_keycode, training_camp_keycode); // 3e=s, 2d=t
+            r := getAnswerChar(shooting_range_keycode, training_camp_keycode, shooting_range_charcode, training_camp_charcode); // 3e=s, 2d=t
             if r = 1 then  camp := 1;
         end;
 

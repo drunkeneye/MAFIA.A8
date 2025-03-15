@@ -8,7 +8,12 @@ aPLib I/O stream decompressor (John Brandwood, Krzysztof 'XXL' Dudek)
 @param: outputPointer - destination data address
 *)
 
-
+{$ifdef CART}
+begin
+	xBiosOpenFile(fname);
+	xBiosLoadData(outputPointer);
+end;
+{$else}
 begin
 	// disable interrupt
 	xBiosOpenFile(fname);

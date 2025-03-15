@@ -1,4 +1,4 @@
-LOCASETU.gfx
+SETULOCA.gfx
 MAFIA
 $18, $af, $10, $18
  
@@ -29,5 +29,5 @@ Krotka czy dluga gra (K/D)?
 Wykryto zapisana gre!
 Czy chcesz ja zaladowac (T/N)?
 Wczytywanie zapisu gry...
-Zapis gry jest uszkodzony!
-Zapisywanie gry...
+Nie znaleziono zapisanej gry!
+Gra zostala zapisana.
